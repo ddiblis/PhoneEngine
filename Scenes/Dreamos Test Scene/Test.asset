@@ -1,0 +1,177 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ca2ddbf6e022748a2db98a0c813735, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  saveConversation: 0
+  useDynamicMessages: 0
+  useStoryTeller: 1
+  messageList:
+  - objectType: 0
+    messageAuthor: 1
+    messageContent: test
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  - objectType: 0
+    messageAuthor: 0
+    messageContent: hey
+    sentTime: 
+    audioMessage: {fileID: 0}
+    imageMessage: {fileID: 0}
+  dynamicMessages: []
+  storyTeller:
+  - itemID: SEQ_0
+    messageAuthor: 1
+    messageContent: How are you doing honey?
+    messageLatency: 1
+    messageTimer: 1
+    replies:
+    - replyID: sad
+      replyBrief: sad
+      replyContent: I'm feeling pretty sad today...
+      replyFeedback: I'm sorry you're feeling so awful.
+      feedbackLatency: 1
+      feedbackTimer: 1
+      callAfter: SEQ_1
+    - replyID: 2
+      replyBrief: horny
+      replyContent: I've been dreaming of your body all day
+      replyFeedback: Someone's in a frisky mood!
+      feedbackLatency: 1
+      feedbackTimer: 1
+      callAfter: SEQ_2
+  - itemID: SEQ_1
+    messageAuthor: 1
+    messageContent: Is there anything I can help with that?
+    messageLatency: 1
+    messageTimer: 1
+    replies:
+    - replyID: 1
+      replyBrief: picture?
+      replyContent: A picture of my pretty girl could help?
+      replyFeedback: Ohhh one second
+      feedbackLatency: 1
+      feedbackTimer: 1
+      callAfter: 
+    - replyID: 2
+      replyBrief: Cuddles?
+      replyContent: Maybe cuddles? When are you getting back home?
+      replyFeedback: I'll be home in 20 minutes, make some popcorn, we'll have a
+        movie night!
+      feedbackLatency: 1
+      feedbackTimer: 1
+      callAfter: 
+  - itemID: SEQ_2
+    messageAuthor: 1
+    messageContent: Hold on I'm going to the bathrom, cover your screen!
+    messageLatency: 1
+    messageTimer: 1
+    replies:
+    - replyID: 1
+      replyBrief: OMG BABE!
+      replyContent: OMG BABE!
+      replyFeedback: Shhh our little secret
+      feedbackLatency: 1
+      feedbackTimer: 1
+      callAfter: 
+    - replyID: 2
+      replyBrief: I was hoping you'd say that!
+      replyContent: I was hoping you'd say that!
+      replyFeedback: Aweee someone's extra needy
+      feedbackLatency: 1
+      feedbackTimer: 1
+      callAfter: 
