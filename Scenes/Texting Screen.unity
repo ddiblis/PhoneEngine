@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 893111460}
   - component: {fileID: 893111459}
   - component: {fileID: 893111458}
-  - component: {fileID: 893111462}
+  - component: {fileID: 893111463}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -225,7 +225,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &893111462
+--- !u!114 &893111463
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,17 +234,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 893111456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f33292b1203bac74b667465bb01064f, type: 3}
+  m_Script: {fileID: 11500000, guid: 612828b00cfdc563d84ad1eb809a7e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   messageList: {fileID: 565125151179662278}
+  choices: {fileID: 8148482830383007946}
+  choice: {fileID: 1076370345745255780, guid: 7fbc670f77be7bd33a21fc4cac3a2ba2, type: 3}
   sentTextMessage: {fileID: 1658346118929398, guid: d8a4fc22db5d0db7d9d355454681e229, type: 3}
-  sentImageMessage: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
+  sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
+  sentImage: {fileID: 7878636168325601005, guid: d1d1c695438fa8114b99edda2600a8b5, type: 3}
   recievedTextMessage: {fileID: 1091222002183730, guid: 5c03b3fe50a4cb325a95b8f2e16d7fbc, type: 3}
   recievedImageMessage: {fileID: 4810520593487603046, guid: d36bd16e15dad5fdfac4713d3470d42b, type: 3}
-  choices: {fileID: 8148482830383007946}
-  topChoice: {fileID: 1076370345745255780, guid: 7fbc670f77be7bd33a21fc4cac3a2ba2, type: 3}
-  bottomChoice: {fileID: 1076370345745255780, guid: 962029f501683b39591d8ebaa9491300, type: 3}
 --- !u!1 &1373984312
 GameObject:
   m_ObjectHideFlags: 0
