@@ -13,6 +13,7 @@ public class MessagingHandlers : MonoBehaviour {
             { "Hey bf", "what are we eating for dinner today?", "what time are you home?", "I love you okay seriously bye"};
 
 
+    public GameObject headshot;
     public Transform messageList;
 
     // Choices buttons box
@@ -32,9 +33,14 @@ public class MessagingHandlers : MonoBehaviour {
 
 
     void Awake(){
-        StartCoroutine(StartMessagesCoroutine());
 
-        Emojis emojis = new Emojis();
+        // Emojis emojis = new Emojis();
+        
+        
+        // headshot.GetComponent<Image>().sprite = emojis.blondeHeadshot;
+
+        // StartCoroutine(StartMessagesCoroutine());
+
         // string toptext = "testing top button";
         // string bottomtext = "testing bottom button";
 
@@ -42,18 +48,18 @@ public class MessagingHandlers : MonoBehaviour {
         // choiceTextButton(bottomtext);
         // handleTextChoice(0, toptext);
         // handleTextChoice(1, bottomtext);
-        choiceImageButton(emojis.gfStanding);
-        choiceImageButton(emojis.redHeart);
+        // choiceImageButton(emojis.gfStanding);
+        // choiceImageButton(emojis.redHeart);
         // handleImageChoice(0, emojis.gfStanding);
-        handleEmojiChoice(0, emojis.blackHeart);
-        handleEmojiChoice(1, emojis.redHeart);
+        // handleEmojiChoice(0, emojis.blackHeart);
+        // handleEmojiChoice(1, emojis.redHeart);
     }
 
-    void Update(){
-        if (choiceMade){
-            Debug.Log(choicePosition);
-        }
-    }
+    // void Update(){
+    //     if (choiceMade){
+    //         Debug.Log(choicePosition);
+    //     }
+    // }
 
     public IEnumerator StartMessagesCoroutine(){
         for (int i = 0; i < optionList.Count; i++) {
@@ -74,7 +80,7 @@ public class MessagingHandlers : MonoBehaviour {
     public void ImagePush(GameObject imageMessage, Sprite image) {
         GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, messageList.transform);
         GameObject imageContent = messageClone.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
-        imageContent.GetComponent<UnityEngine.UI.Image>().sprite = image;
+        imageContent.GetComponent<Image>().sprite = image;
     }
 
     // Handles wait time for the messages recieved so they don't all display at once.
@@ -140,7 +146,7 @@ public class MessagingHandlers : MonoBehaviour {
         GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-        imageObject.GetComponent<UnityEngine.UI.Image>().sprite = image;
+        imageObject.GetComponent<Image>().sprite = image;
     }
 
 
