@@ -44,13 +44,11 @@ public class MessagingHandlers : MonoBehaviour {
 
         StartCoroutine(StartMessagesCoroutine());
 
-        string toptext = "testing top button";
-        string bottomtext = "testing bottom button";
+        
 
-        choiceTextButton(toptext);
-        choiceTextButton(bottomtext);
-        handleTextChoice(0, toptext);
-        handleTextChoice(1, bottomtext);
+        // if (doneDisplayingTexts){
+            
+        // }
 
         // choiceImageButton(emojis.gfStanding);
         // choiceImageButton(emojis.redHeart);
@@ -68,10 +66,16 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public IEnumerator StartMessagesCoroutine(){
+        string toptext = "testing top button";
+        string bottomtext = "testing bottom button";
+
         for (int i = 0; i < optionList.Count; i++) {
             yield return StartCoroutine(handleAutoText(optionList[i]));
         } 
-        doneDisplayingTexts = true;
+        choiceTextButton(toptext);
+        choiceTextButton(bottomtext);
+        handleTextChoice(0, toptext);
+        handleTextChoice(1, bottomtext);
     }
 
     // Handles the building and pushing of text messages to the message list object.
@@ -93,7 +97,9 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles wait time for the messages recieved so they don't all display at once.
     // messageContent: text of the message
     public IEnumerator handleAutoText(string messageContent) {
-        yield return new WaitForSeconds(0.7f);
+        float lengthOfText = messageContent.Length;
+        Debug.Log(lengthOfText * 0.7f / 2);
+        yield return new WaitForSeconds(lengthOfText * 0.2f / 2);
         if (messageList.childCount < 25){
             TextPush(recievedTextMessage, messageContent);
         } else {
