@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEditor.Animations;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
+using System;
 
 public class ContactsHandler : MonoBehaviour
 {
@@ -31,12 +32,14 @@ public class ContactsHandler : MonoBehaviour
     {
         Emojis emojis = new Emojis();
 
-               List<Sprite> pfpList = new List<Sprite>
-                {emojis.gfHeadshot, emojis.blondeHeadshot};
+        // Debug.Log(emojis.blackHeart);
 
-        for (int i = 0; i < contactsList.Count; i++) {
-            addContactCard(pfpList[i], contactsList[i]);
-        } 
+        //        List<Sprite> pfpList = new List<Sprite>
+        //         {emojis.gfHeadshot, emojis.blondeHeadshot};
+
+        // for (int i = 0; i < contactsList.Count; i++) {
+        //     addContactCard(pfpList[i], contactsList[i]);
+        // } 
     }
 
     // Update is called once per frame

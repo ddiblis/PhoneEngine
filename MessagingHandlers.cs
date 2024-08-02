@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEditor.Animations;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
+using UnityEditor;
 
 public class MessagingHandlers : MonoBehaviour {
 
@@ -30,6 +31,8 @@ public class MessagingHandlers : MonoBehaviour {
     int choicePosition;
     bool choiceMade;
 
+    bool doneDisplayingTexts;
+
 
 
     void Awake(){
@@ -39,15 +42,16 @@ public class MessagingHandlers : MonoBehaviour {
         
         // headshot.GetComponent<Image>().sprite = emojis.blondeHeadshot;
 
-        // StartCoroutine(StartMessagesCoroutine());
+        StartCoroutine(StartMessagesCoroutine());
 
-        // string toptext = "testing top button";
-        // string bottomtext = "testing bottom button";
+        string toptext = "testing top button";
+        string bottomtext = "testing bottom button";
 
-        // choiceTextButton(toptext);
-        // choiceTextButton(bottomtext);
-        // handleTextChoice(0, toptext);
-        // handleTextChoice(1, bottomtext);
+        choiceTextButton(toptext);
+        choiceTextButton(bottomtext);
+        handleTextChoice(0, toptext);
+        handleTextChoice(1, bottomtext);
+
         // choiceImageButton(emojis.gfStanding);
         // choiceImageButton(emojis.redHeart);
         // handleImageChoice(0, emojis.gfStanding);
@@ -55,16 +59,19 @@ public class MessagingHandlers : MonoBehaviour {
         // handleEmojiChoice(1, emojis.redHeart);
     }
 
-    // void Update(){
-    //     if (choiceMade){
-    //         Debug.Log(choicePosition);
-    //     }
-    // }
+    void Update(){
+        // if (choiceMade){
+        //     Debug.Log(choicePosition);
+        // }
+        // Debug.Log(doneDisplayingTexts);
+
+    }
 
     public IEnumerator StartMessagesCoroutine(){
         for (int i = 0; i < optionList.Count; i++) {
             yield return StartCoroutine(handleAutoText(optionList[i]));
         } 
+        doneDisplayingTexts = true;
     }
 
     // Handles the building and pushing of text messages to the message list object.
