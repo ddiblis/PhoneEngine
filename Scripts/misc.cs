@@ -1,12 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEditor.Animations;
+using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
+using UnityEditor;
+using UnityEngine.TextCore.Text;
 
-
-    // oneChoice: true is single choice, false multiple choice
-    public class ResponseChoices {
-        bool oneChoice { get; set; }
-        string topShortHand { get; set; }
-        string topText { get; set; }
-        string bottomShortHand { get; set; }
-        string bottomText { get; set; }
+public class ResponseChoices {
+        List<string> texts;
+        bool img;
+        Sprite Image;
+        // TypeOfText type;
     }
 
     // sent: true text is sent, false text is recieved

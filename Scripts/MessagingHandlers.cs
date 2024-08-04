@@ -34,21 +34,6 @@ public class MessagingHandlers : MonoBehaviour {
     int choicePosition;
     bool choiceMade;
 
-    public enum Emojis {
-        redHeart = 0,
-        blackHeart = 1,
-    }
-
-    public enum Headshots {
-        gf = 0,
-        blonde = 1,
-    }
-
-    public enum Photos {
-        gfStanding = 0,
-        gfCar = 1,
-    }
-
     void Awake(){
 
         // Emojis emojis = new Emojis();
@@ -120,6 +105,10 @@ public class MessagingHandlers : MonoBehaviour {
     
 
 
+    // Handles message limits for all types of texts to the messageList
+    // TypeOfText: an enum object that denotes the type of text we're sending
+    // image: optional field in case we're sending an image
+    // messageContent: default to "" it's the text of the message being sent
     #nullable enable
     public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = ""){
         if (messageList.childCount < 25){
