@@ -7,12 +7,14 @@ using UnityEditor.Animations;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
+using UnityEngine.TextCore.Text;
 
 public class MessagingHandlers : MonoBehaviour {
 
     List<string> optionList = new List<string>
-            { "Hey bf", "what are we eating for dinner today?", "what time are you home?", "I love you okay seriously bye"};
-
+            { "Hey bf", "what are we eating for dinner today?", "what time are you home?", "I love you okay seriously bye", "photo", "emoji"};
+    List<string> imageList = new List<string>
+        {"", "", "", "", "gf-standing", "black-heart"};
 
     public GameObject headshot;
     public Transform messageList;
@@ -22,16 +24,30 @@ public class MessagingHandlers : MonoBehaviour {
     public GameObject choice;
 
 
-    public GameObject sentTextMessage;
-    public GameObject sentEmoji;
+    public GameObject sentText;
+    public GameObject recText;
     public GameObject sentImage;
-    public GameObject recievedTextMessage;
-    public GameObject recievedImageMessage;
+    public GameObject recImage;
+    public GameObject sentEmoji;
+    public GameObject recEmoji;
 
     int choicePosition;
     bool choiceMade;
 
+    public enum Emojis {
+        redHeart = 0,
+        blackHeart = 1,
+    }
 
+    public enum Headshots {
+        gf = 0,
+        blonde = 1,
+    }
+
+    public enum Photos {
+        gfStanding = 0,
+        gfCar = 1,
+    }
 
     void Awake(){
 
@@ -53,17 +69,28 @@ public class MessagingHandlers : MonoBehaviour {
 
     public IEnumerator StartMessagesCoroutine(){
         // Emojis emojis = new Emojis();
+        // Images images = new Images();
 
         string toptext = "testing top button";
         string bottomtext = "testing bottom button";
 
         for (int i = 0; i < optionList.Count; i++) {
-            yield return StartCoroutine(AutoTextLimit(optionList[i]));
+            if (optionList[i] == "photo"){
+                Sprite img = Resources.Load(imageList[i], typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(AutoTextLimit(TypeOfText.recImage, img));
+            } 
+            else if (optionList[i] == "emoji"){
+                Sprite img = Resources.Load(imageList[i], typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(AutoTextLimit(TypeOfText.recEmoji, img));
+            }
+            else {
+                yield return StartCoroutine(AutoTextLimit(TypeOfText.recText, textContent: optionList[i]));
+            }
         } 
         TextButton(0, toptext);
         TextButton(1, bottomtext);
-        // EmojiButton(0, emojis.blackHeart);
-        // EmojiButton(1, emojis.redHeart);
+        // ImageButton(0, TypeOfText.sentImage, images.PhotosList[(int)Photos.gfStanding]);
+        // ImageButton(1, TypeOfText.sentEmoji, images.EmojisList[(int)Emojis.redHeart]);
     }
 
     // Handles the building and pushing of text messages to the message list object.
@@ -96,45 +123,66 @@ public class MessagingHandlers : MonoBehaviour {
         if (messageList.childCount < 25){
             switch(type){
                 case TypeOfText.sentText:
-                    TextPush(sentTextMessage, messageContent);
-                    break;
+                    TextPush(sentText, messageContent);
+                break;
                 case TypeOfText.recText:
-                    TextPush(recievedTextMessage, messageContent);                    
-                    break;
+                    TextPush(recText, messageContent);                    
+                break;
                 case TypeOfText.sentEmoji:
                     ImagePush(sentEmoji, image);
-                    break;
+                break;
+                case TypeOfText.recEmoji:
+                ImagePush(recEmoji, image);
+                break;
                 case TypeOfText.sentImage:
                     ImagePush(sentImage, image);
-                    break;
+                break;
+                case TypeOfText.recImage:
+                    ImagePush(recImage, image);
+                break;
             }
         } else {
             Destroy(messageList.transform.GetChild(0).gameObject);
             switch(type){
                 case TypeOfText.sentText:
-                    TextPush(sentTextMessage, messageContent);
-                    break;
+                    TextPush(sentText, messageContent);
+                break;
                 case TypeOfText.recText:
-                    TextPush(recievedTextMessage, messageContent);
-                    break;
+                    TextPush(recText, messageContent);
+                break;
                 case TypeOfText.sentEmoji:
                     ImagePush(sentEmoji, image);
-                    break;
+                break;
+                case TypeOfText.recEmoji:
+                ImagePush(recEmoji, image);
+                break;
                 case TypeOfText.sentImage:
                     ImagePush(sentImage, image);
-                    break;
+                break;
+                case TypeOfText.recImage:
+                    ImagePush(recImage, image);
+                break;
             }
         }
     }
 
     // Handles wait time for the messages recieved so they don't all display at once.
     // messageContent: text of the message
-    public IEnumerator AutoTextLimit(string textContent) {
+    public IEnumerator AutoTextLimit(TypeOfText type, Sprite? image = null, string textContent = "") {
         float lenOfText = textContent.Length;
         Debug.Log(lenOfText * 0.2f / 2);
-        yield return new WaitForSeconds(lenOfText * 0.2f / 2);
-        MessageListLimit(TypeOfText.recText, messageContent: textContent);
-
+        yield return new WaitForSeconds(lenOfText != 0 ? lenOfText * 0.2f / 2 : 1.2f);
+        switch (type){
+            case TypeOfText.recText:
+                MessageListLimit(TypeOfText.recText, messageContent: textContent);
+            break;
+            case TypeOfText.recImage:
+                MessageListLimit(TypeOfText.recImage, image);
+            break;
+            case TypeOfText.recEmoji:
+                MessageListLimit(TypeOfText.recEmoji, image);
+            break;
+        }
     }
 
     // handles the building and pushing of the text choice buttons into the choices list
@@ -155,32 +203,18 @@ public class MessagingHandlers : MonoBehaviour {
         });
     }
 
-    // handles the building and pushing of the image choice buttons into the choices list
-    // choice: prefab of the button (top or bottom) ps. destinction might not be necessary, we'll see.
-    // image: sprite image to be sent (emoji)
-    public void ImageButton(int indx, Sprite image) {
+    // handles the building and pushing of the image/emoji choice buttons into the choices list
+    // indx: Index of the button, preset, can be any number you want but designed to be 0 or 1 and results in different responses
+    // type: type of image (emoji/photo)
+    // image: sprite image to be sent (emoji/photo)
+    public void ImageButton(int indx, TypeOfText type, Sprite image) {
         GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
         imageObject.GetComponent<Image>().sprite = image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            MessageListLimit(TypeOfText.sentImage, image);
-            Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
-            Destroy(ChoiceClone);
-            choiceMade = true;
-            choicePosition = indx;
-        });
-    }
-
-    public void EmojiButton(int indx, Sprite image) {
-        GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
-        Destroy(ChoiceClone.transform.GetChild(0).gameObject);
-        GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-        imageObject.GetComponent<Image>().sprite = image;
-        Button button = ChoiceClone.GetComponent<Button>();
-        button.onClick.AddListener(() => {
-            MessageListLimit(TypeOfText.sentEmoji, image);
+            MessageListLimit(type, image);
             Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
             choiceMade = true;

@@ -30,7 +30,7 @@ public class ContactsHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Emojis emojis = new Emojis();
+        // Emojis emojis = new Emojis();
 
         // Debug.Log(emojis.blackHeart);
 
