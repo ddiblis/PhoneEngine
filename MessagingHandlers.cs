@@ -77,14 +77,14 @@ public class MessagingHandlers : MonoBehaviour {
         for (int i = 0; i < optionList.Count; i++) {
             if (optionList[i] == "photo"){
                 Sprite img = Resources.Load(imageList[i], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoTextLimit(TypeOfText.recImage, img));
+                yield return StartCoroutine(AutoText(TypeOfText.recImage, img));
             } 
             else if (optionList[i] == "emoji"){
                 Sprite img = Resources.Load(imageList[i], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoTextLimit(TypeOfText.recEmoji, img));
+                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, img));
             }
             else {
-                yield return StartCoroutine(AutoTextLimit(TypeOfText.recText, textContent: optionList[i]));
+                yield return StartCoroutine(AutoText(TypeOfText.recText, textContent: optionList[i]));
             }
         } 
         TextButton(0, toptext);
@@ -118,6 +118,8 @@ public class MessagingHandlers : MonoBehaviour {
         recEmoji = 5
     }
     
+
+
     #nullable enable
     public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = ""){
         if (messageList.childCount < 25){
@@ -168,7 +170,7 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Handles wait time for the messages recieved so they don't all display at once.
     // messageContent: text of the message
-    public IEnumerator AutoTextLimit(TypeOfText type, Sprite? image = null, string textContent = "") {
+    public IEnumerator AutoText(TypeOfText type, Sprite? image = null, string textContent = "") {
         float lenOfText = textContent.Length;
         Debug.Log(lenOfText * 0.2f / 2);
         yield return new WaitForSeconds(lenOfText != 0 ? lenOfText * 0.2f / 2 : 1.2f);
