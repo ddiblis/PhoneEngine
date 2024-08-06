@@ -28,3 +28,23 @@ public class ResponseChoices {
         ResponseChoices choices { get; set; }
     }
 
+/*Chapter file {
+    bool ChapComplete
+    SubChapter sub: {
+        0: {
+            List<string> textList
+            List<string> imageList
+            List<string> subList
+            List<string> DomList
+            List<float> responseTime
+            Response<schema>{
+                List<string> Shorthands
+                List<string> topResps
+                List<string> bottomResps
+                float subchapterForTop
+                float subchapterForBottom
+            }
+        }
+    }
+}
+*/

@@ -40,7 +40,7 @@ public class MessagingHandlers : MonoBehaviour {
         
         // headshot.GetComponent<Image>().sprite = emojis.blondeHeadshot;
 
-        StartCoroutine(StartMessagesCoroutine());
+        // StartCoroutine(StartMessagesCoroutine());
 
     }
 
@@ -53,9 +53,6 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public IEnumerator StartMessagesCoroutine(){
-        // Emojis emojis = new Emojis();
-        // Images images = new Images();
-
         string toptext = "testing top button";
         string bottomtext = "testing bottom button";
 
