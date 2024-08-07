@@ -31,14 +31,15 @@ public class MessagingHandlers : MonoBehaviour {
     public GameObject sentEmoji;
     public GameObject recEmoji;
 
+        // headshot.GetComponent<Image>().sprite = emojis.blondeHeadshot;
     int choicePosition;
     bool choiceMade;
 
+    public JsonDeconstructor json;
+    // JsonDeconstructor ch = new JsonDeconstructor();
     void Awake(){
-
-        // Emojis emojis = new Emojis();
-        
-        // headshot.GetComponent<Image>().sprite = emojis.blondeHeadshot;
+        JsonDeconstructor.Chapter chapOne = json.getChapter();
+        StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
 
         // StartCoroutine(StartMessagesCoroutine());
 
@@ -52,27 +53,37 @@ public class MessagingHandlers : MonoBehaviour {
 
     }
 
-    public IEnumerator StartMessagesCoroutine(){
-        string toptext = "testing top button";
-        string bottomtext = "testing bottom button";
+    public void responseHandle(int subChapNum){
+        JsonDeconstructor.Chapter chapOne = json.getChapter();
+        StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
+    }
 
-        for (int i = 0; i < optionList.Count; i++) {
-            if (optionList[i] == "photo"){
-                Sprite img = Resources.Load(imageList[i], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recImage, img));
+    public IEnumerator StartMessagesCoroutine(JsonDeconstructor.SubChap subChap){
+        List<string> TextList = subChap.TextList;
+        List<string> ImageList = subChap.ImageList;
+        List<float> RespTime = subChap.ResponseTime;
+        JsonDeconstructor.Responses Responses = subChap.Responses;
+        List<string> resps = Responses.Resps;
+        List<int> subChaps = Responses.SubChaps;
+
+        for (int i = 0; i < TextList.Count; i++) {
+            if (TextList[i] == "photo"){
+                Sprite img = Resources.Load(ImageList[i], typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], img));
             } 
-            else if (optionList[i] == "emoji"){
-                Sprite img = Resources.Load(imageList[i], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, img));
+            else if (TextList[i] == "emoji"){
+                Sprite img = Resources.Load(ImageList[i], typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], img));
             }
             else {
-                yield return StartCoroutine(AutoText(TypeOfText.recText, textContent: optionList[i]));
+                yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], textContent: TextList[i]));
             }
         } 
-        TextButton(0, toptext);
-        TextButton(1, bottomtext);
-        // ImageButton(0, TypeOfText.sentImage, images.PhotosList[(int)Photos.gfStanding]);
-        // ImageButton(1, TypeOfText.sentEmoji, images.EmojisList[(int)Emojis.redHeart]);
+        for (int i = 0; i < resps.Count; i++) {
+            TextButton(i, subChaps,resps[i]);
+        }
+        // ImageButton(0, subChaps, TypeOfText.sentImage, images.PhotosList[(int)Photos.gfStanding]);
+        // ImageButton(1, subChaps, TypeOfText.sentEmoji, images.EmojisList[(int)Emojis.redHeart]);
     }
 
     // Handles the building and pushing of text messages to the message list object.
@@ -108,58 +119,36 @@ public class MessagingHandlers : MonoBehaviour {
     // messageContent: default to "" it's the text of the message being sent
     #nullable enable
     public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = ""){
-        if (messageList.childCount < 25){
-            switch(type){
-                case TypeOfText.sentText:
-                    TextPush(sentText, messageContent);
-                break;
-                case TypeOfText.recText:
-                    TextPush(recText, messageContent);                    
-                break;
-                case TypeOfText.sentEmoji:
-                    ImagePush(sentEmoji, image);
-                break;
-                case TypeOfText.recEmoji:
-                ImagePush(recEmoji, image);
-                break;
-                case TypeOfText.sentImage:
-                    ImagePush(sentImage, image);
-                break;
-                case TypeOfText.recImage:
-                    ImagePush(recImage, image);
-                break;
-            }
-        } else {
+        if (messageList.childCount >= 25){
             Destroy(messageList.transform.GetChild(0).gameObject);
-            switch(type){
-                case TypeOfText.sentText:
-                    TextPush(sentText, messageContent);
-                break;
-                case TypeOfText.recText:
-                    TextPush(recText, messageContent);
-                break;
-                case TypeOfText.sentEmoji:
-                    ImagePush(sentEmoji, image);
-                break;
-                case TypeOfText.recEmoji:
-                ImagePush(recEmoji, image);
-                break;
-                case TypeOfText.sentImage:
-                    ImagePush(sentImage, image);
-                break;
-                case TypeOfText.recImage:
-                    ImagePush(recImage, image);
-                break;
-            }
+        } 
+        switch(type){
+            case TypeOfText.sentText:
+                TextPush(sentText, messageContent);
+            break;
+            case TypeOfText.recText:
+                TextPush(recText, messageContent);
+            break;
+            case TypeOfText.sentEmoji:
+                ImagePush(sentEmoji, image);
+            break;
+            case TypeOfText.recEmoji:
+            ImagePush(recEmoji, image);
+            break;
+            case TypeOfText.sentImage:
+                ImagePush(sentImage, image);
+            break;
+            case TypeOfText.recImage:
+                ImagePush(recImage, image);
+            break;
         }
     }
 
     // Handles wait time for the messages recieved so they don't all display at once.
     // messageContent: text of the message
-    public IEnumerator AutoText(TypeOfText type, Sprite? image = null, string textContent = "") {
-        float lenOfText = textContent.Length;
-        Debug.Log(lenOfText * 0.2f / 2);
-        yield return new WaitForSeconds(lenOfText != 0 ? lenOfText * 0.2f / 2 : 1.2f);
+    public IEnumerator AutoText(TypeOfText type, float respTime, Sprite? image = null, string textContent = "") {
+
+        yield return new WaitForSeconds(respTime);
         switch (type){
             case TypeOfText.recText:
                 MessageListLimit(TypeOfText.recText, messageContent: textContent);
@@ -176,7 +165,7 @@ public class MessagingHandlers : MonoBehaviour {
     // handles the building and pushing of the text choice buttons into the choices list
     // choice: prefab of the button (top or bottom) ps. destinction might not be necessary, we'll see.
     // textContent: shorthand of the text to be sent by using that button.
-    public void TextButton(int indx, string textContent = "") {
+    public void TextButton(int indx, List<int> subChaps,string textContent = "") {
         GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
         Destroy(ChoiceClone.transform.GetChild(1).gameObject);
         GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
@@ -186,8 +175,9 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            choiceMade = true;
-            choicePosition = indx;
+            // choiceMade = true;
+            // choicePosition = indx;
+            responseHandle(subChaps[indx]);
         });
     }
 
@@ -195,7 +185,7 @@ public class MessagingHandlers : MonoBehaviour {
     // indx: Index of the button, preset, can be any number you want but designed to be 0 or 1 and results in different responses
     // type: type of image (emoji/photo)
     // image: sprite image to be sent (emoji/photo)
-    public void ImageButton(int indx, TypeOfText type, Sprite image) {
+    public void ImageButton(int indx, List<int> subChaps, TypeOfText type, Sprite image) {
         GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
@@ -205,8 +195,7 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(type, image);
             Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            choiceMade = true;
-            choicePosition = indx;
+            responseHandle(subChaps[indx]);
         });
     }
 }

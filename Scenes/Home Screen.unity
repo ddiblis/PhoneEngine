@@ -1086,7 +1086,6 @@ GameObject:
   - component: {fileID: 492607235}
   - component: {fileID: 492607234}
   - component: {fileID: 492607233}
-  - component: {fileID: 492607237}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1179,22 +1178,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &492607237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492607232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b095fc0304ef3b1619d3e42c3dd24753, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chapterJSON: {fileID: 4900000, guid: bc77e6a8fa8ce48609e756797dece56b, type: 3}
-  myChapter:
-    ChapComplete: 0
-    SubChaps: []
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2068,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8397345254773016754, guid: 9db6119492ac74916b4dffb17aa2e369, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1650914612}
+    - targetCorrespondingSourceObject: {fileID: 8397345254773016754, guid: 9db6119492ac74916b4dffb17aa2e369, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1650914613}
   m_SourcePrefab: {fileID: 100100000, guid: 9db6119492ac74916b4dffb17aa2e369, type: 3}
 --- !u!1 &1443157816
 GameObject:
@@ -2380,6 +2366,23 @@ MonoBehaviour:
   recImage: {fileID: 4810520593487603046, guid: d36bd16e15dad5fdfac4713d3470d42b, type: 3}
   sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
   recEmoji: {fileID: 4810520593487603046, guid: a95a6c9ed66a6b3569e7629485b2ef50, type: 3}
+  json: {fileID: 1650914613}
+--- !u!114 &1650914613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650914611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b095fc0304ef3b1619d3e42c3dd24753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chapterJSON: {fileID: 4900000, guid: bc77e6a8fa8ce48609e756797dece56b, type: 3}
+  myChapter:
+    ChapComplete: 0
+    SubChaps: []
 --- !u!1 &1672186313
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,40 +2,40 @@
     "ChapComplete": false,
     "SubChaps":[
         {
-            "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "", "here's an emoji to test", ""],
+            "SubChapNum": 0,
+            "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "photo", "here's an emoji to test", "emoji"],
             "ImageList": ["", "", "", "gf-standing", "", "black-heart"],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
-                "SubchapForTop": 1,
-                "SubchapForBottom": 2
+                "SubChaps": [1, 2]
             }
         },
         {
-            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "", "here's an emoji to test", ""],
+            "SubChapNum": 1,
+            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "photo", "here's an emoji to test", "emoji"],
             "ImageList": ["", "", "", "gf-standing", "", "red-heart"],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
-                "SubchapForTop": 0,
-                "SubchapForBottom": 0
+                "SubChaps": [0, 0]
             }
         },
         {
-                    "TextList": [],
-                    "ImageList": [],
-                    "SubList": [],
-                    "DomList": [],
-                    "ResponseTime": [],
-                    "Responses": {
-                        "Resps": ["this is a choice only response1", "this is a choice only response2"],
-                        "SubchapForTop": 0,
-                        "SubchapForBottom": 0
-                    }
-                }
+            "SubChapNum": 2,
+            "TextList": [],
+            "ImageList": [],
+            "SubList": [],
+            "DomList": [],
+            "ResponseTime": [],
+            "Responses": {
+                "Resps": ["this is a choice only response1", "this is a choice only response2"],
+                "SubChaps": [0, 0]
+            }
+        }
     ]
 }

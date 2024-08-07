@@ -8,8 +8,8 @@ public class JsonDeconstructor : MonoBehaviour
     public class Responses
     {
         public List<string> Resps;
-        public int SubchapForTop;
-        public int SubchapForBottom;
+        public List<int> SubChaps;
+
     }
 
     [System.Serializable]
@@ -22,11 +22,12 @@ public class JsonDeconstructor : MonoBehaviour
     [System.Serializable]
     public class SubChap
     {
+        public int SubChapNum;
         public List<string> TextList;
         public List<string> ImageList;
         public List<object> SubList;
         public List<object> DomList;
-        public List<double> ResponseTime;
+        public List<float> ResponseTime;
         public Responses Responses;
     }
 
@@ -35,8 +36,10 @@ public class JsonDeconstructor : MonoBehaviour
 
 
     public Chapter myChapter = new Chapter();
-
-    void Start() {
+    [SerializeField] 
+    public Chapter getChapter() {
         myChapter = JsonUtility.FromJson<Chapter>(chapterJSON.text);
+        return myChapter;
     }
+    
 }
