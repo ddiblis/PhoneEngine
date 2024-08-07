@@ -3,66 +3,56 @@
     "SubChaps":[
         {
             "SubChapNum": 0,
-            "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "photo", "here's an emoji to test", "emoji"],
-            "ImageList": ["", "", "", "gf-standing", "", "black-heart"],
+            "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]"],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
             "Responses": {
-                "TextResps": ["this is the response for the top button", "this the response for the bottom button"],
-                "ImageResps": ["", ""],
+                "Resps": ["this is the response for the top button", "this the response for the bottom button"],
                 "SubChaps": [1, 2]
             }
         },
         {
             "SubChapNum": 1,
-            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "photo", "here's an emoji to test", "emoji"],
-            "ImageList": ["", "", "", "gf-standing", "", "red-heart"],
+            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[red-heart]"],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
             "Responses": {
-                "TextResps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
-                "ImageResps": ["", ""],
+                "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
                 "SubChaps": [2, 2]
             }
         },
         {
             "SubChapNum": 2,
             "TextList": [],
-            "ImageList": [],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [],
             "Responses": {
-                "TextResps": ["this is a choice only response1", "this is a choice only response2"],
-                "ImageResps": ["", ""],
+                "Resps": ["this is a choice only response1", "this is a choice only response2"],
                 "SubChaps": [3, 3]
             }
         },
         {
             "SubChapNum": 3,
             "TextList": ["test sending me an emoji please"],
-            "ImageList": [""],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [1.7],
             "Responses": {
-                "TextResps": ["emoji", "emoji"],
-                "ImageResps": ["black-heart", "red-heart"],
+                "Resps": ["[black-heart]", "[red-heart]"],
                 "SubChaps": [4, 4]
             }
         },
         {
             "SubChapNum": 4,
             "TextList": ["test sending me an image please"],
-            "ImageList": [""],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [1.7],
             "Responses": {
-                "TextResps": ["photo", "this is a choice only response2"],
-                "ImageResps": ["gf-standing", ""],
+                "Resps": ["{gf-standing}", "this is a choice only response2"],
                 "SubChaps": [0, 0]
             }
         }

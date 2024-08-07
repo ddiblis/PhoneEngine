@@ -7,8 +7,7 @@ public class ChapImport : MonoBehaviour
     [System.Serializable]
     public class Responses
     {
-        public List<string> TextResps;
-        public List<string> ImageResps;
+        public List<string> Resps;
         public List<int> SubChaps;
 
     }
@@ -25,7 +24,6 @@ public class ChapImport : MonoBehaviour
     {
         public int SubChapNum;
         public List<string> TextList;
-        public List<string> ImageList;
         public List<object> SubList;
         public List<object> DomList;
         public List<float> ResponseTime;

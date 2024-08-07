@@ -43,41 +43,45 @@ public class MessagingHandlers : MonoBehaviour {
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
     }
 
-    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap){
-        List<string> TextList = subChap.TextList;
-        List<string> ImageList = subChap.ImageList;
-        List<float> RespTime = subChap.ResponseTime;
-        ChapImport.Responses Responses = subChap.Responses;
-        List<string> textResps = Responses.TextResps;
-        List<string> imageResps = Responses.ImageResps;
-        List<int> subChaps = Responses.SubChaps;
-
-        for (int i = 0; i < TextList.Count; i++) {
-            if (TextList[i] == "photo"){
-                Sprite img = Resources.Load(ImageList[i], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], img));
-            } 
-            else if (TextList[i] == "emoji"){
-                Sprite img = Resources.Load(ImageList[i], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], img));
-            }
-            else {
-                yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], textContent: TextList[i]));
-            }
-        } 
-        for (int i = 0; i < textResps.Count; i++) {
-            if (textResps[i] == "photo"){
-                Sprite img = Resources.Load(imageResps[i], typeof(Sprite)) as Sprite;
+    public void PopulateResps(List<string> Resps, List<int> subChaps){
+        for (int i = 0; i < Resps.Count; i++) {
+            string item = Resps[i];
+            if (item.Contains("{")){
+                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
                 ImageButton(i, subChaps, TypeOfText.sentImage, img);
             } 
-            else if (textResps[i] == "emoji"){
-                Sprite img = Resources.Load(imageResps[i], typeof(Sprite)) as Sprite;
+            else if (item.Contains("[")){
+                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
                 ImageButton(i, subChaps, TypeOfText.sentEmoji, img);
             }
             else {
-                TextButton(i, subChaps,textResps[i]);
+                TextButton(i, subChaps, item);
             }
         }
+    }
+
+    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap){
+        List<string> TextList = subChap.TextList;
+        List<float> RespTime = subChap.ResponseTime;
+        ChapImport.Responses Responses = subChap.Responses;
+        List<string> Resps = Responses.Resps;
+        List<int> subChaps = Responses.SubChaps;
+
+        for (int i = 0; i < TextList.Count; i++) {
+            string item = TextList[i];
+            if (item.Contains("{")){
+                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], img));
+            } 
+            else if (item.Contains("[")){
+                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], img));
+            }
+            else {
+                yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], textContent: item));
+            }
+        } 
+        PopulateResps(Resps, subChaps);
     }
 
     // Handles the building and pushing of text messages to the message list object.
