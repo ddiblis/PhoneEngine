@@ -9,7 +9,8 @@
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
             "Responses": {
-                "Resps": ["this is the response for the top button", "this the response for the bottom button"],
+                "TextResps": ["this is the response for the top button", "this the response for the bottom button"],
+                "ImageResps": ["", ""],
                 "SubChaps": [1, 2]
             }
         },
@@ -21,8 +22,9 @@
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
             "Responses": {
-                "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
-                "SubChaps": [0, 0]
+                "TextResps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
+                "ImageResps": ["", ""],
+                "SubChaps": [2, 2]
             }
         },
         {
@@ -33,7 +35,34 @@
             "DomList": [],
             "ResponseTime": [],
             "Responses": {
-                "Resps": ["this is a choice only response1", "this is a choice only response2"],
+                "TextResps": ["this is a choice only response1", "this is a choice only response2"],
+                "ImageResps": ["", ""],
+                "SubChaps": [3, 3]
+            }
+        },
+        {
+            "SubChapNum": 3,
+            "TextList": ["test sending me an emoji please"],
+            "ImageList": [""],
+            "SubList": [],
+            "DomList": [],
+            "ResponseTime": [1.7],
+            "Responses": {
+                "TextResps": ["emoji", "emoji"],
+                "ImageResps": ["black-heart", "red-heart"],
+                "SubChaps": [4, 4]
+            }
+        },
+        {
+            "SubChapNum": 4,
+            "TextList": ["test sending me an image please"],
+            "ImageList": [""],
+            "SubList": [],
+            "DomList": [],
+            "ResponseTime": [1.7],
+            "Responses": {
+                "TextResps": ["photo", "this is a choice only response2"],
+                "ImageResps": ["gf-standing", ""],
                 "SubChaps": [0, 0]
             }
         }

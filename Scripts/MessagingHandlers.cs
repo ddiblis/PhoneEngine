@@ -10,12 +10,6 @@ using UnityEditor;
 using UnityEngine.TextCore.Text;
 
 public class MessagingHandlers : MonoBehaviour {
-
-    List<string> optionList = new List<string>
-            { "Hey bf", "what are we eating for dinner today?", "what time are you home?", "I love you okay seriously bye", "photo", "emoji"};
-    List<string> imageList = new List<string>
-        {"", "", "", "", "gf-standing", "black-heart"};
-
     public GameObject headshot;
     public Transform messageList;
 
@@ -30,27 +24,16 @@ public class MessagingHandlers : MonoBehaviour {
     public GameObject recImage;
     public GameObject sentEmoji;
     public GameObject recEmoji;
-
-        // headshot.GetComponent<Image>().sprite = emojis.blondeHeadshot;
-    int choicePosition;
-    bool choiceMade;
-
     public JsonDeconstructor json;
-    // JsonDeconstructor ch = new JsonDeconstructor();
+
+
     void Awake(){
         JsonDeconstructor.Chapter chapOne = json.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
 
-        // StartCoroutine(StartMessagesCoroutine());
-
     }
 
     void Update(){
-        // if (choiceMade){
-        //     Debug.Log(choicePosition);
-        // }
-        // Debug.Log(doneDisplayingTexts);
-
     }
 
     public void responseHandle(int subChapNum){
@@ -63,7 +46,8 @@ public class MessagingHandlers : MonoBehaviour {
         List<string> ImageList = subChap.ImageList;
         List<float> RespTime = subChap.ResponseTime;
         JsonDeconstructor.Responses Responses = subChap.Responses;
-        List<string> resps = Responses.Resps;
+        List<string> textResps = Responses.TextResps;
+        List<string> imageResps = Responses.ImageResps;
         List<int> subChaps = Responses.SubChaps;
 
         for (int i = 0; i < TextList.Count; i++) {
@@ -79,11 +63,19 @@ public class MessagingHandlers : MonoBehaviour {
                 yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], textContent: TextList[i]));
             }
         } 
-        for (int i = 0; i < resps.Count; i++) {
-            TextButton(i, subChaps,resps[i]);
+        for (int i = 0; i < textResps.Count; i++) {
+            if (textResps[i] == "photo"){
+                Sprite img = Resources.Load(imageResps[i], typeof(Sprite)) as Sprite;
+                ImageButton(i, subChaps, TypeOfText.sentImage, img);
+            } 
+            else if (textResps[i] == "emoji"){
+                Sprite img = Resources.Load(imageResps[i], typeof(Sprite)) as Sprite;
+                ImageButton(i, subChaps, TypeOfText.sentEmoji, img);
+            }
+            else {
+                TextButton(i, subChaps,textResps[i]);
+            }
         }
-        // ImageButton(0, subChaps, TypeOfText.sentImage, images.PhotosList[(int)Photos.gfStanding]);
-        // ImageButton(1, subChaps, TypeOfText.sentEmoji, images.EmojisList[(int)Emojis.redHeart]);
     }
 
     // Handles the building and pushing of text messages to the message list object.
@@ -175,8 +167,6 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            // choiceMade = true;
-            // choicePosition = indx;
             responseHandle(subChaps[indx]);
         });
     }

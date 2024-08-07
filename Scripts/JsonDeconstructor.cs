@@ -7,7 +7,8 @@ public class JsonDeconstructor : MonoBehaviour
     [System.Serializable]
     public class Responses
     {
-        public List<string> Resps;
+        public List<string> TextResps;
+        public List<string> ImageResps;
         public List<int> SubChaps;
 
     }
