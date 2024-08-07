@@ -2366,7 +2366,7 @@ MonoBehaviour:
   recImage: {fileID: 4810520593487603046, guid: d36bd16e15dad5fdfac4713d3470d42b, type: 3}
   sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
   recEmoji: {fileID: 4810520593487603046, guid: a95a6c9ed66a6b3569e7629485b2ef50, type: 3}
-  json: {fileID: 1650914613}
+  chap: {fileID: 1650914613}
 --- !u!114 &1650914613
 MonoBehaviour:
   m_ObjectHideFlags: 0

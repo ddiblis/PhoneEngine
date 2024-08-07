@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JsonDeconstructor : MonoBehaviour
+public class ChapImport : MonoBehaviour
 {
     [System.Serializable]
     public class Responses

@@ -24,11 +24,13 @@ public class MessagingHandlers : MonoBehaviour {
     public GameObject recImage;
     public GameObject sentEmoji;
     public GameObject recEmoji;
-    public JsonDeconstructor json;
+
+    
+    public ChapImport chap;
 
 
     void Awake(){
-        JsonDeconstructor.Chapter chapOne = json.getChapter();
+        ChapImport.Chapter chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
 
     }
@@ -37,15 +39,15 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void responseHandle(int subChapNum){
-        JsonDeconstructor.Chapter chapOne = json.getChapter();
+        ChapImport.Chapter chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
     }
 
-    public IEnumerator StartMessagesCoroutine(JsonDeconstructor.SubChap subChap){
+    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap){
         List<string> TextList = subChap.TextList;
         List<string> ImageList = subChap.ImageList;
         List<float> RespTime = subChap.ResponseTime;
-        JsonDeconstructor.Responses Responses = subChap.Responses;
+        ChapImport.Responses Responses = subChap.Responses;
         List<string> textResps = Responses.TextResps;
         List<string> imageResps = Responses.ImageResps;
         List<int> subChaps = Responses.SubChaps;
