@@ -2155,6 +2155,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 196137360}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: contacts
+      value: 
+      objectReference: {fileID: 1888701054}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: backButton
       value: 
       objectReference: {fileID: 754429537}
@@ -2176,7 +2180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_Size
-      value: 1
+      value: 0.9999947
       objectReference: {fileID: 0}
     - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_Value
@@ -2316,35 +2320,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 592
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 745.73
+      value: -0.27001953
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -296
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 372.86722
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397345254773016754, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_Name
@@ -3133,6 +3137,7 @@ MonoBehaviour:
   contactButton: {fileID: 7109850510471232554, guid: b79f2f0c10b3710a59c9838a75f800da, type: 3}
   cardsList: {fileID: 913459760}
   scrollBarVerticle: {fileID: 60708955}
+  clickedIndex: 0
   gen: {fileID: 492607238}
   MH: {fileID: 1448357000}
 --- !u!1 &1917032602

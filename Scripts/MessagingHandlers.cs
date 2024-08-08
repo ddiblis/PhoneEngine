@@ -13,7 +13,7 @@ public class MessagingHandlers : MonoBehaviour {
     public Transform textingApp;
     public GameObject headshot;
     public RectTransform messageList;
-    public RectTransform msgList;
+    public RectTransform displayedList;
     public Transform scrollView;
     public Transform content;
     public GameObject backButton;
@@ -47,18 +47,18 @@ public class MessagingHandlers : MonoBehaviour {
 
     void Awake(){
         
+        Button button = backButton.GetComponent<Button>();
+        button.onClick.AddListener(() => {
+            gen.Hide(textingApp);
+            gen.Hide(displayedList.transform);
+        });
+        
 
         for (int i = 0; i < contactsList.Count; i++) {
             Instantiate(messageList, new Vector3(0, 0, 0), Quaternion.identity, content.transform);
             content.GetChild(i).localScale = new Vector3(0, 0, 0);
         } 
 
-        
-        Button button = backButton.GetComponent<Button>();
-        button.onClick.AddListener(() => {
-            gen.Hide(textingApp);
-            gen.Hide(msgList.transform);
-        });
 
         gen.Hide(textingApp);
 

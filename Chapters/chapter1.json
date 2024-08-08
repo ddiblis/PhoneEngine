@@ -4,10 +4,10 @@
         {
             "SubChapNum": 0,
             "Contact": "gf",
-            "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]"],
+            "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]"],
             "SubList": [],
             "DomList": [],
-            "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
+            "ResponseTime": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
                 "SubChaps": [1, 2]
@@ -19,7 +19,7 @@
             "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[red-heart]"],
             "SubList": [],
             "DomList": [],
-            "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
+            "ResponseTime": [0.5, 0.5, 0.5, 0.5, 2.0, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
                 "SubChaps": [2, 2]
