@@ -197,6 +197,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55502422}
   m_CullTransparentMesh: 1
+--- !u!1 &60708955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8296464111379030058, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+  m_PrefabInstance: {fileID: 1448356993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &61852145
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +641,7 @@ PrefabInstance:
       objectReference: {fileID: 492607238}
     - target: {fileID: 7369108385109561018, guid: 8d28b0dd809606868bafa32f06af5410, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HideScreen
+      value: Hide
       objectReference: {fileID: 0}
     - target: {fileID: 7369108385109561018, guid: 8d28b0dd809606868bafa32f06af5410, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -645,10 +650,10 @@ PrefabInstance:
     - target: {fileID: 7369108385109561018, guid: 8d28b0dd809606868bafa32f06af5410, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1888701053}
+      objectReference: {fileID: 229078420}
     - target: {fileID: 7369108385109561018, guid: 8d28b0dd809606868bafa32f06af5410, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: UnityEngine.Transform, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1542,6 +1547,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -461}
   m_SizeDelta: {x: 480, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &754429537 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7888579530402044016, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+  m_PrefabInstance: {fileID: 1448356993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &885515395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2122,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 492607236}
     m_Modifications:
+    - target: {fileID: 1057545278110178844, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1057545278110178844, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1057545278110178844, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 33.13211
+      objectReference: {fileID: 0}
     - target: {fileID: 1179619568289015495, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2133,9 +2155,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 196137360}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: backButton
+      value: 
+      objectReference: {fileID: 754429537}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: scrollView
       value: 
       objectReference: {fileID: 1448356995}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: textingApp
+      value: 
+      objectReference: {fileID: 1448356994}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: names.Array.size
       value: 0
@@ -2144,6 +2174,26 @@ PrefabInstance:
       propertyPath: names.Array.data[1]
       value: blonde
       objectReference: {fileID: 0}
+    - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Direction
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_NumberOfSteps
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657170807420497398, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3749182089153920291, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2151,6 +2201,18 @@ PrefabInstance:
     - target: {fileID: 3749182089153920291, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3749182089153920291, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432594022350387945, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5432594022350387945, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000061035156
       objectReference: {fileID: 0}
     - target: {fileID: 6270340308713893404, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_Pivot.x
@@ -2236,6 +2298,22 @@ PrefabInstance:
       propertyPath: m_Content
       value: 
       objectReference: {fileID: 196137360}
+    - target: {fileID: 6431133604789435838, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Elasticity
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431133604789435838, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_Horizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431133604789435838, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431133604789435838, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_DecelerationRate
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5
@@ -2266,11 +2344,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 372.86707
+      value: 372.86722
       objectReference: {fileID: 0}
     - target: {fileID: 8397345254773016754, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_Name
       value: Texting App
+      objectReference: {fileID: 0}
+    - target: {fileID: 8476556718484992923, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8476556718484992923, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3047,9 +3129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e72cd70f8d9a44f3ca7eeeb25daed81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactsApp: {fileID: 1888701053}
+  contactsApp: {fileID: 229078420}
   contactButton: {fileID: 7109850510471232554, guid: b79f2f0c10b3710a59c9838a75f800da, type: 3}
   cardsList: {fileID: 913459760}
+  scrollBarVerticle: {fileID: 60708955}
   gen: {fileID: 492607238}
   MH: {fileID: 1448357000}
 --- !u!1 &1917032602
@@ -3480,11 +3563,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 492607238}
         m_TargetAssemblyTypeName: GeneralHandlers, Assembly-CSharp
-        m_MethodName: foregroundScreen
+        m_MethodName: Show
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1888701053}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 229078420}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Contacts Screen

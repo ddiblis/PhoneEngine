@@ -11,9 +11,10 @@ using System;
 public class ContactsHandler : MonoBehaviour
 {
 
-    public GameObject contactsApp;
+    public Transform contactsApp;
     public GameObject contactButton;
     public Transform cardsList;
+    public GameObject scrollBarVerticle;
 
     public GeneralHandlers gen;
     public MessagingHandlers MH;
@@ -32,18 +33,27 @@ public class ContactsHandler : MonoBehaviour
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             MH.headshot.GetComponent<Image>().sprite = pfp;
-
+            
             MH.msgList = MH.content.GetChild(indx) as RectTransform;
             MH.scrollView.GetComponent<ScrollRect>().content = MH.msgList;
             MH.content.GetChild(indx).localScale = new Vector3(1, 1, 1);
 
-            gen.foregroundScreen(MH.textingApp);
+            if (MH.contactPush != indx){
+                gen.Hide(MH.choices); 
+            } else {
+                gen.Show(MH.choices);
+            }
+
+            gen.Show(MH.textingApp);
+            
+            // scrollBarVerticle.GetComponent<Scrollbar>().value = 0;
+
         });
     }
 
     void Start()
     {
-        gen.HideScreen(contactsApp);
+        gen.Hide(contactsApp);
 
         
 

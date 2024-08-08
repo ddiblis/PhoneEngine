@@ -10,15 +10,16 @@ using UnityEditor;
 using UnityEngine.TextCore.Text;
 public class MessagingHandlers : MonoBehaviour {
 
-    public GameObject textingApp;
+    public Transform textingApp;
     public GameObject headshot;
     public RectTransform messageList;
     public RectTransform msgList;
     public Transform scrollView;
     public Transform content;
+    public GameObject backButton;
 
     // The int of which message list to send the messages to based on their name and their position in the contactsList
-    int contactPush;
+    public int contactPush;
 
     // Choices buttons box
     public Transform choices;
@@ -35,11 +36,13 @@ public class MessagingHandlers : MonoBehaviour {
     public ChapImport chap;
     public GeneralHandlers gen;
 
+
+    ChapImport.Chapter chapOne;
+
     // test area
     List<string> contactsList = new List<string>() {
         "gf", "blonde"
     };
-
     
 
     void Awake(){
@@ -50,26 +53,23 @@ public class MessagingHandlers : MonoBehaviour {
             content.GetChild(i).localScale = new Vector3(0, 0, 0);
         } 
 
-        gen.HideScreen(textingApp);
+        
+        Button button = backButton.GetComponent<Button>();
+        button.onClick.AddListener(() => {
+            gen.Hide(textingApp);
+            gen.Hide(msgList.transform);
+        });
 
-        // grab Contact from json subchap, compare to list of contactList, grab index of match, pass it to message handler
-
-        // GameObject messageClone = Instantiate(sentText, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(0));
-        // GameObject textContent = messageClone.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
-        // textContent.GetComponent<TextMeshProUGUI>().text = "gf";
-
-        // GameObject messageClone1 = Instantiate(sentText, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(1));
-        // GameObject textContent1 = messageClone1.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
-        // textContent1.GetComponent<TextMeshProUGUI>().text = "blondie";
+        gen.Hide(textingApp);
 
 
-        ChapImport.Chapter chapOne = chap.getChapter();
+        chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
     }
     
     
     public void responseHandle(int subChapNum){
-        ChapImport.Chapter chapOne = chap.getChapter();
+        chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
     }
 

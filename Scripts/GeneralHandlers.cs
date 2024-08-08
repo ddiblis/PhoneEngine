@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class GeneralHandlers : MonoBehaviour
 {
-    public void HideScreen(GameObject Screen){
-        Screen.transform.localScale = new Vector3(0, 0, 0);
+    public void Hide(Transform Object){
+        Object.localScale = new Vector3(0, 0, 0);
     }
-    public void foregroundScreen(GameObject Screen){
-        Screen.transform.localScale = new Vector3(1, 1, 1);
+    public void Show(Transform Object){
+        Object.localScale = new Vector3(1, 1, 1);
     }
+
 }
