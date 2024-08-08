@@ -17,6 +17,9 @@ public class MessagingHandlers : MonoBehaviour {
     public Transform scrollView;
     public Transform content;
 
+    // The int of which message list to send the messages to based on their name and their position in the contactsList
+    int contactPush;
+
     // Choices buttons box
     public Transform choices;
     public GameObject choice;
@@ -49,18 +52,19 @@ public class MessagingHandlers : MonoBehaviour {
 
         gen.HideScreen(textingApp);
 
+        // grab Contact from json subchap, compare to list of contactList, grab index of match, pass it to message handler
 
-        GameObject messageClone = Instantiate(sentText, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(0));
-        GameObject textContent = messageClone.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
-        textContent.GetComponent<TextMeshProUGUI>().text = "gf";
+        // GameObject messageClone = Instantiate(sentText, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(0));
+        // GameObject textContent = messageClone.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+        // textContent.GetComponent<TextMeshProUGUI>().text = "gf";
 
-        GameObject messageClone1 = Instantiate(sentText, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(1));
-        GameObject textContent1 = messageClone1.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
-        textContent1.GetComponent<TextMeshProUGUI>().text = "blondie";
+        // GameObject messageClone1 = Instantiate(sentText, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(1));
+        // GameObject textContent1 = messageClone1.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+        // textContent1.GetComponent<TextMeshProUGUI>().text = "blondie";
 
 
-        // ChapImport.Chapter chapOne = chap.getChapter();
-        // StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
+        ChapImport.Chapter chapOne = chap.getChapter();
+        StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
     }
     
     
@@ -87,12 +91,14 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap){
-        // string Contact = subChap.Contact;
+        string Contact = subChap.Contact;
         List<string> TextList = subChap.TextList;
         List<float> RespTime = subChap.ResponseTime;
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
         List<int> subChaps = Responses.SubChaps;
+        contactPush = contactsList.IndexOf(Contact);
+
 
         for (int i = 0; i < TextList.Count; i++) {
             string item = TextList[i];
@@ -114,7 +120,7 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles the building and pushing of text messages to the message list object.
     // messageContent: The text content of the message.
     public void TextPush(GameObject textMessage, string messageContent){
-        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, msgList.transform);
+        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(contactPush));
         GameObject textContent = messageClone.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
     }
@@ -122,7 +128,7 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles the building and pushing of image messages to the message list object.
     // messageContent: The image sprite of the message  
     public void ImagePush(GameObject imageMessage, Sprite image) {
-        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, msgList.transform);
+        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(contactPush));
         GameObject imageContent = messageClone.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = image;
     }
@@ -144,8 +150,8 @@ public class MessagingHandlers : MonoBehaviour {
     // messageContent: default to "" it's the text of the message being sent
     #nullable enable
     public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = ""){
-        if (msgList.childCount >= 25){
-            Destroy(msgList.transform.GetChild(0).gameObject);
+        if (content.GetChild(contactPush).childCount >= 25){
+            Destroy(content.GetChild(contactPush).GetChild(0).gameObject);
         } 
         switch(type){
             case TypeOfText.sentText:

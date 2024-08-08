@@ -48,7 +48,6 @@ public class ContactsHandler : MonoBehaviour
         
 
         for (int i = 0; i < contactsList.Count; i++) {
-            Debug.Log(contactsList[i]);
             Sprite img = Resources.Load(contactsList[i], typeof(Sprite)) as Sprite;            
 
             addContactCard(img, contactsList[i], i);
