@@ -23,6 +23,7 @@ public class ChapImport : MonoBehaviour
     public class SubChap
     {
         public int SubChapNum;
+        public string Contact;
         public List<string> TextList;
         public List<object> SubList;
         public List<object> DomList;

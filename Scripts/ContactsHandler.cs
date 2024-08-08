@@ -11,20 +11,19 @@ using System;
 public class ContactsHandler : MonoBehaviour
 {
 
-    List<string> contactsList = new List<string>
-            {"gf", "Blonde"};
-
-    List<Transform> MessageLists = new List<Transform>();
-
-    public GameObject textingApp;
     public GameObject contactsApp;
-    public Transform messageList;
     public GameObject contactButton;
     public Transform cardsList;
-    public GameObject Pfp;
+
+    public GeneralHandlers gen;
+    public MessagingHandlers MH;
+
+    List<string> contactsList = new List<string>() {
+        "gf", "blonde"
+    };
 
 
-    public void addContactCard(Sprite pfp, string name){
+    public void addContactCard(Sprite pfp, string name, int indx){
         GameObject ChoiceClone = Instantiate(contactButton, new Vector3(0, 0, 0), Quaternion.identity, cardsList.transform);
         GameObject picField = ChoiceClone.transform.GetChild(0).gameObject;
         GameObject nameField = ChoiceClone.transform.GetChild(1).GetChild(0).gameObject;
@@ -32,23 +31,29 @@ public class ContactsHandler : MonoBehaviour
         nameField.GetComponent<TextMeshProUGUI>().text = name;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            textingApp.transform.localScale = new Vector3(1, 1, 1);
-            Pfp.GetComponent<Image>().sprite = pfp;
+            MH.headshot.GetComponent<Image>().sprite = pfp;
+
+            MH.msgList = MH.content.GetChild(indx) as RectTransform;
+            MH.scrollView.GetComponent<ScrollRect>().content = MH.msgList;
+            MH.content.GetChild(indx).localScale = new Vector3(1, 1, 1);
+
+            gen.foregroundScreen(MH.textingApp);
         });
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        // hides screen
-        contactsApp.transform.localScale = new Vector3(0, 0, 0);
+        gen.HideScreen(contactsApp);
+
+        
 
         for (int i = 0; i < contactsList.Count; i++) {
-            Sprite img = Resources.Load(contactsList[i], typeof(Sprite)) as Sprite;
-            MessageLists.Add(Instantiate(messageList, new Vector3(0, 0, 0), Quaternion.identity));
+            Debug.Log(contactsList[i]);
+            Sprite img = Resources.Load(contactsList[i], typeof(Sprite)) as Sprite;            
 
-            addContactCard(img, contactsList[i]);
+            addContactCard(img, contactsList[i], i);
         } 
+        
 
     }
 }

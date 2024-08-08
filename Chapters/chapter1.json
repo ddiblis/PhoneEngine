@@ -3,6 +3,7 @@
     "SubChaps":[
         {
             "SubChapNum": 0,
+            "Contact": "gf",
             "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]"],
             "SubList": [],
             "DomList": [],
@@ -14,6 +15,7 @@
         },
         {
             "SubChapNum": 1,
+            "Contact": "gf",
             "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[red-heart]"],
             "SubList": [],
             "DomList": [],
@@ -25,6 +27,7 @@
         },
         {
             "SubChapNum": 2,
+            "Contact": "gf",
             "TextList": [],
             "SubList": [],
             "DomList": [],
@@ -36,6 +39,7 @@
         },
         {
             "SubChapNum": 3,
+            "Contact": "gf",
             "TextList": ["test sending me an emoji please"],
             "SubList": [],
             "DomList": [],
@@ -47,6 +51,7 @@
         },
         {
             "SubChapNum": 4,
+            "Contact": "gf",
             "TextList": ["test sending me an image please"],
             "SubList": [],
             "DomList": [],
