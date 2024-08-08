@@ -14,7 +14,7 @@
         },
         {
             "SubChapNum": 1,
-            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[red-heart]"],
+            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[red-heart]"],
             "SubList": [],
             "DomList": [],
             "ResponseTime": [3.0, 0.7, 1.0, 1.5, 2.0, 0.5],
@@ -52,7 +52,7 @@
             "DomList": [],
             "ResponseTime": [1.7],
             "Responses": {
-                "Resps": ["{gf-standing}", "this is a choice only response2"],
+                "Resps": ["{gf-car2}", "this is a choice only response2"],
                 "SubChaps": [0, 0]
             }
         }

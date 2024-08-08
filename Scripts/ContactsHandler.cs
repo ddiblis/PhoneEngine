@@ -12,11 +12,16 @@ public class ContactsHandler : MonoBehaviour
 {
 
     List<string> contactsList = new List<string>
-            {"gf", "Blondie"};
+            {"gf", "Blonde"};
 
+    List<Transform> MessageLists = new List<Transform>();
 
+    public GameObject textingApp;
+    public GameObject contactsApp;
+    public Transform messageList;
     public GameObject contactButton;
     public Transform cardsList;
+    public GameObject Pfp;
 
 
     public void addContactCard(Sprite pfp, string name){
@@ -25,26 +30,25 @@ public class ContactsHandler : MonoBehaviour
         GameObject nameField = ChoiceClone.transform.GetChild(1).GetChild(0).gameObject;
         picField.GetComponent<Image>().sprite = pfp;
         nameField.GetComponent<TextMeshProUGUI>().text = name;
+        Button button = ChoiceClone.GetComponent<Button>();
+        button.onClick.AddListener(() => {
+            textingApp.transform.localScale = new Vector3(1, 1, 1);
+            Pfp.GetComponent<Image>().sprite = pfp;
+        });
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        // Emojis emojis = new Emojis();
+        // hides screen
+        contactsApp.transform.localScale = new Vector3(0, 0, 0);
 
-        // Debug.Log(emojis.blackHeart);
+        for (int i = 0; i < contactsList.Count; i++) {
+            Sprite img = Resources.Load(contactsList[i], typeof(Sprite)) as Sprite;
+            MessageLists.Add(Instantiate(messageList, new Vector3(0, 0, 0), Quaternion.identity));
 
-        //        List<Sprite> pfpList = new List<Sprite>
-        //         {emojis.gfHeadshot, emojis.blondeHeadshot};
+            addContactCard(img, contactsList[i]);
+        } 
 
-        // for (int i = 0; i < contactsList.Count; i++) {
-        //     addContactCard(pfpList[i], contactsList[i]);
-        // } 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

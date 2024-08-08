@@ -8,15 +8,15 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
 using UnityEngine.TextCore.Text;
-
 public class MessagingHandlers : MonoBehaviour {
+
+    public GameObject textingApp;
     public GameObject headshot;
     public Transform messageList;
 
     // Choices buttons box
     public Transform choices;
     public GameObject choice;
-
 
     public GameObject sentText;
     public GameObject recText;
@@ -30,14 +30,12 @@ public class MessagingHandlers : MonoBehaviour {
 
 
     void Awake(){
+        textingApp.transform.localScale = new Vector3(0, 0, 0);
         ChapImport.Chapter chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
-
     }
-
-    void Update(){
-    }
-
+    
+    
     public void responseHandle(int subChapNum){
         ChapImport.Chapter chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
