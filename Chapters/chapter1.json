@@ -5,8 +5,6 @@
             "SubChapNum": 0,
             "Contact": "gf",
             "TextList": ["Hey hon", "testing scene 0", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]"],
-            "SubList": [],
-            "DomList": [],
             "ResponseTime": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
@@ -17,8 +15,6 @@
             "SubChapNum": 1,
             "Contact": "gf",
             "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[red-heart]"],
-            "SubList": [],
-            "DomList": [],
             "ResponseTime": [0.5, 0.5, 0.5, 0.5, 2.0, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
@@ -29,8 +25,6 @@
             "SubChapNum": 2,
             "Contact": "gf",
             "TextList": [],
-            "SubList": [],
-            "DomList": [],
             "ResponseTime": [],
             "Responses": {
                 "Resps": ["this is a choice only response1", "this is a choice only response2"],
@@ -41,8 +35,6 @@
             "SubChapNum": 3,
             "Contact": "gf",
             "TextList": ["test sending me an emoji please"],
-            "SubList": [],
-            "DomList": [],
             "ResponseTime": [1.7],
             "Responses": {
                 "Resps": ["[black-heart]", "[red-heart]"],
@@ -53,8 +45,6 @@
             "SubChapNum": 4,
             "Contact": "gf",
             "TextList": ["test sending me an image please"],
-            "SubList": [],
-            "DomList": [],
             "ResponseTime": [1.7],
             "Responses": {
                 "Resps": ["{gf-car2}", "this is a choice only response2"],
@@ -65,8 +55,6 @@
             "SubChapNum": 5,
             "Contact": "blonde",
             "TextList": ["hey boy", "this is blonde", "your gfs best friend", "test sending me a text instead of your gf"],
-            "SubList": [],
-            "DomList": [],
             "ResponseTime": [1.7, 0.5, 0.5, 0.9],
             "Responses": {
                 "Resps": ["this is a choice to blonde1", "this is a choice to blonde1"],

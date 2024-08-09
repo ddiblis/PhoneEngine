@@ -8,61 +8,55 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using System;
 
-public class ContactsHandler : MonoBehaviour
-{
+public class ContactsHandler : MonoBehaviour {
 
     public Transform contactsApp;
-    public GameObject contactButton;
     public Transform cardsList;
-    public GameObject scrollBarVerticle;
-    public int selectedIndex;
+
 
     public GeneralHandlers gen;
-    public MessagingHandlers MH;
-
-    List<string> contactsList = new List<string>() {
-        "gf", "blonde"
-    };
+    public SharedObjects Shared;
+    public PreFabs Prefabs;
 
 
-    public void addContactCard(Sprite pfp, string name, int indx){
-        GameObject ChoiceClone = Instantiate(contactButton, new Vector3(0, 0, 0), Quaternion.identity, cardsList.transform);
+
+    public void addContactCard(Sprite pfp, string name, int indx) {
+        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, cardsList.transform);
         GameObject picField = ChoiceClone.transform.GetChild(0).gameObject;
         GameObject nameField = ChoiceClone.transform.GetChild(1).GetChild(0).gameObject;
         picField.GetComponent<Image>().sprite = pfp;
         nameField.GetComponent<TextMeshProUGUI>().text = name;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            selectedIndex = indx;
-            MH.headshot.GetComponent<Image>().sprite = pfp;
+            Shared.selectedIndex = indx;
+            Shared.headshot.GetComponent<Image>().sprite = pfp;
             
-            MH.displayedList = MH.content.GetChild(indx) as RectTransform;
-            MH.scrollView.GetComponent<ScrollRect>().content = MH.displayedList;
-            gen.Show(MH.displayedList.transform);
-            MH.displayedList.anchoredPosition = Vector3.zero;   
+            Shared.displayedList = Shared.content.GetChild(indx) as RectTransform;
+            Shared.scrollView.GetComponent<ScrollRect>().content = Shared.displayedList;
+            gen.Show(Shared.displayedList.transform);
+            Shared.displayedList.anchoredPosition = Vector3.zero;   
 
-            if (MH.contactPush != indx){
-                gen.Hide(MH.choices); 
+            if (Shared.contactPush != indx){
+                gen.Hide(Shared.choices); 
             } else {
-                gen.Show(MH.choices);
+                gen.Show(Shared.choices);
             }
 
-            gen.Show(MH.textingApp);
+            gen.Show(Shared.textingApp);
         
 
         });
     }
 
-    void Start()
-    {
+    void Start() {
+        
         gen.Hide(contactsApp);
-
         
 
-        for (int i = 0; i < contactsList.Count; i++) {
-            Sprite img = Resources.Load(contactsList[i], typeof(Sprite)) as Sprite;            
+        for (int i = 0; i < Shared.contactsList.Count; i++) {
+            Sprite img = Resources.Load(Shared.contactsList[i], typeof(Sprite)) as Sprite;            
 
-            addContactCard(img, contactsList[i], i);
+            addContactCard(img, Shared.contactsList[i], i);
         } 
         
 

@@ -10,58 +10,34 @@ using UnityEditor;
 using UnityEngine.TextCore.Text;
 public class MessagingHandlers : MonoBehaviour {
 
-    public Transform textingApp;
-    public GameObject headshot;
-    public RectTransform messageList;
-    public RectTransform displayedList;
-    public Transform scrollView;
-    public Transform content;
     public GameObject backButton;
-
-    // The int of which message list to send the messages to based on their name and their position in the contactsList
-    public int contactPush;
-
-    // Choices buttons box
-    public Transform choices;
-    public GameObject choice;
-
-    public GameObject sentText;
-    public GameObject recText;
-    public GameObject sentImage;
-    public GameObject recImage;
-    public GameObject sentEmoji;
-    public GameObject recEmoji;
-
     
     public ChapImport chap;
     public GeneralHandlers gen;
-    public ContactsHandler CH;
+    public SharedObjects Shared;
+    public PreFabs Prefabs;
 
 
     ChapImport.Chapter chapOne;
 
-    // test area
-    List<string> contactsList = new List<string>() {
-        "gf", "blonde"
-    };
     
 
-    void Awake(){
+    void Awake() {
         
         Button button = backButton.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            gen.Hide(textingApp);
-            gen.Hide(displayedList.transform);
+            gen.Hide(Shared.textingApp);
+            gen.Hide(Shared.displayedList.transform);
         });
         
 
-        for (int i = 0; i < contactsList.Count; i++) {
-            Instantiate(messageList, new Vector3(0, 0, 0), Quaternion.identity, content.transform);
-            content.GetChild(i).localScale = new Vector3(0, 0, 0);
+        for (int i = 0; i < Shared.contactsList.Count; i++) {
+            Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.transform);
+            Shared.content.GetChild(i).localScale = new Vector3(0, 0, 0);
         } 
 
 
-        gen.Hide(textingApp);
+        gen.Hide(Shared.textingApp);
 
 
         chapOne = chap.getChapter();
@@ -69,7 +45,7 @@ public class MessagingHandlers : MonoBehaviour {
     }
     
     
-    public void responseHandle(int subChapNum){
+    public void responseHandle(int subChapNum) {
         chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
     }
@@ -89,19 +65,19 @@ public class MessagingHandlers : MonoBehaviour {
                 TextButton(i, subChaps, item);
             }
         }
-        if (contactPush != CH.selectedIndex){
-            gen.Hide(choices); 
+        if (Shared.contactPush != Shared.selectedIndex){
+            gen.Hide(Shared.choices); 
         } 
     }
 
-    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap){
+    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap) {
         string Contact = subChap.Contact;
         List<string> TextList = subChap.TextList;
         List<float> RespTime = subChap.ResponseTime;
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
         List<int> subChaps = Responses.SubChaps;
-        contactPush = contactsList.IndexOf(Contact);
+        Shared.contactPush = Shared.contactsList.IndexOf(Contact);
 
 
         for (int i = 0; i < TextList.Count; i++) {
@@ -123,8 +99,8 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Handles the building and pushing of text messages to the message list object.
     // messageContent: The text content of the message.
-    public void TextPush(GameObject textMessage, string messageContent){
-        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(contactPush));
+    public void TextPush(GameObject textMessage, string messageContent) {
+        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
         GameObject textContent = messageClone.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
     }
@@ -132,7 +108,7 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles the building and pushing of image messages to the message list object.
     // messageContent: The image sprite of the message  
     public void ImagePush(GameObject imageMessage, Sprite image) {
-        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, content.GetChild(contactPush));
+        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
         GameObject imageContent = messageClone.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = image;
     }
@@ -153,28 +129,28 @@ public class MessagingHandlers : MonoBehaviour {
     // image: optional field in case we're sending an image
     // messageContent: default to "" it's the text of the message being sent
     #nullable enable
-    public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = ""){
-        if (content.GetChild(contactPush).childCount >= 25){
-            Destroy(content.GetChild(contactPush).GetChild(0).gameObject);
+    public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = "") {
+        if (Shared.content.GetChild(Shared.contactPush).childCount >= 25){
+            Destroy(Shared.content.GetChild(Shared.contactPush).GetChild(0).gameObject);
         } 
         switch(type){
             case TypeOfText.sentText:
-                TextPush(sentText, messageContent);
+                TextPush(Prefabs.sentText, messageContent);
             break;
             case TypeOfText.recText:
-                TextPush(recText, messageContent);
+                TextPush(Prefabs.recText, messageContent);
             break;
             case TypeOfText.sentEmoji:
-                ImagePush(sentEmoji, image);
+                ImagePush(Prefabs.sentEmoji, image);
             break;
             case TypeOfText.recEmoji:
-            ImagePush(recEmoji, image);
+            ImagePush(Prefabs.recEmoji, image);
             break;
             case TypeOfText.sentImage:
-                ImagePush(sentImage, image);
+                ImagePush(Prefabs.sentImage, image);
             break;
             case TypeOfText.recImage:
-                ImagePush(recImage, image);
+                ImagePush(Prefabs.recImage, image);
             break;
         }
     }
@@ -201,14 +177,14 @@ public class MessagingHandlers : MonoBehaviour {
     // choice: prefab of the button (top or bottom) ps. destinction might not be necessary, we'll see.
     // textContent: shorthand of the text to be sent by using that button.
     public void TextButton(int indx, List<int> subChaps,string textContent = "") {
-        GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
+        GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(1).gameObject);
         GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
-            Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
+            Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
             responseHandle(subChaps[indx]);
         });
@@ -219,14 +195,14 @@ public class MessagingHandlers : MonoBehaviour {
     // type: type of image (emoji/photo)
     // image: sprite image to be sent (emoji/photo)
     public void ImageButton(int indx, List<int> subChaps, TypeOfText type, Sprite image) {
-        GameObject ChoiceClone = Instantiate(choice, new Vector3(0, 0, 0), Quaternion.identity, choices.transform);
+        GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
         imageObject.GetComponent<Image>().sprite = image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             MessageListLimit(type, image);
-            Destroy(choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
+            Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
             responseHandle(subChaps[indx]);
         });

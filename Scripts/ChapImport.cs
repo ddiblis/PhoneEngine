@@ -2,8 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChapImport : MonoBehaviour
-{
+public class ChapImport : MonoBehaviour {
+    
     [System.Serializable]
     public class Responses
     {
@@ -25,8 +25,6 @@ public class ChapImport : MonoBehaviour
         public int SubChapNum;
         public string Contact;
         public List<string> TextList;
-        public List<object> SubList;
-        public List<object> DomList;
         public List<float> ResponseTime;
         public Responses Responses;
     }

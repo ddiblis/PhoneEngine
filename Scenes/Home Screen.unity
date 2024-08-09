@@ -197,11 +197,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55502422}
   m_CullTransparentMesh: 1
---- !u!1 &60708955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8296464111379030058, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
-  m_PrefabInstance: {fileID: 1448356993}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &61852145
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +702,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 600, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &330083719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6023415100958740670, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+  m_PrefabInstance: {fileID: 1448356993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &430036603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,8 +1120,9 @@ GameObject:
   - component: {fileID: 492607235}
   - component: {fileID: 492607234}
   - component: {fileID: 492607233}
-  - component: {fileID: 492607237}
   - component: {fileID: 492607238}
+  - component: {fileID: 492607239}
+  - component: {fileID: 492607241}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1214,18 +1215,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &492607237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492607232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 477f039258eac1d948e3354a8ef594f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &492607238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1227,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b3f40b9111198398cfea855af508e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &492607239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492607232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08823c2b52388f7769833a454927501b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactsList:
+  - gf
+  - blonde
+  selectedIndex: 0
+  headshot: {fileID: 330083719}
+  textingApp: {fileID: 1448356994}
+  displayedList: {fileID: 0}
+  choices: {fileID: 1207948560}
+  content: {fileID: 196137360}
+  scrollView: {fileID: 1448356995}
+  contactPush: 0
+--- !u!114 &492607241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492607232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106e411cd45818f8ead790c275372883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contactButton: {fileID: 7109850510471232554, guid: b79f2f0c10b3710a59c9838a75f800da, type: 3}
+  messageList: {fileID: 1009085803514084419, guid: 0354ce298d8125d7b808c3ac59dbe166, type: 3}
+  choice: {fileID: 1076370345745255780, guid: 7fbc670f77be7bd33a21fc4cac3a2ba2, type: 3}
+  sentText: {fileID: 1658346118929398, guid: d8a4fc22db5d0db7d9d355454681e229, type: 3}
+  recText: {fileID: 1091222002183730, guid: 5c03b3fe50a4cb325a95b8f2e16d7fbc, type: 3}
+  sentImage: {fileID: 7878636168325601005, guid: d1d1c695438fa8114b99edda2600a8b5, type: 3}
+  recImage: {fileID: 4810520593487603046, guid: d36bd16e15dad5fdfac4713d3470d42b, type: 3}
+  sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
+  recEmoji: {fileID: 4810520593487603046, guid: a95a6c9ed66a6b3569e7629485b2ef50, type: 3}
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,6 +1979,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066779992}
   m_CullTransparentMesh: 1
+--- !u!224 &1207948560 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1159420649507589079, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+  m_PrefabInstance: {fileID: 1448356993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225829903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2154,6 +2192,14 @@ PrefabInstance:
       propertyPath: gen
       value: 
       objectReference: {fileID: 492607238}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: Shared
+      value: 
+      objectReference: {fileID: 492607239}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: Prefabs
+      value: 
+      objectReference: {fileID: 492607241}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: content
       value: 
@@ -2401,17 +2447,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1057545278110178844, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
   m_PrefabInstance: {fileID: 1448356993}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1448357000 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
-  m_PrefabInstance: {fileID: 1448356993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122562650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612828b00cfdc563d84ad1eb809a7e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1636639385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,12 +3173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactsApp: {fileID: 229078420}
-  contactButton: {fileID: 7109850510471232554, guid: b79f2f0c10b3710a59c9838a75f800da, type: 3}
   cardsList: {fileID: 913459760}
-  scrollBarVerticle: {fileID: 60708955}
-  selectedIndex: 0
   gen: {fileID: 492607238}
-  MH: {fileID: 1448357000}
+  Shared: {fileID: 492607239}
+  Prefabs: {fileID: 492607241}
 --- !u!1 &1917032602
 GameObject:
   m_ObjectHideFlags: 0
