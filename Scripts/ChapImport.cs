@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChapImport : MonoBehaviour {
-    
+
     [System.Serializable]
     public class Responses
     {
         public List<string> Resps;
-        public List<int> SubChaps;
+        public List<int> NextChap;
 
     }
 

@@ -22,13 +22,11 @@ public class ContactsHandler : MonoBehaviour {
 
     public void addContactCard(Sprite pfp, string name, int indx) {
         GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, cardsList.transform);
-        GameObject picField = ChoiceClone.transform.GetChild(0).gameObject;
-        GameObject nameField = ChoiceClone.transform.GetChild(1).GetChild(0).gameObject;
-        picField.GetComponent<Image>().sprite = pfp;
-        nameField.GetComponent<TextMeshProUGUI>().text = name;
-        Button button = ChoiceClone.GetComponent<Button>();
-        button.onClick.AddListener(() => {
-            Shared.selectedIndex = indx;
+        ChoiceClone.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
+        ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
+        ChoiceClone.GetComponent<Button>().onClick.AddListener(() => {
+
+            Shared.selectedIndex = indx;  // sets index to be used for showing or hiding choices in messagingHandler while viewing contact
             Shared.headshot.GetComponent<Image>().sprite = pfp;
             
             Shared.displayedList = Shared.content.GetChild(indx) as RectTransform;
@@ -36,6 +34,7 @@ public class ContactsHandler : MonoBehaviour {
             gen.Show(Shared.displayedList.transform);
             Shared.displayedList.anchoredPosition = Vector3.zero;   
 
+            // This is important for showing or hiding contact choices if you're not viewing a contact
             if (Shared.contactPush != indx){
                 gen.Hide(Shared.choices); 
             } else {
@@ -52,7 +51,7 @@ public class ContactsHandler : MonoBehaviour {
         
         gen.Hide(contactsApp);
         
-
+        // Generates contact cards for each contact based on list.
         for (int i = 0; i < Shared.contactsList.Count; i++) {
             Sprite img = Resources.Load(Shared.contactsList[i], typeof(Sprite)) as Sprite;            
 

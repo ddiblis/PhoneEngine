@@ -20,17 +20,27 @@ public class MessagingHandlers : MonoBehaviour {
 
     ChapImport.Chapter chapOne;
 
+    // Simple enum used for determining the type of text being sent/recieved.
+    public enum TypeOfText {
+        sentText = 0,
+        recText = 1,
+        sentImage = 2,
+        recImage = 3,
+        sentEmoji = 4,
+        recEmoji = 5
+    }
     
 
     void Awake() {
         
+        // Creates onclick handler for back button.
         Button button = backButton.GetComponent<Button>();
         button.onClick.AddListener(() => {
             gen.Hide(Shared.textingApp);
             gen.Hide(Shared.displayedList.transform);
         });
         
-
+        // creates as many messageLists as needed for the contacts and hides them.
         for (int i = 0; i < Shared.contactsList.Count; i++) {
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.transform);
             Shared.content.GetChild(i).localScale = new Vector3(0, 0, 0);
@@ -44,25 +54,26 @@ public class MessagingHandlers : MonoBehaviour {
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
     }
     
-    
+    // Called on to start the next coroutine for the subchapter.
     public void responseHandle(int subChapNum) {
-        chapOne = chap.getChapter();
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
     }
 
-    public void PopulateResps(List<string> Resps, List<int> subChaps){
+    // Creates and pushes the response buttons/hides them if they're not meant for currently viewed contact
+    // Arguments taken from json file through StartMessagesCoroutine
+    public void PopulateResps(List<string> Resps, List<int> NextChap){
         for (int i = 0; i < Resps.Count; i++) {
             string item = Resps[i];
             if (item.Contains("{")){
                 Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, subChaps, TypeOfText.sentImage, img);
+                ImageButton(i, NextChap, TypeOfText.sentImage, img);
             } 
             else if (item.Contains("[")){
                 Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, subChaps, TypeOfText.sentEmoji, img);
+                ImageButton(i, NextChap, TypeOfText.sentEmoji, img);
             }
             else {
-                TextButton(i, subChaps, item);
+                TextButton(i, NextChap, item);
             }
         }
         if (Shared.contactPush != Shared.selectedIndex){
@@ -70,13 +81,14 @@ public class MessagingHandlers : MonoBehaviour {
         } 
     }
 
+    // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
     public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap) {
         string Contact = subChap.Contact;
         List<string> TextList = subChap.TextList;
         List<float> RespTime = subChap.ResponseTime;
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
-        List<int> subChaps = Responses.SubChaps;
+        List<int> NextChap = Responses.NextChap;
         Shared.contactPush = Shared.contactsList.IndexOf(Contact);
 
 
@@ -94,10 +106,11 @@ public class MessagingHandlers : MonoBehaviour {
                 yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], textContent: item));
             }
         } 
-        PopulateResps(Resps, subChaps);
+        PopulateResps(Resps, NextChap);
     }
 
     // Handles the building and pushing of text messages to the message list object.
+    // textMessage: the prefab of the message (sent recieved)
     // messageContent: The text content of the message.
     public void TextPush(GameObject textMessage, string messageContent) {
         GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
@@ -106,28 +119,18 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // Handles the building and pushing of image messages to the message list object.
-    // messageContent: The image sprite of the message  
+    // imageMessage: the prefab of which type of image text we're sending/recieving.
+    // image: the actual image to be sent.
     public void ImagePush(GameObject imageMessage, Sprite image) {
         GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
         GameObject imageContent = messageClone.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = image;
     }
 
-    public enum TypeOfText {
-        sentText = 0,
-        recText = 1,
-        sentImage = 2,
-        recImage = 3,
-        sentEmoji = 4,
-        recEmoji = 5
-    }
-    
-
-
     // Handles message limits for all types of texts to the messageList
     // TypeOfText: an enum object that denotes the type of text we're sending
     // image: optional field in case we're sending an image
-    // messageContent: default to "" it's the text of the message being sent
+    // messageContent: default to "" in case you're sending an image.
     #nullable enable
     public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = "") {
         if (Shared.content.GetChild(Shared.contactPush).childCount >= 25){
@@ -156,6 +159,9 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // Handles wait time for the messages recieved so they don't all display at once.
+    // TypeOfText: an enum object that denotes the type of text we're sending
+    // respTime: time to wait before sending the text.
+    // image: optional. The image to send (emoji, photo)
     // messageContent: text of the message
     public IEnumerator AutoText(TypeOfText type, float respTime, Sprite? image = null, string textContent = "") {
 
@@ -174,9 +180,10 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // handles the building and pushing of the text choice buttons into the choices list
-    // choice: prefab of the button (top or bottom) ps. destinction might not be necessary, we'll see.
-    // textContent: shorthand of the text to be sent by using that button.
-    public void TextButton(int indx, List<int> subChaps,string textContent = "") {
+    // indx: automated through forloop, handles destruction of buttons and next chap queuing
+    // NextChap: list of ints, each for the next subchap to play based on click.
+    // textContent: text to display and send.
+    public void TextButton(int indx, List<int> NextChap, string textContent) {
         GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(1).gameObject);
         GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
@@ -186,15 +193,16 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            responseHandle(subChaps[indx]);
+            responseHandle(NextChap[indx]);
         });
     }
 
     // handles the building and pushing of the image/emoji choice buttons into the choices list
-    // indx: Index of the button, preset, can be any number you want but designed to be 0 or 1 and results in different responses
+    // indx: automated through forloop, handles destruction of buttons and next chap queuing
+    // NextChap: list of ints, each for the next subchap to play based on click.
     // type: type of image (emoji/photo)
     // image: sprite image to be sent (emoji/photo)
-    public void ImageButton(int indx, List<int> subChaps, TypeOfText type, Sprite image) {
+    public void ImageButton(int indx, List<int> NextChap, TypeOfText type, Sprite image) {
         GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
@@ -204,7 +212,7 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(type, image);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            responseHandle(subChaps[indx]);
+            responseHandle(NextChap[indx]);
         });
     }
 }

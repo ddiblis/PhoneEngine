@@ -8,7 +8,6 @@ public class SharedObjects : MonoBehaviour {
         "gf", "blonde"
     };
 
-    public int selectedIndex;
     public GameObject headshot;
     public Transform textingApp;
     public RectTransform displayedList;
@@ -20,6 +19,9 @@ public class SharedObjects : MonoBehaviour {
 
     // The int of which message list to send the messages to based on their name and their position in the contactsList
     public int contactPush;
+    
+    // The int of which messageList you're currently in.
+    public int selectedIndex;
 
 
 }
