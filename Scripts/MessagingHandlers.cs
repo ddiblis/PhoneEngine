@@ -10,12 +10,13 @@ using UnityEditor;
 using UnityEngine.TextCore.Text;
 public class MessagingHandlers : MonoBehaviour {
 
-    public GameObject backButton;
+    public GameObject backButton;    
     
     public ChapImport chap;
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public PreFabs Prefabs;
+
 
 
     ChapImport.Chapter chapOne;
@@ -38,6 +39,7 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             gen.Hide(Shared.textingApp);
             gen.Hide(Shared.displayedList.transform);
+            Shared.selectedIndex = 99;
         });
         
         // creates as many messageLists as needed for the contacts and hides them.
@@ -90,20 +92,21 @@ public class MessagingHandlers : MonoBehaviour {
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
         Shared.contactPush = Shared.contactsList.IndexOf(Contact);
+        Sprite pfp = Resources.Load(Contact, typeof(Sprite)) as Sprite;            
 
 
         for (int i = 0; i < TextList.Count; i++) {
             string item = TextList[i];
             if (item.Contains("{")){
                 Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], img));
+                yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], pfp, img));
             } 
             else if (item.Contains("[")){
                 Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], img));
+                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], pfp, img));
             }
             else {
-                yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], textContent: item));
+                yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], pfp, textContent: item));
             }
         } 
         PopulateResps(Resps, NextChap);
@@ -158,15 +161,28 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
+    public void pushNotification(Sprite pfp, string textContent) {
+        bool viewingScreen = Shared.contactPush == Shared.selectedIndex;
+        Destroy(Shared.notif);
+        if (!viewingScreen) {
+            Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
+            Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
+            Shared.notif.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
+        }
+    }
+
     // Handles wait time for the messages recieved so they don't all display at once.
     // TypeOfText: an enum object that denotes the type of text we're sending
     // respTime: time to wait before sending the text.
     // image: optional. The image to send (emoji, photo)
     // messageContent: text of the message
-    public IEnumerator AutoText(TypeOfText type, float respTime, Sprite? image = null, string textContent = "") {
-
+    public IEnumerator AutoText(TypeOfText type, float respTime, Sprite pfp, Sprite? image = null, string textContent = "Picture Message") {
+        
         yield return new WaitForSeconds(respTime);
-        switch (type){
+
+        pushNotification(pfp, textContent);
+
+        switch (type) {
             case TypeOfText.recText:
                 MessageListLimit(TypeOfText.recText, messageContent: textContent);
             break;

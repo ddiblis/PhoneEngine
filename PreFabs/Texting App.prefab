@@ -944,25 +944,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612828b00cfdc563d84ad1eb809a7e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textingApp: {fileID: 8397345254773016754}
-  headshot: {fileID: 6023415100958740670}
-  messageList: {fileID: 1009085803514084419, guid: 0354ce298d8125d7b808c3ac59dbe166, type: 3}
-  msgList: {fileID: 0}
-  scrollView: {fileID: 0}
-  content: {fileID: 0}
-  choices: {fileID: 1159420649507589079}
-  choice: {fileID: 1076370345745255780, guid: 7fbc670f77be7bd33a21fc4cac3a2ba2, type: 3}
-  sentText: {fileID: 1658346118929398, guid: d8a4fc22db5d0db7d9d355454681e229, type: 3}
-  recText: {fileID: 1091222002183730, guid: 5c03b3fe50a4cb325a95b8f2e16d7fbc, type: 3}
-  sentImage: {fileID: 7878636168325601005, guid: d1d1c695438fa8114b99edda2600a8b5, type: 3}
-  recImage: {fileID: 4810520593487603046, guid: d36bd16e15dad5fdfac4713d3470d42b, type: 3}
-  sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
-  recEmoji: {fileID: 4810520593487603046, guid: a95a6c9ed66a6b3569e7629485b2ef50, type: 3}
+  backButton: {fileID: 7888579530402044016}
   chap: {fileID: 418524781474291117}
   gen: {fileID: 0}
-  names:
-  - gf
-  - blondie
+  Shared: {fileID: 0}
+  Prefabs: {fileID: 0}
 --- !u!114 &418524781474291117
 MonoBehaviour:
   m_ObjectHideFlags: 0
