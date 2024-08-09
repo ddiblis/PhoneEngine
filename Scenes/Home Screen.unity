@@ -2147,6 +2147,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: CH
+      value: 
+      objectReference: {fileID: 1888701054}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: gen
       value: 
       objectReference: {fileID: 492607238}
@@ -3137,7 +3141,7 @@ MonoBehaviour:
   contactButton: {fileID: 7109850510471232554, guid: b79f2f0c10b3710a59c9838a75f800da, type: 3}
   cardsList: {fileID: 913459760}
   scrollBarVerticle: {fileID: 60708955}
-  clickedIndex: 0
+  selectedIndex: 0
   gen: {fileID: 492607238}
   MH: {fileID: 1448357000}
 --- !u!1 &1917032602

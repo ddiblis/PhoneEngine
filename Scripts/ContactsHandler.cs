@@ -15,7 +15,7 @@ public class ContactsHandler : MonoBehaviour
     public GameObject contactButton;
     public Transform cardsList;
     public GameObject scrollBarVerticle;
-    public int clickedIndex;
+    public int selectedIndex;
 
     public GeneralHandlers gen;
     public MessagingHandlers MH;
@@ -33,7 +33,7 @@ public class ContactsHandler : MonoBehaviour
         nameField.GetComponent<TextMeshProUGUI>().text = name;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            clickedIndex = indx;
+            selectedIndex = indx;
             MH.headshot.GetComponent<Image>().sprite = pfp;
             
             MH.displayedList = MH.content.GetChild(indx) as RectTransform;

@@ -35,6 +35,7 @@ public class MessagingHandlers : MonoBehaviour {
     
     public ChapImport chap;
     public GeneralHandlers gen;
+    public ContactsHandler CH;
 
 
     ChapImport.Chapter chapOne;
@@ -88,6 +89,9 @@ public class MessagingHandlers : MonoBehaviour {
                 TextButton(i, subChaps, item);
             }
         }
+        if (contactPush != CH.selectedIndex){
+            gen.Hide(choices); 
+        } 
     }
 
     public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap){
