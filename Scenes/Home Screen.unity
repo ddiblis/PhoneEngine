@@ -1247,11 +1247,13 @@ MonoBehaviour:
   textingApp: {fileID: 1448356994}
   displayedList: {fileID: 0}
   notificationArea: {fileID: 1889824619}
+  cardsList: {fileID: 913459760}
   choices: {fileID: 1207948560}
   content: {fileID: 196137360}
   scrollView: {fileID: 1448356995}
   contactPush: 0
-  selectedIndex: 99
+  selectedIndex: 999
+  notif: {fileID: 0}
 --- !u!114 &492607241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3167,7 +3169,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contactsApp: {fileID: 229078420}
-  cardsList: {fileID: 913459760}
   gen: {fileID: 492607238}
   Shared: {fileID: 492607239}
   Prefabs: {fileID: 492607241}
@@ -3204,8 +3205,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 429}
-  m_SizeDelta: {x: 600, y: 128.7001}
+  m_AnchoredPosition: {x: 0, y: 469.9}
+  m_SizeDelta: {x: 516.6665, y: 110.825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1889824620
 MonoBehaviour:

@@ -11,8 +11,6 @@ using System;
 public class ContactsHandler : MonoBehaviour {
 
     public Transform contactsApp;
-    public Transform cardsList;
-
 
     public GeneralHandlers gen;
     public SharedObjects Shared;
@@ -28,7 +26,7 @@ public class ContactsHandler : MonoBehaviour {
     }
 
     public void addContactCard(Sprite pfp, string name, int indx) {
-        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, cardsList.transform);
+        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, Shared.cardsList.transform);
         ChoiceClone.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
         ChoiceClone.GetComponent<Button>().onClick.AddListener(() => {
@@ -45,6 +43,8 @@ public class ContactsHandler : MonoBehaviour {
             } else {
                 gen.Show(Shared.choices);
             }
+
+            gen.Hide(Shared.cardsList.GetChild(indx).GetChild(2).transform);
 
             // It bugs me if the notif is still on after I open the contact, this removes it when you do if it's the right contact
             if (viewingScreen) {

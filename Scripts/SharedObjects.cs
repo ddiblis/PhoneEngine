@@ -12,6 +12,7 @@ public class SharedObjects : MonoBehaviour {
     public Transform textingApp;
     public RectTransform displayedList;
     public Transform notificationArea;
+    public Transform cardsList;
 
     // Response choices box
     public Transform choices;
@@ -21,7 +22,7 @@ public class SharedObjects : MonoBehaviour {
     // The int of which message list to send the messages to based on their name and their position in the contactsList
     public int contactPush;
 
-    // The int of which messageList you're currently in, derived from the contact card you click.
+    // The index of which messageList you're currently viewing, derived from the contact card you click.
     public int selectedIndex;
 
     // generated notification. Nullable in case it doesn't need to be generated

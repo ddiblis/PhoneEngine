@@ -39,7 +39,7 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             gen.Hide(Shared.textingApp);
             gen.Hide(Shared.displayedList.transform);
-            Shared.selectedIndex = 99;
+            Shared.selectedIndex = int.MinValue;
         });
         
         // creates as many messageLists as needed for the contacts and hides them.
@@ -165,6 +165,7 @@ public class MessagingHandlers : MonoBehaviour {
         bool viewingScreen = Shared.contactPush == Shared.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
+            gen.Show(Shared.cardsList.GetChild(Shared.contactPush).GetChild(2).transform);
             Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
             Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
             Shared.notif.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
