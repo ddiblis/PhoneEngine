@@ -1,0 +1,27 @@
+{
+    "ChapComplete": false,
+    "SubChaps":[
+        {
+            "SubChapNum": 0,
+            "Contact": "gf",
+            "TimeIndicator": "24 days later",
+            "TextList": ["Hey hon", "testing chapter 2"],
+            "ResponseTime": [0.5, 0.5],
+            "Responses": {
+                "Resps": ["this is the response for the top button", "this the response for the bottom button"],
+                "NextChap": [1, 1]
+            }
+        },
+        {
+            "SubChapNum": 6,
+            "Contact": "gf",
+            "TimeIndicator": "6 hours later",
+            "TextList": ["End of chapter 2"],
+            "ResponseTime": [0.5],
+            "Responses": {
+                "Resps": [],
+                "NextChap": []
+            }
+        }
+    ]
+}

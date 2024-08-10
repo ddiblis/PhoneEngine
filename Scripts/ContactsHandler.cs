@@ -61,7 +61,7 @@ public class ContactsHandler : MonoBehaviour {
         
         // Generates contact cards for each contact based on list.
         for (int i = 0; i < Shared.contactsList.Count; i++) {
-            Sprite img = Resources.Load(Shared.contactsList[i], typeof(Sprite)) as Sprite;            
+            Sprite img = Resources.Load("Images/Headshots/" + Shared.contactsList[i], typeof(Sprite)) as Sprite;            
 
             addContactCard(img, Shared.contactsList[i], i);
         } 

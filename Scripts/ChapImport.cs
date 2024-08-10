@@ -30,14 +30,12 @@ public class ChapImport : MonoBehaviour {
         public Responses Responses;
     }
 
-    public TextAsset chapterJSON;
-
-
 
     public Chapter myChapter = new Chapter();
     [SerializeField] 
-    public Chapter getChapter() {
-        myChapter = JsonUtility.FromJson<Chapter>(chapterJSON.text);
+    public Chapter GetChapter(string Chapter) {
+        TextAsset ChapterFile = Resources.Load<TextAsset>("Chapters/" + Chapter);
+        myChapter = JsonUtility.FromJson<Chapter>(ChapterFile.text);
         return myChapter;
     }
     

@@ -71,7 +71,7 @@
             "SubChapNum": 6,
             "Contact": "gf",
             "TimeIndicator": "6 hours later",
-            "TextList": ["End of chapter test"],
+            "TextList": ["End of chapter 1"],
             "ResponseTime": [0.5],
             "Responses": {
                 "Resps": [],

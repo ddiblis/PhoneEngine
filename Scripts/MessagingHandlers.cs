@@ -17,9 +17,13 @@ public class MessagingHandlers : MonoBehaviour {
     public SharedObjects Shared;
     public PreFabs Prefabs;
 
+    int CurrChapIndex;
 
+    List<string> chapList = new List<string> {
+        "chapter1", "chapter2"
+    };
 
-    ChapImport.Chapter chapOne;
+    ChapImport.Chapter CurrChap;
 
     // Simple enum used for determining the type of text being sent/recieved.
     public enum TypeOfText {
@@ -53,9 +57,17 @@ public class MessagingHandlers : MonoBehaviour {
 
         gen.Hide(Shared.textingApp);
 
+        NewGame();
+    }
 
-        chapOne = chap.getChapter();
-        StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
+    public void NewGame() {
+        CurrChap = chap.GetChapter("chapter1");
+        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
+    }
+
+    public void ChapterSelect(string Chapter) {
+        CurrChap = chap.GetChapter(Chapter);
+        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
     }
     
 
@@ -65,11 +77,11 @@ public class MessagingHandlers : MonoBehaviour {
         for (int i = 0; i < Resps.Count; i++) {
             string item = Resps[i];
             if (item.Contains("{")){
-                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
+                Sprite img = Resources.Load("Images/Photos/" + item[1..^1], typeof(Sprite)) as Sprite;
                 ImageButton(i, NextChap, TypeOfText.sentImage, img);
             } 
             else if (item.Contains("[")){
-                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
+                Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
                 ImageButton(i, NextChap, TypeOfText.sentEmoji, img);
             }
             else {
@@ -83,11 +95,11 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Called on to start the next coroutine for the subchapter.
     public void responseHandle(int subChapNum) {
-        if (!chapOne.ChapComplete) {
-            StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
+        if (!CurrChap.ChapComplete) {
+            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapNum]));
         }
-        if (subChapNum == chapOne.SubChaps.Count - 1) {
-            chapOne.ChapComplete = true;
+        if (subChapNum == CurrChap.SubChaps.Count - 1) {
+            CurrChap.ChapComplete = true;
         }
     }
 
@@ -101,7 +113,7 @@ public class MessagingHandlers : MonoBehaviour {
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
         Shared.contactPush = Shared.contactsList.IndexOf(Contact);
-        Sprite pfp = Resources.Load(Contact, typeof(Sprite)) as Sprite;            
+        Sprite pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;            
 
         if (TimeIndicator.Length > 0){
             yield return StartCoroutine(AutoText(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
@@ -109,11 +121,11 @@ public class MessagingHandlers : MonoBehaviour {
         for (int i = 0; i < TextList.Count; i++) {
             string item = TextList[i];
             if (item.Contains("{")){
-                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
+                Sprite img = Resources.Load("Images/Photos/" + item[1..^1], typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], pfp, img));
             } 
             else if (item.Contains("[")){
-                Sprite img = Resources.Load(item[1..^1], typeof(Sprite)) as Sprite;
+                Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], pfp, img));
             }
             else {
@@ -123,7 +135,11 @@ public class MessagingHandlers : MonoBehaviour {
         if (Resps.Count > 0){
             PopulateResps(Resps, NextChap);
         } else {
-            yield return StartCoroutine(AutoText(TypeOfText.chapEnd, 1.0f, textContent: "Chapter 1 Complete"));
+            yield return StartCoroutine(AutoText(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
+            CurrChapIndex += 1;
+            if (CurrChapIndex <= chapList.Count) {
+                ChapterSelect(chapList[CurrChapIndex]);
+            }
         }
     }
 
