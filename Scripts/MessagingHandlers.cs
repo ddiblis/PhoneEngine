@@ -8,6 +8,8 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
 using UnityEngine.TextCore.Text;
+using System.IO;
+
 public class MessagingHandlers : MonoBehaviour {
 
     public GameObject backButton;    
@@ -18,10 +20,6 @@ public class MessagingHandlers : MonoBehaviour {
     public PreFabs Prefabs;
 
     int CurrChapIndex;
-
-    List<string> chapList = new List<string> {
-        "chapter1", "chapter2"
-    };
 
     ChapImport.Chapter CurrChap;
 
@@ -39,6 +37,11 @@ public class MessagingHandlers : MonoBehaviour {
     
 
     void Awake() {
+
+        string[] FileList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
+        foreach (string File in FileList) {
+            Shared.ContactsList.Add(File[35..^4]);
+        }
         
         // Creates onclick handler for back button.
         Button button = backButton.GetComponent<Button>();
@@ -49,7 +52,7 @@ public class MessagingHandlers : MonoBehaviour {
         });
         
         // creates as many messageLists as needed for the contacts and hides them.
-        for (int i = 0; i < Shared.contactsList.Count; i++) {
+        for (int i = 0; i < Shared.ContactsList.Count; i++) {
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.transform);
             Shared.content.GetChild(i).localScale = new Vector3(0, 0, 0);
         } 
@@ -57,6 +60,8 @@ public class MessagingHandlers : MonoBehaviour {
 
         gen.Hide(Shared.textingApp);
 
+
+        
         NewGame();
     }
 
@@ -112,8 +117,9 @@ public class MessagingHandlers : MonoBehaviour {
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
-        Shared.contactPush = Shared.contactsList.IndexOf(Contact);
-        Sprite pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;            
+        Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
+        int NumOfPerson = Shared.ContactsList.IndexOf(Contact)+1;
+        Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;            
 
         if (TimeIndicator.Length > 0){
             yield return StartCoroutine(AutoText(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
@@ -137,8 +143,8 @@ public class MessagingHandlers : MonoBehaviour {
         } else {
             yield return StartCoroutine(AutoText(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
             CurrChapIndex += 1;
-            if (CurrChapIndex <= chapList.Count) {
-                ChapterSelect(chapList[CurrChapIndex]);
+            if (CurrChapIndex <= Shared.ChapterList.Count -1) {
+                ChapterSelect(Shared.ChapterList[CurrChapIndex]);
             }
         }
     }

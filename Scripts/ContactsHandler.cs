@@ -8,6 +8,7 @@ using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using System;
 
+
 public class ContactsHandler : MonoBehaviour {
 
     public Transform contactsApp;
@@ -57,13 +58,15 @@ public class ContactsHandler : MonoBehaviour {
 
     void Start() {
         
+        
         gen.Hide(contactsApp);
         
         // Generates contact cards for each contact based on list.
-        for (int i = 0; i < Shared.contactsList.Count; i++) {
-            Sprite img = Resources.Load("Images/Headshots/" + Shared.contactsList[i], typeof(Sprite)) as Sprite;            
+        for (int i = 0; i < Shared.ContactsList.Count; i++) {
+            int NumOfPerson = i+1;
+            Sprite img = Resources.Load("Images/Headshots/" + NumOfPerson + Shared.ContactsList[i], typeof(Sprite)) as Sprite;            
 
-            addContactCard(img, Shared.contactsList[i], i);
+            addContactCard(img, Shared.ContactsList[i], i);
         } 
         
 

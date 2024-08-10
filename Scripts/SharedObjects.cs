@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class SharedObjects : MonoBehaviour {
 
-    public List<string> contactsList = new List<string>() {
-        "gf", "blonde"
-    };
-
+    public List<string> ContactsList;
     public GameObject headshot;
     public Transform textingApp;
     public RectTransform displayedList;
@@ -29,5 +26,7 @@ public class SharedObjects : MonoBehaviour {
     #nullable enable
     public GameObject? notif;
     #nullable disable
+
+    public List<string> ChapterList;
 
 }

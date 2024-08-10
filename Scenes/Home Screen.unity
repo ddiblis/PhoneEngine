@@ -1254,6 +1254,7 @@ MonoBehaviour:
   contactPush: 0
   selectedIndex: 999
   notif: {fileID: 0}
+  ChapterList: []
 --- !u!114 &492607241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2162,6 +2163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 492607236}
     m_Modifications:
+    - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: Shared
+      value: 
+      objectReference: {fileID: 492607239}
     - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: chapterJSON
       value: 
