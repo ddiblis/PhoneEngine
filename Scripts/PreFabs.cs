@@ -14,5 +14,6 @@ public class PreFabs : MonoBehaviour {
     public GameObject sentEmoji;
     public GameObject recEmoji;
     public GameObject Notification;
+    public GameObject ChapComplete;
 
 }

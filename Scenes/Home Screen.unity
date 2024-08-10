@@ -1253,7 +1253,7 @@ MonoBehaviour:
   scrollView: {fileID: 1448356995}
   contactPush: 0
   selectedIndex: 999
-  notif: {fileID: 0}
+  notif: {fileID: 7878636168325601005, guid: 6e950163c66f47031b08d90abe4d6cf2, type: 3}
 --- !u!114 &492607241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,6 +1276,7 @@ MonoBehaviour:
   sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
   recEmoji: {fileID: 4810520593487603046, guid: a95a6c9ed66a6b3569e7629485b2ef50, type: 3}
   Notification: {fileID: 7109850510471232554, guid: 9eeabf3ecb6a9ad5aa48f66ec4af0b3f, type: 3}
+  ChapComplete: {fileID: 0}
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0

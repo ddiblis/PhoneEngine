@@ -5,7 +5,7 @@
             "SubChapNum": 0,
             "Contact": "gf",
             "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]"],
-            "ResponseTime": [0.5, 0.5, 1.0, 7.0, 2.0, 1.7, 1.2, 0.9, 0.5, 1.5, 1.5],
+            "ResponseTime": [0.5, 0.5, 1.0, 1.0, 2.0, 1.7, 1.2, 0.9, 0.5, 1.5, 1.5],
             "Responses": {
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
                 "NextChap": [1, 2]
@@ -58,7 +58,17 @@
             "ResponseTime": [1.7, 0.5, 0.5, 0.9],
             "Responses": {
                 "Resps": ["this is a choice to blonde1", "this is a choice to blonde1"],
-                "NextChap": [0, 0]
+                "NextChap": [6, 6]
+            }
+        },
+        {
+            "SubChapNum": 6,
+            "Contact": "gf",
+            "TextList": ["End of chapter test"],
+            "ResponseTime": [0.5],
+            "Responses": {
+                "Resps": [],
+                "NextChap": []
             }
         }
     ]

@@ -28,7 +28,8 @@ public class MessagingHandlers : MonoBehaviour {
         sentImage = 2,
         recImage = 3,
         sentEmoji = 4,
-        recEmoji = 5
+        recEmoji = 5,
+        chapEnd = 6,
     }
     
 
@@ -56,10 +57,6 @@ public class MessagingHandlers : MonoBehaviour {
         StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[0]));
     }
     
-    // Called on to start the next coroutine for the subchapter.
-    public void responseHandle(int subChapNum) {
-        StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
-    }
 
     // Creates and pushes the response buttons/hides them if they're not meant for currently viewed contact
     // Arguments taken from json file through StartMessagesCoroutine
@@ -81,6 +78,16 @@ public class MessagingHandlers : MonoBehaviour {
         if (Shared.contactPush != Shared.selectedIndex){
             gen.Hide(Shared.choices); 
         } 
+    }
+
+    // Called on to start the next coroutine for the subchapter.
+    public void responseHandle(int subChapNum) {
+        if (!chapOne.ChapComplete) {
+            StartCoroutine(StartMessagesCoroutine(chapOne.SubChaps[subChapNum]));
+        }
+        if (subChapNum == chapOne.SubChaps.Count - 1) {
+            chapOne.ChapComplete = true;
+        }
     }
 
     // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
@@ -109,7 +116,11 @@ public class MessagingHandlers : MonoBehaviour {
                 yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], pfp, textContent: item));
             }
         } 
-        PopulateResps(Resps, NextChap);
+        if (Resps.Count > 0){
+            PopulateResps(Resps, NextChap);
+        } else {
+            yield return StartCoroutine(AutoText(TypeOfText.chapEnd, 1.0f, textContent: "Chapter 1 Complete"));
+        }
     }
 
     // Handles the building and pushing of text messages to the message list object.
@@ -158,6 +169,9 @@ public class MessagingHandlers : MonoBehaviour {
             case TypeOfText.recImage:
                 ImagePush(Prefabs.recImage, image);
             break;
+            case TypeOfText.chapEnd:
+                TextPush(Prefabs.ChapComplete, messageContent);
+            break;
         }
     }
 
@@ -177,24 +191,29 @@ public class MessagingHandlers : MonoBehaviour {
     // respTime: time to wait before sending the text.
     // image: optional. The image to send (emoji, photo)
     // messageContent: text of the message
-    public IEnumerator AutoText(TypeOfText type, float respTime, Sprite pfp, Sprite? image = null, string textContent = "Picture Message") {
+    public IEnumerator AutoText(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message") {
         
         yield return new WaitForSeconds(respTime);
 
-        pushNotification(pfp, textContent);
-
         switch (type) {
             case TypeOfText.recText:
+                pushNotification(pfp, textContent);
                 MessageListLimit(TypeOfText.recText, messageContent: textContent);
             break;
             case TypeOfText.recImage:
+                pushNotification(pfp, textContent);
                 MessageListLimit(TypeOfText.recImage, image);
             break;
             case TypeOfText.recEmoji:
+                pushNotification(pfp, textContent);
                 MessageListLimit(TypeOfText.recEmoji, image);
+            break;
+            case TypeOfText.chapEnd:
+                MessageListLimit(TypeOfText.chapEnd, messageContent: textContent);
             break;
         }
     }
+
 
     // handles the building and pushing of the text choice buttons into the choices list
     // indx: automated through forloop, handles destruction of buttons and next chap queuing
