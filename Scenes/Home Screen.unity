@@ -1240,9 +1240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08823c2b52388f7769833a454927501b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contactsList:
-  - gf
-  - blonde
+  ContactsList: []
   headshot: {fileID: 330083719}
   textingApp: {fileID: 1448356994}
   displayedList: {fileID: 0}
@@ -1362,9 +1360,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
-        m_MethodName: ExitGame
+      - m_Target: {fileID: 492607238}
+        m_TargetAssemblyTypeName: GeneralHandlers, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
