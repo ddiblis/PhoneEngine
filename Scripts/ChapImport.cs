@@ -24,6 +24,7 @@ public class ChapImport : MonoBehaviour {
     {
         public int SubChapNum;
         public string Contact;
+        public string TimeIndicator;
         public List<string> TextList;
         public List<float> ResponseTime;
         public Responses Responses;

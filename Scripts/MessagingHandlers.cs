@@ -30,6 +30,7 @@ public class MessagingHandlers : MonoBehaviour {
         sentEmoji = 4,
         recEmoji = 5,
         chapEnd = 6,
+        indicateTime = 8,
     }
     
 
@@ -93,6 +94,7 @@ public class MessagingHandlers : MonoBehaviour {
     // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
     public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap) {
         string Contact = subChap.Contact;
+        string TimeIndicator = subChap.TimeIndicator;
         List<string> TextList = subChap.TextList;
         List<float> RespTime = subChap.ResponseTime;
         ChapImport.Responses Responses = subChap.Responses;
@@ -101,7 +103,9 @@ public class MessagingHandlers : MonoBehaviour {
         Shared.contactPush = Shared.contactsList.IndexOf(Contact);
         Sprite pfp = Resources.Load(Contact, typeof(Sprite)) as Sprite;            
 
-
+        if (TimeIndicator.Length > 0){
+            yield return StartCoroutine(AutoText(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
+        }
         for (int i = 0; i < TextList.Count; i++) {
             string item = TextList[i];
             if (item.Contains("{")){
@@ -172,10 +176,13 @@ public class MessagingHandlers : MonoBehaviour {
             case TypeOfText.chapEnd:
                 TextPush(Prefabs.ChapComplete, messageContent);
             break;
+            case TypeOfText.indicateTime:
+                TextPush(Prefabs.TimeIndicator, messageContent);
+            break;
         }
     }
 
-    public void pushNotification(Sprite pfp, string textContent) {
+    public void pushNotification(Sprite? pfp, string textContent) {
         bool viewingScreen = Shared.contactPush == Shared.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
@@ -210,6 +217,9 @@ public class MessagingHandlers : MonoBehaviour {
             break;
             case TypeOfText.chapEnd:
                 MessageListLimit(TypeOfText.chapEnd, messageContent: textContent);
+            break;
+            case TypeOfText.indicateTime:
+                MessageListLimit(TypeOfText.indicateTime, messageContent: textContent);
             break;
         }
     }

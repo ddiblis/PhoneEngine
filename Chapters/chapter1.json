@@ -4,6 +4,7 @@
         {
             "SubChapNum": 0,
             "Contact": "gf",
+            "TimeIndicator": "1 hours later",
             "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]", "here's an emoji to test", "[black-heart]"],
             "ResponseTime": [0.5, 0.5, 1.0, 1.0, 2.0, 1.7, 1.2, 0.9, 0.5, 1.5, 1.5],
             "Responses": {
@@ -14,6 +15,7 @@
         {
             "SubChapNum": 1,
             "Contact": "gf",
+            "TimeIndicator": "2 hours later",
             "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[red-heart]"],
             "ResponseTime": [0.5, 0.5, 0.5, 0.5, 2.0, 0.5],
             "Responses": {
@@ -24,6 +26,7 @@
         {
             "SubChapNum": 2,
             "Contact": "gf",
+            "TimeIndicator": "",
             "TextList": [],
             "ResponseTime": [],
             "Responses": {
@@ -34,6 +37,7 @@
         {
             "SubChapNum": 3,
             "Contact": "gf",
+            "TimeIndicator": "3 hours later",
             "TextList": ["test sending me an emoji please"],
             "ResponseTime": [1.7],
             "Responses": {
@@ -44,6 +48,7 @@
         {
             "SubChapNum": 4,
             "Contact": "gf",
+            "TimeIndicator": "4 hours later",
             "TextList": ["test sending me an image please"],
             "ResponseTime": [1.7],
             "Responses": {
@@ -54,6 +59,7 @@
         {
             "SubChapNum": 5,
             "Contact": "blonde",
+            "TimeIndicator": "5 hours later",
             "TextList": ["hey boy", "this is blonde", "your gfs best friend", "test sending me a text instead of your gf"],
             "ResponseTime": [1.7, 0.5, 0.5, 0.9],
             "Responses": {
@@ -64,6 +70,7 @@
         {
             "SubChapNum": 6,
             "Contact": "gf",
+            "TimeIndicator": "6 hours later",
             "TextList": ["End of chapter test"],
             "ResponseTime": [0.5],
             "Responses": {
