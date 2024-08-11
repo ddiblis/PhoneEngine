@@ -68,7 +68,7 @@ public class MessagingHandlers : MonoBehaviour {
 
         gen.Hide(Shared.textingApp);
         
-        // NewGame();
+        NewGame();
     }
 
     public void NewGame() {
@@ -123,6 +123,7 @@ public class MessagingHandlers : MonoBehaviour {
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
+        // Chooses messageList parent for messages to be pushed to
         Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
         int NumOfPerson = Shared.ContactsList.IndexOf(Contact);
         Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
@@ -133,7 +134,7 @@ public class MessagingHandlers : MonoBehaviour {
         }   
 
         if (TimeIndicator.Length > 0){
-            yield return StartCoroutine(AutoText(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
+            yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
         }
         for (int i = 0; i < TextList.Count; i++) {
             string item = TextList[i];
@@ -141,20 +142,20 @@ public class MessagingHandlers : MonoBehaviour {
                 string imgName = item[1..^1];
                 Shared.seenImages.Add(imgName);
                 Sprite img = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], pfp, img));
+                yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img));
             } 
             else if (item.Contains("[")){
                 Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(AutoText(TypeOfText.recEmoji, RespTime[i], pfp, img));
+                yield return StartCoroutine(MessageDelay(TypeOfText.recEmoji, RespTime[i], pfp, img));
             }
             else {
-                yield return StartCoroutine(AutoText(TypeOfText.recText, RespTime[i], pfp, textContent: item));
+                yield return StartCoroutine(MessageDelay(TypeOfText.recText, RespTime[i], pfp, textContent: item));
             }
         } 
         if (Resps.Count > 0){
             PopulateResps(Resps, NextChap);
         } else {
-            yield return StartCoroutine(AutoText(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
+            yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
             CurrChapIndex += 1;
             if (CurrChapIndex <= Shared.ChapterList.Count -1) {
                 ChapterSelect(Shared.ChapterList[CurrChapIndex]);
@@ -232,15 +233,7 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    // Handles wait time for the messages recieved so they don't all display at once.
-    // TypeOfText: an enum object that denotes the type of text we're sending
-    // respTime: time to wait before sending the text.
-    // image: optional. The image to send (emoji, photo)
-    // messageContent: text of the message
-    public IEnumerator AutoText(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message") {
-        
-        yield return new WaitForSeconds(respTime);
-
+    public void GenerateMessage(TypeOfText type, string textContent, Sprite? pfp = null, Sprite? image = null) {
         switch (type) {
             case TypeOfText.recText:
                 pushNotification(pfp, textContent);
@@ -261,6 +254,18 @@ public class MessagingHandlers : MonoBehaviour {
                 MessageListLimit(TypeOfText.indicateTime, messageContent: textContent);
             break;
         }
+    }
+
+    // Handles wait time for the messages recieved so they don't all display at once.
+    // TypeOfText: an enum object that denotes the type of text we're sending
+    // respTime: time to wait before sending the text.
+    // image: optional. The image to send (emoji, photo)
+    // messageContent: text of the message
+    public IEnumerator MessageDelay(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message") {
+        
+        yield return new WaitForSeconds(respTime);
+        GenerateMessage(type, textContent, pfp, image);
+
     }
 
 
