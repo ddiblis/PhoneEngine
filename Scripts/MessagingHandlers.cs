@@ -117,7 +117,7 @@ public class MessagingHandlers : MonoBehaviour {
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
         Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
-        int NumOfPerson = Shared.ContactsList.IndexOf(Contact)+1;
+        int NumOfPerson = Shared.ContactsList.IndexOf(Contact);
         Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;            
 
         if (TimeIndicator.Length > 0){
@@ -126,7 +126,9 @@ public class MessagingHandlers : MonoBehaviour {
         for (int i = 0; i < TextList.Count; i++) {
             string item = TextList[i];
             if (item.Contains("{")){
-                Sprite img = Resources.Load("Images/Photos/" + item[1..^1], typeof(Sprite)) as Sprite;
+                string imgName = item[1..^1];
+                Shared.seenImages.Add(imgName);
+                Sprite img = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(AutoText(TypeOfText.recImage, RespTime[i], pfp, img));
             } 
             else if (item.Contains("[")){
@@ -160,10 +162,14 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles the building and pushing of image messages to the message list object.
     // imageMessage: the prefab of which type of image text we're sending/recieving.
     // image: the actual image to be sent.
-    public void ImagePush(GameObject imageMessage, Sprite image) {
+    public void ImagePush(TypeOfText type, GameObject imageMessage, Sprite image) {
         GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
         GameObject imageContent = messageClone.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = image;
+        if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
+            Button button = messageClone.transform.GetChild(0).GetComponent<Button>();
+            gen.ModalWindowOpen(button, image);
+        }
     }
 
     // Handles message limits for all types of texts to the messageList
@@ -183,16 +189,16 @@ public class MessagingHandlers : MonoBehaviour {
                 TextPush(Prefabs.recText, messageContent);
             break;
             case TypeOfText.sentEmoji:
-                ImagePush(Prefabs.sentEmoji, image);
+                ImagePush(TypeOfText.sentEmoji, Prefabs.sentEmoji, image);
             break;
             case TypeOfText.recEmoji:
-            ImagePush(Prefabs.recEmoji, image);
+                ImagePush(TypeOfText.recEmoji, Prefabs.recEmoji, image);
             break;
             case TypeOfText.sentImage:
-                ImagePush(Prefabs.sentImage, image);
+                ImagePush(TypeOfText.sentImage, Prefabs.sentImage, image);
             break;
             case TypeOfText.recImage:
-                ImagePush(Prefabs.recImage, image);
+                ImagePush(TypeOfText.recImage, Prefabs.recImage, image);
             break;
             case TypeOfText.chapEnd:
                 TextPush(Prefabs.ChapComplete, messageContent);
