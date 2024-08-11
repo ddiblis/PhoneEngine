@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.TerrainTools;
 using UnityEngine;
 
 public class SharedObjects : MonoBehaviour {
@@ -13,6 +14,7 @@ public class SharedObjects : MonoBehaviour {
     // ====================== Contacts App ============================
 
     public List<string> ContactsList;
+    public List<bool> UnlockedContacts;
     public Transform cardsList;
 
     // ======================= Texting App ============================
@@ -27,10 +29,10 @@ public class SharedObjects : MonoBehaviour {
     public GameObject headshot;
     public RectTransform displayedList;
     public Transform scrollView;
+    public Transform content;
 
     // Response choices box
     public Transform choices;
-    public Transform content;
 
     // ================================================================
 
@@ -58,7 +60,9 @@ public class SharedObjects : MonoBehaviour {
 
     // ================================================================
 
+    // Save Handler
 
-
+    public List<Transform> MessageListContent;
+    public List<int> NumOfMessagesInList;
 
 }

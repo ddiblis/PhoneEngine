@@ -214,7 +214,7 @@ namespace Michsky.DreamOS
             StartCoroutine("DisableObject");
 
             isOn = false;
-            windowAnimator.enabled = false;
+            windowAnimator.enabled = true;
             onQuitEvents.Invoke();
 
             if (enableMobileMode == true)

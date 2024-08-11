@@ -15,6 +15,41 @@ MonoBehaviour:
   alwaysUpdate: 1
   optimizeUpdates: 1
   apps:
+  - appTitle: Calculator
+    appIconPreview: {fileID: 2800000, guid: 856a1263d180d4d489a735e300ed113b, type: 3}
+    appIconBig: {fileID: 21300000, guid: 9b00cd5f9259df948ad388a18a1e3c0b, type: 3}
+    appIconMedium: {fileID: 21300000, guid: 09b052498806c5a4d8a13f6c85684386, type: 3}
+    appIconSmall: {fileID: 21300000, guid: 856a1263d180d4d489a735e300ed113b, type: 3}
+    gradientLeft: {r: 0.6862745, g: 0.60784316, b: 0.98039216, a: 1}
+    gradientRight: {r: 1, g: 0.88235295, b: 0.29411766, a: 1}
+  - appTitle: Commander
+    appIconPreview: {fileID: 2800000, guid: 03a5b5ac1dbe76f43b8e7662ba54a6f1, type: 3}
+    appIconBig: {fileID: 21300000, guid: 9ad6ef8d0f10b2b46b5a25efed05d24a, type: 3}
+    appIconMedium: {fileID: 21300000, guid: 3ec63597f9e5c314c81ac95c0d5e8544, type: 3}
+    appIconSmall: {fileID: 21300000, guid: 03a5b5ac1dbe76f43b8e7662ba54a6f1, type: 3}
+    gradientLeft: {r: 0.49019608, g: 0.6666667, b: 1, a: 1}
+    gradientRight: {r: 0.3137255, g: 0.92156863, b: 0.7058824, a: 1}
+  - appTitle: Downloads
+    appIconPreview: {fileID: 2800000, guid: c7211fe68292dfd46818d5b2a09d8967, type: 3}
+    appIconBig: {fileID: 21300000, guid: c7211fe68292dfd46818d5b2a09d8967, type: 3}
+    appIconMedium: {fileID: 21300000, guid: 44b998a4218833e469521c1449a4d33b, type: 3}
+    appIconSmall: {fileID: 21300000, guid: 2ffcc23b0c165444090fa63adb657a3b, type: 3}
+    gradientLeft: {r: 0.5058824, g: 0.5686275, b: 0.7607843, a: 1}
+    gradientRight: {r: 0.9098039, g: 0.79607844, b: 0.7529412, a: 1}
+  - appTitle: Game Hub
+    appIconPreview: {fileID: 2800000, guid: 89ced9ff926ebcc44a10bbc83e773a88, type: 3}
+    appIconBig: {fileID: 21300000, guid: bf3a214668bade94c8eacdc68a12c1bd, type: 3}
+    appIconMedium: {fileID: 21300000, guid: 364a1d9561771964990ff0a1676660bc, type: 3}
+    appIconSmall: {fileID: 21300000, guid: 89ced9ff926ebcc44a10bbc83e773a88, type: 3}
+    gradientLeft: {r: 0.49019608, g: 0.49019608, b: 1, a: 1}
+    gradientRight: {r: 1, g: 0.7254902, b: 0.88235295, a: 1}
+  - appTitle: Mail
+    appIconPreview: {fileID: 2800000, guid: c95bb353bd460954fb44a687e0658164, type: 3}
+    appIconBig: {fileID: 21300000, guid: 526a64c36d8b8f3418b9e0bc0c2e2566, type: 3}
+    appIconMedium: {fileID: 21300000, guid: 1d6c491c0411986488682e45bc910f94, type: 3}
+    appIconSmall: {fileID: 21300000, guid: c95bb353bd460954fb44a687e0658164, type: 3}
+    gradientLeft: {r: 0.49803922, g: 0.93333334, b: 1, a: 1}
+    gradientRight: {r: 0.6627451, g: 0.5254902, b: 1, a: 1}
   - appTitle: Messaging
     appIconPreview: {fileID: 2800000, guid: 364a6b14e9da516458c162498534d3f8, type: 3}
     appIconBig: {fileID: 21300000, guid: 94ef4bf63ff50a54f9f3b3752f02ac3f, type: 3}
@@ -22,6 +57,20 @@ MonoBehaviour:
     appIconSmall: {fileID: 21300000, guid: 364a6b14e9da516458c162498534d3f8, type: 3}
     gradientLeft: {r: 0.98039216, g: 0.6745098, b: 0.65882355, a: 1}
     gradientRight: {r: 0.8666667, g: 0.8392157, b: 0.9529412, a: 1}
+  - appTitle: Music Player
+    appIconPreview: {fileID: 2800000, guid: fc7cd26ef9ef59245a539f55ee66541b, type: 3}
+    appIconBig: {fileID: 21300000, guid: 2138e89baaf36b54db710181266857cf, type: 3}
+    appIconMedium: {fileID: 21300000, guid: f9910dc5004d4004eb8043534f900bac, type: 3}
+    appIconSmall: {fileID: 21300000, guid: fc7cd26ef9ef59245a539f55ee66541b, type: 3}
+    gradientLeft: {r: 0.99607843, g: 0.6745098, b: 0.36862746, a: 1}
+    gradientRight: {r: 0.78039217, g: 0.4745098, b: 0.8156863, a: 1}
+  - appTitle: Notepad
+    appIconPreview: {fileID: 2800000, guid: 368792e62724afd4c9fc4db387f121ba, type: 3}
+    appIconBig: {fileID: 21300000, guid: 1940596db7ab32c478e0f34f85655071, type: 3}
+    appIconMedium: {fileID: 21300000, guid: 1a46c73762a2e3748bdc199558a73d0c, type: 3}
+    appIconSmall: {fileID: 21300000, guid: 368792e62724afd4c9fc4db387f121ba, type: 3}
+    gradientLeft: {r: 0.37254903, g: 0.7647059, b: 0.98039216, a: 1}
+    gradientRight: {r: 1, g: 0.84313726, b: 0.29411766, a: 1}
   - appTitle: Photo Gallery
     appIconPreview: {fileID: 2800000, guid: 226e709d5553bea4c8adc362ac6fea02, type: 3}
     appIconBig: {fileID: 21300000, guid: 2fb230a10ed48f24d8c676c3768687ae, type: 3}

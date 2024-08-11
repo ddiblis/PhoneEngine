@@ -772,7 +772,6 @@ namespace Michsky.DreamOS
 
         public void CreateStoryTeller(string chatID, string storyTellerID)
         {
-            System.Console.WriteLine(chatID);
             if (storyTellerAnimator == null || storyTellerList == null)
                 return;
 
@@ -790,8 +789,6 @@ namespace Michsky.DreamOS
 
             if (layoutIndex == -1)
                 return;
-
-            // System.Console.WriteLine(chatlist[layoutIndex]);
 
             for (int i = 0; i < chatList[layoutIndex].chatAsset.storyTeller.Count; i++)
             {

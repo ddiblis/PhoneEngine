@@ -34,34 +34,41 @@ public class MessagingHandlers : MonoBehaviour {
         indicateTime = 8,
     }
     
-
-    void Awake() {
-
-        string[] FileList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
-        foreach (string File in FileList) {
-            Shared.ContactsList.Add(File[35..^4]);
-        }
-        
+    void BackButton() {
         // Creates onclick handler for back button.
         Button button = backButton.GetComponent<Button>();
         button.onClick.AddListener(() => {
             gen.Hide(Shared.textingApp);
-            gen.Hide(Shared.displayedList.transform);
+            gen.Hide(Shared.displayedList);
             Shared.selectedIndex = int.MinValue;
         });
-        
-        // creates as many messageLists as needed for the contacts and hides them.
-        for (int i = 0; i < Shared.ContactsList.Count; i++) {
-            Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.transform);
-            Shared.content.GetChild(i).localScale = new Vector3(0, 0, 0);
-        } 
+    }
 
+    void GenerateContactsList() {
+        string[] FileList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
+        foreach (string File in FileList) {
+            Shared.ContactsList.Add(File[35..^4]);
+        }
+    }
+
+    // creates as many messageLists as needed for the contacts and hides them.
+    void GenerateMessageLists() {
+        for (int i = 0; i < Shared.ContactsList.Count; i++) {
+            Shared.UnlockedContacts.Add(false);
+            Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
+            gen.Hide(Shared.content.GetChild(i));
+        } 
+    }
+
+    void Awake() {
+
+        BackButton();
+        GenerateContactsList();
+        GenerateMessageLists();
 
         gen.Hide(Shared.textingApp);
-
-
         
-        NewGame();
+        // NewGame();
     }
 
     public void NewGame() {
@@ -118,7 +125,12 @@ public class MessagingHandlers : MonoBehaviour {
         List<int> NextChap = Responses.NextChap;
         Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
         int NumOfPerson = Shared.ContactsList.IndexOf(Contact);
-        Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;            
+        Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
+
+        // Unlocks contact if they're not already unlocked: displays their contact card      
+        if (!Shared.UnlockedContacts[NumOfPerson]) {
+            Shared.UnlockedContacts[NumOfPerson] = true;
+        }   
 
         if (TimeIndicator.Length > 0){
             yield return StartCoroutine(AutoText(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));

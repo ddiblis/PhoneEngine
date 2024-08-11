@@ -26,7 +26,7 @@ public class ContactsHandler : MonoBehaviour {
     }
 
     public void addContactCard(Sprite pfp, string name, int indx) {
-        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, Shared.cardsList.transform);
+        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, Shared.cardsList);
         ChoiceClone.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
         ChoiceClone.GetComponent<Button>().onClick.AddListener(() => {
@@ -53,6 +53,16 @@ public class ContactsHandler : MonoBehaviour {
 
             gen.Show(Shared.textingApp);
         });
+        gen.Hide(Shared.cardsList.GetChild(indx));
+    }
+
+    public void UnlockContactCard() {
+        for (int i = 0; i < Shared.ContactsList.Count; i++) {
+            if (Shared.UnlockedContacts[i]) {
+                gen.Show(Shared.cardsList.GetChild(i));
+            }
+        }
+
     }
 
     void Start() {

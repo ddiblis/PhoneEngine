@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c37bb929b5e5cba4c892be907e1551f4, type: 3}
   m_Name: UI Manager
   m_EditorClassIdentifier: 
-  enableDynamicUpdate: 0
+  enableDynamicUpdate: 1
   enableExtendedColorPicker: 0
   editorHints: 1
   selectedTheme: 0

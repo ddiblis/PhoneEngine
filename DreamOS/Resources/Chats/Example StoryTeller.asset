@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Example StoryTeller
   m_EditorClassIdentifier: 
   saveConversation: 0
-  useDynamicMessages: 1
+  useDynamicMessages: 0
   useStoryTeller: 1
   messageList:
   - objectType: 0
