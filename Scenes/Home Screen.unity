@@ -1078,8 +1078,9 @@ MonoBehaviour:
   ModalWindow: {fileID: 1510124533}
   notificationArea: {fileID: 1889824619}
   notif: {fileID: 0}
-  MessageListContent: []
-  NumOfMessagesInList: 
+  savedMessages: []
+  whosTheMessageFor: 
+  typeOfText: 
 --- !u!114 &492607241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1776,6 +1777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Shared: {fileID: 492607239}
+  MH: {fileID: 1448356997}
 --- !u!224 &913459760 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1179374407115440529, guid: 8d28b0dd809606868bafa32f06af5410, type: 3}
@@ -2471,6 +2473,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1057545278110178844, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
   m_PrefabInstance: {fileID: 1448356993}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1448356997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+  m_PrefabInstance: {fileID: 1448356993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612828b00cfdc563d84ad1eb809a7e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1510124532
 PrefabInstance:
   m_ObjectHideFlags: 0

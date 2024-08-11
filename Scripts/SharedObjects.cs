@@ -18,6 +18,7 @@ public class SharedObjects : MonoBehaviour {
     public Transform cardsList;
 
     // ======================= Texting App ============================
+    
     public List<string> ChapterList;
 
     // The int of which message list to send the messages to based on their name and their position in the contactsList
@@ -60,9 +61,12 @@ public class SharedObjects : MonoBehaviour {
 
     // ================================================================
 
-    // Save Handler
+    // ========================= Save App =============================
 
-    public List<Transform> MessageListContent;
-    public List<int> NumOfMessagesInList;
+    public List<string> savedMessages;
+    public List<int> whosTheMessageFor;
+    public List<int> typeOfText;
+
+    // ================================================================
 
 }

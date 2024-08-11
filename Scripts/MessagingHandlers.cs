@@ -9,6 +9,19 @@ using UnityEditor;
 using UnityEngine.TextCore.Text;
 using System.IO;
 
+
+// Simple enum used for determining the type of text being sent/recieved.
+    public enum TypeOfText {
+        sentText = 0,
+        recText = 1,
+        sentImage = 2,
+        recImage = 3,
+        sentEmoji = 4,
+        recEmoji = 5,
+        chapEnd = 6,
+        indicateTime = 8,
+    }
+
 public class MessagingHandlers : MonoBehaviour {
 
     public GameObject backButton;    
@@ -21,18 +34,6 @@ public class MessagingHandlers : MonoBehaviour {
     int CurrChapIndex;
 
     ChapImport.Chapter CurrChap;
-
-    // Simple enum used for determining the type of text being sent/recieved.
-    public enum TypeOfText {
-        sentText = 0,
-        recText = 1,
-        sentImage = 2,
-        recImage = 3,
-        sentEmoji = 4,
-        recEmoji = 5,
-        chapEnd = 6,
-        indicateTime = 8,
-    }
     
     void BackButton() {
         // Creates onclick handler for back button.
@@ -68,7 +69,7 @@ public class MessagingHandlers : MonoBehaviour {
 
         gen.Hide(Shared.textingApp);
         
-        NewGame();
+        // NewGame();
     }
 
     public void NewGame() {
@@ -89,11 +90,11 @@ public class MessagingHandlers : MonoBehaviour {
             string item = Resps[i];
             if (item.Contains("{")){
                 Sprite img = Resources.Load("Images/Photos/" + item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, NextChap, TypeOfText.sentImage, img);
+                ImageButton(i, NextChap, TypeOfText.sentImage, item, img);
             } 
             else if (item.Contains("[")){
                 Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, NextChap, TypeOfText.sentEmoji, img);
+                ImageButton(i, NextChap, TypeOfText.sentEmoji, item, img);
             }
             else {
                 TextButton(i, NextChap, item);
@@ -142,11 +143,11 @@ public class MessagingHandlers : MonoBehaviour {
                 string imgName = item[1..^1];
                 Shared.seenImages.Add(imgName);
                 Sprite img = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img));
+                yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img, imgName: item));
             } 
             else if (item.Contains("[")){
                 Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(MessageDelay(TypeOfText.recEmoji, RespTime[i], pfp, img));
+                yield return StartCoroutine(MessageDelay(TypeOfText.recEmoji, RespTime[i], pfp, img, imgName: item));
             }
             else {
                 yield return StartCoroutine(MessageDelay(TypeOfText.recText, RespTime[i], pfp, textContent: item));
@@ -166,21 +167,27 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles the building and pushing of text messages to the message list object.
     // textMessage: the prefab of the message (sent recieved)
     // messageContent: The text content of the message.
-    public void TextPush(GameObject textMessage, string messageContent) {
+    public void TextPush(TypeOfText type, GameObject textMessage, string messageContent) {
         GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
-        GameObject textContent = messageClone.transform.GetChild(0).GetChild(0).GetChild(1).gameObject;
+        GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
+        GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
+        typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
     }
 
     // Handles the building and pushing of image messages to the message list object.
     // imageMessage: the prefab of which type of image text we're sending/recieving.
     // image: the actual image to be sent.
-    public void ImagePush(TypeOfText type, GameObject imageMessage, Sprite image) {
+    public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage, Sprite image) {
         GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
-        GameObject imageContent = messageClone.transform.GetChild(0).GetChild(1).GetChild(0).gameObject;
+        GameObject imageContent = messageClone.transform.GetChild(1).GetChild(1).GetChild(0).gameObject;
+        GameObject textContent = messageClone.transform.GetChild(1).GetChild(1).GetChild(1).gameObject;
+        GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = image;
+        textContent.GetComponent<TextMeshProUGUI>().text = imgName;
+        typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
         if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
-            Button button = messageClone.transform.GetChild(0).GetComponent<Button>();
+            Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
             gen.ModalWindowOpen(button, image);
         }
     }
@@ -190,34 +197,34 @@ public class MessagingHandlers : MonoBehaviour {
     // image: optional field in case we're sending an image
     // messageContent: default to "" in case you're sending an image.
     #nullable enable
-    public void MessageListLimit(TypeOfText type, Sprite? image = null ,string messageContent = "") {
+    public void MessageListLimit(TypeOfText type, string imgName = "", Sprite? image = null ,string messageContent = "") {
         if (Shared.content.GetChild(Shared.contactPush).childCount >= 25){
             Destroy(Shared.content.GetChild(Shared.contactPush).GetChild(0).gameObject);
         } 
         switch(type){
             case TypeOfText.sentText:
-                TextPush(Prefabs.sentText, messageContent);
+                TextPush(TypeOfText.sentText, Prefabs.sentText, messageContent);
             break;
             case TypeOfText.recText:
-                TextPush(Prefabs.recText, messageContent);
+                TextPush(TypeOfText.recText, Prefabs.recText, messageContent);
             break;
             case TypeOfText.sentEmoji:
-                ImagePush(TypeOfText.sentEmoji, Prefabs.sentEmoji, image);
+                ImagePush(TypeOfText.sentEmoji, imgName, Prefabs.sentEmoji, image);
             break;
             case TypeOfText.recEmoji:
-                ImagePush(TypeOfText.recEmoji, Prefabs.recEmoji, image);
+                ImagePush(TypeOfText.recEmoji, imgName,Prefabs.recEmoji, image);
             break;
             case TypeOfText.sentImage:
-                ImagePush(TypeOfText.sentImage, Prefabs.sentImage, image);
+                ImagePush(TypeOfText.sentImage, imgName,Prefabs.sentImage, image);
             break;
             case TypeOfText.recImage:
-                ImagePush(TypeOfText.recImage, Prefabs.recImage, image);
+                ImagePush(TypeOfText.recImage, imgName,Prefabs.recImage, image);
             break;
             case TypeOfText.chapEnd:
-                TextPush(Prefabs.ChapComplete, messageContent);
+                TextPush(TypeOfText.chapEnd, Prefabs.ChapComplete, messageContent);
             break;
             case TypeOfText.indicateTime:
-                TextPush(Prefabs.TimeIndicator, messageContent);
+                TextPush(TypeOfText.indicateTime, Prefabs.TimeIndicator, messageContent);
             break;
         }
     }
@@ -233,7 +240,7 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    public void GenerateMessage(TypeOfText type, string textContent, Sprite? pfp = null, Sprite? image = null) {
+    public void GenerateMessage(TypeOfText type, string textContent, string imgName, Sprite? pfp = null, Sprite? image = null) {
         switch (type) {
             case TypeOfText.recText:
                 pushNotification(pfp, textContent);
@@ -241,16 +248,17 @@ public class MessagingHandlers : MonoBehaviour {
             break;
             case TypeOfText.recImage:
                 pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recImage, image);
+                MessageListLimit(TypeOfText.recImage, imgName, image);
             break;
             case TypeOfText.recEmoji:
                 pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recEmoji, image);
+                MessageListLimit(TypeOfText.recEmoji, imgName, image);
             break;
             case TypeOfText.chapEnd:
                 MessageListLimit(TypeOfText.chapEnd, messageContent: textContent);
             break;
             case TypeOfText.indicateTime:
+                Debug.Log("I'm in here");
                 MessageListLimit(TypeOfText.indicateTime, messageContent: textContent);
             break;
         }
@@ -261,10 +269,10 @@ public class MessagingHandlers : MonoBehaviour {
     // respTime: time to wait before sending the text.
     // image: optional. The image to send (emoji, photo)
     // messageContent: text of the message
-    public IEnumerator MessageDelay(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message") {
+    public IEnumerator MessageDelay(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message", string imgName = "") {
         
         yield return new WaitForSeconds(respTime);
-        GenerateMessage(type, textContent, pfp, image);
+        GenerateMessage(type, textContent, imgName, pfp, image);
 
     }
 
@@ -292,14 +300,14 @@ public class MessagingHandlers : MonoBehaviour {
     // NextChap: list of ints, each for the next subchap to play based on click.
     // type: type of image (emoji/photo)
     // image: sprite image to be sent (emoji/photo)
-    public void ImageButton(int indx, List<int> NextChap, TypeOfText type, Sprite image) {
+    public void ImageButton(int indx, List<int> NextChap, TypeOfText type, string imgName, Sprite image) {
         GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
         imageObject.GetComponent<Image>().sprite = image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            MessageListLimit(type, image);
+            MessageListLimit(type, imgName, image);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
             responseHandle(NextChap[indx]);
