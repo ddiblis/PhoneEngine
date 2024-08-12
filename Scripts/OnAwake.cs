@@ -38,8 +38,9 @@ public class OnAwake : MonoBehaviour
 
         string[] SaveFiles = Directory.GetFiles(Application.persistentDataPath,"*Save.json");
         if (SaveFiles.Length > 0) {
-            string SaveInfoFile = File.ReadAllText(Application.persistentDataPath + "/SaveInfo" + ".json");
-            SM.LoadSavesFile(SaveInfoFile);
+            Debug.Log("Fialing before loadsavesfile");
+            SM.LoadSavesFile(Application.persistentDataPath + "/SaveInfo" + ".json");
+            Debug.Log("failing Before loadgame");
             SM.LoadGame(SaveFiles[SavesInfo.MostRecentSaveIndex]);
         } else {
             MH.NewGame();
