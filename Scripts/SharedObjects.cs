@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.TerrainTools;
@@ -31,6 +32,7 @@ public class SharedObjects : MonoBehaviour {
     public RectTransform displayedList;
     public Transform scrollView;
     public Transform content;
+    public bool ChoiceNeeded;
 
     // Response choices box
     public Transform choices;
@@ -70,6 +72,14 @@ public class SharedObjects : MonoBehaviour {
     public List<string> savedMessages;
     public List<int> whosTheMessageFor;
     public List<int> typeOfText;
+
+    public int NumberOfSaves;
+
+    public string MostRecentDateTime;
+    public List<string> NameOfSaves;
+    public List<int> ChapterOfSaves;
+    public List<string> TendencyOfSaves;
+    public List<string> DateTimeOfSave;
 
     // ================================================================
 

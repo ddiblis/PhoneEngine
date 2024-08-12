@@ -64,20 +64,4 @@ public class ContactsHandler : MonoBehaviour {
         }
 
     }
-
-    void Start() {
-        
-        
-        gen.Hide(contactsApp);
-        
-        // Generates contact cards for each contact based on list.
-        for (int i = 0; i < Shared.ContactsList.Count; i++) {
-
-            Sprite img = Resources.Load("Images/Headshots/" + i + Shared.ContactsList[i], typeof(Sprite)) as Sprite;            
-
-            addContactCard(img, Shared.ContactsList[i], i);
-        } 
-        
-
-    }
 }

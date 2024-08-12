@@ -13,14 +13,8 @@ public class GallaryHandler : MonoBehaviour
 {
     public SharedObjects Shared;
     public GameObject PhotoContainer;
-    public Transform ContactsApp;
+    public Transform GallaryApp;
     public GeneralHandlers gen;
-
-
-    void Awake() {
-        gen.Hide(ContactsApp);
-        gen.Hide(Shared.ModalWindow);
-    }
 
     public void DisplayImages() {
         for (int i = 0; i < Shared.seenImages.Count; i++) {

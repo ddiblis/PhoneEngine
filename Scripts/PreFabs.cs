@@ -16,5 +16,6 @@ public class PreFabs : MonoBehaviour {
     public GameObject Notification;
     public GameObject ChapComplete;
     public GameObject TimeIndicator;
+    public GameObject SaveCard;
 
 }

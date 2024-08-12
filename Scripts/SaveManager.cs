@@ -1,35 +1,85 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-using System.IO;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using TMPro;
-using System.Runtime.InteropServices;
+using UnityEngine.UI;
+using Unity.VisualScripting;
+using Unity.VisualScripting.FullSerializer;
+using UnityEditor;
+using UnityEngine.TextCore.Text;
+using System.IO;
+using System;
+using System.Linq;
 
 public class SaveManager : MonoBehaviour
 {
+    public Transform SavesApp;
+    public Transform SaveList;
+    public GeneralHandlers gen;
+    public PreFabs Prefabs;
     public SharedObjects Shared;
     public MessagingHandlers MH;
 
-    // public class testStruct{
-    //     List<string> seenImages;
-    //     List<bool> UnlockedContacts;
-    // }
+    // string saveFile;
 
-    // public void test(){
-    //     string saveFile = Application.persistentDataPath + "/gamedata.data";
+    void RefreshSaveList() {
+        for (int i = 3; i < Shared.NumberOfSaves + 3; i++) {
+            Destroy(SaveList.GetChild(i).gameObject);
+        }
+        CreateSaveCards();
+    }
 
-    //     // Shared.seenImages;
-    //     // Shared.UnlockedContacts;
-    // }
-    string saveFile;
+    void RefreshApps() {
+        if (Shared.notificationArea.childCount > 0) {
+            Destroy(Shared.notificationArea.GetChild(0).gameObject);
+        }
+        if (Shared.choices.childCount > 0) {
+            for (int i = 0; i < Shared.choices.childCount; i++) {
+                Destroy(Shared.choices.GetChild(i).gameObject);
+            }
+        }
+        for (int i = 0; i < Shared.ContactsList.Count; i++) {
+            Transform messageList = Shared.content.GetChild(i);
+            if (messageList.childCount > 0) {
+                for (int j = 0; j < messageList.childCount; j++) {
+                    Destroy(messageList.GetChild(j).gameObject);
+                }
+            }
+        }
+    }
 
-    void Awake()
-    {
-        // Update the path once the persistent path exists.
-        saveFile = Application.persistentDataPath + "/gamedata.json";
+    public void CreateSaveCards() {
+
+        for (int i = 0; i < Shared.NumberOfSaves; i++) {
+
+            GameObject SaveCardClone = Instantiate(Prefabs.SaveCard, new Vector3(0, 0, 0), Quaternion.identity, SaveList);
+
+            Transform TextContainer = SaveCardClone.transform.GetChild(3);
+
+            if (Shared.ChapterOfSaves.Count > i && Shared.ChapterOfSaves[i] != 0) {
+                TextContainer.GetChild(0).GetComponent<TextMeshProUGUI>().text = Shared.NameOfSaves[i];
+                TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Chapter " + Shared.ChapterOfSaves[i];
+                // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Chapter " + Shared.TendencyOfSaves[i];
+                TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = Shared.DateTimeOfSave[i];
+            }
+
+            // Set functionality of save and load buttons
+            Button SaveButton = SaveCardClone.transform.GetChild(1).GetComponent<Button>(); 
+            Button LoadButton = SaveCardClone.transform.GetChild(2).GetComponent<Button>(); 
+            string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
+            int indx = i;
+            SaveButton.onClick.AddListener(() => {
+                Shared.MostRecentDateTime = "" + DateTime.Now;
+                Shared.ChapterOfSaves[indx] = Shared.CurrChapIndex + 1;
+                Shared.DateTimeOfSave[indx] = "" + DateTime.Now;
+                SaveGame(saveFile);
+                RefreshSaveList();
+            });
+            LoadButton.onClick.AddListener(() => {
+                RefreshApps();
+                LoadGame(saveFile);
+            });
+        }
     }
 
     void handleImageMessages(TypeOfText MessageType, string TextContentOfMessage) {
@@ -52,20 +102,25 @@ public class SaveManager : MonoBehaviour
         } else {
             handleImageMessages(MessageType, TextContentOfMessage);
         }
-}
+    }
 
-    public void LoadGame()
-    {
-        // Does the file exist?
+    public void ReadFile(string saveFile) {
         if (File.Exists(saveFile)) {
-            // Read the entire file and save its contents.
             string fileContents = File.ReadAllText(saveFile);
 
-            // Deserialize the JSON data 
-            //  into a pattern matching the GameData class.
+            JsonUtility.FromJsonOverwrite(fileContents, Shared);
+        }
+    }
+
+
+    public void LoadGame(string saveFile) {
+        if (File.Exists(saveFile)) {
+            string fileContents = File.ReadAllText(saveFile);
+
             JsonUtility.FromJsonOverwrite(fileContents, Shared);
         }
 
+        // Populates the messageLists with the content from the loaded Json
         for (int i = 0; i < Shared.savedMessages.Count; i++) {
             // Set the person the messages are for
             Shared.contactPush = Shared.whosTheMessageFor[i];
@@ -105,14 +160,12 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public void SaveGame() {   
+    public void SaveGame(string saveFile) {   
 
         GetMessagesSnapshot();
 
-        // Serialize the object into JSON and save string.
         string jsonString = JsonUtility.ToJson(Shared);
 
-        // Write JSON to file.
         File.WriteAllText(saveFile, jsonString);
 
 

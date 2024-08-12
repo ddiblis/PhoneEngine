@@ -34,7 +34,7 @@ public class MessagingHandlers : MonoBehaviour {
 
     ChapImport.Chapter CurrChap;
     
-    void BackButton() {
+    public void BackButton() {
         // Creates onclick handler for back button.
         Button button = backButton.GetComponent<Button>();
         button.onClick.AddListener(() => {
@@ -44,7 +44,7 @@ public class MessagingHandlers : MonoBehaviour {
         });
     }
 
-    void GenerateContactsList() {
+    public void GenerateContactsList() {
         string[] FileList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
         foreach (string File in FileList) {
             Shared.ContactsList.Add(File[35..^4]);
@@ -52,23 +52,12 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // creates as many messageLists as needed for the contacts and hides them.
-    void GenerateMessageLists() {
+    public void GenerateMessageLists() {
         for (int i = 0; i < Shared.ContactsList.Count; i++) {
             Shared.UnlockedContacts.Add(false);
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
             gen.Hide(Shared.content.GetChild(i));
         } 
-    }
-
-    void Awake() {
-
-        BackButton();
-        GenerateContactsList();
-        GenerateMessageLists();
-
-        gen.Hide(Shared.textingApp);
-        
-        // NewGame();
     }
 
     public void NewGame() {
@@ -78,7 +67,6 @@ public class MessagingHandlers : MonoBehaviour {
 
     public void ChapterSelect(string Chapter, int subChapIndex = 0, int currentText = 0) {
         CurrChap = chap.GetChapter(Chapter);
-        // Shared.CurrSubChapIndex
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
     }
     
@@ -183,16 +171,20 @@ public class MessagingHandlers : MonoBehaviour {
             Shared.UnlockedContacts[NumOfPerson] = true;
         }   
 
-        // Sends indicator of time passed
-        if (TimeIndicator.Length > 0 && Shared.CurrText == 0){
-            yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
-        }
 
-        if (TextList.Count == 1 || Shared.CurrText+1 != TextList.Count){
-            yield return StartCoroutine(RecieveTexts(TextList, RespTime, pfp, startingText));
+        if (!Shared.ChoiceNeeded) {
+            // Sends indicator of time passed
+            if (TimeIndicator.Length > 0 && Shared.CurrText == 0){
+                yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
+            }
+            
+            if (TextList.Count == 1 || Shared.CurrText+1 != TextList.Count){
+                yield return StartCoroutine(RecieveTexts(TextList, RespTime, pfp, startingText));
+            }
         }
 
         if (Resps.Count > 0){
+            Shared.ChoiceNeeded = true;
             PopulateResps(Resps, NextChap);
         } else {
             yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
@@ -303,6 +295,7 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             Shared.CurrSubChapIndex = NextChap[indx];
             Shared.CurrText = 0;
+            Shared.ChoiceNeeded = false;
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
@@ -324,6 +317,7 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             Shared.CurrSubChapIndex = NextChap[indx];
             Shared.CurrText = 0;
+            Shared.ChoiceNeeded = false;
             MessageListLimit(type, imgName, image);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
