@@ -76,8 +76,17 @@ public class SaveManager : MonoBehaviour
                 RefreshSaveList();
             });
             LoadButton.onClick.AddListener(() => {
-                RefreshApps();
-                LoadGame(saveFile);
+                if (File.Exists(saveFile)) {
+                    RefreshApps();
+                    LoadGame(saveFile);
+                    for (int i = 0; i < Shared.UnlockedContacts.Count; i++) {
+                        if (Shared.UnlockedContacts[i]){
+                            gen.Show(Shared.cardsList.GetChild(i));
+                        } else {
+                            gen.Hide(Shared.cardsList.GetChild(i));
+                        }
+                    }
+                }
             });
         }
     }
@@ -114,11 +123,9 @@ public class SaveManager : MonoBehaviour
 
 
     public void LoadGame(string saveFile) {
-        if (File.Exists(saveFile)) {
-            string fileContents = File.ReadAllText(saveFile);
+        string fileContents = File.ReadAllText(saveFile);
 
-            JsonUtility.FromJsonOverwrite(fileContents, Shared);
-        }
+        JsonUtility.FromJsonOverwrite(fileContents, Shared);
 
         // Populates the messageLists with the content from the loaded Json
         for (int i = 0; i < Shared.savedMessages.Count; i++) {
@@ -131,7 +138,9 @@ public class SaveManager : MonoBehaviour
         Shared.whosTheMessageFor = new List<int>();
         Shared.typeOfText = new List<int>();
 
-        MH.ChapterSelect(Shared.ChapterList[Shared.CurrChapIndex], Shared.CurrSubChapIndex, Shared.CurrText);
+        if (Shared.CurrChapIndex < Shared.ChapterList.Count){
+            MH.ChapterSelect(Shared.ChapterList[Shared.CurrChapIndex], Shared.CurrSubChapIndex, Shared.CurrText);
+        }
     }
 
     void SaveAllMessages(Transform MessageList, int Person) {
