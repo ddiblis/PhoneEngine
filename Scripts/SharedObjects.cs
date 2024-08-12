@@ -75,12 +75,6 @@ public class SharedObjects : MonoBehaviour {
 
     public int NumberOfSaves;
 
-    public string MostRecentDateTime;
-    public List<string> NameOfSaves;
-    public List<int> ChapterOfSaves;
-    public List<string> TendencyOfSaves;
-    public List<string> DateTimeOfSave;
-
     // ================================================================
 
 }

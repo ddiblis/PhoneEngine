@@ -1289,6 +1289,7 @@ GameObject:
   - component: {fileID: 492607239}
   - component: {fileID: 492607241}
   - component: {fileID: 492607242}
+  - component: {fileID: 492607243}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1376,8 +1377,8 @@ RectTransform:
   - {fileID: 1448356994}
   - {fileID: 1704581946726996914}
   - {fileID: 1546402601}
-  - {fileID: 1889824619}
   - {fileID: 1510124533}
+  - {fileID: 1889824619}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1422,6 +1423,7 @@ MonoBehaviour:
   displayedList: {fileID: 0}
   scrollView: {fileID: 1448356995}
   content: {fileID: 196137360}
+  ChoiceNeeded: 0
   choices: {fileID: 1207948560}
   CurrChapIndex: 0
   CurrSubChapIndex: 0
@@ -1435,10 +1437,6 @@ MonoBehaviour:
   whosTheMessageFor: 
   typeOfText: 
   NumberOfSaves: 0
-  NameOfSaves: []
-  ChapterOfSaves: 
-  TendencyOfSaves: []
-  DateTimeOfSave: []
 --- !u!114 &492607241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1482,6 +1480,24 @@ MonoBehaviour:
   CH: {fileID: 1888701054}
   gen: {fileID: 492607238}
   Shared: {fileID: 492607239}
+  SavesInfo: {fileID: 492607243}
+--- !u!114 &492607243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492607232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aff4ac99e353a5eda18c2013080703d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MostRecentSaveIndex: 0
+  NameOfSaves: []
+  ChapterOfSaves: 
+  TendencyOfSaves: []
+  DateTimeOfSave: []
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3151,6 +3167,7 @@ MonoBehaviour:
   gen: {fileID: 492607238}
   Prefabs: {fileID: 492607241}
   Shared: {fileID: 492607239}
+  SavesInfo: {fileID: 492607243}
   MH: {fileID: 1448356997}
 --- !u!1 &1590893141
 GameObject:

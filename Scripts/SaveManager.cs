@@ -18,6 +18,7 @@ public class SaveManager : MonoBehaviour
     public GeneralHandlers gen;
     public PreFabs Prefabs;
     public SharedObjects Shared;
+    public SavesFile SavesInfo;
     public MessagingHandlers MH;
 
     // string saveFile;
@@ -56,27 +57,32 @@ public class SaveManager : MonoBehaviour
 
             Transform TextContainer = SaveCardClone.transform.GetChild(3);
 
-            if (Shared.ChapterOfSaves.Count > i && Shared.ChapterOfSaves[i] != 0) {
-                TextContainer.GetChild(0).GetComponent<TextMeshProUGUI>().text = Shared.NameOfSaves[i];
-                TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Chapter " + Shared.ChapterOfSaves[i];
+            // if (SavesInfo.ChapterOfSaves.Count > i && SavesInfo.ChapterOfSaves[i] != 0) {
+
+            if (SavesInfo.ChapterOfSaves[i] != 0) {
+                TextContainer.GetChild(0).GetComponent<TextMeshProUGUI>().text = SavesInfo.NameOfSaves[i];
+                TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Chapter " + SavesInfo.ChapterOfSaves[i];
                 // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Chapter " + Shared.TendencyOfSaves[i];
-                TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = Shared.DateTimeOfSave[i];
+                TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.DateTimeOfSave[i];
             }
 
             // Set functionality of save and load buttons
             Button SaveButton = SaveCardClone.transform.GetChild(1).GetComponent<Button>(); 
             Button LoadButton = SaveCardClone.transform.GetChild(2).GetComponent<Button>(); 
             string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
+            string SaveInfo = Application.persistentDataPath + "/SaveInfo" + ".json";
             int indx = i;
             SaveButton.onClick.AddListener(() => {
-                Shared.MostRecentDateTime = "" + DateTime.Now;
-                Shared.ChapterOfSaves[indx] = Shared.CurrChapIndex + 1;
-                Shared.DateTimeOfSave[indx] = "" + DateTime.Now;
+                SavesInfo.MostRecentSaveIndex = indx;
+                SavesInfo.ChapterOfSaves[indx] = Shared.CurrChapIndex + 1;
+                SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
+                createSavesFile(SaveInfo);
                 SaveGame(saveFile);
                 RefreshSaveList();
             });
             LoadButton.onClick.AddListener(() => {
                 if (File.Exists(saveFile)) {
+                    LoadSavesFile(SaveInfo);
                     RefreshApps();
                     LoadGame(saveFile);
                     for (int i = 0; i < Shared.UnlockedContacts.Count; i++) {
@@ -121,6 +127,11 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+    public void LoadSavesFile(string SaveInfoFile) {
+        string fileContents = File.ReadAllText(SaveInfoFile);
+
+        JsonUtility.FromJsonOverwrite(fileContents, SavesInfo);
+    }
 
     public void LoadGame(string saveFile) {
         string fileContents = File.ReadAllText(saveFile);
@@ -181,6 +192,12 @@ public class SaveManager : MonoBehaviour
         Shared.savedMessages = new List<string>();
         Shared.whosTheMessageFor = new List<int>();
         Shared.typeOfText = new List<int>();
+    }
+    void createSavesFile(string SaveInfoFile) {
+
+        string jsonString = JsonUtility.ToJson(SavesInfo);
+
+        File.WriteAllText(SaveInfoFile, jsonString);
     }
 }
 
