@@ -1073,6 +1073,9 @@ MonoBehaviour:
   scrollView: {fileID: 1448356995}
   content: {fileID: 196137360}
   choices: {fileID: 1207948560}
+  CurrChapIndex: 0
+  CurrSubChapIndex: 0
+  CurrText: 0
   seenImages: []
   ImageList: {fileID: 2432908678824951417}
   ModalWindow: {fileID: 1510124533}
@@ -1716,7 +1719,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 885515400}
         m_TargetAssemblyTypeName: SaveManager, Assembly-CSharp
-        m_MethodName: readFile
+        m_MethodName: LoadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

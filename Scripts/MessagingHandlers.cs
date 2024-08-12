@@ -31,7 +31,6 @@ public class MessagingHandlers : MonoBehaviour {
     public SharedObjects Shared;
     public PreFabs Prefabs;
 
-    int CurrChapIndex;
 
     ChapImport.Chapter CurrChap;
     
@@ -77,9 +76,10 @@ public class MessagingHandlers : MonoBehaviour {
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
     }
 
-    public void ChapterSelect(string Chapter) {
+    public void ChapterSelect(string Chapter, int subChapIndex = 0, int currentText = 0) {
         CurrChap = chap.GetChapter(Chapter);
-        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
+        // Shared.CurrSubChapIndex
+        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
     }
     
 
@@ -105,39 +105,47 @@ public class MessagingHandlers : MonoBehaviour {
         } 
     }
 
-    // Called on to start the next coroutine for the subchapter.
-    public void responseHandle(int subChapNum) {
-        if (!CurrChap.ChapComplete) {
-            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapNum]));
-        }
-        if (subChapNum == CurrChap.SubChaps.Count - 1) {
-            CurrChap.ChapComplete = true;
+    #nullable enable
+    public void GenerateMessage(TypeOfText type, string textContent, string imgName, Sprite? pfp = null, Sprite? image = null) {
+        switch (type) {
+            case TypeOfText.recText:
+                pushNotification(pfp, textContent);
+                MessageListLimit(TypeOfText.recText, messageContent: textContent);
+            break;
+            case TypeOfText.recImage:
+                pushNotification(pfp, textContent);
+                MessageListLimit(TypeOfText.recImage, imgName, image);
+            break;
+            case TypeOfText.recEmoji:
+                pushNotification(pfp, textContent);
+                MessageListLimit(TypeOfText.recEmoji, imgName, image);
+            break;
+            case TypeOfText.chapEnd:
+                MessageListLimit(TypeOfText.chapEnd, messageContent: textContent);
+            break;
+            case TypeOfText.indicateTime:
+                MessageListLimit(TypeOfText.indicateTime, messageContent: textContent);
+            break;
         }
     }
 
-    // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
-    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap) {
-        string Contact = subChap.Contact;
-        string TimeIndicator = subChap.TimeIndicator;
-        List<string> TextList = subChap.TextList;
-        List<float> RespTime = subChap.ResponseTime;
-        ChapImport.Responses Responses = subChap.Responses;
-        List<string> Resps = Responses.Resps;
-        List<int> NextChap = Responses.NextChap;
-        // Chooses messageList parent for messages to be pushed to
-        Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
-        int NumOfPerson = Shared.ContactsList.IndexOf(Contact);
-        Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
+    # nullable enable
+    // Handles wait time for the messages recieved so they don't all display at once.
+    // TypeOfText: an enum object that denotes the type of text we're sending
+    // respTime: time to wait before sending the text.
+    // image: optional. The image to send (emoji, photo)
+    // messageContent: text of the message
+    public IEnumerator MessageDelay(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message", string imgName = "") {
+        
+        yield return new WaitForSeconds(respTime);
+        GenerateMessage(type, textContent, imgName, pfp, image);
 
-        // Unlocks contact if they're not already unlocked: displays their contact card      
-        if (!Shared.UnlockedContacts[NumOfPerson]) {
-            Shared.UnlockedContacts[NumOfPerson] = true;
-        }   
+    }
+    # nullable disable
 
-        if (TimeIndicator.Length > 0){
-            yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
-        }
-        for (int i = 0; i < TextList.Count; i++) {
+    public IEnumerator RecieveTexts(List<string> TextList, List<float> RespTime, Sprite pfp, int startingText = 0) {
+        for (int i = startingText; i < TextList.Count; i++) {
+            Shared.CurrText = i;
             string item = TextList[i];
             if (item.Contains("{")){
                 string imgName = item[1..^1];
@@ -152,14 +160,46 @@ public class MessagingHandlers : MonoBehaviour {
             else {
                 yield return StartCoroutine(MessageDelay(TypeOfText.recText, RespTime[i], pfp, textContent: item));
             }
-        } 
+        }
+    }
+
+    // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
+    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap, int startingText = 0) {
+        string Contact = subChap.Contact;
+        string TimeIndicator = subChap.TimeIndicator;
+        List<string> TextList = subChap.TextList;
+        List<float> RespTime = subChap.ResponseTime;
+        ChapImport.Responses Responses = subChap.Responses;
+        List<string> Resps = Responses.Resps;
+        List<int> NextChap = Responses.NextChap;
+
+        // Chooses messageList parent for messages to be pushed to
+        Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
+        int NumOfPerson = Shared.ContactsList.IndexOf(Contact);
+        Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
+
+        // Unlocks contact if they're not already unlocked: displays their contact card      
+        if (!Shared.UnlockedContacts[NumOfPerson]) {
+            Shared.UnlockedContacts[NumOfPerson] = true;
+        }   
+
+        // Sends indicator of time passed
+        if (TimeIndicator.Length > 0 && Shared.CurrText == 0){
+            yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
+        }
+
+        if (TextList.Count == 1 || Shared.CurrText+1 != TextList.Count){
+            yield return StartCoroutine(RecieveTexts(TextList, RespTime, pfp, startingText));
+        }
+
         if (Resps.Count > 0){
             PopulateResps(Resps, NextChap);
         } else {
             yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
-            CurrChapIndex += 1;
-            if (CurrChapIndex <= Shared.ChapterList.Count -1) {
-                ChapterSelect(Shared.ChapterList[CurrChapIndex]);
+            Shared.CurrChapIndex += 1;
+            if (Shared.CurrChapIndex <= Shared.ChapterList.Count -1) {
+                Shared.CurrSubChapIndex = 0;
+                ChapterSelect(Shared.ChapterList[Shared.CurrChapIndex]);
             }
         }
     }
@@ -240,42 +280,15 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    public void GenerateMessage(TypeOfText type, string textContent, string imgName, Sprite? pfp = null, Sprite? image = null) {
-        switch (type) {
-            case TypeOfText.recText:
-                pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recText, messageContent: textContent);
-            break;
-            case TypeOfText.recImage:
-                pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recImage, imgName, image);
-            break;
-            case TypeOfText.recEmoji:
-                pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recEmoji, imgName, image);
-            break;
-            case TypeOfText.chapEnd:
-                MessageListLimit(TypeOfText.chapEnd, messageContent: textContent);
-            break;
-            case TypeOfText.indicateTime:
-                Debug.Log("I'm in here");
-                MessageListLimit(TypeOfText.indicateTime, messageContent: textContent);
-            break;
+    // Called on to start the next coroutine for the subchapter.
+    public void responseHandle(int subChapNum) {
+        if (!CurrChap.ChapComplete) {
+            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapNum]));
+        }
+        if (subChapNum == CurrChap.SubChaps.Count - 1) {
+            CurrChap.ChapComplete = true;
         }
     }
-
-    // Handles wait time for the messages recieved so they don't all display at once.
-    // TypeOfText: an enum object that denotes the type of text we're sending
-    // respTime: time to wait before sending the text.
-    // image: optional. The image to send (emoji, photo)
-    // messageContent: text of the message
-    public IEnumerator MessageDelay(TypeOfText type, float respTime, Sprite? pfp = null, Sprite? image = null, string textContent = "Picture Message", string imgName = "") {
-        
-        yield return new WaitForSeconds(respTime);
-        GenerateMessage(type, textContent, imgName, pfp, image);
-
-    }
-
 
     // handles the building and pushing of the text choice buttons into the choices list
     // indx: automated through forloop, handles destruction of buttons and next chap queuing
@@ -288,6 +301,8 @@ public class MessagingHandlers : MonoBehaviour {
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
+            Shared.CurrSubChapIndex = NextChap[indx];
+            Shared.CurrText = 0;
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
@@ -307,6 +322,8 @@ public class MessagingHandlers : MonoBehaviour {
         imageObject.GetComponent<Image>().sprite = image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
+            Shared.CurrSubChapIndex = NextChap[indx];
+            Shared.CurrText = 0;
             MessageListLimit(type, imgName, image);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);

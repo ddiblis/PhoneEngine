@@ -54,7 +54,7 @@ public class SaveManager : MonoBehaviour
         }
 }
 
-    public void readFile()
+    public void LoadGame()
     {
         // Does the file exist?
         if (File.Exists(saveFile)) {
@@ -71,10 +71,12 @@ public class SaveManager : MonoBehaviour
             Shared.contactPush = Shared.whosTheMessageFor[i];
             LoadAllMessages(i);
         }
-        
+
         Shared.savedMessages = new List<string>();
         Shared.whosTheMessageFor = new List<int>();
         Shared.typeOfText = new List<int>();
+
+        MH.ChapterSelect(Shared.ChapterList[Shared.CurrChapIndex], Shared.CurrSubChapIndex, Shared.CurrText);
     }
 
     void SaveAllMessages(Transform MessageList, int Person) {
@@ -103,7 +105,7 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public void writeFile() {   
+    public void SaveGame() {   
 
         GetMessagesSnapshot();
 
