@@ -6,12 +6,12 @@ using UnityEngine.UI;
 using Unity.VisualScripting;
 using Unity.VisualScripting.FullSerializer;
 using System;
+using UnityEditor.Animations;
 
 
 public class ContactsHandler : MonoBehaviour {
 
     public Transform contactsApp;
-
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public PreFabs Prefabs;
@@ -51,7 +51,8 @@ public class ContactsHandler : MonoBehaviour {
                 Destroy(Shared.notif);
             }
 
-            gen.Show(Shared.textingApp);
+
+            Shared.textingApp.GetComponent<Animator>().Play("Open-Texts-App");
         });
         gen.Hide(Shared.cardsList.GetChild(indx));
     }
@@ -62,6 +63,5 @@ public class ContactsHandler : MonoBehaviour {
                 gen.Show(Shared.cardsList.GetChild(i));
             }
         }
-
     }
 }

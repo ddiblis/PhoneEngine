@@ -27,8 +27,6 @@ public class OnAwake : MonoBehaviour
         MH.GenerateContactsList();
         MH.GenerateMessageLists();
         MH.BackButton();
-
-
         
         // Generates contact cards for each contact based on list.
         for (int i = 0; i < Shared.ContactsList.Count; i++) {
@@ -38,9 +36,7 @@ public class OnAwake : MonoBehaviour
 
         string[] SaveFiles = Directory.GetFiles(Application.persistentDataPath,"*Save.json");
         if (SaveFiles.Length > 0) {
-            Debug.Log("Fialing before loadsavesfile");
             SM.LoadSavesFile(Application.persistentDataPath + "/SaveInfo" + ".json");
-            Debug.Log("failing Before loadgame");
             SM.LoadGame(SaveFiles[SavesInfo.MostRecentSaveIndex]);
         } else {
             MH.NewGame();
@@ -53,13 +49,6 @@ public class OnAwake : MonoBehaviour
         }
 
         SM.CreateSaveCards();
-
-
-        gen.Hide(CH.contactsApp);
-        gen.Hide(Shared.textingApp);
-        gen.Hide(GH.GallaryApp);
-        gen.Hide(Shared.ModalWindow);
-        gen.Hide(SM.SavesApp);  
 
     }
 

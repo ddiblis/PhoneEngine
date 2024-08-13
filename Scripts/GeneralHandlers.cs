@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements.Experimental;
 
 public class GeneralHandlers : MonoBehaviour {
 
@@ -24,7 +25,7 @@ public class GeneralHandlers : MonoBehaviour {
             Shared.ModalWindow.GetChild(1).GetComponent<Button>().onClick.AddListener(() => {
                 Shared.Wallpaper.GetComponent<Image>().sprite = photo;
             });
-            Show(Shared.ModalWindow);
+            Shared.ModalWindow.GetComponent<Animator>().Play("Open-Image-Modal");
         });
     }
 
