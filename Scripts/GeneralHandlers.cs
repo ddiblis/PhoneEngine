@@ -7,7 +7,9 @@ using UnityEngine.UIElements.Experimental;
 public class GeneralHandlers : MonoBehaviour {
 
     public SharedObjects Shared;
+    public PreFabs preFabs;
     public SavedItems saved;
+    public Transform Canvas;
 
     public void Hide(Transform Object){
         Object.localScale = new Vector3(0, 0, 0);
@@ -27,16 +29,20 @@ public class GeneralHandlers : MonoBehaviour {
 
     // figure out why you're getting the pictures in 2 different formats, with and without braces, and fix line 34 object Object reference not set to an instance of an object
 
-    public void ModalWindowOpen(Button button, Sprite photo, string ImageName) {
-        Debug.Log(ImageName);
-        button.onClick.AddListener(() => {
-            Shared.ImageModalWindow.GetChild(0).GetComponent<Image>().sprite = photo;
-            Shared.ImageModalWindow.GetChild(1).GetComponent<Button>().onClick.AddListener(() => {
-                Shared.Wallpaper.GetComponent<Image>().sprite = photo;
-                saved.currWallPaper = ImageName;
-            });
-            Shared.ImageModalWindow.GetComponent<Animator>().Play("Open-Image-Modal");
+    public void ModalWindowOpen(Sprite photo, string ImageName) {
+        Transform ImageModalWindowClone = Instantiate(preFabs.ImageModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+        ImageModalWindowClone.GetChild(0).GetComponent<Image>().sprite = photo;
+        Button setWallpaperButton = ImageModalWindowClone.GetChild(1).GetComponent<Button>();
+        Button xButton = ImageModalWindowClone.GetChild(2).GetComponent<Button>();
+        xButton.onClick.AddListener(() => {
+            Destroy(ImageModalWindowClone.gameObject);
         });
+        setWallpaperButton.onClick.AddListener(() => {
+            Destroy(ImageModalWindowClone.gameObject);
+            saved.currWallPaper = ImageName;
+            SetWallPaper(saved.currWallPaper);
+        });
+        ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }
 
 }

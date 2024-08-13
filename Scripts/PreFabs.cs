@@ -19,5 +19,7 @@ public class PreFabs : MonoBehaviour {
     public GameObject SaveCard;
     public Transform SaveModalWindow;
     public Transform LoadModalWindow;
+    public Transform ImageModalWindow;
+
 
 }

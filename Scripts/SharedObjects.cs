@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.TerrainTools;
 using UnityEngine;
 
 public class SharedObjects : MonoBehaviour {
@@ -37,7 +36,6 @@ public class SharedObjects : MonoBehaviour {
 
     // =================== Image Modal Window =========================
 
-    public Transform ImageModalWindow;
 
     // ================================================================
 

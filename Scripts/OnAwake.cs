@@ -44,7 +44,8 @@ public class OnAwake : MonoBehaviour
             foreach (string File in FileList) {
                 saved.ChapterList.Add(File[26..^5]);
             }
-            saved.currWallPaper = "gf-car1";
+            saved.currWallPaper = "gf-car";
+            gen.SetWallPaper(saved.currWallPaper);
             MH.NewGame();
             saved.NumberOfSaves = 5;
             for(int i = 0; i < saved.NumberOfSaves; i++) {

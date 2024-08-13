@@ -48,7 +48,6 @@ public class SaveManager : MonoBehaviour
                 }
             }
         }
-        gen.SetWallPaper(saved.currWallPaper);
     }
 
     public void CreateSaveCards() {
@@ -92,6 +91,10 @@ public class SaveManager : MonoBehaviour
         Transform popup = SaveModalWindowClone.GetChild(2).transform;
         // InputField input = popup.GetComponent<InputField>();
         Button confirmButton = popup.GetChild(2).GetComponent<Button>();
+        Button cancelButton = popup.GetChild(1).GetComponent<Button>();
+        confirmButton.onClick.AddListener(() => {
+            Destroy(SaveModalWindowClone.gameObject);
+        });
         confirmButton.onClick.AddListener(() => {
             SavesInfo.MostRecentSaveIndex = indx;
             SavesInfo.ChapterOfSaves[indx] = saved.CurrChapIndex + 1;
@@ -108,10 +111,16 @@ public class SaveManager : MonoBehaviour
             Transform LoadModalWindowClone = Instantiate(Prefabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
             LoadModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
             Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
+            Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
+            cancelButton.onClick.AddListener(() => {
+                Destroy(LoadModalWindowClone.gameObject);
+            });
+
             confirmButton.onClick.AddListener(() => {
                 LoadSavesFile(SaveInfo);
                 RefreshApps();
                 LoadGame(saveFile);
+                gen.SetWallPaper(saved.currWallPaper);
                 for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
                     if (saved.UnlockedContacts[i]){
                         gen.Show(Shared.cardsList.GetChild(i));

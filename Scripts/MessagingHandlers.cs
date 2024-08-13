@@ -221,7 +221,9 @@ public class MessagingHandlers : MonoBehaviour {
         typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
         if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
-            gen.ModalWindowOpen(button, image, imgName);
+            button.onClick.AddListener(() => {
+                gen.ModalWindowOpen(image, imgName[1..^1]);
+            });
         }
     }
 

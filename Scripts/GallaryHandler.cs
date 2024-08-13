@@ -24,13 +24,16 @@ public class GallaryHandler : MonoBehaviour
             GameObject imageContent = PhotoContainerClone.transform.GetChild(0).gameObject;
             imageContent.GetComponent<Image>().sprite = photo;
             Button button = PhotoContainerClone.GetComponent<Button>();
-            gen.ModalWindowOpen(button, photo, saved.seenImages[i]);
+            int indx = i;
+            button.onClick.AddListener(() => {
+                gen.ModalWindowOpen(photo, saved.seenImages[indx]);
+            });
         }
     }
 
     public void DestroyGallary() {
         foreach (Transform child in Shared.ImageList) {
-			GameObject.Destroy(child.gameObject);
+			Destroy(child.gameObject);
 		}
     }
 }
