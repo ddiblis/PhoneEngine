@@ -36,13 +36,6 @@ public class ChapImport : MonoBehaviour {
         public Responses Responses;
     }
 
-    void Awake(){
-        string[] FileList = Directory.GetFiles("Assets/Resources/Chapters/","*.json");
-        foreach (string File in FileList) {
-            Shared.ChapterList.Add(File[26..^5]);
-        }
-    }
-
 
     public Chapter myChapter = new Chapter();
     [SerializeField] 

@@ -14,45 +14,30 @@ public class SharedObjects : MonoBehaviour {
 
     // ====================== Contacts App ============================
 
-    public List<string> ContactsList;
-    public List<bool> UnlockedContacts;
     public Transform cardsList;
 
     // ======================= Texting App ============================
 
-    public List<string> ChapterList;
-
-    // The int of which message list to send the messages to based on their name and their position in the contactsList
-    public int contactPush;
-
-    // The index of which messageList you're currently viewing, derived from the contact card you click.
-    public int selectedIndex;
     public Transform textingApp;
     public GameObject headshot;
     public RectTransform displayedList;
     public Transform scrollView;
     public Transform content;
-    public bool ChoiceNeeded;
 
     // Response choices box
     public Transform choices;
-    public int CurrChapIndex;
-    public int CurrSubChapIndex;
-    public int CurrText;
-
 
     // ================================================================
 
     // ======================= Gallary App ============================
 
-    public List<string> seenImages;
     public Transform ImageList;
 
     // ================================================================
 
-    // ====================== Modal Window ============================
+    // =================== Image Modal Window =========================
 
-    public Transform ModalWindow;
+    public Transform ImageModalWindow;
 
     // ================================================================
 
@@ -69,11 +54,7 @@ public class SharedObjects : MonoBehaviour {
 
     // ========================= Save App =============================
 
-    public List<string> savedMessages;
-    public List<int> whosTheMessageFor;
-    public List<int> typeOfText;
 
-    public int NumberOfSaves;
 
     // ================================================================
 

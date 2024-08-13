@@ -30,6 +30,7 @@ public class MessagingHandlers : MonoBehaviour {
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public PreFabs Prefabs;
+    public SavedItems saved;
 
 
     ChapImport.Chapter CurrChap;
@@ -40,21 +41,21 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             gen.Hide(Shared.textingApp);
             gen.Hide(Shared.displayedList);
-            Shared.selectedIndex = int.MinValue;
+            saved.selectedIndex = int.MinValue;
         });
     }
 
     public void GenerateContactsList() {
         string[] FileList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
         foreach (string File in FileList) {
-            Shared.ContactsList.Add(File[35..^4]);
+            saved.ContactsList.Add(File[35..^4]);
         }
     }
 
     // creates as many messageLists as needed for the contacts and hides them.
     public void GenerateMessageLists() {
-        for (int i = 0; i < Shared.ContactsList.Count; i++) {
-            Shared.UnlockedContacts.Add(false);
+        for (int i = 0; i < saved.ContactsList.Count; i++) {
+            saved.UnlockedContacts.Add(false);
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
             gen.Hide(Shared.content.GetChild(i));
         } 
@@ -88,7 +89,7 @@ public class MessagingHandlers : MonoBehaviour {
                 TextButton(i, NextChap, item);
             }
         }
-        if (Shared.contactPush != Shared.selectedIndex){
+        if (saved.contactPush != saved.selectedIndex){
             gen.Hide(Shared.choices); 
         } 
     }
@@ -133,11 +134,11 @@ public class MessagingHandlers : MonoBehaviour {
 
     public IEnumerator RecieveTexts(List<string> TextList, List<float> RespTime, Sprite pfp, int startingText = 0) {
         for (int i = startingText; i < TextList.Count; i++) {
-            Shared.CurrText = i;
+            saved.CurrText = i;
             string item = TextList[i];
             if (item.Contains("{")){
                 string imgName = item[1..^1];
-                Shared.seenImages.Add(imgName);
+                saved.seenImages.Add(imgName);
                 Sprite img = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img, imgName: item));
             } 
@@ -162,36 +163,36 @@ public class MessagingHandlers : MonoBehaviour {
         List<int> NextChap = Responses.NextChap;
 
         // Chooses messageList parent for messages to be pushed to
-        Shared.contactPush = Shared.ContactsList.IndexOf(Contact);
-        int NumOfPerson = Shared.ContactsList.IndexOf(Contact);
+        saved.contactPush = saved.ContactsList.IndexOf(Contact);
+        int NumOfPerson = saved.ContactsList.IndexOf(Contact);
         Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
 
         // Unlocks contact if they're not already unlocked: displays their contact card      
-        if (!Shared.UnlockedContacts[NumOfPerson]) {
-            Shared.UnlockedContacts[NumOfPerson] = true;
+        if (!saved.UnlockedContacts[NumOfPerson]) {
+            saved.UnlockedContacts[NumOfPerson] = true;
         }   
 
 
-        if (!Shared.ChoiceNeeded) {
+        if (!saved.ChoiceNeeded) {
             // Sends indicator of time passed
-            if (TimeIndicator.Length > 0 && Shared.CurrText == 0){
+            if (TimeIndicator.Length > 0 && saved.CurrText == 0){
                 yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
             }
             
-            if (TextList.Count == 1 || Shared.CurrText+1 != TextList.Count){
+            if (TextList.Count == 1 || saved.CurrText+1 != TextList.Count){
                 yield return StartCoroutine(RecieveTexts(TextList, RespTime, pfp, startingText));
             }
         }
 
         if (Resps.Count > 0){
-            Shared.ChoiceNeeded = true;
+            saved.ChoiceNeeded = true;
             PopulateResps(Resps, NextChap);
         } else {
             yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
-            Shared.CurrChapIndex += 1;
-            if (Shared.CurrChapIndex <= Shared.ChapterList.Count -1) {
-                Shared.CurrSubChapIndex = 0;
-                ChapterSelect(Shared.ChapterList[Shared.CurrChapIndex]);
+            saved.CurrChapIndex += 1;
+            if (saved.CurrChapIndex <= saved.ChapterList.Count -1) {
+                saved.CurrSubChapIndex = 0;
+                ChapterSelect(saved.ChapterList[saved.CurrChapIndex]);
             }
         }
     }
@@ -200,7 +201,7 @@ public class MessagingHandlers : MonoBehaviour {
     // textMessage: the prefab of the message (sent recieved)
     // messageContent: The text content of the message.
     public void TextPush(TypeOfText type, GameObject textMessage, string messageContent) {
-        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
+        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(saved.contactPush));
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
@@ -211,7 +212,7 @@ public class MessagingHandlers : MonoBehaviour {
     // imageMessage: the prefab of which type of image text we're sending/recieving.
     // image: the actual image to be sent.
     public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage, Sprite image) {
-        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(Shared.contactPush));
+        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(saved.contactPush));
         GameObject imageContent = messageClone.transform.GetChild(1).GetChild(1).GetChild(0).gameObject;
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(1).GetChild(1).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
@@ -220,7 +221,7 @@ public class MessagingHandlers : MonoBehaviour {
         typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
         if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
-            gen.ModalWindowOpen(button, image);
+            gen.ModalWindowOpen(button, image, imgName);
         }
     }
 
@@ -230,8 +231,8 @@ public class MessagingHandlers : MonoBehaviour {
     // messageContent: default to "" in case you're sending an image.
     #nullable enable
     public void MessageListLimit(TypeOfText type, string imgName = "", Sprite? image = null ,string messageContent = "") {
-        if (Shared.content.GetChild(Shared.contactPush).childCount >= 25){
-            Destroy(Shared.content.GetChild(Shared.contactPush).GetChild(0).gameObject);
+        if (Shared.content.GetChild(saved.contactPush).childCount >= 25){
+            Destroy(Shared.content.GetChild(saved.contactPush).GetChild(0).gameObject);
         } 
         switch(type){
             case TypeOfText.sentText:
@@ -262,10 +263,10 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void pushNotification(Sprite? pfp, string textContent) {
-        bool viewingScreen = Shared.contactPush == Shared.selectedIndex;
+        bool viewingScreen = saved.contactPush == saved.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
-            gen.Show(Shared.cardsList.GetChild(Shared.contactPush).GetChild(2).transform);
+            gen.Show(Shared.cardsList.GetChild(saved.contactPush).GetChild(2).transform);
             Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
             Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
             Shared.notif.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
@@ -293,9 +294,9 @@ public class MessagingHandlers : MonoBehaviour {
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            Shared.CurrSubChapIndex = NextChap[indx];
-            Shared.CurrText = 0;
-            Shared.ChoiceNeeded = false;
+            saved.CurrSubChapIndex = NextChap[indx];
+            saved.CurrText = 0;
+            saved.ChoiceNeeded = false;
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
@@ -315,9 +316,9 @@ public class MessagingHandlers : MonoBehaviour {
         imageObject.GetComponent<Image>().sprite = image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            Shared.CurrSubChapIndex = NextChap[indx];
-            Shared.CurrText = 0;
-            Shared.ChoiceNeeded = false;
+            saved.CurrSubChapIndex = NextChap[indx];
+            saved.CurrText = 0;
+            saved.ChoiceNeeded = false;
             MessageListLimit(type, imgName, image);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);

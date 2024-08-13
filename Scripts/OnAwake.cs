@@ -21,6 +21,7 @@ public class OnAwake : MonoBehaviour
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public SavesFile SavesInfo;
+    public SavedItems saved;
 
     void Awake() {
 
@@ -29,19 +30,24 @@ public class OnAwake : MonoBehaviour
         MH.BackButton();
         
         // Generates contact cards for each contact based on list.
-        for (int i = 0; i < Shared.ContactsList.Count; i++) {
-            Sprite img = Resources.Load("Images/Headshots/" + i + Shared.ContactsList[i], typeof(Sprite)) as Sprite;            
-            CH.addContactCard(img, Shared.ContactsList[i], i);
+        for (int i = 0; i < saved.ContactsList.Count; i++) {
+            Sprite img = Resources.Load("Images/Headshots/" + i + saved.ContactsList[i], typeof(Sprite)) as Sprite;            
+            CH.addContactCard(img, saved.ContactsList[i], i);
         } 
 
-        string[] SaveFiles = Directory.GetFiles(Application.persistentDataPath,"*Save.json");
-        if (SaveFiles.Length > 0) {
+        if (Directory.Exists(Application.persistentDataPath + "/SaveInfo" + ".json")) {
             SM.LoadSavesFile(Application.persistentDataPath + "/SaveInfo" + ".json");
-            SM.LoadGame(SaveFiles[SavesInfo.MostRecentSaveIndex]);
+            SM.LoadGame(Application.persistentDataPath + "/" + SavesInfo.MostRecentSaveIndex + "Save" + ".json");
+            gen.SetWallPaper(saved.currWallPaper);
         } else {
+            string[] FileList = Directory.GetFiles("Assets/Resources/Chapters/","*.json");
+            foreach (string File in FileList) {
+                saved.ChapterList.Add(File[26..^5]);
+            }
+            saved.currWallPaper = "gf-car1";
             MH.NewGame();
-            Shared.NumberOfSaves = 5;
-            for(int i = 0; i < Shared.NumberOfSaves; i++) {
+            saved.NumberOfSaves = 5;
+            for(int i = 0; i < saved.NumberOfSaves; i++) {
                 SavesInfo.ChapterOfSaves.Add(0);
                 SavesInfo.NameOfSaves.Add("");
                 SavesInfo.DateTimeOfSave.Add("" + DateTime.Now);

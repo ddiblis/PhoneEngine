@@ -1322,6 +1322,7 @@ GameObject:
   - component: {fileID: 492607241}
   - component: {fileID: 492607242}
   - component: {fileID: 492607243}
+  - component: {fileID: 492607244}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1444,31 +1445,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wallpaper: {fileID: 55502422}
-  ContactsList: []
-  UnlockedContacts: 
   cardsList: {fileID: 913459760}
-  ChapterList: []
-  contactPush: 0
-  selectedIndex: 999
   textingApp: {fileID: 1448356994}
   headshot: {fileID: 330083719}
   displayedList: {fileID: 0}
   scrollView: {fileID: 1448356995}
   content: {fileID: 196137360}
-  ChoiceNeeded: 0
   choices: {fileID: 1207948560}
-  CurrChapIndex: 0
-  CurrSubChapIndex: 0
-  CurrText: 0
-  seenImages: []
   ImageList: {fileID: 2432908678824951417}
-  ModalWindow: {fileID: 1510124533}
+  ImageModalWindow: {fileID: 1510124533}
   notificationArea: {fileID: 1889824619}
   notif: {fileID: 0}
-  savedMessages: []
-  whosTheMessageFor: 
-  typeOfText: 
-  NumberOfSaves: 0
 --- !u!114 &492607241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1494,6 +1481,8 @@ MonoBehaviour:
   ChapComplete: {fileID: 7878636168325601005, guid: 6e950163c66f47031b08d90abe4d6cf2, type: 3}
   TimeIndicator: {fileID: 7878636168325601005, guid: 0786343ff0ef1edd58c55429c70f2d22, type: 3}
   SaveCard: {fileID: 2810936969771369463, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+  SaveModalWindow: {fileID: 3317451622235573725, guid: ece5ff8c1f3b07f3ea66e85e3185b459, type: 3}
+  LoadModalWindow: {fileID: 7614648443862738182, guid: 49ad44d220f10052bba45b99f880dde3, type: 3}
 --- !u!114 &492607242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1513,6 +1502,7 @@ MonoBehaviour:
   gen: {fileID: 492607238}
   Shared: {fileID: 492607239}
   SavesInfo: {fileID: 492607243}
+  saved: {fileID: 492607244}
 --- !u!114 &492607243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1530,6 +1520,32 @@ MonoBehaviour:
   ChapterOfSaves: 
   TendencyOfSaves: []
   DateTimeOfSave: []
+--- !u!114 &492607244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492607232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2904f63a6c3ca4b709caf21d9cc75b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ContactsList: []
+  UnlockedContacts: 
+  ChapterList: []
+  contactPush: 0
+  selectedIndex: 0
+  ChoiceNeeded: 0
+  CurrChapIndex: 0
+  CurrSubChapIndex: 0
+  CurrText: 0
+  seenImages: []
+  savedMessages: []
+  whosTheMessageFor: 
+  typeOfText: 
+  NumberOfSaves: 0
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,6 +2662,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 492607238}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: saved
+      value: 
+      objectReference: {fileID: 492607244}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: Shared
       value: 
       objectReference: {fileID: 492607239}
@@ -3317,6 +3337,8 @@ MonoBehaviour:
   Shared: {fileID: 492607239}
   SavesInfo: {fileID: 492607243}
   MH: {fileID: 1448356997}
+  Canvas: {fileID: 492607236}
+  saved: {fileID: 492607244}
 --- !u!95 &1546402604
 Animator:
   serializedVersion: 5
@@ -4036,6 +4058,7 @@ MonoBehaviour:
   contactsApp: {fileID: 229078420}
   gen: {fileID: 492607238}
   Shared: {fileID: 492607239}
+  saved: {fileID: 492607244}
   Prefabs: {fileID: 492607241}
 --- !u!95 &1888701055
 Animator:
@@ -4434,6 +4457,7 @@ MonoBehaviour:
   PhotoContainer: {fileID: 3295160616154849887, guid: 340d1008c597e779f826e2b07028b40e, type: 3}
   GallaryApp: {fileID: 1704581946726996914}
   gen: {fileID: 492607238}
+  saved: {fileID: 492607244}
 --- !u!95 &1704581946726996916
 Animator:
   serializedVersion: 5

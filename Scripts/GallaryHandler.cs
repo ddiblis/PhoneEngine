@@ -15,15 +15,16 @@ public class GallaryHandler : MonoBehaviour
     public GameObject PhotoContainer;
     public Transform GallaryApp;
     public GeneralHandlers gen;
+    public SavedItems saved;
 
     public void DisplayImages() {
-        for (int i = 0; i < Shared.seenImages.Count; i++) {
-            Sprite photo = Resources.Load("Images/Photos/" + Shared.seenImages[i], typeof(Sprite)) as Sprite;
+        for (int i = 0; i < saved.seenImages.Count; i++) {
+            Sprite photo = Resources.Load("Images/Photos/" + saved.seenImages[i], typeof(Sprite)) as Sprite;
             GameObject PhotoContainerClone = Instantiate(PhotoContainer, new Vector3(0, 0, 0), Quaternion.identity, Shared.ImageList);
             GameObject imageContent = PhotoContainerClone.transform.GetChild(0).gameObject;
             imageContent.GetComponent<Image>().sprite = photo;
             Button button = PhotoContainerClone.GetComponent<Button>();
-            gen.ModalWindowOpen(button, photo);
+            gen.ModalWindowOpen(button, photo, saved.seenImages[i]);
         }
     }
 

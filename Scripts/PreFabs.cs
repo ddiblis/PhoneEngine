@@ -17,5 +17,7 @@ public class PreFabs : MonoBehaviour {
     public GameObject ChapComplete;
     public GameObject TimeIndicator;
     public GameObject SaveCard;
+    public Transform SaveModalWindow;
+    public Transform LoadModalWindow;
 
 }

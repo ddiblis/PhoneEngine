@@ -14,6 +14,7 @@ public class ContactsHandler : MonoBehaviour {
     public Transform contactsApp;
     public GeneralHandlers gen;
     public SharedObjects Shared;
+    public SavedItems saved;
     public PreFabs Prefabs;
 
     public void setContactPage(Sprite pfp, int indx) {
@@ -31,14 +32,14 @@ public class ContactsHandler : MonoBehaviour {
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
         ChoiceClone.GetComponent<Button>().onClick.AddListener(() => {
 
-            Shared.selectedIndex = indx;  // sets index to be used for showing or hiding choices in messagingHandler while viewing contact
+            saved.selectedIndex = indx;  // sets index to be used for showing or hiding choices in messagingHandler while viewing contact
 
-            bool viewingScreen = Shared.contactPush == Shared.selectedIndex;
+            bool viewingScreen = saved.contactPush == saved.selectedIndex;
 
             setContactPage(pfp, indx);
 
             // This is important for showing or hiding contact choices if you're not viewing a contact
-            if (Shared.contactPush != indx) {
+            if (saved.contactPush != indx) {
                 gen.Hide(Shared.choices); 
             } else {
                 gen.Show(Shared.choices);
@@ -58,8 +59,8 @@ public class ContactsHandler : MonoBehaviour {
     }
 
     public void UnlockContactCard() {
-        for (int i = 0; i < Shared.ContactsList.Count; i++) {
-            if (Shared.UnlockedContacts[i]) {
+        for (int i = 0; i < saved.ContactsList.Count; i++) {
+            if (saved.UnlockedContacts[i]) {
                 gen.Show(Shared.cardsList.GetChild(i));
             }
         }
