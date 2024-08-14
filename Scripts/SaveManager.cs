@@ -120,8 +120,8 @@ public class SaveManager : MonoBehaviour
                 LoadSavesFile(SaveInfo);
                 RefreshApps();
                 LoadGame(saveFile);
-                gen.SetWallPaper(saved.currWallPaper);
                 for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
+                    gen.SetWallPaper(saved.currWallPaper);
                     if (saved.UnlockedContacts[i]){
                         gen.Show(Shared.cardsList.GetChild(i));
                     } else {

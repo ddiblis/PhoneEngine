@@ -9,7 +9,6 @@ using UnityEditor;
 using UnityEngine.TextCore.Text;
 using System.IO;
 
-
 // Simple enum used for determining the type of text being sent/recieved.
     public enum TypeOfText {
         sentText = 0,
@@ -46,9 +45,9 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void GenerateContactsList() {
-        string[] FileList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
+        string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Images/Headshots","*.png");
         foreach (string File in FileList) {
-            saved.ContactsList.Add(File[35..^4]);
+            saved.ContactsList.Add(File[(File.LastIndexOf("/") +2)..^4]);
         }
     }
 
@@ -138,7 +137,9 @@ public class MessagingHandlers : MonoBehaviour {
             string item = TextList[i];
             if (item.Contains("{")){
                 string imgName = item[1..^1];
-                saved.seenImages.Add(imgName);
+                if (!saved.seenImages.Contains(imgName)) {
+                    saved.seenImages.Add(imgName);
+                }
                 Sprite img = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img, imgName: item));
             } 
@@ -161,13 +162,14 @@ public class MessagingHandlers : MonoBehaviour {
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
+        int indexOfContact = saved.ContactsList.IndexOf(Contact);
 
         // Chooses messageList parent for messages to be pushed to
-        saved.contactPush = saved.ContactsList.IndexOf(Contact);
-        int NumOfPerson = saved.ContactsList.IndexOf(Contact);
+        saved.contactPush = indexOfContact;
+        int NumOfPerson = indexOfContact;
         Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
 
-        // Unlocks contact if they're not already unlocked: displays their contact card      
+        // Unlocks contact if they're not already unlocked: displays their contact card    
         if (!saved.UnlockedContacts[NumOfPerson]) {
             saved.UnlockedContacts[NumOfPerson] = true;
         }   

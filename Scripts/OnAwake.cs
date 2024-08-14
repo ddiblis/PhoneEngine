@@ -35,14 +35,14 @@ public class OnAwake : MonoBehaviour
             CH.addContactCard(img, saved.ContactsList[i], i);
         } 
 
-        if (Directory.Exists(Application.persistentDataPath + "/SaveInfo" + ".json")) {
+        if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
             SM.LoadSavesFile(Application.persistentDataPath + "/SaveInfo" + ".json");
             SM.LoadGame(Application.persistentDataPath + "/" + SavesInfo.MostRecentSaveIndex + "Save" + ".json");
             gen.SetWallPaper(saved.currWallPaper);
         } else {
-            string[] FileList = Directory.GetFiles("Assets/Resources/Chapters/","*.json");
+            string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.json");
             foreach (string File in FileList) {
-                saved.ChapterList.Add(File[26..^5]);
+                saved.ChapterList.Add(File[(File.LastIndexOf("/")+1)..^5]);
             }
             saved.currWallPaper = "gf-car";
             gen.SetWallPaper(saved.currWallPaper);
