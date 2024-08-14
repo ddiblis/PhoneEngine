@@ -22,6 +22,7 @@ public class SaveManager : MonoBehaviour
     public MessagingHandlers MH;
     public Transform Canvas;
     public SavedItems saved;
+    public Transform AutoSaveCard;
 
 
     void RefreshSaveList() {
@@ -71,14 +72,14 @@ public class SaveManager : MonoBehaviour
             Button SaveButton = SaveCardClone.transform.GetChild(1).GetComponent<Button>(); 
             Button LoadButton = SaveCardClone.transform.GetChild(2).GetComponent<Button>(); 
 
-            string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
-            string SaveInfo = Application.persistentDataPath + "/SaveInfo" + ".json";
+            string saveFile = "/" + i + "Save" + ".json";
+            string SaveInfo = "/SaveInfo.json";
             int indx = i;
             SaveButton.onClick.AddListener(() => {
                 openSaveModal(indx, SaveInfo, saveFile);
             });
             LoadButton.onClick.AddListener(() => {
-                if (File.Exists(saveFile)) { 
+                if (File.Exists(Application.persistentDataPath + saveFile)) { 
                     openLoadModal(saveFile, SaveInfo);
                 }
             });
@@ -100,6 +101,7 @@ public class SaveManager : MonoBehaviour
             SavesInfo.ChapterOfSaves[indx] = saved.CurrChapIndex + 1;
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
             // SavesInfo.NameOfSaves[indx] = input.text;
+            SavesInfo.AutoSaveMostRecent = false;
             createSavesFile(SaveInfo);
             SaveGame(saveFile);
             RefreshSaveList();
@@ -107,29 +109,57 @@ public class SaveManager : MonoBehaviour
         });
     }
 
-    void openLoadModal(string saveFile, string SaveInfo) {
-            Transform LoadModalWindowClone = Instantiate(Prefabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
-            LoadModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
-            Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
-            Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
-            cancelButton.onClick.AddListener(() => {
-                Destroy(LoadModalWindowClone.gameObject);
-            });
+    public void populateAutoSaveCard() {
+        Transform TextContainer = AutoSaveCard.GetChild(2);
+        TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = SavesInfo.AutoSaveChapter > saved.ChapterList.Count ? "End Of update" : "Chapter " + SavesInfo.AutoSaveChapter;
+        // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = Shared.TendencyOfSaves[i];
+        TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.AutoSaveDateTime;
+    }
 
-            confirmButton.onClick.AddListener(() => {
-                LoadSavesFile(SaveInfo);
-                RefreshApps();
-                LoadGame(saveFile);
-                for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
-                    gen.SetWallPaper(saved.currWallPaper);
-                    if (saved.UnlockedContacts[i]){
-                        gen.Show(Shared.cardsList.GetChild(i));
-                    } else {
-                        gen.Hide(Shared.cardsList.GetChild(i));
-                    }
+    public void OpenAutoSaveModal() {
+        openLoadModal("/AutoSave.json", "/SaveInfo.json");
+    }
+
+    public IEnumerator AutoSave() {
+        string saveFile = "/AutoSave.json";
+        string SaveInfo = "/SaveInfo.json";
+        yield return new WaitForSeconds(180f);
+
+        SavesInfo.AutoSaveChapter = saved.CurrChapIndex + 1;
+        SavesInfo.AutoSaveDateTime = "" + DateTime.Now;
+        SavesInfo.AutoSaveMostRecent = true;
+
+        populateAutoSaveCard();
+
+        createSavesFile(SaveInfo);
+        SaveGame(saveFile);
+        
+        StartCoroutine(AutoSave());
+    }
+
+    void openLoadModal(string saveFile, string SaveInfo) {
+        Transform LoadModalWindowClone = Instantiate(Prefabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+        LoadModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
+        Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
+        Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
+        cancelButton.onClick.AddListener(() => {
+            Destroy(LoadModalWindowClone.gameObject);
+        });
+
+        confirmButton.onClick.AddListener(() => {
+            LoadSavesFile(SaveInfo);
+            RefreshApps();
+            LoadGame(saveFile);
+            for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
+                gen.SetWallPaper(saved.currWallPaper);
+                if (saved.UnlockedContacts[i]){
+                    gen.Show(Shared.cardsList.GetChild(i));
+                } else {
+                    gen.Hide(Shared.cardsList.GetChild(i));
                 }
-                Destroy(LoadModalWindowClone.gameObject);
-            });
+            }
+            Destroy(LoadModalWindowClone.gameObject);
+        });
     }
 
 
@@ -156,14 +186,17 @@ public class SaveManager : MonoBehaviour
     }
 
     public void LoadSavesFile(string SaveInfoFile) {
+        string SaveFileName = Application.persistentDataPath + SaveInfoFile;
 
-        string fileContents = File.ReadAllText(SaveInfoFile);
+        string fileContents = File.ReadAllText(SaveFileName);
 
         JsonUtility.FromJsonOverwrite(fileContents, SavesInfo);
     }
 
     public void LoadGame(string saveFile) {
-        string fileContents = File.ReadAllText(saveFile);
+
+        string SaveFileName = Application.persistentDataPath + saveFile;
+        string fileContents = File.ReadAllText(SaveFileName);
 
         JsonUtility.FromJsonOverwrite(fileContents, saved);
 
@@ -181,6 +214,7 @@ public class SaveManager : MonoBehaviour
         if (saved.CurrChapIndex < saved.ChapterList.Count){
             MH.ChapterSelect(saved.ChapterList[saved.CurrChapIndex], saved.CurrSubChapIndex, saved.CurrText);
         }
+        populateAutoSaveCard();
     }
 
     void SaveAllMessages(Transform MessageList, int Person) {
@@ -213,9 +247,11 @@ public class SaveManager : MonoBehaviour
 
         GetMessagesSnapshot();
 
+        string SaveFileName = Application.persistentDataPath + saveFile;
+
         string jsonString = JsonUtility.ToJson(saved);
 
-        File.WriteAllText(saveFile, jsonString);
+        File.WriteAllText(SaveFileName, jsonString);
 
 
         saved.savedMessages = new List<string>();
@@ -223,10 +259,12 @@ public class SaveManager : MonoBehaviour
         saved.typeOfText = new List<int>();
     }
     void createSavesFile(string SaveInfoFile) {
+        
+        string SaveFileName = Application.persistentDataPath + SaveInfoFile;
 
         string jsonString = JsonUtility.ToJson(SavesInfo);
 
-        File.WriteAllText(SaveInfoFile, jsonString);
+        File.WriteAllText(SaveFileName, jsonString);
     }
 }
 

@@ -1522,6 +1522,10 @@ MonoBehaviour:
   ChapterOfSaves: 
   TendencyOfSaves: []
   DateTimeOfSave: []
+  AutoSaveMostRecent: 0
+  AutoSaveChapter: 0
+  AutoSaveTendency: 
+  AutoSaveDateTime: 
 --- !u!114 &492607244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3191,6 +3195,7 @@ MonoBehaviour:
   MH: {fileID: 1448356997}
   Canvas: {fileID: 492607236}
   saved: {fileID: 492607244}
+  AutoSaveCard: {fileID: 7794874373265462431}
 --- !u!95 &1546402604
 Animator:
   serializedVersion: 5
@@ -4591,6 +4596,94 @@ PrefabInstance:
       propertyPath: m_Name
       value: Save Card
       objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1546402603}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1546402603}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1546402603}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenAutoSaveModal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: LoadGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: LoadSavesFile
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SaveManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SaveManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: SaveManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: /AutoSave.json
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: /SaveInfo.json
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516219516599716318, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7883019895938675254, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4670,6 +4763,10 @@ PrefabInstance:
     - target: {fileID: 7883019895938675254, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8597998315770164543, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
+      propertyPath: m_text
+      value: AutoSave
       objectReference: {fileID: 0}
     - target: {fileID: 9092061160178874294, guid: a935f00c0af0eaa4381bb70fcf3de126, type: 3}
       propertyPath: m_SizeDelta.y

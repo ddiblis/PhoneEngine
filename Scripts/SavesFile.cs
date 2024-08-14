@@ -9,4 +9,8 @@ public class SavesFile : MonoBehaviour {
     public List<int> ChapterOfSaves;
     public List<string> TendencyOfSaves;
     public List<string> DateTimeOfSave;
+    public bool AutoSaveMostRecent;
+    public int AutoSaveChapter;
+    public string AutoSaveTendency;
+    public string AutoSaveDateTime;
 }

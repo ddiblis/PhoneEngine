@@ -36,8 +36,12 @@ public class OnAwake : MonoBehaviour
         } 
 
         if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
-            SM.LoadSavesFile(Application.persistentDataPath + "/SaveInfo" + ".json");
-            SM.LoadGame(Application.persistentDataPath + "/" + SavesInfo.MostRecentSaveIndex + "Save" + ".json");
+            SM.LoadSavesFile("/SaveInfo.json");
+            if (!SavesInfo.AutoSaveMostRecent) {
+                SM.LoadGame("/" + SavesInfo.MostRecentSaveIndex + "Save.json");
+            } else {
+                SM.LoadGame("/AutoSave.json");
+            }
             gen.SetWallPaper(saved.currWallPaper);
         } else {
             string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.json");
@@ -56,6 +60,7 @@ public class OnAwake : MonoBehaviour
         }
 
         SM.CreateSaveCards();
+        StartCoroutine(SM.AutoSave());
 
     }
 
