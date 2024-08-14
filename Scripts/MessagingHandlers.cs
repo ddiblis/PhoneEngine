@@ -204,7 +204,7 @@ public class MessagingHandlers : MonoBehaviour {
     // messageContent: The text content of the message.
     public void TextPush(TypeOfText type, GameObject textMessage, string messageContent) {
         GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(saved.contactPush));
-        GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
+        GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
         typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
@@ -215,8 +215,8 @@ public class MessagingHandlers : MonoBehaviour {
     // image: the actual image to be sent.
     public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage, Sprite image) {
         GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(saved.contactPush));
-        GameObject imageContent = messageClone.transform.GetChild(1).GetChild(1).GetChild(0).gameObject;
-        GameObject textContent = messageClone.transform.GetChild(1).GetChild(1).GetChild(1).gameObject;
+        GameObject imageContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
+        GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = image;
         textContent.GetComponent<TextMeshProUGUI>().text = imgName;
