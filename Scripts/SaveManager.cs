@@ -226,10 +226,10 @@ public class SaveManager : MonoBehaviour
                 saved.typeOfText.Add(type);
 
                 if(type == 0 || type == 1 || type == 6 || type == 8) {
-                    GameObject textContent = messageListItem.GetChild(1).GetChild(0).GetChild(1).gameObject;
+                    GameObject textContent = messageListItem.GetChild(1).GetChild(0).GetChild(0).gameObject;
                     saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
                 } else {
-                    GameObject textContent = messageListItem.transform.GetChild(1).GetChild(1).GetChild(1).gameObject;
+                    GameObject textContent = messageListItem.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
                     saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
                 }
 
