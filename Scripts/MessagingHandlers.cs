@@ -45,9 +45,9 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void GenerateContactsList() {
-        string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Images/Headshots","*.png");
+        string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Images/Headshots","*.NA");
         foreach (string File in FileList) {
-            saved.ContactsList.Add(File[(File.LastIndexOf("/") +2)..^4]);
+            saved.ContactsList.Add(File[(File.LastIndexOf("/") +2)..^3]);
         }
     }
 
@@ -317,7 +317,12 @@ public class MessagingHandlers : MonoBehaviour {
         GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-        imageObject.GetComponent<Image>().sprite = image;
+        if (type == TypeOfText.sentImage) {
+            Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
+            imageObject.GetComponent<Image>().sprite = frameEmoji;
+        } else {
+            imageObject.GetComponent<Image>().sprite = image;
+        }
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             saved.CurrSubChapIndex = NextChap[indx];

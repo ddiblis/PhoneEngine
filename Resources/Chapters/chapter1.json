@@ -5,7 +5,7 @@
             "SubChapNum": 0,
             "Contact": "gf",
             "TimeIndicator": "1 hours later",
-            "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[black-heart]"],
+            "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[gf-heart]"],
             "ResponseTime": [0.5, 0.5, 4.0, 1.0, 2.0, 1.7, 1.2],
             "Responses": {
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
@@ -16,7 +16,7 @@
             "SubChapNum": 1,
             "Contact": "gf",
             "TimeIndicator": "2 hours later",
-            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[red-heart]"],
+            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[gf-heart]"],
             "ResponseTime": [0.5, 0.5, 0.5, 0.5, 2.0, 0.5],
             "Responses": {
                 "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
@@ -41,7 +41,7 @@
             "TextList": ["test sending me an emoji please"],
             "ResponseTime": [1.7],
             "Responses": {
-                "Resps": ["[black-heart]", "[red-heart]"],
+                "Resps": ["[bf-heart]", "[hot]"],
                 "NextChap": [4, 4]
             }
         },

@@ -44,9 +44,9 @@ public class OnAwake : MonoBehaviour
             }
             gen.SetWallPaper(saved.currWallPaper);
         } else {
-            string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.json");
+            string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.NA");
             foreach (string File in FileList) {
-                saved.ChapterList.Add(File[(File.LastIndexOf("/")+1)..^5]);
+                saved.ChapterList.Add(File[(File.LastIndexOf("/")+1)..^3]);
             }
             saved.currWallPaper = "gf-car";
             gen.SetWallPaper(saved.currWallPaper);
