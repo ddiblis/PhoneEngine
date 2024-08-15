@@ -37,7 +37,7 @@ public class ContactsHandler : MonoBehaviour {
 
             setContactPage(pfp, indx);
 
-            // This is important for showing or hiding contact choices if you're not viewing a contact
+            // This is important for showing or hiding contact choices if you're not viewing who the choices are for
             if (saved.contactPush != indx) {
                 gen.Hide(Shared.choices); 
             } else {
@@ -54,13 +54,24 @@ public class ContactsHandler : MonoBehaviour {
 
             Shared.textingApp.GetComponent<Animator>().Play("Open-Texts-App");
         });
-        gen.Hide(Shared.cardsList.GetChild(indx));
+            gen.Hide(Shared.cardsList.GetChild(indx));
     }
 
+    public void GenerateContactCards() {
+        // Generates contact cards for each contact based on list.
+        for (int i = 0; i < saved.ContactsList.Count; i++) {
+            Sprite img = Resources.Load("Images/Headshots/" + i + saved.ContactsList[i], typeof(Sprite)) as Sprite;            
+            addContactCard(img, saved.ContactsList[i], i);
+        } 
+    }
+
+    // This only runs to check if it's been unlocked or not on button clicks to display the ones that are unlocked
     public void UnlockContactCard() {
         for (int i = 0; i < saved.ContactsList.Count; i++) {
             if (saved.UnlockedContacts[i]) {
                 gen.Show(Shared.cardsList.GetChild(i));
+            } else {
+                gen.Hide(Shared.cardsList.GetChild(i));
             }
         }
     }

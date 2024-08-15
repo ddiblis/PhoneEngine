@@ -23,6 +23,9 @@ public class SaveManager : MonoBehaviour
     public Transform Canvas;
     public SavedItems saved;
     public Transform AutoSaveCard;
+    public ChapImport chap;
+    public ContactsHandler CH;
+
 
 
     void RefreshSaveList() {
@@ -130,10 +133,17 @@ public class SaveManager : MonoBehaviour
         SavesInfo.AutoSaveMostRecent = true;
 
         populateAutoSaveCard();
-
         createSavesFile(SaveInfo);
+        
+        // Since auto save can happen while viewing messages, if you reload the code will think you're still viewing those messages
+        // This resets it to not viewing for a fram to save, then put the corrent index back into place
+        int currentlyViewing = saved.selectedIndex;
+        saved.selectedIndex = int.MinValue;
+        
         SaveGame(saveFile);
         
+        saved.selectedIndex = currentlyViewing;
+
         StartCoroutine(AutoSave());
     }
 
@@ -150,14 +160,14 @@ public class SaveManager : MonoBehaviour
             LoadSavesFile(SaveInfo);
             RefreshApps();
             LoadGame(saveFile);
-            for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
-                gen.SetWallPaper(saved.currWallPaper);
-                if (saved.UnlockedContacts[i]){
-                    gen.Show(Shared.cardsList.GetChild(i));
-                } else {
-                    gen.Hide(Shared.cardsList.GetChild(i));
-                }
-            }
+            gen.SetWallPaper(saved.currWallPaper);
+            // for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
+            //     if (saved.UnlockedContacts[i]){
+            //         gen.Show(Shared.cardsList.GetChild(i));
+            //     } else {
+            //         gen.Hide(Shared.cardsList.GetChild(i));
+            //     }
+            // }    
             Destroy(LoadModalWindowClone.gameObject);
         });
     }
@@ -199,6 +209,9 @@ public class SaveManager : MonoBehaviour
         string fileContents = File.ReadAllText(SaveFileName);
 
         JsonUtility.FromJsonOverwrite(fileContents, saved);
+
+        
+        chap.GenerateChapterList();
 
         // Populates the messageLists with the content from the loaded Json
         for (int i = 0; i < saved.savedMessages.Count; i++) {
@@ -265,6 +278,15 @@ public class SaveManager : MonoBehaviour
         string jsonString = JsonUtility.ToJson(SavesInfo);
 
         File.WriteAllText(SaveFileName, jsonString);
+    }
+
+    public void GenerateSaves(int NumOfSaves) {
+        saved.NumberOfSaves = NumOfSaves;
+        for(int i = 0; i < saved.NumberOfSaves; i++) {
+            SavesInfo.ChapterOfSaves.Add(0);
+            SavesInfo.NameOfSaves.Add("");
+            SavesInfo.DateTimeOfSave.Add("" + DateTime.Now);
+        }
     }
 }
 

@@ -1865,6 +1865,7 @@ MonoBehaviour:
   Shared: {fileID: 492607239}
   SavesInfo: {fileID: 492607243}
   saved: {fileID: 492607244}
+  chap: {fileID: 1448356999}
 --- !u!114 &492607243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1898,11 +1899,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2904f63a6c3ca4b709caf21d9cc75b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contactPush: 0
+  selectedIndex: 9999
   ContactsList: []
   UnlockedContacts: 
   ChapterList: []
-  contactPush: 0
-  selectedIndex: 9999
   ChoiceNeeded: 0
   CurrChapIndex: 0
   CurrSubChapIndex: 0
@@ -1913,6 +1914,8 @@ MonoBehaviour:
   typeOfText: 
   NumberOfSaves: 0
   currWallPaper: 
+  UnlockedPosts: 0
+  LikedPosts: 0
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,6 +3229,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 492607236}
     m_Modifications:
     - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: saved
+      value: 
+      objectReference: {fileID: 492607244}
+    - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: Shared
       value: 
       objectReference: {fileID: 492607239}
@@ -3623,6 +3630,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1448356999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+  m_PrefabInstance: {fileID: 1448356993}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122562650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b095fc0304ef3b1619d3e42c3dd24753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1546402600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3834,6 +3852,8 @@ MonoBehaviour:
   Canvas: {fileID: 492607236}
   saved: {fileID: 492607244}
   AutoSaveCard: {fileID: 7794874373265462431}
+  chap: {fileID: 1448356999}
+  CH: {fileID: 1888701054}
 --- !u!95 &1546402604
 Animator:
   serializedVersion: 5

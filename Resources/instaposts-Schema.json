@@ -1,0 +1,20 @@
+{
+    "Posts": [
+        {
+            "Display" : false,
+            "CharacterName" : "name-of-person",
+            "UserName" : "username-of-poster",
+            "Image" : "name-of-image",
+            "Description" : "description under post",
+            "Liked" : false
+        },
+        {
+            "Display" : false,
+            "CharacterName" : "name-of-person",
+            "UserName" : "username-of-poster",
+            "Image" : "name-of-image",
+            "Description" : "description under post",
+            "Liked" : false
+        }
+    ]
+}

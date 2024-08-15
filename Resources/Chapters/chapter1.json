@@ -70,7 +70,7 @@
         {
             "SubChapNum": 6,
             "Contact": "gf",
-            "TimeIndicator": "6 hours later",
+            "TimeIndicator": "",
             "TextList": ["End of chapter 1"],
             "ResponseTime": [0.5],
             "Responses": {

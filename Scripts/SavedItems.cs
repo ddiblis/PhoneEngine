@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class SavedItems : MonoBehaviour {
 
+    // The int of which message list to send the messages to based on their name and their position in the contactsList
+    public int contactPush;
+    // The index of which messageList you're currently viewing, derived from the contact card you click.
+    public int selectedIndex;
     public List<string> ContactsList;
     public List<bool> UnlockedContacts;
     public List<string> ChapterList;
-
-    // The int of which message list to send the messages to based on their name and their position in the contactsList
-    public int contactPush;
-
-    // The index of which messageList you're currently viewing, derived from the contact card you click.
-    public int selectedIndex;
-
     public bool ChoiceNeeded;
     public int CurrChapIndex;
     public int CurrSubChapIndex;
@@ -24,5 +21,7 @@ public class SavedItems : MonoBehaviour {
     public List<int> typeOfText;
     public int NumberOfSaves;
     public string currWallPaper;
+    public int UnlockedPosts;
+    public bool LikedPosts;
 
 }

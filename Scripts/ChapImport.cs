@@ -8,6 +8,7 @@ using System.IO;
 public class ChapImport : MonoBehaviour {
 
     public SharedObjects Shared;
+    public SavedItems saved;
 
 
     [System.Serializable]
@@ -28,7 +29,6 @@ public class ChapImport : MonoBehaviour {
     [System.Serializable]
     public class SubChap
     {
-        public int SubChapNum;
         public string Contact;
         public string TimeIndicator;
         public List<string> TextList;
@@ -40,11 +40,18 @@ public class ChapImport : MonoBehaviour {
     public Chapter myChapter = new Chapter();
     [SerializeField] 
     public Chapter GetChapter(string Chapter) {
-        // Debug.Log("Inside get Chapter");
-        // Debug.Log(Resources.Load<TextAsset>("Chapters/" + Chapter));
         TextAsset ChapterFile = Resources.Load<TextAsset>("Chapters/" + Chapter);
         myChapter = JsonUtility.FromJson<Chapter>(ChapterFile.text);
         return myChapter;
+    }
+
+    public void GenerateChapterList() {
+        string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.NA");
+        if (FileList.Length != saved.ChapterList.Count) {
+            for (int i = saved.ChapterList.Count; i < FileList.Length; i++) {
+                saved.ChapterList.Add(FileList[i][(FileList[i].LastIndexOf("/")+1)..^3]);
+            }
+        }
     }
     
 }

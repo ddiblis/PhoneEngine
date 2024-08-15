@@ -22,18 +22,15 @@ public class OnAwake : MonoBehaviour
     public SharedObjects Shared;
     public SavesFile SavesInfo;
     public SavedItems saved;
+    public ChapImport chap;
+
 
     void Awake() {
 
+        MH.BackButton();
         MH.GenerateContactsList();
         MH.GenerateMessageLists();
-        MH.BackButton();
-        
-        // Generates contact cards for each contact based on list.
-        for (int i = 0; i < saved.ContactsList.Count; i++) {
-            Sprite img = Resources.Load("Images/Headshots/" + i + saved.ContactsList[i], typeof(Sprite)) as Sprite;            
-            CH.addContactCard(img, saved.ContactsList[i], i);
-        } 
+        CH.GenerateContactCards();
 
         if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
             SM.LoadSavesFile("/SaveInfo.json");
@@ -44,19 +41,11 @@ public class OnAwake : MonoBehaviour
             }
             gen.SetWallPaper(saved.currWallPaper);
         } else {
-            string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.NA");
-            foreach (string File in FileList) {
-                saved.ChapterList.Add(File[(File.LastIndexOf("/")+1)..^3]);
-            }
+            chap.GenerateChapterList();
             saved.currWallPaper = "gf-car";
             gen.SetWallPaper(saved.currWallPaper);
+            SM.GenerateSaves(5);
             MH.NewGame();
-            saved.NumberOfSaves = 5;
-            for(int i = 0; i < saved.NumberOfSaves; i++) {
-                SavesInfo.ChapterOfSaves.Add(0);
-                SavesInfo.NameOfSaves.Add("");
-                SavesInfo.DateTimeOfSave.Add("" + DateTime.Now);
-            }
         }
 
         SM.CreateSaveCards();

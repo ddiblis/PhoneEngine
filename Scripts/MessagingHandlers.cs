@@ -46,15 +46,18 @@ public class MessagingHandlers : MonoBehaviour {
 
     public void GenerateContactsList() {
         string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Images/Headshots","*.NA");
-        foreach (string File in FileList) {
-            saved.ContactsList.Add(File[(File.LastIndexOf("/") +2)..^3]);
+        if (FileList.Length != saved.ContactsList.Count) {
+            for (int i = saved.ContactsList.Count; i < FileList.Length; i++) {
+                saved.ContactsList.Add(FileList[i][(FileList[i].LastIndexOf("/") +2)..^3]);
+                saved.UnlockedContacts.Add(false);
+            }
         }
     }
 
     // creates as many messageLists as needed for the contacts and hides them.
     public void GenerateMessageLists() {
         for (int i = 0; i < saved.ContactsList.Count; i++) {
-            saved.UnlockedContacts.Add(false);
+            // saved.UnlockedContacts.Add(false);
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
             gen.Hide(Shared.content.GetChild(i));
         } 
@@ -277,16 +280,6 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    // Called on to start the next coroutine for the subchapter.
-    public void responseHandle(int subChapNum) {
-        if (!CurrChap.ChapComplete) {
-            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapNum]));
-        }
-        if (subChapNum == CurrChap.SubChaps.Count - 1) {
-            CurrChap.ChapComplete = true;
-        }
-    }
-
     // handles the building and pushing of the text choice buttons into the choices list
     // indx: automated through forloop, handles destruction of buttons and next chap queuing
     // NextChap: list of ints, each for the next subchap to play based on click.
@@ -304,7 +297,7 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            responseHandle(NextChap[indx]);
+            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap[indx]]));
         });
     }
 
@@ -317,12 +310,8 @@ public class MessagingHandlers : MonoBehaviour {
         GameObject ChoiceClone = Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-        if (type == TypeOfText.sentImage) {
-            Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
-            imageObject.GetComponent<Image>().sprite = frameEmoji;
-        } else {
-            imageObject.GetComponent<Image>().sprite = image;
-        }
+        Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
+        imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             saved.CurrSubChapIndex = NextChap[indx];
@@ -331,7 +320,7 @@ public class MessagingHandlers : MonoBehaviour {
             MessageListLimit(type, imgName, image);
             Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
             Destroy(ChoiceClone);
-            responseHandle(NextChap[indx]);
+            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap[indx]]));
         });
     }
 }

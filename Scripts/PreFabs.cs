@@ -21,5 +21,4 @@ public class PreFabs : MonoBehaviour {
     public Transform LoadModalWindow;
     public Transform ImageModalWindow;
 
-
 }
