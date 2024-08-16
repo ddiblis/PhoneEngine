@@ -34,17 +34,8 @@ public class OnAwake : MonoBehaviour
 
         if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
             SM.LoadSavesFile("/SaveInfo.json");
-            if (!SavesInfo.AutoSaveMostRecent) {
-                SM.LoadGame("/" + SavesInfo.MostRecentSaveIndex + "Save.json");
-            } else {
-                SM.LoadGame("/AutoSave.json");
-            }
-            gen.SetWallPaper(saved.currWallPaper);
+            SM.LoadMostRecent();
         } else {
-            chap.GenerateChapterList();
-            saved.currWallPaper = "gf-car";
-            gen.SetWallPaper(saved.currWallPaper);
-            SM.GenerateSaves(5);
             MH.NewGame();
         }
 

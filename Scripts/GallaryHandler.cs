@@ -18,7 +18,7 @@ public class GallaryHandler : MonoBehaviour
     public SavedItems saved;
 
     public void DisplayImages() {
-        for (int i = 0; i < saved.seenImages.Count; i++) {
+        for (int i = saved.seenImages.Count-1; i > -1; i--) {
             Sprite photo = Resources.Load("Images/Photos/" + saved.seenImages[i], typeof(Sprite)) as Sprite;
             GameObject PhotoContainerClone = Instantiate(PhotoContainer, new Vector3(0, 0, 0), Quaternion.identity, Shared.ImageList);
             GameObject imageContent = PhotoContainerClone.transform.GetChild(0).gameObject;

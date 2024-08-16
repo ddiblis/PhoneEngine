@@ -7,6 +7,8 @@
             "TimeIndicator": "1 hours later",
             "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[gf-heart]"],
             "ResponseTime": [0.5, 0.5, 4.0, 1.0, 2.0, 1.7, 1.2],
+            "UnlockInstaPostsAccount": "gf",
+            "UnlockPosts": [0, 1],
             "Responses": {
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
                 "NextChap": [1, 2]
@@ -18,6 +20,8 @@
             "TimeIndicator": "2 hours later",
             "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[gf-heart]"],
             "ResponseTime": [0.5, 0.5, 0.5, 0.5, 2.0, 0.5],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
             "Responses": {
                 "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
                 "NextChap": [2, 2]
@@ -29,6 +33,8 @@
             "TimeIndicator": "",
             "TextList": [],
             "ResponseTime": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
             "Responses": {
                 "Resps": ["this is a choice only response1", "this is a choice only response2"],
                 "NextChap": [3, 3]
@@ -40,6 +46,8 @@
             "TimeIndicator": "3 hours later",
             "TextList": ["test sending me an emoji please"],
             "ResponseTime": [1.7],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
             "Responses": {
                 "Resps": ["[bf-heart]", "[hot]"],
                 "NextChap": [4, 4]
@@ -51,6 +59,8 @@
             "TimeIndicator": "4 hours later",
             "TextList": ["test sending me an image please"],
             "ResponseTime": [1.7],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
             "Responses": {
                 "Resps": ["{gf-car2}", "this is a choice only response2"],
                 "NextChap": [5, 5]
@@ -62,6 +72,8 @@
             "TimeIndicator": "5 hours later",
             "TextList": ["hey boy", "this is blonde", "your gfs best friend", "test sending me a text instead of your gf"],
             "ResponseTime": [1.7, 0.5, 0.5, 0.9],
+            "UnlockInstaPostsAccount": "blonde",
+            "UnlockPosts": [2],
             "Responses": {
                 "Resps": ["this is a choice to blonde1", "this is a choice to blonde1"],
                 "NextChap": [6, 6]
@@ -73,6 +85,8 @@
             "TimeIndicator": "",
             "TextList": ["End of chapter 1"],
             "ResponseTime": [0.5],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
             "Responses": {
                 "Resps": [],
                 "NextChap": []

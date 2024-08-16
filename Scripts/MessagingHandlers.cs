@@ -30,6 +30,8 @@ public class MessagingHandlers : MonoBehaviour {
     public SharedObjects Shared;
     public PreFabs Prefabs;
     public SavedItems saved;
+    public SaveManager SM;
+    public InstaPostsManager IPM;
 
 
     ChapImport.Chapter CurrChap;
@@ -64,6 +66,11 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void NewGame() {
+        chap.GenerateChapterList();
+        saved.currWallPaper = "gf-car";
+        gen.SetWallPaper(saved.currWallPaper);
+        SM.GenerateSaves(5);
+        IPM.GenPostsList();
         CurrChap = chap.GetChapter("chapter1");
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
     }
@@ -166,6 +173,8 @@ public class MessagingHandlers : MonoBehaviour {
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
         int indexOfContact = saved.ContactsList.IndexOf(Contact);
+        string InstaAccount = subChap.UnlockInstaPostsAccount;
+        List<int> PostsToUnlock = subChap.UnlockPosts;
 
         // Chooses messageList parent for messages to be pushed to
         saved.contactPush = indexOfContact;
@@ -176,6 +185,16 @@ public class MessagingHandlers : MonoBehaviour {
         if (!saved.UnlockedContacts[NumOfPerson]) {
             saved.UnlockedContacts[NumOfPerson] = true;
         }   
+
+        if (InstaAccount.Length > 0) {
+            saved.UnlockedAccounts[saved.InstaPostsAccounts.IndexOf(InstaAccount)] = true;
+        }
+
+        if (PostsToUnlock.Count > 0) {
+            for (int i = 0; i < PostsToUnlock.Count; i++) {
+                saved.UnlockedPosts[PostsToUnlock[i]] = true;
+            }
+        }
 
 
         if (!saved.ChoiceNeeded) {

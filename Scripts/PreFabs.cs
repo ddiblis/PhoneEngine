@@ -20,5 +20,6 @@ public class PreFabs : MonoBehaviour {
     public Transform SaveModalWindow;
     public Transform LoadModalWindow;
     public Transform ImageModalWindow;
+    public Transform InstaPostCard;
 
 }

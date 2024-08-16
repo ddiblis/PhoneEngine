@@ -25,6 +25,7 @@ public class SaveManager : MonoBehaviour
     public Transform AutoSaveCard;
     public ChapImport chap;
     public ContactsHandler CH;
+    public InstaPostsManager IPM;
 
 
 
@@ -96,7 +97,7 @@ public class SaveManager : MonoBehaviour
         // InputField input = popup.GetComponent<InputField>();
         Button confirmButton = popup.GetChild(2).GetComponent<Button>();
         Button cancelButton = popup.GetChild(1).GetComponent<Button>();
-        confirmButton.onClick.AddListener(() => {
+        cancelButton.onClick.AddListener(() => {
             Destroy(SaveModalWindowClone.gameObject);
         });
         confirmButton.onClick.AddListener(() => {
@@ -161,13 +162,6 @@ public class SaveManager : MonoBehaviour
             RefreshApps();
             LoadGame(saveFile);
             gen.SetWallPaper(saved.currWallPaper);
-            // for (int i = 0; i < saved.UnlockedContacts.Count; i++) {
-            //     if (saved.UnlockedContacts[i]){
-            //         gen.Show(Shared.cardsList.GetChild(i));
-            //     } else {
-            //         gen.Hide(Shared.cardsList.GetChild(i));
-            //     }
-            // }    
             Destroy(LoadModalWindowClone.gameObject);
         });
     }
@@ -212,6 +206,8 @@ public class SaveManager : MonoBehaviour
 
         
         chap.GenerateChapterList();
+        IPM.GenPostsList();
+
 
         // Populates the messageLists with the content from the loaded Json
         for (int i = 0; i < saved.savedMessages.Count; i++) {
@@ -287,6 +283,15 @@ public class SaveManager : MonoBehaviour
             SavesInfo.NameOfSaves.Add("");
             SavesInfo.DateTimeOfSave.Add("" + DateTime.Now);
         }
+    }
+
+    public void LoadMostRecent() {
+         if (!SavesInfo.AutoSaveMostRecent) {
+            LoadGame("/" + SavesInfo.MostRecentSaveIndex + "Save.json");
+        } else {
+            LoadGame("/AutoSave.json");
+        }
+        gen.SetWallPaper(saved.currWallPaper);
     }
 }
 

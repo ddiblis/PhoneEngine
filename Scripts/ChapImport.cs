@@ -33,6 +33,8 @@ public class ChapImport : MonoBehaviour {
         public string TimeIndicator;
         public List<string> TextList;
         public List<float> ResponseTime;
+        public string UnlockInstaPostsAccount;
+        public List<int> UnlockPosts;
         public Responses Responses;
     }
 

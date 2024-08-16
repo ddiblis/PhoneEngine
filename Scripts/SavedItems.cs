@@ -21,7 +21,9 @@ public class SavedItems : MonoBehaviour {
     public List<int> typeOfText;
     public int NumberOfSaves;
     public string currWallPaper;
-    public int UnlockedPosts;
-    public bool LikedPosts;
+    public List<string> InstaPostsAccounts;
+    public List<bool> UnlockedAccounts;
+    public List<bool> UnlockedPosts;
+    public List<bool> LikedPosts;
 
 }
