@@ -59,7 +59,6 @@ public class MessagingHandlers : MonoBehaviour {
     // creates as many messageLists as needed for the contacts and hides them.
     public void GenerateMessageLists() {
         for (int i = 0; i < saved.ContactsList.Count; i++) {
-            // saved.UnlockedContacts.Add(false);
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
             gen.Hide(Shared.content.GetChild(i));
         } 
@@ -186,13 +185,16 @@ public class MessagingHandlers : MonoBehaviour {
             saved.UnlockedContacts[NumOfPerson] = true;
         }   
 
+        // Unlocks InstaPosts Profile of account
         if (InstaAccount.Length > 0) {
             saved.UnlockedAccounts[saved.InstaPostsAccounts.IndexOf(InstaAccount)] = true;
         }
 
+        // Unlocks specified posts
         if (PostsToUnlock.Count > 0) {
             for (int i = 0; i < PostsToUnlock.Count; i++) {
                 saved.UnlockedPosts[PostsToUnlock[i]] = true;
+                saved.NumberOfPosts[saved.InstaPostsAccounts.IndexOf(InstaAccount)] += 1;
             }
         }
 

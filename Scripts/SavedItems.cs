@@ -25,5 +25,6 @@ public class SavedItems : MonoBehaviour {
     public List<bool> UnlockedAccounts;
     public List<bool> UnlockedPosts;
     public List<bool> LikedPosts;
+    public List<int> NumberOfPosts;
 
 }

@@ -21,5 +21,7 @@ public class PreFabs : MonoBehaviour {
     public Transform LoadModalWindow;
     public Transform ImageModalWindow;
     public Transform InstaPostCard;
+    public Transform InstaPostProfileHeader;
+    public Transform ProfileButton;
 
 }
