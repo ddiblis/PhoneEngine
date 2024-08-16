@@ -32,12 +32,12 @@ public class OnAwake : MonoBehaviour
         MH.GenerateMessageLists();
         CH.GenerateContactCards();
 
-        if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
-            SM.LoadSavesFile("/SaveInfo.json");
-            SM.LoadMostRecent();
-        } else {
+        // if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
+        //     SM.LoadSavesFile("/SaveInfo.json");
+        //     SM.LoadMostRecent();
+        // } else {
             MH.NewGame();
-        }
+        // }
 
         SM.CreateSaveCards();
         StartCoroutine(SM.AutoSave());

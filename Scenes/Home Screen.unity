@@ -1716,6 +1716,7 @@ GameObject:
   - component: {fileID: 492607242}
   - component: {fileID: 492607243}
   - component: {fileID: 492607244}
+  - component: {fileID: 492607245}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1959,6 +1960,34 @@ MonoBehaviour:
   UnlockedPosts: 
   LikedPosts: 
   NumberOfPosts: 
+--- !u!114 &492607245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492607232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98248e045be9ac3f9b687b621208ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveFile:
+    contactPush: 0
+    selectedIndex: 0
+    ContactsList: []
+    ChapterList: []
+    ChoiceNeeded: 0
+    CurrStoryPoint:
+      ChapIndex: 0
+      SubChapIndex: 0
+      CurrTextIndex: 0
+    SavedMessages: []
+    NumberOfSaved: 0
+    CurrWallPaper: 
+    InstaAccounts: []
+    Posts: []
+    SeenImages: []
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -4265,6 +4294,7 @@ MonoBehaviour:
   chap: {fileID: 1448356999}
   CH: {fileID: 1888701054}
   IPM: {fileID: 1924683176}
+  NewSaveFile: {fileID: 492607245}
 --- !u!95 &1546402604
 Animator:
   serializedVersion: 5

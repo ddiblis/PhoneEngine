@@ -27,6 +27,9 @@ public class SaveManager : MonoBehaviour
     public ContactsHandler CH;
     public InstaPostsManager IPM;
 
+    public SaveFile NewSaveFile;
+    
+
 
 
     void RefreshSaveList() {
@@ -228,22 +231,41 @@ public class SaveManager : MonoBehaviour
 
     void SaveAllMessages(Transform MessageList, int Person) {
         for(int j = 0; j < MessageList.childCount; j++) {
-                saved.whosTheMessageFor.Add(Person);
+            SaveFile.SavedMessage savedMessage = new SaveFile.SavedMessage { WhosIsItFor = Person };
 
-                Transform messageListItem = MessageList.GetChild(j);
-                int type = int.Parse(messageListItem.GetChild(0).GetComponent<TextMeshProUGUI>().text);
-                saved.typeOfText.Add(type);
+            Transform messageListItem = MessageList.GetChild(j);
+            int type = int.Parse(messageListItem.GetChild(0).GetComponent<TextMeshProUGUI>().text);
+            savedMessage.TypeOfText = type;
 
-                if(type == 0 || type == 1 || type == 6 || type == 8) {
-                    GameObject textContent = messageListItem.GetChild(1).GetChild(0).GetChild(0).gameObject;
-                    saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
-                } else {
-                    GameObject textContent = messageListItem.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
-                    saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
-                }
-
+            if(type == 0 || type == 1 || type == 6 || type == 8) {
+                GameObject textContent = messageListItem.GetChild(1).GetChild(0).GetChild(0).gameObject;
+                savedMessage.TextContent = textContent.GetComponent<TextMeshProUGUI>().text;
+            } else {
+                GameObject textContent = messageListItem.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
+                savedMessage.TextContent = textContent.GetComponent<TextMeshProUGUI>().text;
             }
+        NewSaveFile.saveFile.SavedMessages.Add(savedMessage);
+        }
     }
+
+    // void SaveAllMessages(Transform MessageList, int Person) {
+    //     for(int j = 0; j < MessageList.childCount; j++) {
+    //             saved.whosTheMessageFor.Add(Person);
+
+    //             Transform messageListItem = MessageList.GetChild(j);
+    //             int type = int.Parse(messageListItem.GetChild(0).GetComponent<TextMeshProUGUI>().text);
+    //             saved.typeOfText.Add(type);
+
+    //             if(type == 0 || type == 1 || type == 6 || type == 8) {
+    //                 GameObject textContent = messageListItem.GetChild(1).GetChild(0).GetChild(0).gameObject;
+    //                 saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
+    //             } else {
+    //                 GameObject textContent = messageListItem.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
+    //                 saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
+    //             }
+
+    //         }
+    // }
 
     void GetMessagesSnapshot() {
         for (int i = 0; i < saved.ContactsList.Count; i++) {
@@ -252,13 +274,14 @@ public class SaveManager : MonoBehaviour
         }
     }
 
+
     public void SaveGame(string saveFile) {   
 
         GetMessagesSnapshot();
 
         string SaveFileName = Application.persistentDataPath + saveFile;
 
-        string jsonString = JsonUtility.ToJson(saved);
+        string jsonString = JsonUtility.ToJson(NewSaveFile.saveFile);
 
         File.WriteAllText(SaveFileName, jsonString);
 
@@ -267,6 +290,22 @@ public class SaveManager : MonoBehaviour
         saved.whosTheMessageFor = new List<int>();
         saved.typeOfText = new List<int>();
     }
+
+    // public void SaveGame(string saveFile) {   
+
+    //     GetMessagesSnapshot();
+
+    //     string SaveFileName = Application.persistentDataPath + saveFile;
+
+    //     string jsonString = JsonUtility.ToJson(saved);
+
+    //     File.WriteAllText(SaveFileName, jsonString);
+
+
+    //     saved.savedMessages = new List<string>();
+    //     saved.whosTheMessageFor = new List<int>();
+    //     saved.typeOfText = new List<int>();
+    // }
     void createSavesFile(string SaveInfoFile) {
         
         string SaveFileName = Application.persistentDataPath + SaveInfoFile;

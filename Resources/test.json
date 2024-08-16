@@ -1,0 +1,80 @@
+{
+    "contactPush": 0,
+    "selectedIndex": 9999,
+    "ContactsList": [
+        {
+            "NameOfContact": "gf",
+            "Unlocked": true
+        },
+        {
+            "NameOfContact": "blonde",
+            "Unlocked": true
+        }
+    ],
+    "ChapterList": ["chapter1", "chapter2"],
+    "ChoiceNeeded": false,
+    "CurrStoryPoint": {
+        "ChapIndex": 0,
+        "SubChapIndex": 0,
+        "CurrTextIndex": 2
+    },
+    "SavedMessages": [
+        {
+            "TextContent": "1 hours later",
+            "WhosIsItFor": 0,
+            "TypeOfText": 8
+        },
+        {
+            "TextContent": "Hey hon",
+            "WhosIsItFor": 0,
+            "TypeOfText": 1
+        },
+        {
+          "TextContent": "testing scene 0",
+            "WhosIsItFor": 0,
+            "TypeOfText": 1
+        }
+    ],
+    "NumberOfSaved": 5,
+    "CurrWallPaper": "gf-car",
+    "InstaAccounts": [
+        {
+            "AccountOwner": "gf",
+            "NumberOfPosts": 2,
+            "Unlocked": true
+        },
+        {
+            "AccountOwner": "blonde",
+            "NumberOfPosts": 0,
+            "Unlocked": false
+        },
+        {
+            "AccountOwner": "bf",
+            "NumberOfPosts": 0,
+            "Unlocked": false
+        }
+    ],
+    "Posts": [
+        {
+            "CharacterName" : "gf",
+            "UserName" : "idk-honestly",
+            "Image" : "gf-standing",
+            "Description" : "I'm still standing",
+            "Liked": true
+        },
+        {
+            "CharacterName" : "gf",
+            "UserName" : "idk-honestly",
+            "Image" : "gf-car1",
+            "Description" : "ROAD TRIP!!!!",
+            "Liked": true
+
+        }
+    ],
+    "SeenImages": [
+        {
+            "Character": "gf",
+            "ImagesName": "gf-car2"
+        }
+    ]
+}
