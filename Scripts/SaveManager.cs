@@ -66,8 +66,6 @@ public class SaveManager : MonoBehaviour
 
             Transform TextContainer = SaveCardClone.transform.GetChild(3);
 
-            // if (SavesInfo.ChapterOfSaves.Count > i && SavesInfo.ChapterOfSaves[i] != 0) {
-
             if (SavesInfo.ChapterOfSaves[i] != 0) {
                 TextContainer.GetChild(0).GetComponent<TextMeshProUGUI>().text = SavesInfo.NameOfSaves[i];
                 TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text =
@@ -103,7 +101,11 @@ public class SaveManager : MonoBehaviour
         SaveModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
 
         Transform popup = SaveModalWindowClone.GetChild(2).transform;
-        // InputField input = popup.GetComponent<InputField>();
+        TMP_InputField input = popup.GetComponent<TMP_InputField>();
+
+        string SaveName = "";
+        input.onEndEdit.AddListener(x => {SaveName = x;});
+
         Button confirmButton = popup.GetChild(2).GetComponent<Button>();
         Button cancelButton = popup.GetChild(1).GetComponent<Button>();
         cancelButton.onClick.AddListener(() => {
@@ -113,7 +115,7 @@ public class SaveManager : MonoBehaviour
             SavesInfo.MostRecentSaveIndex = indx;
             SavesInfo.ChapterOfSaves[indx] = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
-            // SavesInfo.NameOfSaves[indx] = input.text;
+            SavesInfo.NameOfSaves[indx] = SaveName;
             SavesInfo.AutoSaveMostRecent = false;
             createSavesFile(SaveInfo);
             SaveGame(saveFile);
