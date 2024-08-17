@@ -110,18 +110,26 @@ public class InstaPostsManager : MonoBehaviour
         }
     }
 
+    public void GenerateProfileButton(InstaAccount account) {
+        Sprite pfp = Resources.Load(
+            "Images/Headshots/" + account.indexOfProfile + account.AccountOwner,
+            typeof(Sprite)
+        ) as Sprite;
+
+        Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, new Vector3(0, 0, 0), Quaternion.identity, HeadShotList);
+        ProfileButtonClone.GetComponent<Image>().sprite = pfp;
+        ProfileButtonClone.GetComponent<Button>().onClick.AddListener(() => {
+            ClearPostsList();
+            GenerateProfile(account.AccountOwner);
+            SidePanel.GetComponent<Animator>().Play("Close-Side-Menu");
+            DestroyProfileList();
+        });
+    }
+
     public void GenerateProfileList() {
         for (int i = 0; i < SF.saveFile.InstaAccounts.Count; i++) {
             if (SF.saveFile.InstaAccounts[i].Unlocked) {
-                Sprite pfp = Resources.Load("Images/Headshots/" + SF.saveFile.InstaAccounts[i].indexOfProfile + SF.saveFile.InstaAccounts[i].AccountOwner, typeof(Sprite)) as Sprite;
-                Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, new Vector3(0, 0, 0), Quaternion.identity, HeadShotList);
-                ProfileButtonClone.GetComponent<Image>().sprite = pfp;
-                ProfileButtonClone.GetComponent<Button>().onClick.AddListener(() => {
-                    ClearPostsList();
-                    GenerateProfile(SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts[i].indexOfProfile].AccountOwner);
-                    SidePanel.GetComponent<Animator>().Play("Close-Side-Menu");
-                    DestroyProfileList();
-                });
+                GenerateProfileButton(SF.saveFile.InstaAccounts[i]);
             }
         }        
     }
@@ -133,8 +141,13 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void GenerateProfileHeader(InstaAccount Profile) {
-        Sprite pfp = Resources.Load("Images/Headshots/" + Profile.indexOfProfile + Profile.AccountOwner, typeof(Sprite)) as Sprite;
-        Transform ProfileHeaderClone = Instantiate(preFabs.InstaPostProfileHeader, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
+        Sprite pfp = Resources.Load(
+            "Images/Headshots/" + Profile.indexOfProfile + Profile.AccountOwner,
+            typeof(Sprite)
+        ) as Sprite;
+
+        Transform ProfileHeaderClone =
+            Instantiate(preFabs.InstaPostProfileHeader, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
         ProfileHeaderClone.GetChild(0).GetComponent<Image>().sprite = pfp;
         ProfileHeaderClone.GetChild(1).GetComponent<TextMeshProUGUI>().text = Profile.UserName;
         Transform InfoContainer = ProfileHeaderClone.GetChild(2).transform;
@@ -145,7 +158,10 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void GenerateInstaPost(SavedPost post) {
-        Sprite pfp = Resources.Load("Images/Headshots/" + post.indexOfProfile + post.CharacterName, typeof(Sprite)) as Sprite;
+        Sprite pfp = Resources.Load(
+            "Images/Headshots/" + post.indexOfProfile + post.CharacterName,
+            typeof(Sprite)
+        ) as Sprite;
         Sprite Photo = Resources.Load("Images/Photos/" + post.Image, typeof(Sprite)) as Sprite;
 
         Transform InstaPostCard = Instantiate(preFabs.InstaPostCard, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);

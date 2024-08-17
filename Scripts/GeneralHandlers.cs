@@ -27,13 +27,14 @@ public class GeneralHandlers : MonoBehaviour {
         Shared.Wallpaper.GetComponent<Image>().sprite = LoadedWallpaper;
     }
 
-    // figure out why you're getting the pictures in 2 different formats, with and without braces, and fix line 34 object Object reference not set to an instance of an object
-
     public void ModalWindowOpen(Sprite photo, string ImageName) {
-        Transform ImageModalWindowClone = Instantiate(preFabs.ImageModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+        Transform ImageModalWindowClone =
+            Instantiate(preFabs.ImageModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+
         ImageModalWindowClone.GetChild(0).GetComponent<Image>().sprite = photo;
         Button setWallpaperButton = ImageModalWindowClone.GetChild(1).GetComponent<Button>();
         Button xButton = ImageModalWindowClone.GetChild(2).GetComponent<Button>();
+
         xButton.onClick.AddListener(() => {
             Destroy(ImageModalWindowClone.gameObject);
         });
@@ -42,6 +43,7 @@ public class GeneralHandlers : MonoBehaviour {
             SF.saveFile.CurrWallPaper = ImageName;
             SetWallPaper(SF.saveFile.CurrWallPaper);
         });
+        
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }
 

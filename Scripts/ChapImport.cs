@@ -51,7 +51,11 @@ public class ChapImport : MonoBehaviour {
         string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.NA");
         if (FileList.Length != SF.saveFile.ChapterList.Count) {
             for (int i = SF.saveFile.ChapterList.Count; i < FileList.Length; i++) {
-                SF.saveFile.ChapterList.Add(FileList[i][(FileList[i].LastIndexOf("/")+1)..^3]);
+                SF.saveFile.ChapterList.Add(
+                    FileList[i][
+                        (FileList[i].LastIndexOf("/")+1)..^3
+                    ]
+                );
             }
         }
     }
