@@ -76,15 +76,16 @@ public class InstaPostsManager : MonoBehaviour
             List<Profile> ProfileList = GetProfilesList().Profiles;
             for (int i = SF.saveFile.Posts.Count; i < postsList.Count; i++) {
                 Post item = postsList[i];
+                int indexOfProfile = ProfileList.FindIndex(x => x.Name == item.CharacterName);
                 SF.saveFile.Posts.Add(new SavedPost{ 
                     Unlocked = false,
                     Liked = false,
                     CharacterName = item.CharacterName,
                     Image = item.Image,
                     UserName = item.UserName,
-                    Description = item.Description 
+                    Description = item.Description,
+                    indexOfProfile = indexOfProfile
                 });
-                int indexOfProfile = ProfileList.FindIndex(x => x.Name == item.CharacterName);
                 Profile profile = ProfileList[indexOfProfile];
                 if (!SF.saveFile.InstaAccounts.Any(x => x.AccountOwner == item.CharacterName)){
                     SF.saveFile.InstaAccounts.Add(new InstaAccount { 
@@ -112,13 +113,12 @@ public class InstaPostsManager : MonoBehaviour
     public void GenerateProfileList() {
         for (int i = 0; i < SF.saveFile.InstaAccounts.Count; i++) {
             if (SF.saveFile.InstaAccounts[i].Unlocked) {
-                int indexOfContact = i;
-                Sprite pfp = Resources.Load("Images/Headshots/" + indexOfContact + SF.saveFile.InstaAccounts[i].AccountOwner, typeof(Sprite)) as Sprite;
+                Sprite pfp = Resources.Load("Images/Headshots/" + SF.saveFile.InstaAccounts[i].indexOfProfile + SF.saveFile.InstaAccounts[i].AccountOwner, typeof(Sprite)) as Sprite;
                 Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, new Vector3(0, 0, 0), Quaternion.identity, HeadShotList);
                 ProfileButtonClone.GetComponent<Image>().sprite = pfp;
                 ProfileButtonClone.GetComponent<Button>().onClick.AddListener(() => {
                     ClearPostsList();
-                    GenerateProfile(SF.saveFile.InstaAccounts[indexOfContact].AccountOwner);
+                    GenerateProfile(SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts[i].indexOfProfile].AccountOwner);
                     SidePanel.GetComponent<Animator>().Play("Close-Side-Menu");
                     DestroyProfileList();
                 });
@@ -144,8 +144,8 @@ public class InstaPostsManager : MonoBehaviour
         ProfileHeaderClone.GetChild(3).GetComponent<TextMeshProUGUI>().text = Profile.ProfileInfo;
     }
 
-    public void GenerateInstaPost(InstaAccount account, SavedPost post) {
-        Sprite pfp = Resources.Load("Images/Headshots/" + account.indexOfProfile + post.CharacterName, typeof(Sprite)) as Sprite;
+    public void GenerateInstaPost(SavedPost post) {
+        Sprite pfp = Resources.Load("Images/Headshots/" + post.indexOfProfile + post.CharacterName, typeof(Sprite)) as Sprite;
         Sprite Photo = Resources.Load("Images/Photos/" + post.Image, typeof(Sprite)) as Sprite;
 
         Transform InstaPostCard = Instantiate(preFabs.InstaPostCard, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
@@ -182,7 +182,7 @@ public class InstaPostsManager : MonoBehaviour
         // Since posts in real life start from newest, this starts the iterator at the newest post and goes backwards to populate
         for (int i = SF.saveFile.Posts.Count-1; i > -1; i--) {
             if (SF.saveFile.Posts[i].Unlocked && nameOfProfileOwner == SF.saveFile.Posts[i].CharacterName) {
-                GenerateInstaPost(account, SF.saveFile.Posts[i]);   
+                GenerateInstaPost(SF.saveFile.Posts[i]);   
             }
         }
         
@@ -194,7 +194,7 @@ public class InstaPostsManager : MonoBehaviour
             if (SF.saveFile.Posts[i].Unlocked) {
                 int indexOfProfile = SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == SF.saveFile.Posts[i].CharacterName);
                 InstaAccount account = SF.saveFile.InstaAccounts[indexOfProfile];
-                GenerateInstaPost(account, SF.saveFile.Posts[i]);
+                GenerateInstaPost(SF.saveFile.Posts[i]);
             }
         }
     }

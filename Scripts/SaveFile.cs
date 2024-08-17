@@ -42,6 +42,7 @@ using System.Linq;
     [System.Serializable]
     public class SavedPost
     {
+        public int indexOfProfile;
         public string CharacterName;
         public string UserName;
         public string Image;
