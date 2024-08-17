@@ -8,7 +8,7 @@ public class GeneralHandlers : MonoBehaviour {
 
     public SharedObjects Shared;
     public PreFabs preFabs;
-    public SavedItems saved;
+    public SaveFile SF;
     public Transform Canvas;
 
     public void Hide(Transform Object){
@@ -39,8 +39,8 @@ public class GeneralHandlers : MonoBehaviour {
         });
         setWallpaperButton.onClick.AddListener(() => {
             Destroy(ImageModalWindowClone.gameObject);
-            saved.currWallPaper = ImageName;
-            SetWallPaper(saved.currWallPaper);
+            SF.saveFile.CurrWallPaper = ImageName;
+            SetWallPaper(SF.saveFile.CurrWallPaper);
         });
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }

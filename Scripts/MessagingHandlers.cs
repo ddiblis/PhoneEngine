@@ -8,9 +8,12 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
 using UnityEngine.TextCore.Text;
 using System.IO;
+using System.Linq;
+using System;
+
 
 // Simple enum used for determining the type of text being sent/recieved.
-    public enum TypeOfText {
+public enum TypeOfText {
         sentText = 0,
         recText = 1,
         sentImage = 2,
@@ -29,8 +32,8 @@ public class MessagingHandlers : MonoBehaviour {
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public PreFabs Prefabs;
-    public SavedItems saved;
     public SaveManager SM;
+    public SaveFile SF;
     public InstaPostsManager IPM;
 
 
@@ -42,23 +45,22 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             gen.Hide(Shared.textingApp);
             gen.Hide(Shared.displayedList);
-            saved.selectedIndex = int.MinValue;
+            SF.saveFile.selectedIndex = int.MinValue;
         });
     }
 
     public void GenerateContactsList() {
         string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Images/Headshots","*.NA");
-        if (FileList.Length != saved.ContactsList.Count) {
-            for (int i = saved.ContactsList.Count; i < FileList.Length; i++) {
-                saved.ContactsList.Add(FileList[i][(FileList[i].LastIndexOf("/") +2)..^3]);
-                saved.UnlockedContacts.Add(false);
+        if (FileList.Length != SF.saveFile.ContactsList.Count) {
+            for (int i = SF.saveFile.ContactsList.Count; i < FileList.Length; i++) {
+                SF.saveFile.ContactsList.Add(new Contact{ NameOfContact = FileList[i][(FileList[i].LastIndexOf("/") +2)..^3], Unlocked = false });
             }
         }
     }
 
     // creates as many messageLists as needed for the contacts and hides them.
     public void GenerateMessageLists() {
-        for (int i = 0; i < saved.ContactsList.Count; i++) {
+        for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
             gen.Hide(Shared.content.GetChild(i));
         } 
@@ -66,8 +68,9 @@ public class MessagingHandlers : MonoBehaviour {
 
     public void NewGame() {
         chap.GenerateChapterList();
-        saved.currWallPaper = "gf-car";
-        gen.SetWallPaper(saved.currWallPaper);
+        SF.saveFile.selectedIndex = int.MinValue;
+        SF.saveFile.CurrWallPaper = "gf-car";
+        gen.SetWallPaper(SF.saveFile.CurrWallPaper);
         SM.GenerateSaves(5);
         IPM.GenPostsList();
         CurrChap = chap.GetChapter("chapter1");
@@ -97,7 +100,7 @@ public class MessagingHandlers : MonoBehaviour {
                 TextButton(i, NextChap, item);
             }
         }
-        if (saved.contactPush != saved.selectedIndex){
+        if (SF.saveFile.contactPush != SF.saveFile.selectedIndex){
             gen.Hide(Shared.choices); 
         } 
     }
@@ -126,7 +129,6 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    # nullable enable
     // Handles wait time for the messages recieved so they don't all display at once.
     // TypeOfText: an enum object that denotes the type of text we're sending
     // respTime: time to wait before sending the text.
@@ -142,14 +144,14 @@ public class MessagingHandlers : MonoBehaviour {
 
     public IEnumerator RecieveTexts(List<string> TextList, List<float> RespTime, Sprite pfp, int startingText = 0) {
         for (int i = startingText; i < TextList.Count; i++) {
-            saved.CurrText = i;
+            SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
             string item = TextList[i];
             if (item.Contains("{")){
-                string imgName = item[1..^1];
-                if (!saved.seenImages.Contains(imgName)) {
-                    saved.seenImages.Add(imgName);
+                string ImgName = item[1..^1];
+                if (!SF.saveFile.SeenImages.Any(x => x.ImageName == ImgName)) {
+                    SF.saveFile.SeenImages.Add(new SeenImage { ImageName = ImgName, Character = ImgName.Split('-')[0]});
                 }
-                Sprite img = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
+                Sprite img = Resources.Load("Images/Photos/" + ImgName, typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img, imgName: item));
             } 
             else if (item.Contains("[")){
@@ -171,54 +173,55 @@ public class MessagingHandlers : MonoBehaviour {
         ChapImport.Responses Responses = subChap.Responses;
         List<string> Resps = Responses.Resps;
         List<int> NextChap = Responses.NextChap;
-        int indexOfContact = saved.ContactsList.IndexOf(Contact);
+        int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == Contact);
         string InstaAccount = subChap.UnlockInstaPostsAccount;
         List<int> PostsToUnlock = subChap.UnlockPosts;
 
         // Chooses messageList parent for messages to be pushed to
-        saved.contactPush = indexOfContact;
+        SF.saveFile.contactPush = indexOfContact;
         int NumOfPerson = indexOfContact;
         Sprite pfp = Resources.Load("Images/Headshots/" + NumOfPerson + Contact, typeof(Sprite)) as Sprite;
 
+
         // Unlocks contact if they're not already unlocked: displays their contact card    
-        if (!saved.UnlockedContacts[NumOfPerson]) {
-            saved.UnlockedContacts[NumOfPerson] = true;
+        if (!SF.saveFile.ContactsList[NumOfPerson].Unlocked) {
+            SF.saveFile.ContactsList[NumOfPerson].Unlocked = true;
         }   
 
         // Unlocks InstaPosts Profile of account
         if (InstaAccount.Length > 0) {
-            saved.UnlockedAccounts[saved.InstaPostsAccounts.IndexOf(InstaAccount)] = true;
+            SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].Unlocked = true;
         }
 
         // Unlocks specified posts
         if (PostsToUnlock.Count > 0) {
             for (int i = 0; i < PostsToUnlock.Count; i++) {
-                saved.UnlockedPosts[PostsToUnlock[i]] = true;
-                saved.NumberOfPosts[saved.InstaPostsAccounts.IndexOf(InstaAccount)] += 1;
+                SF.saveFile.Posts[PostsToUnlock[i]].Unlocked = true;
+                SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
             }
         }
 
 
-        if (!saved.ChoiceNeeded) {
+        if (!SF.saveFile.ChoiceNeeded) {
             // Sends indicator of time passed
-            if (TimeIndicator.Length > 0 && saved.CurrText == 0){
+            if (TimeIndicator.Length > 0 && SF.saveFile.CurrStoryPoint.CurrTextIndex == 0){
                 yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: TimeIndicator));
             }
             
-            if (TextList.Count == 1 || saved.CurrText+1 != TextList.Count){
+            if (TextList.Count == 1 || SF.saveFile.CurrStoryPoint.CurrTextIndex + 1 != TextList.Count){
                 yield return StartCoroutine(RecieveTexts(TextList, RespTime, pfp, startingText));
             }
         }
 
         if (Resps.Count > 0){
-            saved.ChoiceNeeded = true;
+            SF.saveFile.ChoiceNeeded = true;
             PopulateResps(Resps, NextChap);
         } else {
             yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: TextList[0]));
-            saved.CurrChapIndex += 1;
-            if (saved.CurrChapIndex <= saved.ChapterList.Count -1) {
-                saved.CurrSubChapIndex = 0;
-                ChapterSelect(saved.ChapterList[saved.CurrChapIndex]);
+            SF.saveFile.CurrStoryPoint.ChapIndex += 1;
+            if (SF.saveFile.CurrStoryPoint.ChapIndex <= SF.saveFile.ChapterList.Count -1) {
+                SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
+                ChapterSelect(SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex]);
             }
         }
     }
@@ -227,7 +230,7 @@ public class MessagingHandlers : MonoBehaviour {
     // textMessage: the prefab of the message (sent recieved)
     // messageContent: The text content of the message.
     public void TextPush(TypeOfText type, GameObject textMessage, string messageContent) {
-        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(saved.contactPush));
+        GameObject messageClone = Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
@@ -238,7 +241,7 @@ public class MessagingHandlers : MonoBehaviour {
     // imageMessage: the prefab of which type of image text we're sending/recieving.
     // image: the actual image to be sent.
     public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage, Sprite image) {
-        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(saved.contactPush));
+        GameObject messageClone = Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
         GameObject imageContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
@@ -259,8 +262,8 @@ public class MessagingHandlers : MonoBehaviour {
     // messageContent: default to "" in case you're sending an image.
     #nullable enable
     public void MessageListLimit(TypeOfText type, string imgName = "", Sprite? image = null ,string messageContent = "") {
-        if (Shared.content.GetChild(saved.contactPush).childCount >= 25){
-            Destroy(Shared.content.GetChild(saved.contactPush).GetChild(0).gameObject);
+        if (Shared.content.GetChild(SF.saveFile.contactPush).childCount >= 25){
+            Destroy(Shared.content.GetChild(SF.saveFile.contactPush).GetChild(0).gameObject);
         } 
         switch(type){
             case TypeOfText.sentText:
@@ -291,14 +294,23 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void pushNotification(Sprite? pfp, string textContent) {
-        bool viewingScreen = saved.contactPush == saved.selectedIndex;
+        bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
-            gen.Show(Shared.cardsList.GetChild(saved.contactPush).GetChild(2).transform);
+            gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
             Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
             Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
             Shared.notif.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
         }
+    }
+
+    void ChoiceButtonClick(List<int> NextChap, int indx, GameObject ChoiceClone) {
+        SF.saveFile.CurrStoryPoint.SubChapIndex = NextChap[indx];
+        SF.saveFile.CurrStoryPoint.CurrTextIndex = 0;
+        SF.saveFile.ChoiceNeeded = false;
+        Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
+        Destroy(ChoiceClone);
+        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap[indx]]));
     }
 
     // handles the building and pushing of the text choice buttons into the choices list
@@ -312,13 +324,8 @@ public class MessagingHandlers : MonoBehaviour {
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            saved.CurrSubChapIndex = NextChap[indx];
-            saved.CurrText = 0;
-            saved.ChoiceNeeded = false;
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
-            Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
-            Destroy(ChoiceClone);
-            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap[indx]]));
+            ChoiceButtonClick(NextChap, indx, ChoiceClone);
         });
     }
 
@@ -335,13 +342,14 @@ public class MessagingHandlers : MonoBehaviour {
         imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            saved.CurrSubChapIndex = NextChap[indx];
-            saved.CurrText = 0;
-            saved.ChoiceNeeded = false;
+            if (type == TypeOfText.sentImage) {
+                string ImageName = imgName[1..^1];
+                if (!SF.saveFile.SeenImages.Any(x => x.ImageName == ImageName)) {
+                    SF.saveFile.SeenImages.Add(new SeenImage { ImageName = ImageName, Character = ImageName.Split('-')[0]});
+                }
+            }
             MessageListLimit(type, imgName, image);
-            Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
-            Destroy(ChoiceClone);
-            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap[indx]]));
+            ChoiceButtonClick(NextChap, indx, ChoiceClone);
         });
     }
 }

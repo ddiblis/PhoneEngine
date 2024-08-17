@@ -8,7 +8,7 @@ using System.IO;
 public class ChapImport : MonoBehaviour {
 
     public SharedObjects Shared;
-    public SavedItems saved;
+    public SaveFile SF;
 
 
     [System.Serializable]
@@ -49,9 +49,9 @@ public class ChapImport : MonoBehaviour {
 
     public void GenerateChapterList() {
         string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Chapters/","*.NA");
-        if (FileList.Length != saved.ChapterList.Count) {
-            for (int i = saved.ChapterList.Count; i < FileList.Length; i++) {
-                saved.ChapterList.Add(FileList[i][(FileList[i].LastIndexOf("/")+1)..^3]);
+        if (FileList.Length != SF.saveFile.ChapterList.Count) {
+            for (int i = SF.saveFile.ChapterList.Count; i < FileList.Length; i++) {
+                SF.saveFile.ChapterList.Add(FileList[i][(FileList[i].LastIndexOf("/")+1)..^3]);
             }
         }
     }

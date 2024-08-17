@@ -10,10 +10,9 @@ using UnityEngine.TextCore.Text;
 using System.IO;
 using System;
 using System.Linq;
-public class SaveFile : MonoBehaviour
-{
-    [System.Serializable]
-    public class ContactsList
+
+[System.Serializable]
+    public class Contact
     {
         public string NameOfContact;
         public bool Unlocked;
@@ -31,18 +30,24 @@ public class SaveFile : MonoBehaviour
     public class InstaAccount
     {
         public string AccountOwner;
+        public string UserName;
         public int NumberOfPosts;
         public bool Unlocked;
+        public int indexOfProfile;
+        public string Followers;
+        public string Following;
+        public string ProfileInfo;
     }
 
     [System.Serializable]
-    public class Post
+    public class SavedPost
     {
         public string CharacterName;
         public string UserName;
         public string Image;
         public string Description;
         public bool Liked;
+        public bool Unlocked;
     }
 
     [System.Serializable]
@@ -50,15 +55,15 @@ public class SaveFile : MonoBehaviour
     {
         public int contactPush;
         public int selectedIndex;
-        public List<ContactsList> ContactsList = new List<ContactsList>();
+        public List<Contact> ContactsList = new List<Contact>();
         public List<string> ChapterList = new List<string>();
         public bool ChoiceNeeded;
         public CurrStoryPoint CurrStoryPoint = new CurrStoryPoint();
         public List<SavedMessage> SavedMessages = new List<SavedMessage>();
-        public int NumberOfSaved;
+        public int NumberOfSaves;
         public string CurrWallPaper;
         public List<InstaAccount> InstaAccounts = new List<InstaAccount>();
-        public List<Post> Posts = new List<Post>();
+        public List<SavedPost> Posts = new List<SavedPost>();
         public List<SeenImage> SeenImages = new List<SeenImage>();
     }
 
@@ -74,8 +79,11 @@ public class SaveFile : MonoBehaviour
     public class SeenImage
     {
         public string Character;
-        public string ImagesName;
+        public string ImageName;
     }
 
+public class SaveFile : MonoBehaviour
+{
     public SaveFileRoot saveFile = new SaveFileRoot();
+
 }

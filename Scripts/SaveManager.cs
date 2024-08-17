@@ -21,19 +21,18 @@ public class SaveManager : MonoBehaviour
     public SavesFile SavesInfo;
     public MessagingHandlers MH;
     public Transform Canvas;
-    public SavedItems saved;
     public Transform AutoSaveCard;
     public ChapImport chap;
     public ContactsHandler CH;
     public InstaPostsManager IPM;
 
-    public SaveFile NewSaveFile;
+    public SaveFile SF;
     
 
 
 
     void RefreshSaveList() {
-        for (int i = 3; i < saved.NumberOfSaves + 3; i++) {
+        for (int i = 3; i < SF.saveFile.NumberOfSaves + 3; i++) {
             Destroy(SaveList.GetChild(i).gameObject);
         }
         CreateSaveCards();
@@ -48,7 +47,7 @@ public class SaveManager : MonoBehaviour
                 Destroy(Shared.choices.GetChild(i).gameObject);
             }
         }
-        for (int i = 0; i < saved.ContactsList.Count; i++) {
+        for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
             Transform messageList = Shared.content.GetChild(i);
             if (messageList.childCount > 0) {
                 for (int j = 0; j < messageList.childCount; j++) {
@@ -60,7 +59,7 @@ public class SaveManager : MonoBehaviour
 
     public void CreateSaveCards() {
 
-        for (int i = 0; i < saved.NumberOfSaves; i++) {
+        for (int i = 0; i < SF.saveFile.NumberOfSaves; i++) {
 
             GameObject SaveCardClone = Instantiate(Prefabs.SaveCard, new Vector3(0, 0, 0), Quaternion.identity, SaveList);
 
@@ -70,7 +69,7 @@ public class SaveManager : MonoBehaviour
 
             if (SavesInfo.ChapterOfSaves[i] != 0) {
                 TextContainer.GetChild(0).GetComponent<TextMeshProUGUI>().text = SavesInfo.NameOfSaves[i];
-                TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = SavesInfo.ChapterOfSaves[i] > saved.ChapterList.Count ? "End Of update" : "Chapter " + SavesInfo.ChapterOfSaves[i];
+                TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = SavesInfo.ChapterOfSaves[i] > SF.saveFile.ChapterList.Count ? "End Of update" : "Chapter " + SavesInfo.ChapterOfSaves[i];
                 // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Chapter " + Shared.TendencyOfSaves[i];
                 TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.DateTimeOfSave[i];
             }
@@ -105,7 +104,7 @@ public class SaveManager : MonoBehaviour
         });
         confirmButton.onClick.AddListener(() => {
             SavesInfo.MostRecentSaveIndex = indx;
-            SavesInfo.ChapterOfSaves[indx] = saved.CurrChapIndex + 1;
+            SavesInfo.ChapterOfSaves[indx] = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
             // SavesInfo.NameOfSaves[indx] = input.text;
             SavesInfo.AutoSaveMostRecent = false;
@@ -118,7 +117,7 @@ public class SaveManager : MonoBehaviour
 
     public void populateAutoSaveCard() {
         Transform TextContainer = AutoSaveCard.GetChild(2);
-        TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = SavesInfo.AutoSaveChapter > saved.ChapterList.Count ? "End Of update" : "Chapter " + SavesInfo.AutoSaveChapter;
+        TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text = SavesInfo.AutoSaveChapter > SF.saveFile.ChapterList.Count ? "End Of update" : "Chapter " + SavesInfo.AutoSaveChapter;
         // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = Shared.TendencyOfSaves[i];
         TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.AutoSaveDateTime;
     }
@@ -132,7 +131,7 @@ public class SaveManager : MonoBehaviour
         string SaveInfo = "/SaveInfo.json";
         yield return new WaitForSeconds(180f);
 
-        SavesInfo.AutoSaveChapter = saved.CurrChapIndex + 1;
+        SavesInfo.AutoSaveChapter = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
         SavesInfo.AutoSaveDateTime = "" + DateTime.Now;
         SavesInfo.AutoSaveMostRecent = true;
 
@@ -141,12 +140,12 @@ public class SaveManager : MonoBehaviour
         
         // Since auto save can happen while viewing messages, if you reload the code will think you're still viewing those messages
         // This resets it to not viewing for a fram to save, then put the corrent index back into place
-        int currentlyViewing = saved.selectedIndex;
-        saved.selectedIndex = int.MinValue;
+        int currentlyViewing = SF.saveFile.selectedIndex;
+        SF.saveFile.selectedIndex = int.MinValue;
         
         SaveGame(saveFile);
         
-        saved.selectedIndex = currentlyViewing;
+        SF.saveFile.selectedIndex = currentlyViewing;
 
         StartCoroutine(AutoSave());
     }
@@ -164,11 +163,19 @@ public class SaveManager : MonoBehaviour
             LoadSavesFile(SaveInfo);
             RefreshApps();
             LoadGame(saveFile);
-            gen.SetWallPaper(saved.currWallPaper);
+            gen.SetWallPaper(SF.saveFile.CurrWallPaper);
             Destroy(LoadModalWindowClone.gameObject);
         });
     }
 
+
+    public void LoadSavesFile(string SaveInfoFile) {
+        string SaveFileName = Application.persistentDataPath + SaveInfoFile;
+
+        string fileContents = File.ReadAllText(SaveFileName);
+
+        JsonUtility.FromJsonOverwrite(fileContents, SavesInfo);
+    }
 
     void handleImageMessages(TypeOfText MessageType, string TextContentOfMessage) {
         if (TextContentOfMessage.Contains("{")){
@@ -182,9 +189,9 @@ public class SaveManager : MonoBehaviour
     }
 
     void LoadAllMessages(int MessageIndex) {
-        int type = saved.typeOfText[MessageIndex];
+        int type = SF.saveFile.SavedMessages[MessageIndex].TypeOfText;
         TypeOfText MessageType = (TypeOfText)type;
-        string TextContentOfMessage = saved.savedMessages[MessageIndex];
+        string TextContentOfMessage = SF.saveFile.SavedMessages[MessageIndex].TextContent;
         if(type == 0 || type == 1 || type == 6 || type == 8) {
             MH.MessageListLimit(MessageType , messageContent: TextContentOfMessage);
         } else {
@@ -192,46 +199,38 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public void LoadSavesFile(string SaveInfoFile) {
-        string SaveFileName = Application.persistentDataPath + SaveInfoFile;
-
-        string fileContents = File.ReadAllText(SaveFileName);
-
-        JsonUtility.FromJsonOverwrite(fileContents, SavesInfo);
-    }
 
     public void LoadGame(string saveFile) {
 
         string SaveFileName = Application.persistentDataPath + saveFile;
         string fileContents = File.ReadAllText(SaveFileName);
 
-        JsonUtility.FromJsonOverwrite(fileContents, saved);
+        JsonUtility.FromJsonOverwrite(fileContents, SF.saveFile);
 
-        
+        SF.saveFile.selectedIndex = int.MinValue;
         chap.GenerateChapterList();
         IPM.GenPostsList();
 
 
         // Populates the messageLists with the content from the loaded Json
-        for (int i = 0; i < saved.savedMessages.Count; i++) {
+        for (int i = 0; i < SF.saveFile.SavedMessages.Count; i++) {
             // Set the person the messages are for
-            saved.contactPush = saved.whosTheMessageFor[i];
+            SF.saveFile.contactPush = SF.saveFile.SavedMessages[i].WhosIsItFor;
             LoadAllMessages(i);
         }
 
-        saved.savedMessages = new List<string>();
-        saved.whosTheMessageFor = new List<int>();
-        saved.typeOfText = new List<int>();
+        SF.saveFile.SavedMessages = new List<SavedMessage>();
 
-        if (saved.CurrChapIndex < saved.ChapterList.Count){
-            MH.ChapterSelect(saved.ChapterList[saved.CurrChapIndex], saved.CurrSubChapIndex, saved.CurrText);
+
+        if (SF.saveFile.CurrStoryPoint.ChapIndex < SF.saveFile.ChapterList.Count){
+            MH.ChapterSelect(SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex], SF.saveFile.CurrStoryPoint.SubChapIndex, SF.saveFile.CurrStoryPoint.CurrTextIndex);
         }
         populateAutoSaveCard();
     }
 
     void SaveAllMessages(Transform MessageList, int Person) {
         for(int j = 0; j < MessageList.childCount; j++) {
-            SaveFile.SavedMessage savedMessage = new SaveFile.SavedMessage { WhosIsItFor = Person };
+            SavedMessage savedMessage = new SavedMessage { WhosIsItFor = Person };
 
             Transform messageListItem = MessageList.GetChild(j);
             int type = int.Parse(messageListItem.GetChild(0).GetComponent<TextMeshProUGUI>().text);
@@ -244,31 +243,12 @@ public class SaveManager : MonoBehaviour
                 GameObject textContent = messageListItem.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
                 savedMessage.TextContent = textContent.GetComponent<TextMeshProUGUI>().text;
             }
-        NewSaveFile.saveFile.SavedMessages.Add(savedMessage);
+        SF.saveFile.SavedMessages.Add(savedMessage);
         }
     }
 
-    // void SaveAllMessages(Transform MessageList, int Person) {
-    //     for(int j = 0; j < MessageList.childCount; j++) {
-    //             saved.whosTheMessageFor.Add(Person);
-
-    //             Transform messageListItem = MessageList.GetChild(j);
-    //             int type = int.Parse(messageListItem.GetChild(0).GetComponent<TextMeshProUGUI>().text);
-    //             saved.typeOfText.Add(type);
-
-    //             if(type == 0 || type == 1 || type == 6 || type == 8) {
-    //                 GameObject textContent = messageListItem.GetChild(1).GetChild(0).GetChild(0).gameObject;
-    //                 saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
-    //             } else {
-    //                 GameObject textContent = messageListItem.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
-    //                 saved.savedMessages.Add(textContent.GetComponent<TextMeshProUGUI>().text);
-    //             }
-
-    //         }
-    // }
-
     void GetMessagesSnapshot() {
-        for (int i = 0; i < saved.ContactsList.Count; i++) {
+        for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
             Transform messageList = Shared.content.GetChild(i);
             SaveAllMessages(messageList, i);
         }
@@ -281,31 +261,14 @@ public class SaveManager : MonoBehaviour
 
         string SaveFileName = Application.persistentDataPath + saveFile;
 
-        string jsonString = JsonUtility.ToJson(NewSaveFile.saveFile);
+        string jsonString = JsonUtility.ToJson(SF.saveFile);
 
         File.WriteAllText(SaveFileName, jsonString);
 
 
-        saved.savedMessages = new List<string>();
-        saved.whosTheMessageFor = new List<int>();
-        saved.typeOfText = new List<int>();
+        SF.saveFile.SavedMessages = new List<SavedMessage>();
     }
 
-    // public void SaveGame(string saveFile) {   
-
-    //     GetMessagesSnapshot();
-
-    //     string SaveFileName = Application.persistentDataPath + saveFile;
-
-    //     string jsonString = JsonUtility.ToJson(saved);
-
-    //     File.WriteAllText(SaveFileName, jsonString);
-
-
-    //     saved.savedMessages = new List<string>();
-    //     saved.whosTheMessageFor = new List<int>();
-    //     saved.typeOfText = new List<int>();
-    // }
     void createSavesFile(string SaveInfoFile) {
         
         string SaveFileName = Application.persistentDataPath + SaveInfoFile;
@@ -316,8 +279,8 @@ public class SaveManager : MonoBehaviour
     }
 
     public void GenerateSaves(int NumOfSaves) {
-        saved.NumberOfSaves = NumOfSaves;
-        for(int i = 0; i < saved.NumberOfSaves; i++) {
+        SF.saveFile.NumberOfSaves = NumOfSaves;
+        for(int i = 0; i < SF.saveFile.NumberOfSaves; i++) {
             SavesInfo.ChapterOfSaves.Add(0);
             SavesInfo.NameOfSaves.Add("");
             SavesInfo.DateTimeOfSave.Add("" + DateTime.Now);
@@ -330,7 +293,7 @@ public class SaveManager : MonoBehaviour
         } else {
             LoadGame("/AutoSave.json");
         }
-        gen.SetWallPaper(saved.currWallPaper);
+        gen.SetWallPaper(SF.saveFile.CurrWallPaper);
     }
 }
 

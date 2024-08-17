@@ -1715,7 +1715,6 @@ GameObject:
   - component: {fileID: 492607241}
   - component: {fileID: 492607242}
   - component: {fileID: 492607243}
-  - component: {fileID: 492607244}
   - component: {fileID: 492607245}
   m_Layer: 5
   m_Name: Canvas
@@ -1830,7 +1829,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Shared: {fileID: 492607239}
   preFabs: {fileID: 492607241}
-  saved: {fileID: 492607244}
+  SF: {fileID: 492607245}
   Canvas: {fileID: 492607236}
 --- !u!114 &492607239
 MonoBehaviour:
@@ -1905,7 +1904,6 @@ MonoBehaviour:
   gen: {fileID: 492607238}
   Shared: {fileID: 492607239}
   SavesInfo: {fileID: 492607243}
-  saved: {fileID: 492607244}
   chap: {fileID: 1448356999}
 --- !u!114 &492607243
 MonoBehaviour:
@@ -1928,38 +1926,6 @@ MonoBehaviour:
   AutoSaveChapter: 0
   AutoSaveTendency: 
   AutoSaveDateTime: 
---- !u!114 &492607244
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492607232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2904f63a6c3ca4b709caf21d9cc75b10, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contactPush: 0
-  selectedIndex: 9999
-  ContactsList: []
-  UnlockedContacts: 
-  ChapterList: []
-  ChoiceNeeded: 0
-  CurrChapIndex: 0
-  CurrSubChapIndex: 0
-  CurrText: 0
-  seenImages: []
-  savedMessages: []
-  whosTheMessageFor: 
-  typeOfText: 
-  NumberOfSaves: 0
-  currWallPaper: 
-  InstaPostsAccounts: []
-  UnlockedAccounts: 
-  UnlockedPosts: 
-  LikedPosts: 
-  NumberOfPosts: 
 --- !u!114 &492607245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1983,7 +1949,7 @@ MonoBehaviour:
       SubChapIndex: 0
       CurrTextIndex: 0
     SavedMessages: []
-    NumberOfSaved: 0
+    NumberOfSaves: 0
     CurrWallPaper: 
     InstaAccounts: []
     Posts: []
@@ -3450,9 +3416,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 492607236}
     m_Modifications:
     - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: SF
+      value: 
+      objectReference: {fileID: 492607245}
+    - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: saved
       value: 
-      objectReference: {fileID: 492607244}
+      objectReference: {fileID: 0}
     - target: {fileID: 418524781474291117, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: Shared
       value: 
@@ -3490,6 +3460,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888701054}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: SF
+      value: 
+      objectReference: {fileID: 492607245}
+    - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: SM
       value: 
       objectReference: {fileID: 1546402603}
@@ -3504,7 +3478,7 @@ PrefabInstance:
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: saved
       value: 
-      objectReference: {fileID: 492607244}
+      objectReference: {fileID: 0}
     - target: {fileID: 1309388152743980327, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: Shared
       value: 
@@ -4289,12 +4263,11 @@ MonoBehaviour:
   SavesInfo: {fileID: 492607243}
   MH: {fileID: 1448356997}
   Canvas: {fileID: 492607236}
-  saved: {fileID: 492607244}
   AutoSaveCard: {fileID: 7794874373265462431}
   chap: {fileID: 1448356999}
   CH: {fileID: 1888701054}
   IPM: {fileID: 1924683176}
-  NewSaveFile: {fileID: 492607245}
+  SF: {fileID: 492607245}
 --- !u!95 &1546402604
 Animator:
   serializedVersion: 5
@@ -5197,7 +5170,7 @@ MonoBehaviour:
   contactsApp: {fileID: 229078420}
   gen: {fileID: 492607238}
   Shared: {fileID: 492607239}
-  saved: {fileID: 492607244}
+  SF: {fileID: 492607245}
   Prefabs: {fileID: 492607241}
 --- !u!95 &1888701055
 Animator:
@@ -5499,12 +5472,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 330aaf804b31cc825a0eb29f4963ae18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saved: {fileID: 492607244}
   PostsDisplay: {fileID: 838570416}
   HeadShotList: {fileID: 1144816848}
   SidePanel: {fileID: 2896863475881871968}
   preFabs: {fileID: 492607241}
   gen: {fileID: 492607238}
+  SF: {fileID: 492607245}
 --- !u!224 &1924683177 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4738549572693411428, guid: 8d28b0dd809606868bafa32f06af5410, type: 3}
@@ -5911,7 +5884,7 @@ MonoBehaviour:
   PhotoContainer: {fileID: 3295160616154849887, guid: 340d1008c597e779f826e2b07028b40e, type: 3}
   GallaryApp: {fileID: 1704581946726996914}
   gen: {fileID: 492607238}
-  saved: {fileID: 492607244}
+  SF: {fileID: 492607245}
 --- !u!95 &1704581946726996916
 Animator:
   serializedVersion: 5

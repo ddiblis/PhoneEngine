@@ -8,15 +8,19 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEditor;
 using UnityEngine.TextCore.Text;
 using System.IO;
+using System.Linq;
+using System;
+
 
 public class InstaPostsManager : MonoBehaviour
 {
-    public SavedItems saved;
     public Transform PostsDisplay;
     public Transform HeadShotList;
     public Transform SidePanel;
     public PreFabs preFabs;
     public GeneralHandlers gen;
+    public SaveFile SF;
+
 
     [System.Serializable]
     public class Post
@@ -68,14 +72,32 @@ public class InstaPostsManager : MonoBehaviour
 
     public void GenPostsList() {
         List<Post> postsList = GetPostsFile().Posts;
-        if (postsList.Count != saved.UnlockedPosts.Count) {
-            for (int i = saved.UnlockedPosts.Count; i < postsList.Count; i++) {
-                saved.UnlockedPosts.Add(false);
-                saved.LikedPosts.Add(false);
-                if (!saved.InstaPostsAccounts.Contains(postsList[i].CharacterName)){
-                    saved.InstaPostsAccounts.Add(postsList[i].CharacterName);
-                    saved.UnlockedAccounts.Add(false);
-                    saved.NumberOfPosts.Add(0);
+        if (postsList.Count != SF.saveFile.Posts.Count) {
+            List<Profile> ProfileList = GetProfilesList().Profiles;
+            for (int i = SF.saveFile.Posts.Count; i < postsList.Count; i++) {
+                Post item = postsList[i];
+                SF.saveFile.Posts.Add(new SavedPost{ 
+                    Unlocked = false,
+                    Liked = false,
+                    CharacterName = item.CharacterName,
+                    Image = item.Image,
+                    UserName = item.UserName,
+                    Description = item.Description 
+                });
+                int indexOfProfile = ProfileList.FindIndex(x => x.Name == item.CharacterName);
+                Profile profile = ProfileList[indexOfProfile];
+                if (!SF.saveFile.InstaAccounts.Any(x => x.AccountOwner == item.CharacterName)){
+                    SF.saveFile.InstaAccounts.Add(new InstaAccount { 
+                        AccountOwner = item.CharacterName,
+                        Unlocked = false,
+                        NumberOfPosts = 0,
+                        indexOfProfile = indexOfProfile,
+                        Following = profile.Following,
+                        Followers = profile.Followers,
+                        ProfileInfo = profile.ProfileInfo,
+                        UserName = profile.Username
+                    });
+
                 }
             }
         }
@@ -88,15 +110,15 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void GenerateProfileList() {
-        for (int i = 0; i < saved.InstaPostsAccounts.Count; i++) {
-            if (saved.UnlockedAccounts[i]) {
+        for (int i = 0; i < SF.saveFile.InstaAccounts.Count; i++) {
+            if (SF.saveFile.InstaAccounts[i].Unlocked) {
                 int indexOfContact = i;
-                Sprite pfp = Resources.Load("Images/Headshots/" + indexOfContact + saved.InstaPostsAccounts[i], typeof(Sprite)) as Sprite;
+                Sprite pfp = Resources.Load("Images/Headshots/" + indexOfContact + SF.saveFile.InstaAccounts[i].AccountOwner, typeof(Sprite)) as Sprite;
                 Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, new Vector3(0, 0, 0), Quaternion.identity, HeadShotList);
                 ProfileButtonClone.GetComponent<Image>().sprite = pfp;
                 ProfileButtonClone.GetComponent<Button>().onClick.AddListener(() => {
                     ClearPostsList();
-                    GenerateProfile(saved.InstaPostsAccounts[indexOfContact]);
+                    GenerateProfile(SF.saveFile.InstaAccounts[indexOfContact].AccountOwner);
                     SidePanel.GetComponent<Animator>().Play("Close-Side-Menu");
                     DestroyProfileList();
                 });
@@ -110,20 +132,20 @@ public class InstaPostsManager : MonoBehaviour
         }
     }
 
-    public void GenerateProfileHeader(int indexOfContact, Profile selectedProfile, int NumberOfPosts) {
-        Sprite pfp = Resources.Load("Images/Headshots/" + indexOfContact + selectedProfile.Name, typeof(Sprite)) as Sprite;
+    public void GenerateProfileHeader(InstaAccount Profile) {
+        Sprite pfp = Resources.Load("Images/Headshots/" + Profile.indexOfProfile + Profile.AccountOwner, typeof(Sprite)) as Sprite;
         Transform ProfileHeaderClone = Instantiate(preFabs.InstaPostProfileHeader, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
         ProfileHeaderClone.GetChild(0).GetComponent<Image>().sprite = pfp;
-        ProfileHeaderClone.GetChild(1).GetComponent<TextMeshProUGUI>().text = selectedProfile.Username;
+        ProfileHeaderClone.GetChild(1).GetComponent<TextMeshProUGUI>().text = Profile.UserName;
         Transform InfoContainer = ProfileHeaderClone.GetChild(2).transform;
-        InfoContainer.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = NumberOfPosts.ToString();
-        InfoContainer.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = selectedProfile.Followers;
-        InfoContainer.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = selectedProfile.Following;
-        ProfileHeaderClone.GetChild(3).GetComponent<TextMeshProUGUI>().text = selectedProfile.ProfileInfo;
+        InfoContainer.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = Profile.NumberOfPosts.ToString();
+        InfoContainer.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = Profile.Followers;
+        InfoContainer.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = Profile.Following;
+        ProfileHeaderClone.GetChild(3).GetComponent<TextMeshProUGUI>().text = Profile.ProfileInfo;
     }
 
-    public void GenerateInstaPost(int indexOfContact, string Contact, Post post, int indxOfPost) {
-        Sprite pfp = Resources.Load("Images/Headshots/" + indexOfContact + Contact, typeof(Sprite)) as Sprite;
+    public void GenerateInstaPost(InstaAccount account, SavedPost post) {
+        Sprite pfp = Resources.Load("Images/Headshots/" + account.indexOfProfile + post.CharacterName, typeof(Sprite)) as Sprite;
         Sprite Photo = Resources.Load("Images/Photos/" + post.Image, typeof(Sprite)) as Sprite;
 
         Transform InstaPostCard = Instantiate(preFabs.InstaPostCard, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
@@ -132,62 +154,47 @@ public class InstaPostsManager : MonoBehaviour
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Image>().sprite = pfp;
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
             ClearPostsList();
-            GenerateProfile(Contact);
+            GenerateProfile(post.CharacterName);
         });
         InstaPostCard.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = post.UserName;
         InstaPostCard.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = post.Description;
         Transform NotLikedButton = InstaPostCard.GetChild(2).GetChild(2).transform;
-        if (saved.LikedPosts[indxOfPost] == true) {
+        if (post.Liked == true) {
             gen.Hide(NotLikedButton);
         }
         // This is the red heart button
         InstaPostCard.GetChild(2).GetChild(1).GetComponent<Button>().onClick.AddListener(() => {
-            saved.LikedPosts[indxOfPost] = false;
+            post.Liked = false;
             gen.Show(NotLikedButton);
         });
         // this is the empty heart button
         NotLikedButton.GetComponent<Button>().onClick.AddListener(() => {
-            saved.LikedPosts[indxOfPost] = true;
+            post.Liked = true;
             gen.Hide(NotLikedButton);
         });
     }
 
     public void GenerateProfile(string nameOfProfileOwner) {
-        List<Profile> ProfileList = GetProfilesList().Profiles;
-        Profile selectedProfile = new Profile();
-        int indexOfContact = saved.InstaPostsAccounts.IndexOf(nameOfProfileOwner);;
-        for (int i = 0; i < ProfileList.Count; i++) {
-            if (ProfileList[i].Name == nameOfProfileOwner) {
-                selectedProfile = ProfileList[i];
-            }
-        }
-        List<Post> postsList = GetPostsFile().Posts;
+        int indexOfProfile = SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == nameOfProfileOwner);
+        InstaAccount account = SF.saveFile.InstaAccounts[indexOfProfile];
+        GenerateProfileHeader(account);
 
-        GenerateProfileHeader(indexOfContact, selectedProfile, saved.NumberOfPosts[indexOfContact]);
         // Since posts in real life start from newest, this starts the iterator at the newest post and goes backwards to populate
-        for (int i = saved.UnlockedPosts.Count-1; i > -1; i--) {
-            if (saved.UnlockedPosts[i] && nameOfProfileOwner == postsList[i].CharacterName) {
-                int indxOfPost = i;
-
-                GenerateInstaPost(indexOfContact, nameOfProfileOwner, postsList[i], indxOfPost);   
+        for (int i = SF.saveFile.Posts.Count-1; i > -1; i--) {
+            if (SF.saveFile.Posts[i].Unlocked && nameOfProfileOwner == SF.saveFile.Posts[i].CharacterName) {
+                GenerateInstaPost(account, SF.saveFile.Posts[i]);   
             }
         }
         
     }
 
     public void DisplayAllPosts() {
-        List<Post> postsList = GetPostsFile().Posts;
-
         // Since posts in real life start from newest, this starts the iterator at the newest post and goes backwards to populate
-        for (int i = saved.UnlockedPosts.Count-1; i > -1; i--) {
-            if (saved.UnlockedPosts[i]) {
-                int indxOfPost = i;
-                string Contact = postsList[i].CharacterName;
-                int indexOfContact = saved.InstaPostsAccounts.IndexOf(Contact);
-                Post post = postsList[i];
-
-                GenerateInstaPost(indexOfContact, Contact, post, indxOfPost);
-                
+        for (int i = SF.saveFile.Posts.Count-1; i > -1; i--) {
+            if (SF.saveFile.Posts[i].Unlocked) {
+                int indexOfProfile = SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == SF.saveFile.Posts[i].CharacterName);
+                InstaAccount account = SF.saveFile.InstaAccounts[indexOfProfile];
+                GenerateInstaPost(account, SF.saveFile.Posts[i]);
             }
         }
     }

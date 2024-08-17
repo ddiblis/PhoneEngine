@@ -21,23 +21,21 @@ public class OnAwake : MonoBehaviour
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public SavesFile SavesInfo;
-    public SavedItems saved;
     public ChapImport chap;
 
 
     void Awake() {
-
         MH.BackButton();
         MH.GenerateContactsList();
         MH.GenerateMessageLists();
         CH.GenerateContactCards();
 
-        // if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
-        //     SM.LoadSavesFile("/SaveInfo.json");
-        //     SM.LoadMostRecent();
-        // } else {
+        if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
+            SM.LoadSavesFile("/SaveInfo.json");
+            SM.LoadMostRecent();
+        } else {
             MH.NewGame();
-        // }
+        }
 
         SM.CreateSaveCards();
         StartCoroutine(SM.AutoSave());

@@ -13,7 +13,7 @@ public class ContactsHandler : MonoBehaviour {
     public Transform contactsApp;
     public GeneralHandlers gen;
     public SharedObjects Shared;
-    public SavedItems saved;
+    public SaveFile SF;
     public PreFabs Prefabs;
 
     public void setContactPage(Sprite pfp, int indx) {
@@ -31,14 +31,14 @@ public class ContactsHandler : MonoBehaviour {
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
         ChoiceClone.GetComponent<Button>().onClick.AddListener(() => {
 
-            saved.selectedIndex = indx;  // sets index to be used for showing or hiding choices in messagingHandler while viewing contact
+            SF.saveFile.selectedIndex = indx;  // sets index to be used for showing or hiding choices in messagingHandler while viewing contact
 
-            bool viewingScreen = saved.contactPush == saved.selectedIndex;
+            bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
 
             setContactPage(pfp, indx);
 
             // This is important for showing or hiding contact choices if you're not viewing who the choices are for
-            if (saved.contactPush != indx) {
+            if (SF.saveFile.contactPush != indx) {
                 gen.Hide(Shared.choices); 
             } else {
                 gen.Show(Shared.choices);
@@ -59,16 +59,16 @@ public class ContactsHandler : MonoBehaviour {
 
     public void GenerateContactCards() {
         // Generates contact cards for each contact based on list.
-        for (int i = 0; i < saved.ContactsList.Count; i++) {
-            Sprite img = Resources.Load("Images/Headshots/" + i + saved.ContactsList[i], typeof(Sprite)) as Sprite;            
-            addContactCard(img, saved.ContactsList[i], i);
+        for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
+            Sprite img = Resources.Load("Images/Headshots/" + i + SF.saveFile.ContactsList[i].NameOfContact, typeof(Sprite)) as Sprite;            
+            addContactCard(img, SF.saveFile.ContactsList[i].NameOfContact, i);
         } 
     }
 
     // This only runs to check if it's been unlocked or not on button clicks to display the ones that are unlocked
     public void UnlockContactCard() {
-        for (int i = 0; i < saved.ContactsList.Count; i++) {
-            if (saved.UnlockedContacts[i]) {
+        for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
+            if (SF.saveFile.ContactsList[i].Unlocked) {
                 gen.Show(Shared.cardsList.GetChild(i));
             } else {
                 gen.Hide(Shared.cardsList.GetChild(i));

@@ -5,8 +5,8 @@
             "SubChapNum": 0,
             "Contact": "gf",
             "TimeIndicator": "1 hours later",
-            "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[gf-heart]"],
-            "ResponseTime": [0.5, 0.5, 4.0, 1.0, 2.0, 1.7, 1.2],
+            "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[gf-heart]", "{gf-standing}"],
+            "ResponseTime": [0.5, 0.5, 4.0, 1.0, 2.0, 1.7, 1.2, 0.5],
             "UnlockInstaPostsAccount": "gf",
             "UnlockPosts": [0, 1],
             "Responses": {
