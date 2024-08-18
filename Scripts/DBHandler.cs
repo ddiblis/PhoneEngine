@@ -9,6 +9,7 @@ public class DBHandler : MonoBehaviour
         public List<string> ContactList;
         public List<string> ChapterList;
         public List<string> PhotoList;
+        public List<string> SettingsList;
     }
 
     public DBRoot DataBase = new DBRoot(); 

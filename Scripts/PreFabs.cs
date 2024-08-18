@@ -23,5 +23,6 @@ public class PreFabs : MonoBehaviour {
     public Transform InstaPostCard;
     public Transform InstaPostProfileHeader;
     public Transform ProfileButton;
+    public Transform SettingsSliderCard;
 
 }

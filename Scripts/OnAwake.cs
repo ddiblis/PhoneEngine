@@ -16,6 +16,7 @@ public class OnAwake : MonoBehaviour
 {
     public MessagingHandlers MH;
     public SaveManager SM;
+    public SettingsManager SetM;
     public ContactsHandler CH;
     public DBHandler DB;
 
@@ -27,6 +28,7 @@ public class OnAwake : MonoBehaviour
         MH.GenerateContactsList();
         MH.GenerateMessageLists();
         CH.GenerateContactCards();
+        SetM.GenerateSettingsList();
 
         if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
             SM.LoadSavesFile("/SaveInfo.json");

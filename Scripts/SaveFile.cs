@@ -54,8 +54,14 @@ using UnityEngine;
         public List<SavedPost> Posts = new List<SavedPost>();
         public List<PhotoCategory> PhotoCategories = new List<PhotoCategory>();
         public List<Photo> Photos = new List<Photo>();
-
+        public List<Setting> Settings = new List<Setting>();
         
+    }
+
+    [System.Serializable]
+    public class Setting {
+        public string SettingName;
+        public bool Enabled;
     }
 
     [System.Serializable]
