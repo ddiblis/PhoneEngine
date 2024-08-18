@@ -101,6 +101,7 @@ public class MessagingHandlers : MonoBehaviour {
         SF.saveFile.Photos[1].Seen = true;
         SF.saveFile.Photos[2].Seen = true;
         SF.saveFile.Photos[3].Seen = true;
+        SF.saveFile.PhotoCategories[0].NumberSeen += 4;
         SF.saveFile.CurrWallPaper = "bg-snowmountains";
     }
 

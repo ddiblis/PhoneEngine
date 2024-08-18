@@ -105,9 +105,9 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void DestroyProfileList() {
-        for (int i = 1; i < HeadShotList.childCount; i++) {
-            Destroy(HeadShotList.GetChild(i).gameObject);
-        }
+        foreach (Transform child in HeadShotList) {
+			Destroy(child.gameObject);
+		}
     }
 
     public void GenerateProfileButton(InstaAccount account) {
@@ -135,9 +135,9 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void ClearPostsList() {
-        for (int i = 0; i < PostsDisplay.childCount; i++) {
-            Destroy(PostsDisplay.GetChild(i).gameObject);
-        }
+        foreach (Transform child in PostsDisplay) {
+			Destroy(child.gameObject);
+		}
     }
 
     public void GenerateProfileHeader(InstaAccount Profile) {

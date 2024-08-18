@@ -41,18 +41,25 @@ public class SaveManager : MonoBehaviour
             Destroy(Shared.notificationArea.GetChild(0).gameObject);
         }
         if (Shared.choices.childCount > 0) {
-            for (int i = 0; i < Shared.choices.childCount; i++) {
-                Destroy(Shared.choices.GetChild(i).gameObject);
-            }
+            foreach (Transform child in Shared.choices) {
+		        Destroy(child.gameObject);
+		    }
         }
-        for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
-            Transform messageList = Shared.content.GetChild(i);
-            if (messageList.childCount > 0) {
-                for (int j = 0; j < messageList.childCount; j++) {
-                    Destroy(messageList.GetChild(j).gameObject);
+        foreach (Transform MessageList in Shared.content) {
+            if (MessageList.childCount > 0) {
+                foreach (Transform message in MessageList) {
+                    Destroy(message.gameObject);
                 }
-            }
-        }
+            }   
+		}
+        // for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
+        //     Transform messageList = Shared.content.GetChild(i);
+        //     if (messageList.childCount > 0) {
+        //         for (int j = 0; j < messageList.childCount; j++) {
+        //             Destroy(messageList.GetChild(j).gameObject);
+        //         }
+        //     }
+        // }
     }
 
     public void CreateSaveCards() {
