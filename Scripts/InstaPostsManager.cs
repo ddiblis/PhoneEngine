@@ -105,9 +105,9 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void DestroyProfileList() {
-        foreach (Transform child in HeadShotList) {
-			Destroy(child.gameObject);
-		}
+        for (int i = 1; i < HeadShotList.childCount; i++) {
+            Destroy(HeadShotList.GetChild(i).gameObject);
+        }
     }
 
     public void GenerateProfileButton(InstaAccount account) {
