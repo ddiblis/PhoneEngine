@@ -10,7 +10,6 @@ using System;
 
 public class ContactsHandler : MonoBehaviour {
 
-    public Transform contactsApp;
     public GeneralHandlers gen;
     public SharedObjects Shared;
     public SaveFile SF;
@@ -60,7 +59,7 @@ public class ContactsHandler : MonoBehaviour {
     public void GenerateContactCards() {
         // Generates contact cards for each contact based on list.
         for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
-            Sprite img = Resources.Load("Images/Headshots/" + i + SF.saveFile.ContactsList[i].NameOfContact, typeof(Sprite)) as Sprite;            
+            Sprite img = Resources.Load("Images/Headshots/" + SF.saveFile.ContactsList[i].NameOfContact, typeof(Sprite)) as Sprite;            
             addContactCard(img, SF.saveFile.ContactsList[i].NameOfContact, i);
         } 
     }

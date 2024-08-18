@@ -70,8 +70,8 @@
             "SubChapNum": 5,
             "Contact": "blonde",
             "TimeIndicator": "5 hours later",
-            "TextList": ["hey boy", "this is blonde", "your gfs best friend", "test sending me a text instead of your gf"],
-            "ResponseTime": [1.7, 0.5, 0.5, 0.9],
+            "TextList": ["hey boy", "this is blonde", "your gfs best friend", "test sending me a text instead of your gf", "BTW here's a picture from me too", "{blonde-gym}"],
+            "ResponseTime": [1.7, 0.5, 0.5, 0.9, 0.9, 1.5],
             "UnlockInstaPostsAccount": "blonde",
             "UnlockPosts": [2],
             "Responses": {

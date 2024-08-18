@@ -33,6 +33,7 @@ public class MessagingHandlers : MonoBehaviour {
     public PreFabs Prefabs;
     public SaveManager SM;
     public SaveFile SF;
+    public DBHandler DB;
     public InstaPostsManager IPM;
 
 
@@ -49,12 +50,11 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void GenerateContactsList() {
-        string[] FileList = Directory.GetFiles(Application.streamingAssetsPath + "/Images/Headshots","*.NA");
-        if (FileList.Length != SF.saveFile.ContactsList.Count) {
-            for (int i = SF.saveFile.ContactsList.Count; i < FileList.Length; i++) {
+        if (DB.DataBase.ContactList.Count != SF.saveFile.ContactsList.Count) {
+            for (int i = SF.saveFile.ContactsList.Count; i < DB.DataBase.ContactList.Count; i++) {
                 SF.saveFile.ContactsList.Add(
                     new Contact{ 
-                        NameOfContact = FileList[i][(FileList[i].LastIndexOf("/") +2)..^3],
+                        NameOfContact = DB.DataBase.ContactList[i],
                         Unlocked = false 
                     }
                 );
@@ -70,10 +70,45 @@ public class MessagingHandlers : MonoBehaviour {
         } 
     }
 
+    public void GeneratePhotoList() {
+        if (DB.DataBase.PhotoList.Count != SF.saveFile.Photos.Count) {
+            for (int i = SF.saveFile.Photos.Count; i < DB.DataBase.PhotoList.Count; i++) {
+                SF.saveFile.Photos.Add(
+                    new Photo{ 
+                        Category = DB.DataBase.PhotoList[i].Split("-")[0],
+                        ImageName = DB.DataBase.PhotoList[i],
+                        Seen = false 
+                    }
+                );
+                if (!SF.saveFile.PhotoCategories.Any(x => x.Category == DB.DataBase.PhotoList[i].Split("-")[0])) {
+                    SF.saveFile.PhotoCategories.Add(
+                        new PhotoCategory{
+                            Category = DB.DataBase.PhotoList[i].Split("-")[0],
+                            NumberSeen = 0,
+                            NumberAvaliable = 1
+                        }
+                    );
+                } else {
+                    int Category = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == DB.DataBase.PhotoList[i].Split("-")[0]);
+                    SF.saveFile.PhotoCategories[Category].NumberAvaliable += 1;
+                }
+            }
+        }
+    }
+
+    public void SetInitialGallary() {
+        SF.saveFile.Photos[0].Seen = true;
+        SF.saveFile.Photos[1].Seen = true;
+        SF.saveFile.Photos[2].Seen = true;
+        SF.saveFile.Photos[3].Seen = true;
+        SF.saveFile.CurrWallPaper = "bg-snowmountains";
+    }
+
     public void NewGame() {
         chap.GenerateChapterList();
         SF.saveFile.selectedIndex = int.MinValue;
-        SF.saveFile.CurrWallPaper = "gf-car";
+        GeneratePhotoList();
+        SetInitialGallary();
         gen.SetWallPaper(SF.saveFile.CurrWallPaper);
         SM.GenerateSaves(5);
         IPM.GenPostsList();
@@ -157,13 +192,11 @@ public class MessagingHandlers : MonoBehaviour {
             string item = TextList[i];
             if (item.Contains("{")){
                 string ImgName = item[1..^1];
-                if (!SF.saveFile.SeenImages.Any(x => x.ImageName == ImgName)) {
-                    SF.saveFile.SeenImages.Add(
-                        new SeenImage {
-                            ImageName = ImgName,
-                            Character = ImgName.Split('-')[0]
-                        }
-                    );
+                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImgName);
+                if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
+                    SF.saveFile.Photos[indexOfPhoto].Seen = true;
+                    int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImgName.Split("-")[0]);
+                    SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
                 }
                 Sprite img = Resources.Load("Images/Photos/" + ImgName, typeof(Sprite)) as Sprite;
                 yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img, imgName: item));
@@ -186,7 +219,7 @@ public class MessagingHandlers : MonoBehaviour {
         // Chooses messageList parent for messages to be pushed to
         SF.saveFile.contactPush = indexOfContact;
 
-        Sprite pfp = Resources.Load("Images/Headshots/" + indexOfContact + subChap.Contact, typeof(Sprite)) as Sprite;
+        Sprite pfp = Resources.Load("Images/Headshots/" + subChap.Contact, typeof(Sprite)) as Sprite;
 
         // Unlocks contact if they're not already unlocked: displays their contact card    
         if (!SF.saveFile.ContactsList[indexOfContact].Unlocked) {
@@ -356,13 +389,11 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             if (type == TypeOfText.sentImage) {
                 string ImageName = imgName[1..^1];
-                if (!SF.saveFile.SeenImages.Any(x => x.ImageName == ImageName)) {
-                    SF.saveFile.SeenImages.Add(
-                        new SeenImage {
-                            ImageName = ImageName,
-                            Character = ImageName.Split('-')[0]
-                        }
-                    );
+                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
+                if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
+                    SF.saveFile.Photos[indexOfPhoto].Seen = true;
+                    int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
+                    SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
                 }
             }
             MessageListLimit(type, imgName, image);

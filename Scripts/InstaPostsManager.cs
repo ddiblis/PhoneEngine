@@ -83,8 +83,8 @@ public class InstaPostsManager : MonoBehaviour
                     CharacterName = item.CharacterName,
                     Image = item.Image,
                     UserName = item.UserName,
-                    Description = item.Description,
-                    indexOfProfile = indexOfProfile
+                    Description = item.Description
+                    // indexOfProfile = indexOfProfile
                 });
                 Profile profile = ProfileList[indexOfProfile];
                 if (!SF.saveFile.InstaAccounts.Any(x => x.AccountOwner == item.CharacterName)){
@@ -92,7 +92,7 @@ public class InstaPostsManager : MonoBehaviour
                         AccountOwner = item.CharacterName,
                         Unlocked = false,
                         NumberOfPosts = 0,
-                        indexOfProfile = indexOfProfile,
+                        // indexOfProfile = indexOfProfile,
                         Following = profile.Following,
                         Followers = profile.Followers,
                         ProfileInfo = profile.ProfileInfo,
@@ -112,7 +112,7 @@ public class InstaPostsManager : MonoBehaviour
 
     public void GenerateProfileButton(InstaAccount account) {
         Sprite pfp = Resources.Load(
-            "Images/Headshots/" + account.indexOfProfile + account.AccountOwner,
+            "Images/Headshots/" + account.AccountOwner,
             typeof(Sprite)
         ) as Sprite;
 
@@ -142,7 +142,7 @@ public class InstaPostsManager : MonoBehaviour
 
     public void GenerateProfileHeader(InstaAccount Profile) {
         Sprite pfp = Resources.Load(
-            "Images/Headshots/" + Profile.indexOfProfile + Profile.AccountOwner,
+            "Images/Headshots/" + Profile.AccountOwner,
             typeof(Sprite)
         ) as Sprite;
 
@@ -159,7 +159,7 @@ public class InstaPostsManager : MonoBehaviour
 
     public void GenerateInstaPost(SavedPost post) {
         Sprite pfp = Resources.Load(
-            "Images/Headshots/" + post.indexOfProfile + post.CharacterName,
+            "Images/Headshots/" + post.CharacterName,
             typeof(Sprite)
         ) as Sprite;
         Sprite Photo = Resources.Load("Images/Photos/" + post.Image, typeof(Sprite)) as Sprite;

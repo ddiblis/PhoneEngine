@@ -16,15 +16,13 @@ public class OnAwake : MonoBehaviour
 {
     public MessagingHandlers MH;
     public SaveManager SM;
-    public GallaryHandler GH;
     public ContactsHandler CH;
-    public GeneralHandlers gen;
-    public SharedObjects Shared;
-    public SavesFile SavesInfo;
-    public ChapImport chap;
+    public DBHandler DB;
+
 
 
     void Awake() {
+        DB.LoadDB();
         MH.BackButton();
         MH.GenerateContactsList();
         MH.GenerateMessageLists();

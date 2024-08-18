@@ -1,15 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
-using Unity.VisualScripting;
-using Unity.VisualScripting.FullSerializer;
-using UnityEditor;
-using UnityEngine.TextCore.Text;
-using System.IO;
-using System;
-using System.Linq;
 
 [System.Serializable]
     public class Contact
@@ -33,7 +23,6 @@ using System.Linq;
         public string UserName;
         public int NumberOfPosts;
         public bool Unlocked;
-        public int indexOfProfile;
         public string Followers;
         public string Following;
         public string ProfileInfo;
@@ -42,7 +31,6 @@ using System.Linq;
     [System.Serializable]
     public class SavedPost
     {
-        public int indexOfProfile;
         public string CharacterName;
         public string UserName;
         public string Image;
@@ -52,20 +40,22 @@ using System.Linq;
     }
 
     [System.Serializable]
-    public class SaveFileRoot
-    {
+    public class SaveFileRoot {
         public int contactPush;
         public int selectedIndex;
-        public List<Contact> ContactsList = new List<Contact>();
-        public List<string> ChapterList = new List<string>();
-        public bool ChoiceNeeded;
-        public CurrStoryPoint CurrStoryPoint = new CurrStoryPoint();
-        public List<SavedMessage> SavedMessages = new List<SavedMessage>();
         public int NumberOfSaves;
         public string CurrWallPaper;
+        public bool ChoiceNeeded;
+        public List<Contact> ContactsList = new List<Contact>();
+        public List<string> ChapterList = new List<string>();
+        public CurrStoryPoint CurrStoryPoint = new CurrStoryPoint();
+        public List<SavedMessage> SavedMessages = new List<SavedMessage>();
         public List<InstaAccount> InstaAccounts = new List<InstaAccount>();
         public List<SavedPost> Posts = new List<SavedPost>();
-        public List<SeenImage> SeenImages = new List<SeenImage>();
+        public List<PhotoCategory> PhotoCategories = new List<PhotoCategory>();
+        public List<Photo> Photos = new List<Photo>();
+
+        
     }
 
     [System.Serializable]
@@ -77,10 +67,18 @@ using System.Linq;
     }
 
     [System.Serializable]
-    public class SeenImage
-    {
-        public string Character;
+    public class Photo {
+        public string Category;
         public string ImageName;
+        public bool Seen;
+
+    }
+
+    [System.Serializable]
+    public class PhotoCategory {
+        public string Category;
+        public int NumberSeen;
+        public int NumberAvaliable;
     }
 
 public class SaveFile : MonoBehaviour

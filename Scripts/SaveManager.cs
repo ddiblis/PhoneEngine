@@ -13,7 +13,6 @@ using System.Linq;
 
 public class SaveManager : MonoBehaviour
 {
-    public Transform SavesApp;
     public Transform SaveList;
     public GeneralHandlers gen;
     public PreFabs Prefabs;
@@ -23,7 +22,6 @@ public class SaveManager : MonoBehaviour
     public Transform Canvas;
     public Transform AutoSaveCard;
     public ChapImport chap;
-    public ContactsHandler CH;
     public InstaPostsManager IPM;
 
     public SaveFile SF;
@@ -72,7 +70,7 @@ public class SaveManager : MonoBehaviour
                     SavesInfo.ChapterOfSaves[i] > SF.saveFile.ChapterList.Count ?
                         "End Of update" :
                         "Chapter " + SavesInfo.ChapterOfSaves[i];
-                // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = "Chapter " + Shared.TendencyOfSaves[i];
+                // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = SavesInfo.TendencyOfSaves[i];
                 TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.DateTimeOfSave[i];
             }
 
@@ -115,7 +113,7 @@ public class SaveManager : MonoBehaviour
             SavesInfo.MostRecentSaveIndex = indx;
             SavesInfo.ChapterOfSaves[indx] = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
-            SavesInfo.NameOfSaves[indx] = SaveName;
+            SavesInfo.NameOfSaves[indx] = SaveName.Length > 0 ? SaveName : "SaveFile " + indx;
             SavesInfo.AutoSaveMostRecent = false;
             createSavesFile(SaveInfo);
             SaveGame(saveFile);
@@ -222,6 +220,7 @@ public class SaveManager : MonoBehaviour
 
         SF.saveFile.selectedIndex = int.MinValue;
         chap.GenerateChapterList();
+        MH.GeneratePhotoList();
         IPM.GenPostsList();
 
 
@@ -275,7 +274,7 @@ public class SaveManager : MonoBehaviour
         GetMessagesSnapshot();
 
         string SaveFileName = Application.persistentDataPath + saveFile;
-        string jsonString = JsonUtility.ToJson(SF.saveFile);
+        string jsonString = JsonUtility.ToJson(SF.saveFile, true);
 
         File.WriteAllText(SaveFileName, jsonString);
 
@@ -287,7 +286,7 @@ public class SaveManager : MonoBehaviour
         
         string SaveFileName = Application.persistentDataPath + SaveInfoFile;
 
-        string jsonString = JsonUtility.ToJson(SavesInfo);
+        string jsonString = JsonUtility.ToJson(SavesInfo, true);
 
         File.WriteAllText(SaveFileName, jsonString);
     }
