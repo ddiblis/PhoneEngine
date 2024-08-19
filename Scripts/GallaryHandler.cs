@@ -38,6 +38,8 @@ public class GallaryHandler : MonoBehaviour
             }
             Transform ContactCard = Instantiate(SidePanelCard, new Vector3(0, 0, 0), Quaternion.identity, CategoryList.transform).transform;
             ContactCard.GetComponent<Button>().onClick.AddListener(() => {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+
                 DestroyGallary();
                 DisplayCategoryImages(Cat);
             });
@@ -66,6 +68,8 @@ public class GallaryHandler : MonoBehaviour
             Button button = PhotoContainerClone.GetComponent<Button>();
 
             button.onClick.AddListener(() => {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+
                 gen.ModalWindowOpen(photo, SF.saveFile.Photos[indx].ImageName);
             });
         }

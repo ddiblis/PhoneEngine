@@ -29,6 +29,7 @@ public class ContactsHandler : MonoBehaviour {
         ChoiceClone.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
         ChoiceClone.GetComponent<Button>().onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
 
             SF.saveFile.selectedIndex = indx;  // sets index to be used for showing or hiding choices in messagingHandler while viewing contact
 

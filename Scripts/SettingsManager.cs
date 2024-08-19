@@ -11,6 +11,7 @@ public class SettingsManager : MonoBehaviour {
     public SaveManager SM;
     public MessagingHandlers MH;
     public SavesFile Saves;
+    public SharedObjects Shared;
     public PreFabs preFabs;
     public Transform Canvas;
     public Transform SettingsList;
@@ -31,6 +32,8 @@ public class SettingsManager : MonoBehaviour {
             FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
         }
         FasterRepliesSlider.GetComponent<Button>().onClick.AddListener(() => {
+            SettingsList.GetComponent<AudioSource>().Play();
+
             if (!SF.saveFile.FasterReplies) {
                 SF.saveFile.FasterReplies = true;
                 FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
@@ -44,7 +47,9 @@ public class SettingsManager : MonoBehaviour {
             FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
         }
         MuteSlider.GetComponent<Button>().onClick.AddListener(() => {
-            if (!SF.saveFile.FasterReplies) {
+            SettingsList.GetComponent<AudioSource>().Play();
+
+            if (!SF.saveFile.MuteGame) {
                 SF.saveFile.MuteGame = true;
                 MuteSlider.GetComponent<Animator>().Play("Turn-On-Slider");
             } else {
@@ -54,6 +59,7 @@ public class SettingsManager : MonoBehaviour {
         });
 
         ResetCardClone.GetComponent<Button>().onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             openResetModal(FasterRepliesSlider.GetComponent<Animator>(), MuteSlider.GetComponent<Animator>());
         });
     }
@@ -67,10 +73,12 @@ public class SettingsManager : MonoBehaviour {
         Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
         Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
         cancelButton.onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             Destroy(LoadModalWindowClone.gameObject);
         });
 
         confirmButton.onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             for (int i = 0; i < SF.saveFile.NumberOfSaves; i++){
                 string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
                 if(File.Exists(saveFile)) {

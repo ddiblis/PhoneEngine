@@ -302,6 +302,7 @@ public class MessagingHandlers : MonoBehaviour {
         if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
             button.onClick.AddListener(() => {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 gen.ModalWindowOpen(image, imgName[1..^1]);
             });
         }
@@ -398,6 +399,7 @@ public class MessagingHandlers : MonoBehaviour {
         imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
+            Shared.choices.transform.GetComponent<AudioSource>().Play();
             if (type == TypeOfText.sentImage) {
                 string ImageName = imgName[1..^1];
                 int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
