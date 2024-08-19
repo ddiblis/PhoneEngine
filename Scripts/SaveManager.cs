@@ -23,13 +23,12 @@ public class SaveManager : MonoBehaviour
     public Transform AutoSaveCard;
     public ChapImport chap;
     public InstaPostsManager IPM;
-
     public SaveFile SF;
     
 
 
 
-    void RefreshSaveList() {
+    public void RefreshSaveList() {
         for (int i = 3; i < SF.saveFile.NumberOfSaves + 3; i++) {
             Destroy(SaveList.GetChild(i).gameObject);
         }
@@ -52,14 +51,6 @@ public class SaveManager : MonoBehaviour
                 }
             }   
 		}
-        // for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
-        //     Transform messageList = Shared.content.GetChild(i);
-        //     if (messageList.childCount > 0) {
-        //         for (int j = 0; j < messageList.childCount; j++) {
-        //             Destroy(messageList.GetChild(j).gameObject);
-        //         }
-        //     }
-        // }
     }
 
     public void CreateSaveCards() {

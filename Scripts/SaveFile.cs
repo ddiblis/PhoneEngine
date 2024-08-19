@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 [System.Serializable]
@@ -44,6 +45,8 @@ using UnityEngine;
         public int contactPush;
         public int selectedIndex;
         public int NumberOfSaves;
+        public bool FasterReplies;
+        public bool MuteGame;
         public string CurrWallPaper;
         public bool ChoiceNeeded;
         public List<Contact> ContactsList = new List<Contact>();
@@ -54,16 +57,9 @@ using UnityEngine;
         public List<SavedPost> Posts = new List<SavedPost>();
         public List<PhotoCategory> PhotoCategories = new List<PhotoCategory>();
         public List<Photo> Photos = new List<Photo>();
-        public List<Setting> Settings = new List<Setting>();
         
     }
-
-    [System.Serializable]
-    public class Setting {
-        public string SettingName;
-        public bool Enabled;
-    }
-
+  
     [System.Serializable]
     public class SavedMessage
     {

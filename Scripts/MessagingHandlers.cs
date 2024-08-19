@@ -111,7 +111,7 @@ public class MessagingHandlers : MonoBehaviour {
         GeneratePhotoList();
         SetInitialGallary();
         gen.SetWallPaper(SF.saveFile.CurrWallPaper);
-        SM.GenerateSaves(5);
+        SM.GenerateSaves(10);
         IPM.GenPostsList();
         CurrChap = chap.GetChapter("chapter1");
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
@@ -147,6 +147,10 @@ public class MessagingHandlers : MonoBehaviour {
 
     #nullable enable
     public void GenerateMessage(TypeOfText type, string textContent, string imgName, Sprite? pfp = null, Sprite? image = null) {
+        bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
+        if (viewingScreen) {
+            Shared.content.GetComponent<AudioSource>().Play();   
+        }
         switch (type) {
             case TypeOfText.recText:
                 pushNotification(pfp, textContent);
@@ -182,7 +186,11 @@ public class MessagingHandlers : MonoBehaviour {
         string textContent = "Picture Message",
         string imgName = ""
     ) {
-        yield return new WaitForSeconds(respTime);
+        if (SF.saveFile.FasterReplies) {
+            yield return new WaitForSeconds(respTime/2);
+        } else {
+            yield return new WaitForSeconds(respTime);
+        }
         GenerateMessage(type, textContent, imgName, pfp, image);
     }
     # nullable disable
@@ -340,6 +348,7 @@ public class MessagingHandlers : MonoBehaviour {
         bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
+            Shared.notificationArea.GetComponent<AudioSource>().Play();
             gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
             Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
             Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
@@ -368,6 +377,7 @@ public class MessagingHandlers : MonoBehaviour {
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
+            Shared.choices.transform.GetComponent<AudioSource>().Play();
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             ChoiceButtonClick(NextChap, indx, ChoiceClone);
         });
