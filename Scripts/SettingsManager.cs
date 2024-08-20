@@ -142,7 +142,7 @@ public class SettingsManager : MonoBehaviour {
         Saves.AutoSaveDateTime = "";
     }
 
-    public void DestroySettingsList() {
+    public void DestroyAllList() {
         foreach (Transform child in SettingsList) {
             Destroy(child.gameObject);
         }
