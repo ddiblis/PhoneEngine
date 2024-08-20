@@ -69,6 +69,9 @@ public class ChapSelectManager : MonoBehaviour
         foreach(SavedPost p in SF.saveFile.Posts){
             p.Unlocked = false;
         }
+        foreach (InstaAccount ia in SF.saveFile.InstaAccounts) {
+            ia.NumberOfPosts = 0;
+        }
         SF.saveFile.ChoiceNeeded = false;
     }
 

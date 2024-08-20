@@ -85,7 +85,6 @@ public class InstaPostsManager : MonoBehaviour
                     Image = item.Image,
                     UserName = item.UserName,
                     Description = item.Description
-                    // indexOfProfile = indexOfProfile
                 });
                 Profile profile = ProfileList[indexOfProfile];
                 if (!SF.saveFile.InstaAccounts.Any(x => x.AccountOwner == item.CharacterName)){
@@ -93,7 +92,6 @@ public class InstaPostsManager : MonoBehaviour
                         AccountOwner = item.CharacterName,
                         Unlocked = false,
                         NumberOfPosts = 0,
-                        // indexOfProfile = indexOfProfile,
                         Following = profile.Following,
                         Followers = profile.Followers,
                         ProfileInfo = profile.ProfileInfo,

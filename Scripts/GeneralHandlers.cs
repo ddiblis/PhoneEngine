@@ -49,8 +49,4 @@ public class GeneralHandlers : MonoBehaviour {
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }
 
-    public void PlayclickSound() {
-        Shared.Wallpaper.AddComponent<AudioSource>().Play();
-    }
-
 }

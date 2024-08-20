@@ -243,11 +243,12 @@ public class MessagingHandlers : MonoBehaviour {
         // Unlocks specified posts
         if (subChap.UnlockPosts.Count > 0) {
             for (int i = 0; i < subChap.UnlockPosts.Count; i++) {
+                if(!SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked){
+                    SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
+                }
                 SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked = true;
-                SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
             }
         }
-
 
         if (!SF.saveFile.ChoiceNeeded) {
             // Sends indicator of time passed

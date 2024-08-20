@@ -2801,6 +2801,7 @@ MonoBehaviour:
   CH: {fileID: 1888701054}
   DB: {fileID: 492607246}
   SF: {fileID: 492607245}
+  Settings: {fileID: 1484976394}
 --- !u!114 &492607243
 MonoBehaviour:
   m_ObjectHideFlags: 0
