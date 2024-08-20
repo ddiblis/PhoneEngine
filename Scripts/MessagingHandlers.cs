@@ -186,7 +186,7 @@ public class MessagingHandlers : MonoBehaviour {
         string textContent = "Picture Message",
         string imgName = ""
     ) {
-        if (SF.saveFile.FasterReplies) {
+        if (SF.saveFile.Settings.FasterReplies) {
             yield return new WaitForSeconds(respTime/2);
         } else {
             yield return new WaitForSeconds(respTime);

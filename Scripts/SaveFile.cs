@@ -45,10 +45,9 @@ using UnityEngine;
         public int contactPush;
         public int selectedIndex;
         public int NumberOfSaves;
-        public bool FasterReplies;
-        public bool MuteGame;
         public string CurrWallPaper;
         public bool ChoiceNeeded;
+        public Settings Settings = new Settings();
         public List<Contact> ContactsList = new List<Contact>();
         public List<string> ChapterList = new List<string>();
         public CurrStoryPoint CurrStoryPoint = new CurrStoryPoint();
@@ -58,6 +57,13 @@ using UnityEngine;
         public List<PhotoCategory> PhotoCategories = new List<PhotoCategory>();
         public List<Photo> Photos = new List<Photo>();
         
+    }
+
+    [System.Serializable]
+    public class Settings {
+        public bool FasterReplies;
+        public bool MuteGame;
+        public bool FullScreen;
     }
   
     [System.Serializable]
