@@ -148,7 +148,7 @@ public class MessagingHandlers : MonoBehaviour {
     #nullable enable
     public void GenerateMessage(TypeOfText type, string textContent, string imgName, Sprite? pfp = null, Sprite? image = null) {
         bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
-        if (viewingScreen && !SF.saveFile.Settings.MuteGame) {
+        if (viewingScreen) {
             Shared.content.GetComponent<AudioSource>().Play();   
         }
         switch (type) {
@@ -302,9 +302,7 @@ public class MessagingHandlers : MonoBehaviour {
         if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
             button.onClick.AddListener(() => {
-                if(!SF.saveFile.Settings.MuteGame) {
-                    Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                }
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 gen.ModalWindowOpen(image, imgName[1..^1]);
             });
         }
@@ -351,9 +349,7 @@ public class MessagingHandlers : MonoBehaviour {
         bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.notificationArea.GetComponent<AudioSource>().Play();
-            }
+            Shared.notificationArea.GetComponent<AudioSource>().Play();
             gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
             Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
             Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
@@ -382,9 +378,7 @@ public class MessagingHandlers : MonoBehaviour {
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.choices.transform.GetComponent<AudioSource>().Play();
-            }
+            Shared.choices.transform.GetComponent<AudioSource>().Play();
             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
             ChoiceButtonClick(NextChap, indx, ChoiceClone);
         });
@@ -405,9 +399,7 @@ public class MessagingHandlers : MonoBehaviour {
         imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.choices.transform.GetComponent<AudioSource>().Play();
-            }
+            Shared.choices.transform.GetComponent<AudioSource>().Play();
             if (type == TypeOfText.sentImage) {
                 string ImageName = imgName[1..^1];
                 int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);

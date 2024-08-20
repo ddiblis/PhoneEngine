@@ -36,9 +36,7 @@ public class SettingsManager : MonoBehaviour {
             FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
         }
         FasterRepliesSlider.GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                SettingsList.GetComponent<AudioSource>().Play();
-            }
+            SettingsList.GetComponent<AudioSource>().Play();
 
             if (!SF.saveFile.Settings.FasterReplies) {
                 SF.saveFile.Settings.FasterReplies = true;
@@ -50,7 +48,7 @@ public class SettingsManager : MonoBehaviour {
         });
 
         if (SF.saveFile.Settings.MuteGame){
-            FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
+            MuteSlider.GetComponent<Animator>().Play("Turn-On-Slider");
         }
         MuteSlider.GetComponent<Button>().onClick.AddListener(() => {
             SettingsList.GetComponent<AudioSource>().Play();
@@ -58,9 +56,11 @@ public class SettingsManager : MonoBehaviour {
             if (!SF.saveFile.Settings.MuteGame) {
                 SF.saveFile.Settings.MuteGame = true;
                 MuteSlider.GetComponent<Animator>().Play("Turn-On-Slider");
+                MuteAudio(SF.saveFile.Settings.MuteGame);
             } else {
                 SF.saveFile.Settings.MuteGame = false;
                 MuteSlider.GetComponent<Animator>().Play("Turn-Off-Slider");
+                MuteAudio(SF.saveFile.Settings.MuteGame);
             }
         });
 
@@ -68,9 +68,7 @@ public class SettingsManager : MonoBehaviour {
             FullScreenSlider.GetComponent<Animator>().Play("Turn-On-Slider");
         }
         FullScreenSlider.GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                SettingsList.GetComponent<AudioSource>().Play();
-            }
+            SettingsList.GetComponent<AudioSource>().Play();
 
             if (!SF.saveFile.Settings.FullScreen) {
                 SF.saveFile.Settings.FullScreen = true;
@@ -91,9 +89,7 @@ public class SettingsManager : MonoBehaviour {
 
 
         ResetCardClone.GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             openResetModal(FasterRepliesSlider.GetComponent<Animator>(), MuteSlider.GetComponent<Animator>());
         });
     }
@@ -107,16 +103,12 @@ public class SettingsManager : MonoBehaviour {
         Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
         Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
         cancelButton.onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             Destroy(LoadModalWindowClone.gameObject);
         });
 
         confirmButton.onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
 
             for (int i = 0; i < SF.saveFile.NumberOfSaves; i++){
                 string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
@@ -138,6 +130,13 @@ public class SettingsManager : MonoBehaviour {
             MH.NewGame();
             Destroy(LoadModalWindowClone.gameObject);
         });
+    }
+
+    public void MuteAudio(bool state) {
+        Shared.Wallpaper.GetComponent<AudioSource>().mute = state;
+        Shared.notificationArea.GetComponent<AudioSource>().mute = state;
+        Shared.content.GetComponent<AudioSource>().mute = state;
+        SettingsList.GetComponent<AudioSource>().mute = state;
     }
 
     public void ResetSaves() {

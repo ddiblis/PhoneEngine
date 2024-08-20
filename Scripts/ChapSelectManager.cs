@@ -31,9 +31,7 @@ public class ChapSelectManager : MonoBehaviour
             ChapterCardClone.GetChild(2).GetComponent<TextMeshProUGUI>().text = SF.saveFile.ChapterList[i];
             int indx = i;
             ChapterCardClone.GetComponent<Button>().onClick.AddListener(() => {
-                if(!SF.saveFile.Settings.MuteGame) {
-                    Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                }
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 openChapModal(indx);
             });
         }
@@ -48,16 +46,12 @@ public class ChapSelectManager : MonoBehaviour
         Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
         Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
         cancelButton.onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             Destroy(LoadModalWindowClone.gameObject);
         });
 
         confirmButton.onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             SM.RefreshApps();
             FixSaveFileForChap(indx);
             MH.ChapterSelect(SF.saveFile.ChapterList[indx]);

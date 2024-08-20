@@ -20,6 +20,7 @@ public class OnAwake : MonoBehaviour
     public ContactsHandler CH;
     public DBHandler DB;
     public SaveFile SF;
+    public SettingsManager Settings;
 
     void Awake() {
         // These functions belong here, stop trying to move them
@@ -36,6 +37,8 @@ public class OnAwake : MonoBehaviour
             MH.NewGame();
         }
 
+        Settings.MuteAudio(SF.saveFile.Settings.MuteGame);
+        
         if (SF.saveFile.Settings.FullScreen) {
             Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
         } else {
@@ -47,7 +50,7 @@ public class OnAwake : MonoBehaviour
 
             Screen.SetResolution(width, height, false);
         }
-
+        
         SM.CreateSaveCards();
         StartCoroutine(SM.AutoSave());
 

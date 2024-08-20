@@ -120,9 +120,7 @@ public class InstaPostsManager : MonoBehaviour
         Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, new Vector3(0, 0, 0), Quaternion.identity, HeadShotList);
         ProfileButtonClone.GetComponent<Image>().sprite = pfp;
         ProfileButtonClone.GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             ClearPostsList();
             GenerateProfile(account.AccountOwner);
             SidePanel.GetComponent<Animator>().Play("Close-Side-Menu");
@@ -173,9 +171,7 @@ public class InstaPostsManager : MonoBehaviour
         InstaPostCard.GetChild(0).GetChild(0).GetComponent<Image>().sprite = Photo;
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Image>().sprite = pfp;
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             ClearPostsList();
             GenerateProfile(post.CharacterName);
         });
@@ -187,17 +183,13 @@ public class InstaPostsManager : MonoBehaviour
         }
         // This is the red heart button
         InstaPostCard.GetChild(2).GetChild(1).GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             post.Liked = false;
             gen.Show(NotLikedButton);
         });
         // this is the empty heart button
         NotLikedButton.GetComponent<Button>().onClick.AddListener(() => {
-            if(!SF.saveFile.Settings.MuteGame) {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            }
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             post.Liked = true;
             gen.Hide(NotLikedButton);
         });
