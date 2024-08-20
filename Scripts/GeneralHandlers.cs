@@ -36,17 +36,27 @@ public class GeneralHandlers : MonoBehaviour {
         Button xButton = ImageModalWindowClone.GetChild(2).GetComponent<Button>();
 
         xButton.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if(!SF.saveFile.Settings.MuteGame) {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            }
             Destroy(ImageModalWindowClone.gameObject);
         });
         setWallpaperButton.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if(!SF.saveFile.Settings.MuteGame) {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            }
             Destroy(ImageModalWindowClone.gameObject);
             SF.saveFile.CurrWallPaper = ImageName;
             SetWallPaper(SF.saveFile.CurrWallPaper);
         });
         
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
+    }
+
+    public void PlayclickSound() {
+        if(!SF.saveFile.Settings.MuteGame) {
+            Shared.Wallpaper.AddComponent<AudioSource>().Play();
+        }
     }
 
 }

@@ -80,11 +80,15 @@ public class SaveManager : MonoBehaviour
             string SaveInfo = "/SaveInfo.json";
             int indx = i;
             SaveButton.onClick.AddListener(() => {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+                if(!SF.saveFile.Settings.MuteGame) {
+                    Shared.Wallpaper.GetComponent<AudioSource>().Play();
+                }
                 openSaveModal(indx, SaveInfo, saveFile);
             });
             LoadButton.onClick.AddListener(() => {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+                if(!SF.saveFile.Settings.MuteGame) {
+                    Shared.Wallpaper.GetComponent<AudioSource>().Play();
+                }
                 if (File.Exists(Application.persistentDataPath + saveFile)) { 
                     openLoadModal(saveFile, SaveInfo);
                 }
@@ -107,11 +111,15 @@ public class SaveManager : MonoBehaviour
         Button confirmButton = popup.GetChild(2).GetComponent<Button>();
         Button cancelButton = popup.GetChild(1).GetComponent<Button>();
         cancelButton.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if(!SF.saveFile.Settings.MuteGame) {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            }
             Destroy(SaveModalWindowClone.gameObject);
         });
         confirmButton.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if(!SF.saveFile.Settings.MuteGame) {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            }
             SavesInfo.MostRecentSaveIndex = indx;
             SavesInfo.ChapterOfSaves[indx] = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
@@ -170,12 +178,16 @@ public class SaveManager : MonoBehaviour
         Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
         Button cancelButton = LoadModalWindowClone.GetChild(2).GetComponent<Button>();
         cancelButton.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if(!SF.saveFile.Settings.MuteGame) {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            }
             Destroy(LoadModalWindowClone.gameObject);
         });
 
         confirmButton.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if(!SF.saveFile.Settings.MuteGame) {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            }
             LoadSavesFile(SaveInfo);
             RefreshApps();
             LoadGame(saveFile);
