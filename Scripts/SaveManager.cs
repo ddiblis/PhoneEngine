@@ -24,6 +24,7 @@ public class SaveManager : MonoBehaviour
     public ChapImport chap;
     public InstaPostsManager IPM;
     public SaveFile SF;
+    public DBHandler DB;
     
 
 
@@ -223,8 +224,9 @@ public class SaveManager : MonoBehaviour
         JsonUtility.FromJsonOverwrite(fileContents, SF.saveFile);
 
         SF.saveFile.selectedIndex = int.MinValue;
-        chap.GenerateChapterList();
-        MH.GeneratePhotoList();
+        DB.GenerateChapterList();
+        DB.GeneratePhotoList();
+        DB.GenerateMidrollsList();
         IPM.GenPostsList();
 
 
@@ -237,13 +239,22 @@ public class SaveManager : MonoBehaviour
 
         SF.saveFile.SavedMessages = new List<SavedMessage>();
 
-
-        if (SF.saveFile.CurrStoryPoint.ChapIndex < SF.saveFile.ChapterList.Count){
+        if (SF.saveFile.PlayingMidRoll) {
             MH.ChapterSelect(
-                SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex],
+                "Midrolls",
+                SF.saveFile.MidRolls[SF.saveFile.CurrMidRoll].MidrollName,
                 SF.saveFile.CurrStoryPoint.SubChapIndex,
                 SF.saveFile.CurrStoryPoint.CurrTextIndex
             );
+        } else {
+            if (SF.saveFile.CurrStoryPoint.ChapIndex < SF.saveFile.ChapterList.Count){
+                MH.ChapterSelect(
+                    "Chapters",
+                    SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex],
+                    SF.saveFile.CurrStoryPoint.SubChapIndex,
+                    SF.saveFile.CurrStoryPoint.CurrTextIndex
+                );
+            }
         }
         populateAutoSaveCard();
     }

@@ -35,6 +35,8 @@ public class MessagingHandlers : MonoBehaviour {
     public SaveFile SF;
     public DBHandler DB;
     public InstaPostsManager IPM;
+    int MidrollCount = 2;
+
 
 
     ChapImport.Chapter CurrChap;
@@ -49,51 +51,12 @@ public class MessagingHandlers : MonoBehaviour {
         });
     }
 
-    public void GenerateContactsList() {
-        if (DB.DataBase.ContactList.Count != SF.saveFile.ContactsList.Count) {
-            for (int i = SF.saveFile.ContactsList.Count; i < DB.DataBase.ContactList.Count; i++) {
-                SF.saveFile.ContactsList.Add(
-                    new Contact{ 
-                        NameOfContact = DB.DataBase.ContactList[i],
-                        Unlocked = false 
-                    }
-                );
-            }
-        }
-    }
-
     // creates as many messageLists as needed for the contacts and hides them.
     public void GenerateMessageLists() {
         for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
             Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
             gen.Hide(Shared.content.GetChild(i));
         } 
-    }
-
-    public void GeneratePhotoList() {
-        if (DB.DataBase.PhotoList.Count != SF.saveFile.Photos.Count) {
-            for (int i = SF.saveFile.Photos.Count; i < DB.DataBase.PhotoList.Count; i++) {
-                SF.saveFile.Photos.Add(
-                    new Photo{ 
-                        Category = DB.DataBase.PhotoList[i].Split("-")[0],
-                        ImageName = DB.DataBase.PhotoList[i],
-                        Seen = false 
-                    }
-                );
-                if (!SF.saveFile.PhotoCategories.Any(x => x.Category == DB.DataBase.PhotoList[i].Split("-")[0])) {
-                    SF.saveFile.PhotoCategories.Add(
-                        new PhotoCategory{
-                            Category = DB.DataBase.PhotoList[i].Split("-")[0],
-                            NumberSeen = 0,
-                            NumberAvaliable = 1
-                        }
-                    );
-                } else {
-                    int Category = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == DB.DataBase.PhotoList[i].Split("-")[0]);
-                    SF.saveFile.PhotoCategories[Category].NumberAvaliable += 1;
-                }
-            }
-        }
     }
 
     public void SetInitialGallary() {
@@ -106,19 +69,20 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void NewGame() {
-        chap.GenerateChapterList();
         SF.saveFile.selectedIndex = int.MinValue;
-        GeneratePhotoList();
+        DB.GeneratePhotoList();
+        DB.GenerateChapterList();
+        DB.GenerateMidrollsList();
         SetInitialGallary();
         gen.SetWallPaper(SF.saveFile.CurrWallPaper);
         SM.GenerateSaves(10);
         IPM.GenPostsList();
-        CurrChap = chap.GetChapter("chapter1");
+        CurrChap = chap.GetChapter("Chapters", "chapter1");
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
     }
 
-    public void ChapterSelect(string Chapter, int subChapIndex = 0, int currentText = 0) {
-        CurrChap = chap.GetChapter(Chapter);
+    public void ChapterSelect(string type, string Chapter, int subChapIndex = 0, int currentText = 0) {
+        CurrChap = chap.GetChapter(type, Chapter);
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
     }
     
@@ -220,6 +184,32 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
+    // Unlocks contact if they're not already unlocked: displays their contact card    
+    public void UnlockContact(int indexOfContact) {
+        if (!SF.saveFile.ContactsList[indexOfContact].Unlocked) {
+            SF.saveFile.ContactsList[indexOfContact].Unlocked = true;
+        }   
+    }
+
+    // Unlocks InstaPosts Profile of account
+    public void UnlockInstaAccount(string InstaAccount) {
+        if (InstaAccount.Length > 0) {
+            SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].Unlocked = true;
+        }
+    }
+
+    public void UnlockInstaPosts(ChapImport.SubChap subChap, string InstaAccount) {
+        // Unlocks specified posts
+        if (subChap.UnlockPosts.Count > 0) {
+            for (int i = 0; i < subChap.UnlockPosts.Count; i++) {
+                if(!SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked){
+                    SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
+                }
+                SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked = true;
+            }
+        }
+    }
+
     // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
     public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap, int startingText = 0) {
         int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == subChap.Contact);
@@ -230,25 +220,11 @@ public class MessagingHandlers : MonoBehaviour {
 
         Sprite pfp = Resources.Load("Images/Headshots/" + subChap.Contact, typeof(Sprite)) as Sprite;
 
-        // Unlocks contact if they're not already unlocked: displays their contact card    
-        if (!SF.saveFile.ContactsList[indexOfContact].Unlocked) {
-            SF.saveFile.ContactsList[indexOfContact].Unlocked = true;
-        }   
+        UnlockContact(indexOfContact);
 
-        // Unlocks InstaPosts Profile of account
-        if (InstaAccount.Length > 0) {
-            SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].Unlocked = true;
-        }
+        UnlockInstaAccount(InstaAccount);
 
-        // Unlocks specified posts
-        if (subChap.UnlockPosts.Count > 0) {
-            for (int i = 0; i < subChap.UnlockPosts.Count; i++) {
-                if(!SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked){
-                    SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
-                }
-                SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked = true;
-            }
-        }
+        UnlockInstaPosts(subChap, InstaAccount);
 
         if (!SF.saveFile.ChoiceNeeded) {
             // Sends indicator of time passed
@@ -265,13 +241,44 @@ public class MessagingHandlers : MonoBehaviour {
             SF.saveFile.ChoiceNeeded = true;
             PopulateResps(subChap.Responses);
         } else {
-            yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0]));
-            
-            SF.saveFile.CurrStoryPoint.ChapIndex += 1;
-            if (SF.saveFile.CurrStoryPoint.ChapIndex <= SF.saveFile.ChapterList.Count -1) {
-                SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
-                ChapterSelect(SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex]);
+            if (subChap.TextList.Count > 0) {
+                yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0]));
             }
+            SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
+            if (SF.saveFile.MidRollCount > 0) {
+                SF.saveFile.PlayingMidRoll = true;
+                PlayMidrolls();
+            } else {
+                PlayNextChapter();
+            }
+        }
+    }
+
+    public void PlayNextChapter() {
+        SF.saveFile.CurrStoryPoint.ChapIndex += 1;
+        if (SF.saveFile.CurrStoryPoint.ChapIndex <= SF.saveFile.ChapterList.Count -1) {
+            ChapterSelect("Chapters", SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex]);
+        }
+        SF.saveFile.MidRollCount = 2;
+        SF.saveFile.PlayingMidRoll = false;
+    }
+
+    public void PlayMidrolls() {
+        if (SF.saveFile.MidRolls.All(x => x.Seen == true)) {
+            SF.saveFile.MidRollCount = 0;
+            SF.saveFile.PlayingMidRoll = false;
+            PlayNextChapter();
+            return;
+        }
+        System.Random rnd = new System.Random();
+        int MidRollIndex = rnd.Next(0, SF.saveFile.MidRolls.Count); 
+        if (!SF.saveFile.MidRolls[MidRollIndex].Seen) {
+            SF.saveFile.CurrMidRoll = MidRollIndex;
+            SF.saveFile.MidRollCount -= 1;
+            ChapterSelect("Midrolls", SF.saveFile.MidRolls[MidRollIndex].MidrollName);
+            SF.saveFile.MidRolls[MidRollIndex].Seen = true;
+        } else {
+            PlayMidrolls();
         }
     }
 

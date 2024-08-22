@@ -27,7 +27,7 @@ public class OnAwake : MonoBehaviour
         // These functions belong here, stop trying to move them
         DB.LoadDB();
         MH.BackButton();
-        MH.GenerateContactsList();
+        DB.GenerateContactsList();
         MH.GenerateMessageLists();
         CH.GenerateContactCards();
 

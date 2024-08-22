@@ -2856,6 +2856,7 @@ MonoBehaviour:
     Posts: []
     PhotoCategories: []
     Photos: []
+    MidRolls: []
 --- !u!114 &492607246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2868,10 +2869,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e7f64727dfde5509d1c1ae034bde95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SF: {fileID: 492607245}
   DataBase:
     ContactList: []
     ChapterList: []
     PhotoList: []
+    MidrollsList: []
 --- !u!1 &506715762
 GameObject:
   m_ObjectHideFlags: 0
@@ -5690,6 +5693,7 @@ MonoBehaviour:
   SF: {fileID: 492607245}
   SM: {fileID: 1546402603}
   MH: {fileID: 1448356997}
+  DB: {fileID: 492607246}
   Saves: {fileID: 492607243}
   Shared: {fileID: 492607239}
   preFabs: {fileID: 492607241}
@@ -5932,6 +5936,7 @@ MonoBehaviour:
   chap: {fileID: 1448356999}
   IPM: {fileID: 1924683176}
   SF: {fileID: 492607245}
+  DB: {fileID: 492607246}
 --- !u!95 &1546402604
 Animator:
   serializedVersion: 5

@@ -54,7 +54,7 @@ public class ChapSelectManager : MonoBehaviour
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
             SM.RefreshApps();
             FixSaveFileForChap(indx);
-            MH.ChapterSelect(SF.saveFile.ChapterList[indx]);
+            MH.ChapterSelect("Chapters", SF.saveFile.ChapterList[indx]);
             Destroy(LoadModalWindowClone.gameObject);
         });
     }

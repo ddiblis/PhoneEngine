@@ -43,20 +43,9 @@ public class ChapImport : MonoBehaviour {
 
     public Chapter myChapter = new Chapter();
     [SerializeField] 
-    public Chapter GetChapter(string Chapter) {
-        TextAsset ChapterFile = Resources.Load<TextAsset>("Chapters/" + Chapter);
+    public Chapter GetChapter(string type, string Chapter) {
+        TextAsset ChapterFile = Resources.Load<TextAsset>(type + "/" + Chapter);
         myChapter = JsonUtility.FromJson<Chapter>(ChapterFile.text);
         return myChapter;
     }
-
-    public void GenerateChapterList() {
-        if (DB.DataBase.ChapterList.Count != SF.saveFile.ChapterList.Count) {
-            for (int i = SF.saveFile.ChapterList.Count; i < DB.DataBase.ChapterList.Count; i++) {
-                SF.saveFile.ChapterList.Add(
-                    DB.DataBase.ChapterList[i]
-                );
-            }
-        }
-    }
-    
 }

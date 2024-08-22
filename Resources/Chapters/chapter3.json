@@ -5,9 +5,9 @@
         {
             "SubChapNum": 0,
             "Contact": "gf",
-            "TimeIndicator": "4 days later",
-            "TextList": ["Hey hon", "Day at the park"],
-            "ResponseTime": [0.5, 0.5],
+            "TimeIndicator": "2 days later",
+            "TextList": ["Hey hon", "testing chapter 3", "There are no more subchaps"],
+            "ResponseTime": [0.5, 0.5, 0.9],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
@@ -20,7 +20,7 @@
             "SubChapNum": 6,
             "Contact": "gf",
             "TimeIndicator": "",
-            "TextList": [],
+            "TextList": ["End of chapter 3"],
             "ResponseTime": [0.5],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],

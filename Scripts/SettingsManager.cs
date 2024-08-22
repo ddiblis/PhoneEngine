@@ -10,6 +10,7 @@ public class SettingsManager : MonoBehaviour {
     public SaveFile SF;
     public SaveManager SM;
     public MessagingHandlers MH;
+    public DBHandler DB;
     public SavesFile Saves;
     public SharedObjects Shared;
     public PreFabs preFabs;
@@ -124,8 +125,8 @@ public class SettingsManager : MonoBehaviour {
             MuteSlider.Play("Turn-Off-Slider");
             SM.RefreshApps();
             ResetSaves();
-            MH.GenerateContactsList();
-            MH.GeneratePhotoList();
+            DB.GenerateContactsList();
+            DB.GeneratePhotoList();
             SM.RefreshSaveList();
             MH.NewGame();
             Destroy(LoadModalWindowClone.gameObject);

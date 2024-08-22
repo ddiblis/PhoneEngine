@@ -44,9 +44,12 @@ using UnityEngine;
     public class SaveFileRoot {
         public int contactPush;
         public int selectedIndex;
+        public int MidRollCount = 2;
+        public int CurrMidRoll;
         public int NumberOfSaves;
         public string CurrWallPaper;
         public bool ChoiceNeeded;
+        public bool PlayingMidRoll;
         public Settings Settings = new Settings();
         public List<Contact> ContactsList = new List<Contact>();
         public List<string> ChapterList = new List<string>();
@@ -56,7 +59,13 @@ using UnityEngine;
         public List<SavedPost> Posts = new List<SavedPost>();
         public List<PhotoCategory> PhotoCategories = new List<PhotoCategory>();
         public List<Photo> Photos = new List<Photo>();
-        
+        public List<MidRoll> MidRolls = new List<MidRoll>(); 
+    }
+
+    [System.Serializable]
+    public class MidRoll {
+        public string MidrollName;
+        public bool Seen;
     }
 
     [System.Serializable]
@@ -89,8 +98,7 @@ using UnityEngine;
         public int NumberAvaliable;
     }
 
-public class SaveFile : MonoBehaviour
-{
+public class SaveFile : MonoBehaviour {
     public SaveFileRoot saveFile = new SaveFileRoot();
 
 }
