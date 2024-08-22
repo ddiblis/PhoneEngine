@@ -44,6 +44,7 @@ using UnityEngine;
     public class SaveFileRoot {
         public int contactPush;
         public int selectedIndex;
+        public bool AllowMidrolls;
         public int MidRollCount = 2;
         public int CurrMidRoll;
         public int NumberOfSaves;

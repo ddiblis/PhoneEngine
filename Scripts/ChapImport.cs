@@ -23,7 +23,6 @@ public class ChapImport : MonoBehaviour {
     [System.Serializable]
     public class Chapter
     {
-        public bool ChapComplete;
         public bool AllowMidrolls;
         public List<SubChap> SubChaps;
     }

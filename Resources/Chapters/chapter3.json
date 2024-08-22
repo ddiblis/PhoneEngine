@@ -1,6 +1,5 @@
 {
-    "ChapComplete": false,
-    "AllowMidrolls": false,
+    "AllowMidrolls": true,
     "SubChaps":[
         {
             "SubChapNum": 0,

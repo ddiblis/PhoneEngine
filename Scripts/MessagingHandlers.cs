@@ -77,12 +77,14 @@ public class MessagingHandlers : MonoBehaviour {
         gen.SetWallPaper(SF.saveFile.CurrWallPaper);
         SM.GenerateSaves(10);
         IPM.GenPostsList();
-        CurrChap = chap.GetChapter("Chapters", "chapter1");
-        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[0]));
+        ChapterSelect("Chapters", "chapter1");
     }
 
     public void ChapterSelect(string type, string Chapter, int subChapIndex = 0, int currentText = 0) {
         CurrChap = chap.GetChapter(type, Chapter);
+        if (type == "Chapters") {
+            SF.saveFile.AllowMidrolls = CurrChap.AllowMidrolls;
+        }
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
     }
     
@@ -245,7 +247,7 @@ public class MessagingHandlers : MonoBehaviour {
                 yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0]));
             }
             SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
-            if (SF.saveFile.MidRollCount > 0) {
+            if (SF.saveFile.MidRollCount > 0  && SF.saveFile.AllowMidrolls) {
                 SF.saveFile.PlayingMidRoll = true;
                 PlayMidrolls();
             } else {

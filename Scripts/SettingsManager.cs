@@ -137,6 +137,7 @@ public class SettingsManager : MonoBehaviour {
         Shared.Wallpaper.GetComponent<AudioSource>().mute = state;
         Shared.notificationArea.GetComponent<AudioSource>().mute = state;
         SettingsList.GetComponent<AudioSource>().mute = state;
+        Shared.content.GetComponent<AudioSource>().mute = state;
     }
 
     public void ResetSaves() {
