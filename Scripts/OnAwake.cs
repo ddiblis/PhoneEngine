@@ -13,8 +13,9 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Drawing;
 
+// Namespace PhoneEngine {}
 public class OnAwake : MonoBehaviour
-{
+{   
     public MessagingHandlers MH;
     public SaveManager SM;
     public ContactsHandler CH;
@@ -38,7 +39,7 @@ public class OnAwake : MonoBehaviour
         }
 
         Settings.MuteAudio(SF.saveFile.Settings.MuteGame);
-        
+
         if (SF.saveFile.Settings.FullScreen) {
             Screen.SetResolution(Screen.currentResolution.width, Screen.currentResolution.height, true);
         } else {

@@ -1,5 +1,6 @@
 {
     "ChapComplete": false,
+    "AllowMidrolls": true,
     "SubChaps":[
         {
             "SubChapNum": 0,
@@ -10,6 +11,7 @@
             "UnlockInstaPostsAccount": "gf",
             "UnlockPosts": [0, 1],
             "Responses": {
+                "RespTree": false,
                 "Resps": ["this is the response for the top button", "this the response for the bottom button"],
                 "NextChap": [1, 2]
             }
@@ -23,6 +25,7 @@
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
+                "RespTree": false,
                 "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
                 "NextChap": [2, 2]
             }
@@ -36,6 +39,7 @@
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
+                "RespTree": false,
                 "Resps": ["this is a choice only response1", "this is a choice only response2"],
                 "NextChap": [3, 3]
             }
@@ -49,6 +53,7 @@
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
+                "RespTree": false,
                 "Resps": ["[bf-heart]", "[hot]"],
                 "NextChap": [4, 4]
             }
@@ -62,6 +67,7 @@
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
+                "RespTree": false,
                 "Resps": ["{gf-car2}", "this is a choice only response2"],
                 "NextChap": [5, 5]
             }
@@ -75,19 +81,63 @@
             "UnlockInstaPostsAccount": "blonde",
             "UnlockPosts": [2],
             "Responses": {
+                "RespTree": false,
                 "Resps": ["this is a choice to blonde1", "this is a choice to blonde1"],
                 "NextChap": [6, 6]
             }
         },
         {
             "SubChapNum": 6,
-            "Contact": "gf",
+            "Contact": "blonde",
+            "TimeIndicator": "",
+            "TextList": ["test the response tree please"],
+            "ResponseTime": [1.7],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": {
+                "RespTree": true,
+                "Resps": ["I want to try...", "Take off your..."],
+                "NextChap": [7, 8]
+            }
+        },
+        {
+            "SubChapNum": 7,
+            "Contact": "blonde",
+            "TimeIndicator": "",
+            "TextList": [],
+            "ResponseTime": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": {
+                "RespTree": false,
+                "Resps": ["I want to try having a life", "I want to try to live better"],
+                "NextChap": [9, 9]
+            }
+        },
+        {
+            "SubChapNum": 8,
+            "Contact": "blonde",
+            "TimeIndicator": "",
+            "TextList": [],
+            "ResponseTime": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": {
+                "RespTree": false,
+                "Resps": ["Take off your bra", "Take off your panties"],
+                "NextChap": [9, 9]
+            }
+        },
+        {
+            "SubChapNum": 9,
+            "Contact": "blonde",
             "TimeIndicator": "",
             "TextList": ["End of chapter 1"],
             "ResponseTime": [0.5],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
+                "RespTree": false,
                 "Resps": [],
                 "NextChap": []
             }

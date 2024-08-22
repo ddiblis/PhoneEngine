@@ -14,6 +14,7 @@ public class ChapImport : MonoBehaviour {
     [System.Serializable]
     public class Responses
     {
+        public bool RespTree;
         public List<string> Resps;
         public List<int> NextChap;
 
@@ -23,6 +24,7 @@ public class ChapImport : MonoBehaviour {
     public class Chapter
     {
         public bool ChapComplete;
+        public bool AllowMidrolls;
         public List<SubChap> SubChaps;
     }
 

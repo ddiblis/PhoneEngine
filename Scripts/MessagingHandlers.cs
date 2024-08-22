@@ -125,19 +125,19 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Creates and pushes the response buttons/hides them if they're not meant for currently viewed contact
     // Arguments taken from json file through StartMessagesCoroutine
-    public void PopulateResps(List<string> Resps, List<int> NextChap){
-        for (int i = 0; i < Resps.Count; i++) {
-            string item = Resps[i];
+    public void PopulateResps(ChapImport.Responses responses){
+        for (int i = 0; i < responses.Resps.Count; i++) {
+            string item = responses.Resps[i];
             if (item.Contains("{")){
                 Sprite img = Resources.Load("Images/Photos/" + item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, NextChap, TypeOfText.sentImage, item, img);
+                ImageButton(i, responses.NextChap, TypeOfText.sentImage, item, img);
             } 
             else if (item.Contains("[")){
                 Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, NextChap, TypeOfText.sentEmoji, item, img);
+                ImageButton(i, responses.NextChap, TypeOfText.sentEmoji, item, img);
             }
             else {
-                TextButton(i, NextChap, item);
+                TextButton(i, responses.NextChap, item, responses.RespTree);
             }
         }
         if (SF.saveFile.contactPush != SF.saveFile.selectedIndex){
@@ -263,9 +263,10 @@ public class MessagingHandlers : MonoBehaviour {
 
         if (subChap.Responses.Resps.Count > 0){
             SF.saveFile.ChoiceNeeded = true;
-            PopulateResps(subChap.Responses.Resps, subChap.Responses.NextChap);
+            PopulateResps(subChap.Responses);
         } else {
             yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0]));
+            
             SF.saveFile.CurrStoryPoint.ChapIndex += 1;
             if (SF.saveFile.CurrStoryPoint.ChapIndex <= SF.saveFile.ChapterList.Count -1) {
                 SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
@@ -371,7 +372,7 @@ public class MessagingHandlers : MonoBehaviour {
     // indx: automated through forloop, handles destruction of buttons and next chap queuing
     // NextChap: list of ints, each for the next subchap to play based on click.
     // textContent: text to display and send.
-    public void TextButton(int indx, List<int> NextChap, string textContent) {
+    public void TextButton(int indx, List<int> NextChap, string textContent, bool RespTree) {
         GameObject ChoiceClone =
             Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(1).gameObject);
@@ -379,8 +380,10 @@ public class MessagingHandlers : MonoBehaviour {
         textObject.GetComponent<TextMeshProUGUI>().text = textContent;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            Shared.choices.transform.GetComponent<AudioSource>().Play();
-            MessageListLimit(TypeOfText.sentText, messageContent: textContent);
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if (!RespTree) {
+                MessageListLimit(TypeOfText.sentText, messageContent: textContent);
+            }
             ChoiceButtonClick(NextChap, indx, ChoiceClone);
         });
     }
@@ -400,18 +403,22 @@ public class MessagingHandlers : MonoBehaviour {
         imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
-            Shared.choices.transform.GetComponent<AudioSource>().Play();
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
             if (type == TypeOfText.sentImage) {
                 string ImageName = imgName[1..^1];
                 int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
-                if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
-                    SF.saveFile.Photos[indexOfPhoto].Seen = true;
-                    int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
-                    SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
-                }
+                UnlockImage(indexOfPhoto, ImageName);
             }
             MessageListLimit(type, imgName, image);
             ChoiceButtonClick(NextChap, indx, ChoiceClone);
         });
+    }
+
+    public void UnlockImage(int indexOfPhoto, string ImageName){
+        if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
+            SF.saveFile.Photos[indexOfPhoto].Seen = true;
+            int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
+            SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
+        }
     }
 }
