@@ -10,6 +10,7 @@ using UnityEngine.TextCore.Text;
 using System.IO;
 using System.Linq;
 using System;
+using System.Diagnostics;
 
 
 // Simple enum used for determining the type of text being sent/recieved.
@@ -93,19 +94,13 @@ public class MessagingHandlers : MonoBehaviour {
     public void PopulateResps(Responses responses){
         for (int i = 0; i < responses.RespContent.Count; i++) {
             Response resp = responses.RespContent[i];
-            if (resp.Type == (int)TypeOfText.sentImage){
-                ImageButton(resp);
-                // Sprite img = Resources.Load("Images/Photos/" + resp.TextContent, typeof(Sprite)) as Sprite;
-                // ImageButton(i, resp.SubChapNum, TypeOfText.sentImage, item, img);
-            } 
-            else if (resp.Type == (int)TypeOfText.sentEmoji){
-                ImageButton(resp);
-                // Sprite img = Resources.Load("Images/Emojis/" + resp.TextContent, typeof(Sprite)) as Sprite;
-                // ImageButton(i, resp.SubChapNum, TypeOfText.sentEmoji, item, img);
-            }
-            else {
-                TextButton(resp, responses.RespTree);
-                // TextButton(i, resp.SubChapNum, item, responses.RespTree);
+            switch (resp.Type) {
+                case (int)TypeOfText.sentText:
+                    TextButton(resp, responses.RespTree); 
+                break;
+                default:
+                    ImageButton(resp);
+                break;
             }
         }
         if (SF.saveFile.contactPush != SF.saveFile.selectedIndex){
@@ -114,76 +109,46 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     #nullable enable
-    public void GenerateMessage(TypeOfText type, string textContent, string imgName, Sprite? pfp = null, Sprite? image = null) {
+    public void GenerateMessage(TextMessage textMessage, Sprite? pfp = null) {
         bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
         if (viewingScreen) {
             Shared.content.GetComponent<AudioSource>().Play();   
         }
-        switch (type) {
+        switch ((TypeOfText) textMessage.Type) {
             case TypeOfText.recText:
-                pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recText, messageContent: textContent);
+                pushNotification(pfp, textMessage.TextContent);
             break;
             case TypeOfText.recImage:
-                pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recImage, imgName, image);
+                pushNotification(pfp);
             break;
             case TypeOfText.recEmoji:
-                pushNotification(pfp, textContent);
-                MessageListLimit(TypeOfText.recEmoji, imgName, image);
-            break;
-            case TypeOfText.chapEnd:
-                MessageListLimit(TypeOfText.chapEnd, messageContent: textContent);
-            break;
-            case TypeOfText.indicateTime:
-                MessageListLimit(TypeOfText.indicateTime, messageContent: textContent);
+                pushNotification(pfp);
             break;
         }
+        MessageListLimit(textMessage);
     }
 
     // Handles wait time for the messages recieved so they don't all display at once.
-    // TypeOfText: an enum object that denotes the type of text we're sending
-    // respTime: time to wait before sending the text.
-    // image: optional. The image to send (emoji, photo)
-    // messageContent: text of the message
-    public IEnumerator MessageDelay(
-        TypeOfText type,
-        float respTime,
-        Sprite? pfp = null,
-        Sprite? image = null,
-        string textContent = "Picture Message",
-        string imgName = ""
+        public IEnumerator MessageDelay(
+        TextMessage textMessage,
+        Sprite? pfp = null
     ) {
         if (SF.saveFile.Settings.FasterReplies) {
-            yield return new WaitForSeconds(respTime/2);
+            yield return new WaitForSeconds(textMessage.TextDelay/2);
         } else {
-            yield return new WaitForSeconds(respTime);
+            yield return new WaitForSeconds(textMessage.TextDelay);
         }
-        GenerateMessage(type, textContent, imgName, pfp, image);
+        GenerateMessage(textMessage, pfp);
     }
     # nullable disable
 
-    public IEnumerator RecieveTexts(List<TextMessage> TextList, Sprite pfp, int startingText = 0) {
+    public IEnumerator RecieveTexts(List<TextMessage> TextList, string Contact, int startingText = 0) {
+        Sprite pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;
+
         for (int i = startingText; i < TextList.Count; i++) {
             SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
             TextMessage textMessage = TextList[i];
-            if (textMessage.Type == (int)TypeOfText.recImage){
-                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == textMessage.TextContent);
-                if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
-                    SF.saveFile.Photos[indexOfPhoto].Seen = true;
-                    int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == textMessage.TextContent.Split("-")[0]);
-                    SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
-                }
-                Sprite img = Resources.Load("Images/Photos/" + textMessage.TextContent, typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(MessageDelay(TypeOfText.recImage, textMessage.TextDelay, pfp, img, imgName: textMessage.TextContent));
-            } 
-            else if (textMessage.Type == (int)TypeOfText.recEmoji){
-                Sprite img = Resources.Load("Images/Emojis/" + textMessage.TextContent, typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(MessageDelay(TypeOfText.recEmoji, textMessage.TextDelay, pfp, img, imgName: textMessage.TextContent));
-            }
-            else {
-                yield return StartCoroutine(MessageDelay(TypeOfText.recText, textMessage.TextDelay, pfp, textContent: textMessage.TextContent));
-            }
+            yield return StartCoroutine(MessageDelay(textMessage, pfp));
         }
     }
 
@@ -221,8 +186,6 @@ public class MessagingHandlers : MonoBehaviour {
         // Chooses messageList parent for messages to be pushed to
         SF.saveFile.contactPush = indexOfContact;
 
-        Sprite pfp = Resources.Load("Images/Headshots/" + subChap.Contact, typeof(Sprite)) as Sprite;
-
         UnlockContact(indexOfContact);
 
         UnlockInstaAccount(InstaAccount);
@@ -232,11 +195,15 @@ public class MessagingHandlers : MonoBehaviour {
         if (!SF.saveFile.ChoiceNeeded) {
             // Sends indicator of time passed
             if (subChap.TimeIndicator.Length > 0 && SF.saveFile.CurrStoryPoint.CurrTextIndex == 0){
-                yield return StartCoroutine(MessageDelay(TypeOfText.indicateTime, 1.5f, textContent: subChap.TimeIndicator));
+                yield return StartCoroutine(MessageDelay(new TextMessage {
+                    Type = (int) TypeOfText.indicateTime,
+                    TextDelay = 1.5f,
+                    TextContent = subChap.TimeIndicator
+                }));
             }
             
             if (subChap.TextList.Count == 1 || SF.saveFile.CurrStoryPoint.CurrTextIndex + 1 != subChap.TextList.Count){
-                yield return StartCoroutine(RecieveTexts(subChap.TextList, pfp, startingText));
+                yield return StartCoroutine(RecieveTexts(subChap.TextList, subChap.Contact, startingText));
             }
         }
 
@@ -244,9 +211,6 @@ public class MessagingHandlers : MonoBehaviour {
             SF.saveFile.ChoiceNeeded = true;
             PopulateResps(subChap.Responses);
         } else {
-            if (subChap.TextList.Count > 0) {
-                yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0].TextContent) );
-            }
             SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
             if (SF.saveFile.MidRollCount > 0  && SF.saveFile.AllowMidrolls) {
                 SF.saveFile.PlayingMidRoll = true;
@@ -300,24 +264,29 @@ public class MessagingHandlers : MonoBehaviour {
     // Handles the building and pushing of image messages to the message list object.
     // imageMessage: the prefab of which type of image text we're sending/recieving.
     // image: the actual image to be sent.
-    public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage, Sprite image) {
+    public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage) {
+        Sprite image;
         GameObject messageClone =
             Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         GameObject imageContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
 
-        imageContent.GetComponent<Image>().sprite = image;
-        textContent.GetComponent<TextMeshProUGUI>().text = imgName;
-        typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
-
-        if (type == TypeOfText.recImage || type == TypeOfText.sentImage) {
+        if(type == TypeOfText.recImage || type == TypeOfText.sentImage) {
+            UnlockImage(imgName);
+            image = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
             button.onClick.AddListener(() => {
                 Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                gen.ModalWindowOpen(image, imgName[1..^1]);
+                gen.ModalWindowOpen(image, imgName);
             });
+        } else {
+            image = Resources.Load("Images/Emojis/" + imgName, typeof(Sprite)) as Sprite;
         }
+
+        imageContent.GetComponent<Image>().sprite = image;
+        textContent.GetComponent<TextMeshProUGUI>().text = imgName;
+        typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
     }
 
     // Handles message limits for all types of texts to the messageList
@@ -325,39 +294,39 @@ public class MessagingHandlers : MonoBehaviour {
     // image: optional field in case we're sending an image
     // messageContent: default to "" in case you're sending an image.
     #nullable enable
-    public void MessageListLimit(TypeOfText type, string imgName = "", Sprite? image = null ,string messageContent = "") {
+    public void MessageListLimit(TextMessage textMessage) {
         if (Shared.content.GetChild(SF.saveFile.contactPush).childCount >= 25){
             Destroy(Shared.content.GetChild(SF.saveFile.contactPush).GetChild(0).gameObject);
         } 
-        switch(type){
+        switch((TypeOfText) textMessage.Type){
             case TypeOfText.sentText:
-                TextPush(TypeOfText.sentText, Prefabs.sentText, messageContent);
+                TextPush(TypeOfText.sentText, Prefabs.sentText, textMessage.TextContent);
             break;
             case TypeOfText.recText:
-                TextPush(TypeOfText.recText, Prefabs.recText, messageContent);
+                TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
             break;
             case TypeOfText.sentEmoji:
-                ImagePush(TypeOfText.sentEmoji, imgName, Prefabs.sentEmoji, image);
+                ImagePush(TypeOfText.sentEmoji, textMessage.TextContent, Prefabs.sentEmoji);
             break;
             case TypeOfText.recEmoji:
-                ImagePush(TypeOfText.recEmoji, imgName,Prefabs.recEmoji, image);
+                ImagePush(TypeOfText.recEmoji, textMessage.TextContent,Prefabs.recEmoji);
             break;
             case TypeOfText.sentImage:
-                ImagePush(TypeOfText.sentImage, imgName,Prefabs.sentImage, image);
+                ImagePush(TypeOfText.sentImage, textMessage.TextContent,Prefabs.sentImage);
             break;
             case TypeOfText.recImage:
-                ImagePush(TypeOfText.recImage, imgName,Prefabs.recImage, image);
+                ImagePush(TypeOfText.recImage, textMessage.TextContent,Prefabs.recImage);
             break;
             case TypeOfText.chapEnd:
-                TextPush(TypeOfText.chapEnd, Prefabs.ChapComplete, messageContent);
+                TextPush(TypeOfText.chapEnd, Prefabs.ChapComplete, textMessage.TextContent);
             break;
             case TypeOfText.indicateTime:
-                TextPush(TypeOfText.indicateTime, Prefabs.TimeIndicator, messageContent);
+                TextPush(TypeOfText.indicateTime, Prefabs.TimeIndicator, textMessage.TextContent);
             break;
         }
     }
 
-    public void pushNotification(Sprite? pfp, string textContent) {
+    public void pushNotification(Sprite? pfp, string textContent = "Photo Message") {
         bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {
@@ -376,12 +345,10 @@ public class MessagingHandlers : MonoBehaviour {
         foreach (Transform Child in Shared.choices) {
             Destroy(Child.gameObject);
         }
-        // Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
-        // Destroy(ChoiceClone);
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap]));
     }
 
-
+    // handles the building and pushing of the text choice buttons into the choices list
     public void TextButton(Response resp, bool RespTree) {
         GameObject ChoiceClone =
             Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
@@ -392,12 +359,16 @@ public class MessagingHandlers : MonoBehaviour {
         button.onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
             if (!RespTree) {
-                MessageListLimit(TypeOfText.sentText, messageContent: resp.TextContent);
+                MessageListLimit( new TextMessage {
+                    Type = (int)TypeOfText.sentText,
+                    TextContent = resp.TextContent
+                });
             }
             ChoiceButtonClick(resp.SubChapNum);
         });
     }
 
+    // handles the building and pushing of the image/emoji choice buttons into the choices list
     public void ImageButton(Response resp) {
         Sprite? image;
         GameObject ChoiceClone =
@@ -416,63 +387,16 @@ public class MessagingHandlers : MonoBehaviour {
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            if (resp.Type == (int)TypeOfText.sentImage) {
-                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == resp.TextContent);
-                UnlockImage(indexOfPhoto, resp.TextContent);
-            }
-            MessageListLimit((TypeOfText)resp.Type, resp.TextContent, image);
+            MessageListLimit(new TextMessage {
+                Type = resp.Type,
+                TextContent = resp.TextContent
+            });
             ChoiceButtonClick(resp.SubChapNum);
         });
     }
 
-
-    // handles the building and pushing of the text choice buttons into the choices list
-    // indx: automated through forloop, handles destruction of buttons and next chap queuing
-    // NextChap: list of ints, each for the next subchap to play based on click.
-    // textContent: text to display and send.
-    // public void TextButton(int indx, List<int> NextChap, string textContent, bool RespTree) {
-    //     GameObject ChoiceClone =
-    //         Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
-    //     Destroy(ChoiceClone.transform.GetChild(1).gameObject);
-    //     GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
-    //     textObject.GetComponent<TextMeshProUGUI>().text = textContent;
-    //     Button button = ChoiceClone.GetComponent<Button>();
-    //     button.onClick.AddListener(() => {
-    //         Shared.Wallpaper.GetComponent<AudioSource>().Play();
-    //         if (!RespTree) {
-    //             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
-    //         }
-    //         ChoiceButtonClick(NextChap, indx, ChoiceClone);
-    //     });
-    // }
-
-    // handles the building and pushing of the image/emoji choice buttons into the choices list
-    // indx: automated through forloop, handles destruction of buttons and next chap queuing
-    // NextChap: list of ints, each for the next subchap to play based on click.
-    // type: type of image (emoji/photo)
-    // image: sprite image to be sent (emoji/photo)
-    // public void ImageButton(int indx, List<int> NextChap, TypeOfText type, string imgName, Sprite image) {
-    //     GameObject ChoiceClone =
-    //         Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
-
-    //     Destroy(ChoiceClone.transform.GetChild(0).gameObject);
-    //     GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-    //     Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
-    //     imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
-    //     Button button = ChoiceClone.GetComponent<Button>();
-    //     button.onClick.AddListener(() => {
-    //         Shared.Wallpaper.GetComponent<AudioSource>().Play();
-    //         if (type == TypeOfText.sentImage) {
-    //             string ImageName = imgName[1..^1];
-    //             int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
-    //             UnlockImage(indexOfPhoto, ImageName);
-    //         }
-    //         MessageListLimit(type, imgName, image);
-    //         ChoiceButtonClick(NextChap, indx, ChoiceClone);
-    //     });
-    // }
-
-    public void UnlockImage(int indexOfPhoto, string ImageName){
+    public void UnlockImage(string ImageName){
+        int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
         if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
             SF.saveFile.Photos[indexOfPhoto].Seen = true;
             int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);

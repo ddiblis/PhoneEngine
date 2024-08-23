@@ -193,29 +193,6 @@ public class SaveManager : MonoBehaviour
         JsonUtility.FromJsonOverwrite(fileContents, SavesInfo);
     }
 
-    void handleImageMessages(TypeOfText MessageType, string TextContentOfMessage) {
-        if (MessageType == TypeOfText.recImage || MessageType == TypeOfText.sentImage){
-            Sprite img = Resources.Load("Images/Photos/" + TextContentOfMessage, typeof(Sprite)) as Sprite;
-            MH.MessageListLimit(MessageType, imgName: TextContentOfMessage, img);
-        } 
-        else {
-            Sprite img = Resources.Load("Images/Emojis/" + TextContentOfMessage, typeof(Sprite)) as Sprite;
-            MH.MessageListLimit(MessageType, imgName: TextContentOfMessage, img);
-        }
-    }
-
-    void LoadAllMessages(int MessageIndex) {
-        int type = SF.saveFile.SavedMessages[MessageIndex].TypeOfText;
-        TypeOfText MessageType = (TypeOfText)type;
-        string TextContentOfMessage = SF.saveFile.SavedMessages[MessageIndex].TextContent;
-        if(type == 0 || type == 1 || type == 6 || type == 8) {
-            MH.MessageListLimit(MessageType , messageContent: TextContentOfMessage);
-        } else {
-            handleImageMessages(MessageType, TextContentOfMessage);
-        }
-    }
-
-
     public void LoadGame(string saveFile) {
 
         string SaveFileName = Application.persistentDataPath + saveFile;
@@ -234,7 +211,10 @@ public class SaveManager : MonoBehaviour
         for (int i = 0; i < SF.saveFile.SavedMessages.Count; i++) {
             // Set the person the messages are for
             SF.saveFile.contactPush = SF.saveFile.SavedMessages[i].WhosIsItFor;
-            LoadAllMessages(i);
+            MH.MessageListLimit(new TextMessage {
+            Type = SF.saveFile.SavedMessages[i].TypeOfText,
+            TextContent = SF.saveFile.SavedMessages[i].TextContent
+        });
         }
 
         SF.saveFile.SavedMessages = new List<SavedMessage>();

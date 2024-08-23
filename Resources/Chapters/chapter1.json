@@ -360,7 +360,7 @@
                     "Type": 6,
                     "Tendency": 0,
                     "TextContent": "End of chapter 1",
-                    "TextDelay": 0.5
+                    "TextDelay": 1.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
