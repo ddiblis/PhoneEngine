@@ -5,28 +5,55 @@
             "SubChapNum": 0,
             "Contact": "gf",
             "TimeIndicator": "24 days later",
-            "TextList": ["Hey hon", "testing chapter 2"],
-            "ResponseTime": [0.5, 0.5],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "Hey hon",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "testing chapter 2",
+                    "TextDelay": 0.5
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["this is the response for the top button", "this the response for the bottom button"],
-                "NextChap": [1, 1]
+                "RespContent": [
+                    {
+                        "TextContent": "this is the response for the top button",
+                        "SubChapNum": 1,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "Take off your bra",
+                        "SubChapNum": 1,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 6,
             "Contact": "gf",
             "TimeIndicator": "6 hours later",
-            "TextList": ["End of chapter 2"],
-            "ResponseTime": [0.5],
+            "TextList": [
+                {
+                    "Type": 6,
+                    "Tendency": 0,
+                    "TextContent": "End of chapter 2",
+                    "TextDelay": 0.5
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": [],
-                "NextChap": []
+                "RespContent": []
             }
         }
     ]

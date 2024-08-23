@@ -1,32 +1,133 @@
 {
     "AllowMidrolls": true,
-    "SubChaps":[
+    "SubChaps": [
         {
             "SubChapNum": 0,
             "Contact": "gf",
             "TimeIndicator": "1 hours later",
-            "TextList": ["Hey hon", "testing scene 0", "hey honey I'm testing out sending you a super long text, don't mind me", "here's a picture to test", "{gf-standing}", "here's an emoji to test", "[gf-heart]", "{gf-standing}"],
-            "ResponseTime": [0.5, 0.5, 4.0, 1.0, 2.0, 1.7, 1.2, 0.5],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "Hey hon",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "testing scene 0",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "hey honey I'm testing out sending you a super long text, don't mind me",
+                    "TextDelay": 4.0
+                },
+                {
+                    "Type": 3,
+                    "Tendency": 0,
+                    "TextContent": "gf-standing",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "here's an emoji to test",
+                    "TextDelay": 1.7
+                },
+                {
+                    "Type": 5,
+                    "Tendency": 0,
+                    "TextContent": "gf-heart",
+                    "TextDelay": 1.2
+                },
+                {
+                    "Type": 3,
+                    "Tendency": 0,
+                    "TextContent": "gf-standing",
+                    "TextDelay": 0.5
+                }
+            ],
             "UnlockInstaPostsAccount": "gf",
-            "UnlockPosts": [0, 1],
+            "UnlockPosts": [
+                0,
+                1
+            ],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["this is the response for the top button", "this the response for the bottom button"],
-                "NextChap": [1, 2]
+                "RespContent": [
+                    {
+                        "TextContent": "this is the response for the top button",
+                        "SubChapNum": 1,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "this the response for the bottom button",
+                        "SubChapNum": 2,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 1,
             "Contact": "gf",
             "TimeIndicator": "2 hours later",
-            "TextList": ["Hey hon", "testing scene 1", "here's a picture to test", "{gf-car1}", "here's an emoji to test", "[gf-heart]"],
-            "ResponseTime": [0.5, 0.5, 0.5, 0.5, 2.0, 0.5],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "tendency": 0,
+                    "TextContent": "Hey hon",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "testing scene 1",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "here's a picture to test",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 3,
+                    "Tendency": 0,
+                    "TextContent": "gf-car1",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "here's an emoji to test",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 5,
+                    "Tendency": 0,
+                    "TextContent": "gf-heart",
+                    "TextDelay": 0.5
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["this is the response for the top button in subchap1", "this the response for the bottom button in subchap1"],
-                "NextChap": [2, 2]
+                "RespContent": [
+                    {
+                        "TextContent": "this is the response for the top button in subchap1",
+                        "SubChapNum": 2,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "this the response for the bottom button in subchap1",
+                        "SubChapNum": 2,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
@@ -34,69 +135,174 @@
             "Contact": "gf",
             "TimeIndicator": "",
             "TextList": [],
-            "ResponseTime": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["this is a choice only response1", "this is a choice only response2"],
-                "NextChap": [3, 3]
+                "RespContent": [
+                    {
+                        "TextContent": "this is a choice only response1",
+                        "SubChapNum": 3,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "this is a choice only response2",
+                        "SubChapNum": 3,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 3,
             "Contact": "gf",
             "TimeIndicator": "3 hours later",
-            "TextList": ["test sending me an emoji please"],
-            "ResponseTime": [1.7],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "test sending me an emoji please",
+                    "TextDelay": 1.7
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["[bf-heart]", "[hot]"],
-                "NextChap": [4, 4]
+                "RespContent": [
+                    {
+                        "TextContent": "bf-heart",
+                        "SubChapNum": 4,
+                        "Type": 4
+                    },
+                    {
+                        "TextContent": "hot",
+                        "SubChapNum": 4,
+                        "Type": 4
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 4,
             "Contact": "gf",
             "TimeIndicator": "4 hours later",
-            "TextList": ["test sending me an image please"],
-            "ResponseTime": [1.7],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "test sending me an image please",
+                    "TextDelay": 1.7
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["{gf-car2}", "this is a choice only response2"],
-                "NextChap": [5, 5]
+                "RespContent": [
+                    {
+                        "TextContent": "gf-car2",
+                        "SubChapNum": 5,
+                        "Type": 2
+                    },
+                    {
+                        "TextContent": "this is a choice only response2",
+                        "SubChapNum": 5,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 5,
             "Contact": "blonde",
             "TimeIndicator": "5 hours later",
-            "TextList": ["hey boy", "this is blonde", "your gfs best friend", "test sending me a text instead of your gf", "BTW here's a picture from me too", "{blonde-gym}"],
-            "ResponseTime": [1.7, 0.5, 0.5, 0.9, 0.9, 1.5],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "hey boy",
+                    "TextDelay": 1.7
+                },
+                {
+                    "type": 1,
+                    "Tendency": 0,
+                    "TextContent": "this is blonde",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "your gfs best friend",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "test sending me a text instead of your gf",
+                    "TextDelay": 0.9
+                },
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "BTW here's a picture from me too",
+                    "TextDelay": 0.9
+                },
+                {
+                    "Type": 3,
+                    "Tendency": 0,
+                    "TextContent": "blonde-gym",
+                    "TextDelay": 1.5
+                }
+            ],
             "UnlockInstaPostsAccount": "blonde",
-            "UnlockPosts": [2],
+            "UnlockPosts": [
+                2
+            ],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["this is a choice to blonde1", "this is a choice to blonde1"],
-                "NextChap": [6, 6]
+                "RespContent": [
+                    {
+                        "TextContent": "this is a choice to blonde1",
+                        "SubChapNum": 6,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "this is a bottom choice to blonde1",
+                        "SubChapNum": 6,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 6,
             "Contact": "blonde",
             "TimeIndicator": "",
-            "TextList": ["test the response tree please"],
-            "ResponseTime": [1.7],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "Tendency": 0,
+                    "TextContent": "test the response tree please",
+                    "TextDelay": 1.7
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": true,
-                "Resps": ["I want to try...", "Take off your..."],
-                "NextChap": [7, 8]
+                "RespContent": [
+                    {
+                        "TextContent": "I want to try...",
+                        "SubChapNum": 7,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "Take off your...",
+                        "SubChapNum": 8,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
@@ -104,13 +310,22 @@
             "Contact": "blonde",
             "TimeIndicator": "",
             "TextList": [],
-            "ResponseTime": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["I want to try having a life", "I want to try to live better"],
-                "NextChap": [9, 9]
+                "RespContent": [
+                    {
+                        "TextContent": "I want to try having a life",
+                        "SubChapNum": 9,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "I want to try to live better",
+                        "SubChapNum": 9,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
@@ -118,27 +333,41 @@
             "Contact": "blonde",
             "TimeIndicator": "",
             "TextList": [],
-            "ResponseTime": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": ["Take off your bra", "Take off your panties"],
-                "NextChap": [9, 9]
+                "RespContent": [
+                    {
+                        "TextContent": "Take off your bra",
+                        "SubChapNum": 9,
+                        "Type": 0
+                    },
+                    {
+                        "TextContent": "Take off your bra",
+                        "SubChapNum": 9,
+                        "Type": 0
+                    }
+                ]
             }
         },
         {
             "SubChapNum": 9,
             "Contact": "blonde",
             "TimeIndicator": "",
-            "TextList": ["End of chapter 1"],
-            "ResponseTime": [0.5],
+            "TextList": [
+                {
+                    "Type": 6,
+                    "Tendency": 0,
+                    "TextContent": "End of chapter 1",
+                    "TextDelay": 0.5
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": {
                 "RespTree": false,
-                "Resps": [],
-                "NextChap": []
+                "RespContent": []
             }
         }
     ]

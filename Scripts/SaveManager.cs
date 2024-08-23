@@ -194,12 +194,12 @@ public class SaveManager : MonoBehaviour
     }
 
     void handleImageMessages(TypeOfText MessageType, string TextContentOfMessage) {
-        if (TextContentOfMessage.Contains("{")){
-            Sprite img = Resources.Load("Images/Photos/" + TextContentOfMessage[1..^1], typeof(Sprite)) as Sprite;
+        if (MessageType == TypeOfText.recImage || MessageType == TypeOfText.sentImage){
+            Sprite img = Resources.Load("Images/Photos/" + TextContentOfMessage, typeof(Sprite)) as Sprite;
             MH.MessageListLimit(MessageType, imgName: TextContentOfMessage, img);
         } 
         else {
-            Sprite img = Resources.Load("Images/Emojis/" + TextContentOfMessage[1..^1], typeof(Sprite)) as Sprite;
+            Sprite img = Resources.Load("Images/Emojis/" + TextContentOfMessage, typeof(Sprite)) as Sprite;
             MH.MessageListLimit(MessageType, imgName: TextContentOfMessage, img);
         }
     }

@@ -5,19 +5,18 @@ using UnityEngine;
 using System.IO;
 
 
-public class ChapImport : MonoBehaviour {
-
-    public SaveFile SF;
-    public DBHandler DB;
-
-
     [System.Serializable]
     public class Responses
     {
         public bool RespTree;
-        public List<string> Resps;
-        public List<int> NextChap;
-
+        public List<Response> RespContent;
+    }
+    
+    [System.Serializable]
+    public class Response {
+        public string TextContent;
+        public int SubChapNum;
+        public int Type;
     }
 
     [System.Serializable]
@@ -28,16 +27,29 @@ public class ChapImport : MonoBehaviour {
     }
 
     [System.Serializable]
+    public class TextMessage {
+        public int Type;
+        // public int Tendency;
+        public string TextContent;
+        public float TextDelay;
+    }
+
+    [System.Serializable]
     public class SubChap
     {
         public string Contact;
         public string TimeIndicator;
-        public List<string> TextList;
-        public List<float> ResponseTime;
+        public List<TextMessage> TextList;
         public string UnlockInstaPostsAccount;
         public List<int> UnlockPosts;
         public Responses Responses;
     }
+public class ChapImport : MonoBehaviour {
+
+    public SaveFile SF;
+    public DBHandler DB;
+
+
 
 
     public Chapter myChapter = new Chapter();

@@ -2838,9 +2838,13 @@ MonoBehaviour:
   saveFile:
     contactPush: 0
     selectedIndex: 0
+    AllowMidrolls: 0
+    MidRollCount: 2
+    CurrMidRoll: 0
     NumberOfSaves: 0
     CurrWallPaper: 
     ChoiceNeeded: 0
+    PlayingMidRoll: 0
     Settings:
       FasterReplies: 0
       MuteGame: 0

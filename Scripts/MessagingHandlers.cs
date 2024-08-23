@@ -35,11 +35,10 @@ public class MessagingHandlers : MonoBehaviour {
     public SaveFile SF;
     public DBHandler DB;
     public InstaPostsManager IPM;
-    int MidrollCount = 2;
 
 
 
-    ChapImport.Chapter CurrChap;
+    Chapter CurrChap;
     
     public void BackButton() {
         // Creates onclick handler for back button.
@@ -91,19 +90,22 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Creates and pushes the response buttons/hides them if they're not meant for currently viewed contact
     // Arguments taken from json file through StartMessagesCoroutine
-    public void PopulateResps(ChapImport.Responses responses){
-        for (int i = 0; i < responses.Resps.Count; i++) {
-            string item = responses.Resps[i];
-            if (item.Contains("{")){
-                Sprite img = Resources.Load("Images/Photos/" + item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, responses.NextChap, TypeOfText.sentImage, item, img);
+    public void PopulateResps(Responses responses){
+        for (int i = 0; i < responses.RespContent.Count; i++) {
+            Response resp = responses.RespContent[i];
+            if (resp.Type == (int)TypeOfText.sentImage){
+                ImageButton(resp);
+                // Sprite img = Resources.Load("Images/Photos/" + resp.TextContent, typeof(Sprite)) as Sprite;
+                // ImageButton(i, resp.SubChapNum, TypeOfText.sentImage, item, img);
             } 
-            else if (item.Contains("[")){
-                Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
-                ImageButton(i, responses.NextChap, TypeOfText.sentEmoji, item, img);
+            else if (resp.Type == (int)TypeOfText.sentEmoji){
+                ImageButton(resp);
+                // Sprite img = Resources.Load("Images/Emojis/" + resp.TextContent, typeof(Sprite)) as Sprite;
+                // ImageButton(i, resp.SubChapNum, TypeOfText.sentEmoji, item, img);
             }
             else {
-                TextButton(i, responses.NextChap, item, responses.RespTree);
+                TextButton(resp, responses.RespTree);
+                // TextButton(i, resp.SubChapNum, item, responses.RespTree);
             }
         }
         if (SF.saveFile.contactPush != SF.saveFile.selectedIndex){
@@ -161,27 +163,26 @@ public class MessagingHandlers : MonoBehaviour {
     }
     # nullable disable
 
-    public IEnumerator RecieveTexts(List<string> TextList, List<float> RespTime, Sprite pfp, int startingText = 0) {
+    public IEnumerator RecieveTexts(List<TextMessage> TextList, Sprite pfp, int startingText = 0) {
         for (int i = startingText; i < TextList.Count; i++) {
             SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
-            string item = TextList[i];
-            if (item.Contains("{")){
-                string ImgName = item[1..^1];
-                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImgName);
+            TextMessage textMessage = TextList[i];
+            if (textMessage.Type == (int)TypeOfText.recImage){
+                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == textMessage.TextContent);
                 if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
                     SF.saveFile.Photos[indexOfPhoto].Seen = true;
-                    int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImgName.Split("-")[0]);
+                    int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == textMessage.TextContent.Split("-")[0]);
                     SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
                 }
-                Sprite img = Resources.Load("Images/Photos/" + ImgName, typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(MessageDelay(TypeOfText.recImage, RespTime[i], pfp, img, imgName: item));
+                Sprite img = Resources.Load("Images/Photos/" + textMessage.TextContent, typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(MessageDelay(TypeOfText.recImage, textMessage.TextDelay, pfp, img, imgName: textMessage.TextContent));
             } 
-            else if (item.Contains("[")){
-                Sprite img = Resources.Load("Images/Emojis/" + item[1..^1], typeof(Sprite)) as Sprite;
-                yield return StartCoroutine(MessageDelay(TypeOfText.recEmoji, RespTime[i], pfp, img, imgName: item));
+            else if (textMessage.Type == (int)TypeOfText.recEmoji){
+                Sprite img = Resources.Load("Images/Emojis/" + textMessage.TextContent, typeof(Sprite)) as Sprite;
+                yield return StartCoroutine(MessageDelay(TypeOfText.recEmoji, textMessage.TextDelay, pfp, img, imgName: textMessage.TextContent));
             }
             else {
-                yield return StartCoroutine(MessageDelay(TypeOfText.recText, RespTime[i], pfp, textContent: item));
+                yield return StartCoroutine(MessageDelay(TypeOfText.recText, textMessage.TextDelay, pfp, textContent: textMessage.TextContent));
             }
         }
     }
@@ -200,7 +201,7 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    public void UnlockInstaPosts(ChapImport.SubChap subChap, string InstaAccount) {
+    public void UnlockInstaPosts(SubChap subChap, string InstaAccount) {
         // Unlocks specified posts
         if (subChap.UnlockPosts.Count > 0) {
             for (int i = 0; i < subChap.UnlockPosts.Count; i++) {
@@ -213,7 +214,7 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
-    public IEnumerator StartMessagesCoroutine(ChapImport.SubChap subChap, int startingText = 0) {
+    public IEnumerator StartMessagesCoroutine(SubChap subChap, int startingText = 0) {
         int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == subChap.Contact);
         string InstaAccount = subChap.UnlockInstaPostsAccount;
 
@@ -235,16 +236,16 @@ public class MessagingHandlers : MonoBehaviour {
             }
             
             if (subChap.TextList.Count == 1 || SF.saveFile.CurrStoryPoint.CurrTextIndex + 1 != subChap.TextList.Count){
-                yield return StartCoroutine(RecieveTexts(subChap.TextList, subChap.ResponseTime, pfp, startingText));
+                yield return StartCoroutine(RecieveTexts(subChap.TextList, pfp, startingText));
             }
         }
 
-        if (subChap.Responses.Resps.Count > 0){
+        if (subChap.Responses.RespContent.Count > 0){
             SF.saveFile.ChoiceNeeded = true;
             PopulateResps(subChap.Responses);
         } else {
             if (subChap.TextList.Count > 0) {
-                yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0]));
+                yield return StartCoroutine(MessageDelay(TypeOfText.chapEnd, 1.0f, textContent: subChap.TextList[0].TextContent) );
             }
             SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
             if (SF.saveFile.MidRollCount > 0  && SF.saveFile.AllowMidrolls) {
@@ -368,60 +369,108 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    void ChoiceButtonClick(List<int> NextChap, int indx, GameObject ChoiceClone) {
-        SF.saveFile.CurrStoryPoint.SubChapIndex = NextChap[indx];
+    void ChoiceButtonClick(int NextChap) {
+        SF.saveFile.CurrStoryPoint.SubChapIndex = NextChap;
         SF.saveFile.CurrStoryPoint.CurrTextIndex = 0;
         SF.saveFile.ChoiceNeeded = false;
-        Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
-        Destroy(ChoiceClone);
-        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap[indx]]));
+        foreach (Transform Child in Shared.choices) {
+            Destroy(Child.gameObject);
+        }
+        // Destroy(Shared.choices.transform.GetChild(indx == 1 ? 0 : 1).gameObject);
+        // Destroy(ChoiceClone);
+        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap]));
     }
+
+
+    public void TextButton(Response resp, bool RespTree) {
+        GameObject ChoiceClone =
+            Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
+        Destroy(ChoiceClone.transform.GetChild(1).gameObject);
+        GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
+        textObject.GetComponent<TextMeshProUGUI>().text = resp.TextContent;
+        Button button = ChoiceClone.GetComponent<Button>();
+        button.onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if (!RespTree) {
+                MessageListLimit(TypeOfText.sentText, messageContent: resp.TextContent);
+            }
+            ChoiceButtonClick(resp.SubChapNum);
+        });
+    }
+
+    public void ImageButton(Response resp) {
+        Sprite? image;
+        GameObject ChoiceClone =
+            Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
+        
+        Destroy(ChoiceClone.transform.GetChild(0).gameObject);
+        if (resp.Type == (int) TypeOfText.sentImage){
+            image = Resources.Load("Images/Photos/" + resp.TextContent, typeof(Sprite)) as Sprite;
+        } else {
+            image = Resources.Load("Images/Emojis/" + resp.TextContent, typeof(Sprite)) as Sprite;
+        }
+
+        GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
+        Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
+        imageObject.GetComponent<Image>().sprite = resp.Type == (int)TypeOfText.sentImage ? frameEmoji : image;
+        Button button = ChoiceClone.GetComponent<Button>();
+        button.onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if (resp.Type == (int)TypeOfText.sentImage) {
+                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == resp.TextContent);
+                UnlockImage(indexOfPhoto, resp.TextContent);
+            }
+            MessageListLimit((TypeOfText)resp.Type, resp.TextContent, image);
+            ChoiceButtonClick(resp.SubChapNum);
+        });
+    }
+
 
     // handles the building and pushing of the text choice buttons into the choices list
     // indx: automated through forloop, handles destruction of buttons and next chap queuing
     // NextChap: list of ints, each for the next subchap to play based on click.
     // textContent: text to display and send.
-    public void TextButton(int indx, List<int> NextChap, string textContent, bool RespTree) {
-        GameObject ChoiceClone =
-            Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
-        Destroy(ChoiceClone.transform.GetChild(1).gameObject);
-        GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
-        textObject.GetComponent<TextMeshProUGUI>().text = textContent;
-        Button button = ChoiceClone.GetComponent<Button>();
-        button.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            if (!RespTree) {
-                MessageListLimit(TypeOfText.sentText, messageContent: textContent);
-            }
-            ChoiceButtonClick(NextChap, indx, ChoiceClone);
-        });
-    }
+    // public void TextButton(int indx, List<int> NextChap, string textContent, bool RespTree) {
+    //     GameObject ChoiceClone =
+    //         Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
+    //     Destroy(ChoiceClone.transform.GetChild(1).gameObject);
+    //     GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
+    //     textObject.GetComponent<TextMeshProUGUI>().text = textContent;
+    //     Button button = ChoiceClone.GetComponent<Button>();
+    //     button.onClick.AddListener(() => {
+    //         Shared.Wallpaper.GetComponent<AudioSource>().Play();
+    //         if (!RespTree) {
+    //             MessageListLimit(TypeOfText.sentText, messageContent: textContent);
+    //         }
+    //         ChoiceButtonClick(NextChap, indx, ChoiceClone);
+    //     });
+    // }
 
     // handles the building and pushing of the image/emoji choice buttons into the choices list
     // indx: automated through forloop, handles destruction of buttons and next chap queuing
     // NextChap: list of ints, each for the next subchap to play based on click.
     // type: type of image (emoji/photo)
     // image: sprite image to be sent (emoji/photo)
-    public void ImageButton(int indx, List<int> NextChap, TypeOfText type, string imgName, Sprite image) {
-        GameObject ChoiceClone =
-            Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
+    // public void ImageButton(int indx, List<int> NextChap, TypeOfText type, string imgName, Sprite image) {
+    //     GameObject ChoiceClone =
+    //         Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
 
-        Destroy(ChoiceClone.transform.GetChild(0).gameObject);
-        GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-        Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
-        imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
-        Button button = ChoiceClone.GetComponent<Button>();
-        button.onClick.AddListener(() => {
-            Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            if (type == TypeOfText.sentImage) {
-                string ImageName = imgName[1..^1];
-                int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
-                UnlockImage(indexOfPhoto, ImageName);
-            }
-            MessageListLimit(type, imgName, image);
-            ChoiceButtonClick(NextChap, indx, ChoiceClone);
-        });
-    }
+    //     Destroy(ChoiceClone.transform.GetChild(0).gameObject);
+    //     GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
+    //     Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
+    //     imageObject.GetComponent<Image>().sprite = type == TypeOfText.sentImage ? frameEmoji : image;
+    //     Button button = ChoiceClone.GetComponent<Button>();
+    //     button.onClick.AddListener(() => {
+    //         Shared.Wallpaper.GetComponent<AudioSource>().Play();
+    //         if (type == TypeOfText.sentImage) {
+    //             string ImageName = imgName[1..^1];
+    //             int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
+    //             UnlockImage(indexOfPhoto, ImageName);
+    //         }
+    //         MessageListLimit(type, imgName, image);
+    //         ChoiceButtonClick(NextChap, indx, ChoiceClone);
+    //     });
+    // }
 
     public void UnlockImage(int indexOfPhoto, string ImageName){
         if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
