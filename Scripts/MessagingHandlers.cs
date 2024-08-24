@@ -77,7 +77,7 @@ public class MessagingHandlers : MonoBehaviour {
         gen.SetWallPaper(SF.saveFile.CurrWallPaper);
         SM.GenerateSaves(10);
         IPM.GenPostsList();
-        ChapterSelect("Chapters", "chapter1");
+        ChapterSelect("Chapters", "Prelude");
     }
 
     public void ChapterSelect(string type, string Chapter, int subChapIndex = 0, int currentText = 0) {
@@ -91,12 +91,12 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Creates and pushes the response buttons/hides them if they're not meant for currently viewed contact
     // Arguments taken from json file through StartMessagesCoroutine
-    public void PopulateResps(Responses responses){
-        for (int i = 0; i < responses.RespContent.Count; i++) {
-            Response resp = responses.RespContent[i];
+    public void PopulateResps(List<Response> responses){
+        for (int i = 0; i < responses.Count; i++) {
+            Response resp = responses[i];
             switch (resp.Type) {
                 case (int)TypeOfText.sentText:
-                    TextButton(resp, responses.RespTree); 
+                    TextButton(resp); 
                 break;
                 default:
                     ImageButton(resp);
@@ -207,7 +207,7 @@ public class MessagingHandlers : MonoBehaviour {
             }
         }
 
-        if (subChap.Responses.RespContent.Count > 0){
+        if (subChap.Responses.Count > 0){
             SF.saveFile.ChoiceNeeded = true;
             PopulateResps(subChap.Responses);
         } else {
@@ -349,7 +349,7 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // handles the building and pushing of the text choice buttons into the choices list
-    public void TextButton(Response resp, bool RespTree) {
+    public void TextButton(Response resp) {
         GameObject ChoiceClone =
             Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(1).gameObject);
@@ -358,7 +358,7 @@ public class MessagingHandlers : MonoBehaviour {
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            if (!RespTree) {
+            if (!resp.RespTree) {
                 MessageListLimit( new TextMessage {
                     Type = (int)TypeOfText.sentText,
                     TextContent = resp.TextContent

@@ -1,28 +1,22 @@
 {
     "Posts": [
         {
-            "CharacterName" : "gf",
+            "CharacterName" : "Althea",
             "UserName" : "idk-honestly",
             "Image" : "gf-standing",
             "Description" : "I'm still standing"
         },
         {
-            "CharacterName" : "gf",
+            "CharacterName" : "Althea",
             "UserName" : "idk-honestly",
             "Image" : "gf-car1",
             "Description" : "ROAD TRIP!!!!"
         },
         {
-            "CharacterName" : "blonde",
-            "UserName" : "blondes-do-it-better",
-            "Image" : "blonde-gym",
-            "Description" : "Getting too sweaty at the gym"
-        },
-        {
-            "CharacterName" : "bf",
-            "UserName" : "bfs-are-lame",
+            "CharacterName" : "Althea",
+            "UserName" : "idk-honestly",
             "Image" : "gf-car1",
-            "Description" : "Testing another char"
+            "Description" : "ROAD TRIP!!!!"
         }
     ]
 }

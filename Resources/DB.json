@@ -1,14 +1,13 @@
 {
     "ContactList" : [
-        "gf", "blonde"
+        "Althea"
     ],
     "ChapterList": [
-        "chapter1", "chapter2", "chapter3"
+        "Prelude", "Chapter1"
     ],
     "PhotoList": [
-        "bg-cutechickgalaxy", "bg-cutechicklake", "bg-snowmountain2", "bg-snowmountains", "gf-car", "gf-car1", "gf-car2", "gf-standing", "blonde-gym"
+        "bg-cutechickgalaxy", "bg-cutechicklake", "bg-snowmountain2", "bg-snowmountains", "Althea-sitting1"
     ],
     "MidrollsList": [
-        "Night out with blonde", "Day At The Park", "Bored at home"  
     ]
 }

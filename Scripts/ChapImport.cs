@@ -5,15 +5,15 @@ using UnityEngine;
 using System.IO;
 
 
-    [System.Serializable]
-    public class Responses
-    {
-        public bool RespTree;
-        public List<Response> RespContent;
-    }
+    // [System.Serializable]
+    // public class Responses
+    // {
+    //     public List<Response> RespContent;
+    // }
     
     [System.Serializable]
     public class Response {
+        public bool RespTree = false;
         public string TextContent;
         public int SubChapNum;
         public int Type;
@@ -42,7 +42,7 @@ using System.IO;
         public List<TextMessage> TextList;
         public string UnlockInstaPostsAccount;
         public List<int> UnlockPosts;
-        public Responses Responses;
+        public List<Response> Responses;
     }
 public class ChapImport : MonoBehaviour {
 

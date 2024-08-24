@@ -13,7 +13,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Drawing;
 
-// Namespace PhoneEngine {}
 public class OnAwake : MonoBehaviour
 {   
     public MessagingHandlers MH;
