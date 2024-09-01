@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 
+
+/* ====================== Chapter Schema ============================ */
 [System.Serializable]
 public class Chapter
 {
@@ -23,6 +25,7 @@ public class TextMessage
 {
     public int Type;
     public string TextContent;
+    public int Tendency;
     public float TextDelay;
 }
 
@@ -34,6 +37,10 @@ public class Response
     public int SubChapNum;
     public int Type;
 }
+
+/* ====================== End ============================ */
+
+/* ====================== Nodes Schema ============================ */
 
 [System.Serializable]
 public class Location {
@@ -70,6 +77,7 @@ public class TextMessageData
     public int Type;
     public string TextContent;
     public float TextDelay;
+    public int Tendency;
     public Location location;
 }
 
@@ -84,6 +92,9 @@ public class ResponseData
 
 }
 
+/* ====================== End ============================ */
+
+/* ====================== Save Schema ============================ */
 [System.Serializable]
 public class Contact
 {
@@ -133,6 +144,7 @@ public class SaveFileRoot {
     public string CurrWallPaper;
     public bool ChoiceNeeded;
     public bool PlayingMidRoll;
+    public Stats Stats;
     public Settings Settings = new();
     public List<Contact> ContactsList = new();
     public List<string> ChapterList = new();
@@ -143,6 +155,13 @@ public class SaveFileRoot {
     public List<PhotoCategory> PhotoCategories = new();
     public List<Photo> Photos = new();
     public List<MidRoll> MidRolls = new(); 
+}
+
+[System.Serializable]
+public class Stats {
+    public int Tendency;
+    public bool IntersetInOtherGirls;
+    public bool InterestInThreesomes;
 }
 
 [System.Serializable]
@@ -181,7 +200,9 @@ public class PhotoCategory {
     public int NumberAvaliable;
 }
 
+/* ====================== End ============================ */
 
+/* ====================== Enums ============================ */
 public enum TypeOfText {
     sentText = 0,
     recText = 1,
@@ -192,3 +213,9 @@ public enum TypeOfText {
     chapEnd = 6,
     indicateTime = 8,
 }
+public enum Tendency {
+    Neutral = 0,
+    Submissive = 1,
+    Dominant = 2
+}
+/* ====================== End ============================ */

@@ -57,6 +57,7 @@ public class SaveManager : MonoBehaviour
     public void CreateSaveCards() {
 
         for (int i = 0; i < SF.saveFile.NumberOfSaves; i++) {
+            string Tendency = null;
 
             GameObject SaveCardClone =
                 Instantiate(Prefabs.SaveCard, new Vector3(0, 0, 0), Quaternion.identity, SaveList);
@@ -69,7 +70,18 @@ public class SaveManager : MonoBehaviour
                     SavesInfo.ChapterOfSaves[i] > SF.saveFile.ChapterList.Count ?
                         "End Of update" :
                         "Chapter " + SavesInfo.ChapterOfSaves[i];
-                // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = SavesInfo.TendencyOfSaves[i];
+                switch(SavesInfo.TendencyOfSaves[i]) {
+                    case 0:
+                        Tendency = "Neutral";
+                    break;
+                    case 1:
+                        Tendency = "Submissive";
+                    break;
+                    case 2:
+                        Tendency = "Dominant";
+                    break;
+                }
+                TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = Tendency;
                 TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.DateTimeOfSave[i];
             }
 
@@ -117,6 +129,7 @@ public class SaveManager : MonoBehaviour
             SavesInfo.ChapterOfSaves[indx] = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
             SavesInfo.NameOfSaves[indx] = SaveName.Length > 0 ? SaveName : "SaveFile " + indx;
+            SavesInfo.TendencyOfSaves[indx] = SF.saveFile.Stats.Tendency;
             SavesInfo.AutoSaveMostRecent = false;
             CreateSavesFile(SaveInfo);
             SaveGame(saveFile);
@@ -126,12 +139,24 @@ public class SaveManager : MonoBehaviour
     }
 
     public void PopulateAutoSaveCard() {
+        string Tendency = null;
         Transform TextContainer = AutoSaveCard.GetChild(2);
         TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text =
             SavesInfo.AutoSaveChapter > SF.saveFile.ChapterList.Count ?
                 "End Of update" :
                 "Chapter " + SavesInfo.AutoSaveChapter;
-        // TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = Shared.TendencyOfSaves[i];
+        switch(SavesInfo.AutoSaveTendency) {
+                    case 0:
+                        Tendency = "Neutral";
+                    break;
+                    case 1:
+                        Tendency = "Submissive";
+                    break;
+                    case 2:
+                        Tendency = "Dominant";
+                    break;
+                }
+        TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = Tendency;
         TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.AutoSaveDateTime;
     }
 
@@ -147,6 +172,7 @@ public class SaveManager : MonoBehaviour
         SavesInfo.AutoSaveChapter = SF.saveFile.CurrStoryPoint.ChapIndex + 1;
         SavesInfo.AutoSaveDateTime = "" + DateTime.Now;
         SavesInfo.AutoSaveMostRecent = true;
+        SavesInfo.AutoSaveTendency = SF.saveFile.Stats.Tendency;
 
         PopulateAutoSaveCard();
         CreateSavesFile(SaveInfo);
@@ -292,6 +318,7 @@ public class SaveManager : MonoBehaviour
             SavesInfo.ChapterOfSaves.Add(0);
             SavesInfo.NameOfSaves.Add("");
             SavesInfo.DateTimeOfSave.Add("" + DateTime.Now);
+            SavesInfo.TendencyOfSaves.Add(0);
         }
     }
 

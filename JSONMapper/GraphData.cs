@@ -87,7 +87,8 @@ namespace JSONMapper {
                 var TextMessageNode = new TextMessageNode(graphView) {
                     TextContent = text.TextContent,
                     TextDelay = text.TextDelay,
-                    Type = text.Type
+                    Type = text.Type,
+                    Tendency = text.Tendency
                 };
                 TextMessageNode.UpdateFields();
                 TextMessageNode.SetPosition(new Rect {

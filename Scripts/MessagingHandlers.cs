@@ -14,7 +14,7 @@ using System.Diagnostics;
 
 public class MessagingHandlers : MonoBehaviour {
 
-    public GameObject backButton;    
+    public GameObject backButton;
     public ChapImport chap;
     public GeneralHandlers gen;
     public SharedObjects Shared;
@@ -135,7 +135,9 @@ public class MessagingHandlers : MonoBehaviour {
         for (int i = startingText; i < TextList.Count; i++) {
             SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
             TextMessage textMessage = TextList[i];
-            yield return StartCoroutine(MessageDelay(textMessage, pfp));
+            if (textMessage.Tendency == SF.saveFile.Stats.Tendency) {
+                yield return StartCoroutine(MessageDelay(textMessage, pfp));
+            }
         }
     }
 
@@ -285,6 +287,7 @@ public class MessagingHandlers : MonoBehaviour {
         if (Shared.content.GetChild(SF.saveFile.contactPush).childCount >= 25){
             Destroy(Shared.content.GetChild(SF.saveFile.contactPush).GetChild(0).gameObject);
         } 
+        // Add a few cases for sub and dom texts, where if tendency then use a different prefab or blue or red texts
         switch((TypeOfText) textMessage.Type){
             case TypeOfText.sentText:
                 TextPush(TypeOfText.sentText, Prefabs.sentText, textMessage.TextContent);

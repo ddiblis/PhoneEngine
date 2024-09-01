@@ -8,22 +8,22 @@
                 {
                     "Type": 1,
                     "TextContent": "Hellooooooo",
-                    "TextDelay": 0.5
+                    "TextDelay": 0.20000000298023225
                 },
                 {
                     "Type": 1,
                     "TextContent": "Why are you ignoring me??",
-                    "TextDelay": 0.5
+                    "TextDelay": 0.20000000298023225
                 },
                 {
                     "Type": 1,
                     "TextContent": "Only gone for one day and already another girl's got your attention",
-                    "TextDelay": 0.5
+                    "TextDelay": 0.20000000298023225
                 },
                 {
                     "Type": 5,
                     "TextContent": "fake-angry",
-                    "TextDelay": 0.5
+                    "TextDelay": 0.20000000298023225
                 }
             ],
             "UnlockInstaPostsAccount": "",

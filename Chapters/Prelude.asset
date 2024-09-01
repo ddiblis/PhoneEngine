@@ -25,36 +25,40 @@ MonoBehaviour:
       TextList:
       - Type: 1
         TextContent: Hellooooooo
-        TextDelay: 0.5
+        TextDelay: 0.2
+        Tendency: 0
         location:
-          x: 1272
-          y: -311
+          x: 1251
+          y: -310
           Width: 323
-          Height: 214
+          Height: 234
       - Type: 1
         TextContent: Why are you ignoring me??
-        TextDelay: 0.5
+        TextDelay: 0.2
+        Tendency: 0
         location:
-          x: 1624
+          x: 1579
           y: -309
           Width: 343
-          Height: 214
+          Height: 234
       - Type: 1
         TextContent: Only gone for one day and already another girl's got your attention
-        TextDelay: 0.5
+        TextDelay: 0.2
+        Tendency: 0
         location:
-          x: 1975
-          y: -304
+          x: 1924
+          y: -305
           Width: 549
-          Height: 214
+          Height: 234
       - Type: 5
         TextContent: fake-angry
-        TextDelay: 0.5
+        TextDelay: 0.2
+        Tendency: 0
         location:
-          x: 2544
-          y: -305
+          x: 2474
+          y: -304
           Width: 323
-          Height: 214
+          Height: 234
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses: []

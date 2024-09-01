@@ -7,10 +7,10 @@ public class SavesFile : MonoBehaviour {
     public int MostRecentSaveIndex;
     public List<string> NameOfSaves;
     public List<int> ChapterOfSaves;
-    public List<string> TendencyOfSaves;
+    public List<int> TendencyOfSaves;
     public List<string> DateTimeOfSave;
     public bool AutoSaveMostRecent;
     public int AutoSaveChapter;
-    public string AutoSaveTendency;
+    public int AutoSaveTendency;
     public string AutoSaveDateTime;
 }

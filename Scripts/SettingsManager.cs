@@ -145,11 +145,11 @@ public class SettingsManager : MonoBehaviour {
         Saves.MostRecentSaveIndex = 0;
         Saves.NameOfSaves = new List<string>();
         Saves.ChapterOfSaves = new List<int>();
-        Saves.TendencyOfSaves = new List<string>();
+        Saves.TendencyOfSaves = new List<int>();
         Saves.DateTimeOfSave = new List<string>();
         Saves.AutoSaveMostRecent = false;
         Saves.AutoSaveChapter = 0;
-        Saves.AutoSaveTendency = "";
+        Saves.AutoSaveTendency = 0;
         Saves.AutoSaveDateTime = "";
     }
 
