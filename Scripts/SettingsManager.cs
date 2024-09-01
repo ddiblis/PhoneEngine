@@ -91,11 +91,11 @@ public class SettingsManager : MonoBehaviour {
 
         ResetCardClone.GetComponent<Button>().onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
-            openResetModal(FasterRepliesSlider.GetComponent<Animator>(), MuteSlider.GetComponent<Animator>());
+            OpenResetModal(FasterRepliesSlider.GetComponent<Animator>(), MuteSlider.GetComponent<Animator>());
         });
     }
 
-    void openResetModal(Animator FasterRepliesSlider, Animator MuteSlider) {
+    void OpenResetModal(Animator FasterRepliesSlider, Animator MuteSlider) {
         Transform LoadModalWindowClone = 
             Instantiate(preFabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
 

@@ -56,8 +56,8 @@ public class InstaPostsManager : MonoBehaviour
 
 
 
-    PostsList postsList = new PostsList();
-    ProfilesList profilesList = new ProfilesList();
+    PostsList postsList = new();
+    ProfilesList profilesList = new();
 
     public ProfilesList GetProfilesList() {
         UnityEngine.TextAsset InstaProfilesFile = Resources.Load<UnityEngine.TextAsset>("InstaPosts-Profiles");

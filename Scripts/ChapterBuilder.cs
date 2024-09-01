@@ -5,7 +5,7 @@ using System.IO;
 
 public class JsonEditorWindow : EditorWindow
 {
-    private Chapter chapter = new Chapter();
+    private Chapter chapter = new();
 
     [MenuItem("Window/JSON Editor")]
     public static void ShowWindow()
@@ -108,14 +108,11 @@ public class JsonEditorWindow : EditorWindow
             // Ensure all lists are initialized
             foreach (var subChap in chapter.SubChaps)
             {
-                if (subChap.TextList == null)
-                    subChap.TextList = new List<TextMessage>();
+                subChap.TextList ??= new List<TextMessage>();
 
-                if (subChap.UnlockPosts == null)
-                    subChap.UnlockPosts = new List<int>();
+                subChap.UnlockPosts ??= new List<int>();
 
-                if (subChap.Responses == null)
-                    subChap.Responses = new List<Response>();
+                subChap.Responses ??= new List<Response>();
             }
 
             EditorUtility.DisplayDialog("JSON Loaded", "The JSON file has been loaded successfully.", "OK");

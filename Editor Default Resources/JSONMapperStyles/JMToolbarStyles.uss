@@ -1,0 +1,46 @@
+Toolbar{
+    background-color: var(--jm-colors-window-dark-grey-1);
+    height: var(--jm-metrics-window-pixes-35);
+}
+
+TextField {
+    padding: var(--jm-metrics-window-pixes-4);
+}
+
+/* BUTTONS */
+
+Button {
+    background-color: var(--jm-colors-window-dark-grey5);
+    border-color: var(--jm-colors-window-dark-grey1);
+    margin: var(--jm-metrics-window-pixels-4);
+    max-height: var(--jm-metrics-window-pixels-25);
+}
+
+Button:hover {
+    background-color: var(--jm-colors-window-dark-grey2);
+}
+
+Button:active {
+    background-color: var(--jm-colors-window-dark-grey3);
+    color: var(--jm-colors-window-yellow);
+}
+
+/* BUILT-IN */
+.unity-text-field_label {
+    padding: var(--jm-metrics-window-pixes-4);
+}
+TextField:focus {
+    color: var(--jm-colors-window-yellow);
+}
+.unity-text-field__input {
+    background-color: var(--jm-colors-window-dark-grey1);
+    border-color: var(--jm-colors-window-dark-grey6);
+    border-radius: var(--jm-metrics-window-pixels-4);
+    max-height: var(--jm-metrics-window-pixels-25);
+    min-width: var(--jm-metrics-window-pixels-120);
+    padding-left: var(--jm-metrics-window-pixels-6);
+}
+
+.unity-text-field__input:focus {
+    color: var(--jm-colors-window-yellow);
+}

@@ -1,45 +1,34 @@
 {
-    "AllowMidrolls": true,
+    "AllowMidrolls": false,
     "SubChaps": [
         {
-            "SubChapNum": 0,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Hellooooooo",
                     "TextDelay": 0.5
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Why are you ignoring me??",
                     "TextDelay": 0.5
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Only gone for one day and already another girl's got your attention",
                     "TextDelay": 0.5
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "fake-angry",
                     "TextDelay": 0.5
                 }
             ],
-            "UnlockInstaPostsAccount": "Althea",
-            "UnlockPosts": [
-                0,
-                1,
-                2
-            ],
-            "Responses": {
-                "RespContent": []
-            }
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": []
         }
     ]
 }

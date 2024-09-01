@@ -1,0 +1,30 @@
+:root {
+    --jm-colors-grid-light-grey-1: #2b2b2b;
+    --jm-colors-grid-light-grey-2: rgba(51, 51, 51, 0.4);
+    --jm-colors-grid-light-grey-3: rgba(51, 51, 51, 1);
+    --jm-colors-window-dark-grey1: #1D1D1E;
+    --jm-colors-window-dark-grey2: #2B2D2F;
+    --jm-colors-window-dark-grey3: #212325;
+    --jm-colors-window-dark-grey4: #232527;
+    --jm-colors-window-dark-grey5: #252729;
+    --jm-colors-window-dark-grey6: #27292C;
+    --jm-colors-window-yellow: #FDD058;
+
+    --jm-metrics-window-pixels-negative-12: -12px;
+    --jm-metrics-window-pixels-negative-4: -4px;
+    --jm-metrics-window-pixels-0: 0px;
+    --jm-metrics-window-pixels-2: 2px;
+    --jm-metrics-window-pixels-4: 4px;
+    --jm-metrics-window-pixels-6: 6px;
+    --jm-metrics-window-pixels-8: 8px;
+    --jm-metrics-window-pixels-11: 11px;
+    --jm-metrics-window-pixels-16: 16px;
+    --jm-metrics-window-pixels-25: 25px;
+    --jm-metrics-window-pixels-35: 35px;
+    --jm-metrics-window-pixels-120: 120px;
+    --jm-metrics-window-pixels-160: 160px;
+    --jm-metrics-window-pixels-240: 240px;
+    --jm-metrics-window-pixels-1000: 1000px;
+
+    --jm-metrics-grid-50: 50;
+}

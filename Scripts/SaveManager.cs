@@ -82,18 +82,18 @@ public class SaveManager : MonoBehaviour
             int indx = i;
             SaveButton.onClick.AddListener(() => {
                 Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                openSaveModal(indx, SaveInfo, saveFile);
+                OpenSaveModal(indx, SaveInfo, saveFile);
             });
             LoadButton.onClick.AddListener(() => {
                 Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 if (File.Exists(Application.persistentDataPath + saveFile)) { 
-                    openLoadModal(saveFile, SaveInfo);
+                    OpenLoadModal(saveFile, SaveInfo);
                 }
             });
         }
     }
 
-    void openSaveModal(int indx, string SaveInfo, string saveFile) {
+    void OpenSaveModal(int indx, string SaveInfo, string saveFile) {
         Transform SaveModalWindowClone =
             Instantiate(Prefabs.SaveModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
 
@@ -118,14 +118,14 @@ public class SaveManager : MonoBehaviour
             SavesInfo.DateTimeOfSave[indx] = "" + DateTime.Now;
             SavesInfo.NameOfSaves[indx] = SaveName.Length > 0 ? SaveName : "SaveFile " + indx;
             SavesInfo.AutoSaveMostRecent = false;
-            createSavesFile(SaveInfo);
+            CreateSavesFile(SaveInfo);
             SaveGame(saveFile);
             RefreshSaveList();
             Destroy(SaveModalWindowClone.gameObject);
         });
     }
 
-    public void populateAutoSaveCard() {
+    public void PopulateAutoSaveCard() {
         Transform TextContainer = AutoSaveCard.GetChild(2);
         TextContainer.GetChild(1).GetComponent<TextMeshProUGUI>().text =
             SavesInfo.AutoSaveChapter > SF.saveFile.ChapterList.Count ?
@@ -136,7 +136,7 @@ public class SaveManager : MonoBehaviour
     }
 
     public void OpenAutoSaveModal() {
-        openLoadModal("/AutoSave.json", "/SaveInfo.json");
+        OpenLoadModal("/AutoSave.json", "/SaveInfo.json");
     }
 
     public IEnumerator AutoSave() {
@@ -148,8 +148,8 @@ public class SaveManager : MonoBehaviour
         SavesInfo.AutoSaveDateTime = "" + DateTime.Now;
         SavesInfo.AutoSaveMostRecent = true;
 
-        populateAutoSaveCard();
-        createSavesFile(SaveInfo);
+        PopulateAutoSaveCard();
+        CreateSavesFile(SaveInfo);
         
         // Since auto save can happen while viewing messages, if you reload the code will think you're still viewing those messages
         // This resets it to not viewing for a fram to save, then put the corrent index back into place
@@ -163,7 +163,7 @@ public class SaveManager : MonoBehaviour
         StartCoroutine(AutoSave());
     }
 
-    void openLoadModal(string saveFile, string SaveInfo) {
+    void OpenLoadModal(string saveFile, string SaveInfo) {
         Transform LoadModalWindowClone = 
             Instantiate(Prefabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
 
@@ -236,12 +236,12 @@ public class SaveManager : MonoBehaviour
                 );
             }
         }
-        populateAutoSaveCard();
+        PopulateAutoSaveCard();
     }
 
     void SaveAllMessages(Transform MessageList, int Person) {
         for(int j = 0; j < MessageList.childCount; j++) {
-            SavedMessage savedMessage = new SavedMessage { WhosIsItFor = Person };
+            SavedMessage savedMessage = new() { WhosIsItFor = Person };
 
             Transform messageListItem = MessageList.GetChild(j);
             int type = int.Parse(
@@ -277,7 +277,7 @@ public class SaveManager : MonoBehaviour
         SF.saveFile.SavedMessages = new List<SavedMessage>();
     }
 
-    void createSavesFile(string SaveInfoFile) {
+    void CreateSavesFile(string SaveInfoFile) {
         
         string SaveFileName = Application.persistentDataPath + SaveInfoFile;
 

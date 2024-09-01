@@ -12,19 +12,6 @@ using System.Linq;
 using System;
 using System.Diagnostics;
 
-
-// Simple enum used for determining the type of text being sent/recieved.
-public enum TypeOfText {
-        sentText = 0,
-        recText = 1,
-        sentImage = 2,
-        recImage = 3,
-        sentEmoji = 4,
-        recEmoji = 5,
-        chapEnd = 6,
-        indicateTime = 8,
-    }
-
 public class MessagingHandlers : MonoBehaviour {
 
     public GameObject backButton;    
@@ -116,13 +103,13 @@ public class MessagingHandlers : MonoBehaviour {
         }
         switch ((TypeOfText) textMessage.Type) {
             case TypeOfText.recText:
-                pushNotification(pfp, textMessage.TextContent);
+                PushNotification(pfp, textMessage.TextContent);
             break;
             case TypeOfText.recImage:
-                pushNotification(pfp);
+                PushNotification(pfp);
             break;
             case TypeOfText.recEmoji:
-                pushNotification(pfp);
+                PushNotification(pfp);
             break;
         }
         MessageListLimit(textMessage);
@@ -237,7 +224,7 @@ public class MessagingHandlers : MonoBehaviour {
             PlayNextChapter();
             return;
         }
-        System.Random rnd = new System.Random();
+        System.Random rnd = new();
         int MidRollIndex = rnd.Next(0, SF.saveFile.MidRolls.Count); 
         if (!SF.saveFile.MidRolls[MidRollIndex].Seen) {
             SF.saveFile.CurrMidRoll = MidRollIndex;
@@ -326,7 +313,7 @@ public class MessagingHandlers : MonoBehaviour {
         }
     }
 
-    public void pushNotification(Sprite? pfp, string textContent = "Photo Message") {
+    public void PushNotification(Sprite? pfp, string textContent = "Photo Message") {
         bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
         Destroy(Shared.notif);
         if (!viewingScreen) {

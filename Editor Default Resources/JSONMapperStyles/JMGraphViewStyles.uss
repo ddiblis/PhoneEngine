@@ -1,0 +1,6 @@
+GridBackground {
+    --grid-background-color: Var(--jm-colors-grid-light-grey-1);
+    --line-color: Var(--jm-colors-grid-light-grey-2);
+    --thick-line-color: Var(--jm-colors-grid-light-grey-3);
+    --spacing: Var(--jm-metrics-grid-50);
+}

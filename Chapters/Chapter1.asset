@@ -1,0 +1,1891 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1f9cd18c7c62270ba9db60a432a382, type: 3}
+  m_Name: Chapter1
+  m_EditorClassIdentifier: 
+  Chapters:
+  - AllowMidrolls: 0
+    location:
+      x: -7339
+      y: 16991
+      Width: 192
+      Height: 135
+    SubChaps:
+    - Contact: Althea
+      TimeIndicator: 4 Hours Later
+      TextList: []
+      UnlockInstaPostsAccount: Althea
+      UnlockPosts: 00000000010000000200000003000000
+      Responses:
+      - RespTree: 0
+        TextContent: Hi hon
+        SubChapNum: 1
+        Type: 0
+        location:
+          x: 995
+          y: -156
+          Width: 323
+          Height: 278
+      location:
+        x: 995
+        y: -496
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: grinning-sweat
+        SubChapNum: 2
+        Type: 4
+        location:
+          x: 997
+          y: 486
+          Width: 323
+          Height: 278
+      location:
+        x: 996
+        y: 137
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: OH look who finally rememebred their poor girlfriend
+        TextDelay: 3.5
+        location:
+          x: 1361
+          y: 815
+          Width: 475
+          Height: 214
+      - Type: 1
+        TextContent: Let me guess
+        TextDelay: 2
+        location:
+          x: 1852
+          y: 815
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: You forgot to charge your phone as usual
+        TextDelay: 2.5
+        location:
+          x: 2199
+          y: 817
+          Width: 418
+          Height: 214
+      - Type: 5
+        TextContent: gf-laugh
+        TextDelay: 0.5
+        location:
+          x: 2654
+          y: 815
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Nope, think way worse
+        SubChapNum: 3
+        Type: 0
+        location:
+          x: 754
+          y: 1126
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I Wish that's all it was
+        SubChapNum: 3
+        Type: 0
+        location:
+          x: 1274
+          y: 1126
+          Width: 323
+          Height: 278
+      location:
+        x: 1002
+        y: 775
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: OMG babe are you okay???
+        TextDelay: 2
+        location:
+          x: 1342
+          y: 1509
+          Width: 345
+          Height: 214
+      - Type: 1
+        TextContent: Did something happen to you??
+        TextDelay: 2
+        location:
+          x: 1727
+          y: 1508
+          Width: 367
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Maybe I shouldn't have been so vague
+        SubChapNum: 4
+        Type: 0
+        location:
+          x: 973
+          y: 1820
+          Width: 402
+          Height: 278
+      location:
+        x: 1006
+        y: 1469
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: bf-laugh
+        SubChapNum: 5
+        Type: 4
+        location:
+          x: 1006
+          y: 2480
+          Width: 323
+          Height: 278
+      location:
+        x: 1004
+        y: 2133
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I fell while me and the guys were out and my phone broke
+        SubChapNum: 6
+        Type: 0
+        location:
+          x: 925
+          y: 3125
+          Width: 503
+          Height: 278
+      location:
+        x: 1006
+        y: 2774
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 5
+        TextContent: gf-tear
+        TextDelay: 1
+        location:
+          x: 1341
+          y: 3467
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Are you texting from the new one right now?
+        TextDelay: 2.5
+        location:
+          x: 1718
+          y: 3465
+          Width: 434
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Yeah... I lost all my data from the old one though
+        SubChapNum: 7
+        Type: 0
+        location:
+          x: 937
+          y: 3784
+          Width: 454
+          Height: 278
+      location:
+        x: 1003
+        y: 3427
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I think I have a backup on my laptop at home
+        SubChapNum: 8
+        Type: 0
+        location:
+          x: 939
+          y: 4423
+          Width: 435
+          Height: 278
+      location:
+        x: 1000
+        y: 4083
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Want me to check for you?
+        TextDelay: 2
+        location:
+          x: 1348
+          y: 4759
+          Width: 342
+          Height: 214
+      - Type: 1
+        TextContent: This whole thing must've been really streessful so I'd like
+          to help!
+        TextDelay: 2.5
+        location:
+          x: 1691
+          y: 4753
+          Width: 540
+          Height: 214
+      - Type: 1
+        TextContent: wait...
+        TextDelay: 2
+        location:
+          x: 2253
+          y: 4755
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I just realised, this means that you don't have any of our pictures
+          anymore do you?
+        TextDelay: 2.5
+        location:
+          x: 2596
+          y: 4751
+          Width: 631
+          Height: 214
+      - Type: 1
+        TextContent: I can send you a little reminder if you'd like
+        TextDelay: 2.5
+        location:
+          x: 3286
+          y: 4756
+          Width: 424
+          Height: 214
+      - Type: 5
+        TextContent: tongue-out
+        TextDelay: 1
+        location:
+          x: 3742
+          y: 4756
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: unamused
+        SubChapNum: 10
+        Type: 4
+        location:
+          x: 298
+          y: 5061
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 9
+        Type: 4
+        location:
+          x: 1582
+          y: 4987
+          Width: 323
+          Height: 278
+      location:
+        x: 1000
+        y: 4718
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 5
+        TextContent: angry
+        TextDelay: 1
+        location:
+          x: 118
+          y: 5299
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: No fun
+        TextDelay: 2
+        location:
+          x: -82
+          y: 5301
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: And here I was missing you all day and you dont even miss me
+        TextDelay: 2.5
+        location:
+          x: -271
+          y: 5299
+          Width: 527
+          Height: 214
+      - Type: 5
+        TextContent: crying
+        TextDelay: 1
+        location:
+          x: -455
+          y: 5302
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No no! I do, I'm just stressed right now!
+        SubChapNum: 13
+        Type: 0
+        location:
+          x: 568
+          y: 5466
+          Width: 405
+          Height: 278
+      - RespTree: 0
+        TextContent: That's not fair!
+        SubChapNum: 13
+        Type: 0
+        location:
+          x: 34
+          y: 5470
+          Width: 323
+          Height: 278
+      location:
+        x: 313
+        y: 5251
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Of course you think I mean THAT kind of picture
+        TextDelay: 2
+        location:
+          x: 1933
+          y: 5302
+          Width: 453
+          Height: 214
+      - Type: 5
+        TextContent: eyeroll
+        TextDelay: 1
+        location:
+          x: 2404
+          y: 5301
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Not this time
+        TextDelay: 1
+        location:
+          x: 2755
+          y: 5302
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Maybe when you're alone later tonight
+        TextDelay: 2
+        location:
+          x: 3111
+          y: 5299
+          Width: 402
+          Height: 214
+      - Type: 5
+        TextContent: evil
+        TextDelay: 1
+        location:
+          x: 3578
+          y: 5292
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: grinning-sweat
+        SubChapNum: 11
+        Type: 4
+        location:
+          x: 2113
+          y: 5618
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I'm gonna hold you up to that!
+        SubChapNum: 11
+        Type: 0
+        location:
+          x: 1237
+          y: 5603
+          Width: 357
+          Height: 278
+      location:
+        x: 1574
+        y: 5308
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: ANYWAY!
+        TextDelay: 1
+        location:
+          x: 1925
+          y: 5975
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Here's your cute lonely girlfriend
+        TextDelay: 2
+        location:
+          x: 2102
+          y: 5974
+          Width: 371
+          Height: 214
+      - Type: 1
+        TextContent: Sitting all alone at home
+        TextDelay: 2
+        location:
+          x: 2284
+          y: 5973
+          Width: 327
+          Height: 214
+      - Type: 1
+        TextContent: Missing her clumsy bf
+        TextDelay: 2
+        location:
+          x: 2468
+          y: 5976
+          Width: 323
+          Height: 214
+      - Type: 3
+        TextContent: Althea-sitting1
+        TextDelay: 1
+        location:
+          x: 2648
+          y: 5977
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Say, you never told me if you want me to check for that backup
+        TextDelay: 2.5
+        location:
+          x: 2833
+          y: 5980
+          Width: 532
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Ohhh yes please can you?
+        SubChapNum: 15
+        Type: 4
+        location:
+          x: 1669
+          y: 6567
+          Width: 339
+          Height: 278
+      - RespTree: 0
+        TextContent: heart-eyes
+        SubChapNum: 12
+        Type: 4
+        location:
+          x: 1294
+          y: 5989
+          Width: 323
+          Height: 278
+      location:
+        x: 1577
+        y: 5935
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: And yes please
+        SubChapNum: 15
+        Type: 0
+        location:
+          x: 1295
+          y: 6559
+          Width: 323
+          Height: 278
+      location:
+        x: 1298
+        y: 6218
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Fineeeeee
+        TextDelay: 2
+        location:
+          x: 118
+          y: 5707
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Here maybe this'll cheer you up a bit
+        TextDelay: 2
+        location:
+          x: -71
+          y: 5707
+          Width: 392
+          Height: 214
+      - Type: 3
+        TextContent: Althea-sitting1
+        TextDelay: 2.5
+        location:
+          x: -253
+          y: 5706
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Say, you never told me if you want me to check for that backup
+        TextDelay: 2.5
+        location:
+          x: -448
+          y: 5709
+          Width: 532
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: heart-eyes
+        SubChapNum: 14
+        Type: 4
+        location:
+          x: 789
+          y: 5917
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Ohhh yes please can you?
+        SubChapNum: 15
+        Type: 0
+        location:
+          x: 374
+          y: 6566
+          Width: 339
+          Height: 278
+      location:
+        x: 307
+        y: 5664
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: And yes please
+        SubChapNum: 15
+        Type: 0
+        location:
+          x: 793
+          y: 6560
+          Width: 323
+          Height: 278
+      location:
+        x: 791
+        y: 6213
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Yeah of course!
+        TextDelay: 2
+        location:
+          x: 1344
+          y: 6864
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Same password as everywhere else?
+        TextDelay: 2
+        location:
+          x: 1540
+          y: 6864
+          Width: 395
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Yep the very same
+        SubChapNum: 18
+        Type: 0
+        location:
+          x: 1320
+          y: 7829
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: bf-laughing
+        SubChapNum: 16
+        Type: 4
+        location:
+          x: 788
+          y: 7038
+          Width: 323
+          Height: 278
+      location:
+        x: 1038
+        y: 6823
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Just gonna call me out like that?
+        SubChapNum: 17
+        Type: 0
+        location:
+          x: 785
+          y: 7437
+          Width: 370
+          Height: 278
+      location:
+        x: 790
+        y: 7230
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Sorry sorry!
+        TextDelay: 2
+        location:
+          x: 605
+          y: 7660
+          Width: 323
+          Height: 214
+      - Type: 5
+        TextContent: gf-laughing
+        TextDelay: 1
+        location:
+          x: 429
+          y: 7659
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Yes the same password!
+        SubChapNum: 18
+        Type: 0
+        location:
+          x: 780
+          y: 7830
+          Width: 330
+          Height: 278
+      location:
+        x: 786
+        y: 7623
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Alright, give me a few and I'll check once I'm done making lunch
+        TextDelay: 2
+        location:
+          x: 1311
+          y: 8068
+          Width: 533
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No rush take your time
+        SubChapNum: 19
+        Type: 0
+        location:
+          x: 1215
+          y: 8298
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Thank you hon
+        SubChapNum: 19
+        Type: 0
+        location:
+          x: 820
+          y: 8299
+          Width: 323
+          Height: 278
+      location:
+        x: 1017
+        y: 8030
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 1 Hours Later
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: We're heading out to lunch now, any luck?
+        SubChapNum: 20
+        Type: 0
+        location:
+          x: 776
+          y: 8750
+          Width: 422
+          Height: 278
+      - RespTree: 0
+        TextContent: No Luck?
+        SubChapNum: 20
+        Type: 0
+        location:
+          x: 1211
+          y: 8751
+          Width: 323
+          Height: 278
+      location:
+        x: 1014
+        y: 8529
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 2 Hours Later
+      TextList:
+      - Type: 1
+        TextContent: Soooooo I was looking for the backup...
+        TextDelay: 3.5
+        location:
+          x: 1284
+          y: 9008
+          Width: 408
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Were you not able to find it?
+        SubChapNum: 21
+        Type: 0
+        location:
+          x: 725
+          y: 9192
+          Width: 349
+          Height: 278
+      - RespTree: 0
+        TextContent: That doesn't sound good
+        SubChapNum: 21
+        Type: 0
+        location:
+          x: 1135
+          y: 9188
+          Width: 333
+          Height: 278
+      location:
+        x: 975
+        y: 8968
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: I think I stumbled on your porn stash
+        TextDelay: 2
+        location:
+          x: 1254
+          y: 9463
+          Width: 392
+          Height: 214
+      - Type: 1
+        TextContent: I've been thinking for a little while now on how to ask you
+          this
+        TextDelay: 2.5
+        location:
+          x: 1436
+          y: 9461
+          Width: 521
+          Height: 214
+      - Type: 1
+        TextContent: I don't know how to ask you this
+        TextDelay: 2
+        location:
+          x: 1612
+          y: 9460
+          Width: 370
+          Height: 214
+      - Type: 1
+        TextContent: Are you cheating on me?
+        TextDelay: 5
+        location:
+          x: 1788
+          y: 9460
+          Width: 331
+          Height: 214
+      - Type: 1
+        TextContent: A lot of it says has cheating in the title
+        TextDelay: 2
+        location:
+          x: 1975
+          y: 9462
+          Width: 401
+          Height: 214
+      - Type: 1
+        TextContent: swinging
+        TextDelay: 1
+        location:
+          x: 2167
+          y: 9465
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Sharing
+        TextDelay: 1
+        location:
+          x: 2354
+          y: 9463
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I'm trying not to cry, can you explain please?
+        TextDelay: 3.5
+        location:
+          x: 2533
+          y: 9467
+          Width: 434
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: ' god, no no that''s not it at all!'
+        SubChapNum: 22
+        Type: 0
+        location:
+          x: 902
+          y: 9659
+          Width: 354
+          Height: 278
+      location:
+        x: 911
+        y: 9420
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: It's just hard to talk about...
+        SubChapNum: 23
+        Type: 0
+        location:
+          x: 903
+          y: 10068
+          Width: 344
+          Height: 278
+      location:
+        x: 908
+        y: 9853
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: what's hard to talk about?...
+        TextDelay: 2.5
+        location:
+          x: 1242
+          y: 10333
+          Width: 346
+          Height: 214
+      - Type: 1
+        TextContent: You want to cheat on me??
+        TextDelay: 2
+        location:
+          x: 1413
+          y: 10332
+          Width: 344
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No it's not like that
+        SubChapNum: 24
+        Type: 0
+        location:
+          x: 881
+          y: 10517
+          Width: 323
+          Height: 278
+      location:
+        x: 909
+        y: 10291
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: You have it all backwards
+        SubChapNum: 25
+        Type: 0
+        location:
+          x: 856
+          y: 10903
+          Width: 335
+          Height: 278
+      location:
+        x: 882
+        y: 10698
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: I'm confused
+        TextDelay: 1
+        location:
+          x: 1183
+          y: 11131
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: What do you mean backwards?
+        TextDelay: 2
+        location:
+          x: 1370
+          y: 11129
+          Width: 366
+          Height: 214
+      - Type: 1
+        TextContent: Baby I would never do that to you...
+        TextDelay: 2
+        location:
+          x: 1553
+          y: 11130
+          Width: 387
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No no I know
+        SubChapNum: 26
+        Type: 0
+        location:
+          x: 826
+          y: 11290
+          Width: 323
+          Height: 278
+      location:
+        x: 832
+        y: 11088
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: it's just hard to talk about
+        SubChapNum: 27
+        Type: 0
+        location:
+          x: 819
+          y: 11781
+          Width: 334
+          Height: 278
+      location:
+        x: 829
+        y: 11480
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: What's hard to talk about?
+        TextDelay: 2
+        location:
+          x: 1170
+          y: 12108
+          Width: 339
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: sad
+        SubChapNum: 28
+        Type: 4
+        location:
+          x: 829
+          y: 12412
+          Width: 323
+          Height: 278
+      location:
+        x: 823
+        y: 12068
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: It's okay you can tell me
+        TextDelay: 2
+        location:
+          x: 1157
+          y: 12744
+          Width: 327
+          Height: 214
+      - Type: 1
+        TextContent: I promise I won't be mad
+        TextDelay: 2
+        location:
+          x: 1494
+          y: 12744
+          Width: 330
+          Height: 214
+      - Type: 1
+        TextContent: I was just starting to think that you might have been cheating
+          on me
+        TextDelay: 2
+        location:
+          x: 1835
+          y: 12743
+          Width: 556
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: It's just that...
+        SubChapNum: 29
+        Type: 0
+        location:
+          x: 825
+          y: 13053
+          Width: 323
+          Height: 278
+      location:
+        x: 823
+        y: 12705
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I don't know how to talk about it
+        SubChapNum: 30
+        Type: 0
+        location:
+          x: 799
+          y: 13684
+          Width: 369
+          Height: 278
+      location:
+        x: 825
+        y: 13344
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Wait are you saying you're WANT me to cheat on you?
+        TextDelay: 3.5
+        location:
+          x: 1158
+          y: 14015
+          Width: 485
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Kind of... yeah
+        SubChapNum: 31
+        Type: 0
+        location:
+          x: 3359
+          y: 17582
+          Width: 323
+          Height: 278
+      - RespTree: 1
+        TextContent: Not exactly...
+        SubChapNum: 34
+        Type: 0
+        location:
+          x: -894
+          y: 17574
+          Width: 323
+          Height: 278
+      location:
+        x: 828
+        y: 13977
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Wait seriously??
+        TextDelay: 2
+        location:
+          x: 3725
+          y: 17951
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Are you messing with me right now?
+        TextDelay: 2.5
+        location:
+          x: 4080
+          y: 17950
+          Width: 391
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I'm sorry
+        SubChapNum: 32
+        Type: 0
+        location:
+          x: 3400
+          y: 18337
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Are you mad now?
+        SubChapNum: 32
+        Type: 0
+        location:
+          x: 3945
+          y: 18336
+          Width: 323
+          Height: 278
+      location:
+        x: 3380
+        y: 17910
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: No no it's okay!
+        TextDelay: 1
+        location:
+          x: 3688
+          y: 18681
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I think I just need a little bit to process all this
+        TextDelay: 2
+        location:
+          x: 4023
+          y: 18678
+          Width: 437
+          Height: 214
+      - Type: 1
+        TextContent: Can we talk more about this later?
+        TextDelay: 2
+        location:
+          x: 4483
+          y: 18679
+          Width: 380
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Yeah it's okay
+        SubChapNum: 44
+        Type: 0
+        location:
+          x: 3162
+          y: 22364
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I'm sorry
+        SubChapNum: 33
+        Type: 0
+        location:
+          x: 3871
+          y: 18988
+          Width: 323
+          Height: 278
+      location:
+        x: 3355
+        y: 18638
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: It's okay, I just need think about everything
+        TextDelay: 2
+        location:
+          x: 4199
+          y: 19327
+          Width: 426
+          Height: 214
+      - Type: 1
+        TextContent: It's been a roller coaster of emotions today
+        TextDelay: 2
+        location:
+          x: 4638
+          y: 19324
+          Width: 425
+          Height: 214
+      - Type: 1
+        TextContent: Thanks to a certain SOMEBODY dropping their phone
+        TextDelay: 2.5
+        location:
+          x: 5067
+          y: 19326
+          Width: 480
+          Height: 214
+      - Type: 1
+        TextContent: gf-laughing
+        TextDelay: 1
+        location:
+          x: 5562
+          y: 19328
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Alright hon, I'll talk to you later
+        SubChapNum: 44
+        Type: 0
+        location:
+          x: 3620
+          y: 22365
+          Width: 360
+          Height: 278
+      location:
+        x: 3868
+        y: 19285
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Not exactly, I just like the content
+        SubChapNum: 35
+        Type: 0
+        location:
+          x: -561
+          y: 18276
+          Width: 377
+          Height: 278
+      - RespTree: 0
+        TextContent: Not exactly, but I'm not opposed to sharing
+        SubChapNum: 38
+        Type: 0
+        location:
+          x: -1293
+          y: 18281
+          Width: 427
+          Height: 278
+      location:
+        x: -896
+        y: 17888
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Hmmmm
+        TextDelay: 2
+        location:
+          x: -172
+          y: 18648
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Is that really all there is to it?
+        TextDelay: 2
+        location:
+          x: 160
+          y: 18644
+          Width: 352
+          Height: 214
+      - Type: 1
+        TextContent: Do you wish we were in an open relationship?
+        TextDelay: 2
+        location:
+          x: 527
+          y: 18643
+          Width: 440
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No not open, I don't really know how to describe it, experimenting?
+        SubChapNum: 36
+        Type: 0
+        location:
+          x: -538
+          y: 18974
+          Width: 550
+          Height: 278
+      location:
+        x: -511
+        y: 18609
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: I'd be lying if I said I didn't think about it before too
+        TextDelay: 2
+        location:
+          x: -109
+          y: 19358
+          Width: 466
+          Height: 214
+      - Type: 1
+        TextContent: But just as a fantasy you know?
+        TextDelay: 2.5
+        location:
+          x: 392
+          y: 19355
+          Width: 367
+          Height: 214
+      - Type: 1
+        TextContent: Let me think about it
+        TextDelay: 2
+        location:
+          x: 790
+          y: 19362
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Wait, seriously??
+        SubChapNum: 37
+        Type: 0
+        location:
+          x: -434
+          y: 19686
+          Width: 323
+          Height: 278
+      location:
+        x: -449
+        y: 19316
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Calm down horny boy
+        TextDelay: 2
+        location:
+          x: -97
+          y: 20069
+          Width: 323
+          Height: 214
+      - Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1
+        location:
+          x: 235
+          y: 20068
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I just said I'll think about it
+        TextDelay: 2
+        location:
+          x: 573
+          y: 20074
+          Width: 337
+          Height: 214
+      - Type: 1
+        TextContent: No promises though
+        TextDelay: 2
+        location:
+          x: 919
+          y: 20075
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I need some time to think about all this though
+        TextDelay: 2.5
+        location:
+          x: 1267
+          y: 20071
+          Width: 443
+          Height: 214
+      - Type: 1
+        TextContent: 'I''ll talk to you later tonight '
+        TextDelay: 2
+        location:
+          x: 1727
+          y: 20071
+          Width: 340
+          Height: 214
+      - Type: 5
+        TextContent: gf-kiss
+        TextDelay: 1
+        location:
+          x: 2096
+          y: 20065
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No worries hon, enjoy your time alone
+        SubChapNum: 44
+        Type: 0
+        location:
+          x: -331
+          y: 22465
+          Width: 399
+          Height: 278
+      location:
+        x: -428
+        y: 20028
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Wait
+        TextDelay: 2
+        location:
+          x: -1616
+          y: 18622
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Can you explain a little bit more?
+        TextDelay: 2
+        location:
+          x: -1993
+          y: 18626
+          Width: 372
+          Height: 214
+      - Type: 1
+        TextContent: What do you mean by that?
+        TextDelay: 2
+        location:
+          x: -2344
+          y: 18620
+          Width: 345
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: You know how I kinda like it when you're being slutty?
+        SubChapNum: 39
+        Type: 0
+        location:
+          x: -1363
+          y: 18933
+          Width: 483
+          Height: 278
+      location:
+        x: -1264
+        y: 18582
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Yeah...
+        TextDelay: 2.5
+        location:
+          x: -1616
+          y: 19279
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I've always found it a bit strange that you don't get jealous
+        TextDelay: 2.5
+        location:
+          x: -2138
+          y: 19280
+          Width: 506
+          Height: 214
+      - Type: 1
+        TextContent: WAIT
+        TextDelay: 1
+        location:
+          x: -2479
+          y: 19275
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: You mean you like it when other men look at me?
+        TextDelay: 2.5
+        location:
+          x: -2959
+          y: 19278
+          Width: 457
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Why stop at looking?
+        SubChapNum: 40
+        Type: 0
+        location:
+          x: -1251
+          y: 19598
+          Width: 323
+          Height: 278
+      location:
+        x: -1271
+        y: 19232
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 5
+        TextContent: shy
+        TextDelay: 1
+        location:
+          x: -1573
+          y: 19967
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I don't know
+        TextDelay: 1
+        location:
+          x: -1924
+          y: 19967
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: That sounds risky...
+        TextDelay: 2.5
+        location:
+          x: -2261
+          y: 19968
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: That's why I've never talked about it before
+        SubChapNum: 41
+        Type: 0
+        location:
+          x: -1275
+          y: 20317
+          Width: 428
+          Height: 278
+      location:
+        x: -1242
+        y: 19926
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Yeah...
+        TextDelay: 2
+        location:
+          x: -1572
+          y: 20719
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I can see why you never said anything
+        TextDelay: 2
+        location:
+          x: -1987
+          y: 20725
+          Width: 401
+          Height: 214
+      - Type: 1
+        TextContent: You should've still told me though!
+        TextDelay: 2
+        location:
+          x: -2390
+          y: 20717
+          Width: 381
+          Height: 214
+      - Type: 1
+        TextContent: I mean who knows...
+        TextDelay: 2
+        location:
+          x: -2736
+          y: 20713
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Maybe I'd even be into it you know?
+        TextDelay: 2
+        location:
+          x: -3159
+          y: 20718
+          Width: 389
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Wait what??
+        SubChapNum: 42
+        Type: 0
+        location:
+          x: -1236
+          y: 21077
+          Width: 323
+          Height: 278
+      location:
+        x: -1222
+        y: 20674
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Of course you'd get this excited
+        TextDelay: 2
+        location:
+          x: -1649
+          y: 21401
+          Width: 368
+          Height: 214
+      - Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1
+        location:
+          x: -1997
+          y: 21403
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: I'm not promising you anything
+        TextDelay: 2
+        location:
+          x: -2425
+          y: 21408
+          Width: 362
+          Height: 214
+      - Type: 1
+        TextContent: YET
+        TextDelay: 0.5
+        location:
+          x: -2810
+          y: 21403
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: But who knows?
+        TextDelay: 2
+        location:
+          x: -3177
+          y: 21399
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: YET??
+        SubChapNum: 43
+        Type: 0
+        location:
+          x: -1216
+          y: 21737
+          Width: 323
+          Height: 278
+      location:
+        x: -1236
+        y: 21376
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Oops did I say yet?
+        TextDelay: 2
+        location:
+          x: -1541
+          y: 22082
+          Width: 323
+          Height: 214
+      - Type: 1
+        TextContent: Anyway I'll leave you to think about what it all means
+        TextDelay: 2.5
+        location:
+          x: -2036
+          y: 22083
+          Width: 476
+          Height: 214
+      - Type: 1
+        TextContent: I need time to think about all this
+        TextDelay: 2
+        location:
+          x: -2433
+          y: 22096
+          Width: 372
+          Height: 214
+      - Type: 1
+        TextContent: Enjoy your time with your boys
+        TextDelay: 2
+        location:
+          x: -2812
+          y: 22088
+          Width: 363
+          Height: 214
+      - Type: 1
+        TextContent: I'll talk to you later tonight
+        TextDelay: 2
+        location:
+          x: -3163
+          y: 22082
+          Width: 337
+          Height: 214
+      - Type: 5
+        TextContent: gf-kiss
+        TextDelay: 1
+        location:
+          x: -3533
+          y: 22090
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: No worries hon, take all the time you need
+        SubChapNum: 44
+        Type: 0
+        location:
+          x: -1230
+          y: 22459
+          Width: 422
+          Height: 278
+      location:
+        x: -1210
+        y: 22039
+        Width: 323
+        Height: 329
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 6
+        TextContent: End Of Chapter 1
+        TextDelay: 1
+        location:
+          x: 960
+          y: 23018
+          Width: 323
+          Height: 214
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses: []
+      location:
+        x: 620
+        y: 22979
+        Width: 323
+        Height: 329

@@ -15,7 +15,7 @@ public class ContactsHandler : MonoBehaviour {
     public SaveFile SF;
     public PreFabs Prefabs;
 
-    public void setContactPage(Sprite pfp, int indx) {
+    public void SetContactPage(Sprite pfp, int indx) {
         Shared.headshot.GetComponent<Image>().sprite = pfp;
             
         Shared.displayedList = Shared.content.GetChild(indx) as RectTransform;
@@ -24,7 +24,7 @@ public class ContactsHandler : MonoBehaviour {
         Shared.displayedList.anchoredPosition = Vector3.zero;   
     }
 
-    public void addContactCard(Sprite pfp, string name, int indx) {
+    public void AddContactCard(Sprite pfp, string name, int indx) {
         GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, Shared.cardsList);
         ChoiceClone.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = name;
@@ -35,7 +35,7 @@ public class ContactsHandler : MonoBehaviour {
 
             bool viewingScreen = SF.saveFile.contactPush == SF.saveFile.selectedIndex;
 
-            setContactPage(pfp, indx);
+            SetContactPage(pfp, indx);
 
             // This is important for showing or hiding contact choices if you're not viewing who the choices are for
             if (SF.saveFile.contactPush != indx) {
@@ -61,7 +61,7 @@ public class ContactsHandler : MonoBehaviour {
         // Generates contact cards for each contact based on list.
         for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
             Sprite img = Resources.Load("Images/Headshots/" + SF.saveFile.ContactsList[i].NameOfContact, typeof(Sprite)) as Sprite;            
-            addContactCard(img, SF.saveFile.ContactsList[i].NameOfContact, i);
+            AddContactCard(img, SF.saveFile.ContactsList[i].NameOfContact, i);
         } 
     }
 

@@ -1,13 +1,16 @@
 {
-    "AllowMidrolls": true,
+    "AllowMidrolls": false,
     "SubChaps": [
         {
-            "SubChapNum": 0,
             "Contact": "Althea",
             "TimeIndicator": "4 Hours Later",
             "TextList": [],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
+            "UnlockInstaPostsAccount": "Althea",
+            "UnlockPosts": [
+                0,
+                1,
+                2
+            ],
             "Responses": [
                 {
                     "RespTree": false,
@@ -18,7 +21,6 @@
             ]
         },
         {
-            "SubChapNum": 1,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -34,33 +36,28 @@
             ]
         },
         {
-            "SubChapNum": 2,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "OH look who finally rememebred their poor girlfriend",
-                    "TextDelay": 3.0
+                    "TextDelay": 3.5
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Let me guess",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "You forgot to charge your phone as usual",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.5
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "gf-laugh",
-                    "TextDelay": 1.0
+                    "TextDelay": 0.5
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -81,21 +78,18 @@
             ]
         },
         {
-            "SubChapNum": 3,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "OMG babe are you okay???",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Did something happen to you??",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -110,7 +104,6 @@
             ]
         },
         {
-            "SubChapNum": 4,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -126,7 +119,6 @@
             ]
         },
         {
-            "SubChapNum": 5,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -142,21 +134,18 @@
             ]
         },
         {
-            "SubChapNum": 6,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "gf-tear",
                     "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Are you texting from the new one right now?",
-                    "TextDelay": 1.7
+                    "TextDelay": 2.5
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -171,7 +160,6 @@
             ]
         },
         {
-            "SubChapNum": 7,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -187,43 +175,36 @@
             ]
         },
         {
-            "SubChapNum": 8,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Want me to check for you?",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "This whole thing must've been really stressful so I'd like to help!",
-                    "TextDelay": 1.7
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "wait...",
-                    "TextDelay": 2.5
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I just realised, this means that you don't have any of our pictures anymore do you?",
                     "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
+                    "TextContent": "This whole thing must've been really streessful so I'd like to help!",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "wait...",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I just realised, this means that you don't have any of our pictures anymore do you?",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
                     "TextContent": "I can send you a little reminder if you'd like",
-                    "TextDelay": 1.3
+                    "TextDelay": 2.5
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "tongue-out",
                     "TextDelay": 1.0
                 }
@@ -234,43 +215,38 @@
                 {
                     "RespTree": false,
                     "TextContent": "unamused",
-                    "SubChapNum": 9,
+                    "SubChapNum": 10,
                     "Type": 4
                 },
                 {
                     "RespTree": false,
                     "TextContent": "hot",
-                    "SubChapNum": 10,
+                    "SubChapNum": 9,
                     "Type": 4
                 }
             ]
         },
         {
-            "SubChapNum": 9,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "angry",
                     "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "No fun",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "And here I was missing you all day and you dont even miss me",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.5
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "crying",
                     "TextDelay": 1.0
                 }
@@ -281,49 +257,43 @@
                 {
                     "RespTree": false,
                     "TextContent": "No no! I do, I'm just stressed right now!",
-                    "SubChapNum": 11,
+                    "SubChapNum": 13,
                     "Type": 0
                 },
                 {
                     "RespTree": false,
                     "TextContent": "That's not fair!",
-                    "SubChapNum": 11,
+                    "SubChapNum": 13,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 10,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Of course you think I mean THAT kind of picture",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "eyeroll",
                     "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Not this time",
-                    "TextDelay": 1.8
+                    "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Maybe when you're alone later tonight",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
                     "TextContent": "evil",
                     "TextDelay": 1.0
                 }
@@ -333,99 +303,108 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "I'm gonna hold you up to that!",
-                    "SubChapNum": 12,
-                    "Type": 0
-                },
-                {
-                    "RespTree": false,
                     "TextContent": "grinning-sweat",
-                    "SubChapNum": 12,
+                    "SubChapNum": 11,
                     "Type": 4
-                }
-            ]
-        },
-        {
-            "SubChapNum": 11,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Fineeeeee",
-                    "TextDelay": 1.8
                 },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Here maybe this'll cheer you up a bit",
-                    "TextDelay": 1.5
-                },
-                {
-                    "Type": 3,
-                    "Tendency": 0,
-                    "TextContent": "Althea-sitting1",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Say, you never told me if you want me to check for that backup",
-                    "TextDelay": 1.5
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "Ohhh yes please can you?",
-                    "SubChapNum": 13,
+                    "TextContent": "I'm gonna hold you up to that!",
+                    "SubChapNum": 11,
                     "Type": 0
-                },
-                {
-                    "RespTree": false,
-                    "TextContent": "heart-eyes",
-                    "SubChapNum": 13,
-                    "Type": 4
                 }
             ]
         },
         {
-            "SubChapNum": 12,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "ANYWAY",
-                    "TextDelay": 1.8
+                    "TextContent": "ANYWAY!",
+                    "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Here's your cute lonely girlfriend",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Missing her clumsy bf",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 3,
-                    "Tendency": 0,
-                    "TextContent": "Althea-sitting1",
                     "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
+                    "TextContent": "Sitting all alone at home",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Missing her clumsy bf",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 3,
+                    "TextContent": "Althea-sitting1",
+                    "TextDelay": 1.0
+                },
+                {
+                    "Type": 1,
                     "TextContent": "Say, you never told me if you want me to check for that backup",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Ohhh yes please can you?",
+                    "SubChapNum": 15,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 12,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "And yes please",
+                    "SubChapNum": 15,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Fineeeeee",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Here maybe this'll cheer you up a bit",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 3,
+                    "TextContent": "Althea-sitting1",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Say, you never told me if you want me to check for that backup",
+                    "TextDelay": 2.5
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -434,48 +413,65 @@
                 {
                     "RespTree": false,
                     "TextContent": "heart-eyes",
-                    "SubChapNum": 13,
-                    "Type": 4
-                },
-                {
-                    "RespTree": false,
-                    "TextContent": "Ohhh yes please can you?",
-                    "SubChapNum": 13,
-                    "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 13,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Same password as everywhere else?",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
-                {
-                    "RespTree": false,
-                    "TextContent": "bf-laugh",
                     "SubChapNum": 14,
                     "Type": 4
                 },
                 {
                     "RespTree": false,
-                    "TextContent": "Yep the very same",
-                    "SubChapNum": 16,
+                    "TextContent": "Ohhh yes please can you?",
+                    "SubChapNum": 15,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 14,
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "And yes please",
+                    "SubChapNum": 15,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Yeah of course!",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Same password as everywhere else?",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Yep the very same",
+                    "SubChapNum": 18,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laughing",
+                    "SubChapNum": 16,
+                    "Type": 4
+                }
+            ]
+        },
+        {
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -485,26 +481,23 @@
                 {
                     "RespTree": false,
                     "TextContent": "Just gonna call me out like that?",
-                    "SubChapNum": 15,
+                    "SubChapNum": 17,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 15,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Sorry sorry!",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 5,
-                    "Tendency": 0,
-                    "TextContent": "gf-laugh",
+                    "TextContent": "gf-laughing",
                     "TextDelay": 1.0
                 }
             ],
@@ -514,19 +507,17 @@
                 {
                     "RespTree": false,
                     "TextContent": "Yes the same password!",
-                    "SubChapNum": 16,
+                    "SubChapNum": 18,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 16,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Alright, give me a few and I'll check once I'm done making lunch",
                     "TextDelay": 2.0
                 }
@@ -536,22 +527,21 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "Thank you hon",
-                    "SubChapNum": 17,
+                    "TextContent": "No rush take your time",
+                    "SubChapNum": 19,
                     "Type": 0
                 },
                 {
                     "RespTree": false,
-                    "TextContent": "No rush take your time",
-                    "SubChapNum": 17,
+                    "TextContent": "Thank you hon",
+                    "SubChapNum": 19,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 17,
             "Contact": "Althea",
-            "TimeIndicator": "1 Hour Later",
+            "TimeIndicator": "1 Hours Later",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -559,27 +549,25 @@
                 {
                     "RespTree": false,
                     "TextContent": "We're heading out to lunch now, any luck?",
-                    "SubChapNum": 18,
+                    "SubChapNum": 20,
                     "Type": 0
                 },
                 {
                     "RespTree": false,
-                    "TextContent": "No luck?",
-                    "SubChapNum": 18,
+                    "TextContent": "No Luck?",
+                    "SubChapNum": 20,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 18,
             "Contact": "Althea",
             "TimeIndicator": "2 Hours Later",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Soooooo I was looking for the backup...",
-                    "TextDelay": 3.0
+                    "TextDelay": 3.5
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -588,63 +576,60 @@
                 {
                     "RespTree": false,
                     "TextContent": "Were you not able to find it?",
-                    "SubChapNum": 19,
+                    "SubChapNum": 21,
                     "Type": 0
                 },
                 {
                     "RespTree": false,
                     "TextContent": "That doesn't sound good",
-                    "SubChapNum": 19,
+                    "SubChapNum": 21,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 19,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "I think I stumbled on your porn stash",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "I've been thinking for a little while now on how to ask you this",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Are you cheating on me?",
                     "TextDelay": 2.5
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
+                    "TextContent": "I don't know how to ask you this",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Are you cheating on me?",
+                    "TextDelay": 5.0
+                },
+                {
+                    "Type": 1,
                     "TextContent": "A lot of it says has cheating in the title",
                     "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "swinging",
-                    "TextDelay": 2.5
+                    "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Sharing",
-                    "TextDelay": 1.8
+                    "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "I'm trying not to cry, can you explain please?",
-                    "TextDelay": 1.8
+                    "TextDelay": 3.5
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -652,14 +637,13 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "Oh god, no no that's not it at all!",
-                    "SubChapNum": 20,
+                    "TextContent": " god, no no that's not it at all!",
+                    "SubChapNum": 22,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 20,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -669,27 +653,24 @@
                 {
                     "RespTree": false,
                     "TextContent": "It's just hard to talk about...",
-                    "SubChapNum": 21,
+                    "SubChapNum": 23,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 21,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "what's hard to talk about?...",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.5
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "You have a kink for cheating on your partners?",
-                    "TextDelay": 1.4
+                    "TextContent": "You want to cheat on me??",
+                    "TextDelay": 2.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -698,13 +679,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "No it's not like that",
-                    "SubChapNum": 22,
+                    "SubChapNum": 24,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 22,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -714,27 +694,65 @@
                 {
                     "RespTree": false,
                     "TextContent": "You have it all backwards",
-                    "SubChapNum": 23,
+                    "SubChapNum": 25,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 23,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "What do you mean backwards?",
-                    "TextDelay": 1.5
+                    "TextContent": "I'm confused",
+                    "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Wait are you saying you want me to cheat on you???",
-                    "TextDelay": 1.5
+                    "TextContent": "What do you mean backwards?",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Baby I would never do that to you...",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "No no I know",
+                    "SubChapNum": 26,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "it's just hard to talk about",
+                    "SubChapNum": 27,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "What's hard to talk about?",
+                    "TextDelay": 2.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -743,132 +761,175 @@
                 {
                     "RespTree": false,
                     "TextContent": "sad",
-                    "SubChapNum": 24,
+                    "SubChapNum": 28,
                     "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "It's okay you can tell me",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I promise I won't be mad",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I was just starting to think that you might have been cheating on me",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "It's just that...",
+                    "SubChapNum": 29,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I don't know how to talk about it",
+                    "SubChapNum": 30,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Wait are you saying you're WANT me to cheat on you?",
+                    "TextDelay": 3.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Kind of... yeah",
+                    "SubChapNum": 31,
+                    "Type": 0
                 },
                 {
                     "RespTree": true,
                     "TextContent": "Not exactly...",
-                    "SubChapNum": 27,
-                    "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 24,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Wait seriously??",
-                    "TextDelay": 1.5
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Are you messing with me right now?",
-                    "TextDelay": 1.3
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I don't know how to feel about this",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
-                {
-                    "RespTree": false,
-                    "TextContent": "I'm sorry",
-                    "SubChapNum": 25,
-                    "Type": 0
-                },
-                {
-                    "RespTree": false,
-                    "TextContent": "Are you mad?",
-                    "SubChapNum": 25,
-                    "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 25,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "No no it's okay",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "This is just a lot to take in",
-                    "TextDelay": 1.3
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I think I just need a little bit to process all this",
-                    "TextDelay": 1.3
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Can we talk more about this later?",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
-                {
-                    "RespTree": false,
-                    "TextContent": "I'm sorry",
-                    "SubChapNum": 26,
-                    "Type": 0
-                },
-                {
-                    "RespTree": false,
-                    "TextContent": "Yeah it's okay",
                     "SubChapNum": 34,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 26,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
+                    "TextContent": "Wait seriously??",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Are you messing with me right now?",
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm sorry",
+                    "SubChapNum": 32,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Are you mad now?",
+                    "SubChapNum": 32,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "No no it's okay!",
+                    "TextDelay": 1.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I think I just need a little bit to process all this",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Can we talk more about this later?",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Yeah it's okay",
+                    "SubChapNum": 44,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm sorry",
+                    "SubChapNum": 33,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
                     "TextContent": "It's okay, I just need think about everything",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "It's been a roller coaster of emotions today",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Thanks to a certain SOMEBODY dropping their phone",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.5
                 },
                 {
-                    "Type": 5,
-                    "Tendency": 0,
-                    "TextContent": "gf-laugh",
+                    "Type": 1,
+                    "TextContent": "gf-laughing",
                     "TextDelay": 1.0
                 }
             ],
@@ -878,13 +939,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "Alright hon, I'll talk to you later",
-                    "SubChapNum": 34,
+                    "SubChapNum": 44,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 27,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [],
@@ -893,198 +953,36 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "Not exactly, but I like to share",
-                    "SubChapNum":28,
-                    "Type": 0
-                },
-                {
-                    "RespTree": false,
                     "TextContent": "Not exactly, I just like the content",
-                    "SubChapNum":32,
+                    "SubChapNum": 35,
                     "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 28,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Wait",
-                    "TextDelay": 1.0
                 },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Can you explain a little more",
-                    "TextDelay": 1.3
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "What do you mean by that?",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "You know how I like it when you're being slutty?",
-                    "SubChapNum": 29,
+                    "TextContent": "Not exactly, but I'm not opposed to sharing",
+                    "SubChapNum": 38,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 29,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Yeah...",
-                    "TextDelay": 1.7
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "WAIT",
-                    "TextDelay": 0.7
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "You mean you like it when other men look at me?",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
-                {
-                    "RespTree": false,
-                    "TextContent": "Why stop at looking?",
-                    "SubChapNum": 30,
-                    "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 30,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 5,
-                    "Tendency": 0,
-                    "TextContent": "shy",
-                    "TextDelay": 1.0
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I don't know",
-                    "TextDelay": 1.5
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "It sounds risky...",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
-                {
-                    "RespTree": false,
-                    "TextContent": "That's why I've never talked about it before",
-                    "SubChapNum": 31,
-                    "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 31,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Yeah...",
-                    "TextDelay": 1.3
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I think I need some time to think about all this",
-                    "TextDelay": 1.5
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I'm not saying no to anything yet though",
-                    "TextDelay": 1.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "BUT I'm not saying yes either!!",
-                    "TextDelay": 1.8
-                }
-            ],
-            "UnlockInstaPostsAccount": "",
-            "UnlockPosts": [],
-            "Responses": [
-                {
-                    "RespTree": false,
-                    "TextContent": "No worries hon, take all the time you need",
-                    "SubChapNum": 34,
-                    "Type": 0
-                }
-            ]
-        },
-        {
-            "SubChapNum": 32,
-            "Contact": "Althea",
-            "TimeIndicator": "",
-            "TextList": [
-                {
-                    "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Hmmmm",
-                    "TextDelay": 1.3
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I don't believe you",
-                    "TextDelay": 1.5
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Is that really all there is to it?",
-                    "TextDelay": 1.3
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "...",
-                    "TextDelay": 0.8
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
                     "TextContent": "Do you wish we were in an open relationship?",
-                    "TextDelay": 1.8
+                    "TextDelay": 2.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -1092,34 +990,30 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "No not open, I just like the idea of experimenting",
-                    "SubChapNum": 33,
+                    "TextContent": "No not open, I don't really know how to describe it, experimenting?",
+                    "SubChapNum": 36,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 33,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
+                    "TextContent": "I'd be lying if I said I didn't think about it before too",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "But just as a fantasy you know?",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
                     "TextContent": "Let me think about it",
-                    "TextDelay": 1.5
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I'm not promising anything",
-                    "TextDelay": 1.3
-                },
-                {
-                    "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "But I'd be lying if I said I didn't think about it before too",
-                    "TextDelay": 1.5
+                    "TextDelay": 2.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -1128,45 +1022,49 @@
                 {
                     "RespTree": false,
                     "TextContent": "Wait, seriously??",
-                    "SubChapNum": 34,
+                    "SubChapNum": 37,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 34,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "Don't get too excited!",
-                    "TextDelay": 1.5
+                    "TextContent": "Calm down horny boy",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "TextDelay": 1.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I said I'm not making any promises!",
-                    "TextDelay": 1.5
+                    "TextContent": "I just said I'll think about it",
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "But I'll think about it",
-                    "TextDelay": 1.5
+                    "TextContent": "No promises though",
+                    "TextDelay": 2.0
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I need some time to think though",
-                    "TextDelay": 1.5
+                    "TextContent": "I need some time to think about all this though",
+                    "TextDelay": 2.5
                 },
                 {
                     "Type": 1,
-                    "Tendency": 0,
-                    "TextContent": "I'll talk to you later tonight",
-                    "TextDelay": 1.5
+                    "TextContent": "I'll talk to you later tonight ",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-kiss",
+                    "TextDelay": 1.0
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -1175,21 +1073,245 @@
                 {
                     "RespTree": false,
                     "TextContent": "No worries hon, enjoy your time alone",
-                    "SubChapNum": 35,
+                    "SubChapNum": 44,
                     "Type": 0
                 }
             ]
         },
         {
-            "SubChapNum": 35,
             "Contact": "Althea",
             "TimeIndicator": "",
             "TextList": [
                 {
-                    "Type": 8,
-                    "Tendency": 0,
+                    "Type": 1,
+                    "TextContent": "Wait",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Can you explain a little bit more?",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "What do you mean by that?",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "You know how I kinda like it when you're being slutty?",
+                    "SubChapNum": 39,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Yeah...",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I've always found it a bit strange that you don't get jealous",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "WAIT",
+                    "TextDelay": 1.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "You mean you like it when other men look at me?",
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Why stop at looking?",
+                    "SubChapNum": 40,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 5,
+                    "TextContent": "shy",
+                    "TextDelay": 1.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I don't know",
+                    "TextDelay": 1.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "That sounds risky...",
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "That's why I've never talked about it before",
+                    "SubChapNum": 41,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Yeah...",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I can see why you never said anything",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "You should've still told me though!",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I mean who knows...",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Maybe I'd even be into it you know?",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Wait what??",
+                    "SubChapNum": 42,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Of course you'd get this excited",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "TextDelay": 1.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I'm not promising you anything",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "YET",
+                    "TextDelay": 0.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "But who knows?",
+                    "TextDelay": 2.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "YET??",
+                    "SubChapNum": 43,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Oops did I say yet?",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Anyway I'll leave you to think about what it all means",
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I need time to think about all this",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Enjoy your time with your boys",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I'll talk to you later tonight",
+                    "TextDelay": 2.0
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-kiss",
+                    "TextDelay": 1.0
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "No worries hon, take all the time you need",
+                    "SubChapNum": 44,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TimeIndicator": "",
+            "TextList": [
+                {
+                    "Type": 6,
                     "TextContent": "End Of Chapter 1",
-                    "TextDelay": 1.5
+                    "TextDelay": 1.0
                 }
             ],
             "UnlockInstaPostsAccount": "",

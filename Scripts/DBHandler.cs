@@ -23,7 +23,7 @@ public class DBHandler : MonoBehaviour
         public List<string> MidrollsList;
     }
 
-    public DBRoot DataBase = new DBRoot(); 
+    public DBRoot DataBase = new(); 
     public void LoadDB() {
         TextAsset DBFile = Resources.Load<TextAsset>("DB");
         DataBase = JsonUtility.FromJson<DBRoot>(DBFile.text);
