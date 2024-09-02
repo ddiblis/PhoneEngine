@@ -135,6 +135,7 @@ public class SavedPost
 
 [System.Serializable]
 public class SaveFileRoot {
+    public int playTime;
     public int contactPush;
     public int selectedIndex;
     public bool AllowMidrolls;
