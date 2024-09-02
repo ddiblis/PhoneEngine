@@ -19,6 +19,7 @@ public class SettingsManager : MonoBehaviour {
     public Transform MuteCard;
     public Transform FasterReplies;
     public Transform ResetCard;
+    public Transform GameModeCard;
     public Transform FullScreenCard;
 
 
@@ -27,11 +28,14 @@ public class SettingsManager : MonoBehaviour {
         Transform MuteCardClone = Instantiate(MuteCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
         Transform FastRepliesCardClone = Instantiate(FasterReplies, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
         Transform FullScreenCardClone = Instantiate(FullScreenCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
+        Transform GameModeCardClone = Instantiate(GameModeCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
         Transform ResetCardClone = Instantiate(ResetCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
+
 
         GameObject MuteSlider = MuteCardClone.GetChild(2).gameObject;
         GameObject FasterRepliesSlider = FastRepliesCardClone.GetChild(2).gameObject;
         GameObject FullScreenSlider = FullScreenCardClone.GetChild(2).gameObject;
+        GameObject GameModeSlider = GameModeCardClone.GetChild(2).gameObject;
 
         if (SF.saveFile.Settings.FasterReplies){
             FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
@@ -64,6 +68,22 @@ public class SettingsManager : MonoBehaviour {
                 MuteAudio(SF.saveFile.Settings.MuteGame);
             }
         });
+
+        if (SF.saveFile.Settings.GameMode){
+            GameModeSlider.GetComponent<Animator>().Play("Turn-On-Slider");
+        }
+        GameModeSlider.GetComponent<Button>().onClick.AddListener(() => {
+            SettingsList.GetComponent<AudioSource>().Play();
+
+            if (!SF.saveFile.Settings.GameMode) {
+                SF.saveFile.Settings.GameMode = true;
+                GameModeSlider.GetComponent<Animator>().Play("Turn-On-Slider");
+            } else {
+                SF.saveFile.Settings.GameMode = false;
+                GameModeSlider.GetComponent<Animator>().Play("Turn-Off-Slider");
+            }
+        });
+
 
         if (SF.saveFile.Settings.FullScreen){
             FullScreenSlider.GetComponent<Animator>().Play("Turn-On-Slider");

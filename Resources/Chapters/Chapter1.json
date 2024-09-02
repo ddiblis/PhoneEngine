@@ -884,7 +884,7 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "Kind of... yeah",
+                    "TextContent": "Kind of... yeah <color=#ff0040>[Tendency: Dominant]</color>",
                     "SubChapNum": 31,
                     "Type": 0
                 },
@@ -1019,13 +1019,13 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "Not exactly, I just like the content",
+                    "TextContent": "Not exactly, I just like the content <color=#808080>[Tendency: Neutral]</color>",
                     "SubChapNum": 35,
                     "Type": 0
                 },
                 {
                     "RespTree": false,
-                    "TextContent": "Not exactly, but I'm not opposed to sharing",
+                    "TextContent": "Not exactly, but I'm not opposed to sharing <color=#89CFF0>[Tendency: Submissive]</color>",
                     "SubChapNum": 38,
                     "Type": 0
                 }

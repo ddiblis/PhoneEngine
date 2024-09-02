@@ -9,6 +9,8 @@ public class PreFabs : MonoBehaviour {
     public GameObject choice;
     public GameObject sentText;
     public GameObject recText;
+    public GameObject DomText;
+    public GameObject SubText;
     public GameObject sentImage;
     public GameObject recImage;
     public GameObject sentEmoji;

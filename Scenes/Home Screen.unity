@@ -2773,6 +2773,8 @@ MonoBehaviour:
   choice: {fileID: 1076370345745255780, guid: 7fbc670f77be7bd33a21fc4cac3a2ba2, type: 3}
   sentText: {fileID: 1658346118929398, guid: d8a4fc22db5d0db7d9d355454681e229, type: 3}
   recText: {fileID: 1091222002183730, guid: 5c03b3fe50a4cb325a95b8f2e16d7fbc, type: 3}
+  DomText: {fileID: 1091222002183730, guid: a962a2f6ace6a230594d8c4af27caa05, type: 3}
+  SubText: {fileID: 1091222002183730, guid: c79a9f6aa5f93e1949ed3f93bbb41395, type: 3}
   sentImage: {fileID: 7878636168325601005, guid: d1d1c695438fa8114b99edda2600a8b5, type: 3}
   recImage: {fileID: 4810520593487603046, guid: d36bd16e15dad5fdfac4713d3470d42b, type: 3}
   sentEmoji: {fileID: 7878636168325601005, guid: 818451e3a56288cfb9239994e015fb04, type: 3}
@@ -2822,11 +2824,11 @@ MonoBehaviour:
   MostRecentSaveIndex: 0
   NameOfSaves: []
   ChapterOfSaves: 
-  TendencyOfSaves: []
+  TendencyOfSaves: 
   DateTimeOfSave: []
   AutoSaveMostRecent: 0
   AutoSaveChapter: 0
-  AutoSaveTendency: 
+  AutoSaveTendency: 0
   AutoSaveDateTime: 
 --- !u!114 &492607245
 MonoBehaviour:
@@ -2850,10 +2852,13 @@ MonoBehaviour:
     CurrWallPaper: 
     ChoiceNeeded: 0
     PlayingMidRoll: 0
+    Stats:
+      Tendency: 0
     Settings:
       FasterReplies: 0
       MuteGame: 0
       FullScreen: 0
+      GameMode: 0
     ContactsList: []
     ChapterList: []
     CurrStoryPoint:
@@ -5775,6 +5780,7 @@ MonoBehaviour:
   MuteCard: {fileID: 3242290293405306887, guid: 687eb563a67d4354ea172df8e9f0e093, type: 3}
   FasterReplies: {fileID: 3954494416237977722, guid: 671607494aaefff72b744022cb8f377c, type: 3}
   ResetCard: {fileID: 7578896150740174023, guid: 34ee4e4618884b838b471530d2a7b266, type: 3}
+  GameModeCard: {fileID: 3242290293405306887, guid: 6140f2d7ea653ecfc8ff9fc1002693ff, type: 3}
   FullScreenCard: {fileID: 3242290293405306887, guid: 8d34d18600bd704f6ab7e45e0cbfdf44, type: 3}
 --- !u!95 &1484976395
 Animator:

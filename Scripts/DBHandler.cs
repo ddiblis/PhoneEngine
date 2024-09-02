@@ -10,18 +10,8 @@ using System.IO;
 using System.Linq;
 using System;
 
-public class DBHandler : MonoBehaviour
-{
-
+public class DBHandler : MonoBehaviour {
     public SaveFile SF;
-
-    [System.Serializable]
-    public class DBRoot {
-        public List<string> ContactList;
-        public List<string> ChapterList;
-        public List<string> PhotoList;
-        public List<string> MidrollsList;
-    }
 
     public DBRoot DataBase = new(); 
     public void LoadDB() {

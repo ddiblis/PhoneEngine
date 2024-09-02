@@ -160,8 +160,6 @@ public class SaveFileRoot {
 [System.Serializable]
 public class Stats {
     public int Tendency;
-    public bool IntersetInOtherGirls;
-    public bool InterestInThreesomes;
 }
 
 [System.Serializable]
@@ -175,6 +173,7 @@ public class Settings {
     public bool FasterReplies;
     public bool MuteGame;
     public bool FullScreen;
+    public bool GameMode;
 }
 
 [System.Serializable]
@@ -202,6 +201,16 @@ public class PhotoCategory {
 
 /* ====================== End ============================ */
 
+/* ====================== DB ============================ */
+[System.Serializable]
+public class DBRoot {
+    public List<string> ContactList;
+    public List<string> ChapterList;
+    public List<string> PhotoList;
+    public List<string> MidrollsList;
+}
+/* ====================== End ============================ */
+
 /* ====================== Enums ============================ */
 public enum TypeOfText {
     sentText = 0,
@@ -217,5 +226,10 @@ public enum Tendency {
     Neutral = 0,
     Submissive = 1,
     Dominant = 2
+}
+public enum EStats {
+    Tendency = 0,
+    InterestInThreesomes = 1,
+    IntersetInOtherGirls = 2
 }
 /* ====================== End ============================ */

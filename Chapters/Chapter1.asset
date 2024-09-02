@@ -1234,13 +1234,13 @@ MonoBehaviour:
       UnlockPosts: 
       Responses:
       - RespTree: 0
-        TextContent: Kind of... yeah
+        TextContent: 'Kind of... yeah <color=#ff0040>[Tendency: Dominant]</color>'
         SubChapNum: 31
         Type: 0
         location:
-          x: 3359
-          y: 17582
-          Width: 323
+          x: 3286
+          y: 17589
+          Width: 530
           Height: 278
       - RespTree: 1
         TextContent: Not exactly...
@@ -1422,22 +1422,24 @@ MonoBehaviour:
       UnlockPosts: 
       Responses:
       - RespTree: 0
-        TextContent: Not exactly, I just like the content
+        TextContent: 'Not exactly, I just like the content <color=#808080>[Tendency:
+          Neutral]</color>'
         SubChapNum: 35
         Type: 0
         location:
-          x: -561
-          y: 18276
-          Width: 377
+          x: -622
+          y: 18274
+          Width: 624
           Height: 278
       - RespTree: 0
-        TextContent: Not exactly, but I'm not opposed to sharing
+        TextContent: 'Not exactly, but I''m not opposed to sharing <color=#89CFF0>[Tendency:
+          Submissive]</color>'
         SubChapNum: 38
         Type: 0
         location:
-          x: -1293
-          y: 18281
-          Width: 427
+          x: -1420
+          y: 18279
+          Width: 696
           Height: 278
       location:
         x: -896

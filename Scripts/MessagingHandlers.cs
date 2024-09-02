@@ -10,7 +10,6 @@ using UnityEngine.TextCore.Text;
 using System.IO;
 using System.Linq;
 using System;
-using System.Diagnostics;
 
 public class MessagingHandlers : MonoBehaviour {
 
@@ -135,7 +134,7 @@ public class MessagingHandlers : MonoBehaviour {
         for (int i = startingText; i < TextList.Count; i++) {
             SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
             TextMessage textMessage = TextList[i];
-            if (textMessage.Tendency == SF.saveFile.Stats.Tendency) {
+            if (textMessage.Tendency == SF.saveFile.Stats.Tendency || textMessage.Tendency == (int)Tendency.Neutral) {
                 yield return StartCoroutine(MessageDelay(textMessage, pfp));
             }
         }
@@ -287,13 +286,22 @@ public class MessagingHandlers : MonoBehaviour {
         if (Shared.content.GetChild(SF.saveFile.contactPush).childCount >= 25){
             Destroy(Shared.content.GetChild(SF.saveFile.contactPush).GetChild(0).gameObject);
         } 
-        // Add a few cases for sub and dom texts, where if tendency then use a different prefab or blue or red texts
         switch((TypeOfText) textMessage.Type){
             case TypeOfText.sentText:
                 TextPush(TypeOfText.sentText, Prefabs.sentText, textMessage.TextContent);
             break;
             case TypeOfText.recText:
-                TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
+                switch (textMessage.Tendency) {
+                    case (int)Tendency.Neutral:
+                        TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
+                    break;
+                    case (int)Tendency.Dominant:
+                        TextPush(TypeOfText.recText, Prefabs.DomText, textMessage.TextContent);
+                    break;
+                    case (int)Tendency.Submissive:
+                        TextPush(TypeOfText.recText, Prefabs.SubText, textMessage.TextContent);
+                    break;
+                }
             break;
             case TypeOfText.sentEmoji:
                 ImagePush(TypeOfText.sentEmoji, textMessage.TextContent, Prefabs.sentEmoji);
@@ -338,20 +346,52 @@ public class MessagingHandlers : MonoBehaviour {
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[NextChap]));
     }
 
+    // Add all handlers for stat changes here
+    // Unfortunately I can't think of a better way to handle custom options than this
+    private void HandleStatChange(string TextContent) {
+        if (TextContent.Contains("Tendency")) {
+            if(TextContent.Contains("Neutral")) {
+                SF.saveFile.Stats.Tendency = (int)Tendency.Neutral;
+            }
+            else if (TextContent.Contains("Submissive")) {
+                SF.saveFile.Stats.Tendency = (int)Tendency.Submissive;
+            } 
+            else if (TextContent.Contains("Dominant")) {
+                SF.saveFile.Stats.Tendency = (int)Tendency.Dominant;
+            }
+        }
+    }
+
     // handles the building and pushing of the text choice buttons into the choices list
     public void TextButton(Response resp) {
+        // Logic for parsing the response string and determining if there is a stat change then displaying based
+        // on game mode
+        bool statChange = resp.TextContent.Contains("<");
+        string response = "";
+        if (statChange) {
+            int indexofString = resp.TextContent.IndexOf("<");
+            if (!SF.saveFile.Settings.GameMode) {
+                response = resp.TextContent[0..indexofString];
+            } else {
+                response = resp.TextContent;
+            }
+        }
+
         GameObject ChoiceClone =
             Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
         Destroy(ChoiceClone.transform.GetChild(1).gameObject);
         GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
-        textObject.GetComponent<TextMeshProUGUI>().text = resp.TextContent;
+        textObject.GetComponent<TextMeshProUGUI>().text = !statChange ? resp.TextContent : response;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            if (statChange) {
+                HandleStatChange(resp.TextContent);
+            }
             if (!resp.RespTree) {
                 MessageListLimit( new TextMessage {
                     Type = (int)TypeOfText.sentText,
-                    TextContent = resp.TextContent
+                    TextContent = !statChange ? resp.TextContent : response
                 });
             }
             ChoiceButtonClick(resp.SubChapNum);
