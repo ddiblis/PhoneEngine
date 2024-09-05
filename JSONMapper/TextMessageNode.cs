@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 namespace JSONMapper {
     public class TextMessageNode : BaseNode {
         readonly List<string> TypeOptions = new() {
-            "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6"
+            "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6", "Recieved Contact 7"
         };
         readonly List<string> DelayOptions = new() {
             "Delay Options", "Almost Instant 0.21", "Very Fast 0.5", "Fast 1.0", "Medium 2.0", "Slow 2.5", "Very slow 3.5", "Dramatic Pause 5.0"

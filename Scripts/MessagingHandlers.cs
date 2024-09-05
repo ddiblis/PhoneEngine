@@ -268,7 +268,11 @@ public class MessagingHandlers : MonoBehaviour {
                 Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 gen.ModalWindowOpen(image, imgName);
             });
-        } else {
+        } 
+        else if (type == TypeOfText.recContact) {
+            image = Resources.Load("Images/Headshots/" + imgName, typeof(Sprite)) as Sprite;
+        }
+        else {
             image = Resources.Load("Images/Emojis/" + imgName, typeof(Sprite)) as Sprite;
         }
 
@@ -311,19 +315,24 @@ public class MessagingHandlers : MonoBehaviour {
                 ImagePush(TypeOfText.sentEmoji, textMessage.TextContent, Prefabs.sentEmoji);
             break;
             case TypeOfText.recEmoji:
-                ImagePush(TypeOfText.recEmoji, textMessage.TextContent,Prefabs.recEmoji);
+                ImagePush(TypeOfText.recEmoji, textMessage.TextContent, Prefabs.recEmoji);
             break;
             case TypeOfText.sentImage:
-                ImagePush(TypeOfText.sentImage, textMessage.TextContent,Prefabs.sentImage);
+                ImagePush(TypeOfText.sentImage, textMessage.TextContent, Prefabs.sentImage);
             break;
             case TypeOfText.recImage:
-                ImagePush(TypeOfText.recImage, textMessage.TextContent,Prefabs.recImage);
+                ImagePush(TypeOfText.recImage, textMessage.TextContent, Prefabs.recImage);
             break;
             case TypeOfText.chapEnd:
                 TextPush(TypeOfText.chapEnd, Prefabs.ChapComplete, textMessage.TextContent);
             break;
             case TypeOfText.indicateTime:
                 TextPush(TypeOfText.indicateTime, Prefabs.TimeIndicator, textMessage.TextContent);
+            break;
+            case TypeOfText.recContact:
+                ImagePush(TypeOfText.recContact, textMessage.TextContent, Prefabs.recContact);
+                int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == textMessage.TextContent);
+                UnlockContact(indexOfContact);
             break;
         }
     }

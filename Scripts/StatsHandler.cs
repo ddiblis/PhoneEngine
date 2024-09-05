@@ -43,7 +43,4 @@ public class StatsHandler : MonoBehaviour {
             Destroy(card.gameObject);
         }
     }
-    public void PlayTimeHandler() {
-
-    }
 }

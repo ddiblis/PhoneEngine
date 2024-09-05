@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1f9cd18c7c62270ba9db60a432a382, type: 3}
+  m_Name: UnlockContactTest
+  m_EditorClassIdentifier: 
+  Chapters:
+  - AllowMidrolls: 0
+    location:
+      x: 481
+      y: 261
+      Width: 192
+      Height: 135
+    SubChaps:
+    - Contact: Althea
+      TimeIndicator: 
+      TextList:
+      - Type: 1
+        TextContent: Testing sending a contact
+        TextDelay: 2
+        Tendency: 0
+        location:
+          x: 1073
+          y: 296
+          Width: 338
+          Height: 234
+      - Type: 7
+        TextContent: Alejandra
+        TextDelay: 2
+        Tendency: 0
+        location:
+          x: 1434
+          y: 296
+          Width: 323
+          Height: 234
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses: []
+      location:
+        x: 740
+        y: 261
+        Width: 323
+        Height: 329

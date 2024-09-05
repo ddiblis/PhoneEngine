@@ -221,6 +221,7 @@ public enum TypeOfText {
     sentEmoji = 4,
     recEmoji = 5,
     chapEnd = 6,
+    recContact = 7,
     indicateTime = 8,
 }
 public enum Tendency {
