@@ -48,5 +48,13 @@ public class GeneralHandlers : MonoBehaviour {
         
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }
-
+        public void UnlockImage(string ImageName){
+            
+        int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
+        if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
+            SF.saveFile.Photos[indexOfPhoto].Seen = true;
+            int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
+            SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
+        }
+    }
 }

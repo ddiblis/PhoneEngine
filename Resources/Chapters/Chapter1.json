@@ -9,7 +9,9 @@
             "UnlockPosts": [
                 0,
                 1,
-                2
+                2,
+                3,
+                4
             ],
             "Responses": [
                 {
@@ -368,7 +370,7 @@
                 },
                 {
                     "Type": 3,
-                    "TextContent": "Althea-sitting1",
+                    "TextContent": "Althea-selfie1",
                     "Tendency": 0,
                     "TextDelay": 1.0
                 },
@@ -429,7 +431,7 @@
                 },
                 {
                     "Type": 3,
-                    "TextContent": "Althea-sitting1",
+                    "TextContent": "Althea-selfie1",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },

@@ -2,10 +2,24 @@
     "Profiles": [
         {
             "Name": "Althea",
-            "Username": "idk-honestly",
+            "Username": "KuroNeko6.9",
             "Followers": "248",
             "Following": "739",
-            "ProfileInfo": "Just a small town girl, living in a lonely world, she took the midnight train going anywhere lmao I'm so quirky"
+            "ProfileInfo": "Am I doing this right? Just here for the memes"
+        },
+        {
+            "Name": "Alejandra",
+            "Username": "Ale_Sorzano",
+            "Followers": "120k",
+            "Following": "37",
+            "ProfileInfo": "Model/Traveller/Lifestyle 14/193 countries"
+        },
+        {
+            "Name": "Julia",
+            "Username": "JJFitness",
+            "Followers": "30k",
+            "Following": "264",
+            "ProfileInfo": "Foodie | fitness freak | 22"
         }
     ]
 }

@@ -158,15 +158,27 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void GenerateInstaPost(SavedPost post) {
+        string fullPhotoName = post.Image[..(post.Image.Length-2)];
         Sprite pfp = Resources.Load(
             "Images/Headshots/" + post.CharacterName,
             typeof(Sprite)
         ) as Sprite;
-        Sprite Photo = Resources.Load("Images/Photos/" + post.Image, typeof(Sprite)) as Sprite;
+        Sprite Photo = Resources.Load(
+            "Images/Photos/InstaPosts/" + post.Image,
+            typeof(Sprite)
+        ) as Sprite;
 
         Transform InstaPostCard = Instantiate(preFabs.InstaPostCard, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
         // Photo of the post
         InstaPostCard.GetChild(0).GetChild(0).GetComponent<Image>().sprite = Photo;
+        InstaPostCard.GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            Sprite fullPhoto = Resources.Load(
+                "Images/Photos/" + fullPhotoName,
+                typeof(Sprite)
+            ) as Sprite;
+            gen.ModalWindowOpen(fullPhoto, fullPhotoName);
+        });
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Image>().sprite = pfp;
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
@@ -175,7 +187,7 @@ public class InstaPostsManager : MonoBehaviour
         });
         InstaPostCard.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = post.UserName;
         InstaPostCard.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = post.Description;
-        Transform NotLikedButton = InstaPostCard.GetChild(2).GetChild(2).transform;
+        Transform NotLikedButton = InstaPostCard.GetChild(2).GetChild(2);
         if (post.Liked == true) {
             gen.Hide(NotLikedButton);
         }
@@ -191,6 +203,12 @@ public class InstaPostsManager : MonoBehaviour
             post.Liked = true;
             gen.Hide(NotLikedButton);
         });
+
+        // Download Image button
+        InstaPostCard.GetChild(2).GetChild(3).GetComponent<Button>().onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            gen.UnlockImage(fullPhotoName);
+        });
     }
 
     public void GenerateProfile(string nameOfProfileOwner) {
@@ -204,7 +222,6 @@ public class InstaPostsManager : MonoBehaviour
                 GenerateInstaPost(SF.saveFile.Posts[i]);   
             }
         }
-        
     }
 
     public void DisplayAllPosts() {

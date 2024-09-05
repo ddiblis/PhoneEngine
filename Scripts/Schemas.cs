@@ -228,9 +228,4 @@ public enum Tendency {
     Submissive = 1,
     Dominant = 2
 }
-public enum EStats {
-    Tendency = 0,
-    InterestInThreesomes = 1,
-    IntersetInOtherGirls = 2
-}
 /* ====================== End ============================ */

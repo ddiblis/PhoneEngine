@@ -261,7 +261,7 @@ public class MessagingHandlers : MonoBehaviour {
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
 
         if(type == TypeOfText.recImage || type == TypeOfText.sentImage) {
-            UnlockImage(imgName);
+            gen.UnlockImage(imgName);
             image = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
             button.onClick.AddListener(() => {
@@ -291,6 +291,10 @@ public class MessagingHandlers : MonoBehaviour {
                 TextPush(TypeOfText.sentText, Prefabs.sentText, textMessage.TextContent);
             break;
             case TypeOfText.recText:
+                if (!SF.saveFile.Settings.GameMode) {
+                    TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
+                    break;
+                }
                 switch (textMessage.Tendency) {
                     case (int)Tendency.Neutral:
                         TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
@@ -423,14 +427,5 @@ public class MessagingHandlers : MonoBehaviour {
             });
             ChoiceButtonClick(resp.SubChapNum);
         });
-    }
-
-    public void UnlockImage(string ImageName){
-        int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
-        if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
-            SF.saveFile.Photos[indexOfPhoto].Seen = true;
-            int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
-            SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
-        }
     }
 }

@@ -24,7 +24,7 @@ MonoBehaviour:
       TimeIndicator: 4 Hours Later
       TextList: []
       UnlockInstaPostsAccount: Althea
-      UnlockPosts: 000000000100000002000000
+      UnlockPosts: 0000000001000000020000000300000004000000
       Responses:
       - RespTree: 0
         TextContent: Hi hon
@@ -525,7 +525,7 @@ MonoBehaviour:
           Width: 323
           Height: 234
       - Type: 3
-        TextContent: Althea-sitting1
+        TextContent: Althea-selfie1
         TextDelay: 1
         Tendency: 0
         location:
@@ -610,7 +610,7 @@ MonoBehaviour:
           Width: 392
           Height: 234
       - Type: 3
-        TextContent: Althea-sitting1
+        TextContent: Althea-selfie1
         TextDelay: 2.5
         Tendency: 0
         location:
