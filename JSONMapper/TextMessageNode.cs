@@ -10,7 +10,7 @@ namespace JSONMapper {
             "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6", "Recieved Contact 7"
         };
         readonly List<string> DelayOptions = new() {
-            "Delay Options", "Almost Instant 0.21", "Very Fast 0.5", "Fast 1.0", "Medium 2.0", "Slow 2.5", "Very slow 3.5", "Dramatic Pause 5.0"
+            "Delay Options", "Almost Instant 0.16", "Very Fast 0.57", "Fast 1.1", "Medium 2.1", "Slow 2.5", "Very slow 3.5", "Dramatic Pause 5.1"
         };
 
         readonly List<string> TendencyOptions = new() {
@@ -52,7 +52,7 @@ namespace JSONMapper {
             TendencyDropDown.RegisterValueChangedCallback(evt => Tendency = int.Parse(Regex.Match(evt.newValue, @"\d+").Value));
 
             DelayDropDown = new DropdownField("Text Delay", DelayOptions, 0);
-            DelayDropDown.RegisterValueChangedCallback(evt => TextDelay = float.Parse(Regex.Match(evt.newValue, @"[\d\.]").Value));
+            DelayDropDown.RegisterValueChangedCallback(evt => TextDelay = float.Parse(Regex.Match(evt.newValue, @"\d\.\d{1,2}").Value));
 
             TextMessageField.AddClasses(
                 "jm-node__textfield",
@@ -87,6 +87,7 @@ namespace JSONMapper {
             int TypeIndex = TypeOptions.FindIndex(x => x.Contains("" + Type));
             int DelayIndex = DelayOptions.FindIndex(x => x.Contains("" + TextDelay));
             int TendencyIndex = TendencyOptions.FindIndex(x => x.Contains("" + Tendency));
+            Debug.Log(Tendency);
             TextMessageField.value = TextContent;
             TendencyDropDown.value = TendencyOptions[TendencyIndex >= 0 ? TendencyIndex : 0];
             TypeDropDown.value = TypeOptions[TypeIndex >= 0 ? TypeIndex : 0];

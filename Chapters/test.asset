@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e1f9cd18c7c62270ba9db60a432a382, type: 3}
+  m_Name: test
+  m_EditorClassIdentifier: 
+  Chapters:
+  - AllowMidrolls: 0
+    location:
+      x: 435
+      y: 219
+      Width: 192
+      Height: 135
+    SubChaps:
+    - Contact: 
+      TimeIndicator: 
+      TextList:
+      - Type: 0
+        TextContent: test
+        TextDelay: 5.1
+        Tendency: 0
+        location:
+          x: 1026
+          y: 264
+          Width: 323
+          Height: 234
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses: []
+      location:
+        x: 664
+        y: 229
+        Width: 323
+        Height: 329

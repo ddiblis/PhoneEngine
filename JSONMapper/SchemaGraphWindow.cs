@@ -11,6 +11,8 @@ using Unity.VisualScripting;
 
 namespace JSONMapper {
     public class SchemaGraphWindow : EditorWindow {
+        private float delayTime = 60f;
+        private float AutoSaveTimer;
         private SchemaGraphView graphView;
 
         [MenuItem("Window/JSONMapper")]
@@ -23,10 +25,44 @@ namespace JSONMapper {
             ConstructGraphView();
             GenerateToolbar();
             AddStyles();
+            AutoSaveTimer = (float)EditorApplication.timeSinceStartup + delayTime;
+            EditorApplication.update += OnEditorUpdate;
+        }
+        private void OnGUI() {
+            delayTime = EditorGUILayout.FloatField("Delay Time (seconds)", delayTime);
         }
 
-        private void AddStyles()
-        {
+        private void OnDisable() {
+            EditorApplication.update -= OnEditorUpdate;
+        }
+
+        private void OnEditorUpdate() {
+            if (EditorApplication.timeSinceStartup >= AutoSaveTimer) {
+                AutoSaveAsAsset();
+                // Reset the next action time
+                AutoSaveTimer = (float)EditorApplication.timeSinceStartup + delayTime;
+            }
+        }
+
+        private void AutoSaveAsAsset() {
+            var graphData = CreateInstance<GraphData>();
+            foreach (var node in graphView.nodes) {
+                if (node is ChapterNode chapterNode) {
+                    graphData.Chapters.Add(chapterNode.ToChapterNodeData());
+                }
+            }
+
+            string path = Application.dataPath + "/Chapters/AutoSave.asset";
+            if (!string.IsNullOrEmpty(path)) {
+                var asset = CreateInstance<GraphData>();
+                asset.CopyFrom(graphData);
+                AssetDatabase.CreateAsset(asset, FileUtil.GetProjectRelativePath(path));
+                AssetDatabase.SaveAssets();
+                Debug.Log("Graph AutoSaved to " + path);
+            }
+        }
+
+        private void AddStyles() {
             rootVisualElement.AddStyleSheets(
                 "JSONMapperStyles/JMVariables.uss"
             );
@@ -44,8 +80,7 @@ namespace JSONMapper {
         private void GenerateToolbar() {
             var toolbar = new Toolbar();
 
-            var saveButton = new Button(() => SaveGraphToJson())
-            {
+            var saveButton = new Button(() => SaveGraphToJson()) {
                 text = "Save as JSON"
             };
             toolbar.Add(saveButton);
@@ -102,10 +137,8 @@ namespace JSONMapper {
         private void SaveGraphToJson() {
             Chapter Chapter = new();
 
-            foreach (var node in graphView.nodes)
-            {
-                if (node is ChapterNode chapterNode)
-                {
+            foreach (var node in graphView.nodes) {
+                if (node is ChapterNode chapterNode) {
                     Chapter = chapterNode.ToChapterData();
                     break;
                 }

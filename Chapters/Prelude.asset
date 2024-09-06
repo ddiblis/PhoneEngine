@@ -59,6 +59,15 @@ MonoBehaviour:
           y: -304
           Width: 323
           Height: 234
+      - Type: 6
+        TextContent: 
+        TextDelay: 2
+        Tendency: 0
+        location:
+          x: 2807
+          y: -304
+          Width: 323
+          Height: 234
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses: []

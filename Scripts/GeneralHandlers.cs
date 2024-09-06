@@ -48,8 +48,7 @@ public class GeneralHandlers : MonoBehaviour {
         
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }
-        public void UnlockImage(string ImageName){
-            
+    public void UnlockImage(string ImageName){
         int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
         if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
             SF.saveFile.Photos[indexOfPhoto].Seen = true;
@@ -57,4 +56,8 @@ public class GeneralHandlers : MonoBehaviour {
             SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
         }
     }
+    public void OpenPatreonLink() {
+        Application.OpenURL("https://patreon.com/DDIblis?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink");
+    }
+    
 }

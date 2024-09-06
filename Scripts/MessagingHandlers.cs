@@ -158,7 +158,7 @@ public class MessagingHandlers : MonoBehaviour {
         // Unlocks specified posts
         if (subChap.UnlockPosts.Count > 0) {
             for (int i = 0; i < subChap.UnlockPosts.Count; i++) {
-                if(!SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked){
+                if(!SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked) {
                     SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
                 }
                 SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked = true;
@@ -185,7 +185,7 @@ public class MessagingHandlers : MonoBehaviour {
             if (subChap.TimeIndicator.Length > 0 && SF.saveFile.CurrStoryPoint.CurrTextIndex == 0){
                 yield return StartCoroutine(MessageDelay(new TextMessage {
                     Type = (int) TypeOfText.indicateTime,
-                    TextDelay = 1.5f,
+                    TextDelay = 2f,
                     TextContent = subChap.TimeIndicator
                 }));
             }
@@ -195,7 +195,7 @@ public class MessagingHandlers : MonoBehaviour {
             }
         }
 
-        if (subChap.Responses.Count > 0){
+        if (subChap.Responses.Count > 0) {
             SF.saveFile.ChoiceNeeded = true;
             PopulateResps(subChap.Responses);
         } else {
@@ -324,7 +324,9 @@ public class MessagingHandlers : MonoBehaviour {
                 ImagePush(TypeOfText.recImage, textMessage.TextContent, Prefabs.recImage);
             break;
             case TypeOfText.chapEnd:
-                TextPush(TypeOfText.chapEnd, Prefabs.ChapComplete, textMessage.TextContent);
+                if (textMessage.TextContent.Length != 0) {
+                    TextPush(TypeOfText.chapEnd, Prefabs.ChapComplete, textMessage.TextContent);
+                }
             break;
             case TypeOfText.indicateTime:
                 TextPush(TypeOfText.indicateTime, Prefabs.TimeIndicator, textMessage.TextContent);
@@ -373,6 +375,13 @@ public class MessagingHandlers : MonoBehaviour {
                 SF.saveFile.Stats.Tendency = (int)Tendency.Dominant;
             }
         }
+        // if (TextContent.Contains("LingerieColour")) {
+        //     if (TextContent.Contains("White")) {
+        //         SF.saveFile.Stats.LingerieColour1 = false;
+        //     } else {
+        //         SF.saveFile.Stats.LingerieColour1 = true;
+        //     }
+        // }
     }
 
     // handles the building and pushing of the text choice buttons into the choices list

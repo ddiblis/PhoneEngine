@@ -6,7 +6,8 @@
     ],
     "ChapterList": [
         "Prelude",
-        "Chapter1"
+        "Chapter1",
+        "Chapter2"
     ],
     "PhotoList": [
         "bg-snowmountain2",
@@ -25,7 +26,10 @@
         "Alejandra-cafe1",
         "Julia-gym1",
         "Julia-burgers1",
-        "Julia-gym2"
+        "Julia-gym2",
+        "Althea-mall1",
+        "Althea-blackLingerie1",
+        "Althea-whiteLingerie1"
     ],
     "MidrollsList": []
 }
