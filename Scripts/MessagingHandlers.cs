@@ -70,6 +70,7 @@ public class MessagingHandlers : MonoBehaviour {
         CurrChap = chap.GetChapter(type, Chapter);
         if (type == "Chapters") {
             SF.saveFile.AllowMidrolls = CurrChap.AllowMidrolls;
+            SF.saveFile.CurrStoryPoint.StoryCheckpoint = CurrChap.StoryCheckpoint;
         }
         StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
     }
@@ -181,15 +182,6 @@ public class MessagingHandlers : MonoBehaviour {
         UnlockInstaPosts(subChap, InstaAccount);
 
         if (!SF.saveFile.ChoiceNeeded) {
-            // Sends indicator of time passed
-            if (subChap.TimeIndicator.Length > 0 && SF.saveFile.CurrStoryPoint.CurrTextIndex == 0){
-                yield return StartCoroutine(MessageDelay(new TextMessage {
-                    Type = (int) TypeOfText.indicateTime,
-                    TextDelay = 2f,
-                    TextContent = subChap.TimeIndicator
-                }));
-            }
-            
             if (subChap.TextList.Count == 1 || SF.saveFile.CurrStoryPoint.CurrTextIndex + 1 != subChap.TextList.Count){
                 yield return StartCoroutine(RecieveTexts(subChap.TextList, subChap.Contact, startingText));
             }
@@ -219,22 +211,21 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void PlayMidrolls() {
-        if (SF.saveFile.MidRolls.All(x => x.Seen == true)) {
+        List<MidRoll> AvaliableMidRolls = SF.saveFile.MidRolls.Where(x => x.Seen == false || x.Checkpoint >= SF.saveFile.CurrStoryPoint.StoryCheckpoint).ToList();
+
+        if (AvaliableMidRolls.Count == 0) {
             SF.saveFile.MidRollCount = 0;
             SF.saveFile.PlayingMidRoll = false;
             PlayNextChapter();
             return;
         }
         System.Random rnd = new();
-        int MidRollIndex = rnd.Next(0, SF.saveFile.MidRolls.Count); 
-        if (!SF.saveFile.MidRolls[MidRollIndex].Seen) {
-            SF.saveFile.CurrMidRoll = MidRollIndex;
-            SF.saveFile.MidRollCount -= 1;
-            ChapterSelect("Midrolls", SF.saveFile.MidRolls[MidRollIndex].MidrollName);
-            SF.saveFile.MidRolls[MidRollIndex].Seen = true;
-        } else {
-            PlayMidrolls();
-        }
+        int MidRollIndex = rnd.Next(0, AvaliableMidRolls.Count);
+
+        SF.saveFile.CurrMidRoll = MidRollIndex;
+        SF.saveFile.MidRollCount -= 1;
+        ChapterSelect("Midrolls", SF.saveFile.MidRolls[MidRollIndex].MidrollName);
+        SF.saveFile.MidRolls[MidRollIndex].Seen = true; 
     }
 
     // Handles the building and pushing of text messages to the message list object.

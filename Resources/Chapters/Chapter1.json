@@ -3,8 +3,38 @@
     "SubChaps": [
         {
             "Contact": "Althea",
-            "TimeIndicator": "4 Hours Later",
-            "TextList": [],
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Hellooooooo",
+                    "Tendency": 0,
+                    "TextDelay": 0.1599999964237213
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Why are you ignoring me??",
+                    "Tendency": 0,
+                    "TextDelay": 0.1599999964237213
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Only gone for one day and already another girl's got your attention",
+                    "Tendency": 0,
+                    "TextDelay": 0.1599999964237213
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "fake-angry",
+                    "Tendency": 0,
+                    "TextDelay": 0.1599999964237213
+                },
+                {
+                    "Type": 8,
+                    "TextContent": "4 Hours Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
             "UnlockInstaPostsAccount": "Althea",
             "UnlockPosts": [
                 0,
@@ -24,7 +54,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -39,7 +68,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -85,7 +113,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -113,7 +140,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -128,7 +154,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -143,7 +168,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 5,
@@ -171,7 +195,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -186,7 +209,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -244,7 +266,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 5,
@@ -290,7 +311,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -342,7 +362,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -400,7 +419,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -415,7 +433,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -461,7 +478,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -476,7 +492,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -510,7 +525,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -525,7 +539,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -553,7 +566,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -581,8 +593,14 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "1 Hours Later",
-            "TextList": [],
+            "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "1 Hour Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
             "Responses": [
@@ -602,8 +620,13 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "2 Hours Later",
             "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "2 Hours Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
                 {
                     "Type": 1,
                     "TextContent": "Soooooo I was looking for the backup...",
@@ -630,7 +653,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -694,7 +716,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -709,7 +730,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -737,7 +757,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -752,7 +771,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -786,7 +804,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -801,7 +818,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -823,7 +839,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -857,7 +872,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -872,7 +886,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -900,7 +913,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -934,7 +946,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -974,7 +985,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1014,7 +1024,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -1035,7 +1044,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1069,7 +1077,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1103,7 +1110,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1161,7 +1167,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1195,7 +1200,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1235,7 +1239,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 5,
@@ -1269,7 +1272,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1315,7 +1317,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1361,7 +1362,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1413,13 +1413,12 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 6,
                     "TextContent": "End Of Chapter 1",
                     "Tendency": 0,
-                    "TextDelay": 1.0
+                    "TextDelay": 2.5
                 }
             ],
             "UnlockInstaPostsAccount": "",

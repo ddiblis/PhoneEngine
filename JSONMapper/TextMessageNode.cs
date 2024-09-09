@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 namespace JSONMapper {
     public class TextMessageNode : BaseNode {
         readonly List<string> TypeOptions = new() {
-            "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6", "Recieved Contact 7"
+            "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6", "Recieved Contact 7", "Indicate Time 8"
         };
         readonly List<string> DelayOptions = new() {
             "Delay Options", "Almost Instant 0.16", "Very Fast 0.57", "Fast 1.1", "Medium 2.1", "Slow 2.5", "Very slow 3.5", "Dramatic Pause 5.1"
@@ -87,7 +87,6 @@ namespace JSONMapper {
             int TypeIndex = TypeOptions.FindIndex(x => x.Contains("" + Type));
             int DelayIndex = DelayOptions.FindIndex(x => x.Contains("" + TextDelay));
             int TendencyIndex = TendencyOptions.FindIndex(x => x.Contains("" + Tendency));
-            Debug.Log(Tendency);
             TextMessageField.value = TextContent;
             TendencyDropDown.value = TendencyOptions[TendencyIndex >= 0 ? TendencyIndex : 0];
             TypeDropDown.value = TypeOptions[TypeIndex >= 0 ? TypeIndex : 0];

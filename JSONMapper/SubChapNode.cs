@@ -10,14 +10,13 @@ using System;
 namespace JSONMapper {
     public class SubChapNode : BaseNode {  
         public string Contact;
-        public string TimeIndicator;
         public string UnlockInstaPostsAccount;
         public List<int> UnlockPosts;
         public List<TextMessageNode> TextList = new();
         public List<ResponseNode> Responses = new();
 
+
         private readonly TextField ContactTextField;
-        private readonly TextField TimeIndicatorTextField;
         private readonly TextField UnlockInstaPostsAccountTextField;
         private readonly TextField UnlockListTextField;
         public Port ParentChapterPort;
@@ -57,9 +56,6 @@ namespace JSONMapper {
             ContactTextField = new TextField("Contact") { value = Contact };
             ContactTextField.RegisterValueChangedCallback(evt => Contact = evt.newValue);
 
-            TimeIndicatorTextField = new TextField("Time Indicator") { value = TimeIndicator };
-            TimeIndicatorTextField.RegisterValueChangedCallback(evt => TimeIndicator = evt.newValue);
-
             UnlockInstaPostsAccountTextField = new TextField("Unlock Insta Account") { value = UnlockInstaPostsAccount };
             UnlockInstaPostsAccountTextField.RegisterValueChangedCallback(evt => UnlockInstaPostsAccount = evt.newValue);
 
@@ -70,10 +66,6 @@ namespace JSONMapper {
             });
 
             ContactTextField.AddClasses(
-                "jm-node__subchap-textfield",
-                "jm-node__subchap-quote-textfield"
-            );
-            TimeIndicatorTextField.AddClasses(
                 "jm-node__subchap-textfield",
                 "jm-node__subchap-quote-textfield"
             );
@@ -98,7 +90,6 @@ namespace JSONMapper {
 
             Insert(0, ParentResponsePortContainer);
             Foldout.Add(ContactTextField);
-            Foldout.Add(TimeIndicatorTextField);
             Foldout.Add(UnlockInstaPostsAccountTextField);
             Foldout.Add(UnlockListTextField);
             CustomDataContainer.Add(Foldout);
@@ -111,7 +102,6 @@ namespace JSONMapper {
 
         public void UpdateFields() {
             ContactTextField.value = Contact;
-            TimeIndicatorTextField.value = TimeIndicator;
             UnlockInstaPostsAccountTextField.value = UnlockInstaPostsAccount;
             if (UnlockPosts.Count > 0) {
                 UnlockListTextField.value = string.Join( ",", UnlockPosts.ToArray());
@@ -124,7 +114,6 @@ namespace JSONMapper {
             Rect rect = this.GetPosition();
             return new SubChapData {
                 Contact = this.Contact,
-                TimeIndicator = this.TimeIndicator,
                 UnlockInstaPostsAccount = this.UnlockInstaPostsAccount,
                 UnlockPosts = this.UnlockPosts,
                 TextList = this.TextList.ConvertAll(textNode => textNode.ToTextMessageNodeData()),
@@ -141,7 +130,6 @@ namespace JSONMapper {
         public SubChap ToSubChapData() {
             return new SubChap {
                 Contact = this.Contact,
-                TimeIndicator = this.TimeIndicator,
                 UnlockInstaPostsAccount = this.UnlockInstaPostsAccount,
                 UnlockPosts = this.UnlockPosts,
                 TextList = this.TextList.ConvertAll(textNode => textNode.ToTextMessageData()),

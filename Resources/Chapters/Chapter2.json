@@ -3,8 +3,13 @@
     "SubChaps": [
         {
             "Contact": "Althea",
-            "TimeIndicator": "5 Hours Later",
             "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "5 Hours Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
                 {
                     "Type": 1,
                     "TextContent": "Sooooooo",
@@ -43,7 +48,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -89,7 +93,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -123,7 +126,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -138,7 +140,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -166,7 +167,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -230,7 +230,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -270,7 +269,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -316,7 +314,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -331,7 +328,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -371,7 +367,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -405,8 +400,13 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "20 Minutes Later",
             "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "20 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
                 {
                     "Type": 1,
                     "TextContent": "OH BTW",
@@ -433,7 +433,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -448,7 +447,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -494,7 +492,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -509,7 +506,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -583,7 +579,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "Alejandra",
             "UnlockPosts": [
@@ -603,7 +598,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -661,8 +655,13 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "40 Minutes Later",
             "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "40 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
                 {
                     "Type": 1,
                     "TextContent": "Hiii",
@@ -713,7 +712,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -759,7 +757,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -799,7 +796,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -833,7 +829,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -848,7 +843,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -900,7 +894,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -934,7 +927,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -970,7 +962,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -998,8 +989,13 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "20 Minutes later",
             "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "20 Minutes later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
                 {
                     "Type": 1,
                     "TextContent": "Guess who JUST showed up",
@@ -1038,7 +1034,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1078,7 +1073,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1112,7 +1106,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1146,7 +1139,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1198,7 +1190,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1238,7 +1229,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1266,7 +1256,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 5,
@@ -1324,7 +1313,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1370,7 +1358,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1416,7 +1403,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1462,7 +1448,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1502,7 +1487,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -1517,7 +1501,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -1532,7 +1515,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1572,7 +1554,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1642,7 +1623,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1688,7 +1668,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -1703,7 +1682,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1743,7 +1721,6 @@
         },
         {
             "Contact": "Alejandra",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1789,7 +1766,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -1804,7 +1780,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
@@ -1819,7 +1794,6 @@
         },
         {
             "Contact": "Althea",
-            "TimeIndicator": "",
             "TextList": [
                 {
                     "Type": 1,
@@ -1878,7 +1852,365 @@
             ],
             "UnlockInstaPostsAccount": "",
             "UnlockPosts": [],
-            "Responses": []
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "The black one",
+                    "SubChapNum": 51,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "The white one",
+                    "SubChapNum": 50,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Oh really?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "You want me to look all innocent and cute?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "When you fantasise about me doing bad things with other people?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 0.5699999928474426
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 53,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 53,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Oh really?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I mean it makes sense",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I saw how slutty those girls were in the videos you have",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "tongue-out",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "And I definitely feel slutty in this set",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 52,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 52,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Well",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I better get back to the girls before they start wondering what's taking so long",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "We're going to head to the bars right after this so I'll text you when we get there",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-heart",
+                    "SubChapNum": 0,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Drive safe",
+                    "SubChapNum": 0,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Well",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I better get back to the girls before they start wondering what's taking so long",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "We're going to head to the bars right after this so I'll text you when we get there",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-heart",
+                    "SubChapNum": 54,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Drive safe!",
+                    "SubChapNum": 54,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 8,
+                    "TextContent": "1 Hour Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "We just got here",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "JJ drives like a grandma",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I just want to double check with you again",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Is it still okay with you if I talk to the girls about what we talked about?",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I promise they'll be nice",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "And I KNOW Alejandra HAS to know more about this",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "She can probably teach me a thing or two",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Do i still get my reward?",
+                    "SubChapNum": 55,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Yes, that's alright",
+                    "SubChapNum": 56,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Of course!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "I don't think you're going to want to miss out on it anyway",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 56,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Then absolutely yes!",
+                    "SubChapNum": 56,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "Type": 1,
+                    "TextContent": "Yay",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "Okay",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "Type": 1,
+                    "TextContent": "We're about to sit down so I'll talk to you a little later!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "",
+                    "SubChapNum": 0,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "",
+                    "SubChapNum": 0,
+                    "Type": 0
+                }
+            ]
         }
     ]
 }

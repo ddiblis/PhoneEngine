@@ -47,7 +47,7 @@ namespace JSONMapper {
         }
 
         private void ConnectNodes(Port InputPort, Port OutputPort, GraphView graphView) {
-            Edge Connection = new(){
+            Edge Connection = new() {
                 input = InputPort,
                 output = OutputPort
             };
@@ -60,7 +60,6 @@ namespace JSONMapper {
             foreach(SubChapData subChap in chapter.SubChaps) {
                 var SubChapNode = new SubChapNode(graphView) {
                 Contact = subChap.Contact,
-                TimeIndicator = subChap.TimeIndicator,
                 UnlockInstaPostsAccount = subChap.UnlockInstaPostsAccount,
                 UnlockPosts = subChap.UnlockPosts
                 };

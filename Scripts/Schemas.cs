@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class Chapter
 {
     public bool AllowMidrolls;
+    public int StoryCheckpoint;
     public List<SubChap> SubChaps;
 }
 
@@ -13,7 +14,6 @@ public class Chapter
 public class SubChap
 {
     public string Contact;
-    public string TimeIndicator;
     public List<TextMessage> TextList;
     public string UnlockInstaPostsAccount;
     public List<int> UnlockPosts;
@@ -54,6 +54,7 @@ public class Location {
 public class ChapterData
 {
     public bool AllowMidrolls;
+    public int StoryCheckpoint;
     public Location location;
     public List<SubChapData> SubChaps;
 }
@@ -62,7 +63,6 @@ public class ChapterData
 public class SubChapData
 {
     public string Contact;
-    public string TimeIndicator;
     public List<TextMessageData> TextList;
     public string UnlockInstaPostsAccount;
     public List<int> UnlockPosts;
@@ -105,6 +105,7 @@ public class Contact
 [System.Serializable]
 public class CurrStoryPoint
 {
+    public int StoryCheckpoint;
     public int ChapIndex;
     public int SubChapIndex;
     public int CurrTextIndex;
@@ -166,6 +167,7 @@ public class Stats {
 [System.Serializable]
 public class MidRoll {
     public string MidrollName;
+    public int Checkpoint;
     public bool Seen;
 }
 
@@ -208,7 +210,12 @@ public class DBRoot {
     public List<string> ContactList;
     public List<string> ChapterList;
     public List<string> PhotoList;
-    public List<string> MidrollsList;
+    public List<DBMidRoll> MidrollsList;
+}
+
+public class DBMidRoll {
+    public string MidrollName;
+    public int Checkpoint;
 }
 /* ====================== End ============================ */
 
@@ -228,5 +235,9 @@ public enum Tendency {
     Neutral = 0,
     Submissive = 1,
     Dominant = 2
+}
+public enum StoryCheckpoint {
+    DuringTrip = 0,
+    // Come up with the rest here
 }
 /* ====================== End ============================ */

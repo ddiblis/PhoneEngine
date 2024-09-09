@@ -24,8 +24,9 @@ public class DBHandler : MonoBehaviour {
             for (int i = SF.saveFile.MidRolls.Count; i < DataBase.MidrollsList.Count; i++) {
                 SF.saveFile.MidRolls.Add(
                     new MidRoll{ 
-                        MidrollName = DataBase.MidrollsList[i],
-                        Seen = false 
+                        MidrollName = DataBase.MidrollsList[i].MidrollName,
+                        Checkpoint = DataBase.MidrollsList[i]. Checkpoint,
+                        Seen = false
                     }
                 );
             }

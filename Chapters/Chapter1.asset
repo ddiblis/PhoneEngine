@@ -15,14 +15,58 @@ MonoBehaviour:
   Chapters:
   - AllowMidrolls: 0
     location:
-      x: -7339
-      y: 16991
+      x: -9031
+      y: 14520
       Width: 192
       Height: 135
     SubChaps:
     - Contact: Althea
-      TimeIndicator: 4 Hours Later
-      TextList: []
+      TextList:
+      - Type: 1
+        TextContent: Hellooooooo
+        TextDelay: 0.16
+        Tendency: 0
+        location:
+          x: 1340
+          y: -1125
+          Width: 323
+          Height: 234
+      - Type: 1
+        TextContent: Why are you ignoring me??
+        TextDelay: 0.16
+        Tendency: 0
+        location:
+          x: 1670
+          y: -1125
+          Width: 343
+          Height: 234
+      - Type: 1
+        TextContent: Only gone for one day and already another girl's got your attention
+        TextDelay: 0.16
+        Tendency: 0
+        location:
+          x: 2016
+          y: -1124
+          Width: 549
+          Height: 234
+      - Type: 5
+        TextContent: fake-angry
+        TextDelay: 0.16
+        Tendency: 0
+        location:
+          x: 2574
+          y: -1122
+          Width: 323
+          Height: 234
+      - Type: 8
+        TextContent: 4 Hours Later
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 2907
+          y: -1119
+          Width: 323
+          Height: 234
       UnlockInstaPostsAccount: Althea
       UnlockPosts: 0000000001000000020000000300000004000000
       Responses:
@@ -31,17 +75,16 @@ MonoBehaviour:
         SubChapNum: 1
         Type: 0
         location:
-          x: 1011
-          y: -276
+          x: 1016
+          y: -825
           Width: 323
           Height: 278
       location:
-        x: 1011
-        y: -616
+        x: 1009
+        y: -1167
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -51,25 +94,24 @@ MonoBehaviour:
         SubChapNum: 2
         Type: 4
         location:
-          x: 1013
-          y: 366
+          x: 1016
+          y: -183
           Width: 323
           Height: 278
       location:
-        x: 1012
-        y: 17
+        x: 1020
+        y: -532
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: OH look who finally rememebred their poor girlfriend
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: 1377
-          y: 695
+          x: 1349
+          y: 151
           Width: 475
           Height: 234
       - Type: 1
@@ -77,8 +119,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1868
-          y: 695
+          x: 1840
+          y: 151
           Width: 323
           Height: 234
       - Type: 1
@@ -86,8 +128,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 2215
-          y: 697
+          x: 2187
+          y: 153
           Width: 418
           Height: 234
       - Type: 5
@@ -95,8 +137,8 @@ MonoBehaviour:
         TextDelay: 0.5
         Tendency: 0
         location:
-          x: 2670
-          y: 695
+          x: 2642
+          y: 151
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -107,8 +149,8 @@ MonoBehaviour:
         SubChapNum: 3
         Type: 0
         location:
-          x: 770
-          y: 1006
+          x: 765
+          y: 483
           Width: 323
           Height: 278
       - RespTree: 0
@@ -116,25 +158,24 @@ MonoBehaviour:
         SubChapNum: 3
         Type: 0
         location:
-          x: 1290
-          y: 1006
+          x: 1285
+          y: 483
           Width: 323
           Height: 278
       location:
-        x: 1018
-        y: 655
+        x: 1021
+        y: 111
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: OMG babe are you okay???
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1358
-          y: 1389
+          x: 1344
+          y: 838
           Width: 345
           Height: 234
       - Type: 1
@@ -142,8 +183,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1743
-          y: 1388
+          x: 1729
+          y: 837
           Width: 367
           Height: 234
       UnlockInstaPostsAccount: 
@@ -154,17 +195,16 @@ MonoBehaviour:
         SubChapNum: 4
         Type: 0
         location:
-          x: 989
-          y: 1700
+          x: 970
+          y: 1160
           Width: 402
           Height: 278
       location:
-        x: 1022
-        y: 1349
+        x: 1008
+        y: 798
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -174,17 +214,16 @@ MonoBehaviour:
         SubChapNum: 5
         Type: 4
         location:
-          x: 1022
-          y: 2360
+          x: 1003
+          y: 1820
           Width: 323
           Height: 278
       location:
-        x: 1020
-        y: 2013
+        x: 1001
+        y: 1473
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -194,25 +233,24 @@ MonoBehaviour:
         SubChapNum: 6
         Type: 0
         location:
-          x: 941
-          y: 3028
+          x: 920
+          y: 2493
           Width: 503
           Height: 278
       location:
-        x: 1022
-        y: 2677
+        x: 1003
+        y: 2137
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 5
         TextContent: gf-tear
         TextDelay: 1
         Tendency: 0
         location:
-          x: 1357
-          y: 3370
+          x: 1336
+          y: 2835
           Width: 323
           Height: 234
       - Type: 1
@@ -220,8 +258,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1734
-          y: 3368
+          x: 1713
+          y: 2833
           Width: 434
           Height: 234
       UnlockInstaPostsAccount: 
@@ -232,17 +270,16 @@ MonoBehaviour:
         SubChapNum: 7
         Type: 0
         location:
-          x: 953
-          y: 3687
+          x: 932
+          y: 3149
           Width: 454
           Height: 278
       location:
-        x: 1019
-        y: 3330
+        x: 998
+        y: 2795
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -252,25 +289,24 @@ MonoBehaviour:
         SubChapNum: 8
         Type: 0
         location:
-          x: 955
-          y: 4326
+          x: 937
+          y: 3802
           Width: 435
           Height: 278
       location:
-        x: 1016
-        y: 3986
+        x: 995
+        y: 3448
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Want me to check for you?
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1364
-          y: 4699
+          x: 1346
+          y: 4175
           Width: 342
           Height: 234
       - Type: 1
@@ -279,8 +315,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1707
-          y: 4693
+          x: 1689
+          y: 4169
           Width: 540
           Height: 234
       - Type: 1
@@ -288,8 +324,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 2269
-          y: 4695
+          x: 2251
+          y: 4171
           Width: 323
           Height: 234
       - Type: 1
@@ -298,8 +334,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 2612
-          y: 4691
+          x: 2594
+          y: 4167
           Width: 631
           Height: 234
       - Type: 1
@@ -307,8 +343,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 3302
-          y: 4696
+          x: 3284
+          y: 4172
           Width: 424
           Height: 234
       - Type: 5
@@ -316,8 +352,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 3758
-          y: 4696
+          x: 3740
+          y: 4172
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -328,8 +364,8 @@ MonoBehaviour:
         SubChapNum: 9
         Type: 4
         location:
-          x: 586
-          y: 5024
+          x: 514
+          y: 4512
           Width: 323
           Height: 278
       - RespTree: 0
@@ -337,25 +373,24 @@ MonoBehaviour:
         SubChapNum: 10
         Type: 4
         location:
-          x: 1571
-          y: 5022
+          x: 1499
+          y: 4510
           Width: 323
           Height: 278
       location:
-        x: 1016
-        y: 4658
+        x: 998
+        y: 4134
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 5
         TextContent: angry
         TextDelay: 1
         Tendency: 0
         location:
-          x: 234
-          y: 5463
+          x: 181
+          y: 4867
           Width: 323
           Height: 234
       - Type: 1
@@ -363,8 +398,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -97
-          y: 5461
+          x: -150
+          y: 4865
           Width: 323
           Height: 234
       - Type: 1
@@ -372,8 +407,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -624
-          y: 5462
+          x: -677
+          y: 4866
           Width: 527
           Height: 234
       - Type: 5
@@ -381,8 +416,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: -950
-          y: 5464
+          x: -1003
+          y: 4868
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -393,8 +428,8 @@ MonoBehaviour:
         SubChapNum: 13
         Type: 0
         location:
-          x: 904
-          y: 5762
+          x: 778
+          y: 5202
           Width: 405
           Height: 278
       - RespTree: 0
@@ -402,25 +437,24 @@ MonoBehaviour:
         SubChapNum: 13
         Type: 0
         location:
-          x: 274
-          y: 5762
+          x: 148
+          y: 5202
           Width: 323
           Height: 278
       location:
-        x: 577
-        y: 5411
+        x: 524
+        y: 4815
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Of course you think I mean THAT kind of picture
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1925
-          y: 5348
+          x: 1848
+          y: 4856
           Width: 453
           Height: 234
       - Type: 5
@@ -428,8 +462,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 2396
-          y: 5347
+          x: 2319
+          y: 4855
           Width: 323
           Height: 234
       - Type: 1
@@ -437,8 +471,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 2747
-          y: 5348
+          x: 2670
+          y: 4856
           Width: 323
           Height: 234
       - Type: 1
@@ -446,8 +480,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 3103
-          y: 5345
+          x: 3026
+          y: 4853
           Width: 402
           Height: 234
       - Type: 5
@@ -455,8 +489,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 3570
-          y: 5338
+          x: 3493
+          y: 4846
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -467,8 +501,8 @@ MonoBehaviour:
         SubChapNum: 11
         Type: 4
         location:
-          x: 2171
-          y: 5753
+          x: 2045
+          y: 5193
           Width: 323
           Height: 278
       - RespTree: 0
@@ -476,25 +510,24 @@ MonoBehaviour:
         SubChapNum: 11
         Type: 0
         location:
-          x: 1491
-          y: 5753
+          x: 1365
+          y: 5193
           Width: 357
           Height: 278
       location:
-        x: 1574
-        y: 5308
+        x: 1497
+        y: 4816
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: ANYWAY!
         TextDelay: 1
         Tendency: 0
         location:
-          x: 2198
-          y: 6097
+          x: 2068
+          y: 5552
           Width: 323
           Height: 234
       - Type: 1
@@ -502,8 +535,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 2532
-          y: 6097
+          x: 2402
+          y: 5552
           Width: 371
           Height: 234
       - Type: 1
@@ -511,8 +544,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 2902
-          y: 6099
+          x: 2772
+          y: 5554
           Width: 327
           Height: 234
       - Type: 1
@@ -520,8 +553,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 3233
-          y: 6100
+          x: 3103
+          y: 5555
           Width: 323
           Height: 234
       - Type: 3
@@ -529,8 +562,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 3559
-          y: 6097
+          x: 3429
+          y: 5552
           Width: 323
           Height: 234
       - Type: 1
@@ -538,8 +571,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 3890
-          y: 6095
+          x: 3760
+          y: 5550
           Width: 532
           Height: 234
       UnlockInstaPostsAccount: 
@@ -551,7 +584,7 @@ MonoBehaviour:
         Type: 0
         location:
           x: 1877
-          y: 7059
+          y: 6546
           Width: 339
           Height: 278
       - RespTree: 0
@@ -560,16 +593,15 @@ MonoBehaviour:
         Type: 4
         location:
           x: 1483
-          y: 6397
+          y: 5884
           Width: 323
           Height: 278
       location:
-        x: 1856
-        y: 6060
+        x: 1726
+        y: 5515
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -580,24 +612,23 @@ MonoBehaviour:
         Type: 0
         location:
           x: 1503
-          y: 7051
+          y: 6538
           Width: 323
           Height: 278
       location:
         x: 1488
-        y: 6705
+        y: 6192
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Fineeeeee
         TextDelay: 2
         Tendency: 0
         location:
-          x: 253
-          y: 6108
+          x: 101
+          y: 5557
           Width: 323
           Height: 234
       - Type: 1
@@ -605,8 +636,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -140
-          y: 6111
+          x: -292
+          y: 5560
           Width: 392
           Height: 234
       - Type: 3
@@ -614,8 +645,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -482
-          y: 6122
+          x: -634
+          y: 5571
           Width: 323
           Height: 234
       - Type: 1
@@ -623,8 +654,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -1025
-          y: 6125
+          x: -1177
+          y: 5574
           Width: 532
           Height: 234
       UnlockInstaPostsAccount: 
@@ -635,8 +666,8 @@ MonoBehaviour:
         SubChapNum: 14
         Type: 4
         location:
-          x: 990
-          y: 6407
+          x: 965
+          y: 5882
           Width: 323
           Height: 278
       - RespTree: 0
@@ -644,17 +675,16 @@ MonoBehaviour:
         SubChapNum: 15
         Type: 0
         location:
-          x: 582
-          y: 7058
+          x: 557
+          y: 6533
           Width: 339
           Height: 278
       location:
-        x: 582
-        y: 6065
+        x: 430
+        y: 5514
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -664,17 +694,16 @@ MonoBehaviour:
         SubChapNum: 15
         Type: 0
         location:
-          x: 1001
-          y: 7052
+          x: 976
+          y: 6527
           Width: 323
           Height: 278
       location:
-        x: 993
-        y: 6703
+        x: 968
+        y: 6178
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Yeah of course!
@@ -682,7 +711,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1574
-          y: 7436
+          y: 6931
           Width: 323
           Height: 234
       - Type: 1
@@ -691,7 +720,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1934
-          y: 7432
+          y: 6927
           Width: 395
           Height: 234
       UnlockInstaPostsAccount: 
@@ -702,8 +731,8 @@ MonoBehaviour:
         SubChapNum: 18
         Type: 0
         location:
-          x: 1803
-          y: 9133
+          x: 1846
+          y: 8609
           Width: 323
           Height: 278
       - RespTree: 0
@@ -711,17 +740,16 @@ MonoBehaviour:
         SubChapNum: 16
         Type: 4
         location:
-          x: 1196
-          y: 7763
+          x: 1239
+          y: 7239
           Width: 323
           Height: 278
       location:
         x: 1226
-        y: 7396
+        y: 6891
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -731,25 +759,24 @@ MonoBehaviour:
         SubChapNum: 17
         Type: 0
         location:
-          x: 1177
-          y: 8462
+          x: 1220
+          y: 7938
           Width: 370
           Height: 278
       location:
-        x: 1198
-        y: 8083
+        x: 1241
+        y: 7559
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Sorry sorry!
         TextDelay: 2
         Tendency: 0
         location:
-          x: 881
-          y: 8805
+          x: 924
+          y: 8281
           Width: 323
           Height: 234
       - Type: 5
@@ -757,8 +784,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 549
-          y: 8804
+          x: 592
+          y: 8280
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -769,25 +796,24 @@ MonoBehaviour:
         SubChapNum: 18
         Type: 0
         location:
-          x: 1214
-          y: 9127
+          x: 1257
+          y: 8603
           Width: 330
           Height: 278
       location:
-        x: 1214
-        y: 8760
+        x: 1257
+        y: 8236
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Alright, give me a few and I'll check once I'm done making lunch
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1556
-          y: 9477
+          x: 1891
+          y: 8975
           Width: 533
           Height: 234
       UnlockInstaPostsAccount: 
@@ -798,8 +824,8 @@ MonoBehaviour:
         SubChapNum: 19
         Type: 0
         location:
-          x: 1545
-          y: 9779
+          x: 1899
+          y: 9302
           Width: 323
           Height: 278
       - RespTree: 0
@@ -807,18 +833,26 @@ MonoBehaviour:
         SubChapNum: 19
         Type: 0
         location:
-          x: 895
-          y: 9782
+          x: 1249
+          y: 9305
           Width: 323
           Height: 278
       location:
-        x: 1221
-        y: 9435
+        x: 1556
+        y: 8933
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 1 Hours Later
-      TextList: []
+      TextList:
+      - Type: 8
+        TextContent: 1 Hour Later
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 1911
+          y: 9636
+          Width: 323
+          Height: 234
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -827,8 +861,8 @@ MonoBehaviour:
         SubChapNum: 20
         Type: 0
         location:
-          x: 818
-          y: 10436
+          x: 1188
+          y: 9946
           Width: 422
           Height: 278
       - RespTree: 0
@@ -836,25 +870,33 @@ MonoBehaviour:
         SubChapNum: 20
         Type: 0
         location:
-          x: 1567
-          y: 10435
+          x: 1937
+          y: 9945
           Width: 323
           Height: 278
       location:
-        x: 1223
-        y: 10071
+        x: 1577
+        y: 9593
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 2 Hours Later
       TextList:
+      - Type: 8
+        TextContent: 2 Hours Later
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 1922
+          y: 10315
+          Width: 323
+          Height: 234
       - Type: 1
         TextContent: Soooooo I was looking for the backup...
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: 1570
-          y: 10783
+          x: 2257
+          y: 10312
           Width: 408
           Height: 234
       UnlockInstaPostsAccount: 
@@ -865,8 +907,8 @@ MonoBehaviour:
         SubChapNum: 21
         Type: 0
         location:
-          x: 901
-          y: 11112
+          x: 1254
+          y: 10634
           Width: 349
           Height: 278
       - RespTree: 0
@@ -874,25 +916,24 @@ MonoBehaviour:
         SubChapNum: 21
         Type: 0
         location:
-          x: 1559
-          y: 11112
+          x: 1912
+          y: 10634
           Width: 333
           Height: 278
       location:
-        x: 1243
-        y: 10744
+        x: 1600
+        y: 10274
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: I think I stumbled on your porn stash
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1582
-          y: 11451
+          x: 1940
+          y: 11004
           Width: 392
           Height: 234
       - Type: 1
@@ -901,8 +942,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1998
-          y: 11452
+          x: 2356
+          y: 11005
           Width: 521
           Height: 234
       - Type: 1
@@ -910,8 +951,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 2544
-          y: 11453
+          x: 2902
+          y: 11006
           Width: 370
           Height: 234
       - Type: 1
@@ -919,8 +960,8 @@ MonoBehaviour:
         TextDelay: 5
         Tendency: 0
         location:
-          x: 2946
-          y: 11455
+          x: 3304
+          y: 11008
           Width: 331
           Height: 234
       - Type: 1
@@ -928,8 +969,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 3300
-          y: 11454
+          x: 3658
+          y: 11007
           Width: 401
           Height: 234
       - Type: 1
@@ -937,8 +978,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 3710
-          y: 11457
+          x: 4068
+          y: 11010
           Width: 323
           Height: 234
       - Type: 1
@@ -946,8 +987,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 4045
-          y: 11458
+          x: 4403
+          y: 11011
           Width: 323
           Height: 234
       - Type: 1
@@ -955,8 +996,8 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: 4384
-          y: 11459
+          x: 4742
+          y: 11012
           Width: 434
           Height: 234
       UnlockInstaPostsAccount: 
@@ -967,17 +1008,16 @@ MonoBehaviour:
         SubChapNum: 22
         Type: 0
         location:
-          x: 1222
-          y: 11755
+          x: 1584
+          y: 11311
           Width: 354
           Height: 278
       location:
-        x: 1239
-        y: 11408
+        x: 1597
+        y: 10961
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -987,25 +1027,24 @@ MonoBehaviour:
         SubChapNum: 23
         Type: 0
         location:
-          x: 1223
-          y: 12416
+          x: 1585
+          y: 11972
           Width: 344
           Height: 278
       location:
-        x: 1232
-        y: 12073
+        x: 1594
+        y: 11629
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: what's hard to talk about?...
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1569
-          y: 12758
+          x: 1931
+          y: 12314
           Width: 346
           Height: 234
       - Type: 1
@@ -1013,8 +1052,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1927
-          y: 12759
+          x: 2289
+          y: 12315
           Width: 344
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1025,17 +1064,16 @@ MonoBehaviour:
         SubChapNum: 24
         Type: 0
         location:
-          x: 1233
-          y: 13063
+          x: 1595
+          y: 12619
           Width: 323
           Height: 278
       location:
-        x: 1236
-        y: 12716
+        x: 1598
+        y: 12272
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -1045,25 +1083,24 @@ MonoBehaviour:
         SubChapNum: 25
         Type: 0
         location:
-          x: 1226
-          y: 13700
+          x: 1596
+          y: 13254
           Width: 335
           Height: 278
       location:
-        x: 1227
-        y: 13360
+        x: 1597
+        y: 12914
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: I'm confused
         TextDelay: 1
         Tendency: 0
         location:
-          x: 1585
-          y: 14019
+          x: 1955
+          y: 13573
           Width: 323
           Height: 234
       - Type: 1
@@ -1071,8 +1108,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1920
-          y: 14016
+          x: 2290
+          y: 13570
           Width: 366
           Height: 234
       - Type: 1
@@ -1080,8 +1117,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 2297
-          y: 14018
+          x: 2667
+          y: 13572
           Width: 387
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1092,17 +1129,16 @@ MonoBehaviour:
         SubChapNum: 26
         Type: 0
         location:
-          x: 1235
-          y: 14313
+          x: 1605
+          y: 13867
           Width: 323
           Height: 278
       location:
-        x: 1239
-        y: 13979
+        x: 1609
+        y: 13533
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -1112,25 +1148,24 @@ MonoBehaviour:
         SubChapNum: 27
         Type: 0
         location:
-          x: 1218
-          y: 14921
+          x: 1598
+          y: 14491
           Width: 334
           Height: 278
       location:
-        x: 1230
-        y: 14587
+        x: 1610
+        y: 14157
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: What's hard to talk about?
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1557
-          y: 15245
+          x: 1937
+          y: 14815
           Width: 339
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1141,25 +1176,24 @@ MonoBehaviour:
         SubChapNum: 28
         Type: 4
         location:
-          x: 1225
-          y: 15540
+          x: 1605
+          y: 15110
           Width: 323
           Height: 278
       location:
-        x: 1222
-        y: 15204
+        x: 1602
+        y: 14774
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: It's okay you can tell me
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1553
-          y: 15872
+          x: 1943
+          y: 15444
           Width: 327
           Height: 234
       - Type: 1
@@ -1167,8 +1201,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1890
-          y: 15872
+          x: 2280
+          y: 15444
           Width: 330
           Height: 234
       - Type: 1
@@ -1177,8 +1211,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 2231
-          y: 15871
+          x: 2621
+          y: 15443
           Width: 556
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1189,17 +1223,16 @@ MonoBehaviour:
         SubChapNum: 29
         Type: 0
         location:
-          x: 1221
-          y: 16181
+          x: 1611
+          y: 15753
           Width: 323
           Height: 278
       location:
-        x: 1219
-        y: 15833
+        x: 1609
+        y: 15405
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -1209,25 +1242,24 @@ MonoBehaviour:
         SubChapNum: 30
         Type: 0
         location:
-          x: 1195
-          y: 16812
+          x: 1585
+          y: 16384
           Width: 369
           Height: 278
       location:
-        x: 1221
-        y: 16472
+        x: 1611
+        y: 16044
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Wait are you saying you're WANT me to cheat on you?
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: 1554
-          y: 17143
+          x: 1940
+          y: 16720
           Width: 485
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1238,8 +1270,8 @@ MonoBehaviour:
         SubChapNum: 31
         Type: 0
         location:
-          x: 3286
-          y: 17589
+          x: 3173
+          y: 17191
           Width: 530
           Height: 278
       - RespTree: 1
@@ -1247,25 +1279,24 @@ MonoBehaviour:
         SubChapNum: 34
         Type: 0
         location:
-          x: -894
-          y: 17574
+          x: 302
+          y: 17183
           Width: 323
           Height: 278
       location:
-        x: 1224
-        y: 17105
+        x: 1610
+        y: 16682
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Wait seriously??
         TextDelay: 2
         Tendency: 0
         location:
-          x: 3725
-          y: 17951
+          x: 3612
+          y: 17553
           Width: 323
           Height: 234
       - Type: 1
@@ -1273,8 +1304,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 4080
-          y: 17950
+          x: 3967
+          y: 17552
           Width: 391
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1285,8 +1316,8 @@ MonoBehaviour:
         SubChapNum: 32
         Type: 0
         location:
-          x: 3400
-          y: 18337
+          x: 3287
+          y: 17939
           Width: 323
           Height: 278
       - RespTree: 0
@@ -1294,25 +1325,24 @@ MonoBehaviour:
         SubChapNum: 32
         Type: 0
         location:
-          x: 3945
-          y: 18336
+          x: 3832
+          y: 17938
           Width: 323
           Height: 278
       location:
-        x: 3380
-        y: 17910
+        x: 3267
+        y: 17512
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: No no it's okay!
         TextDelay: 1
         Tendency: 0
         location:
-          x: 3688
-          y: 18681
+          x: 3575
+          y: 18283
           Width: 323
           Height: 234
       - Type: 1
@@ -1320,8 +1350,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 4023
-          y: 18678
+          x: 3910
+          y: 18280
           Width: 437
           Height: 234
       - Type: 1
@@ -1329,8 +1359,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 4483
-          y: 18679
+          x: 4370
+          y: 18281
           Width: 380
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1341,8 +1371,8 @@ MonoBehaviour:
         SubChapNum: 44
         Type: 0
         location:
-          x: 3162
-          y: 22364
+          x: 3358
+          y: 22348
           Width: 323
           Height: 278
       - RespTree: 0
@@ -1350,25 +1380,24 @@ MonoBehaviour:
         SubChapNum: 33
         Type: 0
         location:
-          x: 3871
-          y: 18988
+          x: 3758
+          y: 18590
           Width: 323
           Height: 278
       location:
-        x: 3355
-        y: 18638
+        x: 3242
+        y: 18240
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: It's okay, I just need think about everything
         TextDelay: 2
         Tendency: 0
         location:
-          x: 4199
-          y: 19327
+          x: 4089
+          y: 18942
           Width: 426
           Height: 234
       - Type: 1
@@ -1376,8 +1405,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 4638
-          y: 19324
+          x: 4528
+          y: 18939
           Width: 425
           Height: 234
       - Type: 1
@@ -1385,8 +1414,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 5067
-          y: 19326
+          x: 4957
+          y: 18941
           Width: 480
           Height: 234
       - Type: 5
@@ -1394,8 +1423,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 5562
-          y: 19329
+          x: 5452
+          y: 18944
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1406,17 +1435,16 @@ MonoBehaviour:
         SubChapNum: 44
         Type: 0
         location:
-          x: 3620
-          y: 22365
+          x: 3816
+          y: 22349
           Width: 360
           Height: 278
       location:
-        x: 3868
-        y: 19285
+        x: 3758
+        y: 18900
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -1427,8 +1455,8 @@ MonoBehaviour:
         SubChapNum: 35
         Type: 0
         location:
-          x: -622
-          y: 18274
+          x: 574
+          y: 17883
           Width: 624
           Height: 278
       - RespTree: 0
@@ -1437,25 +1465,24 @@ MonoBehaviour:
         SubChapNum: 38
         Type: 0
         location:
-          x: -1420
-          y: 18279
+          x: -224
+          y: 17888
           Width: 696
           Height: 278
       location:
-        x: -896
-        y: 17888
+        x: 300
+        y: 17497
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Hmmmm
         TextDelay: 2
         Tendency: 0
         location:
-          x: -172
-          y: 18648
+          x: 1024
+          y: 18257
           Width: 323
           Height: 234
       - Type: 1
@@ -1463,8 +1490,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 160
-          y: 18644
+          x: 1356
+          y: 18253
           Width: 352
           Height: 234
       - Type: 1
@@ -1472,8 +1499,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 527
-          y: 18643
+          x: 1723
+          y: 18252
           Width: 440
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1484,25 +1511,24 @@ MonoBehaviour:
         SubChapNum: 36
         Type: 0
         location:
-          x: -538
-          y: 18974
+          x: 658
+          y: 18583
           Width: 550
           Height: 278
       location:
-        x: -511
-        y: 18609
+        x: 685
+        y: 18218
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: I'd be lying if I said I didn't think about it before too
         TextDelay: 2
         Tendency: 0
         location:
-          x: -109
-          y: 19358
+          x: 1027
+          y: 18929
           Width: 466
           Height: 234
       - Type: 1
@@ -1510,8 +1536,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 392
-          y: 19355
+          x: 1528
+          y: 18926
           Width: 367
           Height: 234
       - Type: 1
@@ -1519,8 +1545,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 790
-          y: 19362
+          x: 1926
+          y: 18933
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1531,25 +1557,24 @@ MonoBehaviour:
         SubChapNum: 37
         Type: 0
         location:
-          x: -434
-          y: 19686
+          x: 702
+          y: 19257
           Width: 323
           Height: 278
       location:
-        x: -449
-        y: 19316
+        x: 687
+        y: 18887
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Calm down horny boy
         TextDelay: 2
         Tendency: 0
         location:
-          x: -97
-          y: 20069
+          x: 1039
+          y: 19600
           Width: 323
           Height: 234
       - Type: 5
@@ -1557,8 +1582,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 235
-          y: 20068
+          x: 1371
+          y: 19599
           Width: 323
           Height: 234
       - Type: 1
@@ -1566,8 +1591,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 573
-          y: 20074
+          x: 1709
+          y: 19605
           Width: 337
           Height: 234
       - Type: 1
@@ -1575,8 +1600,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 919
-          y: 20075
+          x: 2055
+          y: 19606
           Width: 323
           Height: 234
       - Type: 1
@@ -1584,8 +1609,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1267
-          y: 20071
+          x: 2403
+          y: 19602
           Width: 443
           Height: 234
       - Type: 1
@@ -1593,8 +1618,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1727
-          y: 20071
+          x: 2863
+          y: 19602
           Width: 340
           Height: 234
       - Type: 5
@@ -1602,8 +1627,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: 2096
-          y: 20065
+          x: 3232
+          y: 19596
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1614,25 +1639,24 @@ MonoBehaviour:
         SubChapNum: 44
         Type: 0
         location:
-          x: -331
-          y: 22465
+          x: 872
+          y: 22352
           Width: 399
           Height: 278
       location:
-        x: -428
-        y: 20028
+        x: 708
+        y: 19559
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Wait
         TextDelay: 2
         Tendency: 0
         location:
-          x: -1616
-          y: 18622
+          x: -420
+          y: 18231
           Width: 323
           Height: 234
       - Type: 1
@@ -1640,8 +1664,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -1993
-          y: 18626
+          x: -797
+          y: 18235
           Width: 372
           Height: 234
       - Type: 1
@@ -1649,8 +1673,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -2344
-          y: 18620
+          x: -1148
+          y: 18229
           Width: 345
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1661,25 +1685,24 @@ MonoBehaviour:
         SubChapNum: 39
         Type: 0
         location:
-          x: -1363
-          y: 18933
+          x: -167
+          y: 18542
           Width: 483
           Height: 278
       location:
-        x: -1264
-        y: 18582
+        x: -68
+        y: 18191
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Yeah...
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -1616
-          y: 19279
+          x: -404
+          y: 18895
           Width: 323
           Height: 234
       - Type: 1
@@ -1687,8 +1710,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -2138
-          y: 19280
+          x: -926
+          y: 18896
           Width: 506
           Height: 234
       - Type: 1
@@ -1696,8 +1719,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: -2479
-          y: 19275
+          x: -1267
+          y: 18891
           Width: 323
           Height: 234
       - Type: 1
@@ -1705,8 +1728,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -2959
-          y: 19278
+          x: -1747
+          y: 18894
           Width: 457
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1717,25 +1740,24 @@ MonoBehaviour:
         SubChapNum: 40
         Type: 0
         location:
-          x: -1251
-          y: 19598
+          x: -39
+          y: 19214
           Width: 323
           Height: 278
       location:
-        x: -1271
-        y: 19232
+        x: -59
+        y: 18848
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 5
         TextContent: shy
         TextDelay: 1
         Tendency: 0
         location:
-          x: -1573
-          y: 19967
+          x: -361
+          y: 19583
           Width: 323
           Height: 234
       - Type: 1
@@ -1743,8 +1765,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: -1924
-          y: 19967
+          x: -712
+          y: 19583
           Width: 323
           Height: 234
       - Type: 1
@@ -1752,8 +1774,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -2261
-          y: 19968
+          x: -1049
+          y: 19584
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1764,25 +1786,24 @@ MonoBehaviour:
         SubChapNum: 41
         Type: 0
         location:
-          x: -1275
-          y: 20317
+          x: -63
+          y: 19933
           Width: 428
           Height: 278
       location:
-        x: -1242
-        y: 19926
+        x: -30
+        y: 19542
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Yeah...
         TextDelay: 2
         Tendency: 0
         location:
-          x: -1572
-          y: 20719
+          x: -360
+          y: 20335
           Width: 323
           Height: 234
       - Type: 1
@@ -1790,8 +1811,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -1987
-          y: 20725
+          x: -775
+          y: 20341
           Width: 401
           Height: 234
       - Type: 1
@@ -1799,8 +1820,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -2390
-          y: 20717
+          x: -1178
+          y: 20333
           Width: 381
           Height: 234
       - Type: 1
@@ -1808,8 +1829,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -2736
-          y: 20713
+          x: -1524
+          y: 20329
           Width: 323
           Height: 234
       - Type: 1
@@ -1817,8 +1838,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -3159
-          y: 20718
+          x: -1947
+          y: 20334
           Width: 389
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1829,25 +1850,24 @@ MonoBehaviour:
         SubChapNum: 42
         Type: 0
         location:
-          x: -1236
-          y: 21077
+          x: -24
+          y: 20693
           Width: 323
           Height: 278
       location:
-        x: -1222
-        y: 20674
+        x: -10
+        y: 20290
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Of course you'd get this excited
         TextDelay: 2
         Tendency: 0
         location:
-          x: -1649
-          y: 21401
+          x: -437
+          y: 21017
           Width: 368
           Height: 234
       - Type: 5
@@ -1855,8 +1875,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: -1997
-          y: 21403
+          x: -785
+          y: 21019
           Width: 323
           Height: 234
       - Type: 1
@@ -1864,8 +1884,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -2425
-          y: 21408
+          x: -1213
+          y: 21024
           Width: 362
           Height: 234
       - Type: 1
@@ -1873,8 +1893,8 @@ MonoBehaviour:
         TextDelay: 0.5
         Tendency: 0
         location:
-          x: -2810
-          y: 21403
+          x: -1598
+          y: 21019
           Width: 323
           Height: 234
       - Type: 1
@@ -1882,8 +1902,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -3177
-          y: 21399
+          x: -1965
+          y: 21015
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1894,25 +1914,24 @@ MonoBehaviour:
         SubChapNum: 43
         Type: 0
         location:
-          x: -1216
-          y: 21737
+          x: -4
+          y: 21353
           Width: 323
           Height: 278
       location:
-        x: -1236
-        y: 21376
+        x: -24
+        y: 20992
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 1
         TextContent: Oops did I say yet?
         TextDelay: 2
         Tendency: 0
         location:
-          x: -1541
-          y: 22082
+          x: -329
+          y: 21698
           Width: 323
           Height: 234
       - Type: 1
@@ -1920,8 +1939,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -2036
-          y: 22083
+          x: -824
+          y: 21699
           Width: 476
           Height: 234
       - Type: 1
@@ -1929,8 +1948,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -2433
-          y: 22096
+          x: -1221
+          y: 21712
           Width: 372
           Height: 234
       - Type: 1
@@ -1938,8 +1957,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -2812
-          y: 22088
+          x: -1600
+          y: 21704
           Width: 363
           Height: 234
       - Type: 1
@@ -1947,8 +1966,8 @@ MonoBehaviour:
         TextDelay: 2
         Tendency: 0
         location:
-          x: -3163
-          y: 22082
+          x: -1951
+          y: 21698
           Width: 337
           Height: 234
       - Type: 5
@@ -1956,8 +1975,8 @@ MonoBehaviour:
         TextDelay: 1
         Tendency: 0
         location:
-          x: -3533
-          y: 22090
+          x: -2321
+          y: 21706
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
@@ -1968,32 +1987,31 @@ MonoBehaviour:
         SubChapNum: 44
         Type: 0
         location:
-          x: -1230
-          y: 22459
+          x: -27
+          y: 22346
           Width: 422
           Height: 278
       location:
-        x: -1210
-        y: 22039
+        x: 2
+        y: 21655
         Width: 323
-        Height: 329
+        Height: 292
     - Contact: Althea
-      TimeIndicator: 
       TextList:
       - Type: 6
         TextContent: End Of Chapter 1
-        TextDelay: 1
+        TextDelay: 2.5
         Tendency: 0
         location:
-          x: 960
-          y: 23018
+          x: 2428
+          y: 23090
           Width: 323
           Height: 234
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses: []
       location:
-        x: 620
-        y: 22979
+        x: 2088
+        y: 23051
         Width: 323
-        Height: 329
+        Height: 292
