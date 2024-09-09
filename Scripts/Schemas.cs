@@ -23,6 +23,7 @@ public class SubChap
 [System.Serializable]
 public class TextMessage
 {
+    public string AltContact;
     public int Type;
     public string TextContent;
     public int Tendency;
@@ -74,6 +75,7 @@ public class SubChapData
 [System.Serializable]
 public class TextMessageData
 {
+    public string AltContact;
     public int Type;
     public string TextContent;
     public float TextDelay;
@@ -213,6 +215,7 @@ public class DBRoot {
     public List<DBMidRoll> MidrollsList;
 }
 
+[System.Serializable]
 public class DBMidRoll {
     public string MidrollName;
     public int Checkpoint;

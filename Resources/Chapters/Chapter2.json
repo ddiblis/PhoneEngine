@@ -1,28 +1,33 @@
 {
     "AllowMidrolls": true,
+    "StoryCheckpoint": 0,
     "SubChaps": [
         {
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 8,
                     "TextContent": "5 Hours Later",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Sooooooo",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I kinda started watching the videos you have saved",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I have to admit I have a lot of questions",
                     "Tendency": 0,
@@ -50,24 +55,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Calm down horny boy",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Those questions will have to wait",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Cuz I have a date right now",
                     "Tendency": 0,
@@ -95,18 +104,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Yep",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "And he's super hot",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "He even agreed to take me out shopping",
                     "Tendency": 0,
@@ -142,12 +154,14 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Damn it!!!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "What gave it away??",
                     "Tendency": 0,
@@ -169,42 +183,49 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Well joke's on you",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I am going out!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "...",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "With Alejandra and JJ though",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I do actually have a lot questions about what we talked about earlier though",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Would you mind if I talked to the girls about it while we're out?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I kinda need some advice on this whole thing",
                     "Tendency": 0,
@@ -232,18 +253,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Pretty please?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Neither of them judge",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "And I know for a fact Alejandra could teach me a thing or two",
                     "Tendency": 0,
@@ -271,24 +295,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I completely get it",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "But I promise they won't judge!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Maybe I'll even give you a reward tonight",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "For being such an amazing wonderful understanding boyfriend",
                     "Tendency": 0,
@@ -330,18 +358,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Nope!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "No spoilers",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "You'll just have to find out!",
                     "Tendency": 0,
@@ -369,18 +400,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Perfect!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "thank youuuuu",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-kiss",
                     "Tendency": 0,
@@ -402,18 +436,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 8,
                     "TextContent": "20 Minutes Later",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "OH BTW",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Do you still have the girls numbers saved or did you lose their contacts?",
                     "Tendency": 0,
@@ -449,30 +486,35 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Aweeee",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "For some reason that made me really happy for a second",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Still",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "You should save their numbers again ",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Just in case anything happens while we're out",
                     "Tendency": 0,
@@ -508,54 +550,63 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "OH MY GOD",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "eyeroll",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Why did I already know your mind would go there?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I MEAN IN CASE MY PHONE DIES!!!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "...",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Or do I?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Anyway one sec!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 7,
                     "TextContent": "Alejandra",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 7,
                     "TextContent": "Julia",
                     "Tendency": 0,
@@ -600,36 +651,42 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "OOPS",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "TOO LATE",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "GTG",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "BYEEEEE",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I LOVE YOU!",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
@@ -657,36 +714,42 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 8,
                     "TextContent": "40 Minutes Later",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Hiii",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Just got to the mall",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Julia and I are here but we're still waiting on Alejandra",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "That girl is always so late",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "angry",
                     "Tendency": 0,
@@ -714,24 +777,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "It's not funny!!!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I'm stressed!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I didn't realise we were coming in so close to their closing time",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I don't want to miss out on the sales!",
                     "Tendency": 0,
@@ -759,18 +826,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Duh!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're here to shop for clothes",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I'm killing Alejandra when I see her!",
                     "Tendency": 0,
@@ -798,18 +868,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Whaaaat",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Give me a break!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I've had a very stressful day!",
                     "Tendency": 0,
@@ -845,36 +918,42 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Such a perv!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I can't believe you!!!!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Yes...",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Can you blame me though??",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "As if you're not excited to see what I pick up",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "tongue-out",
                     "Tendency": 0,
@@ -896,18 +975,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Thought so",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Can't miss a chance to get them half off though!",
                     "Tendency": 0,
@@ -929,12 +1011,14 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Yeah",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "That's what we're doing right now",
                     "Tendency": 0,
@@ -964,12 +1048,14 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I love you too",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-heart",
                     "Tendency": 0,
@@ -991,24 +1077,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 8,
                     "TextContent": "20 Minutes later",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Guess who JUST showed up",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Her name starts with A and ends with A",
                     "Tendency": 0,
@@ -1036,24 +1126,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Huh??",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "OHHH",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "HA HA VERY FUNNY!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Dork!",
                     "Tendency": 0,
@@ -1075,18 +1169,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're gonna hurry to the shops now",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Then Alejandra is taking us to a little bar she knows",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "BRB!",
                     "Tendency": 0,
@@ -1108,12 +1205,14 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Soooo",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I remember promising a certain someone a surprise tonight didn't I?",
                     "Tendency": 0,
@@ -1141,30 +1240,35 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I'm choosing between two sets",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Alejandra helped me pick them out",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "But I can't decide between the two",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "They're both really cute",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Wanna help me choose??",
                     "Tendency": 0,
@@ -1192,18 +1296,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Oh?",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-tear",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Are you sure about that?",
                     "Tendency": 0,
@@ -1231,12 +1338,14 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Asshole",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
@@ -1258,36 +1367,42 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Alright here are the choices",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "This is the first one",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 3,
                     "TextContent": "Althea-whiteLingerie1",
                     "Tendency": 0,
                     "TextDelay": 3.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "White is usually not my favourite",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "But I look kinda innocent in this pair which I like",
                     "Tendency": 0,
@@ -1315,24 +1430,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Hold on don't make up your mind yet!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I have one more",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Give me a minute I need to change",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
@@ -1360,24 +1479,28 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Say",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Your gf's been in the changing room for a while",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "What are you two doing in there huh?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "unamused",
                     "Tendency": 0,
@@ -1405,24 +1528,28 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Aweeee did someone miss me?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "You know I bought a few pairs myself",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I can always show you if you ask me nicely enough",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "tongue-out",
                     "Tendency": 0,
@@ -1450,24 +1577,28 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Easy there boy",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "So predictable",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Maybe another time",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "tongue-out",
                     "Tendency": 0,
@@ -1517,18 +1648,21 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Oh don't worry",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "She saw them first",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Still trying to get Julia on board though",
                     "Tendency": 0,
@@ -1556,48 +1690,56 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Only time will tell",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Anyway",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Tell Althea to hurry up or I'm going in there",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "fake-angry",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Nvm",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're being kicked out",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "it's past their closing time",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Tell her we'll be right outside",
                     "Tendency": 0,
@@ -1625,24 +1767,28 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Pffffft",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "You're just jealous",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Anyway",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Tell her we'll be right outside when she's done",
                     "Tendency": 0,
@@ -1684,18 +1830,21 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Pshhhh",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "That's all???",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Maybe I should go in there and help her out",
                     "Tendency": 0,
@@ -1723,24 +1872,28 @@
             "Contact": "Alejandra",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Easy there boy",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Anyway, tell her we're being force to leave the store",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "It's already past their closing time",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We'll be right outside when she'd done",
                     "Tendency": 0,
@@ -1796,54 +1949,63 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "OMG",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Alright I'll hurry up",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Here's the second set!",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 3,
                     "TextContent": "Althea-blackLingerie1",
                     "Tendency": 0,
                     "TextDelay": 3.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I feel way more confident in this colour",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "But idk",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "It feels a little slutty too",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "shy",
                     "Tendency": 0,
                     "TextDelay": 1.0
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Which one do you think I should go with?",
                     "Tendency": 0,
@@ -1871,24 +2033,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Oh really?",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "You want me to look all innocent and cute?",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "When you fantasise about me doing bad things with other people?",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "smirking",
                     "Tendency": 0,
@@ -1916,30 +2082,35 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Oh really?",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I mean it makes sense",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I saw how slutty those girls were in the videos you have",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "tongue-out",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "And I definitely feel slutty in this set",
                     "Tendency": 0,
@@ -1967,24 +2138,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Well",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I better get back to the girls before they start wondering what's taking so long",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're going to head to the bars right after this so I'll text you when we get there",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-heart",
                     "Tendency": 0,
@@ -2012,24 +2187,28 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Well",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I better get back to the girls before they start wondering what's taking so long",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're going to head to the bars right after this so I'll text you when we get there",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-heart",
                     "Tendency": 0,
@@ -2057,60 +2236,70 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 8,
                     "TextContent": "1 Hour Later",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We just got here",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "JJ drives like a grandma",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I just want to double check with you again",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Is it still okay with you if I talk to the girls about what we talked about?",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I promise they'll be nice",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "And I KNOW Alejandra HAS to know more about this",
                     "Tendency": 0,
                     "TextDelay": 2.5
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "She can probably teach me a thing or two",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "evil",
                     "Tendency": 0,
@@ -2138,18 +2327,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Of course!",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "I don't think you're going to want to miss out on it anyway",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "smirking",
                     "Tendency": 0,
@@ -2177,18 +2369,21 @@
             "Contact": "Althea",
             "TextList": [
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Yay",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "Okay",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
                 },
                 {
+                    "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're about to sit down so I'll talk to you a little later!",
                     "Tendency": 0,
@@ -2200,17 +2395,53 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "",
-                    "SubChapNum": 0,
-                    "Type": 0
+                    "TextContent": "bf-heart",
+                    "SubChapNum": 57,
+                    "Type": 4
                 },
                 {
                     "RespTree": false,
-                    "TextContent": "",
-                    "SubChapNum": 0,
+                    "TextContent": "I love you!",
+                    "SubChapNum": 57,
                     "Type": 0
                 }
             ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "Althea",
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "1 Hour Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Soooo....",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Testing if this works",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": []
         }
     ]
 }

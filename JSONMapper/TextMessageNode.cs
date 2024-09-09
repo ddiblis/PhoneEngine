@@ -17,12 +17,14 @@ namespace JSONMapper {
             "Tendency Options", "Neutral 0", "Submissive 1", "Dominant 2"
         };
 
+        public string AltContact;        
         public int Type;
         public int Tendency;
         public string TextContent;
         public float TextDelay;
 
         private readonly TextField TextMessageField;
+        private readonly TextField AltContactField;
         private readonly DropdownField TypeDropDown;
         private readonly DropdownField DelayDropDown;
         private readonly DropdownField TendencyDropDown;
@@ -42,6 +44,9 @@ namespace JSONMapper {
 
             var Foldout = new Foldout() { text = "Text Message Content" };
 
+            AltContactField = new TextField("Alt Contact") { value = TextContent };
+            AltContactField.RegisterValueChangedCallback(evt => AltContact = evt.newValue);
+
             TextMessageField = new TextField("Text message") { value = TextContent };
             TextMessageField.RegisterValueChangedCallback(evt => TextContent = evt.newValue);
 
@@ -54,6 +59,10 @@ namespace JSONMapper {
             DelayDropDown = new DropdownField("Text Delay", DelayOptions, 0);
             DelayDropDown.RegisterValueChangedCallback(evt => TextDelay = float.Parse(Regex.Match(evt.newValue, @"\d\.\d{1,2}").Value));
 
+            AltContactField.AddClasses(
+                "jm-node__subchap-textfield",
+                "jm-node__subchap-quote-textfield"
+            );
             TextMessageField.AddClasses(
                 "jm-node__textfield",
                 "jm-node__quote-textfield"
@@ -72,6 +81,7 @@ namespace JSONMapper {
                 "jm-node__quote-textfield"
             );
 
+            Foldout.Add(AltContactField);
             Foldout.Add(TextMessageField);
             Foldout.Add(TypeDropDown);
             Foldout.Add(DelayDropDown);
@@ -88,6 +98,7 @@ namespace JSONMapper {
             int DelayIndex = DelayOptions.FindIndex(x => x.Contains("" + TextDelay));
             int TendencyIndex = TendencyOptions.FindIndex(x => x.Contains("" + Tendency));
             TextMessageField.value = TextContent;
+            AltContactField.value = AltContact;
             TendencyDropDown.value = TendencyOptions[TendencyIndex >= 0 ? TendencyIndex : 0];
             TypeDropDown.value = TypeOptions[TypeIndex >= 0 ? TypeIndex : 0];
             DelayDropDown.value = DelayOptions[DelayIndex >= 0 ? DelayIndex : 0];
@@ -97,6 +108,7 @@ namespace JSONMapper {
             Rect rect = this.GetPosition();
             return new TextMessageData {
                 Type = this.Type,
+                AltContact = this.AltContact,
                 TextContent = this.TextContent,
                 TextDelay = this.TextDelay,
                 Tendency = this.Tendency,
@@ -112,6 +124,7 @@ namespace JSONMapper {
         public TextMessage ToTextMessageData() {
             return new TextMessage {
                 Type = this.Type,
+                AltContact = this.AltContact,
                 TextContent = this.TextContent,
                 TextDelay = this.TextDelay,
                 Tendency = this.Tendency

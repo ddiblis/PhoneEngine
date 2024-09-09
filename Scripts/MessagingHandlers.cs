@@ -129,12 +129,19 @@ public class MessagingHandlers : MonoBehaviour {
     }
     # nullable disable
 
-    public IEnumerator RecieveTexts(List<TextMessage> TextList, string Contact, int startingText = 0) {
+    public IEnumerator RecieveTexts(List<TextMessage> TextList, string Contact, int indexOfContact, int startingText = 0) {
         Sprite pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;
 
         for (int i = startingText; i < TextList.Count; i++) {
             SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
             TextMessage textMessage = TextList[i];
+            if (textMessage.AltContact.Length != 0) {
+                int AltContactIndex = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == textMessage.AltContact);
+                SF.saveFile.contactPush = AltContactIndex;
+                UnlockContact(AltContactIndex);
+            } else {
+                SF.saveFile.contactPush = indexOfContact;
+            }
             if (textMessage.Tendency == SF.saveFile.Stats.Tendency || textMessage.Tendency == (int)Tendency.Neutral) {
                 yield return StartCoroutine(MessageDelay(textMessage, pfp));
             }
@@ -183,7 +190,7 @@ public class MessagingHandlers : MonoBehaviour {
 
         if (!SF.saveFile.ChoiceNeeded) {
             if (subChap.TextList.Count == 1 || SF.saveFile.CurrStoryPoint.CurrTextIndex + 1 != subChap.TextList.Count){
-                yield return StartCoroutine(RecieveTexts(subChap.TextList, subChap.Contact, startingText));
+                yield return StartCoroutine(RecieveTexts(subChap.TextList, subChap.Contact, indexOfContact, startingText));
             }
         }
 

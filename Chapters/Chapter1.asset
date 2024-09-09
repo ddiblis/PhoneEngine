@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Chapters:
   - AllowMidrolls: 0
+    StoryCheckpoint: 0
     location:
       x: -9031
       y: 14520
-      Width: 192
-      Height: 135
+      Width: 263
+      Height: 155
     SubChaps:
     - Contact: Althea
       TextList:
