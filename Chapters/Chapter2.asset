@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Chapter2
   m_EditorClassIdentifier: 
   Chapters:
-  - AllowMidrolls: 1
+  - AllowMidrolls: 0
     StoryCheckpoint: 0
     location:
-      x: 3847
-      y: 32303
+      x: -108
+      y: 56184
       Width: 263
       Height: 155
     SubChaps:
     - Contact: Althea
       TextList:
-      - Type: 8
+      - AltContact: 
+        Type: 8
         TextContent: 5 Hours Later
         TextDelay: 2.5
         Tendency: 0
@@ -31,8 +32,9 @@ MonoBehaviour:
           x: 847
           y: 231
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Sooooooo
         TextDelay: 2
         Tendency: 0
@@ -40,8 +42,9 @@ MonoBehaviour:
           x: 1184
           y: 234
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I kinda started watching the videos you have saved
         TextDelay: 2
         Tendency: 0
@@ -49,8 +52,9 @@ MonoBehaviour:
           x: 1518
           y: 236
           Width: 470
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I have to admit I have a lot of questions
         TextDelay: 2
         Tendency: 0
@@ -58,7 +62,7 @@ MonoBehaviour:
           x: 2002
           y: 234
           Width: 407
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -87,7 +91,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Calm down horny boy
         TextDelay: 2
         Tendency: 0
@@ -95,8 +100,9 @@ MonoBehaviour:
           x: 844
           y: 894
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -104,8 +110,9 @@ MonoBehaviour:
           x: 1177
           y: 895
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Those questions will have to wait
         TextDelay: 2
         Tendency: 0
@@ -113,8 +120,9 @@ MonoBehaviour:
           x: 1508
           y: 895
           Width: 375
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Cuz I have a date right now
         TextDelay: 2
         Tendency: 0
@@ -122,7 +130,7 @@ MonoBehaviour:
           x: 1893
           y: 896
           Width: 345
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -151,7 +159,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Yep
         TextDelay: 2
         Tendency: 0
@@ -159,8 +168,9 @@ MonoBehaviour:
           x: 846
           y: 1553
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: And he's super hot
         TextDelay: 2
         Tendency: 0
@@ -168,8 +178,9 @@ MonoBehaviour:
           x: 1183
           y: 1554
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: He even agreed to take me out shopping
         TextDelay: 2
         Tendency: 0
@@ -177,7 +188,7 @@ MonoBehaviour:
           x: 1514
           y: 1554
           Width: 415
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -216,7 +227,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Damn it!!!
         TextDelay: 2
         Tendency: 0
@@ -224,8 +236,9 @@ MonoBehaviour:
           x: 840
           y: 2849
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: What gave it away??
         TextDelay: 2
         Tendency: 0
@@ -233,7 +246,7 @@ MonoBehaviour:
           x: 1176
           y: 2852
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -253,7 +266,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Well joke's on you
         TextDelay: 2
         Tendency: 0
@@ -261,8 +275,9 @@ MonoBehaviour:
           x: 843
           y: 3494
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I am going out!
         TextDelay: 2
         Tendency: 0
@@ -270,8 +285,9 @@ MonoBehaviour:
           x: 1173
           y: 3493
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: ...
         TextDelay: 2
         Tendency: 0
@@ -279,8 +295,9 @@ MonoBehaviour:
           x: 1503
           y: 3493
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: With Alejandra and JJ though
         TextDelay: 2
         Tendency: 0
@@ -288,8 +305,9 @@ MonoBehaviour:
           x: 1837
           y: 3493
           Width: 355
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I do actually have a lot questions about what we talked about
           earlier though
         TextDelay: 2.5
@@ -298,8 +316,9 @@ MonoBehaviour:
           x: 2198
           y: 3492
           Width: 597
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Would you mind if I talked to the girls about it while we're
           out?
         TextDelay: 2
@@ -308,8 +327,9 @@ MonoBehaviour:
           x: 2804
           y: 3492
           Width: 525
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I kinda need some advice on this whole thing
         TextDelay: 2
         Tendency: 0
@@ -317,7 +337,7 @@ MonoBehaviour:
           x: 3335
           y: 3492
           Width: 436
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -346,7 +366,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Pretty please?
         TextDelay: 2
         Tendency: 0
@@ -354,8 +375,9 @@ MonoBehaviour:
           x: 677
           y: 4160
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Neither of them judge
         TextDelay: 2
         Tendency: 0
@@ -363,8 +385,9 @@ MonoBehaviour:
           x: 1007
           y: 4160
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: And I know for a fact Alejandra could teach me a thing or two
         TextDelay: 2
         Tendency: 0
@@ -372,7 +395,7 @@ MonoBehaviour:
           x: 1335
           y: 4159
           Width: 521
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -401,7 +424,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: I completely get it
         TextDelay: 2
         Tendency: 0
@@ -409,8 +433,9 @@ MonoBehaviour:
           x: 495
           y: 4809
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: But I promise they won't judge!
         TextDelay: 2
         Tendency: 0
@@ -418,8 +443,9 @@ MonoBehaviour:
           x: 823
           y: 4809
           Width: 364
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Maybe I'll even give you a reward tonight
         TextDelay: 2
         Tendency: 0
@@ -427,8 +453,9 @@ MonoBehaviour:
           x: 1193
           y: 4808
           Width: 416
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: For being such an amazing wonderful understanding boyfriend
         TextDelay: 2
         Tendency: 0
@@ -436,7 +463,7 @@ MonoBehaviour:
           x: 1613
           y: 4808
           Width: 529
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -484,7 +511,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Nope!
         TextDelay: 2
         Tendency: 0
@@ -492,8 +520,9 @@ MonoBehaviour:
           x: 506
           y: 6092
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: No spoilers
         TextDelay: 2
         Tendency: 0
@@ -501,8 +530,9 @@ MonoBehaviour:
           x: 836
           y: 6093
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: You'll just have to find out!
         TextDelay: 2
         Tendency: 0
@@ -510,7 +540,7 @@ MonoBehaviour:
           x: 1165
           y: 6093
           Width: 340
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -539,7 +569,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Perfect!
         TextDelay: 2
         Tendency: 0
@@ -547,8 +578,9 @@ MonoBehaviour:
           x: 513
           y: 6728
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: thank youuuuu
         TextDelay: 2
         Tendency: 0
@@ -556,8 +588,9 @@ MonoBehaviour:
           x: 844
           y: 6730
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-kiss
         TextDelay: 1.1
         Tendency: 0
@@ -565,7 +598,7 @@ MonoBehaviour:
           x: 1173
           y: 6730
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -585,7 +618,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 8
+      - AltContact: 
+        Type: 8
         TextContent: 20 Minutes Later
         TextDelay: 2.5
         Tendency: 0
@@ -593,8 +627,9 @@ MonoBehaviour:
           x: 510
           y: 7367
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: OH BTW
         TextDelay: 2
         Tendency: 0
@@ -602,8 +637,9 @@ MonoBehaviour:
           x: 849
           y: 7369
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Do you still have the girls numbers saved or did you lose their
           contacts?
         TextDelay: 2
@@ -612,7 +648,7 @@ MonoBehaviour:
           x: 1181
           y: 7370
           Width: 576
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -651,7 +687,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Aweeee
         TextDelay: 2
         Tendency: 0
@@ -659,8 +696,9 @@ MonoBehaviour:
           x: 511
           y: 8609
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: For some reason that made me really happy for a second
         TextDelay: 2
         Tendency: 0
@@ -668,8 +706,9 @@ MonoBehaviour:
           x: 844
           y: 8608
           Width: 499
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Still
         TextDelay: 2
         Tendency: 0
@@ -677,8 +716,9 @@ MonoBehaviour:
           x: 1349
           y: 8608
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: 'You should save their numbers again '
         TextDelay: 2
         Tendency: 0
@@ -686,8 +726,9 @@ MonoBehaviour:
           x: 1677
           y: 8609
           Width: 398
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Just in case anything happens while we're out
         TextDelay: 2
         Tendency: 0
@@ -695,7 +736,7 @@ MonoBehaviour:
           x: 2078
           y: 8610
           Width: 442
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -734,7 +775,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: OH MY GOD
         TextDelay: 2
         Tendency: 0
@@ -742,8 +784,9 @@ MonoBehaviour:
           x: 516
           y: 9848
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: eyeroll
         TextDelay: 1.1
         Tendency: 0
@@ -751,8 +794,9 @@ MonoBehaviour:
           x: 847
           y: 9845
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Why did I already know your mind would go there?
         TextDelay: 2
         Tendency: 0
@@ -760,8 +804,9 @@ MonoBehaviour:
           x: 1178
           y: 9849
           Width: 465
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I MEAN IN CASE MY PHONE DIES!!!
         TextDelay: 2
         Tendency: 0
@@ -769,8 +814,9 @@ MonoBehaviour:
           x: 1648
           y: 9849
           Width: 385
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: ...
         TextDelay: 2
         Tendency: 0
@@ -778,8 +824,9 @@ MonoBehaviour:
           x: 2038
           y: 9849
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Or do I?
         TextDelay: 2
         Tendency: 0
@@ -787,8 +834,9 @@ MonoBehaviour:
           x: 2377
           y: 9850
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Anyway one sec!
         TextDelay: 2
         Tendency: 0
@@ -796,8 +844,9 @@ MonoBehaviour:
           x: 2716
           y: 9847
           Width: 323
-          Height: 234
-      - Type: 7
+          Height: 271
+      - AltContact: 
+        Type: 7
         TextContent: Alejandra
         TextDelay: 2
         Tendency: 0
@@ -805,8 +854,9 @@ MonoBehaviour:
           x: 3047
           y: 9850
           Width: 323
-          Height: 234
-      - Type: 7
+          Height: 271
+      - AltContact: 
+        Type: 7
         TextContent: Julia
         TextDelay: 2
         Tendency: 0
@@ -814,7 +864,7 @@ MonoBehaviour:
           x: 3374
           y: 9851
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: Julia
       UnlockPosts: 090000000a0000000b000000
       Responses:
@@ -853,7 +903,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: OOPS
         TextDelay: 1.1
         Tendency: 0
@@ -861,8 +912,9 @@ MonoBehaviour:
           x: 529
           y: 11114
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: TOO LATE
         TextDelay: 1.1
         Tendency: 0
@@ -870,8 +922,9 @@ MonoBehaviour:
           x: 860
           y: 11113
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: GTG
         TextDelay: 1.1
         Tendency: 0
@@ -879,8 +932,9 @@ MonoBehaviour:
           x: 1193
           y: 11114
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: BYEEEEE
         TextDelay: 1.1
         Tendency: 0
@@ -888,8 +942,9 @@ MonoBehaviour:
           x: 1526
           y: 11114
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I LOVE YOU!
         TextDelay: 1.1
         Tendency: 0
@@ -897,8 +952,9 @@ MonoBehaviour:
           x: 1855
           y: 11111
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -906,7 +962,7 @@ MonoBehaviour:
           x: 2192
           y: 11113
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -935,7 +991,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 8
+      - AltContact: 
+        Type: 8
         TextContent: 40 Minutes Later
         TextDelay: 2.5
         Tendency: 0
@@ -943,8 +1000,9 @@ MonoBehaviour:
           x: 525
           y: 11761
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Hiii
         TextDelay: 2
         Tendency: 0
@@ -952,8 +1010,9 @@ MonoBehaviour:
           x: 860
           y: 11762
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Just got to the mall
         TextDelay: 2
         Tendency: 0
@@ -961,8 +1020,9 @@ MonoBehaviour:
           x: 1195
           y: 11761
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Julia and I are here but we're still waiting on Alejandra
         TextDelay: 2
         Tendency: 0
@@ -970,8 +1030,9 @@ MonoBehaviour:
           x: 1527
           y: 11762
           Width: 482
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: That girl is always so late
         TextDelay: 2
         Tendency: 0
@@ -979,8 +1040,9 @@ MonoBehaviour:
           x: 2012
           y: 11760
           Width: 333
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: angry
         TextDelay: 1.1
         Tendency: 0
@@ -988,7 +1050,7 @@ MonoBehaviour:
           x: 2350
           y: 11762
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1017,7 +1079,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: It's not funny!!!
         TextDelay: 2
         Tendency: 0
@@ -1025,8 +1088,9 @@ MonoBehaviour:
           x: 516
           y: 12397
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I'm stressed!
         TextDelay: 2
         Tendency: 0
@@ -1034,8 +1098,9 @@ MonoBehaviour:
           x: 844
           y: 12398
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I didn't realise we were coming in so close to their closing
           time
         TextDelay: 2
@@ -1044,8 +1109,9 @@ MonoBehaviour:
           x: 1172
           y: 12397
           Width: 527
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I don't want to miss out on the sales!
         TextDelay: 2
         Tendency: 0
@@ -1053,7 +1119,7 @@ MonoBehaviour:
           x: 1705
           y: 12399
           Width: 393
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1082,7 +1148,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Duh!
         TextDelay: 2
         Tendency: 0
@@ -1090,8 +1157,9 @@ MonoBehaviour:
           x: 348
           y: 13056
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We're here to shop for clothes
         TextDelay: 2
         Tendency: 0
@@ -1099,8 +1167,9 @@ MonoBehaviour:
           x: 674
           y: 13057
           Width: 360
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I'm killing Alejandra when I see her!
         TextDelay: 2
         Tendency: 0
@@ -1108,7 +1177,7 @@ MonoBehaviour:
           x: 1041
           y: 13058
           Width: 384
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1137,7 +1206,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Whaaaat
         TextDelay: 2
         Tendency: 0
@@ -1145,8 +1215,9 @@ MonoBehaviour:
           x: 86
           y: 13693
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Give me a break!
         TextDelay: 2
         Tendency: 0
@@ -1154,8 +1225,9 @@ MonoBehaviour:
           x: 412
           y: 13693
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I've had a very stressful day!
         TextDelay: 2
         Tendency: 0
@@ -1163,7 +1235,7 @@ MonoBehaviour:
           x: 741
           y: 13693
           Width: 351
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1202,7 +1274,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Such a perv!
         TextDelay: 2
         Tendency: 0
@@ -1210,8 +1283,9 @@ MonoBehaviour:
           x: 81
           y: 14957
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I can't believe you!!!!
         TextDelay: 2
         Tendency: 0
@@ -1219,8 +1293,9 @@ MonoBehaviour:
           x: 418
           y: 14956
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Yes...
         TextDelay: 2
         Tendency: 0
@@ -1228,34 +1303,47 @@ MonoBehaviour:
           x: 749
           y: 14955
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: It's lingerie...
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 1077
+          y: 14956
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Can you blame me though??
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1075
-          y: 14954
+          x: 1407
+          y: 14957
           Width: 350
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: As if you're not excited to see what I pick up
         TextDelay: 2
         Tendency: 0
         location:
-          x: 1431
-          y: 14954
+          x: 1762
+          y: 14957
           Width: 433
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: tongue-out
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 1874
-          y: 14956
+          x: 2205
+          y: 14959
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1275,7 +1363,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Thought so
         TextDelay: 2
         Tendency: 0
@@ -1283,8 +1372,9 @@ MonoBehaviour:
           x: 82
           y: 15586
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -1292,8 +1382,9 @@ MonoBehaviour:
           x: 414
           y: 15585
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Can't miss a chance to get them half off though!
         TextDelay: 2
         Tendency: 0
@@ -1301,7 +1392,7 @@ MonoBehaviour:
           x: 743
           y: 15586
           Width: 453
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1322,7 +1413,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Yeah
         TextDelay: 2
         Tendency: 0
@@ -1330,8 +1422,9 @@ MonoBehaviour:
           x: 91
           y: 16233
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: That's what we're doing right now
         TextDelay: 2
         Tendency: 0
@@ -1339,7 +1432,7 @@ MonoBehaviour:
           x: 420
           y: 16232
           Width: 379
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: Althea
       UnlockPosts: 0c000000
       Responses:
@@ -1368,7 +1461,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: I love you too
         TextDelay: 2
         Tendency: 0
@@ -1376,8 +1470,9 @@ MonoBehaviour:
           x: 273
           y: 16880
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-heart
         TextDelay: 1.1
         Tendency: 0
@@ -1385,7 +1480,7 @@ MonoBehaviour:
           x: 617
           y: 16882
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1405,7 +1500,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 8
+      - AltContact: 
+        Type: 8
         TextContent: 20 Minutes later
         TextDelay: 2.5
         Tendency: 0
@@ -1413,8 +1509,9 @@ MonoBehaviour:
           x: 268
           y: 17511
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Guess who JUST showed up
         TextDelay: 2
         Tendency: 0
@@ -1422,8 +1519,9 @@ MonoBehaviour:
           x: 603
           y: 17512
           Width: 352
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 2
         Tendency: 0
@@ -1431,8 +1529,9 @@ MonoBehaviour:
           x: 964
           y: 17513
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Her name starts with A and ends with A
         TextDelay: 2
         Tendency: 0
@@ -1440,7 +1539,7 @@ MonoBehaviour:
           x: 1298
           y: 17514
           Width: 408
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1469,7 +1568,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Huh??
         TextDelay: 2
         Tendency: 0
@@ -1477,8 +1577,9 @@ MonoBehaviour:
           x: 559
           y: 18167
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: OHHH
         TextDelay: 2
         Tendency: 0
@@ -1486,8 +1587,9 @@ MonoBehaviour:
           x: 902
           y: 18166
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: HA HA VERY FUNNY!
         TextDelay: 2
         Tendency: 0
@@ -1495,8 +1597,9 @@ MonoBehaviour:
           x: 1239
           y: 18166
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Dork!
         TextDelay: 2
         Tendency: 0
@@ -1504,7 +1607,7 @@ MonoBehaviour:
           x: 1576
           y: 18167
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1524,7 +1627,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: We're gonna hurry to the shops now
         TextDelay: 2
         Tendency: 0
@@ -1532,8 +1636,9 @@ MonoBehaviour:
           x: 558
           y: 18813
           Width: 391
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Then Alejandra is taking us to a little bar she knows
         TextDelay: 2
         Tendency: 0
@@ -1541,8 +1646,9 @@ MonoBehaviour:
           x: 953
           y: 18814
           Width: 470
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: BRB!
         TextDelay: 2
         Tendency: 0
@@ -1550,7 +1656,7 @@ MonoBehaviour:
           x: 1432
           y: 18813
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1570,25 +1676,37 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 8
+        TextContent: 30 Minutes Later
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 568
+          y: 19442
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Soooo
         TextDelay: 2
         Tendency: 0
         location:
-          x: 561
-          y: 19440
+          x: 897
+          y: 19443
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I remember promising a certain someone a surprise tonight didn't
           I?
         TextDelay: 2
         Tendency: 0
         location:
-          x: 883
-          y: 19443
+          x: 1226
+          y: 19446
           Width: 553
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1617,7 +1735,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: I'm choosing between two sets
         TextDelay: 2
         Tendency: 0
@@ -1625,8 +1744,9 @@ MonoBehaviour:
           x: 557
           y: 20064
           Width: 364
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Alejandra helped me pick them out
         TextDelay: 2
         Tendency: 0
@@ -1634,8 +1754,9 @@ MonoBehaviour:
           x: 925
           y: 20064
           Width: 383
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: But I can't decide between the two
         TextDelay: 2
         Tendency: 0
@@ -1643,8 +1764,9 @@ MonoBehaviour:
           x: 1313
           y: 20063
           Width: 384
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: They're both really cute
         TextDelay: 2
         Tendency: 0
@@ -1652,8 +1774,9 @@ MonoBehaviour:
           x: 1701
           y: 20065
           Width: 326
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Wanna help me choose??
         TextDelay: 2
         Tendency: 0
@@ -1661,7 +1784,7 @@ MonoBehaviour:
           x: 2030
           y: 20066
           Width: 335
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1690,7 +1813,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Oh?
         TextDelay: 1.1
         Tendency: 0
@@ -1698,8 +1822,9 @@ MonoBehaviour:
           x: 1025
           y: 20695
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-tear
         TextDelay: 1.1
         Tendency: 0
@@ -1707,8 +1832,9 @@ MonoBehaviour:
           x: 1358
           y: 20698
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Are you sure about that?
         TextDelay: 2
         Tendency: 0
@@ -1716,7 +1842,7 @@ MonoBehaviour:
           x: 1685
           y: 20700
           Width: 331
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1745,7 +1871,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Asshole
         TextDelay: 2
         Tendency: 0
@@ -1753,8 +1880,9 @@ MonoBehaviour:
           x: 1018
           y: 21325
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -1762,7 +1890,7 @@ MonoBehaviour:
           x: 1346
           y: 21324
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1782,7 +1910,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 5
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -1790,8 +1919,9 @@ MonoBehaviour:
           x: 733
           y: 21975
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Alright here are the choices
         TextDelay: 2
         Tendency: 0
@@ -1799,8 +1929,9 @@ MonoBehaviour:
           x: 1064
           y: 21975
           Width: 346
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: This is the first one
         TextDelay: 2
         Tendency: 0
@@ -1808,8 +1939,9 @@ MonoBehaviour:
           x: 1418
           y: 21974
           Width: 323
-          Height: 234
-      - Type: 3
+          Height: 271
+      - AltContact: 
+        Type: 3
         TextContent: Althea-whiteLingerie1
         TextDelay: 3
         Tendency: 0
@@ -1817,8 +1949,9 @@ MonoBehaviour:
           x: 1744
           y: 21976
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: White is usually not my favourite
         TextDelay: 2
         Tendency: 0
@@ -1826,8 +1959,9 @@ MonoBehaviour:
           x: 2068
           y: 21977
           Width: 371
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: But I look kinda innocent in this pair which I like
         TextDelay: 2
         Tendency: 0
@@ -1835,7 +1969,7 @@ MonoBehaviour:
           x: 2445
           y: 21977
           Width: 447
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1864,7 +1998,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Hold on don't make up your mind yet!
         TextDelay: 2
         Tendency: 0
@@ -1872,8 +2007,9 @@ MonoBehaviour:
           x: 728
           y: 22616
           Width: 397
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I have one more
         TextDelay: 2
         Tendency: 0
@@ -1881,8 +2017,9 @@ MonoBehaviour:
           x: 1129
           y: 22618
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Give me a minute I need to change
         TextDelay: 2
         Tendency: 0
@@ -1890,8 +2027,9 @@ MonoBehaviour:
           x: 1456
           y: 22615
           Width: 383
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -1899,7 +2037,7 @@ MonoBehaviour:
           x: 1846
           y: 22616
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1928,7 +2066,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Say
         TextDelay: 2
         Tendency: 0
@@ -1936,8 +2075,9 @@ MonoBehaviour:
           x: 726
           y: 23265
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Your gf's been in the changing room for a while
         TextDelay: 2
         Tendency: 0
@@ -1945,8 +2085,9 @@ MonoBehaviour:
           x: 1058
           y: 23264
           Width: 448
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: What are you two doing in there huh?
         TextDelay: 2
         Tendency: 0
@@ -1954,8 +2095,9 @@ MonoBehaviour:
           x: 1510
           y: 23264
           Width: 397
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: unamused
         TextDelay: 1.1
         Tendency: 0
@@ -1963,14 +2105,14 @@ MonoBehaviour:
           x: 1916
           y: 23263
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 44
-        Type: 0
+        Type: 4
         location:
           x: -403
           y: 23597
@@ -1992,7 +2134,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Aweeee did someone miss me?
         TextDelay: 2
         Tendency: 0
@@ -2000,8 +2143,9 @@ MonoBehaviour:
           x: 908
           y: 23896
           Width: 366
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: You know I bought a few pairs myself
         TextDelay: 2
         Tendency: 0
@@ -2009,8 +2153,9 @@ MonoBehaviour:
           x: 1281
           y: 23895
           Width: 398
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I can always show you if you ask me nicely enough
         TextDelay: 2
         Tendency: 0
@@ -2018,8 +2163,9 @@ MonoBehaviour:
           x: 1684
           y: 23895
           Width: 467
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: tongue-out
         TextDelay: 1.1
         Tendency: 0
@@ -2027,7 +2173,7 @@ MonoBehaviour:
           x: 2159
           y: 23896
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2056,7 +2202,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Easy there boy
         TextDelay: 2
         Tendency: 0
@@ -2064,8 +2211,9 @@ MonoBehaviour:
           x: 913
           y: 25190
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: So predictable
         TextDelay: 2
         Tendency: 0
@@ -2073,8 +2221,9 @@ MonoBehaviour:
           x: 1240
           y: 25189
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Maybe another time
         TextDelay: 2
         Tendency: 0
@@ -2082,8 +2231,9 @@ MonoBehaviour:
           x: 1569
           y: 25189
           Width: 323
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: tongue-out
         TextDelay: 1.1
         Tendency: 0
@@ -2091,7 +2241,7 @@ MonoBehaviour:
           x: 1899
           y: 25189
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2149,7 +2299,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Oh don't worry
         TextDelay: 2
         Tendency: 0
@@ -2157,8 +2308,9 @@ MonoBehaviour:
           x: 915
           y: 26445
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: She saw them first
         TextDelay: 2
         Tendency: 0
@@ -2166,8 +2318,9 @@ MonoBehaviour:
           x: 1245
           y: 26444
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Still trying to get Julia on board though
         TextDelay: 2
         Tendency: 0
@@ -2175,7 +2328,7 @@ MonoBehaviour:
           x: 1577
           y: 26444
           Width: 405
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2204,7 +2357,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Only time will tell
         TextDelay: 2
         Tendency: 0
@@ -2212,8 +2366,9 @@ MonoBehaviour:
           x: -39
           y: 27111
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Anyway
         TextDelay: 2
         Tendency: 0
@@ -2221,8 +2376,9 @@ MonoBehaviour:
           x: -372
           y: 27112
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Tell Althea to hurry up or I'm going in there
         TextDelay: 2
         Tendency: 0
@@ -2230,8 +2386,9 @@ MonoBehaviour:
           x: -796
           y: 27114
           Width: 424
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: fake-angry
         TextDelay: 2
         Tendency: 0
@@ -2239,8 +2396,9 @@ MonoBehaviour:
           x: -1124
           y: 27114
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Nvm
         TextDelay: 2
         Tendency: 0
@@ -2248,8 +2406,9 @@ MonoBehaviour:
           x: -1453
           y: 27115
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We're being kicked out
         TextDelay: 2
         Tendency: 0
@@ -2257,8 +2416,9 @@ MonoBehaviour:
           x: -1782
           y: 27113
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: it's past their closing time
         TextDelay: 2
         Tendency: 0
@@ -2266,8 +2426,9 @@ MonoBehaviour:
           x: -2122
           y: 27116
           Width: 335
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Tell her we'll be right outside
         TextDelay: 2
         Tendency: 0
@@ -2275,7 +2436,7 @@ MonoBehaviour:
           x: -2481
           y: 27112
           Width: 352
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2304,7 +2465,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Pffffft
         TextDelay: 2
         Tendency: 0
@@ -2312,8 +2474,9 @@ MonoBehaviour:
           x: 1288
           y: 27109
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: You're just jealous
         TextDelay: 2
         Tendency: 0
@@ -2321,8 +2484,9 @@ MonoBehaviour:
           x: 1614
           y: 27109
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Anyway
         TextDelay: 2
         Tendency: 0
@@ -2330,8 +2494,9 @@ MonoBehaviour:
           x: 1941
           y: 27109
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Tell her we'll be right outside when she's done
         TextDelay: 2
         Tendency: 0
@@ -2339,7 +2504,7 @@ MonoBehaviour:
           x: 2270
           y: 27109
           Width: 443
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2387,7 +2552,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Pshhhh
         TextDelay: 2
         Tendency: 0
@@ -2395,8 +2561,9 @@ MonoBehaviour:
           x: -728
           y: 24570
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: That's all???
         TextDelay: 2
         Tendency: 0
@@ -2404,8 +2571,9 @@ MonoBehaviour:
           x: -1057
           y: 24570
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Maybe I should go in there and help her out
         TextDelay: 2
         Tendency: 0
@@ -2413,7 +2581,7 @@ MonoBehaviour:
           x: -1493
           y: 24570
           Width: 429
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2442,7 +2610,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Alejandra
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Easy there boy
         TextDelay: 2
         Tendency: 0
@@ -2450,8 +2619,9 @@ MonoBehaviour:
           x: -735
           y: 25205
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Anyway, tell her we're being force to leave the store
         TextDelay: 2
         Tendency: 0
@@ -2459,8 +2629,9 @@ MonoBehaviour:
           x: -1209
           y: 25204
           Width: 474
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: It's already past their closing time
         TextDelay: 2
         Tendency: 0
@@ -2468,8 +2639,9 @@ MonoBehaviour:
           x: -1593
           y: 25204
           Width: 377
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We'll be right outside when she'd done
         TextDelay: 2
         Tendency: 0
@@ -2477,7 +2649,7 @@ MonoBehaviour:
           x: -2005
           y: 25206
           Width: 404
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2544,7 +2716,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: OMG
         TextDelay: 2
         Tendency: 0
@@ -2552,8 +2725,9 @@ MonoBehaviour:
           x: 590
           y: 29069
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Alright I'll hurry up
         TextDelay: 2
         Tendency: 0
@@ -2561,8 +2735,9 @@ MonoBehaviour:
           x: 924
           y: 29070
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Here's the second set!
         TextDelay: 2
         Tendency: 0
@@ -2570,8 +2745,9 @@ MonoBehaviour:
           x: 1254
           y: 29070
           Width: 323
-          Height: 234
-      - Type: 3
+          Height: 271
+      - AltContact: 
+        Type: 3
         TextContent: Althea-blackLingerie1
         TextDelay: 3.5
         Tendency: 0
@@ -2579,8 +2755,9 @@ MonoBehaviour:
           x: 1584
           y: 29071
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I feel way more confident in this colour
         TextDelay: 2
         Tendency: 0
@@ -2588,8 +2765,9 @@ MonoBehaviour:
           x: 1920
           y: 29073
           Width: 404
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: But idk
         TextDelay: 2
         Tendency: 0
@@ -2597,17 +2775,19 @@ MonoBehaviour:
           x: 2328
           y: 29071
           Width: 323
-          Height: 234
-      - Type: 1
-        TextContent: It feels a little slutty too
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: It feels a little slutty
         TextDelay: 2
         Tendency: 0
         location:
           x: 2660
           y: 29072
-          Width: 324
-          Height: 234
-      - Type: 5
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: shy
         TextDelay: 1
         Tendency: 0
@@ -2615,8 +2795,9 @@ MonoBehaviour:
           x: 2994
           y: 29074
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Which one do you think I should go with?
         TextDelay: 2
         Tendency: 0
@@ -2624,7 +2805,7 @@ MonoBehaviour:
           x: 3326
           y: 29077
           Width: 415
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2653,7 +2834,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Oh really?
         TextDelay: 2.1
         Tendency: 0
@@ -2661,8 +2843,9 @@ MonoBehaviour:
           x: 4587
           y: 29716
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: You want me to look all innocent and cute?
         TextDelay: 2.1
         Tendency: 0
@@ -2670,8 +2853,9 @@ MonoBehaviour:
           x: 4921
           y: 29716
           Width: 426
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: When you fantasise about me doing bad things with other people?
         TextDelay: 2.1
         Tendency: 0
@@ -2679,16 +2863,17 @@ MonoBehaviour:
           x: 5352
           y: 29716
           Width: 547
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: smirking
-        TextDelay: 0.57
+        TextDelay: 1.1
         Tendency: 0
         location:
           x: 5904
           y: 29715
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2717,7 +2902,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Oh really?
         TextDelay: 2.1
         Tendency: 0
@@ -2725,8 +2911,9 @@ MonoBehaviour:
           x: -2885
           y: 29751
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I mean it makes sense
         TextDelay: 2.1
         Tendency: 0
@@ -2734,8 +2921,9 @@ MonoBehaviour:
           x: -2554
           y: 29752
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I saw how slutty those girls were in the videos you have
         TextDelay: 2.1
         Tendency: 0
@@ -2743,8 +2931,9 @@ MonoBehaviour:
           x: -2222
           y: 29755
           Width: 493
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: tongue-out
         TextDelay: 1.1
         Tendency: 0
@@ -2752,8 +2941,9 @@ MonoBehaviour:
           x: -1719
           y: 29755
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: And I definitely feel slutty in this set
         TextDelay: 2.1
         Tendency: 0
@@ -2761,7 +2951,7 @@ MonoBehaviour:
           x: -1394
           y: 29754
           Width: 388
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2790,7 +2980,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Well
         TextDelay: 2.1
         Tendency: 0
@@ -2798,8 +2989,9 @@ MonoBehaviour:
           x: -2885
           y: 30386
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I better get back to the girls before they start wondering what's
           taking so long
         TextDelay: 2.1
@@ -2808,8 +3000,9 @@ MonoBehaviour:
           x: -2557
           y: 30386
           Width: 609
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We're going to head to the bars right after this so I'll text
           you when we get there
         TextDelay: 2.1
@@ -2818,8 +3011,9 @@ MonoBehaviour:
           x: -1932
           y: 30385
           Width: 619
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-heart
         TextDelay: 1.1
         Tendency: 0
@@ -2827,7 +3021,7 @@ MonoBehaviour:
           x: -1304
           y: 30386
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2856,7 +3050,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Well
         TextDelay: 2.1
         Tendency: 0
@@ -2864,8 +3059,9 @@ MonoBehaviour:
           x: 4589
           y: 30351
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I better get back to the girls before they start wondering what's
           taking so long
         TextDelay: 2.5
@@ -2874,8 +3070,9 @@ MonoBehaviour:
           x: 4916
           y: 30353
           Width: 609
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We're going to head to the bars right after this so I'll text
           you when we get there
         TextDelay: 2.5
@@ -2884,8 +3081,9 @@ MonoBehaviour:
           x: 5530
           y: 30354
           Width: 619
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-heart
         TextDelay: 1.1
         Tendency: 0
@@ -2893,7 +3091,7 @@ MonoBehaviour:
           x: 6152
           y: 30353
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2922,7 +3120,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 8
+      - AltContact: 
+        Type: 8
         TextContent: 1 Hour Later
         TextDelay: 2.5
         Tendency: 0
@@ -2930,8 +3129,9 @@ MonoBehaviour:
           x: 4598
           y: 30975
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We just got here
         TextDelay: 2.1
         Tendency: 0
@@ -2939,8 +3139,9 @@ MonoBehaviour:
           x: 4923
           y: 30977
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: JJ drives like a grandma
         TextDelay: 2.1
         Tendency: 0
@@ -2948,8 +3149,9 @@ MonoBehaviour:
           x: 5248
           y: 30975
           Width: 328
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
@@ -2957,8 +3159,9 @@ MonoBehaviour:
           x: 5591
           y: 30975
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I just want to double check with you again
         TextDelay: 2.1
         Tendency: 0
@@ -2966,8 +3169,9 @@ MonoBehaviour:
           x: 5918
           y: 30975
           Width: 421
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Is it still okay with you if I talk to the girls about what
           we talked about?
         TextDelay: 2.5
@@ -2976,8 +3180,9 @@ MonoBehaviour:
           x: 6341
           y: 30976
           Width: 567
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I promise they'll be nice
         TextDelay: 2.1
         Tendency: 0
@@ -2985,8 +3190,9 @@ MonoBehaviour:
           x: 6913
           y: 30976
           Width: 325
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: And I KNOW Alejandra HAS to know more about this
         TextDelay: 2.5
         Tendency: 0
@@ -2994,8 +3200,9 @@ MonoBehaviour:
           x: 7246
           y: 30975
           Width: 474
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: She can probably teach me a thing or two
         TextDelay: 2.1
         Tendency: 0
@@ -3003,8 +3210,9 @@ MonoBehaviour:
           x: 7726
           y: 30975
           Width: 420
-          Height: 234
-      - Type: 5
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: evil
         TextDelay: 1.1
         Tendency: 0
@@ -3012,7 +3220,7 @@ MonoBehaviour:
           x: 8149
           y: 30975
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3041,7 +3249,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Of course!
         TextDelay: 2.1
         Tendency: 0
@@ -3049,8 +3258,9 @@ MonoBehaviour:
           x: 4924
           y: 31612
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: I don't think you're going to want to miss out on it anyway
         TextDelay: 2.1
         Tendency: 0
@@ -3058,8 +3268,9 @@ MonoBehaviour:
           x: 5253
           y: 31612
           Width: 502
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 5
         TextContent: smirking
         TextDelay: 2.1
         Tendency: 0
@@ -3067,7 +3278,7 @@ MonoBehaviour:
           x: 5758
           y: 31610
           Width: 323
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3096,7 +3307,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 1
+      - AltContact: 
+        Type: 1
         TextContent: Yay
         TextDelay: 2.1
         Tendency: 0
@@ -3104,8 +3316,9 @@ MonoBehaviour:
           x: 4925
           y: 32241
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: Okay
         TextDelay: 1.1
         Tendency: 0
@@ -3113,8 +3326,9 @@ MonoBehaviour:
           x: 5259
           y: 32241
           Width: 323
-          Height: 234
-      - Type: 1
+          Height: 271
+      - AltContact: 
+        Type: 1
         TextContent: We're about to sit down so I'll talk to you a little later!
         TextDelay: 2.1
         Tendency: 0
@@ -3122,7 +3336,7 @@ MonoBehaviour:
           x: 5588
           y: 32242
           Width: 477
-          Height: 234
+          Height: 271
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3151,7 +3365,8 @@ MonoBehaviour:
         Height: 292
     - Contact: Althea
       TextList:
-      - Type: 5
+      - AltContact: 
+        Type: 5
         TextContent: gf-heart
         TextDelay: 1.1
         Tendency: 0
@@ -3159,8 +3374,9 @@ MonoBehaviour:
           x: 4930
           y: 32862
           Width: 323
-          Height: 234
-      - Type: 8
+          Height: 271
+      - AltContact: 
+        Type: 8
         TextContent: 1 Hour Later
         TextDelay: 2.5
         Tendency: 0
@@ -3168,12 +3384,3705 @@ MonoBehaviour:
           x: 5260
           y: 32862
           Width: 323
-          Height: 234
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I don't think I've ever seen Alejandra this excited
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5588
+          y: 32860
+          Width: 454
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6047
+          y: 32861
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: JJ's just being a mom though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6374
+          y: 32863
+          Width: 354
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: 'Oh god, Alejandra''s gonna have a lot to say '
+        SubChapNum: 58
+        Type: 0
+        location:
+          x: 4558
+          y: 33145
+          Width: 431
+          Height: 278
+      location:
+        x: 4604
+        y: 32822
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: She did
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4933
+          y: 33467
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But she's not judging
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5260
+          y: 33467
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Apparently she's been in a few "open" relationships as she called
+          them
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5588
+          y: 33466
+          Width: 570
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She taught me a lot
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6170
+          y: 33467
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She actually gave me a bunch of ideas for questions to ask you
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6499
+          y: 33465
+          Width: 531
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Said that setting boundries was very important
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7034
+          y: 33465
+          Width: 446
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hand-on-face
+        SubChapNum: 59
+        Type: 4
+        location:
+          x: 4443
+          y: 33755
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: That's surprising!
+        SubChapNum: 59
+        Type: 0
+        location:
+          x: 4795
+          y: 33758
+          Width: 323
+          Height: 278
+      location:
+        x: 4603
+        y: 33427
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Right?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4930
+          y: 34083
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I always got the impression that she was fast and loose with
+          this sort of thing
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5257
+          y: 34081
+          Width: 604
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But she was actually really helpful
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5865
+          y: 34083
+          Width: 379
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: JJ just sat there blushing the whole time though
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6248
+          y: 34084
+          Width: 452
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6703
+          y: 34084
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: What's the plan for now?
+        SubChapNum: 60
+        Type: 0
+        location:
+          x: 4425
+          y: 34365
+          Width: 331
+          Height: 278
+      - RespTree: 0
+        TextContent: What are some of the questions you have?
+        SubChapNum: 60
+        Type: 0
+        location:
+          x: 4784
+          y: 34368
+          Width: 424
+          Height: 278
+      location:
+        x: 4603
+        y: 34044
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Well for now
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4927
+          y: 34699
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Alejandra's been hyping me up to get us free drinks from the
+          bar
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5256
+          y: 34701
+          Width: 537
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She's usually the one responsible for getting us free things
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5796
+          y: 34701
+          Width: 508
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But she says if you're okay with it I should "strike while the
+          iron is hot"
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6309
+          y: 34701
+          Width: 565
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm a little tipsy so honestly what the hell
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6877
+          y: 34701
+          Width: 413
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Do it!
+        SubChapNum: 61
+        Type: 0
+        location:
+          x: 4439
+          y: 34980
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 61
+        Type: 4
+        location:
+          x: 4796
+          y: 34979
+          Width: 323
+          Height: 278
+      location:
+        x: 4599
+        y: 34660
+        Width: 323
+        Height: 292
+    - Contact: Alejandra
+      TextList:
+      - AltContact: Althea
+        Type: 1
+        TextContent: Alright then!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4924
+          y: 35306
+          Width: 323
+          Height: 271
+      - AltContact: Althea
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5259
+          y: 35304
+          Width: 323
+          Height: 271
+      - AltContact: Althea
+        Type: 1
+        TextContent: That didn't take much convincing
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5587
+          y: 35305
+          Width: 375
+          Height: 271
+      - AltContact: Althea
+        Type: 1
+        TextContent: I'll talk to you in a bit!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5968
+          y: 35306
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 8
+        TextContent: 15 Minutes Later
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6299
+          y: 35303
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: How are you feeling over there?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6626
+          y: 35304
+          Width: 369
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Dying with curiosity to find out what your gf is doing to get
+          us those free drinks?
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 7000
+          y: 35305
+          Width: 620
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7623
+          y: 35304
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I'm honestly not sure which one of us is enjoying themselves
+          more here
+        SubChapNum: 62
+        Type: 0
+        location:
+          x: 4220
+          y: 35611
+          Width: 573
+          Height: 278
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 62
+        Type: 4
+        location:
+          x: 4828
+          y: 35610
+          Width: 323
+          Height: 278
+      location:
+        x: 4598
+        y: 35265
+        Width: 323
+        Height: 292
+    - Contact: Alejandra
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Oh you're defintiely having fun right now
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4925
+          y: 35957
+          Width: 413
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I never expected you to be the one corrupting her
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5345
+          y: 35959
+          Width: 461
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm almost jealous
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5810
+          y: 35961
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Not as jealous as you're about to be though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6140
+          y: 35962
+          Width: 429
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Wanna like to see what your gf's been up to?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6574
+          y: 35960
+          Width: 436
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: tongue-out
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7014
+          y: 35959
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Ohhh yes!
+        SubChapNum: 63
+        Type: 0
+        location:
+          x: 4412
+          y: 36245
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: shy
+        SubChapNum: 63
+        Type: 4
+        location:
+          x: 4833
+          y: 36243
+          Width: 323
+          Height: 278
+      location:
+        x: 4598
+        y: 35916
+        Width: 323
+        Height: 292
+    - Contact: Alejandra
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Alright
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4929
+          y: 36574
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: One second
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5258
+          y: 36575
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-bar1
+        TextDelay: 3.5
+        Tendency: 0
+        location:
+          x: 5591
+          y: 36577
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She's been like that for a while
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5919
+          y: 36577
+          Width: 361
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: The bartenders dropped everything just to talk to her
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6288
+          y: 36578
+          Width: 479
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She seems busy
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6776
+          y: 36579
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7106
+          y: 36577
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She keeps giggling with the cute bartender on the right
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7438
+          y: 36579
+          Width: 490
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Are you getting excited?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7932
+          y: 36578
+          Width: 330
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Yes, very much!
+        SubChapNum: 64
+        Type: 0
+        location:
+          x: 4414
+          y: 36854
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: drool
+        SubChapNum: 64
+        Type: 4
+        location:
+          x: 4834
+          y: 36854
+          Width: 323
+          Height: 278
+      location:
+        x: 4593
+        y: 36533
+        Width: 323
+        Height: 292
+    - Contact: Alejandra
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Good
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4918
+          y: 37192
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Because I don't think this will be the end of it
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5241
+          y: 37192
+          Width: 435
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: On the not so bright side
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5685
+          y: 37192
+          Width: 331
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I don't think we'll be getting our drinks any time soon
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6019
+          y: 37191
+          Width: 477
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She just sat down at the bar
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6498
+          y: 37191
+          Width: 349
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: fake-angry
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6852
+          y: 37190
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Looks like she's enjoying herself too much to come back
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7185
+          y: 37194
+          Width: 496
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-bar2
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 7695
+          y: 37197
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 65
+        Type: 0
+        location:
+          x: 4428
+          y: 37473
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: What's she doing?
+        SubChapNum: 65
+        Type: 0
+        location:
+          x: 4797
+          y: 37472
+          Width: 323
+          Height: 278
+      location:
+        x: 4594
+        y: 37150
+        Width: 323
+        Height: 292
+    - Contact: Alejandra
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Whatever she's doing
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4919
+          y: 37808
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She has a choke hold on those two
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5248
+          y: 37810
+          Width: 385
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm not letting her have fun all alone though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5636
+          y: 37810
+          Width: 427
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm sure she wouldn't mind if I joined her
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6068
+          y: 37811
+          Width: 411
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'll let you stew in your jealousy a little bit longer
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6485
+          y: 37813
+          Width: 451
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Later!
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6943
+          y: 37815
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: tongue-out
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7274
+          y: 37815
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 8
+        TextContent: 30 Minutes Later
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 7610
+          y: 37816
+          Width: 323
+          Height: 271
+      - AltContact: Althea
+        Type: 1
+        TextContent: I might be a little drunk now
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7939
+          y: 37817
+          Width: 347
+          Height: 271
+      - AltContact: Althea
+        Type: 1
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 8288
+          y: 37817
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: What happened??
+        SubChapNum: 66
+        Type: 0
+        location:
+          x: 4433
+          y: 38084
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Tell me everything!
+        SubChapNum: 66
+        Type: 0
+        location:
+          x: 4775
+          y: 38084
+          Width: 323
+          Height: 278
+      location:
+        x: 4593
+        y: 37767
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Aweeee
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4919
+          y: 38425
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Someone's a little impatient
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5250
+          y: 38424
+          Width: 346
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: smirking
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5599
+          y: 38425
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I went up to the bar after you told me to do so
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5925
+          y: 38426
+          Width: 442
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I was going to grab myself and the girls a few drinks
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6371
+          y: 38426
+          Width: 474
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: It was taking them a little whole to get all the drinks
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6850
+          y: 38425
+          Width: 470
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Alejandra's orders are always really complicated
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7329
+          y: 38425
+          Width: 453
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7790
+          y: 38426
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: So I sat down at the bar while I waited
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8118
+          y: 38426
+          Width: 401
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But then this other really cute bartender came by and started
+          chatting with me
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8522
+          y: 38427
+          Width: 611
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Asked if I had ever tried a blowjob shot
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 9137
+          y: 38429
+          Width: 406
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: eyeroll
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 9548
+          y: 38430
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I said that I'd never tried one
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 9878
+          y: 38433
+          Width: 351
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: So he made me one and said that it was on the house
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 10235
+          y: 38433
+          Width: 481
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: And if I didn't drink it, it would be wasteful right?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 10721
+          y: 38434
+          Width: 453
+          Height: 271
+      UnlockInstaPostsAccount: Althea
+      UnlockPosts: 0d000000
+      Responses:
+      - RespTree: 0
+        TextContent: Right obviously!
+        SubChapNum: 67
+        Type: 0
+        location:
+          x: 4408
+          y: 38726
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: bf-laugh
+        SubChapNum: 67
+        Type: 4
+        location:
+          x: 4786
+          y: 38727
+          Width: 323
+          Height: 278
+      location:
+        x: 4575
+        y: 38383
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 4900
+          y: 39067
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I told him it was "really smooth going down my throat"
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5229
+          y: 39066
+          Width: 483
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I saw his "reaction" to that statement
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5715
+          y: 39067
+          Width: 395
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6113
+          y: 39068
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: By then Alejandra had come to the counter and started chatting
+          up the guy making our drinks
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6440
+          y: 39069
+          Width: 688
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: We all chatted a little bit more
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7132
+          y: 39071
+          Width: 358
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But I was trying to not do something that would upset you
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7496
+          y: 39073
+          Width: 504
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: So after a while I asked him how much the tab was so I could
+          pay
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8005
+          y: 39074
+          Width: 541
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: He said that it was on the house
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8548
+          y: 39075
+          Width: 370
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: So Alejandra asked if there was anyway we could pay them back
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8924
+          y: 39075
+          Width: 540
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I swear that girl
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 9469
+          y: 39077
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She thinks we're in one of your videos
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 9797
+          y: 39079
+          Width: 400
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 10202
+          y: 39078
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: shy
+        SubChapNum: 69
+        Type: 4
+        location:
+          x: 4331
+          y: 40010
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: What did they say??
+        SubChapNum: 68
+        Type: 0
+        location:
+          x: 4806
+          y: 39373
+          Width: 323
+          Height: 278
+      location:
+        x: 4574
+        y: 39024
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: So eager!!!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5141
+          y: 39720
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: What do you think they said?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5473
+          y: 39720
+          Width: 353
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5834
+          y: 39720
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I don't know!!
+        SubChapNum: 69
+        Type: 0
+        location:
+          x: 5003
+          y: 40010
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Tell me!!!
+        SubChapNum: 69
+        Type: 4
+        location:
+          x: 4669
+          y: 40009
+          Width: 323
+          Height: 278
+      location:
+        x: 4807
+        y: 39679
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Someone's really impatient tonight!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5138
+          y: 40357
+          Width: 385
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I wonder why
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5527
+          y: 40357
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5857
+          y: 40361
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: They asked for our numbers
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6189
+          y: 40358
+          Width: 349
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Alejandra was all too happy to give out hers
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6541
+          y: 40357
+          Width: 430
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But since we haven't talked about boundries yet I didn't want
+          to step over the line
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6974
+          y: 40358
+          Width: 627
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: So I told him maybe next time
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7607
+          y: 40357
+          Width: 357
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Don't worry though Alejandra made him feel better with a kiss
+          on the cheek
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7975
+          y: 40362
+          Width: 594
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: bf-laugh
+        SubChapNum: 71
+        Type: 4
+        location:
+          x: 4706
+          y: 41255
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Are you sure a kiss was enough?
+        SubChapNum: 70
+        Type: 0
+        location:
+          x: 5038
+          y: 40645
+          Width: 372
+          Height: 278
+      location:
+        x: 4808
+        y: 40318
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Babe!!!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5394
+          y: 40977
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: You're irredeemable
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5729
+          y: 40979
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: It'll have to be for now
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6066
+          y: 40980
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Poor guy
+        SubChapNum: 71
+        Type: 0
+        location:
+          x: 5064
+          y: 41254
+          Width: 323
+          Height: 278
+      location:
+        x: 5063
+        y: 40939
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5213
+          y: 41603
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: We can always come back here later to fulfil my promise to him
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5541
+          y: 41605
+          Width: 531
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: evil
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6074
+          y: 41607
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: More importantly
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6401
+          y: 41608
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Thinking of your reaction the whole time got me really horny
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6730
+          y: 41610
+          Width: 515
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Sooooo you might want to stay up late for your reward tonight
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7252
+          y: 41611
+          Width: 527
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Yes ma'am!
+        SubChapNum: 72
+        Type: 0
+        location:
+          x: 4711
+          y: 41894
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: salute
+        SubChapNum: 72
+        Type: 4
+        location:
+          x: 5085
+          y: 41894
+          Width: 323
+          Height: 278
+      location:
+        x: 4878
+        y: 41564
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: What's next?
+        SubChapNum: 73
+        Type: 0
+        location:
+          x: 4723
+          y: 42503
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Are you guys still at the bar?
+        SubChapNum: 73
+        Type: 0
+        location:
+          x: 5073
+          y: 42503
+          Width: 350
+          Height: 278
+      location:
+        x: 4882
+        y: 42200
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: We just left
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5212
+          y: 42832
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: JJ Barely had anything to drink
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5540
+          y: 42832
+          Width: 364
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: She says it ruins her gym progress
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5911
+          y: 42834
+          Width: 382
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: So she's driving all of us
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6297
+          y: 42837
+          Width: 328
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: And we're all going to crash over at Alejandra's
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6631
+          y: 42839
+          Width: 446
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: bf-heart
+        SubChapNum: 74
+        Type: 4
+        location:
+          x: 4721
+          y: 43116
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I love you!
+        SubChapNum: 74
+        Type: 0
+        location:
+          x: 5081
+          y: 43118
+          Width: 323
+          Height: 278
+      location:
+        x: 4879
+        y: 42791
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 5
+        TextContent: gf-heart
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5257
+          y: 43459
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 8
+        TextContent: 50 Minutes Later
+        TextDelay: 3.5
+        Tendency: 0
+        location:
+          x: 5585
+          y: 43460
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Guess who's finally all alone
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5910
+          y: 43460
+          Width: 348
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie2
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6265
+          y: 43462
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: drool
+        SubChapNum: 75
+        Type: 4
+        location:
+          x: 4764
+          y: 43743
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: heart-eyes
+        SubChapNum: 75
+        Type: 4
+        location:
+          x: 5134
+          y: 43745
+          Width: 323
+          Height: 278
+      location:
+        x: 4933
+        y: 43416
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: That's about the reaction I expected
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5254
+          y: 44079
+          Width: 391
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5647
+          y: 44080
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I honestly didn't expect to enjoy what I did tonight as much
+          as I did
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5974
+          y: 44081
+          Width: 550
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: 'But thinking of what was probably going on through your head
+          honestly had me really excited the whole time '
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6526
+          y: 44083
+          Width: 763
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I never asked how you're feeling after all of that though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7293
+          y: 44084
+          Width: 490
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Did you enjoy the show?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7789
+          y: 44084
+          Width: 330
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Alejandra said she'd sent you a few pictures while I was at
+          the bar
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8125
+          y: 44086
+          Width: 545
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: YES!
+        SubChapNum: 78
+        Type: 0
+        location:
+          x: 4596
+          y: 45590
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I wish you'd done more
+        SubChapNum: 76
+        Type: 0
+        location:
+          x: 5130
+          y: 44370
+          Width: 323
+          Height: 278
+      location:
+        x: 4933
+        y: 44040
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Easy now
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5455
+          y: 44695
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: One step at a time
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5783
+          y: 44694
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Who knows what will happen next time
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6109
+          y: 44692
+          Width: 405
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: smirking
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6520
+          y: 44693
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hand-on-face
+        SubChapNum: 0
+        Type: 4
+        location:
+          x: 4964
+          y: 44972
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Next time??
+        SubChapNum: 0
+        Type: 0
+        location:
+          x: 5321
+          y: 44972
+          Width: 323
+          Height: 278
+      location:
+        x: 5131
+        y: 44655
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Of course
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5456
+          y: 45302
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I did make a promise to give him my number later afterall
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5785
+          y: 45302
+          Width: 498
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6286
+          y: 45302
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: shy
+        SubChapNum: 78
+        Type: 4
+        location:
+          x: 4972
+          y: 45589
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: heart-eyes
+        SubChapNum: 78
+        Type: 4
+        location:
+          x: 5334
+          y: 45591
+          Width: 323
+          Height: 278
+      location:
+        x: 5129
+        y: 45262
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 0
+        TextContent: If I'd known you'd be this excited to see me flirt with a bartender
+        TextDelay: 0
+        Tendency: 0
+        location:
+          x: 5449
+          y: 45924
+          Width: 537
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I woud've gotten so many free drinks for us
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5989
+          y: 45923
+          Width: 428
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6420
+          y: 45924
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: By the way
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6750
+          y: 45929
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Can you send me the pictures Alejandra sent you?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7082
+          y: 45926
+          Width: 463
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Oh yes one second!
+        SubChapNum: 79
+        Type: 0
+        location:
+          x: 5126
+          y: 46207
+          Width: 323
+          Height: 278
+      location:
+        x: 5128
+        y: 45884
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList: []
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Althea-bar1
+        SubChapNum: 80
+        Type: 2
+        location:
+          x: 5128
+          y: 46808
+          Width: 323
+          Height: 278
+      location:
+        x: 5126
+        y: 46499
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Of course she got that angle
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5454
+          y: 47142
+          Width: 351
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: gf-laugh
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5809
+          y: 47142
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I forgot to mention though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6139
+          y: 47143
+          Width: 339
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Before we left Alejandra wanted to get a picture at the bar
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6482
+          y: 47142
+          Width: 506
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Said it was to celebrate new beginnings
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6996
+          y: 47142
+          Width: 410
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I have no idea what that girl is planning
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7411
+          y: 47142
+          Width: 405
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: eyeroll
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7822
+          y: 47143
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I posted it on insta on the way home
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8149
+          y: 47145
+          Width: 391
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: You should check it out
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8547
+          y: 47145
+          Width: 325
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm pretty sure the cute bartender got about the same view you
+          did during that picture
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 8876
+          y: 47145
+          Width: 651
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I already saw it
+        SubChapNum: 81
+        Type: 0
+        location:
+          x: 5315
+          y: 47440
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: Okay one second!
+        SubChapNum: 82
+        Type: 0
+        location:
+          x: 4955
+          y: 47443
+          Width: 323
+          Height: 278
+      location:
+        x: 5128
+        y: 47101
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Aweee you must've been so anxious to find out what I was doing
+          huh?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5644
+          y: 47768
+          Width: 567
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Figured I'd pay him back a little bit for all the free drinks
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6213
+          y: 47767
+          Width: 492
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 6710
+          y: 47769
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: grinning-sweat
+        SubChapNum: 83
+        Type: 4
+        location:
+          x: 5288
+          y: 48073
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I'm sure he enjoyed the view
+        SubChapNum: 83
+        Type: 0
+        location:
+          x: 5623
+          y: 48073
+          Width: 351
+          Height: 278
+      location:
+        x: 5319
+        y: 47729
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: What do you think?
+        TextDelay: 3.5
+        Tendency: 0
+        location:
+          x: 4627
+          y: 47727
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Figured I'd pay him back a little bit for all the free drinks
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4128
+          y: 47728
+          Width: 492
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: evil
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 3797
+          y: 47727
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 83
+        Type: 4
+        location:
+          x: 4948
+          y: 48074
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I'm sure he enjoyed the view
+        SubChapNum: 83
+        Type: 0
+        location:
+          x: 4594
+          y: 48076
+          Width: 351
+          Height: 278
+      location:
+        x: 4954
+        y: 47727
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Is someone a little jealous?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5445
+          y: 48431
+          Width: 342
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: gf-kiss
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5792
+          y: 48430
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Don't worry I saved the best for later
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6118
+          y: 48432
+          Width: 393
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Just for you
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6517
+          y: 48434
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: We got a little derailed off topic
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6850
+          y: 48435
+          Width: 366
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Here's a little reminder of what you're currently missing out
+          on by being so far away
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7228
+          y: 48438
+          Width: 637
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie2
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 7873
+          y: 48438
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Leaving me with a little predicament all on my own
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8204
+          y: 48436
+          Width: 465
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Imagine if I'd brought him with me instead
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8674
+          y: 48436
+          Width: 420
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I probably wouldn't have had all that time to text you
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 9098
+          y: 48438
+          Width: 476
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: He would've been the one to see me in this lingerie
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 9580
+          y: 48439
+          Width: 468
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Well
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 10054
+          y: 48437
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: With most of it on anyway
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 10384
+          y: 48441
+          Width: 338
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I seem to have already lost the bra
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 10726
+          y: 48443
+          Width: 382
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie3
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 11111
+          y: 48444
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: heart-eyes
+        SubChapNum: 84
+        Type: 4
+        location:
+          x: 4958
+          y: 48765
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 84
+        Type: 4
+        location:
+          x: 5307
+          y: 48766
+          Width: 323
+          Height: 278
+      location:
+        x: 5120
+        y: 48390
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: I'd be laying in bed looking up at him
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5446
+          y: 49109
+          Width: 392
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Trying to guess what he's about to do to me
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5845
+          y: 49111
+          Width: 432
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie4
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6281
+          y: 49113
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: What do you think he'd do next?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6605
+          y: 49116
+          Width: 370
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: He would've fucked you
+        SubChapNum: 85
+        Type: 0
+        location:
+          x: 5291
+          y: 49411
+          Width: 327
+          Height: 278
+      - RespTree: 0
+        TextContent: He would've touched you
+        SubChapNum: 86
+        Type: 0
+        location:
+          x: 4929
+          y: 49411
+          Width: 335
+          Height: 278
+      location:
+        x: 5122
+        y: 49066
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Straight to the point huh?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5618
+          y: 49745
+          Width: 335
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Can't say I disagree though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5957
+          y: 49745
+          Width: 345
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Or would protest
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6303
+          y: 49745
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: He'd slide my panties off to the side
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6630
+          y: 49746
+          Width: 390
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: And with how needy I am right now I doubt he'd need any foreplay
+          to guide his cock right inside me
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 7024
+          y: 49747
+          Width: 719
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Take a look for yourself
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7749
+          y: 49746
+          Width: 325
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie5
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 8084
+          y: 49748
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hand-on-face
+        SubChapNum: 87
+        Type: 4
+        location:
+          x: 5265
+          y: 50047
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 87
+        Type: 4
+        location:
+          x: 5597
+          y: 50047
+          Width: 323
+          Height: 278
+      location:
+        x: 5293
+        y: 49706
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Mmmmmm yes
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4612
+          y: 49748
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I would be trying to resist the urge to moan too loud
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4140
+          y: 49747
+          Width: 472
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Woudn't want the girls hearing your gf upstairs and wondering
+          what she'd up to with this random bartender
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3378
+          y: 49749
+          Width: 760
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm so wet I doubt it would take him long to get me cumming
+          all over his fingers
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 2762
+          y: 49749
+          Width: 613
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Kind of like this
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 2433
+          y: 49748
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie5
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 2099
+          y: 49751
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hand-on-face
+        SubChapNum: 87
+        Type: 4
+        location:
+          x: 4926
+          y: 50047
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 87
+        Type: 4
+        location:
+          x: 4588
+          y: 50047
+          Width: 323
+          Height: 278
+      location:
+        x: 4942
+        y: 49707
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: I just had an idea
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5439
+          y: 50386
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Give me a few seconds
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5768
+          y: 50387
+          Width: 324
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Found it!
+        TextDelay: 5.1
+        Tendency: 0
+        location:
+          x: 6101
+          y: 50388
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I had a feeling she'd have one hiding around here
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6428
+          y: 50389
+          Width: 458
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But it's way too big
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6891
+          y: 50390
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie6
+        TextDelay: 3.5
+        Tendency: 0
+        location:
+          x: 7219
+          y: 50392
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: grinning-sweat
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7546
+          y: 50393
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I figured you could use this for a little visual next
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7872
+          y: 50394
+          Width: 454
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: smirking
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 8333
+          y: 50395
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: What do you have planned next??
+        SubChapNum: 89
+        Type: 0
+        location:
+          x: 4805
+          y: 51337
+          Width: 378
+          Height: 278
+      - RespTree: 0
+        TextContent: That thing is huge!!
+        SubChapNum: 88
+        Type: 0
+        location:
+          x: 5334
+          y: 50700
+          Width: 323
+          Height: 278
+      location:
+        x: 5114
+        y: 50346
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: I have no idea how the hell Alejandra uses this thing
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5660
+          y: 51027
+          Width: 472
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But I guess I should get some practice for when you're back
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6138
+          y: 51028
+          Width: 513
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Among other things
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6654
+          y: 51027
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: You're going to use it??
+        SubChapNum: 89
+        Type: 0
+        location:
+          x: 5546
+          y: 51336
+          Width: 324
+          Height: 278
+      - RespTree: 0
+        TextContent: Practice?
+        SubChapNum: 89
+        Type: 0
+        location:
+          x: 5206
+          y: 51334
+          Width: 323
+          Height: 278
+      location:
+        x: 5335
+        y: 50987
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Well a certain someone isn't around right now
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5661
+          y: 51689
+          Width: 440
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: And you know how much I love giving blowjobs
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6107
+          y: 51688
+          Width: 448
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Don't want my skills getting rusty while you're away
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6557
+          y: 51688
+          Width: 471
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Especially if I'll end up needing them soon
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7030
+          y: 51688
+          Width: 419
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: evil
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 7453
+          y: 51690
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I think I have an idea
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7782
+          y: 51692
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: What do you mean by that??
+        SubChapNum: 90
+        Type: 0
+        location:
+          x: 5168
+          y: 52012
+          Width: 351
+          Height: 278
+      - RespTree: 0
+        TextContent: Soon??
+        SubChapNum: 90
+        Type: 0
+        location:
+          x: 5533
+          y: 52011
+          Width: 323
+          Height: 278
+      location:
+        x: 5334
+        y: 51650
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: You'll just have to wait and see
+        TextDelay: 3.5
+        Tendency: 0
+        location:
+          x: 5660
+          y: 52344
+          Width: 363
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: For now though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6026
+          y: 52345
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I think this will make some really good practice
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6357
+          y: 52345
+          Width: 445
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Just see for yourself
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6808
+          y: 52346
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie7
+        TextDelay: 5.1
+        Tendency: 0
+        location:
+          x: 7136
+          y: 52346
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: hot
+        SubChapNum: 91
+        Type: 4
+        location:
+          x: 5165
+          y: 52623
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: shy
+        SubChapNum: 91
+        Type: 4
+        location:
+          x: 5531
+          y: 52632
+          Width: 323
+          Height: 278
+      location:
+        x: 5330
+        y: 52305
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: It's like you said
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5659
+          y: 52973
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I need to give a proper thank you for someone when they do such
+          a kind gesture
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5985
+          y: 52972
+          Width: 622
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Especially when he wasn't just nice to me but my girl friends
+          too you know?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6613
+          y: 52975
+          Width: 594
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Maybe next time I should thank him properly
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7211
+          y: 52977
+          Width: 434
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Take him to a bathroom stall
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7649
+          y: 52979
+          Width: 351
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Get down on my knees in front of him
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8005
+          y: 52980
+          Width: 398
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: And Help him relieve some of his stress from his long shift
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 8409
+          y: 52982
+          Width: 504
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Let him use my mouth as he pleases until he fills it with his
+          cum
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 8919
+          y: 52984
+          Width: 531
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Maybe you should've done that tonight
+        SubChapNum: 92
+        Type: 0
+        location:
+          x: 5082
+          y: 53286
+          Width: 406
+          Height: 278
+      - RespTree: 0
+        TextContent: It's only fair
+        SubChapNum: 94
+        Type: 0
+        location:
+          x: 5570
+          y: 54506
+          Width: 323
+          Height: 278
+      location:
+        x: 5330
+        y: 52930
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Maybe I should have
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4831
+          y: 53618
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I doubt he would have protested
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4455
+          y: 53618
+          Width: 372
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I always aim to leave a good TIP for the service workers
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3958
+          y: 53619
+          Width: 493
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: unamused
+        SubChapNum: 93
+        Type: 4
+        location:
+          x: 4887
+          y: 53901
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: bf-laugh
+        SubChapNum: 94
+        Type: 4
+        location:
+          x: 5229
+          y: 54506
+          Width: 323
+          Height: 278
+      location:
+        x: 5156
+        y: 53576
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: OH CMON THAT WAS FUNNY
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4529
+          y: 54229
+          Width: 359
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Fineeee
+        SubChapNum: 94
+        Type: 0
+        location:
+          x: 4891
+          y: 54507
+          Width: 323
+          Height: 278
+      location:
+        x: 4891
+        y: 54190
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: Alejandra
+        Type: 1
+        TextContent: Oh my god it sounds like there's a war happening upstairs
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5217
+          y: 54847
+          Width: 503
+          Height: 271
+      - AltContact: Alejandra
+        Type: 1
+        TextContent: I take it you two are having fun
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 5725
+          y: 54845
+          Width: 363
+          Height: 271
+      - AltContact: Alejandra
+        Type: 5
+        TextContent: giggle
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6093
+          y: 54847
+          Width: 323
+          Height: 271
+      - AltContact: Alejandra
+        Type: 1
+        TextContent: You're lucky I don't have neighbours
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 6425
+          y: 54850
+          Width: 391
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Well I tried something
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 6824
+          y: 54851
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: For now I'll just leave you with this image
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7150
+          y: 54850
+          Width: 415
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Try to guess what I tried to do right before taking it
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 7569
+          y: 54851
+          Width: 469
+          Height: 271
+      - AltContact: 
+        Type: 3
+        TextContent: Althea-whiteLingerie8
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 8044
+          y: 54851
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Alejandra might have said something
+        SubChapNum: 95
+        Type: 0
+        location:
+          x: 2844
+          y: 57454
+          Width: 394
+          Height: 278
+      - RespTree: 0
+        TextContent: bf-laugh
+        SubChapNum: 96
+        Type: 4
+        location:
+          x: 2401
+          y: 58073
+          Width: 323
+          Height: 278
+      location:
+        x: 4890
+        y: 54806
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: OMG
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 3209
+          y: 57787
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: What were you doing??
+        SubChapNum: 96
+        Type: 0
+        location:
+          x: 2737
+          y: 58078
+          Width: 324
+          Height: 278
+      - RespTree: 0
+        TextContent: She asked if there was a war upstairs
+        SubChapNum: 96
+        Type: 0
+        location:
+          x: 3092
+          y: 58075
+          Width: 397
+          Height: 278
+      location:
+        x: 2884
+        y: 57747
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: It's her fault!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3208
+          y: 58418
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: For only having this monster
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3536
+          y: 58418
+          Width: 350
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Oh my god she's going to have so many questions for me tomorrow
+          morning
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3889
+          y: 58418
+          Width: 600
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I don't think I'll ever be able to fit something that big inside
+          me though
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4494
+          y: 58419
+          Width: 565
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Do you want to?
+        SubChapNum: 97
+        Type: 0
+        location:
+          x: 2706
+          y: 58711
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: I think you definitely should practice more
+        SubChapNum: 98
+        Type: 0
+        location:
+          x: 3066
+          y: 58712
+          Width: 420
+          Height: 278
+      location:
+        x: 2878
+        y: 58378
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Honestly?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 2373
+          y: 59043
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I'm not sure it's something that would feel good
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 1917
+          y: 59044
+          Width: 449
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But maybe?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 1590
+          y: 59042
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Only if that's something you're interested in
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 1145
+          y: 59041
+          Width: 429
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: We should definetly have a whole conversation about this tomorrow
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 576
+          y: 59044
+          Width: 556
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Let's talk about it when I'm at the airport
+        SubChapNum: 99
+        Type: 0
+        location:
+          x: 2355
+          y: 59358
+          Width: 412
+          Height: 278
+      - RespTree: 0
+        TextContent: Agreed
+        SubChapNum: 99
+        Type: 0
+        location:
+          x: 2777
+          y: 59360
+          Width: 323
+          Height: 278
+      location:
+        x: 2705
+        y: 59003
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Okay now that's surprising
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3458
+          y: 59044
+          Width: 340
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: But I'm not completely closed off to the idea
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3804
+          y: 59042
+          Width: 432
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: We should deifinetly have a whole talk about this tomorrow
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4240
+          y: 59044
+          Width: 510
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: Let's talk about it when I'm at the airport
+        SubChapNum: 99
+        Type: 0
+        location:
+          x: 3135
+          y: 59360
+          Width: 412
+          Height: 278
+      - RespTree: 0
+        TextContent: Agreed
+        SubChapNum: 99
+        Type: 0
+        location:
+          x: 3558
+          y: 59359
+          Width: 323
+          Height: 278
+      location:
+        x: 3131
+        y: 59003
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Oh that's right!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3283
+          y: 59709
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: You leave there tomorrow right?
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3609
+          y: 59710
+          Width: 370
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I'll be there at midnight tomorrow
+        SubChapNum: 100
+        Type: 0
+        location:
+          x: 2723
+          y: 60006
+          Width: 375
+          Height: 278
+      - RespTree: 0
+        TextContent: Yep, I leave tomorrow
+        SubChapNum: 100
+        Type: 0
+        location:
+          x: 3166
+          y: 60006
+          Width: 323
+          Height: 278
+      location:
+        x: 2943
+        y: 59668
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList:
+      - AltContact: 
+        Type: 1
+        TextContent: Yay okay!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3273
+          y: 60365
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I can't wait!
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3598
+          y: 60366
+          Width: 323
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: I hope you're not too tired from your travels
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 3923
+          y: 60367
+          Width: 429
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: Because after everything tonight I'm going to need you as soon
+          as you're home
+        TextDelay: 2.5
+        Tendency: 0
+        location:
+          x: 4356
+          y: 60369
+          Width: 614
+          Height: 271
+      - AltContact: 
+        Type: 1
+        TextContent: You'll probably have to be up all night
+        TextDelay: 2.1
+        Tendency: 0
+        location:
+          x: 4980
+          y: 60370
+          Width: 398
+          Height: 271
+      - AltContact: 
+        Type: 5
+        TextContent: giggle
+        TextDelay: 1.1
+        Tendency: 0
+        location:
+          x: 5385
+          y: 60372
+          Width: 323
+          Height: 271
+      UnlockInstaPostsAccount: 
+      UnlockPosts: 
+      Responses:
+      - RespTree: 0
+        TextContent: I'm okay with that
+        SubChapNum: 101
+        Type: 0
+        location:
+          x: 2711
+          y: 60642
+          Width: 323
+          Height: 278
+      - RespTree: 0
+        TextContent: salute
+        SubChapNum: 101
+        Type: 4
+        location:
+          x: 3145
+          y: 60646
+          Width: 323
+          Height: 278
+      location:
+        x: 2944
+        y: 60323
+        Width: 323
+        Height: 292
+    - Contact: Althea
+      TextList: []
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses: []
       location:
-        x: 4604
-        y: 32822
+        x: 2940
+        y: 60934
         Width: 323
         Height: 292

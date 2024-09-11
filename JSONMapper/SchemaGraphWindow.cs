@@ -10,8 +10,9 @@ using Unity.VisualScripting;
 
 
 namespace JSONMapper {
+
     public class SchemaGraphWindow : EditorWindow {
-        private float delayTime = 60f;
+        private float delayTime = 320f;
         private float AutoSaveTimer;
         private SchemaGraphView graphView;
 

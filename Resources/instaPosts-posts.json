@@ -90,6 +90,13 @@
             "UserName" : "KuroNeko6.9",
             "Image" : "Althea-mall1IP",
             "Description" : "THIS GIRL IS ALWAYS LATE!"
+        },
+        {
+            "index": 13,
+            "CharacterName" : "Althea",
+            "UserName" : "KuroNeko6.9",
+            "Image" : "Althea-bar3IP",
+            "Description" : "Here's to new adventures"
         }
     ]
 }

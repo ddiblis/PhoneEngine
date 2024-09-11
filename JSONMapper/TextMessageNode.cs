@@ -6,15 +6,29 @@ using UnityEngine.UIElements;
 
 namespace JSONMapper {
     public class TextMessageNode : BaseNode {
+
+        // Add some kind of comprehension where if choice of type is emoji, it hides textbox and instead displays a drop down of emojis, then 
+        // when an emoji is selected, the value is put into the textfield value, find the parsing method you can use for items inside of the 
+        // resources foulder, iterate and create a list of the emojis avaliable
+        // Side, maybe do the same thing to images 
+        // Also implement the values system you devised, just remember what it was
         readonly List<string> TypeOptions = new() {
             "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6", "Recieved Contact 7", "Indicate Time 8"
+        };
+        readonly List<int> TypeValues = new() {
+            0, 0, 1, 3, 5, 6, 7, 8
         };
         readonly List<string> DelayOptions = new() {
             "Delay Options", "Almost Instant 0.16", "Very Fast 0.57", "Fast 1.1", "Medium 2.1", "Slow 2.5", "Very slow 3.5", "Dramatic Pause 5.1"
         };
-
+        readonly List<float> DelayValues = new() {
+            0, 0.16f, 0.57f, 1.1f, 2.1f, 2.5f, 3.5f, 5.1f 
+        };
         readonly List<string> TendencyOptions = new() {
             "Tendency Options", "Neutral 0", "Submissive 1", "Dominant 2"
+        };
+        readonly List<int> TendencyValues = new() {
+            0, 0, 1, 2
         };
 
         public string AltContact;        
@@ -35,7 +49,7 @@ namespace JSONMapper {
 
             title = "TextMessage";
 
-            ParentSubChapPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(SubChapNode));
+            ParentSubChapPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi, typeof(SubChapNode));
             ParentSubChapPort.portName = "Parent SubChap";
             inputContainer.Add(ParentSubChapPort);
 

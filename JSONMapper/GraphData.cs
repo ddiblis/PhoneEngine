@@ -38,13 +38,13 @@ namespace JSONMapper {
             List<ResponseNode> ResponseParentNodes = new();
 
             foreach (var node in graphView.nodes) {
-                    if (node is ResponseNode responseNode && responseNode.SubChapNum == index) {
-                        ResponseParentNodes.Add(responseNode);
-                    }
+                if (node is ResponseNode responseNode && responseNode.SubChapNum == index) {
+                    ResponseParentNodes.Add(responseNode);
                 }
-                foreach (var respNode in ResponseParentNodes) {
-                    ConnectNodes(InputPort, respNode.NextSubChapterNodePort, graphView);
-                }
+            }
+            foreach (var respNode in ResponseParentNodes) {
+                ConnectNodes(InputPort, respNode.NextSubChapterNodePort, graphView);
+            }
         }
 
         private void ConnectNodes(Port InputPort, Port OutputPort, GraphView graphView) {

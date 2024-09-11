@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 
-
 namespace JSONMapper {
     public class SchemaGraphView : GraphView {
         public SchemaGraphView() {

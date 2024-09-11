@@ -63,7 +63,7 @@ public class MessagingHandlers : MonoBehaviour {
         gen.SetWallPaper(SF.saveFile.CurrWallPaper);
         SM.GenerateSaves(10);
         IPM.GenPostsList();
-        ChapterSelect("Chapters", "Prelude");
+        ChapterSelect("Chapters", "Chapter1");
     }
 
     public void ChapterSelect(string type, string Chapter, int subChapIndex = 0, int currentText = 0) {
@@ -121,7 +121,7 @@ public class MessagingHandlers : MonoBehaviour {
         Sprite? pfp = null
     ) {
         if (SF.saveFile.Settings.FasterReplies) {
-            yield return new WaitForSeconds(textMessage.TextDelay/2);
+            yield return new WaitForSeconds(textMessage.TextDelay/3);
         } else {
             yield return new WaitForSeconds(textMessage.TextDelay);
         }
@@ -130,17 +130,19 @@ public class MessagingHandlers : MonoBehaviour {
     # nullable disable
 
     public IEnumerator RecieveTexts(List<TextMessage> TextList, string Contact, int indexOfContact, int startingText = 0) {
-        Sprite pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;
+        Sprite pfp;
 
         for (int i = startingText; i < TextList.Count; i++) {
             SF.saveFile.CurrStoryPoint.CurrTextIndex = i;
             TextMessage textMessage = TextList[i];
             if (textMessage.AltContact.Length != 0) {
+                // Make sure if the contact is not unlocked that someone sends you their contact so it unlocks first
                 int AltContactIndex = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == textMessage.AltContact);
                 SF.saveFile.contactPush = AltContactIndex;
-                UnlockContact(AltContactIndex);
+                pfp = Resources.Load("Images/Headshots/" + textMessage.AltContact, typeof(Sprite)) as Sprite;
             } else {
                 SF.saveFile.contactPush = indexOfContact;
+                pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;
             }
             if (textMessage.Tendency == SF.saveFile.Stats.Tendency || textMessage.Tendency == (int)Tendency.Neutral) {
                 yield return StartCoroutine(MessageDelay(textMessage, pfp));

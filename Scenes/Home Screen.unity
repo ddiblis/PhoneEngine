@@ -3322,6 +3322,7 @@ MonoBehaviour:
     ContactsList: []
     ChapterList: []
     CurrStoryPoint:
+      StoryCheckpoint: 0
       ChapIndex: 0
       SubChapIndex: 0
       CurrTextIndex: 0
@@ -5912,7 +5913,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6431133604789435838, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_DecelerationRate
-      value: 0.3
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6431133604789435838, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6933039688072551041, guid: adbe83b4b32d5e84e8b68259a9c42b1f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7461,8 +7466,8 @@ MonoBehaviour:
   m_MovementType: 1
   m_Elasticity: 0.3
   m_Inertia: 1
-  m_DecelerationRate: 0.3
-  m_ScrollSensitivity: 7
+  m_DecelerationRate: 0
+  m_ScrollSensitivity: 30
   m_Viewport: {fileID: 674775454}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 31387975}

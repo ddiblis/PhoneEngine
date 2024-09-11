@@ -158,7 +158,7 @@ public class SaveFileRoot {
     public List<SavedPost> Posts = new();
     public List<PhotoCategory> PhotoCategories = new();
     public List<Photo> Photos = new();
-    public List<MidRoll> MidRolls = new(); 
+    public List<MidRoll> MidRolls = new();
 }
 
 [System.Serializable]

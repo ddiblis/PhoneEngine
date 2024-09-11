@@ -1,5 +1,5 @@
 {
-    "AllowMidrolls": true,
+    "AllowMidrolls": false,
     "StoryCheckpoint": 0,
     "SubChaps": [
         {
@@ -750,7 +750,7 @@
                 },
                 {
                     "AltContact": "",
-                    "Type": 1,
+                    "Type": 5,
                     "TextContent": "angry",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
@@ -937,6 +937,13 @@
                     "TextContent": "Yes...",
                     "Tendency": 0,
                     "TextDelay": 2.0
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It's lingerie...",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
                 },
                 {
                     "AltContact": "",
@@ -1204,6 +1211,13 @@
         {
             "Contact": "Althea",
             "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "30 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
                 {
                     "AltContact": "",
                     "Type": 1,
@@ -1501,7 +1515,7 @@
                 },
                 {
                     "AltContact": "",
-                    "Type": 1,
+                    "Type": 5,
                     "TextContent": "unamused",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
@@ -1514,7 +1528,7 @@
                     "RespTree": false,
                     "TextContent": "bf-laugh",
                     "SubChapNum": 44,
-                    "Type": 0
+                    "Type": 4
                 },
                 {
                     "RespTree": false,
@@ -1993,7 +2007,7 @@
                 {
                     "AltContact": "",
                     "Type": 1,
-                    "TextContent": "It feels a little slutty too",
+                    "TextContent": "It feels a little slutty",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
@@ -2058,7 +2072,7 @@
                     "Type": 5,
                     "TextContent": "smirking",
                     "Tendency": 0,
-                    "TextDelay": 0.5699999928474426
+                    "TextDelay": 1.100000023841858
                 }
             ],
             "UnlockInstaPostsAccount": "",
@@ -2149,14 +2163,14 @@
                     "Type": 1,
                     "TextContent": "I better get back to the girls before they start wondering what's taking so long",
                     "Tendency": 0,
-                    "TextDelay": 2.0999999046325685
+                    "TextDelay": 2.5
                 },
                 {
                     "AltContact": "",
                     "Type": 1,
                     "TextContent": "We're going to head to the bars right after this so I'll text you when we get there",
                     "Tendency": 0,
-                    "TextDelay": 2.0999999046325685
+                    "TextDelay": 2.5
                 },
                 {
                     "AltContact": "",
@@ -2172,13 +2186,13 @@
                 {
                     "RespTree": false,
                     "TextContent": "bf-heart",
-                    "SubChapNum": 0,
+                    "SubChapNum": 102,
                     "Type": 4
                 },
                 {
                     "RespTree": false,
                     "TextContent": "Drive safe",
-                    "SubChapNum": 0,
+                    "SubChapNum": 102,
                     "Type": 0
                 }
             ]
@@ -2342,7 +2356,7 @@
                 },
                 {
                     "AltContact": "",
-                    "Type": 1,
+                    "Type": 5,
                     "TextContent": "smirking",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
@@ -2408,10 +2422,10 @@
             ]
         },
         {
-            "Contact": "Alejandra",
+            "Contact": "Althea",
             "TextList": [
                 {
-                    "AltContact": "Althea",
+                    "AltContact": "",
                     "Type": 5,
                     "TextContent": "gf-heart",
                     "Tendency": 0,
@@ -2427,16 +2441,5319 @@
                 {
                     "AltContact": "",
                     "Type": 1,
-                    "TextContent": "Soooo....",
+                    "TextContent": "I don't think I've ever seen Alejandra this excited",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ's just being a mom though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Oh god, Alejandra's gonna have a lot to say ",
+                    "SubChapNum": 58,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She did",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
                 {
                     "AltContact": "",
                     "Type": 1,
-                    "TextContent": "Testing if this works",
+                    "TextContent": "But she's not judging",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Apparently she's been in a few \"open\" relationships as she called them",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She taught me a lot",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She actually gave me a bunch of ideas for questions to ask you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Said that setting boundries was very important",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 59,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "That's surprising!",
+                    "SubChapNum": 59,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Right?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I always got the impression that she was fast and loose with this sort of thing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But she was actually really helpful",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ just sat there blushing the whole time though",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What's the plan for now?",
+                    "SubChapNum": 60,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What are some of the questions you have?",
+                    "SubChapNum": 60,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well for now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra's been hyping me up to get us free drinks from the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She's usually the one responsible for getting us free things",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But she says if you're okay with it I should \"strike while the iron is hot\"",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm a little tipsy so honestly what the hell",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Do it!",
+                    "SubChapNum": 61,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 61,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "Alright then!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "That didn't take much convincing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "I'll talk to you in a bit!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "15 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "How are you feeling over there?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Dying with curiosity to find out what your gf is doing to get us those free drinks?",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm honestly not sure which one of us is enjoying themselves more here",
+                    "SubChapNum": 62,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 62,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Oh you're defintiely having fun right now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I never expected you to be the one corrupting her",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm almost jealous",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Not as jealous as you're about to be though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Wanna like to see what your gf's been up to?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "tongue-out",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Ohhh yes!",
+                    "SubChapNum": 63,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 63,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alright",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "One second",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-bar1",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She's been like that for a while",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "The bartenders dropped everything just to talk to her",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She seems busy",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She keeps giggling with the cute bartender on the right",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Are you getting excited?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Yes, very much!",
+                    "SubChapNum": 64,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "drool",
+                    "SubChapNum": 64,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Good",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Because I don't think this will be the end of it",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "On the not so bright side",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I don't think we'll be getting our drinks any time soon",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She just sat down at the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "fake-angry",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Looks like she's enjoying herself too much to come back",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-bar2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 65,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What's she doing?",
+                    "SubChapNum": 65,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Whatever she's doing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She has a choke hold on those two",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm not letting her have fun all alone though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm sure she wouldn't mind if I joined her",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'll let you stew in your jealousy a little bit longer",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Later!",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "tongue-out",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "30 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "I might be a little drunk now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What happened??",
+                    "SubChapNum": 66,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Tell me everything!",
+                    "SubChapNum": 66,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Aweeee",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Someone's a little impatient",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I went up to the bar after you told me to do so",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I was going to grab myself and the girls a few drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It was taking them a little whole to get all the drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra's orders are always really complicated",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So I sat down at the bar while I waited",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But then this other really cute bartender came by and started chatting with me",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Asked if I had ever tried a blowjob shot",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "eyeroll",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I said that I'd never tried one",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So he made me one and said that it was on the house",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And if I didn't drink it, it would be wasteful right?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "Althea",
+            "UnlockPosts": [
+                13
+            ],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Right obviously!",
+                    "SubChapNum": 67,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 67,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I told him it was \"really smooth going down my throat\"",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I saw his \"reaction\" to that statement",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "By then Alejandra had come to the counter and started chatting up the guy making our drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We all chatted a little bit more",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But I was trying to not do something that would upset you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So after a while I asked him how much the tab was so I could pay",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "He said that it was on the house",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So Alejandra asked if there was anyway we could pay them back",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I swear that girl",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She thinks we're in one of your videos",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 69,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What did they say??",
+                    "SubChapNum": 68,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So eager!!!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "What do you think they said?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I don't know!!",
+                    "SubChapNum": 69,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Tell me!!!",
+                    "SubChapNum": 69,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Someone's really impatient tonight!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I wonder why",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "They asked for our numbers",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra was all too happy to give out hers",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But since we haven't talked about boundries yet I didn't want to step over the line",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So I told him maybe next time",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Don't worry though Alejandra made him feel better with a kiss on the cheek",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 71,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Are you sure a kiss was enough?",
+                    "SubChapNum": 70,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Babe!!!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You're irredeemable",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It'll have to be for now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Poor guy",
+                    "SubChapNum": 71,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We can always come back here later to fulfil my promise to him",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "More importantly",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Thinking of your reaction the whole time got me really horny",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Sooooo you might want to stay up late for your reward tonight",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Yes ma'am!",
+                    "SubChapNum": 72,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "salute",
+                    "SubChapNum": 72,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What's next?",
+                    "SubChapNum": 73,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Are you guys still at the bar?",
+                    "SubChapNum": 73,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We just left",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ Barely had anything to drink",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She says it ruins her gym progress",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So she's driving all of us",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And we're all going to crash over at Alejandra's",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-heart",
+                    "SubChapNum": 74,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I love you!",
+                    "SubChapNum": 74,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "50 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Guess who's finally all alone",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "drool",
+                    "SubChapNum": 75,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 75,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "That's about the reaction I expected",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I honestly didn't expect to enjoy what I did tonight as much as I did",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But thinking of what was probably going on through your head honestly had me really excited the whole time ",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I never asked how you're feeling after all of that though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Did you enjoy the show?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra said she'd sent you a few pictures while I was at the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "YES!",
+                    "SubChapNum": 78,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I wish you'd done more",
+                    "SubChapNum": 76,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Easy now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "One step at a time",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Who knows what will happen next time",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 77,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Next time??",
+                    "SubChapNum": 77,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Of course",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I did make a promise to give him my number later afterall",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 78,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 78,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 0,
+                    "TextContent": "If I'd known you'd be this excited to see me flirt with a bartender",
+                    "Tendency": 0,
+                    "TextDelay": 0.0
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I woud've gotten so many free drinks for us",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "By the way",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Can you send me the pictures Alejandra sent you?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Oh yes one second!",
+                    "SubChapNum": 79,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Althea-bar1",
+                    "SubChapNum": 80,
+                    "Type": 2
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Of course she got that angle",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I forgot to mention though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Before we left Alejandra wanted to get a picture at the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Said it was to celebrate new beginnings",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I have no idea what that girl is planning",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "eyeroll",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I posted it on insta on the way home",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You should check it out",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm pretty sure the cute bartender got about the same view you did during that picture",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I already saw it",
+                    "SubChapNum": 81,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Okay one second!",
+                    "SubChapNum": 82,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Aweee you must've been so anxious to find out what I was doing huh?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Figured I'd pay him back a little bit for all the free drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "grinning-sweat",
+                    "SubChapNum": 83,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm sure he enjoyed the view",
+                    "SubChapNum": 83,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "What do you think?",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Figured I'd pay him back a little bit for all the free drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 83,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm sure he enjoyed the view",
+                    "SubChapNum": 83,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Is someone a little jealous?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "gf-kiss",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Don't worry I saved the best for later",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Just for you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We got a little derailed off topic",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Here's a little reminder of what you're currently missing out on by being so far away",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Leaving me with a little predicament all on my own",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Imagine if I'd brought him with me instead",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I probably wouldn't have had all that time to text you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "He would've been the one to see me in this lingerie",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "With most of it on anyway",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I seem to have already lost the bra",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie3",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 84,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 84,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'd be laying in bed looking up at him",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Trying to guess what he's about to do to me",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie4",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "What do you think he'd do next?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "He would've fucked you",
+                    "SubChapNum": 85,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "He would've touched you",
+                    "SubChapNum": 86,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Straight to the point huh?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Can't say I disagree though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Or would protest",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "He'd slide my panties off to the side",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And with how needy I am right now I doubt he'd need any foreplay to guide his cock right inside me",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Take a look for yourself",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie5",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 87,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 87,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Mmmmmm yes",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I would be trying to resist the urge to moan too loud",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Woudn't want the girls hearing your gf upstairs and wondering what she'd up to with this random bartender",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm so wet I doubt it would take him long to get me cumming all over his fingers",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Kind of like this",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie5",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 87,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 87,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I just had an idea",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Give me a few seconds",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Found it!",
+                    "Tendency": 0,
+                    "TextDelay": 5.099999904632568
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I had a feeling she'd have one hiding around here",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But it's way too big",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie6",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "grinning-sweat",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I figured you could use this for a little visual next",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What do you have planned next??",
+                    "SubChapNum": 89,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "That thing is huge!!",
+                    "SubChapNum": 88,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I have no idea how the hell Alejandra uses this thing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But I guess I should get some practice for when you're back",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Among other things",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "You're going to use it??",
+                    "SubChapNum": 89,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Practice?",
+                    "SubChapNum": 89,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well a certain someone isn't around right now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And you know how much I love giving blowjobs",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Don't want my skills getting rusty while you're away",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Especially if I'll end up needing them soon",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I think I have an idea",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What do you mean by that??",
+                    "SubChapNum": 90,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Soon??",
+                    "SubChapNum": 90,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You'll just have to wait and see",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "For now though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I think this will make some really good practice",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Just see for yourself",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie7",
+                    "Tendency": 0,
+                    "TextDelay": 5.099999904632568
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 91,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 91,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It's like you said",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I need to give a proper thank you for someone when they do such a kind gesture",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Especially when he wasn't just nice to me but my girl friends too you know?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Maybe next time I should thank him properly",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Take him to a bathroom stall",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Get down on my knees in front of him",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And Help him relieve some of his stress from his long shift",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Let him use my mouth as he pleases until he fills it with his cum",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Maybe you should've done that tonight",
+                    "SubChapNum": 92,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "It's only fair",
+                    "SubChapNum": 94,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Maybe I should have",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I doubt he would have protested",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I always aim to leave a good TIP for the service workers",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "unamused",
+                    "SubChapNum": 93,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 94,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "OH CMON THAT WAS FUNNY",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Fineeee",
+                    "SubChapNum": 94,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 1,
+                    "TextContent": "Oh my god it sounds like there's a war happening upstairs",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 1,
+                    "TextContent": "I take it you two are having fun",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 1,
+                    "TextContent": "You're lucky I don't have neighbours",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well I tried something",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "For now I'll just leave you with this image",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Try to guess what I tried to do right before taking it",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-whiteLingerie8",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Alejandra might have said something",
+                    "SubChapNum": 95,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 96,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "OMG",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What were you doing??",
+                    "SubChapNum": 96,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "She asked if there was a war upstairs",
+                    "SubChapNum": 96,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It's her fault!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "For only having this monster",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Oh my god she's going to have so many questions for me tomorrow morning",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I don't think I'll ever be able to fit something that big inside me though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Do you want to?",
+                    "SubChapNum": 97,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I think you definitely should practice more",
+                    "SubChapNum": 98,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Honestly?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm not sure it's something that would feel good",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But maybe?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Only if that's something you're interested in",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We should definetly have a whole conversation about this tomorrow",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Let's talk about it when I'm at the airport",
+                    "SubChapNum": 99,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Agreed",
+                    "SubChapNum": 99,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Okay now that's surprising",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But I'm not completely closed off to the idea",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We should deifinetly have a whole talk about this tomorrow",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Let's talk about it when I'm at the airport",
+                    "SubChapNum": 99,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Agreed",
+                    "SubChapNum": 99,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Oh that's right!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You leave there tomorrow right?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I'll be there at midnight tomorrow",
+                    "SubChapNum": 100,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Yep, I leave tomorrow",
+                    "SubChapNum": 100,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Yay okay!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I can't wait!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I hope you're not too tired from your travels",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Because after everything tonight I'm going to NEED you as soon as you're home",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You'll probably have to be up all night",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm okay with that",
+                    "SubChapNum": 101,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "salute",
+                    "SubChapNum": 101,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm going to head to bed now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Frustrated as hell",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Frustrated as hell",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "fake-angry",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I won't be the only one though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-goingToSleep1",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "There now you should be too",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And I'm sure a certain poor bartender is too",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Goodnight babe",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I love you!",
+                    "SubChapNum": 143,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Goodnight hon!",
+                    "SubChapNum": 144,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "1 Hour Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We just got here",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ drives like a grandma",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I just want to double check with you again",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Is it still okay with you if I talk to the girls about what we talked about?",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I promise they'll be nice",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And I KNOW Alejandra HAS to know more about this",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She can probably teach me a thing or two",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Do I still get my reward?",
+                    "SubChapNum": 103,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Yes, that's alright",
+                    "SubChapNum": 104,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Of course!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I don't think you're going to want to miss out on it anyway",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 104,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Then absolutely yes!",
+                    "SubChapNum": 104,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Yay",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Okay",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We're about to sit down so I'll talk to you a little later!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-heart",
+                    "SubChapNum": 105,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I love you!",
+                    "SubChapNum": 105,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "1 Hour Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I don't think I've ever seen Alejandra this excited",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ's just being a mom though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Oh god, Alejandra's gonna have a lot to say ",
+                    "SubChapNum": 106,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She did",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But she's not judging",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Apparently she's been in a few \"open\" relationships as she called them",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She taught me a lot",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She actually gave me a bunch of ideas for questions to ask you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Said that setting boundries was very important",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 107,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "That's surprising!",
+                    "SubChapNum": 107,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Right?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I always got the impression that she was fast and loose with this sort of thing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But she was actually really helpful",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ just sat there blushing the whole time though",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What's the plan for now?",
+                    "SubChapNum": 108,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What are some of the questions you have?",
+                    "SubChapNum": 108,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well for now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra's been hyping me up to get us free drinks from the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She's usually the one responsible for getting us free things",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But she says if you're okay with it I should \"strike while the iron is hot\"",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm a little tipsy so honestly what the hell",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Do it!",
+                    "SubChapNum": 109,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 109,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "Alright then!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "That didn't take much convincing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "I'll talk to you in a bit!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "15 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "How are you feeling over there?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Dying with curiosity to find out what your gf is doing to get us those free drinks?",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm honestly not sure which one of us is enjoying themselves more here",
+                    "SubChapNum": 110,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 110,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Oh you're defintiely having fun right now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I never expected you to be the one corrupting her",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm almost jealous",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Not as jealous as you're about to be though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Wanna like to see what your gf's been up to?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "tongue-out",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Ohhh yes!",
+                    "SubChapNum": 111,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 111,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alright",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "One second",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-bar1",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She's been like that for a while",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "The bartenders dropped everything just to talk to her",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She seems busy",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She keeps giggling with the cute bartender on the right",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Are you getting excited?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Yes, very much!",
+                    "SubChapNum": 112,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "drool",
+                    "SubChapNum": 112,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Good",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Because I don't think this will be the end of it",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "On the not so bright side",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I don't think we'll be getting our drinks any time soon",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She just sat down at the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "fake-angry",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Looks like she's enjoying herself too much to come back",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-bar2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 113,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What's she doing?",
+                    "SubChapNum": 113,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Alejandra",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Whatever she's doing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She has a choke hold on those two",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm not letting her have fun all alone though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm sure she wouldn't mind if I joined her",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'll let you stew in your jealousy a little bit longer",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Later!",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "tongue-out",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "30 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "I might be a little drunk now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 1,
+                    "TextContent": "I might be a little drunk now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Althea",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Tell me everything!",
+                    "SubChapNum": 114,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What happened??",
+                    "SubChapNum": 114,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Aweeee",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Someone's a little impatient",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I went up to the bar after you told me to do so",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I was going to grab myself and the girls a few drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It was taking them a little whole to get all the drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra's orders are always really complicated",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So I sat down at the bar while I waited",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But then this other really cute bartender came by and started chatting with me",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Asked if I had ever tried a blowjob shot",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "eyeroll",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I said that I'd never tried one",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So he made me one and said that it was on the house",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And if I didn't drink it, it would be wasteful right?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "Althea",
+            "UnlockPosts": [
+                13
+            ],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Right obviously!",
+                    "SubChapNum": 115,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 115,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I told him it was \"really smooth going down my throat\"",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I saw his \"reaction\" to that statement",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "By then Alejandra had come to the counter and started chatting up the guy making our drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We all chatted a little bit more",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But I was trying to not do something that would upset you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So after a while I asked him how much the tab was so I could pay",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "He said that it was on the house",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So Alejandra asked if there was anyway we could pay them back",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I swear that girl",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She thinks we're in one of your videos",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What did they say??",
+                    "SubChapNum": 116,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 117,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So eager!!!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "What do you think they said?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Tell me!!!",
+                    "SubChapNum": 117,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I don't know!!",
+                    "SubChapNum": 117,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Someone's really impatient tonight!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I wonder why",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "They asked for our numbers",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra was all too happy to give out hers",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But since we haven't talked about boundries yet I didn't want to step over the line",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So I told him maybe next time",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Don't worry though Alejandra made him feel better with a kiss on the cheek",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 119,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Are you sure a kiss was enough?",
+                    "SubChapNum": 118,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Babe!!!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You're irredeemable",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It'll have to be for now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Poor guy",
+                    "SubChapNum": 119,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We can always come back here later to fulfil my promise to him",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "More importantly",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Thinking of your reaction the whole time got me really horny",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Sooooo you might want to stay up late for your reward tonight",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Yes ma'am!",
+                    "SubChapNum": 120,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "salute",
+                    "SubChapNum": 120,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What's next?",
+                    "SubChapNum": 121,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Are you guys still at the bar?",
+                    "SubChapNum": 121,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We just left",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "JJ Barely had anything to drink",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "She says it ruins her gym progress",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "So she's driving all of us",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And we're all going to crash over at Alejandra's",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-heart",
+                    "SubChapNum": 122,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I love you!",
+                    "SubChapNum": 122,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 8,
+                    "TextContent": "50 Minutes Later",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Guess who's finally all alone",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "drool",
+                    "SubChapNum": 123,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 123,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "That's about the reaction I expected",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I honestly didn't expect to enjoy what I did tonight as much as I did",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But thinking of what was probably going on through your head honestly had me really excited the whole time ",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I never asked how you're feeling after all of that though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Did you enjoy the show?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Alejandra said she'd sent you a few pictures while I was at the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "I wish you'd done more",
+                    "SubChapNum": 124,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "YES!",
+                    "SubChapNum": 126,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Easy now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "One step at a time",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Who knows what will happen next time",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 125,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Next time??",
+                    "SubChapNum": 125,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Of course",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I did make a promise to give him my number later afterall",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 126,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 126,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "If I'd known you'd be this excited to see me flirt with a bartender",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I woud've gotten so many free drinks for us",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "By the way",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Can you send me the pictures Alejandra sent you?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Oh yes one second!",
+                    "SubChapNum": 127,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Althea-bar1",
+                    "SubChapNum": 128,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Of course she got that angle",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-laugh",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I forgot to mention though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Before we left Alejandra wanted to get a picture at the bar",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Said it was to celebrate new beginnings",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I have no idea what that girl is planning",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "eyeroll",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I posted it on insta on the way home",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You should check it out",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm pretty sure the cute bartender got about the same view you did during that picture",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Okay one second!",
+                    "SubChapNum": 129,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I already saw it",
+                    "SubChapNum": 130,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Figured I'd pay him back a little bit for all the free drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "What do you think?",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 131,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm sure he enjoyed the view",
+                    "SubChapNum": 131,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Aweee you must've been so anxious to find out what I was doing huh?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Figured I'd pay him back a little bit for all the free drinks",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "grinning-sweat",
+                    "SubChapNum": 131,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I'm sure he enjoyed the view",
+                    "SubChapNum": 131,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Is someone a little jealous?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-kiss",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Don't worry I saved the best for later",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Just for you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "We got a little derailed off topic",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Here's a little reminder of what you're currently missing out on by being so far away",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Leaving me with a little predicament all on my own",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Imagine if I'd brought him with me instead",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I probably wouldn't have had all that time to text you",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "He would've been the one to see me in this lingerie",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "With most of it on anyway",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I seem to have already lost the bra",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie3",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "heart-eyes",
+                    "SubChapNum": 132,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 132,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'd be laying in bed looking up at him",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Trying to guess what he's about to do to me",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie4",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "What do you think he'd do next?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "He would've touched you",
+                    "SubChapNum": 134,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "He would've fucked you",
+                    "SubChapNum": 133,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Straight to the point huh?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Can't say I disagree though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Or would protest",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "He'd slide my panties off to the side",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And with how needy I am right now I doubt he'd need any foreplay to guide his cock right inside me",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Take a look for yourself",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie5",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 135,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 135,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie5",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Kind of like this",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I'm so wet I doubt it would take him long to get me cumming all over his fingers",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Woudn't want the girls hearing your gf upstairs and wondering what she'd up to with this random bartender",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I would be trying to resist the urge to moan too loud",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Mmmmmm yes",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hand-on-face",
+                    "SubChapNum": 135,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 135,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I just had an idea",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Give me a few seconds",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Found it!",
+                    "Tendency": 0,
+                    "TextDelay": 5.099999904632568
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I had a feeling she'd have one hiding around here",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But it's way too big",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie6",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "grinning-sweat",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I figured you could use this for a little visual next",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "smirking",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "That thing is huge!!",
+                    "SubChapNum": 136,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "What do you have planned next??",
+                    "SubChapNum": 137,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I have no idea how the hell Alejandra uses this thing",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "But I guess I should get some practice for when you're back",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Among other things",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Practice?",
+                    "SubChapNum": 137,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "You're going to use it??",
+                    "SubChapNum": 137,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well a certain someone isn't around right now",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And you know how much I love giving blowjobs",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Don't want my skills getting rusty while you're away",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Especially if I'll end up needing them soon",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "evil",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I think I have an idea",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "What do you mean by that??",
+                    "SubChapNum": 138,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Soon??",
+                    "SubChapNum": 138,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "You'll just have to wait and see",
+                    "Tendency": 0,
+                    "TextDelay": 3.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "For now though",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I think this will make some really good practice",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Just see for yourself",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie7",
+                    "Tendency": 0,
+                    "TextDelay": 5.099999904632568
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "hot",
+                    "SubChapNum": 139,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 139,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "It's like you said",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I need to give a proper thank you for someone when they do such a kind gesture",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Especially when he wasn't just nice to me but my girl friends too you know?",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Maybe next time I should thank him properly",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Take him to a bathroom stall",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Get down on my knees in front of him",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "And Help him relieve some of his stress from his long shift",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Let him use my mouth as he pleases until he fills it with his cum",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Maybe you should've done that tonight",
+                    "SubChapNum": 140,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "It's only fair",
+                    "SubChapNum": 142,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Maybe I should have",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I doubt he would have protested",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I always aim to leave a good TIP for the service workers",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "unamused",
+                    "SubChapNum": 141,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 142,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "OH CMON THAT WAS FUNNY",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Fineeee",
+                    "SubChapNum": 142,
+                    "Type": 0
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 1,
+                    "TextContent": "Oh my god it sounds like there's a war happening upstairs",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 1,
+                    "TextContent": "I take it you two are having fun",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 5,
+                    "TextContent": "giggle",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "Alejandra",
+                    "Type": 1,
+                    "TextContent": "You're lucky I don't have neighbours",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Well I tried something",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "For now I'll just leave you with this image",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "Try to guess what I tried to do right before taking it",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 3,
+                    "TextContent": "Althea-blackLingerie8",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": [
+                {
+                    "RespTree": false,
+                    "TextContent": "Alejandra might have said something",
+                    "SubChapNum": 95,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
+                    "SubChapNum": 96,
+                    "Type": 4
+                }
+            ]
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 1,
+                    "TextContent": "I love you too!",
+                    "Tendency": 0,
+                    "TextDelay": 2.0999999046325685
+                },
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 6,
+                    "TextContent": "End of Chapter 2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
+                }
+            ],
+            "UnlockInstaPostsAccount": "",
+            "UnlockPosts": [],
+            "Responses": []
+        },
+        {
+            "Contact": "Althea",
+            "TextList": [
+                {
+                    "AltContact": "",
+                    "Type": 5,
+                    "TextContent": "gf-heart",
+                    "Tendency": 0,
+                    "TextDelay": 1.100000023841858
+                },
+                {
+                    "AltContact": "",
+                    "Type": 6,
+                    "TextContent": "End of Chapter 2",
+                    "Tendency": 0,
+                    "TextDelay": 2.5
                 }
             ],
             "UnlockInstaPostsAccount": "",
