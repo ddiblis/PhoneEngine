@@ -83,7 +83,9 @@ namespace JSONMapper {
         }
 
         private void LoadTextMessageNodes(SubChapData subChap, GraphView graphView, SubChapNode SubChapNode) {
-            foreach (TextMessageData text in subChap.TextList) {
+            TextMessageNode PrevTextNode = null;
+            for (int i = 0; i < subChap.TextList.Count; i ++){
+                TextMessageData text = subChap.TextList[i];
                 var TextMessageNode = new TextMessageNode(graphView) {
                     AltContact = text.AltContact,
                     TextContent = text.TextContent,
@@ -99,8 +101,15 @@ namespace JSONMapper {
                     height = text.location.Height,
                 });
                 graphView.AddElement(TextMessageNode);
-                ConnectNodes(TextMessageNode.ParentSubChapPort, SubChapNode.TextMessagesPort, graphView);
-                SubChapNode.TextList.Add(TextMessageNode);
+                if (i == 0) {
+                    ConnectNodes(TextMessageNode.ParentSubChapPort, SubChapNode.FirstTextPort, graphView);
+                    SubChapNode.FirstText = TextMessageNode;
+                    PrevTextNode = TextMessageNode;
+                } else {
+                    ConnectNodes(TextMessageNode.PrevText, PrevTextNode.NextText, graphView);
+                    PrevTextNode.NextTextNode = TextMessageNode;
+                    PrevTextNode = TextMessageNode;
+                }
             }
         }
 

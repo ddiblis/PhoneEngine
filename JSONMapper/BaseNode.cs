@@ -22,14 +22,16 @@ namespace JSONMapper {
         public virtual void OnConnected(Port port, Edge edge) {
             if (port.direction == Direction.Output) {
                 if (this is SubChapNode subChapNode) {
-                    if (port.portName == "Text Messages" && edge.input.node is TextMessageNode textMessageNode) {
-                        subChapNode.TextList.Add(textMessageNode);
+                    if (port.portName == "Start of Texts" && edge.input.node is TextMessageNode textMessageNode) {
+                        subChapNode.FirstText = textMessageNode;
                     }
                     else if (port.portName == "Responses" && edge.input.node is ResponseNode responseNode) {
                         subChapNode.Responses.Add(responseNode);
                     }
                 }
-
+                else if (this is TextMessageNode textNode && port.portName == "Next Text" && edge.input.node is TextMessageNode textMessageNode1) {
+                    textNode.NextTextNode = textMessageNode1;
+                }
                 else if (this is ChapterNode chapterNode && port.portName == "SubChapters" && edge.input.node is SubChapNode subChap) {
                     chapterNode.SubChaps.Add(subChap);
                 }
@@ -49,12 +51,15 @@ namespace JSONMapper {
         public virtual void OnDisconnected(Port port, Edge edge) {
             if (port.direction == Direction.Output) {
                 if (this is SubChapNode subChapNode) {
-                    if (port.portName == "Text Messages" && edge.input.node is TextMessageNode textMessageNode) {
-                        subChapNode.TextList.Remove(textMessageNode);
+                    if (port.portName == "Start of Texts" && edge.input.node is TextMessageNode textMessageNode) {
+                        subChapNode.FirstText = null;
                     }
                     else if (port.portName == "Responses" && edge.input.node is ResponseNode responseNode) {
                         subChapNode.Responses.Remove(responseNode);
                     }
+                }
+                else if (this is TextMessageNode textNode && port.portName == "Next Text" && edge.input.node is TextMessageNode textMessageNode1) {
+                    textNode.NextTextNode = null;
                 }
                 else if (this is ChapterNode chapterNode && port.portName == "SubChapters" && edge.input.node is SubChapNode subChap) {
                     chapterNode.SubChaps.Remove(subChap);

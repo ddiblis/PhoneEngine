@@ -37,12 +37,17 @@ namespace JSONMapper {
         public string TextContent;
         public float TextDelay;
 
+        public TextMessageNode NextTextNode;
+
+
         private readonly TextField TextMessageField;
         private readonly TextField AltContactField;
         private readonly DropdownField TypeDropDown;
         private readonly DropdownField DelayDropDown;
         private readonly DropdownField TendencyDropDown;
         public Port ParentSubChapPort;
+        public Port PrevText;
+        public Port NextText;
 
 
         public TextMessageNode(GraphView graphView) : base(graphView) {
@@ -52,6 +57,14 @@ namespace JSONMapper {
             ParentSubChapPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi, typeof(SubChapNode));
             ParentSubChapPort.portName = "Parent SubChap";
             inputContainer.Add(ParentSubChapPort);
+
+            PrevText = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(TextMessageNode));
+            PrevText.portName = "Previous Text";
+            inputContainer.Add(PrevText);
+
+            NextText = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(TextMessageNode));
+            NextText.portName = "Next Text";
+            outputContainer.Add(NextText);
 
             var CustomDataContainer = new VisualElement();
             CustomDataContainer.AddToClassList("jm-node__custom-data-container");
