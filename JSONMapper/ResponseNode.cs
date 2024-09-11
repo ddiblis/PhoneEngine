@@ -6,7 +6,10 @@ using UnityEngine.UIElements;
 
 namespace JSONMapper {
     public class ResponseNode : BaseNode {
-        readonly List<string> TypeOptions = new() { "Type of Text", "Sent Text 0", "Sent Image 2", "Sent Emoji 4" };
+        readonly List<string> TypeOptions = new() { "Type of Text", "Sent Text", "Sent Image", "Sent Emoji" };
+        readonly List<int> TypeValues = new() {
+            0, 0, 2, 4
+        };
 
         public bool RespTree = false;
         public string TextContent;
@@ -44,7 +47,7 @@ namespace JSONMapper {
             TextMessageField.RegisterValueChangedCallback(evt => TextContent = evt.newValue);
             
             TypeDropDown = new DropdownField("Text Type", TypeOptions, 0);
-            TypeDropDown.RegisterValueChangedCallback(evt => Type = int.Parse(Regex.Match(evt.newValue, @"\d+").Value));
+            TypeDropDown.RegisterValueChangedCallback(evt => Type = TypeValues[TypeOptions.FindIndex(x => x == evt.newValue)]);
 
             NextSubChapField = new IntegerField("Next Sub Chapter") { value = SubChapNum };
             NextSubChapField.RegisterValueChangedCallback(evt => SubChapNum = evt.newValue);
@@ -94,21 +97,25 @@ namespace JSONMapper {
             RefreshPorts();
         }
 
+        public void UpdateSubChapNum() {
+            NextSubChapField.value = SubChapNum;
+        }
+
         public void UpdateFields() {
-            int TypeIndex = TypeOptions.FindIndex(x => x.Contains("" + Type));
+            int TypeIndex = TypeValues.FindIndex(x => x == Type);
             TextMessageField.value = TextContent;
             ResponseTreeToggle.value = RespTree;
             NextSubChapField.value = SubChapNum;
-            TypeDropDown.value = TypeOptions[TypeIndex >= 0 ? TypeIndex : 0];
+            TypeDropDown.value = TypeOptions[TypeIndex > 0 ? TypeIndex : 1];
         }
 
         public ResponseData ToResponseNodeData() {
-            Rect rect = this.GetPosition();
+            Rect rect = GetPosition();
             return new ResponseData {
-                RespTree = this.RespTree,
-                TextContent = this.TextContent,
-                SubChapNum = this.SubChapNum,
-                Type = this.Type,
+                RespTree = RespTree,
+                TextContent = TextContent,
+                SubChapNum = SubChapNum,
+                Type = Type,
                 location = new Location {
                     x = rect.x,
                     y = rect.y,
@@ -120,10 +127,10 @@ namespace JSONMapper {
 
         public Response ToResponseData() {
             return new Response {
-                RespTree = this.RespTree,
-                TextContent = this.TextContent,
-                SubChapNum = this.SubChapNum,
-                Type = this.Type
+                RespTree = RespTree,
+                TextContent = TextContent,
+                SubChapNum = SubChapNum,
+                Type = Type
             };
         }
 

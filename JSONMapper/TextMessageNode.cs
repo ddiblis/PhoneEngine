@@ -13,19 +13,19 @@ namespace JSONMapper {
         // Side, maybe do the same thing to images 
         // Also implement the values system you devised, just remember what it was
         readonly List<string> TypeOptions = new() {
-            "Type of Text", "Recieved Text 1", "Recieved Image 3", "Recieved Emoji 5", "Chapter end 6", "Recieved Contact 7", "Indicate Time 8"
+            "Type of Text", "Recieved Text", "Recieved Image", "Recieved Emoji", "Chapter end", "Recieved Contact", "Indicate Time"
         };
         readonly List<int> TypeValues = new() {
-            0, 0, 1, 3, 5, 6, 7, 8
+            0, 1, 3, 5, 6, 7, 8
         };
         readonly List<string> DelayOptions = new() {
-            "Delay Options", "Almost Instant 0.16", "Very Fast 0.57", "Fast 1.1", "Medium 2.1", "Slow 2.5", "Very slow 3.5", "Dramatic Pause 5.1"
+            "Delay Options", "Almost Instant", "Very Fast", "Fast", "Medium", "Slow", "Very slow", "Dramatic Pause"
         };
         readonly List<float> DelayValues = new() {
             0, 0.16f, 0.57f, 1.1f, 2.1f, 2.5f, 3.5f, 5.1f 
         };
         readonly List<string> TendencyOptions = new() {
-            "Tendency Options", "Neutral 0", "Submissive 1", "Dominant 2"
+            "Tendency Options", "Neutral", "Submissive", "Dominant"
         };
         readonly List<int> TendencyValues = new() {
             0, 0, 1, 2
@@ -78,13 +78,14 @@ namespace JSONMapper {
             TextMessageField.RegisterValueChangedCallback(evt => TextContent = evt.newValue);
 
             TypeDropDown = new DropdownField("Text Type", TypeOptions, 0);
-            TypeDropDown.RegisterValueChangedCallback(evt => Type = int.Parse(Regex.Match(evt.newValue, @"\d+").Value));
+            TypeDropDown.RegisterValueChangedCallback(evt => Type = TypeValues[TypeOptions.FindIndex(x => x == evt.newValue)]);
 
             TendencyDropDown = new DropdownField("Tendency", TendencyOptions, 0);
-            TendencyDropDown.RegisterValueChangedCallback(evt => Tendency = int.Parse(Regex.Match(evt.newValue, @"\d+").Value));
+            TendencyDropDown.RegisterValueChangedCallback(evt => Tendency = TendencyValues[TendencyOptions.FindIndex(x => x == evt.newValue)]);
 
             DelayDropDown = new DropdownField("Text Delay", DelayOptions, 0);
-            DelayDropDown.RegisterValueChangedCallback(evt => TextDelay = float.Parse(Regex.Match(evt.newValue, @"\d\.\d{1,2}").Value));
+            TendencyDropDown.RegisterValueChangedCallback(evt => TextDelay = DelayValues[DelayOptions.FindIndex(x => x == evt.newValue)]);
+
 
             AltContactField.AddClasses(
                 "jm-node__subchap-textfield",
@@ -121,24 +122,24 @@ namespace JSONMapper {
         }
 
         public void UpdateFields() {
-            int TypeIndex = TypeOptions.FindIndex(x => x.Contains("" + Type));
-            int DelayIndex = DelayOptions.FindIndex(x => x.Contains("" + TextDelay));
-            int TendencyIndex = TendencyOptions.FindIndex(x => x.Contains("" + Tendency));
+            int TypeIndex = TypeValues.FindIndex(x => x == Type);
+            int DelayIndex = DelayValues.FindIndex(x => x == TextDelay);
+            int TendencyIndex = TendencyValues.FindIndex(x => x == Tendency);
             TextMessageField.value = TextContent;
             AltContactField.value = AltContact;
-            TendencyDropDown.value = TendencyOptions[TendencyIndex >= 0 ? TendencyIndex : 0];
-            TypeDropDown.value = TypeOptions[TypeIndex >= 0 ? TypeIndex : 0];
-            DelayDropDown.value = DelayOptions[DelayIndex >= 0 ? DelayIndex : 0];
+            TendencyDropDown.value = TendencyOptions[TendencyIndex > 0 ? TendencyIndex : 1];
+            TypeDropDown.value = TypeOptions[TypeIndex > 0 ? TypeIndex : 1];
+            DelayDropDown.value = DelayOptions[DelayIndex > 0 ? DelayIndex : 1];
         }
 
         public TextMessageData ToTextMessageNodeData() {
-            Rect rect = this.GetPosition();
+            Rect rect = GetPosition();
             return new TextMessageData {
-                Type = this.Type,
-                AltContact = this.AltContact,
-                TextContent = this.TextContent,
-                TextDelay = this.TextDelay,
-                Tendency = this.Tendency,
+                Type = Type,
+                AltContact = AltContact,
+                TextContent = TextContent,
+                TextDelay = TextDelay,
+                Tendency = Tendency,
                 location = new Location {
                     x = rect.x,
                     y = rect.y,
@@ -150,11 +151,11 @@ namespace JSONMapper {
 
         public TextMessage ToTextMessageData() {
             return new TextMessage {
-                Type = this.Type,
-                AltContact = this.AltContact,
-                TextContent = this.TextContent,
-                TextDelay = this.TextDelay,
-                Tendency = this.Tendency
+                Type = Type,
+                AltContact = AltContact,
+                TextContent = TextContent,
+                TextDelay = TextDelay,
+                Tendency = Tendency
             };
         }
 

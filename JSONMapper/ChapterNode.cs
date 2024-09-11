@@ -63,11 +63,11 @@ namespace JSONMapper {
         }
 
         public ChapterData ToChapterNodeData() {
-            Rect rect = this.GetPosition();
+            Rect rect = GetPosition();
             return new ChapterData {
-                AllowMidrolls = this.allowMidrolls,
-                StoryCheckpoint = this.Checkpoint,
-                SubChaps = this.SubChaps.ConvertAll(subChapNode => subChapNode.ToSubChapNodeData()),
+                AllowMidrolls = allowMidrolls,
+                StoryCheckpoint = Checkpoint,
+                SubChaps = SubChaps.ConvertAll(subChapNode => subChapNode.ToSubChapNodeData()),
                 location = new Location {
                     x = rect.x,
                     y = rect.y,
@@ -79,9 +79,9 @@ namespace JSONMapper {
         
         public Chapter ToChapterData() {
             return new Chapter {
-                AllowMidrolls = this.allowMidrolls,
-                StoryCheckpoint = this.Checkpoint,
-                SubChaps = this.SubChaps.ConvertAll(subChapNode => subChapNode.ToSubChapData())
+                AllowMidrolls = allowMidrolls,
+                StoryCheckpoint = Checkpoint,
+                SubChaps = SubChaps.ConvertAll(subChapNode => subChapNode.ToSubChapData())
             };
         }
 

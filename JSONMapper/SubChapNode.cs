@@ -112,7 +112,7 @@ namespace JSONMapper {
         }
 
         public SubChapData ToSubChapNodeData() {
-            Rect rect = this.GetPosition();
+            Rect rect = GetPosition();
             List<TextMessageNode> TextList = new();
             if (FirstText != null) {
                 TextList.Add(FirstText);
@@ -128,11 +128,11 @@ namespace JSONMapper {
                 }
             }
             return new SubChapData {
-                Contact = this.Contact,
-                UnlockInstaPostsAccount = this.UnlockInstaPostsAccount,
-                UnlockPosts = this.UnlockPosts,
+                Contact = Contact,
+                UnlockInstaPostsAccount = UnlockInstaPostsAccount,
+                UnlockPosts = UnlockPosts,
                 TextList = TextList.ConvertAll(textNode => textNode.ToTextMessageNodeData()),
-                Responses = this.Responses.ConvertAll(responseNode => responseNode.ToResponseNodeData()),
+                Responses = Responses.ConvertAll(responseNode => responseNode.ToResponseNodeData()),
                 location = new Location {
                     x = rect.x,
                     y = rect.y,
@@ -158,11 +158,11 @@ namespace JSONMapper {
                 }
             }
             return new SubChap {
-                Contact = this.Contact,
-                UnlockInstaPostsAccount = this.UnlockInstaPostsAccount,
-                UnlockPosts = this.UnlockPosts,
+                Contact = Contact,
+                UnlockInstaPostsAccount = UnlockInstaPostsAccount,
+                UnlockPosts = UnlockPosts,
                 TextList = TextList.ConvertAll(textNode => textNode.ToTextMessageData()),
-                Responses = this.Responses.ConvertAll(responseNode => responseNode.ToResponseData())
+                Responses = Responses.ConvertAll(responseNode => responseNode.ToResponseData())
             };
         }
 
