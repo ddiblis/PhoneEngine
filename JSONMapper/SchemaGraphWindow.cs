@@ -39,7 +39,7 @@ namespace JSONMapper {
 
         private void OnEditorUpdate() {
             if (EditorApplication.timeSinceStartup >= AutoSaveTimer) {
-                AutoSaveAsAsset();
+                // AutoSaveAsAsset();
                 // Reset the next action time
                 AutoSaveTimer = (float)EditorApplication.timeSinceStartup + delayTime;
             }
@@ -105,6 +105,7 @@ namespace JSONMapper {
             foreach (var node in graphView.nodes) {
                 if (node is ChapterNode chapterNode) {
                     graphData.Chapters.Add(chapterNode.ToChapterNodeData());
+                    break;
                 }
             }
 

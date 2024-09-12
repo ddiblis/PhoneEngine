@@ -363,6 +363,7 @@ public class MessagingHandlers : MonoBehaviour {
 
     // Add all handlers for stat changes here
     // Unfortunately I can't think of a better way to handle custom options than this
+    // Simply add a command in this style <color=#ff0040>[Tendency: Dominant]</color> and handle the different choices here
     private void HandleStatChange(string TextContent) {
         if (TextContent.Contains("Tendency")) {
             if(TextContent.Contains("Neutral")) {
@@ -375,13 +376,6 @@ public class MessagingHandlers : MonoBehaviour {
                 SF.saveFile.Stats.Tendency = (int)Tendency.Dominant;
             }
         }
-        // if (TextContent.Contains("LingerieColour")) {
-        //     if (TextContent.Contains("White")) {
-        //         SF.saveFile.Stats.LingerieColour1 = false;
-        //     } else {
-        //         SF.saveFile.Stats.LingerieColour1 = true;
-        //     }
-        // }
     }
 
     // handles the building and pushing of the text choice buttons into the choices list

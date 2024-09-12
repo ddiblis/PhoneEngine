@@ -16,9 +16,11 @@ namespace JSONMapper {
         public int SubChapNum;
         public int Type;
 
+        public SubChapNode NextSubChap;
+
         private readonly TextField TextMessageField;
         private readonly Toggle ResponseTreeToggle;
-        private readonly IntegerField NextSubChapField;
+        // private readonly IntegerField NextSubChapField;
         private readonly DropdownField TypeDropDown;
         public Port ParentSubChapPort;
         public Port NextSubChapterNodePort;
@@ -28,7 +30,7 @@ namespace JSONMapper {
 
             var ParentSubChapPortContainer = new VisualElement();
 
-            ParentSubChapPort = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Single, typeof(SubChapNode));
+            ParentSubChapPort = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Multi, typeof(SubChapNode));
             ParentSubChapPort.portName = "Parent SubChap";
             ParentSubChapPortContainer.Add(ParentSubChapPort);
 
@@ -49,8 +51,8 @@ namespace JSONMapper {
             TypeDropDown = new DropdownField("Text Type", TypeOptions, 0);
             TypeDropDown.RegisterValueChangedCallback(evt => Type = TypeValues[TypeOptions.FindIndex(x => x == evt.newValue)]);
 
-            NextSubChapField = new IntegerField("Next Sub Chapter") { value = SubChapNum };
-            NextSubChapField.RegisterValueChangedCallback(evt => SubChapNum = evt.newValue);
+            // NextSubChapField = new IntegerField("Next Sub Chapter") { value = SubChapNum };
+            // NextSubChapField.RegisterValueChangedCallback(evt => SubChapNum = evt.newValue);
 
             ResponseTreeToggle = new Toggle("Response Tree") { value = RespTree };
             ResponseTreeToggle.RegisterValueChangedCallback(evt => RespTree = evt.newValue);
@@ -67,10 +69,10 @@ namespace JSONMapper {
                 "jm-node__textfield",
                 "jm-node__quote-textfield"
             );
-            NextSubChapField.AddClasses(
-                "jm-node__textfield",
-                "jm-node__quote-textfield"
-            );
+            // NextSubChapField.AddClasses(
+            //     "jm-node__textfield",
+            //     "jm-node__quote-textfield"
+            // );
             ParentSubChapPortContainer.AddClasses(
                 "jm-node__custom-data-container"
             );
@@ -88,7 +90,7 @@ namespace JSONMapper {
             Foldout.Add(ResponseTreeToggle);
             Foldout.Add(TextMessageField);
             Foldout.Add(TypeDropDown);
-            Foldout.Add(NextSubChapField);
+            // Foldout.Add(NextSubChapField);
             CustomDataContainer.Add(Foldout);
             extensionContainer.Add(CustomDataContainer);
             CustomDataContainer.Add(NextSubChapPortContainer);
@@ -97,15 +99,15 @@ namespace JSONMapper {
             RefreshPorts();
         }
 
-        public void UpdateSubChapNum() {
-            NextSubChapField.value = SubChapNum;
-        }
+        // public void UpdateSubChapNum() {
+        //     NextSubChapField.value = SubChapNum;
+        // }
 
         public void UpdateFields() {
             int TypeIndex = TypeValues.FindIndex(x => x == Type);
             TextMessageField.value = TextContent;
             ResponseTreeToggle.value = RespTree;
-            NextSubChapField.value = SubChapNum;
+            // NextSubChapField.value = SubChapNum;
             TypeDropDown.value = TypeOptions[TypeIndex > 0 ? TypeIndex : 1];
         }
 

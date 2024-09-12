@@ -34,18 +34,28 @@ namespace JSONMapper {
             LoadSubChapNodes(Chapter, graphView, ChapterNode);
         }
 
-        private void ConnectSubChapToParentResponses(GraphView graphView, Port InputPort, int index) {
+        private void ConnectSubChapToParentResponses(GraphView graphView) {
             List<ResponseNode> ResponseParentNodes = new();
+            SubChapNode subChap = null;
 
-            foreach (var node in graphView.nodes) {
-                if (node is ResponseNode responseNode && responseNode.SubChapNum == index) {
-                    ResponseParentNodes.Add(responseNode);
+            foreach(var node in graphView.nodes) {
+                if (node is ResponseNode responseNode) {
+                    foreach(var node1 in graphView.nodes) {
+                        if (node1 is SubChapNode subChapNode && subChapNode.SubChapIndex == responseNode.SubChapNum) {
+                            subChap = subChapNode;
+                            ResponseParentNodes.Add(responseNode);
+                            responseNode.NextSubChap = subChapNode;
+                        }
+                    }
+                    foreach (var respNode in ResponseParentNodes) {
+                        ConnectNodes(subChap.ParentResponsePort, respNode.NextSubChapterNodePort, graphView);
+                    }
                 }
-            }
-            foreach (var respNode in ResponseParentNodes) {
-                ConnectNodes(InputPort, respNode.NextSubChapterNodePort, graphView);
+                ResponseParentNodes = new();
+                subChap = null;
             }
         }
+
 
         private void ConnectNodes(Port InputPort, Port OutputPort, GraphView graphView) {
             Edge Connection = new() {
@@ -62,7 +72,8 @@ namespace JSONMapper {
                 var SubChapNode = new SubChapNode(graphView) {
                 Contact = subChap.Contact,
                 UnlockInstaPostsAccount = subChap.UnlockInstaPostsAccount,
-                UnlockPosts = subChap.UnlockPosts
+                UnlockPosts = subChap.UnlockPosts,
+                SubChapIndex = index
                 };
                 SubChapNode.UpdateFields();
                 SubChapNode.SetPosition(new Rect {
@@ -73,19 +84,21 @@ namespace JSONMapper {
                 });
                 graphView.AddElement(SubChapNode);
                 // Creates the connections and adds them to the list inside the parent node
-                ConnectNodes(SubChapNode.ParentChapterPort, ChapterNode.SubChaptersPort, graphView);
-                ChapterNode.SubChaps.Add(SubChapNode);
-                ConnectSubChapToParentResponses(graphView, SubChapNode.ParentResponsePort, index);
-                LoadTextMessageNodes(subChap, graphView, SubChapNode);
+                if (index == 0) {
+                    ChapterNode.FirstSubChap = SubChapNode;
+                    ConnectNodes(SubChapNode.ParentChapterPort, ChapterNode.SubChaptersPort, graphView);
+                } 
+                LoadTextMessageNodes(subChap.TextList, graphView, SubChapNode);
                 LoadResponseNodes(subChap, graphView, SubChapNode);
                 index += 1;
             }
+            ConnectSubChapToParentResponses(graphView);
         }
 
-        private void LoadTextMessageNodes(SubChapData subChap, GraphView graphView, SubChapNode SubChapNode) {
+        private void LoadTextMessageNodes(List<TextMessageData> textList, GraphView graphView, SubChapNode SubChapNode) {
             TextMessageNode PrevTextNode = null;
-            for (int i = 0; i < subChap.TextList.Count; i ++){
-                TextMessageData text = subChap.TextList[i];
+            for (int i = 0; i < textList.Count; i ++) {
+                TextMessageData text = textList[i];
                 var TextMessageNode = new TextMessageNode(graphView) {
                     AltContact = text.AltContact,
                     TextContent = text.TextContent,
@@ -131,6 +144,7 @@ namespace JSONMapper {
                 graphView.AddElement(ResponseNode);
                 ConnectNodes(ResponseNode.ParentSubChapPort, SubChapNode.ResponsesPort, graphView);
                 SubChapNode.Responses.Add(ResponseNode);
+
             }
         }
 

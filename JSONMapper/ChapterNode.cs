@@ -3,21 +3,25 @@ using UnityEngine.UIElements;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
+using Unity.VisualScripting;
 
 namespace JSONMapper {
     public class ChapterNode : BaseNode {
         public bool allowMidrolls;
         public int Checkpoint;
 
+        public SubChapNode FirstSubChap;
 
         private readonly Toggle allowMidrollsToggle;
         private readonly DropdownField CheckpointDropdown;
+
+        List<SubChapNode> SubChaps = new();
+
 
         readonly List<string> CheckpointOptions = new() {
             "Checkpoint Options", "During trip 0"
         };
         public Port SubChaptersPort;
-        public List<SubChapNode> SubChaps = new();
 
         public ChapterNode(GraphView graphView) : base(graphView) {
             title = "Chapter";
@@ -62,8 +66,46 @@ namespace JSONMapper {
             allowMidrollsToggle.value = allowMidrolls;
         }
 
+        private void LevelOrder(SubChapNode rootNode) {
+            if (rootNode == null) return;
+            Queue<SubChapNode> queue = new();
+            queue.Enqueue(rootNode);
+            while (queue.Count > 0) {
+                SubChapNode node = queue.Dequeue();
+                int indexOfSubChap = SubChaps.FindIndex(x => x == node);
+                if (indexOfSubChap < 0) {
+                    SubChaps.Add(node);
+                } 
+
+                if (
+                    0 < node.Responses.Count 
+                    && node.Responses[0].NextSubChap != null
+                    && !queue.Contains(node.Responses[0].NextSubChap)
+                    ) queue.Enqueue(node.Responses[0].NextSubChap);
+                
+                if (
+                    1 < node.Responses.Count 
+                    && node.Responses[1].NextSubChap != null
+                    && !queue.Contains(node.Responses[1].NextSubChap)
+                    ) queue.Enqueue(node.Responses[1].NextSubChap);
+                
+            }
+            foreach(SubChapNode subChap in SubChaps) {
+                if (0 < subChap.Responses.Count) {
+                    int indexOfSubChap = SubChaps.FindIndex(x => x == subChap.Responses[0].NextSubChap);
+                    subChap.Responses[0].SubChapNum = indexOfSubChap;
+                }
+                if (1 < subChap.Responses.Count) {
+                    int indexOfSubChap = SubChaps.FindIndex(x => x == subChap.Responses[1].NextSubChap);
+                    subChap.Responses[1].SubChapNum = indexOfSubChap;
+                }
+            }
+        }
+
         public ChapterData ToChapterNodeData() {
             Rect rect = GetPosition();
+            LevelOrder(FirstSubChap);
+
             return new ChapterData {
                 AllowMidrolls = allowMidrolls,
                 StoryCheckpoint = Checkpoint,
@@ -78,6 +120,8 @@ namespace JSONMapper {
         }
         
         public Chapter ToChapterData() {
+            LevelOrder(FirstSubChap);
+
             return new Chapter {
                 AllowMidrolls = allowMidrolls,
                 StoryCheckpoint = Checkpoint,

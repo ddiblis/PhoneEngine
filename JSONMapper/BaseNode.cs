@@ -33,18 +33,10 @@ namespace JSONMapper {
                     textNode.NextTextNode = textMessageNode1;
                 }
                 else if (this is ChapterNode chapterNode && port.portName == "SubChapters" && edge.input.node is SubChapNode subChap) {
-                    chapterNode.SubChaps.Add(subChap);
+                    chapterNode.FirstSubChap = subChap;
                 }
-                else if (this is ResponseNode responseNode && port.portName == "Next SubChap" && edge.input.node is SubChapNode subChap1) {
-                    ChapterNode chapNode = null;
-                    foreach (var node in graphView.nodes) {
-                        if (node is ChapterNode chapterNode1) {
-                            chapNode = chapterNode1;
-                            break;
-                        }
-                    }
-                    responseNode.SubChapNum = chapNode.SubChaps.FindIndex(x => x == subChap1);
-                    responseNode.UpdateSubChapNum();
+                else if(this is ResponseNode responseNode && port.portName == "Next SubChap" && edge.input.node is SubChapNode subChap1) {
+                    responseNode.NextSubChap = subChap1;
                 }
             }
         }
@@ -63,11 +55,11 @@ namespace JSONMapper {
                     textNode.NextTextNode = null;
                 }
                 else if (this is ChapterNode chapterNode && port.portName == "SubChapters" && edge.input.node is SubChapNode subChap) {
-                    chapterNode.SubChaps.Remove(subChap);
+                    chapterNode.FirstSubChap = null;
                 }
                 else if (this is ResponseNode responseNode && port.portName == "Next SubChap" && edge.input.node is SubChapNode) {
-                    responseNode.SubChapNum = 0;
-                    responseNode.UpdateSubChapNum();
+                    responseNode.NextSubChap = null;
+
                 }
             }
         }
