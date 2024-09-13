@@ -2,101 +2,10 @@
     "Posts": [
         {
             "index": 0,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "Althea-mirroselfie1IP",
-            "Description" : "My friends pressured me into making this account, Hi insta!!!"
-        },
-        {
-            "index": 1,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "Althea-Sundress1IP",
-            "Description" : "First date. I'm a little nervous, wish me luck!"
-        },
-        {
-            "index": 2,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "Althea-car1IP",
-            "Description" : "Road trip with the girlies!! I hope the bug repellant works XP"
-        },
-        {
-            "index": 3,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "bg-Forest1IP",
-            "Description" : "BUG REPELLANT DID NOT WORK!!! Pretty views though"
-        },
-        {
-            "index": 4,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "Althea-longhair1IP",
-            "Description" : "Really missing the Long hair lately"
-        },
-        {
-            "index": 5,
-            "CharacterName" : "Alejandra",
-            "UserName" : "Ale_Sorzano",
-            "Image" : "Alejandra-proshoot1IP",
-            "Description" : "My first shoot!"
-        },
-        {
-            "index": 6,
-            "CharacterName" : "Alejandra",
-            "UserName" : "Ale_Sorzano",
-            "Image" : "Alejandra-classroom1IP",
-            "Description" : "Definitely violating the dress code with this one XP"
-        },
-        {
-            "index": 7,
-            "CharacterName" : "Alejandra",
-            "UserName" : "Ale_Sorzano",
-            "Image" : "Alejandra-backalley1IP",
-            "Description" : "So many side eyes trying to take this out in public lmao, like just enjoy the free show XD"
-        },
-        {
-            "index": 8,
-            "CharacterName" : "Alejandra",
-            "UserName" : "Ale_Sorzano",
-            "Image" : "Alejandra-cafe1IP",
-            "Description" : "Milkshakes, boys, and yards. You know how it is"
-        },
-        {
-            "index": 9,
-            "CharacterName" : "Julia",
-            "UserName" : "JJFitness",
-            "Image" : "Julia-gym1IP",
-            "Description" : "Lifting so much weight so I can carry the weight of being the funny one in my friend group"
-        },
-        {
-            "index": 10,
-            "CharacterName" : "Julia",
-            "UserName" : "JJFitness",
-            "Image" : "Julia-burgers1IP",
-            "Description" : "After a long workout this is all I can think about..."
-        },
-        {
-            "index": 11,
-            "CharacterName" : "Julia",
-            "UserName" : "JJFitness",
-            "Image" : "Julia-gym2IP",
-            "Description" : "Peep the tris, and ONLY the tris!!!"
-        },
-        {
-            "index": 12,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "Althea-mall1IP",
-            "Description" : "THIS GIRL IS ALWAYS LATE!"
-        },
-        {
-            "index": 13,
-            "CharacterName" : "Althea",
-            "UserName" : "KuroNeko6.9",
-            "Image" : "Althea-bar3IP",
-            "Description" : "Here's to new adventures"
+            "CharacterName" : "contact",
+            "UserName" : "username",
+            "Image" : "image-name",
+            "Description" : "description"
         }
     ]
 }

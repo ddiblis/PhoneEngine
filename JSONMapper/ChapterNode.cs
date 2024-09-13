@@ -26,8 +26,8 @@ namespace JSONMapper {
         public ChapterNode(GraphView graphView) : base(graphView) {
             title = "Chapter";
 
-            SubChaptersPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Multi, typeof(SubChapNode));
-            SubChaptersPort.portName = "SubChapters";
+            SubChaptersPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(SubChapNode));
+            SubChaptersPort.portName = "First SubChapter";
             inputContainer.Add(SubChaptersPort);
 
             var CustomDataContainer = new VisualElement();

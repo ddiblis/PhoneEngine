@@ -1,52 +1,16 @@
 {
     "ContactList": [
-        "Althea",
-        "Alejandra",
-        "Julia"
+        "contact"
     ],
     "ChapterList": [
-        "Chapter1",
-        "Chapter2"
+        "Chapter"
     ],
     "PhotoList": [
         "bg-snowmountain2",
         "bg-snowmountains",
         "bg-blackcat",
         "bg-starrynight",
-        "Althea-selfie1",
-        "Althea-mirroselfie1",
-        "Althea-Sundress1",
-        "Althea-car1",
-        "bg-Forest1",
-        "Althea-longhair1",
-        "Alejandra-proshoot1",
-        "Alejandra-classroom1",
-        "Alejandra-backalley1",
-        "Alejandra-cafe1",
-        "Julia-gym1",
-        "Julia-burgers1",
-        "Julia-gym2",
-        "Althea-mall1",
-        "Althea-blackLingerie1",
-        "Althea-whiteLingerie1",
-        "Althea-bar1",
-        "Althea-bar2",
-        "Althea-bar3",
-        "Althea-whiteLingerie2",
-        "Althea-whiteLingerie3",
-        "Althea-whiteLingerie4",
-        "Althea-whiteLingerie5",
-        "Althea-whiteLingerie6",
-        "Althea-whiteLingerie7",
-        "Althea-whiteLingerie8",
-        "Althea-blackLingerie2",
-        "Althea-blackLingerie3",
-        "Althea-blackLingerie4",
-        "Althea-blackLingerie5",
-        "Althea-blackLingerie6",
-        "Althea-blackLingerie7",
-        "Althea-blackLingerie8",
-        "Althea-goingToSleep1"
+
     ],
     "MidrollsList": []
 }

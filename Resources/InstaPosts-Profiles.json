@@ -1,25 +1,11 @@
 {
     "Profiles": [
         {
-            "Name": "Althea",
-            "Username": "KuroNeko6.9",
-            "Followers": "248",
-            "Following": "739",
-            "ProfileInfo": "Am I doing this right? Just here for the memes"
-        },
-        {
-            "Name": "Alejandra",
-            "Username": "Ale_Sorzano",
-            "Followers": "120k",
-            "Following": "37",
-            "ProfileInfo": "Model/Traveller/Lifestyle 14/193 countries"
-        },
-        {
-            "Name": "Julia",
-            "Username": "JJFitness",
-            "Followers": "30k",
-            "Following": "264",
-            "ProfileInfo": "Foodie | fitness freak | 22"
+            "Name": "Contact",
+            "Username": "Username",
+            "Followers": "num",
+            "Following": "num",
+            "ProfileInfo": "profile info"
         }
     ]
 }

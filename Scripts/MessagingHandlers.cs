@@ -303,12 +303,6 @@ public class MessagingHandlers : MonoBehaviour {
                     case (int)Tendency.Neutral:
                         TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
                     break;
-                    case (int)Tendency.Dominant:
-                        TextPush(TypeOfText.recText, Prefabs.DomText, textMessage.TextContent);
-                    break;
-                    case (int)Tendency.Submissive:
-                        TextPush(TypeOfText.recText, Prefabs.SubText, textMessage.TextContent);
-                    break;
                 }
             break;
             case TypeOfText.sentEmoji:
@@ -368,12 +362,6 @@ public class MessagingHandlers : MonoBehaviour {
         if (TextContent.Contains("Tendency")) {
             if(TextContent.Contains("Neutral")) {
                 SF.saveFile.Stats.Tendency = (int)Tendency.Neutral;
-            }
-            else if (TextContent.Contains("Submissive")) {
-                SF.saveFile.Stats.Tendency = (int)Tendency.Submissive;
-            } 
-            else if (TextContent.Contains("Dominant")) {
-                SF.saveFile.Stats.Tendency = (int)Tendency.Dominant;
             }
         }
     }

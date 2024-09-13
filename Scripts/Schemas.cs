@@ -235,12 +235,9 @@ public enum TypeOfText {
     indicateTime = 8,
 }
 public enum Tendency {
-    Neutral = 0,
-    Submissive = 1,
-    Dominant = 2
+    Neutral = 0
 }
 public enum StoryCheckpoint {
-    DuringTrip = 0,
-    // Come up with the rest here
+
 }
 /* ====================== End ============================ */

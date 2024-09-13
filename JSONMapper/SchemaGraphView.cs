@@ -45,14 +45,14 @@ namespace JSONMapper {
             switch (startNode) {
                 case ChapterNode:
                     if (
-                        startPort.portName == "SubChapters"
+                        startPort.portName == "First SubChapter"
                         && targetPort.portName == "Parent Chapter"
                     ) return true;
                 break;
                 case SubChapNode:
                     if (
                         startPort.portName == "Parent Chapter"
-                        && targetPort.portName == "SubChapters"
+                        && targetPort.portName == "First SubChapter"
                     ) return true;
                     if (
                         startPort.portName == "Start of Texts"
