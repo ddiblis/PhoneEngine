@@ -105,8 +105,8 @@ namespace JSONMapper {
             this.AddManipulator(new ContextualMenuManipulator(evt => {
                 evt.menu.AppendAction("Add Chapter Node", action => AddNode(new ChapterNode(this), GetLocalMousePosition(action.eventInfo.localMousePosition)));
                 evt.menu.AppendAction("Add SubChap Node", action => AddNode(new SubChapNode(this), GetLocalMousePosition(action.eventInfo.localMousePosition)));
-                evt.menu.AppendAction("Add TextMessage Node", action => AddNode(new TextMessageNode(this), GetLocalMousePosition(action.eventInfo.localMousePosition)));
-                evt.menu.AppendAction("Add Response Node", action => AddNode(new ResponseNode(this), GetLocalMousePosition(action.eventInfo.localMousePosition)));
+                evt.menu.AppendAction("Add TextMessage Node", action => AddNode(new TextMessageNode(this, 0), GetLocalMousePosition(action.eventInfo.localMousePosition)));
+                evt.menu.AppendAction("Add Response Node", action => AddNode(new ResponseNode(this, 0), GetLocalMousePosition(action.eventInfo.localMousePosition)));
             }));
         }
 

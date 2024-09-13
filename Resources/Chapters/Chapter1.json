@@ -55,6 +55,12 @@
                     "TextContent": "Hi hon",
                     "SubChapNum": 1,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Hellooo",
+                    "SubChapNum": 1,
+                    "Type": 0
                 }
             ]
         },
@@ -67,6 +73,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "grinning-sweat",
+                    "SubChapNum": 2,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "bf-laugh",
                     "SubChapNum": 2,
                     "Type": 4
                 }
@@ -147,6 +159,12 @@
                     "TextContent": "Maybe I shouldn't have been so vague",
                     "SubChapNum": 4,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "That was definitely too vague",
+                    "SubChapNum": 4,
+                    "Type": 0
                 }
             ]
         },
@@ -161,6 +179,12 @@
                     "TextContent": "bf-laugh",
                     "SubChapNum": 5,
                     "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "crying",
+                    "SubChapNum": 5,
+                    "Type": 4
                 }
             ]
         },
@@ -173,6 +197,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "I fell while me and the guys were out and my phone broke",
+                    "SubChapNum": 6,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I ate shit on my way off the airport ramp and had to get a new phone",
                     "SubChapNum": 6,
                     "Type": 0
                 }
@@ -204,6 +234,12 @@
                     "TextContent": "Yeah... I lost all my data from the old one though",
                     "SubChapNum": 7,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Yep! brand new",
+                    "SubChapNum": 7,
+                    "Type": 0
                 }
             ]
         },
@@ -216,6 +252,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "I think I have a backup on my laptop at home",
+                    "SubChapNum": 8,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I might have a backup on my laptop",
                     "SubChapNum": 8,
                     "Type": 0
                 }
@@ -603,6 +645,12 @@
                     "TextContent": "Just gonna call me out like that?",
                     "SubChapNum": 19,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "OUCH!",
+                    "SubChapNum": 19,
+                    "Type": 0
                 }
             ]
         },
@@ -658,6 +706,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "Yes the same password!",
+                    "SubChapNum": 16,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "YES!",
                     "SubChapNum": 16,
                     "Type": 0
                 }
@@ -766,6 +820,12 @@
                     "TextContent": " god, no no that's not it at all!",
                     "SubChapNum": 22,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "It's nothing like that",
+                    "SubChapNum": 22,
+                    "Type": 0
                 }
             ]
         },
@@ -778,6 +838,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "It's just hard to talk about...",
+                    "SubChapNum": 23,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I don't know how to explain this",
                     "SubChapNum": 23,
                     "Type": 0
                 }
@@ -809,6 +875,12 @@
                     "TextContent": "No it's not like that",
                     "SubChapNum": 24,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Nothing like that!",
+                    "SubChapNum": 24,
+                    "Type": 0
                 }
             ]
         },
@@ -821,6 +893,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "You have it all backwards",
+                    "SubChapNum": 25,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "The opposite actually",
                     "SubChapNum": 25,
                     "Type": 0
                 }
@@ -839,7 +917,7 @@
                 {
                     "AltContact": "",
                     "Type": 1,
-                    "TextContent": "What do you mean backwards?",
+                    "TextContent": "What do you mean?",
                     "Tendency": 0,
                     "TextDelay": 2.0
                 },
@@ -859,6 +937,12 @@
                     "TextContent": "No no I know",
                     "SubChapNum": 26,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I trust you",
+                    "SubChapNum": 26,
+                    "Type": 0
                 }
             ]
         },
@@ -871,6 +955,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "it's just hard to talk about",
+                    "SubChapNum": 27,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I don't know how to talk about it",
                     "SubChapNum": 27,
                     "Type": 0
                 }
@@ -893,6 +983,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "sad",
+                    "SubChapNum": 28,
+                    "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "crying",
                     "SubChapNum": 28,
                     "Type": 4
                 }
@@ -931,6 +1027,12 @@
                     "TextContent": "It's just that...",
                     "SubChapNum": 29,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "How do I say this?",
+                    "SubChapNum": 29,
+                    "Type": 0
                 }
             ]
         },
@@ -943,6 +1045,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "I don't know how to talk about it",
+                    "SubChapNum": 30,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "It's hard to talk about",
                     "SubChapNum": 30,
                     "Type": 0
                 }
@@ -1200,6 +1308,12 @@
                     "TextContent": "Alright hon, I'll talk to you later",
                     "SubChapNum": 36,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Take your time",
+                    "SubChapNum": 36,
+                    "Type": 0
                 }
             ]
         },
@@ -1236,6 +1350,12 @@
                     "TextContent": "Wait, seriously??",
                     "SubChapNum": 40,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 40,
+                    "Type": 4
                 }
             ]
         },
@@ -1277,6 +1397,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "Why stop at looking?",
+                    "SubChapNum": 41,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Why only look?",
                     "SubChapNum": 41,
                     "Type": 0
                 }
@@ -1379,6 +1505,12 @@
                     "TextContent": "That's why I've never talked about it before",
                     "SubChapNum": 42,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "You see why it's hard to talk about now",
+                    "SubChapNum": 42,
+                    "Type": 0
                 }
             ]
         },
@@ -1427,6 +1559,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "Wait what??",
+                    "SubChapNum": 43,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Are you messing with me??",
                     "SubChapNum": 43,
                     "Type": 0
                 }
@@ -1479,6 +1617,12 @@
                     "TextContent": "YET??",
                     "SubChapNum": 44,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "shy",
+                    "SubChapNum": 44,
+                    "Type": 4
                 }
             ]
         },
@@ -1533,7 +1677,13 @@
             "Responses": [
                 {
                     "RespTree": false,
-                    "TextContent": "No worries hon, take all the time you need",
+                    "TextContent": "No worries hon",
+                    "SubChapNum": 36,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Take all the time you need",
                     "SubChapNum": 36,
                     "Type": 0
                 }

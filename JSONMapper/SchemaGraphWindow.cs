@@ -12,6 +12,7 @@ using Unity.VisualScripting;
 namespace JSONMapper {
 
     public class SchemaGraphWindow : EditorWindow {
+        
         private float delayTime = 320f;
         private float AutoSaveTimer;
         private SchemaGraphView graphView;
@@ -39,7 +40,7 @@ namespace JSONMapper {
 
         private void OnEditorUpdate() {
             if (EditorApplication.timeSinceStartup >= AutoSaveTimer) {
-                // AutoSaveAsAsset();
+                AutoSaveAsAsset();
                 // Reset the next action time
                 AutoSaveTimer = (float)EditorApplication.timeSinceStartup + delayTime;
             }

@@ -99,7 +99,7 @@ namespace JSONMapper {
             TextMessageNode PrevTextNode = null;
             for (int i = 0; i < textList.Count; i ++) {
                 TextMessageData text = textList[i];
-                var TextMessageNode = new TextMessageNode(graphView) {
+                var TextMessageNode = new TextMessageNode(graphView, text.Type) {
                     AltContact = text.AltContact,
                     TextContent = text.TextContent,
                     TextDelay = text.TextDelay,
@@ -128,7 +128,7 @@ namespace JSONMapper {
 
         private void LoadResponseNodes(SubChapData subChap, GraphView graphView, SubChapNode SubChapNode) {
             foreach (ResponseData resp in subChap.Responses) {
-                var ResponseNode = new ResponseNode(graphView) {
+                var ResponseNode = new ResponseNode(graphView, resp.Type) {
                     RespTree = resp.RespTree,
                     TextContent = resp.TextContent,
                     SubChapNum = resp.SubChapNum,

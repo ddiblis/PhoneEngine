@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e1f9cd18c7c62270ba9db60a432a382, type: 3}
-  m_Name: Chapter1-tree
+  m_Name: GraphData
   m_EditorClassIdentifier: 
   Chapters:
   - AllowMidrolls: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
         location:
           x: 1232
           y: -212
-          Width: 323
-          Height: 311
+          Width: 278
+          Height: 254
       location:
         x: 1020
         y: -532
@@ -264,8 +264,8 @@ MonoBehaviour:
         location:
           x: 1205
           y: 1788
-          Width: 323
-          Height: 311
+          Width: 278
+          Height: 254
       location:
         x: 1001
         y: 1473
@@ -1384,8 +1384,8 @@ MonoBehaviour:
         location:
           x: 1810
           y: 15084
-          Width: 323
-          Height: 311
+          Width: 278
+          Height: 254
       location:
         x: 1602
         y: 14774
@@ -1889,8 +1889,8 @@ MonoBehaviour:
         location:
           x: 609
           y: 19220
-          Width: 323
-          Height: 311
+          Width: 278
+          Height: 254
       location:
         x: 687
         y: 18887
@@ -2260,8 +2260,8 @@ MonoBehaviour:
         location:
           x: 155
           y: 21310
-          Width: 323
-          Height: 311
+          Width: 278
+          Height: 254
       location:
         x: -24
         y: 20992

@@ -73,8 +73,8 @@ MonoBehaviour:
         location:
           x: 295
           y: 536
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 1
@@ -82,8 +82,8 @@ MonoBehaviour:
         location:
           x: 716
           y: 536
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 514
         y: 193
@@ -110,7 +110,7 @@ MonoBehaviour:
           x: 1177
           y: 895
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Those questions will have to wait
@@ -142,7 +142,7 @@ MonoBehaviour:
           x: 312
           y: 1205
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: shy
         SubChapNum: 2
@@ -150,8 +150,8 @@ MonoBehaviour:
         location:
           x: 762
           y: 1206
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 513
         y: 854
@@ -197,10 +197,19 @@ MonoBehaviour:
         SubChapNum: 3
         Type: 4
         location:
-          x: 519
-          y: 1855
+          x: 265
+          y: 1849
+          Width: 278
+          Height: 254
+      - RespTree: 0
+        TextContent: angry
+        SubChapNum: 3
+        Type: 4
+        location:
+          x: 708
+          y: 1815
           Width: 323
-          Height: 278
+          Height: 311
       location:
         x: 516
         y: 1513
@@ -216,10 +225,19 @@ MonoBehaviour:
         SubChapNum: 4
         Type: 0
         location:
-          x: 484
+          x: 208
           y: 2495
           Width: 411
-          Height: 278
+          Height: 259
+      - RespTree: 0
+        TextContent: Nice try
+        SubChapNum: 4
+        Type: 0
+        location:
+          x: 742
+          y: 2491
+          Width: 323
+          Height: 259
       location:
         x: 521
         y: 2151
@@ -255,10 +273,19 @@ MonoBehaviour:
         SubChapNum: 5
         Type: 4
         location:
-          x: 512
-          y: 3154
-          Width: 323
-          Height: 278
+          x: 246
+          y: 3147
+          Width: 278
+          Height: 254
+      - RespTree: 0
+        TextContent: Who would volunteer to go shopping?
+        SubChapNum: 5
+        Type: 0
+        location:
+          x: 702
+          y: 3143
+          Width: 399
+          Height: 259
       location:
         x: 513
         y: 2806
@@ -349,7 +376,7 @@ MonoBehaviour:
           x: 349
           y: 3821
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Yeah go for it!
         SubChapNum: 7
@@ -358,7 +385,7 @@ MonoBehaviour:
           x: 1040
           y: 6394
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 512
         y: 3455
@@ -407,7 +434,7 @@ MonoBehaviour:
           x: 168
           y: 4464
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Fineeeee
         SubChapNum: 7
@@ -416,7 +443,7 @@ MonoBehaviour:
           x: 707
           y: 6394
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 345
         y: 4119
@@ -453,7 +480,7 @@ MonoBehaviour:
           x: 1173
           y: 6730
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -465,7 +492,7 @@ MonoBehaviour:
           x: 183
           y: 7028
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 182
         y: 6688
@@ -524,7 +551,7 @@ MonoBehaviour:
           x: 9
           y: 5112
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 10
@@ -532,8 +559,8 @@ MonoBehaviour:
         location:
           x: 378
           y: 5113
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 169
         y: 4768
@@ -580,10 +607,19 @@ MonoBehaviour:
         SubChapNum: 11
         Type: 0
         location:
-          x: 183
-          y: 7664
+          x: -61
+          y: 7669
           Width: 323
-          Height: 278
+          Height: 259
+      - RespTree: 0
+        TextContent: Nope
+        SubChapNum: 11
+        Type: 0
+        location:
+          x: 403
+          y: 7665
+          Width: 323
+          Height: 259
       location:
         x: 180
         y: 7325
@@ -599,10 +635,19 @@ MonoBehaviour:
         SubChapNum: 12
         Type: 0
         location:
-          x: 181
-          y: 5758
+          x: -61
+          y: 5753
           Width: 323
-          Height: 278
+          Height: 259
+      - RespTree: 0
+        TextContent: Explain...
+        SubChapNum: 12
+        Type: 0
+        location:
+          x: 369
+          y: 5751
+          Width: 323
+          Height: 259
       location:
         x: 181
         y: 5420
@@ -618,10 +663,19 @@ MonoBehaviour:
         SubChapNum: 13
         Type: 0
         location:
-          x: 166
-          y: 8285
+          x: -58
+          y: 8278
           Width: 356
-          Height: 278
+          Height: 259
+      - RespTree: 0
+        TextContent: I only have yours
+        SubChapNum: 13
+        Type: 0
+        location:
+          x: 418
+          y: 8277
+          Width: 323
+          Height: 259
       location:
         x: 181
         y: 7950
@@ -670,7 +724,7 @@ MonoBehaviour:
           x: 4
           y: 6395
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hand-on-face
         SubChapNum: 7
@@ -678,8 +732,8 @@ MonoBehaviour:
         location:
           x: 370
           y: 6397
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 181
         y: 6052
@@ -748,7 +802,7 @@ MonoBehaviour:
           x: 179
           y: 8903
           Width: 337
-          Height: 278
+          Height: 259
       location:
         x: 182
         y: 8570
@@ -766,8 +820,8 @@ MonoBehaviour:
         location:
           x: 191
           y: 9522
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 190
         y: 9189
@@ -794,7 +848,7 @@ MonoBehaviour:
           x: 847
           y: 9845
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Why did I already know your mind would go there?
@@ -854,7 +908,7 @@ MonoBehaviour:
           x: 3047
           y: 9850
           Width: 323
-          Height: 295
+          Height: 288
       - AltContact: 
         Type: 7
         TextContent: Julia
@@ -864,7 +918,7 @@ MonoBehaviour:
           x: 3374
           y: 9851
           Width: 323
-          Height: 295
+          Height: 288
       UnlockInstaPostsAccount: Julia
       UnlockPosts: 090000000a0000000b000000
       Responses:
@@ -876,7 +930,7 @@ MonoBehaviour:
           x: 193
           y: 10145
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 189
         y: 9806
@@ -895,7 +949,7 @@ MonoBehaviour:
           x: 192
           y: 10781
           Width: 330
-          Height: 278
+          Height: 259
       location:
         x: 193
         y: 10440
@@ -962,7 +1016,7 @@ MonoBehaviour:
           x: 2192
           y: 11113
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -974,7 +1028,7 @@ MonoBehaviour:
           x: 21
           y: 11422
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 18
@@ -982,8 +1036,8 @@ MonoBehaviour:
         location:
           x: 413
           y: 11423
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 196
         y: 11073
@@ -1050,7 +1104,7 @@ MonoBehaviour:
           x: 2350
           y: 11762
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1061,8 +1115,8 @@ MonoBehaviour:
         location:
           x: 36
           y: 12059
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: fake-angry
         SubChapNum: 19
@@ -1070,8 +1124,8 @@ MonoBehaviour:
         location:
           x: 381
           y: 12058
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 193
         y: 11720
@@ -1131,7 +1185,7 @@ MonoBehaviour:
           x: 22
           y: 12725
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Why don't you grab a coffe while you guys wait?
         SubChapNum: 21
@@ -1140,7 +1194,7 @@ MonoBehaviour:
           x: 166
           y: 15901
           Width: 454
-          Height: 278
+          Height: 259
       location:
         x: 190
         y: 12356
@@ -1188,8 +1242,8 @@ MonoBehaviour:
         location:
           x: -245
           y: 13359
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: shy
         SubChapNum: 23
@@ -1197,8 +1251,8 @@ MonoBehaviour:
         location:
           x: 102
           y: 14627
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 22
         y: 13016
@@ -1237,7 +1291,7 @@ MonoBehaviour:
           x: -402
           y: 17182
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: I love you
         SubChapNum: 25
@@ -1246,7 +1300,7 @@ MonoBehaviour:
           x: -62
           y: 16543
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -245
         y: 16192
@@ -1295,7 +1349,7 @@ MonoBehaviour:
           x: -246
           y: 13993
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -242
         y: 13652
@@ -1372,7 +1426,7 @@ MonoBehaviour:
           x: 2205
           y: 14959
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1384,7 +1438,7 @@ MonoBehaviour:
           x: -244
           y: 15257
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -248
         y: 14916
@@ -1421,7 +1475,7 @@ MonoBehaviour:
           x: 964
           y: 17513
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Her name starts with A and ends with A
@@ -1443,7 +1497,7 @@ MonoBehaviour:
           x: 227
           y: 17825
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 29
@@ -1451,8 +1505,8 @@ MonoBehaviour:
         location:
           x: -258
           y: 18468
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -59
         y: 17470
@@ -1479,7 +1533,7 @@ MonoBehaviour:
           x: 617
           y: 16882
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -1490,8 +1544,8 @@ MonoBehaviour:
         location:
           x: -62
           y: 17182
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -59
         y: 16841
@@ -1510,7 +1564,7 @@ MonoBehaviour:
           x: -252
           y: 14625
           Width: 339
-          Height: 278
+          Height: 259
       location:
         x: -242
         y: 14284
@@ -1537,7 +1591,7 @@ MonoBehaviour:
           x: 414
           y: 15585
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Can't miss a chance to get them half off though!
@@ -1560,7 +1614,7 @@ MonoBehaviour:
           x: -664
           y: 15900
           Width: 572
-          Height: 278
+          Height: 259
       location:
         x: -246
         y: 15546
@@ -1618,8 +1672,8 @@ MonoBehaviour:
         location:
           x: 228
           y: 18469
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 230
         y: 18126
@@ -1668,7 +1722,7 @@ MonoBehaviour:
           x: 230
           y: 19117
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 229
         y: 18772
@@ -1718,7 +1772,7 @@ MonoBehaviour:
           x: 38
           y: 19737
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 31
@@ -1726,8 +1780,8 @@ MonoBehaviour:
         location:
           x: 406
           y: 19738
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 232
         y: 19400
@@ -1796,7 +1850,7 @@ MonoBehaviour:
           x: 141
           y: 21626
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Nah, I'm good!
         SubChapNum: 33
@@ -1805,7 +1859,7 @@ MonoBehaviour:
           x: 697
           y: 20372
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 231
         y: 20024
@@ -1822,7 +1876,7 @@ MonoBehaviour:
           x: 733
           y: 21975
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Alright here are the choices
@@ -1852,7 +1906,7 @@ MonoBehaviour:
           x: 1744
           y: 21976
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: White is usually not my favourite
@@ -1884,7 +1938,7 @@ MonoBehaviour:
           x: 220
           y: 22281
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 34
@@ -1892,8 +1946,8 @@ MonoBehaviour:
         location:
           x: 590
           y: 22282
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 408
         y: 21932
@@ -1920,7 +1974,7 @@ MonoBehaviour:
           x: 1358
           y: 20698
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Are you sure about that?
@@ -1942,7 +1996,7 @@ MonoBehaviour:
           x: 510
           y: 21000
           Width: 342
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 35
@@ -1950,8 +2004,8 @@ MonoBehaviour:
         location:
           x: 869
           y: 21000
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 694
         y: 20657
@@ -1998,7 +2052,7 @@ MonoBehaviour:
           x: 1846
           y: 22616
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2010,7 +2064,7 @@ MonoBehaviour:
           x: 183
           y: 22921
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: heart-eyes
         SubChapNum: 36
@@ -2018,8 +2072,8 @@ MonoBehaviour:
         location:
           x: 610
           y: 22921
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 401
         y: 22574
@@ -2046,7 +2100,7 @@ MonoBehaviour:
           x: 1346
           y: 21324
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2057,8 +2111,8 @@ MonoBehaviour:
         location:
           x: 695
           y: 21623
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 692
         y: 21284
@@ -2105,7 +2159,7 @@ MonoBehaviour:
           x: 1916
           y: 23263
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2116,8 +2170,8 @@ MonoBehaviour:
         location:
           x: -403
           y: 23597
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Not even a hello first?
         SubChapNum: 38
@@ -2126,7 +2180,7 @@ MonoBehaviour:
           x: 578
           y: 23567
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 399
         y: 23224
@@ -2145,7 +2199,7 @@ MonoBehaviour:
           x: -471
           y: 24227
           Width: 423
-          Height: 278
+          Height: 259
       location:
         x: -401
         y: 23887
@@ -2192,7 +2246,7 @@ MonoBehaviour:
           x: 2159
           y: 23896
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2204,7 +2258,7 @@ MonoBehaviour:
           x: 389
           y: 24196
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: drool
         SubChapNum: 41
@@ -2212,8 +2266,8 @@ MonoBehaviour:
         location:
           x: 780
           y: 24826
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 579
         y: 23856
@@ -2261,8 +2315,8 @@ MonoBehaviour:
         location:
           x: -573
           y: 24879
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 42
@@ -2270,8 +2324,8 @@ MonoBehaviour:
         location:
           x: -217
           y: 24875
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -406
         y: 24529
@@ -2289,8 +2343,8 @@ MonoBehaviour:
         location:
           x: 390
           y: 24825
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 392
         y: 24488
@@ -2337,7 +2391,7 @@ MonoBehaviour:
           x: 1899
           y: 25189
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2349,7 +2403,7 @@ MonoBehaviour:
           x: 555
           y: 25490
           Width: 376
-          Height: 278
+          Height: 259
       location:
         x: 587
         y: 25149
@@ -2408,7 +2462,7 @@ MonoBehaviour:
           x: -285
           y: 27408
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Got it!
         SubChapNum: 44
@@ -2417,7 +2471,7 @@ MonoBehaviour:
           x: -645
           y: 27406
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -408
         y: 25167
@@ -2435,8 +2489,8 @@ MonoBehaviour:
         location:
           x: 587
           y: 26117
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 582
         y: 25778
@@ -2455,7 +2509,7 @@ MonoBehaviour:
           x: 265
           y: 28090
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 265
         y: 27754
@@ -2504,7 +2558,7 @@ MonoBehaviour:
           x: 365
           y: 26757
           Width: 391
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: You're a bad person
         SubChapNum: 48
@@ -2513,7 +2567,7 @@ MonoBehaviour:
           x: 783
           y: 26757
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 585
         y: 26404
@@ -2532,7 +2586,7 @@ MonoBehaviour:
           x: 228
           y: 28730
           Width: 395
-          Height: 278
+          Height: 259
       location:
         x: 267
         y: 28392
@@ -2579,7 +2633,7 @@ MonoBehaviour:
           x: -1124
           y: 27114
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Nvm
@@ -2630,8 +2684,8 @@ MonoBehaviour:
         location:
           x: 95
           y: 27413
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Will do!
         SubChapNum: 44
@@ -2640,7 +2694,7 @@ MonoBehaviour:
           x: 471
           y: 27411
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 285
         y: 27069
@@ -2699,7 +2753,7 @@ MonoBehaviour:
           x: 808
           y: 27410
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Will do!
         SubChapNum: 44
@@ -2708,7 +2762,7 @@ MonoBehaviour:
           x: 1161
           y: 27410
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 963
         y: 27070
@@ -2755,7 +2809,7 @@ MonoBehaviour:
           x: 1584
           y: 29071
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: I feel way more confident in this colour
@@ -2795,7 +2849,7 @@ MonoBehaviour:
           x: 2994
           y: 29074
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Which one do you think I should go with?
@@ -2817,7 +2871,7 @@ MonoBehaviour:
           x: -4419
           y: 29458
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: The white one
         SubChapNum: 51
@@ -2826,7 +2880,7 @@ MonoBehaviour:
           x: 2482
           y: 29435
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 266
         y: 29026
@@ -2873,7 +2927,7 @@ MonoBehaviour:
           x: -5883
           y: 29791
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: And I definitely feel slutty in this set
@@ -2894,8 +2948,8 @@ MonoBehaviour:
         location:
           x: -4763
           y: 30110
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: shy
         SubChapNum: 52
@@ -2903,8 +2957,8 @@ MonoBehaviour:
         location:
           x: -4409
           y: 30107
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4415
         y: 29743
@@ -2951,7 +3005,7 @@ MonoBehaviour:
           x: 4128
           y: 29757
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -2962,8 +3016,8 @@ MonoBehaviour:
         location:
           x: 2870
           y: 30081
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 53
@@ -2971,8 +3025,8 @@ MonoBehaviour:
         location:
           x: 2497
           y: 30082
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2484
         y: 29717
@@ -3021,7 +3075,7 @@ MonoBehaviour:
           x: 129
           y: 30443
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3032,8 +3086,8 @@ MonoBehaviour:
         location:
           x: -4740
           y: 30766
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Drive safe
         SubChapNum: 54
@@ -3042,7 +3096,7 @@ MonoBehaviour:
           x: -4372
           y: 30767
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4570
         y: 30416
@@ -3056,8 +3110,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1436
-          y: 30441
+          x: -1438
+          y: 30130
           Width: 323
           Height: 295
       - AltContact: 
@@ -3067,8 +3121,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -1109
-          y: 30443
+          x: -1111
+          y: 30132
           Width: 609
           Height: 295
       - AltContact: 
@@ -3078,8 +3132,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -493
-          y: 30444
+          x: -495
+          y: 30133
           Width: 619
           Height: 295
       - AltContact: 
@@ -3088,10 +3142,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 129
-          y: 30443
+          x: 127
+          y: 30132
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3102,8 +3156,8 @@ MonoBehaviour:
         location:
           x: 2497
           y: 30729
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Drive safe!
         SubChapNum: 55
@@ -3112,7 +3166,7 @@ MonoBehaviour:
           x: 2905
           y: 30729
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2684
         y: 30388
@@ -3126,8 +3180,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -2643
-          y: 31091
+          x: -2659
+          y: 31199
           Width: 323
           Height: 295
       - AltContact: 
@@ -3136,8 +3190,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2318
-          y: 31093
+          x: -2334
+          y: 31201
           Width: 323
           Height: 295
       - AltContact: 
@@ -3146,8 +3200,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1993
-          y: 31091
+          x: -2009
+          y: 31199
           Width: 328
           Height: 295
       - AltContact: 
@@ -3156,18 +3210,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1650
-          y: 31091
+          x: -1666
+          y: 31199
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I just want to double check with you again
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1323
-          y: 31091
+          x: -1339
+          y: 31199
           Width: 421
           Height: 295
       - AltContact: 
@@ -3177,8 +3231,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -900
-          y: 31092
+          x: -916
+          y: 31200
           Width: 567
           Height: 295
       - AltContact: 
@@ -3187,8 +3241,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -328
-          y: 31092
+          x: -344
+          y: 31200
           Width: 325
           Height: 295
       - AltContact: 
@@ -3197,8 +3251,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 5
-          y: 31091
+          x: -11
+          y: 31199
           Width: 474
           Height: 295
       - AltContact: 
@@ -3207,8 +3261,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 485
-          y: 31091
+          x: 469
+          y: 31199
           Width: 420
           Height: 295
       - AltContact: 
@@ -3217,10 +3271,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 908
-          y: 31091
+          x: 892
+          y: 31199
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3232,7 +3286,7 @@ MonoBehaviour:
           x: -4551
           y: 31405
           Width: 328
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Yes, that's alright
         SubChapNum: 57
@@ -3241,7 +3295,7 @@ MonoBehaviour:
           x: -5054
           y: 32032
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4556
         y: 31078
@@ -3255,8 +3309,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -2643
-          y: 31091
+          x: -2663
+          y: 30887
           Width: 323
           Height: 295
       - AltContact: 
@@ -3265,8 +3319,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2318
-          y: 31093
+          x: -2338
+          y: 30889
           Width: 323
           Height: 295
       - AltContact: 
@@ -3275,8 +3329,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1993
-          y: 31091
+          x: -2013
+          y: 30887
           Width: 328
           Height: 295
       - AltContact: 
@@ -3285,18 +3339,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1650
-          y: 31091
+          x: -1670
+          y: 30887
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I just want to double check with you again
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1323
-          y: 31091
+          x: -1343
+          y: 30887
           Width: 421
           Height: 295
       - AltContact: 
@@ -3306,8 +3360,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -900
-          y: 31092
+          x: -920
+          y: 30888
           Width: 567
           Height: 295
       - AltContact: 
@@ -3316,8 +3370,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -328
-          y: 31092
+          x: -348
+          y: 30888
           Width: 325
           Height: 295
       - AltContact: 
@@ -3326,8 +3380,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 5
-          y: 31091
+          x: -15
+          y: 30887
           Width: 474
           Height: 295
       - AltContact: 
@@ -3336,8 +3390,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 485
-          y: 31091
+          x: 465
+          y: 30887
           Width: 420
           Height: 295
       - AltContact: 
@@ -3346,10 +3400,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 908
-          y: 31091
+          x: 888
+          y: 30887
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3361,7 +3415,7 @@ MonoBehaviour:
           x: 2701
           y: 31372
           Width: 328
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Yes, that's alright
         SubChapNum: 59
@@ -3370,7 +3424,7 @@ MonoBehaviour:
           x: 2161
           y: 32001
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2701
         y: 31052
@@ -3384,8 +3438,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1111
-          y: 31706
+          x: -1114
+          y: 31879
           Width: 323
           Height: 295
       - AltContact: 
@@ -3394,8 +3448,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -782
-          y: 31706
+          x: -785
+          y: 31879
           Width: 502
           Height: 295
       - AltContact: 
@@ -3404,10 +3458,10 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -277
-          y: 31704
+          x: -280
+          y: 31877
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3418,8 +3472,8 @@ MonoBehaviour:
         location:
           x: -4726
           y: 32033
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Then absolutely yes!
         SubChapNum: 57
@@ -3428,7 +3482,7 @@ MonoBehaviour:
           x: -4389
           y: 32029
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4542
         y: 31695
@@ -3442,8 +3496,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1116
-          y: 32369
+          x: -1113
+          y: 32559
           Width: 323
           Height: 295
       - AltContact: 
@@ -3452,8 +3506,8 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -782
-          y: 32369
+          x: -779
+          y: 32559
           Width: 323
           Height: 295
       - AltContact: 
@@ -3462,8 +3516,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -453
-          y: 32370
+          x: -450
+          y: 32560
           Width: 477
           Height: 295
       UnlockInstaPostsAccount: 
@@ -3476,8 +3530,8 @@ MonoBehaviour:
         location:
           x: -4710
           y: 32665
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I love you!
         SubChapNum: 60
@@ -3486,7 +3540,7 @@ MonoBehaviour:
           x: -4334
           y: 32663
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4541
         y: 32336
@@ -3500,8 +3554,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1111
-          y: 31706
+          x: -1108
+          y: 31568
           Width: 323
           Height: 295
       - AltContact: 
@@ -3510,8 +3564,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -782
-          y: 31706
+          x: -779
+          y: 31568
           Width: 502
           Height: 295
       - AltContact: 
@@ -3520,10 +3574,10 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -277
-          y: 31704
+          x: -274
+          y: 31566
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3534,8 +3588,8 @@ MonoBehaviour:
         location:
           x: 2549
           y: 31995
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Then absolutely yes!
         SubChapNum: 59
@@ -3544,7 +3598,7 @@ MonoBehaviour:
           x: 2885
           y: 31991
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2709
         y: 31656
@@ -3559,7 +3613,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1116
-          y: 32369
+          y: 32241
           Width: 323
           Height: 295
       - AltContact: 
@@ -3569,7 +3623,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -782
-          y: 32369
+          y: 32241
           Width: 323
           Height: 295
       - AltContact: 
@@ -3579,7 +3633,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -453
-          y: 32370
+          y: 32242
           Width: 477
           Height: 295
       UnlockInstaPostsAccount: 
@@ -3592,8 +3646,8 @@ MonoBehaviour:
         location:
           x: 2538
           y: 32656
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I love you!
         SubChapNum: 61
@@ -3602,7 +3656,7 @@ MonoBehaviour:
           x: 2882
           y: 32652
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2704
         y: 32320
@@ -3616,18 +3670,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1475
-          y: 33024
+          x: -1487
+          y: 33195
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 8
         TextContent: 1 Hour Later
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -1145
-          y: 33024
+          x: -1157
+          y: 33195
           Width: 323
           Height: 295
       - AltContact: 
@@ -3636,8 +3690,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -817
-          y: 33022
+          x: -829
+          y: 33193
           Width: 454
           Height: 295
       - AltContact: 
@@ -3646,19 +3700,19 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -358
-          y: 33023
+          x: -370
+          y: 33194
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
-        TextContent: JJ's just being a mom though
+        TextContent: JJ's just blushing and being a mom as always
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -31
-          y: 33025
-          Width: 354
+          x: -43
+          y: 33199
+          Width: 438
           Height: 295
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -3671,7 +3725,7 @@ MonoBehaviour:
           x: -4622
           y: 33296
           Width: 431
-          Height: 278
+          Height: 259
       location:
         x: -4542
         y: 32979
@@ -3686,9 +3740,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1475
-          y: 33024
+          y: 32892
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 8
         TextContent: 1 Hour Later
@@ -3696,7 +3750,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1145
-          y: 33024
+          y: 32892
           Width: 323
           Height: 295
       - AltContact: 
@@ -3706,7 +3760,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -817
-          y: 33022
+          y: 32890
           Width: 454
           Height: 295
       - AltContact: 
@@ -3716,18 +3770,18 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -358
-          y: 33023
+          y: 32891
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
-        TextContent: JJ's just being a mom though
+        TextContent: JJ's just blushing and being a mom as always
         TextDelay: 2.1
         Tendency: 0
         location:
           x: -31
-          y: 33025
-          Width: 354
+          y: 32893
+          Width: 438
           Height: 295
       UnlockInstaPostsAccount: 
       UnlockPosts: 
@@ -3740,7 +3794,7 @@ MonoBehaviour:
           x: 2674
           y: 33285
           Width: 431
-          Height: 278
+          Height: 259
       location:
         x: 2720
         y: 32962
@@ -3754,8 +3808,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1859
-          y: 33639
+          x: -1875
+          y: 33828
           Width: 323
           Height: 295
       - AltContact: 
@@ -3764,8 +3818,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1532
-          y: 33639
+          x: -1548
+          y: 33828
           Width: 323
           Height: 295
       - AltContact: 
@@ -3775,8 +3829,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1204
-          y: 33638
+          x: -1220
+          y: 33827
           Width: 570
           Height: 295
       - AltContact: 
@@ -3785,8 +3839,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -622
-          y: 33639
+          x: -638
+          y: 33828
           Width: 323
           Height: 295
       - AltContact: 
@@ -3795,8 +3849,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -293
-          y: 33637
+          x: -309
+          y: 33826
           Width: 531
           Height: 295
       - AltContact: 
@@ -3805,8 +3859,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 242
-          y: 33637
+          x: 226
+          y: 33826
           Width: 446
           Height: 295
       UnlockInstaPostsAccount: 
@@ -3819,8 +3873,8 @@ MonoBehaviour:
         location:
           x: -4744
           y: 33907
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: That's surprising!
         SubChapNum: 64
@@ -3829,7 +3883,7 @@ MonoBehaviour:
           x: -4372
           y: 33908
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4544
         y: 33582
@@ -3844,7 +3898,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1859
-          y: 33639
+          y: 33530
           Width: 323
           Height: 295
       - AltContact: 
@@ -3854,7 +3908,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1532
-          y: 33639
+          y: 33530
           Width: 323
           Height: 295
       - AltContact: 
@@ -3865,7 +3919,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1204
-          y: 33638
+          y: 33529
           Width: 570
           Height: 295
       - AltContact: 
@@ -3875,7 +3929,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -622
-          y: 33639
+          y: 33530
           Width: 323
           Height: 295
       - AltContact: 
@@ -3885,7 +3939,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -293
-          y: 33637
+          y: 33528
           Width: 531
           Height: 295
       - AltContact: 
@@ -3895,7 +3949,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 242
-          y: 33637
+          y: 33528
           Width: 446
           Height: 295
       UnlockInstaPostsAccount: 
@@ -3908,8 +3962,8 @@ MonoBehaviour:
         location:
           x: 2559
           y: 33895
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: That's surprising!
         SubChapNum: 65
@@ -3918,7 +3972,7 @@ MonoBehaviour:
           x: 2911
           y: 33898
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2719
         y: 33567
@@ -3932,8 +3986,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1614
-          y: 34259
+          x: -1617
+          y: 34455
           Width: 323
           Height: 295
       - AltContact: 
@@ -3943,8 +3997,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1287
-          y: 34257
+          x: -1290
+          y: 34453
           Width: 604
           Height: 295
       - AltContact: 
@@ -3953,8 +4007,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -679
-          y: 34259
+          x: -682
+          y: 34455
           Width: 379
           Height: 295
       - AltContact: 
@@ -3963,8 +4017,8 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -294
-          y: 34264
+          x: -297
+          y: 34460
           Width: 452
           Height: 295
       - AltContact: 
@@ -3973,10 +4027,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 159
-          y: 34260
+          x: 156
+          y: 34456
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -3988,7 +4042,7 @@ MonoBehaviour:
           x: -4715
           y: 34518
           Width: 331
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: What are some of the questions you have?
         SubChapNum: 66
@@ -3997,7 +4051,7 @@ MonoBehaviour:
           x: -4353
           y: 34523
           Width: 424
-          Height: 278
+          Height: 259
       location:
         x: -4545
         y: 34202
@@ -4012,7 +4066,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1614
-          y: 34259
+          y: 34127
           Width: 323
           Height: 295
       - AltContact: 
@@ -4023,7 +4077,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1287
-          y: 34257
+          y: 34125
           Width: 604
           Height: 295
       - AltContact: 
@@ -4033,7 +4087,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -679
-          y: 34259
+          y: 34127
           Width: 379
           Height: 295
       - AltContact: 
@@ -4043,7 +4097,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -296
-          y: 34260
+          y: 34128
           Width: 452
           Height: 295
       - AltContact: 
@@ -4053,9 +4107,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 159
-          y: 34260
+          y: 34128
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -4067,7 +4121,7 @@ MonoBehaviour:
           x: 2541
           y: 34505
           Width: 331
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: What are some of the questions you have?
         SubChapNum: 67
@@ -4076,7 +4130,7 @@ MonoBehaviour:
           x: 2900
           y: 34508
           Width: 424
-          Height: 278
+          Height: 259
       location:
         x: 2719
         y: 34184
@@ -4090,8 +4144,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1677
-          y: 34863
+          x: -1668
+          y: 35068
           Width: 323
           Height: 295
       - AltContact: 
@@ -4101,8 +4155,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1348
-          y: 34865
+          x: -1339
+          y: 35070
           Width: 537
           Height: 295
       - AltContact: 
@@ -4111,8 +4165,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -808
-          y: 34865
+          x: -799
+          y: 35067
           Width: 508
           Height: 295
       - AltContact: 
@@ -4122,8 +4176,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -295
-          y: 34865
+          x: -286
+          y: 35067
           Width: 565
           Height: 295
       - AltContact: 
@@ -4132,8 +4186,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 273
-          y: 34865
+          x: 282
+          y: 35067
           Width: 413
           Height: 295
       UnlockInstaPostsAccount: 
@@ -4147,7 +4201,7 @@ MonoBehaviour:
           x: -4711
           y: 35139
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 68
@@ -4155,8 +4209,8 @@ MonoBehaviour:
         location:
           x: -4349
           y: 35137
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4545
         y: 34814
@@ -4170,8 +4224,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1677
-          y: 34863
+          x: -1689
+          y: 34762
           Width: 323
           Height: 295
       - AltContact: 
@@ -4181,8 +4235,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1348
-          y: 34865
+          x: -1360
+          y: 34764
           Width: 537
           Height: 295
       - AltContact: 
@@ -4191,8 +4245,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -808
-          y: 34865
+          x: -820
+          y: 34764
           Width: 508
           Height: 295
       - AltContact: 
@@ -4202,8 +4256,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -295
-          y: 34865
+          x: -307
+          y: 34764
           Width: 565
           Height: 295
       - AltContact: 
@@ -4212,8 +4266,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 273
-          y: 34865
+          x: 261
+          y: 34764
           Width: 413
           Height: 295
       UnlockInstaPostsAccount: 
@@ -4227,7 +4281,7 @@ MonoBehaviour:
           x: 2535
           y: 35136
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 69
@@ -4235,8 +4289,8 @@ MonoBehaviour:
         location:
           x: 2892
           y: 35135
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2715
         y: 34800
@@ -4250,8 +4304,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1940
-          y: 35486
+          x: -1961
+          y: 35676
           Width: 323
           Height: 295
       - AltContact: Althea
@@ -4260,18 +4314,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1605
-          y: 35484
+          x: -1626
+          y: 35674
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: Althea
         Type: 1
         TextContent: That didn't take much convincing
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1277
-          y: 35485
+          x: -1298
+          y: 35675
           Width: 375
           Height: 295
       - AltContact: Althea
@@ -4280,8 +4334,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -896
-          y: 35486
+          x: -917
+          y: 35676
           Width: 323
           Height: 295
       - AltContact: 
@@ -4290,8 +4344,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -565
-          y: 35483
+          x: -586
+          y: 35673
           Width: 323
           Height: 295
       - AltContact: 
@@ -4300,8 +4354,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -238
-          y: 35484
+          x: -255
+          y: 35670
           Width: 369
           Height: 295
       - AltContact: 
@@ -4311,8 +4365,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 136
-          y: 35485
+          x: 119
+          y: 35671
           Width: 620
           Height: 295
       - AltContact: 
@@ -4321,10 +4375,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 759
-          y: 35484
+          x: 742
+          y: 35670
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -4337,7 +4391,7 @@ MonoBehaviour:
           x: -4996
           y: 35801
           Width: 573
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 70
@@ -4345,8 +4399,8 @@ MonoBehaviour:
         location:
           x: -4323
           y: 35801
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4524
         y: 35461
@@ -4360,8 +4414,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1940
-          y: 35486
+          x: -1957
+          y: 35373
           Width: 323
           Height: 295
       - AltContact: Althea
@@ -4370,18 +4424,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1605
-          y: 35484
+          x: -1622
+          y: 35371
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: Althea
         Type: 1
         TextContent: That didn't take much convincing
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1277
-          y: 35485
+          x: -1294
+          y: 35372
           Width: 375
           Height: 295
       - AltContact: Althea
@@ -4390,8 +4444,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -896
-          y: 35486
+          x: -917
+          y: 35373
           Width: 323
           Height: 295
       - AltContact: 
@@ -4400,8 +4454,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -565
-          y: 35483
+          x: -586
+          y: 35370
           Width: 323
           Height: 295
       - AltContact: 
@@ -4410,8 +4464,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -238
-          y: 35484
+          x: -259
+          y: 35371
           Width: 369
           Height: 295
       - AltContact: 
@@ -4421,8 +4475,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 136
-          y: 35485
+          x: 115
+          y: 35372
           Width: 620
           Height: 295
       - AltContact: 
@@ -4431,10 +4485,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 759
-          y: 35484
+          x: 738
+          y: 35371
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -4447,7 +4501,7 @@ MonoBehaviour:
           x: 2336
           y: 35795
           Width: 573
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: hot
         SubChapNum: 71
@@ -4455,8 +4509,8 @@ MonoBehaviour:
         location:
           x: 2944
           y: 35794
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2714
         y: 35449
@@ -4470,8 +4524,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1575
-          y: 36137
+          x: -1584
+          y: 36308
           Width: 413
           Height: 295
       - AltContact: 
@@ -4480,8 +4534,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1155
-          y: 36139
+          x: -1161
+          y: 36310
           Width: 461
           Height: 295
       - AltContact: 
@@ -4490,8 +4544,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -690
-          y: 36141
+          x: -696
+          y: 36312
           Width: 323
           Height: 295
       - AltContact: 
@@ -4500,8 +4554,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -360
-          y: 36142
+          x: -366
+          y: 36313
           Width: 429
           Height: 295
       - AltContact: 
@@ -4510,8 +4564,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 74
-          y: 36140
+          x: 68
+          y: 36311
           Width: 436
           Height: 295
       - AltContact: 
@@ -4520,10 +4574,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 514
-          y: 36139
+          x: 508
+          y: 36310
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -4535,7 +4589,7 @@ MonoBehaviour:
           x: -4714
           y: 36433
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: shy
         SubChapNum: 72
@@ -4543,8 +4597,8 @@ MonoBehaviour:
         location:
           x: -4321
           y: 36430
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4512
         y: 36108
@@ -4558,8 +4612,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1575
-          y: 36137
+          x: -1584
+          y: 35996
           Width: 413
           Height: 295
       - AltContact: 
@@ -4568,8 +4622,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1155
-          y: 36139
+          x: -1164
+          y: 35998
           Width: 461
           Height: 295
       - AltContact: 
@@ -4578,8 +4632,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -690
-          y: 36141
+          x: -699
+          y: 36000
           Width: 323
           Height: 295
       - AltContact: 
@@ -4588,8 +4642,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -360
-          y: 36142
+          x: -369
+          y: 36001
           Width: 429
           Height: 295
       - AltContact: 
@@ -4598,8 +4652,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 74
-          y: 36140
+          x: 65
+          y: 35999
           Width: 436
           Height: 295
       - AltContact: 
@@ -4608,10 +4662,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 514
-          y: 36139
+          x: 505
+          y: 35998
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -4623,7 +4677,7 @@ MonoBehaviour:
           x: 2528
           y: 36429
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: shy
         SubChapNum: 73
@@ -4631,8 +4685,8 @@ MonoBehaviour:
         location:
           x: 2949
           y: 36427
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2714
         y: 36100
@@ -4646,8 +4700,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2012
-          y: 36761
+          x: -3056
+          y: 36902
           Width: 323
           Height: 295
       - AltContact: 
@@ -4656,8 +4710,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1683
-          y: 36762
+          x: -2727
+          y: 36903
           Width: 323
           Height: 295
       - AltContact: 
@@ -4666,18 +4720,18 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -1350
-          y: 36764
+          x: -2301
+          y: 36959
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: She's been like that for a while
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1022
-          y: 36764
+          x: -1026
+          y: 36907
           Width: 361
           Height: 295
       - AltContact: 
@@ -4686,8 +4740,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -653
-          y: 36765
+          x: -657
+          y: 36908
           Width: 479
           Height: 295
       - AltContact: 
@@ -4696,8 +4750,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -165
-          y: 36766
+          x: -169
+          y: 36909
           Width: 323
           Height: 295
       - AltContact: 
@@ -4706,18 +4760,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 165
-          y: 36764
+          x: 159
+          y: 36907
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: She keeps giggling with the cute bartender on the right
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 497
-          y: 36766
+          x: 491
+          y: 36909
           Width: 490
           Height: 295
       - AltContact: 
@@ -4726,8 +4780,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 991
-          y: 36765
+          x: 985
+          y: 36908
           Width: 330
           Height: 295
       UnlockInstaPostsAccount: 
@@ -4741,7 +4795,7 @@ MonoBehaviour:
           x: -4714
           y: 37047
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: drool
         SubChapNum: 74
@@ -4749,8 +4803,8 @@ MonoBehaviour:
         location:
           x: -4322
           y: 37046
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4526
         y: 36724
@@ -4764,8 +4818,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2012
-          y: 36761
+          x: -3058
+          y: 36610
           Width: 323
           Height: 295
       - AltContact: 
@@ -4774,8 +4828,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1683
-          y: 36762
+          x: -2729
+          y: 36611
           Width: 323
           Height: 295
       - AltContact: 
@@ -4784,18 +4838,18 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -1350
-          y: 36764
+          x: -2311
+          y: 36448
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: She's been like that for a while
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1022
-          y: 36764
+          x: -1028
+          y: 36613
           Width: 361
           Height: 295
       - AltContact: 
@@ -4804,8 +4858,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -653
-          y: 36765
+          x: -659
+          y: 36614
           Width: 479
           Height: 295
       - AltContact: 
@@ -4814,8 +4868,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -165
-          y: 36766
+          x: -171
+          y: 36615
           Width: 323
           Height: 295
       - AltContact: 
@@ -4824,18 +4878,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 165
-          y: 36764
+          x: 159
+          y: 36613
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: She keeps giggling with the cute bartender on the right
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 497
-          y: 36766
+          x: 491
+          y: 36615
           Width: 490
           Height: 295
       - AltContact: 
@@ -4844,8 +4898,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 991
-          y: 36765
+          x: 985
+          y: 36614
           Width: 330
           Height: 295
       UnlockInstaPostsAccount: 
@@ -4859,7 +4913,7 @@ MonoBehaviour:
           x: 2530
           y: 37038
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: drool
         SubChapNum: 75
@@ -4867,8 +4921,8 @@ MonoBehaviour:
         location:
           x: 2950
           y: 37038
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2709
         y: 36717
@@ -4882,8 +4936,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1718
-          y: 37380
+          x: -1717
+          y: 37522
           Width: 323
           Height: 295
       - AltContact: 
@@ -4892,8 +4946,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1395
-          y: 37380
+          x: -1394
+          y: 37522
           Width: 435
           Height: 295
       - AltContact: 
@@ -4902,8 +4956,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -951
-          y: 37380
+          x: -950
+          y: 37522
           Width: 331
           Height: 295
       - AltContact: 
@@ -4912,8 +4966,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -617
-          y: 37379
+          x: -618
+          y: 37521
           Width: 477
           Height: 295
       - AltContact: 
@@ -4922,8 +4976,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -138
-          y: 37379
+          x: -139
+          y: 37521
           Width: 349
           Height: 295
       - AltContact: 
@@ -4932,18 +4986,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 216
-          y: 37378
+          x: 218
+          y: 37523
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Looks like she's enjoying herself too much to come back
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 549
-          y: 37382
+          x: 548
+          y: 37524
           Width: 496
           Height: 295
       - AltContact: 
@@ -4952,10 +5006,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1059
-          y: 37385
+          x: 1601
+          y: 37540
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -4966,8 +5020,8 @@ MonoBehaviour:
         location:
           x: -4713
           y: 37665
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: What's she doing?
         SubChapNum: 76
@@ -4976,7 +5030,7 @@ MonoBehaviour:
           x: -4320
           y: 37666
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4495
         y: 37351
@@ -4990,8 +5044,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1718
-          y: 37380
+          x: -1726
+          y: 37224
           Width: 323
           Height: 295
       - AltContact: 
@@ -5000,8 +5054,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1395
-          y: 37380
+          x: -1387
+          y: 37216
           Width: 435
           Height: 295
       - AltContact: 
@@ -5010,8 +5064,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -951
-          y: 37380
+          x: -943
+          y: 37216
           Width: 331
           Height: 295
       - AltContact: 
@@ -5020,8 +5074,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -617
-          y: 37379
+          x: -609
+          y: 37219
           Width: 477
           Height: 295
       - AltContact: 
@@ -5030,8 +5084,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -138
-          y: 37379
+          x: -130
+          y: 37219
           Width: 349
           Height: 295
       - AltContact: 
@@ -5040,10 +5094,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 216
-          y: 37378
+          x: 223
+          y: 37220
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Looks like she's enjoying herself too much to come back
@@ -5051,7 +5105,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 549
-          y: 37382
+          y: 37222
           Width: 496
           Height: 295
       - AltContact: 
@@ -5060,10 +5114,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1059
-          y: 37385
+          x: 1602
+          y: 37134
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -5074,8 +5128,8 @@ MonoBehaviour:
         location:
           x: 2544
           y: 37657
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: What's she doing?
         SubChapNum: 77
@@ -5084,7 +5138,7 @@ MonoBehaviour:
           x: 2913
           y: 37656
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2710
         y: 37334
@@ -5098,8 +5152,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2102
-          y: 37989
+          x: -2123
+          y: 38188
           Width: 323
           Height: 295
       - AltContact: 
@@ -5108,8 +5162,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1773
-          y: 37991
+          x: -1794
+          y: 38193
           Width: 385
           Height: 295
       - AltContact: 
@@ -5118,8 +5172,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1385
-          y: 37991
+          x: -1406
+          y: 38193
           Width: 427
           Height: 295
       - AltContact: 
@@ -5128,8 +5182,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -953
-          y: 37992
+          x: -974
+          y: 38194
           Width: 411
           Height: 295
       - AltContact: 
@@ -5138,8 +5192,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -536
-          y: 37994
+          x: -557
+          y: 38196
           Width: 451
           Height: 295
       - AltContact: 
@@ -5148,8 +5202,8 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -78
-          y: 37996
+          x: -99
+          y: 38198
           Width: 323
           Height: 295
       - AltContact: 
@@ -5158,18 +5212,18 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 253
-          y: 37996
+          x: 232
+          y: 38198
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 8
         TextContent: 30 Minutes Later
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 589
-          y: 37997
+          x: 568
+          y: 38199
           Width: 323
           Height: 295
       - AltContact: Althea
@@ -5178,18 +5232,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 918
-          y: 37998
-          Width: 347
-          Height: 295
-      - AltContact: Althea
-        Type: 1
-        TextContent: I might be a little drunk now
-        TextDelay: 2.1
-        Tendency: 0
-        location:
-          x: 918
-          y: 37998
+          x: 897
+          y: 38200
           Width: 347
           Height: 295
       - AltContact: Althea
@@ -5198,10 +5242,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 1267
-          y: 37998
+          x: 1246
+          y: 38203
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -5213,7 +5257,7 @@ MonoBehaviour:
           x: -4315
           y: 38279
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: What happened??
         SubChapNum: 78
@@ -5222,7 +5266,7 @@ MonoBehaviour:
           x: -4711
           y: 38278
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4510
         y: 37959
@@ -5236,8 +5280,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2102
-          y: 37989
+          x: -2115
+          y: 37815
           Width: 323
           Height: 295
       - AltContact: 
@@ -5246,8 +5290,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1773
-          y: 37991
+          x: -1779
+          y: 37823
           Width: 385
           Height: 295
       - AltContact: 
@@ -5256,8 +5300,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1385
-          y: 37991
+          x: -1398
+          y: 37817
           Width: 427
           Height: 295
       - AltContact: 
@@ -5266,8 +5310,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -953
-          y: 37992
+          x: -966
+          y: 37818
           Width: 411
           Height: 295
       - AltContact: 
@@ -5276,8 +5320,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -536
-          y: 37994
+          x: -549
+          y: 37820
           Width: 451
           Height: 295
       - AltContact: 
@@ -5286,28 +5330,28 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -78
-          y: 37996
+          x: -91
+          y: 37822
           Width: 323
           Height: 295
       - AltContact: 
-        Type: 1
+        Type: 5
         TextContent: tongue-out
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 253
-          y: 37996
+          x: 240
+          y: 37822
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 8
         TextContent: 30 Minutes Later
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 589
-          y: 37997
+          x: 576
+          y: 37823
           Width: 323
           Height: 295
       - AltContact: Althea
@@ -5316,20 +5360,20 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 918
-          y: 37998
+          x: 902
+          y: 37824
           Width: 347
           Height: 295
       - AltContact: Althea
-        Type: 1
+        Type: 5
         TextContent: giggle
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 1267
-          y: 37998
+          x: 1251
+          y: 37824
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -5341,7 +5385,7 @@ MonoBehaviour:
           x: 2549
           y: 38267
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Tell me everything!
         SubChapNum: 79
@@ -5350,7 +5394,7 @@ MonoBehaviour:
           x: 2891
           y: 38268
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2709
         y: 37951
@@ -5364,8 +5408,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -3757
-          y: 38593
+          x: -3762
+          y: 38784
           Width: 323
           Height: 295
       - AltContact: 
@@ -5374,8 +5418,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -3426
-          y: 38592
+          x: -3431
+          y: 38787
           Width: 346
           Height: 295
       - AltContact: 
@@ -5384,18 +5428,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -3077
-          y: 38593
+          x: -3082
+          y: 38788
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I went up to the bar after you told me to do so
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2751
-          y: 38594
+          x: -2756
+          y: 38789
           Width: 442
           Height: 295
       - AltContact: 
@@ -5404,8 +5448,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2305
-          y: 38594
+          x: -2310
+          y: 38789
           Width: 474
           Height: 295
       - AltContact: 
@@ -5414,8 +5458,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1826
-          y: 38593
+          x: -1831
+          y: 38790
           Width: 470
           Height: 295
       - AltContact: 
@@ -5424,8 +5468,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1347
-          y: 38593
+          x: -1352
+          y: 38790
           Width: 453
           Height: 295
       - AltContact: 
@@ -5434,18 +5478,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -886
-          y: 38594
+          x: -891
+          y: 38791
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: So I sat down at the bar while I waited
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -558
-          y: 38594
+          x: -563
+          y: 38791
           Width: 401
           Height: 295
       - AltContact: 
@@ -5455,8 +5499,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -154
-          y: 38595
+          x: -159
+          y: 38792
           Width: 611
           Height: 295
       - AltContact: 
@@ -5466,7 +5510,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 461
-          y: 38597
+          y: 38794
           Width: 406
           Height: 295
       - AltContact: 
@@ -5476,9 +5520,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 872
-          y: 38598
+          y: 38795
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I said that I'd never tried one
@@ -5486,7 +5530,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1202
-          y: 38601
+          y: 38798
           Width: 351
           Height: 295
       - AltContact: 
@@ -5496,7 +5540,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1559
-          y: 38601
+          y: 38798
           Width: 481
           Height: 295
       - AltContact: 
@@ -5506,7 +5550,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 2045
-          y: 38602
+          y: 38799
           Width: 453
           Height: 295
       UnlockInstaPostsAccount: Althea
@@ -5520,7 +5564,7 @@ MonoBehaviour:
           x: -4712
           y: 38916
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 80
@@ -5528,8 +5572,8 @@ MonoBehaviour:
         location:
           x: -4314
           y: 38919
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4505
         y: 38558
@@ -5544,7 +5588,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -3757
-          y: 38593
+          y: 38501
           Width: 323
           Height: 295
       - AltContact: 
@@ -5554,7 +5598,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -3426
-          y: 38592
+          y: 38500
           Width: 346
           Height: 295
       - AltContact: 
@@ -5564,9 +5608,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -3077
-          y: 38593
+          y: 38501
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I went up to the bar after you told me to do so
@@ -5574,7 +5618,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2751
-          y: 38594
+          y: 38502
           Width: 442
           Height: 295
       - AltContact: 
@@ -5584,7 +5628,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2305
-          y: 38594
+          y: 38498
           Width: 474
           Height: 295
       - AltContact: 
@@ -5594,7 +5638,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1826
-          y: 38593
+          y: 38497
           Width: 470
           Height: 295
       - AltContact: 
@@ -5604,7 +5648,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1347
-          y: 38593
+          y: 38497
           Width: 453
           Height: 295
       - AltContact: 
@@ -5614,9 +5658,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -886
-          y: 38594
+          y: 38498
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: So I sat down at the bar while I waited
@@ -5624,7 +5668,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -558
-          y: 38594
+          y: 38498
           Width: 401
           Height: 295
       - AltContact: 
@@ -5634,8 +5678,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -154
-          y: 38595
+          x: -158
+          y: 38499
           Width: 611
           Height: 295
       - AltContact: 
@@ -5644,8 +5688,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 461
-          y: 38597
+          x: 457
+          y: 38501
           Width: 406
           Height: 295
       - AltContact: 
@@ -5654,18 +5698,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 872
-          y: 38598
+          x: 870
+          y: 38502
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I said that I'd never tried one
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1202
-          y: 38601
+          x: 1198
+          y: 38505
           Width: 351
           Height: 295
       - AltContact: 
@@ -5674,8 +5718,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1559
-          y: 38601
+          x: 1555
+          y: 38505
           Width: 481
           Height: 295
       - AltContact: 
@@ -5684,8 +5728,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 2045
-          y: 38602
+          x: 2041
+          y: 38506
           Width: 453
           Height: 295
       UnlockInstaPostsAccount: Althea
@@ -5699,7 +5743,7 @@ MonoBehaviour:
           x: 2524
           y: 38910
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 81
@@ -5707,8 +5751,8 @@ MonoBehaviour:
         location:
           x: 2902
           y: 38911
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2691
         y: 38567
@@ -5723,9 +5767,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -3296
-          y: 39249
+          y: 39397
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I told him it was "really smooth going down my throat"
@@ -5733,7 +5777,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2967
-          y: 39248
+          y: 39396
           Width: 483
           Height: 295
       - AltContact: 
@@ -5743,7 +5787,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2481
-          y: 39249
+          y: 39397
           Width: 395
           Height: 295
       - AltContact: 
@@ -5753,9 +5797,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2083
-          y: 39250
+          y: 39398
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: By then Alejandra had come to the counter and started chatting
@@ -5764,7 +5808,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1756
-          y: 39251
+          y: 39399
           Width: 688
           Height: 295
       - AltContact: 
@@ -5774,7 +5818,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1064
-          y: 39253
+          y: 39401
           Width: 358
           Height: 295
       - AltContact: 
@@ -5784,7 +5828,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -700
-          y: 39255
+          y: 39403
           Width: 504
           Height: 295
       - AltContact: 
@@ -5794,8 +5838,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -191
-          y: 39256
+          x: -195
+          y: 39404
           Width: 541
           Height: 295
       - AltContact: 
@@ -5804,8 +5848,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 352
-          y: 39257
+          x: 348
+          y: 39405
           Width: 370
           Height: 295
       - AltContact: 
@@ -5814,8 +5858,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 728
-          y: 39257
+          x: 724
+          y: 39405
           Width: 540
           Height: 295
       - AltContact: 
@@ -5824,8 +5868,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1273
-          y: 39259
+          x: 1269
+          y: 39407
           Width: 323
           Height: 295
       - AltContact: 
@@ -5834,8 +5878,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1601
-          y: 39261
+          x: 1597
+          y: 39409
           Width: 400
           Height: 295
       - AltContact: 
@@ -5844,10 +5888,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 2006
-          y: 39260
+          x: 2002
+          y: 39408
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -5859,7 +5903,7 @@ MonoBehaviour:
           x: -4280
           y: 39566
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: shy
         SubChapNum: 83
@@ -5867,8 +5911,8 @@ MonoBehaviour:
         location:
           x: -4774
           y: 40206
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4533
         y: 39213
@@ -5883,9 +5927,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -3296
-          y: 39249
+          y: 39093
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I told him it was "really smooth going down my throat"
@@ -5893,7 +5937,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2967
-          y: 39248
+          y: 39092
           Width: 483
           Height: 295
       - AltContact: 
@@ -5903,7 +5947,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2481
-          y: 39249
+          y: 39093
           Width: 395
           Height: 295
       - AltContact: 
@@ -5913,9 +5957,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2083
-          y: 39250
+          y: 39094
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: By then Alejandra had come to the counter and started chatting
@@ -5923,8 +5967,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1756
-          y: 39251
+          x: -1760
+          y: 39095
           Width: 688
           Height: 295
       - AltContact: 
@@ -5933,8 +5977,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1064
-          y: 39253
+          x: -1068
+          y: 39097
           Width: 358
           Height: 295
       - AltContact: 
@@ -5943,8 +5987,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -700
-          y: 39255
+          x: -704
+          y: 39099
           Width: 504
           Height: 295
       - AltContact: 
@@ -5954,8 +5998,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -191
-          y: 39256
+          x: -195
+          y: 39100
           Width: 541
           Height: 295
       - AltContact: 
@@ -5964,8 +6008,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 352
-          y: 39257
+          x: 348
+          y: 39101
           Width: 370
           Height: 295
       - AltContact: 
@@ -5974,8 +6018,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 728
-          y: 39257
+          x: 724
+          y: 39101
           Width: 540
           Height: 295
       - AltContact: 
@@ -5984,8 +6028,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1273
-          y: 39259
+          x: 1269
+          y: 39103
           Width: 323
           Height: 295
       - AltContact: 
@@ -5994,8 +6038,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1601
-          y: 39261
+          x: 1597
+          y: 39105
           Width: 400
           Height: 295
       - AltContact: 
@@ -6004,10 +6048,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 2006
-          y: 39260
+          x: 2002
+          y: 39104
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -6018,8 +6062,8 @@ MonoBehaviour:
         location:
           x: 2448
           y: 40185
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: What did they say??
         SubChapNum: 85
@@ -6028,7 +6072,7 @@ MonoBehaviour:
           x: 2923
           y: 39548
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2691
         y: 39199
@@ -6042,8 +6086,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1114
-          y: 39855
+          x: -1143
+          y: 40027
           Width: 323
           Height: 295
       - AltContact: 
@@ -6052,8 +6096,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -782
-          y: 39855
+          x: -811
+          y: 40027
           Width: 353
           Height: 295
       - AltContact: 
@@ -6062,10 +6106,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -421
-          y: 39855
+          x: -450
+          y: 40027
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -6077,7 +6121,7 @@ MonoBehaviour:
           x: -4440
           y: 40205
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: I don't know!!
         SubChapNum: 83
@@ -6086,7 +6130,7 @@ MonoBehaviour:
           x: -4106
           y: 40203
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4281
         y: 39876
@@ -6100,8 +6144,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2251
-          y: 40540
+          x: -2259
+          y: 40648
           Width: 385
           Height: 295
       - AltContact: 
@@ -6110,8 +6154,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1862
-          y: 40540
+          x: -1870
+          y: 40648
           Width: 323
           Height: 295
       - AltContact: 
@@ -6120,18 +6164,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1532
-          y: 40544
+          x: -1540
+          y: 40652
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: They asked for our numbers
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -1200
-          y: 40541
+          x: -1208
+          y: 40649
           Width: 349
           Height: 295
       - AltContact: 
@@ -6140,8 +6184,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -848
-          y: 40540
+          x: -856
+          y: 40648
           Width: 430
           Height: 295
       - AltContact: 
@@ -6151,8 +6195,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -415
-          y: 40541
+          x: -423
+          y: 40649
           Width: 627
           Height: 295
       - AltContact: 
@@ -6161,8 +6205,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 218
-          y: 40540
+          x: 210
+          y: 40648
           Width: 357
           Height: 295
       - AltContact: 
@@ -6172,8 +6216,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 586
-          y: 40545
+          x: 578
+          y: 40653
           Width: 594
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6186,8 +6230,8 @@ MonoBehaviour:
         location:
           x: -4513
           y: 41450
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Are you sure a kiss was enough?
         SubChapNum: 87
@@ -6196,7 +6240,7 @@ MonoBehaviour:
           x: -4193
           y: 40838
           Width: 372
-          Height: 278
+          Height: 259
       location:
         x: -4255
         y: 40500
@@ -6211,7 +6255,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -2251
-          y: 40540
+          y: 40332
           Width: 385
           Height: 295
       - AltContact: 
@@ -6221,7 +6265,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1862
-          y: 40540
+          y: 40332
           Width: 323
           Height: 295
       - AltContact: 
@@ -6231,9 +6275,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1532
-          y: 40544
+          y: 40336
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: They asked for our numbers
@@ -6241,7 +6285,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -1200
-          y: 40541
+          y: 40333
           Width: 349
           Height: 295
       - AltContact: 
@@ -6251,7 +6295,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -848
-          y: 40540
+          y: 40332
           Width: 430
           Height: 295
       - AltContact: 
@@ -6262,7 +6306,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -415
-          y: 40541
+          y: 40333
           Width: 627
           Height: 295
       - AltContact: 
@@ -6272,7 +6316,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 218
-          y: 40540
+          y: 40332
           Width: 357
           Height: 295
       - AltContact: 
@@ -6283,7 +6327,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 586
-          y: 40545
+          y: 40337
           Width: 594
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6296,8 +6340,8 @@ MonoBehaviour:
         location:
           x: 2823
           y: 41430
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Are you sure a kiss was enough?
         SubChapNum: 89
@@ -6306,7 +6350,7 @@ MonoBehaviour:
           x: 3155
           y: 40820
           Width: 372
-          Height: 278
+          Height: 259
       location:
         x: 2925
         y: 40493
@@ -6320,8 +6364,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1114
-          y: 39855
+          x: -1132
+          y: 39721
           Width: 323
           Height: 295
       - AltContact: 
@@ -6330,8 +6374,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -782
-          y: 39855
+          x: -800
+          y: 39721
           Width: 353
           Height: 295
       - AltContact: 
@@ -6340,10 +6384,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -421
-          y: 39855
+          x: -439
+          y: 39721
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -6355,7 +6399,7 @@ MonoBehaviour:
           x: 3120
           y: 40185
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Tell me!!!
         SubChapNum: 84
@@ -6363,8 +6407,8 @@ MonoBehaviour:
         location:
           x: 2786
           y: 40184
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2924
         y: 39854
@@ -6378,18 +6422,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1682
-          y: 41775
+          x: -1714
+          y: 41903
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: We can always come back here later to fulfil my promise to him
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1354
-          y: 41777
+          x: -1386
+          y: 41902
           Width: 531
           Height: 295
       - AltContact: 
@@ -6398,18 +6442,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -821
-          y: 41779
+          x: -853
+          y: 41904
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: More importantly
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -494
-          y: 41780
+          x: -529
+          y: 41905
           Width: 323
           Height: 295
       - AltContact: 
@@ -6418,8 +6462,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -165
-          y: 41782
+          x: -200
+          y: 41907
           Width: 515
           Height: 295
       - AltContact: 
@@ -6428,8 +6472,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 357
-          y: 41783
+          x: 322
+          y: 41908
           Width: 527
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6443,7 +6487,7 @@ MonoBehaviour:
           x: -4557
           y: 42088
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: salute
         SubChapNum: 90
@@ -6451,8 +6495,8 @@ MonoBehaviour:
         location:
           x: -4146
           y: 42087
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4347
         y: 41743
@@ -6466,8 +6510,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1025
-          y: 41136
+          x: -1029
+          y: 41280
           Width: 323
           Height: 295
       - AltContact: 
@@ -6476,8 +6520,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -690
-          y: 41138
+          x: -694
+          y: 41282
           Width: 323
           Height: 295
       - AltContact: 
@@ -6486,8 +6530,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -353
-          y: 41139
+          x: -357
+          y: 41283
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6501,7 +6545,7 @@ MonoBehaviour:
           x: -4175
           y: 41452
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4174
         y: 41132
@@ -6510,23 +6554,23 @@ MonoBehaviour:
     - Contact: Althea
       TextList:
       - AltContact: 
-        Type: 1
+        Type: 5
         TextContent: gf-laugh
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1682
-          y: 41775
+          x: -1717
+          y: 41586
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: We can always come back here later to fulfil my promise to him
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1354
-          y: 41777
+          x: -1389
+          y: 41588
           Width: 531
           Height: 295
       - AltContact: 
@@ -6535,18 +6579,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -821
-          y: 41779
+          x: -856
+          y: 41590
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: More importantly
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -494
-          y: 41780
+          x: -529
+          y: 41591
           Width: 323
           Height: 295
       - AltContact: 
@@ -6555,8 +6599,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -165
-          y: 41782
+          x: -200
+          y: 41593
           Width: 515
           Height: 295
       - AltContact: 
@@ -6565,8 +6609,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 357
-          y: 41783
+          x: 322
+          y: 41594
           Width: 527
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6580,7 +6624,7 @@ MonoBehaviour:
           x: 2828
           y: 42069
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: salute
         SubChapNum: 91
@@ -6588,8 +6632,8 @@ MonoBehaviour:
         location:
           x: 3202
           y: 42069
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 2995
         y: 41739
@@ -6603,8 +6647,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1025
-          y: 41136
+          x: -1021
+          y: 40964
           Width: 323
           Height: 295
       - AltContact: 
@@ -6613,8 +6657,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -690
-          y: 41138
+          x: -686
+          y: 40966
           Width: 323
           Height: 295
       - AltContact: 
@@ -6623,8 +6667,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -353
-          y: 41139
+          x: -349
+          y: 40967
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6638,7 +6682,7 @@ MonoBehaviour:
           x: 3181
           y: 41429
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3180
         y: 41114
@@ -6657,7 +6701,7 @@ MonoBehaviour:
           x: -4525
           y: 42697
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Are you guys still at the bar?
         SubChapNum: 92
@@ -6666,7 +6710,7 @@ MonoBehaviour:
           x: -4157
           y: 42696
           Width: 350
-          Height: 278
+          Height: 259
       location:
         x: -4353
         y: 42392
@@ -6685,7 +6729,7 @@ MonoBehaviour:
           x: 2840
           y: 42678
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Are you guys still at the bar?
         SubChapNum: 93
@@ -6694,7 +6738,7 @@ MonoBehaviour:
           x: 3190
           y: 42678
           Width: 350
-          Height: 278
+          Height: 259
       location:
         x: 2999
         y: 42375
@@ -6708,8 +6752,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1372
-          y: 43017
+          x: -1365
+          y: 42818
           Width: 323
           Height: 295
       - AltContact: 
@@ -6718,8 +6762,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1044
-          y: 43017
+          x: -1037
+          y: 42818
           Width: 364
           Height: 295
       - AltContact: 
@@ -6728,8 +6772,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -673
-          y: 43019
+          x: -666
+          y: 42820
           Width: 382
           Height: 295
       - AltContact: 
@@ -6738,8 +6782,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -287
-          y: 43022
+          x: -280
+          y: 42823
           Width: 328
           Height: 295
       - AltContact: 
@@ -6748,8 +6792,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 47
-          y: 43024
+          x: 54
+          y: 42825
           Width: 446
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6762,8 +6806,8 @@ MonoBehaviour:
         location:
           x: -4528
           y: 43309
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I love you!
         SubChapNum: 94
@@ -6772,7 +6816,7 @@ MonoBehaviour:
           x: -4177
           y: 43311
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4314
         y: 42990
@@ -6786,8 +6830,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1372
-          y: 43017
+          x: -1355
+          y: 42522
           Width: 323
           Height: 295
       - AltContact: 
@@ -6796,8 +6840,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1044
-          y: 43017
+          x: -1027
+          y: 42522
           Width: 364
           Height: 295
       - AltContact: 
@@ -6806,8 +6850,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -673
-          y: 43019
+          x: -656
+          y: 42524
           Width: 382
           Height: 295
       - AltContact: 
@@ -6816,8 +6860,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -287
-          y: 43022
+          x: -270
+          y: 42527
           Width: 328
           Height: 295
       - AltContact: 
@@ -6826,8 +6870,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 47
-          y: 43024
+          x: 64
+          y: 42529
           Width: 446
           Height: 295
       UnlockInstaPostsAccount: 
@@ -6840,8 +6884,8 @@ MonoBehaviour:
         location:
           x: 2838
           y: 43291
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I love you!
         SubChapNum: 95
@@ -6850,7 +6894,7 @@ MonoBehaviour:
           x: 3197
           y: 43293
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 2996
         y: 42966
@@ -6867,7 +6911,7 @@ MonoBehaviour:
           x: -855
           y: 43614
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 8
         TextContent: 50 Minutes Later
@@ -6894,10 +6938,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 172
-          y: 43734
+          x: 1341
+          y: 43703
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -6908,8 +6952,8 @@ MonoBehaviour:
         location:
           x: -4525
           y: 43943
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: heart-eyes
         SubChapNum: 96
@@ -6917,8 +6961,8 @@ MonoBehaviour:
         location:
           x: -4175
           y: 43942
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4354
         y: 43611
@@ -6932,18 +6976,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -855
-          y: 43614
+          x: -860
+          y: 43325
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 8
         TextContent: 50 Minutes Later
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -527
-          y: 43615
+          x: -532
+          y: 43326
           Width: 323
           Height: 295
       - AltContact: 
@@ -6952,8 +6996,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -202
-          y: 43615
+          x: -207
+          y: 43326
           Width: 348
           Height: 295
       - AltContact: 
@@ -6962,10 +7006,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 170
-          y: 43457
+          x: 1339
+          y: 43290
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -6976,8 +7020,8 @@ MonoBehaviour:
         location:
           x: 2881
           y: 43918
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: heart-eyes
         SubChapNum: 97
@@ -6985,8 +7029,8 @@ MonoBehaviour:
         location:
           x: 3251
           y: 43920
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3050
         y: 43591
@@ -7000,8 +7044,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2093
-          y: 44262
+          x: -2117
+          y: 44234
           Width: 391
           Height: 295
       - AltContact: 
@@ -7010,10 +7054,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1700
-          y: 44263
+          x: -1724
+          y: 44235
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I honestly didn't expect to enjoy what I did tonight as much
@@ -7021,8 +7065,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1373
-          y: 44264
+          x: -1397
+          y: 44236
           Width: 550
           Height: 295
       - AltContact: 
@@ -7032,8 +7076,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -821
-          y: 44266
+          x: -845
+          y: 44238
           Width: 763
           Height: 295
       - AltContact: 
@@ -7042,8 +7086,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -54
-          y: 44267
+          x: -78
+          y: 44239
           Width: 490
           Height: 295
       - AltContact: 
@@ -7052,8 +7096,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 442
-          y: 44267
+          x: 418
+          y: 44239
           Width: 330
           Height: 295
       - AltContact: 
@@ -7063,8 +7107,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 778
-          y: 44269
+          x: 754
+          y: 44241
           Width: 545
           Height: 295
       UnlockInstaPostsAccount: 
@@ -7078,7 +7122,7 @@ MonoBehaviour:
           x: -4147
           y: 44563
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: YES!
         SubChapNum: 99
@@ -7087,7 +7131,7 @@ MonoBehaviour:
           x: -4659
           y: 45778
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4353
         y: 44233
@@ -7101,8 +7145,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2093
-          y: 44262
+          x: -2125
+          y: 43922
           Width: 391
           Height: 295
       - AltContact: 
@@ -7111,10 +7155,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1700
-          y: 44263
+          x: -1732
+          y: 43923
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I honestly didn't expect to enjoy what I did tonight as much
@@ -7122,8 +7166,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1373
-          y: 44264
+          x: -1409
+          y: 43924
           Width: 550
           Height: 295
       - AltContact: 
@@ -7133,8 +7177,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -821
-          y: 44266
+          x: -857
+          y: 43926
           Width: 763
           Height: 295
       - AltContact: 
@@ -7143,8 +7187,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -54
-          y: 44267
+          x: -90
+          y: 43927
           Width: 490
           Height: 295
       - AltContact: 
@@ -7153,8 +7197,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 442
-          y: 44267
+          x: 406
+          y: 43927
           Width: 330
           Height: 295
       - AltContact: 
@@ -7164,8 +7208,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 778
-          y: 44269
+          x: 742
+          y: 43929
           Width: 545
           Height: 295
       UnlockInstaPostsAccount: 
@@ -7179,7 +7223,7 @@ MonoBehaviour:
           x: 2713
           y: 45765
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: I wish you'd done more
         SubChapNum: 101
@@ -7188,7 +7232,7 @@ MonoBehaviour:
           x: 3246
           y: 44545
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3050
         y: 44215
@@ -7202,8 +7246,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1076
-          y: 44906
+          x: -1088
+          y: 44879
           Width: 323
           Height: 295
       - AltContact: 
@@ -7212,8 +7256,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -748
-          y: 44905
+          x: -760
+          y: 44878
           Width: 323
           Height: 295
       - AltContact: 
@@ -7222,8 +7266,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -422
-          y: 44903
+          x: -434
+          y: 44876
           Width: 405
           Height: 295
       - AltContact: 
@@ -7232,10 +7276,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -11
-          y: 44904
+          x: -23
+          y: 44877
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -7246,8 +7290,8 @@ MonoBehaviour:
         location:
           x: -4323
           y: 45169
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Next time??
         SubChapNum: 102
@@ -7256,7 +7300,7 @@ MonoBehaviour:
           x: -3964
           y: 45167
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4146
         y: 44852
@@ -7293,7 +7337,7 @@ MonoBehaviour:
           x: -395
           y: 46095
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: By the way
@@ -7325,7 +7369,7 @@ MonoBehaviour:
           x: -4128
           y: 46388
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4144
         y: 46074
@@ -7339,8 +7383,8 @@ MonoBehaviour:
         TextDelay: 0
         Tendency: 0
         location:
-          x: -1366
-          y: 46095
+          x: -1380
+          y: 45792
           Width: 537
           Height: 295
       - AltContact: 
@@ -7349,8 +7393,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -826
-          y: 46094
+          x: -840
+          y: 45791
           Width: 428
           Height: 295
       - AltContact: 
@@ -7359,18 +7403,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -395
-          y: 46095
+          x: -409
+          y: 45792
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: By the way
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -65
-          y: 46100
+          x: -79
+          y: 45797
           Width: 323
           Height: 295
       - AltContact: 
@@ -7379,8 +7423,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 267
-          y: 46097
+          x: 253
+          y: 45794
           Width: 463
           Height: 295
       UnlockInstaPostsAccount: 
@@ -7394,7 +7438,7 @@ MonoBehaviour:
           x: 3243
           y: 46382
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3245
         y: 46059
@@ -7408,8 +7452,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1076
-          y: 44906
+          x: -1085
+          y: 44568
           Width: 323
           Height: 295
       - AltContact: 
@@ -7418,8 +7462,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -748
-          y: 44905
+          x: -757
+          y: 44567
           Width: 323
           Height: 295
       - AltContact: 
@@ -7428,8 +7472,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -422
-          y: 44903
+          x: -431
+          y: 44565
           Width: 405
           Height: 295
       - AltContact: 
@@ -7438,10 +7482,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -11
-          y: 44904
+          x: -20
+          y: 44566
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -7452,8 +7496,8 @@ MonoBehaviour:
         location:
           x: 3081
           y: 45147
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: Next time??
         SubChapNum: 105
@@ -7462,7 +7506,7 @@ MonoBehaviour:
           x: 3438
           y: 45147
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3248
         y: 44830
@@ -7499,7 +7543,7 @@ MonoBehaviour:
           x: -117
           y: 45481
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -7510,8 +7554,8 @@ MonoBehaviour:
         location:
           x: -4312
           y: 45779
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: heart-eyes
         SubChapNum: 99
@@ -7519,8 +7563,8 @@ MonoBehaviour:
         location:
           x: -3943
           y: 45773
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4129
         y: 45456
@@ -7534,12 +7578,12 @@ MonoBehaviour:
       - RespTree: 0
         TextContent: Althea-bar1
         SubChapNum: 106
-        Type: 0
+        Type: 2
         location:
-          x: -4120
-          y: 46994
+          x: -4122
+          y: 46976
           Width: 323
-          Height: 278
+          Height: 411
       location:
         x: -4124
         y: 46682
@@ -7557,8 +7601,8 @@ MonoBehaviour:
         location:
           x: 3245
           y: 46983
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 354
       location:
         x: 3243
         y: 46674
@@ -7572,8 +7616,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -947
-          y: 45481
+          x: -954
+          y: 45185
           Width: 323
           Height: 295
       - AltContact: 
@@ -7582,8 +7626,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -618
-          y: 45481
+          x: -625
+          y: 45185
           Width: 498
           Height: 295
       - AltContact: 
@@ -7592,10 +7636,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -117
-          y: 45481
+          x: -124
+          y: 45185
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -7606,8 +7650,8 @@ MonoBehaviour:
         location:
           x: 3089
           y: 45764
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: heart-eyes
         SubChapNum: 100
@@ -7615,8 +7659,8 @@ MonoBehaviour:
         location:
           x: 3451
           y: 45766
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3246
         y: 45437
@@ -7643,7 +7687,7 @@ MonoBehaviour:
           x: -1854
           y: 47313
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I forgot to mention though
@@ -7693,7 +7737,7 @@ MonoBehaviour:
           x: 159
           y: 47314
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I posted it on insta on the way home
@@ -7736,7 +7780,7 @@ MonoBehaviour:
           x: -4311
           y: 47616
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: I already saw it
         SubChapNum: 109
@@ -7745,7 +7789,7 @@ MonoBehaviour:
           x: -3934
           y: 47620
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4116
         y: 47288
@@ -7759,8 +7803,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2209
-          y: 47313
+          x: -2221
+          y: 46997
           Width: 351
           Height: 295
       - AltContact: 
@@ -7769,18 +7813,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -1854
-          y: 47313
+          x: -1866
+          y: 46997
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I forgot to mention though
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1524
-          y: 47314
+          x: -1536
+          y: 46998
           Width: 339
           Height: 295
       - AltContact: 
@@ -7789,8 +7833,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1181
-          y: 47313
+          x: -1193
+          y: 46997
           Width: 506
           Height: 295
       - AltContact: 
@@ -7799,8 +7843,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -667
-          y: 47313
+          x: -679
+          y: 46997
           Width: 410
           Height: 295
       - AltContact: 
@@ -7809,8 +7853,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -252
-          y: 47313
+          x: -264
+          y: 46997
           Width: 405
           Height: 295
       - AltContact: 
@@ -7819,18 +7863,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 159
-          y: 47314
+          x: 147
+          y: 46998
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I posted it on insta on the way home
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 486
-          y: 47316
+          x: 474
+          y: 47000
           Width: 391
           Height: 295
       - AltContact: 
@@ -7839,8 +7883,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 884
-          y: 47316
+          x: 872
+          y: 47000
           Width: 325
           Height: 295
       - AltContact: 
@@ -7850,8 +7894,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1213
-          y: 47316
+          x: 1201
+          y: 47000
           Width: 651
           Height: 295
       UnlockInstaPostsAccount: 
@@ -7865,7 +7909,7 @@ MonoBehaviour:
           x: 3432
           y: 47615
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Okay one second!
         SubChapNum: 111
@@ -7874,7 +7918,7 @@ MonoBehaviour:
           x: 3072
           y: 47618
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3245
         y: 47276
@@ -7891,7 +7935,7 @@ MonoBehaviour:
           x: -2085
           y: 47944
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Figured I'd pay him back a little bit for all the free drinks
@@ -7922,8 +7966,8 @@ MonoBehaviour:
         location:
           x: -4302
           y: 48240
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I'm sure he enjoyed the view
         SubChapNum: 112
@@ -7932,7 +7976,7 @@ MonoBehaviour:
           x: -4664
           y: 48239
           Width: 351
-          Height: 278
+          Height: 259
       location:
         x: -4310
         y: 47921
@@ -7970,7 +8014,7 @@ MonoBehaviour:
           x: 1424
           y: 47942
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -7981,8 +8025,8 @@ MonoBehaviour:
         location:
           x: -3942
           y: 48241
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I'm sure he enjoyed the view
         SubChapNum: 112
@@ -7991,7 +8035,7 @@ MonoBehaviour:
           x: -3590
           y: 48244
           Width: 351
-          Height: 278
+          Height: 259
       location:
         x: -3932
         y: 47920
@@ -8006,8 +8050,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 358
-          y: 47941
+          x: 357
+          y: 47643
           Width: 567
           Height: 295
       - AltContact: 
@@ -8016,8 +8060,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 927
-          y: 47940
+          x: 930
+          y: 47642
           Width: 492
           Height: 295
       - AltContact: 
@@ -8026,10 +8070,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 1424
-          y: 47942
+          x: 1427
+          y: 47644
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8040,8 +8084,8 @@ MonoBehaviour:
         location:
           x: 3410
           y: 48226
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I'm sure he enjoyed the view
         SubChapNum: 113
@@ -8050,7 +8094,7 @@ MonoBehaviour:
           x: 3745
           y: 48226
           Width: 351
-          Height: 278
+          Height: 259
       location:
         x: 3441
         y: 47899
@@ -8064,8 +8108,8 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -1255
-          y: 47944
+          x: -1243
+          y: 47643
           Width: 323
           Height: 295
       - AltContact: 
@@ -8074,8 +8118,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1754
-          y: 47945
+          x: -1742
+          y: 47644
           Width: 492
           Height: 295
       - AltContact: 
@@ -8084,10 +8128,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -2085
-          y: 47944
+          x: -2073
+          y: 47643
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8098,8 +8142,8 @@ MonoBehaviour:
         location:
           x: 3070
           y: 48227
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: I'm sure he enjoyed the view
         SubChapNum: 113
@@ -8108,7 +8152,7 @@ MonoBehaviour:
           x: 2716
           y: 48229
           Width: 351
-          Height: 278
+          Height: 259
       location:
         x: 3076
         y: 47900
@@ -8135,7 +8179,7 @@ MonoBehaviour:
           x: -2811
           y: 48590
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Don't worry I saved the best for later
@@ -8183,10 +8227,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -735
-          y: 48728
+          x: -727
+          y: 48584
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: Leaving me with a little predicament all on my own
@@ -8263,10 +8307,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 2534
-          y: 48781
+          x: 2537
+          y: 48597
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8277,8 +8321,8 @@ MonoBehaviour:
         location:
           x: -4292
           y: 48906
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 114
@@ -8286,8 +8330,8 @@ MonoBehaviour:
         location:
           x: -3901
           y: 48907
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4102
         y: 48549
@@ -8301,8 +8345,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -3158
-          y: 48591
+          x: -3174
+          y: 48267
           Width: 342
           Height: 295
       - AltContact: 
@@ -8311,8 +8355,8 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: -2811
-          y: 48590
+          x: -2827
+          y: 48266
           Width: 323
           Height: 295
       - AltContact: 
@@ -8321,8 +8365,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2485
-          y: 48592
+          x: -2501
+          y: 48268
           Width: 393
           Height: 295
       - AltContact: 
@@ -8331,8 +8375,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2086
-          y: 48594
+          x: -2102
+          y: 48270
           Width: 323
           Height: 295
       - AltContact: 
@@ -8341,8 +8385,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1753
-          y: 48595
+          x: -1769
+          y: 48271
           Width: 366
           Height: 295
       - AltContact: 
@@ -8352,8 +8396,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1375
-          y: 48598
+          x: -1391
+          y: 48274
           Width: 637
           Height: 295
       - AltContact: 
@@ -8362,18 +8406,18 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -734
-          y: 48445
+          x: -744
+          y: 48173
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: Leaving me with a little predicament all on my own
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -399
-          y: 48596
+          x: -417
+          y: 48241
           Width: 465
           Height: 295
       - AltContact: 
@@ -8382,8 +8426,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 71
-          y: 48596
+          x: 53
+          y: 48241
           Width: 420
           Height: 295
       - AltContact: 
@@ -8392,8 +8436,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 495
-          y: 48598
+          x: 477
+          y: 48243
           Width: 476
           Height: 295
       - AltContact: 
@@ -8402,8 +8446,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 977
-          y: 48599
+          x: 959
+          y: 48244
           Width: 468
           Height: 295
       - AltContact: 
@@ -8412,8 +8456,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1451
-          y: 48597
+          x: 1430
+          y: 48242
           Width: 323
           Height: 295
       - AltContact: 
@@ -8422,8 +8466,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1781
-          y: 48601
+          x: 1760
+          y: 48246
           Width: 338
           Height: 295
       - AltContact: 
@@ -8432,8 +8476,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 2123
-          y: 48603
+          x: 2102
+          y: 48248
           Width: 382
           Height: 295
       - AltContact: 
@@ -8442,10 +8486,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 2534
-          y: 48505
+          x: 2528
+          y: 47811
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8456,8 +8500,8 @@ MonoBehaviour:
         location:
           x: 3082
           y: 48929
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 115
@@ -8465,8 +8509,8 @@ MonoBehaviour:
         location:
           x: 3431
           y: 48930
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3244
         y: 48554
@@ -8480,8 +8524,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1270
-          y: 49269
+          x: -1263
+          y: 49299
           Width: 392
           Height: 295
       - AltContact: 
@@ -8490,8 +8534,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -871
-          y: 49271
+          x: -864
+          y: 49301
           Width: 432
           Height: 295
       - AltContact: 
@@ -8500,18 +8544,18 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -438
-          y: 49401
+          x: -431
+          y: 49312
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: What do you think he'd do next?
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -111
-          y: 49276
+          x: -104
+          y: 49306
           Width: 370
           Height: 295
       UnlockInstaPostsAccount: 
@@ -8525,7 +8569,7 @@ MonoBehaviour:
           x: -4287
           y: 49582
           Width: 335
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: He would've fucked you
         SubChapNum: 117
@@ -8534,7 +8578,7 @@ MonoBehaviour:
           x: -3907
           y: 49582
           Width: 327
-          Height: 278
+          Height: 259
       location:
         x: -4081
         y: 49237
@@ -8548,8 +8592,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1270
-          y: 49269
+          x: -1278
+          y: 48993
           Width: 392
           Height: 295
       - AltContact: 
@@ -8558,8 +8602,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -871
-          y: 49271
+          x: -879
+          y: 48995
           Width: 432
           Height: 295
       - AltContact: 
@@ -8568,18 +8612,18 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -438
-          y: 49125
+          x: -445
+          y: 48903
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: What do you think he'd do next?
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -111
-          y: 49276
+          x: -119
+          y: 49000
           Width: 370
           Height: 295
       UnlockInstaPostsAccount: 
@@ -8593,7 +8637,7 @@ MonoBehaviour:
           x: 3439
           y: 49575
           Width: 327
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: He would've touched you
         SubChapNum: 119
@@ -8602,7 +8646,7 @@ MonoBehaviour:
           x: 3077
           y: 49575
           Width: 335
-          Height: 278
+          Height: 259
       location:
         x: 3270
         y: 49230
@@ -8616,10 +8660,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -3248
-          y: 50062
+          x: -3243
+          y: 49932
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: Kind of like this
@@ -8682,8 +8726,8 @@ MonoBehaviour:
         location:
           x: -4277
           y: 50338
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 120
@@ -8691,8 +8735,8 @@ MonoBehaviour:
         location:
           x: -4607
           y: 50333
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4280
         y: 49881
@@ -8768,9 +8812,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 2632
-          y: 50039
+          y: 49915
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8781,8 +8825,8 @@ MonoBehaviour:
         location:
           x: -3902
           y: 50333
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 120
@@ -8790,8 +8834,8 @@ MonoBehaviour:
         location:
           x: -3543
           y: 50333
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -3901
         y: 49879
@@ -8805,8 +8849,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 167
-          y: 49911
+          x: 178
+          y: 49594
           Width: 335
           Height: 295
       - AltContact: 
@@ -8816,7 +8860,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 506
-          y: 49911
+          y: 49608
           Width: 345
           Height: 295
       - AltContact: 
@@ -8826,7 +8870,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 852
-          y: 49911
+          y: 49608
           Width: 323
           Height: 295
       - AltContact: 
@@ -8836,7 +8880,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1179
-          y: 49912
+          y: 49609
           Width: 390
           Height: 295
       - AltContact: 
@@ -8847,7 +8891,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1573
-          y: 49913
+          y: 49610
           Width: 719
           Height: 295
       - AltContact: 
@@ -8857,7 +8901,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 2298
-          y: 49912
+          y: 49609
           Width: 325
           Height: 295
       - AltContact: 
@@ -8866,10 +8910,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 2630
-          y: 49760
+          x: 2634
+          y: 49500
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8880,8 +8924,8 @@ MonoBehaviour:
         location:
           x: 3420
           y: 50322
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 121
@@ -8889,8 +8933,8 @@ MonoBehaviour:
         location:
           x: 3752
           y: 50322
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3441
         y: 49870
@@ -8904,8 +8948,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -732
-          y: 49924
+          x: -737
+          y: 49608
           Width: 323
           Height: 295
       - AltContact: 
@@ -8914,8 +8958,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1204
-          y: 49923
+          x: -1209
+          y: 49607
           Width: 472
           Height: 295
       - AltContact: 
@@ -8925,8 +8969,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1966
-          y: 49925
+          x: -1971
+          y: 49609
           Width: 760
           Height: 295
       - AltContact: 
@@ -8936,8 +8980,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2582
-          y: 49925
+          x: -2587
+          y: 49609
           Width: 613
           Height: 295
       - AltContact: 
@@ -8946,8 +8990,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2911
-          y: 49924
+          x: -2916
+          y: 49608
           Width: 323
           Height: 295
       - AltContact: 
@@ -8956,10 +9000,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: -3246
-          y: 49785
+          x: -3254
+          y: 49519
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -8970,8 +9014,8 @@ MonoBehaviour:
         location:
           x: 3081
           y: 50322
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: hot
         SubChapNum: 121
@@ -8979,8 +9023,8 @@ MonoBehaviour:
         location:
           x: 2743
           y: 50322
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3090
         y: 49871
@@ -9044,10 +9088,10 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -80
-          y: 50822
+          x: -83
+          y: 50654
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 5
         TextContent: grinning-sweat
@@ -9057,7 +9101,7 @@ MonoBehaviour:
           x: 245
           y: 50679
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I figured you could use this for a little visual next
@@ -9077,7 +9121,7 @@ MonoBehaviour:
           x: 1032
           y: 50681
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -9089,7 +9133,7 @@ MonoBehaviour:
           x: -3875
           y: 50955
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: What do you have planned next??
         SubChapNum: 123
@@ -9098,7 +9142,7 @@ MonoBehaviour:
           x: -4447
           y: 51616
           Width: 378
-          Height: 278
+          Height: 259
       location:
         x: -4078
         y: 50637
@@ -9112,8 +9156,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1862
-          y: 50672
+          x: -1886
+          y: 50305
           Width: 323
           Height: 295
       - AltContact: 
@@ -9122,8 +9166,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1533
-          y: 50673
+          x: -1557
+          y: 50306
           Width: 324
           Height: 295
       - AltContact: 
@@ -9132,8 +9176,8 @@ MonoBehaviour:
         TextDelay: 5.1
         Tendency: 0
         location:
-          x: -1200
-          y: 50674
+          x: -1224
+          y: 50307
           Width: 323
           Height: 295
       - AltContact: 
@@ -9142,8 +9186,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -873
-          y: 50675
+          x: -897
+          y: 50305
           Width: 458
           Height: 295
       - AltContact: 
@@ -9152,8 +9196,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -410
-          y: 50676
+          x: -434
+          y: 50306
           Width: 323
           Height: 295
       - AltContact: 
@@ -9162,28 +9206,28 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -82
-          y: 50548
+          x: -109
+          y: 50242
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 5
         TextContent: grinning-sweat
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 245
-          y: 50679
+          x: 221
+          y: 50309
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I figured you could use this for a little visual next
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 571
-          y: 50680
+          x: 547
+          y: 50310
           Width: 454
           Height: 295
       - AltContact: 
@@ -9192,10 +9236,10 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 1032
-          y: 50681
+          x: 1008
+          y: 50311
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -9207,7 +9251,7 @@ MonoBehaviour:
           x: 2960
           y: 51612
           Width: 378
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: That thing is huge!!
         SubChapNum: 125
@@ -9216,7 +9260,7 @@ MonoBehaviour:
           x: 3489
           y: 50975
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3269
         y: 50621
@@ -9230,8 +9274,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -981
-          y: 51277
+          x: -1008
+          y: 51362
           Width: 472
           Height: 295
       - AltContact: 
@@ -9240,8 +9284,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -503
-          y: 51278
+          x: -530
+          y: 51363
           Width: 513
           Height: 295
       - AltContact: 
@@ -9250,8 +9294,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 13
-          y: 51277
+          x: -14
+          y: 51362
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -9265,7 +9309,7 @@ MonoBehaviour:
           x: -4044
           y: 51616
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: You're going to use it??
         SubChapNum: 123
@@ -9274,7 +9318,7 @@ MonoBehaviour:
           x: -3703
           y: 51614
           Width: 324
-          Height: 278
+          Height: 259
       location:
         x: -3872
         y: 51245
@@ -9288,8 +9332,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1471
-          y: 51960
+          x: -1479
+          y: 51965
           Width: 440
           Height: 295
       - AltContact: 
@@ -9298,8 +9342,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1025
-          y: 51959
+          x: -1033
+          y: 51964
           Width: 448
           Height: 295
       - AltContact: 
@@ -9308,8 +9352,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -575
-          y: 51959
+          x: -583
+          y: 51964
           Width: 471
           Height: 295
       - AltContact: 
@@ -9318,8 +9362,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -102
-          y: 51959
+          x: -113
+          y: 51967
           Width: 419
           Height: 295
       - AltContact: 
@@ -9328,18 +9372,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 321
-          y: 51961
+          x: 310
+          y: 51969
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I think I have an idea
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 650
-          y: 51963
+          x: 639
+          y: 51971
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -9353,7 +9397,7 @@ MonoBehaviour:
           x: -4062
           y: 52290
           Width: 351
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Soon??
         SubChapNum: 126
@@ -9362,7 +9406,7 @@ MonoBehaviour:
           x: -3662
           y: 52287
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -3858
         y: 51924
@@ -9376,8 +9420,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1471
-          y: 51960
+          x: -1492
+          y: 51662
           Width: 440
           Height: 295
       - AltContact: 
@@ -9386,8 +9430,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1025
-          y: 51959
+          x: -1046
+          y: 51661
           Width: 448
           Height: 295
       - AltContact: 
@@ -9396,8 +9440,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -575
-          y: 51959
+          x: -596
+          y: 51661
           Width: 471
           Height: 295
       - AltContact: 
@@ -9406,8 +9450,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -102
-          y: 51959
+          x: -123
+          y: 51661
           Width: 419
           Height: 295
       - AltContact: 
@@ -9416,18 +9460,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 321
-          y: 51961
+          x: 300
+          y: 51663
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I think I have an idea
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 650
-          y: 51963
+          x: 629
+          y: 51665
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -9441,7 +9485,7 @@ MonoBehaviour:
           x: 3323
           y: 52287
           Width: 351
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Soon??
         SubChapNum: 127
@@ -9450,7 +9494,7 @@ MonoBehaviour:
           x: 3688
           y: 52286
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3489
         y: 51925
@@ -9464,8 +9508,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -981
-          y: 51277
+          x: -997
+          y: 51062
           Width: 472
           Height: 295
       - AltContact: 
@@ -9474,8 +9518,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -503
-          y: 51278
+          x: -519
+          y: 51063
           Width: 513
           Height: 295
       - AltContact: 
@@ -9484,8 +9528,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 13
-          y: 51277
+          x: -3
+          y: 51059
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -9499,7 +9543,7 @@ MonoBehaviour:
           x: 3701
           y: 51611
           Width: 324
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Practice?
         SubChapNum: 124
@@ -9508,7 +9552,7 @@ MonoBehaviour:
           x: 3361
           y: 51609
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3490
         y: 51262
@@ -9562,10 +9606,10 @@ MonoBehaviour:
         TextDelay: 5.1
         Tendency: 0
         location:
-          x: 434
-          y: 52762
+          x: 1799
+          y: 52711
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -9576,8 +9620,8 @@ MonoBehaviour:
         location:
           x: -4070
           y: 52941
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: shy
         SubChapNum: 128
@@ -9585,8 +9629,8 @@ MonoBehaviour:
         location:
           x: -3650
           y: 52939
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -3847
         y: 52603
@@ -9600,8 +9644,8 @@ MonoBehaviour:
         TextDelay: 3.5
         Tendency: 0
         location:
-          x: -1044
-          y: 52632
+          x: -1039
+          y: 52326
           Width: 363
           Height: 295
       - AltContact: 
@@ -9610,8 +9654,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -678
-          y: 52633
+          x: -673
+          y: 52327
           Width: 323
           Height: 295
       - AltContact: 
@@ -9620,8 +9664,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -347
-          y: 52633
+          x: -342
+          y: 52327
           Width: 445
           Height: 295
       - AltContact: 
@@ -9630,8 +9674,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 104
-          y: 52634
+          x: 109
+          y: 52328
           Width: 323
           Height: 295
       - AltContact: 
@@ -9640,10 +9684,10 @@ MonoBehaviour:
         TextDelay: 5.1
         Tendency: 0
         location:
-          x: 433
-          y: 52481
+          x: 1806
+          y: 52279
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -9654,8 +9698,8 @@ MonoBehaviour:
         location:
           x: 3357
           y: 52919
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: shy
         SubChapNum: 129
@@ -9663,8 +9707,8 @@ MonoBehaviour:
         location:
           x: 3723
           y: 52928
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3522
         y: 52601
@@ -9710,8 +9754,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -465
-          y: 53272
+          x: -461
+          y: 52956
           Width: 434
           Height: 295
       - AltContact: 
@@ -9740,7 +9784,7 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 733
+          x: 729
           y: 53277
           Width: 504
           Height: 295
@@ -9751,7 +9795,7 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1243
+          x: 1239
           y: 53279
           Width: 531
           Height: 295
@@ -9766,7 +9810,7 @@ MonoBehaviour:
           x: -4152
           y: 53593
           Width: 406
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: It's only fair
         SubChapNum: 131
@@ -9775,7 +9819,7 @@ MonoBehaviour:
           x: -3545
           y: 54825
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -3860
         y: 53239
@@ -9789,8 +9833,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -2017
-          y: 53268
+          x: -2013
+          y: 52956
           Width: 323
           Height: 295
       - AltContact: 
@@ -9800,8 +9844,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1691
-          y: 53267
+          x: -1687
+          y: 52955
           Width: 622
           Height: 295
       - AltContact: 
@@ -9811,8 +9855,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1063
-          y: 53270
+          x: -1059
+          y: 52954
           Width: 594
           Height: 295
       - AltContact: 
@@ -9831,8 +9875,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -27
-          y: 53274
+          x: -23
+          y: 52958
           Width: 351
           Height: 295
       - AltContact: 
@@ -9841,8 +9885,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 329
-          y: 53275
+          x: 333
+          y: 52959
           Width: 398
           Height: 295
       - AltContact: 
@@ -9851,8 +9895,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 733
-          y: 53277
+          x: 737
+          y: 52961
           Width: 504
           Height: 295
       - AltContact: 
@@ -9862,8 +9906,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1243
-          y: 53279
+          x: 1247
+          y: 52967
           Width: 531
           Height: 295
       UnlockInstaPostsAccount: 
@@ -9877,7 +9921,7 @@ MonoBehaviour:
           x: 3274
           y: 53582
           Width: 406
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: It's only fair
         SubChapNum: 133
@@ -9886,7 +9930,7 @@ MonoBehaviour:
           x: 3762
           y: 54800
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3522
         y: 53226
@@ -9934,8 +9978,8 @@ MonoBehaviour:
         location:
           x: -4269
           y: 54202
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 131
@@ -9943,8 +9987,8 @@ MonoBehaviour:
         location:
           x: -3889
           y: 54825
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4089
         y: 53880
@@ -9958,8 +10002,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1467
-          y: 55139
+          x: -1499
+          y: 55188
           Width: 503
           Height: 295
       - AltContact: Alejandra
@@ -9968,8 +10012,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -959
-          y: 55137
+          x: -991
+          y: 55186
           Width: 363
           Height: 295
       - AltContact: Alejandra
@@ -9978,18 +10022,18 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -591
-          y: 55139
+          x: -627
+          y: 55188
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: Alejandra
         Type: 1
         TextContent: You're lucky I don't have neighbours
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -259
-          y: 55142
+          x: -295
+          y: 55191
           Width: 391
           Height: 295
       - AltContact: 
@@ -9998,8 +10042,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 140
-          y: 55143
+          x: 100
+          y: 55192
           Width: 323
           Height: 295
       - AltContact: 
@@ -10008,8 +10052,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 466
-          y: 55142
+          x: 426
+          y: 55191
           Width: 415
           Height: 295
       - AltContact: 
@@ -10018,8 +10062,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 885
-          y: 55143
+          x: 845
+          y: 55192
           Width: 469
           Height: 295
       - AltContact: 
@@ -10028,10 +10072,10 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1360
-          y: 55270
+          x: 1371
+          y: 55171
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -10043,7 +10087,7 @@ MonoBehaviour:
           x: -386
           y: 55857
           Width: 394
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 136
@@ -10051,8 +10095,8 @@ MonoBehaviour:
         location:
           x: -631
           y: 56488
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -4268
         y: 55114
@@ -10067,7 +10111,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -646
-          y: 53962
+          y: 53650
           Width: 323
           Height: 295
       - AltContact: 
@@ -10077,7 +10121,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: -308
-          y: 53961
+          y: 53649
           Width: 372
           Height: 295
       - AltContact: 
@@ -10087,7 +10131,7 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 78
-          y: 53958
+          y: 53646
           Width: 493
           Height: 295
       UnlockInstaPostsAccount: 
@@ -10100,8 +10144,8 @@ MonoBehaviour:
         location:
           x: 3079
           y: 54197
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 133
@@ -10109,8 +10153,8 @@ MonoBehaviour:
         location:
           x: 3421
           y: 54802
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3348
         y: 53872
@@ -10124,8 +10168,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -1467
-          y: 55139
+          x: -1499
+          y: 54858
           Width: 503
           Height: 295
       - AltContact: Alejandra
@@ -10134,8 +10178,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -959
-          y: 55137
+          x: -991
+          y: 54856
           Width: 363
           Height: 295
       - AltContact: Alejandra
@@ -10144,18 +10188,18 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -591
-          y: 55139
+          x: -623
+          y: 54858
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: Alejandra
         Type: 1
         TextContent: You're lucky I don't have neighbours
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -259
-          y: 55142
+          x: -291
+          y: 54861
           Width: 391
           Height: 295
       - AltContact: 
@@ -10164,8 +10208,8 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 140
-          y: 55143
+          x: 108
+          y: 54862
           Width: 323
           Height: 295
       - AltContact: 
@@ -10174,8 +10218,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 466
-          y: 55142
+          x: 434
+          y: 54861
           Width: 415
           Height: 295
       - AltContact: 
@@ -10184,8 +10228,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 885
-          y: 55143
+          x: 849
+          y: 54869
           Width: 469
           Height: 295
       - AltContact: 
@@ -10195,9 +10239,9 @@ MonoBehaviour:
         Tendency: 0
         location:
           x: 1360
-          y: 54988
+          y: 54728
           Width: 323
-          Height: 295
+          Height: 408
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -10209,16 +10253,16 @@ MonoBehaviour:
           x: 194
           y: 55855
           Width: 394
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: bf-laugh
         SubChapNum: 136
         Type: 4
         location:
-          x: -278
+          x: 491
           y: 56484
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: 3082
         y: 55102
@@ -10232,8 +10276,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -151
-          y: 54517
+          x: -160
+          y: 54568
           Width: 359
           Height: 295
       UnlockInstaPostsAccount: 
@@ -10247,7 +10291,7 @@ MonoBehaviour:
           x: -4272
           y: 54822
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -4268
         y: 54496
@@ -10273,19 +10317,19 @@ MonoBehaviour:
         SubChapNum: 136
         Type: 0
         location:
-          x: 58
-          y: 56489
+          x: 98
+          y: 56487
           Width: 324
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: She asked if there was a war upstairs
         SubChapNum: 136
         Type: 0
         location:
-          x: 413
+          x: -346
           y: 56486
           Width: 397
-          Height: 278
+          Height: 259
       location:
         x: -104
         y: 56159
@@ -10346,7 +10390,7 @@ MonoBehaviour:
           x: -282
           y: 57123
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: I think you definitely should practice more
         SubChapNum: 139
@@ -10355,7 +10399,7 @@ MonoBehaviour:
           x: 78
           y: 57124
           Width: 420
-          Height: 278
+          Height: 259
       location:
         x: -110
         y: 56790
@@ -10369,8 +10413,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: -151
-          y: 54517
+          x: -163
+          y: 54261
           Width: 359
           Height: 295
       UnlockInstaPostsAccount: 
@@ -10384,7 +10428,7 @@ MonoBehaviour:
           x: 3083
           y: 54803
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 3083
         y: 54486
@@ -10453,7 +10497,7 @@ MonoBehaviour:
           x: -633
           y: 57770
           Width: 412
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Agreed
         SubChapNum: 140
@@ -10462,7 +10506,7 @@ MonoBehaviour:
           x: -211
           y: 57772
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -283
         y: 57415
@@ -10511,7 +10555,7 @@ MonoBehaviour:
           x: 147
           y: 57772
           Width: 412
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Agreed
         SubChapNum: 140
@@ -10520,7 +10564,7 @@ MonoBehaviour:
           x: 570
           y: 57771
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: 143
         y: 57415
@@ -10559,7 +10603,7 @@ MonoBehaviour:
           x: -265
           y: 58418
           Width: 375
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Yep, I leave tomorrow
         SubChapNum: 141
@@ -10568,7 +10612,7 @@ MonoBehaviour:
           x: 178
           y: 58418
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -45
         y: 58080
@@ -10636,7 +10680,7 @@ MonoBehaviour:
           x: 2397
           y: 58784
           Width: 323
-          Height: 295
+          Height: 308
       UnlockInstaPostsAccount: 
       UnlockPosts: 
       Responses:
@@ -10648,7 +10692,7 @@ MonoBehaviour:
           x: -277
           y: 59054
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: salute
         SubChapNum: 142
@@ -10656,8 +10700,8 @@ MonoBehaviour:
         location:
           x: 157
           y: 59058
-          Width: 323
-          Height: 278
+          Width: 278
+          Height: 254
       location:
         x: -44
         y: 58735
@@ -10686,33 +10730,23 @@ MonoBehaviour:
           Width: 323
           Height: 295
       - AltContact: 
-        Type: 1
-        TextContent: Frustrated as hell
-        TextDelay: 2.1
-        Tendency: 0
-        location:
-          x: 636
-          y: 59387
-          Width: 323
-          Height: 295
-      - AltContact: 
         Type: 5
         TextContent: fake-angry
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 964
-          y: 59388
+          x: 976
+          y: 59386
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: I won't be the only one though
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1294
-          y: 59388
+          x: 1306
+          y: 59386
           Width: 360
           Height: 295
       - AltContact: 
@@ -10721,18 +10755,18 @@ MonoBehaviour:
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 1661
-          y: 59388
+          x: 1673
+          y: 59386
           Width: 323
-          Height: 295
+          Height: 408
       - AltContact: 
         Type: 1
         TextContent: There now you should be too
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 1996
-          y: 59387
+          x: 2008
+          y: 59385
           Width: 354
           Height: 295
       - AltContact: 
@@ -10741,8 +10775,8 @@ MonoBehaviour:
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 2359
-          y: 59392
+          x: 2371
+          y: 59390
           Width: 428
           Height: 295
       - AltContact: 
@@ -10751,18 +10785,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 2798
-          y: 59395
+          x: 2810
+          y: 59393
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 1
         TextContent: Goodnight babe
         TextDelay: 2.1
         Tendency: 0
         location:
-          x: 3134
-          y: 59395
+          x: 3146
+          y: 59393
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 
@@ -10776,7 +10810,7 @@ MonoBehaviour:
           x: -203
           y: 59665
           Width: 323
-          Height: 278
+          Height: 259
       - RespTree: 0
         TextContent: Goodnight hon!
         SubChapNum: 144
@@ -10785,7 +10819,7 @@ MonoBehaviour:
           x: 157
           y: 59667
           Width: 323
-          Height: 278
+          Height: 259
       location:
         x: -48
         y: 59346
@@ -10812,7 +10846,7 @@ MonoBehaviour:
           x: -862
           y: 60007
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 6
         TextContent: End of Chapter 2
@@ -10839,18 +10873,18 @@ MonoBehaviour:
         TextDelay: 1.1
         Tendency: 0
         location:
-          x: 487
-          y: 60009
+          x: 496
+          y: 60007
           Width: 323
-          Height: 295
+          Height: 308
       - AltContact: 
         Type: 6
         TextContent: End of Chapter 2
         TextDelay: 2.5
         Tendency: 0
         location:
-          x: 818
-          y: 60009
+          x: 848
+          y: 60007
           Width: 323
           Height: 295
       UnlockInstaPostsAccount: 

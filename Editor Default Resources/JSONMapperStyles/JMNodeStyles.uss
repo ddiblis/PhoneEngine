@@ -35,6 +35,15 @@
     padding: var(--jm-metrics-window-pixels-8);
 }
 
+.jm-node__subchap-altContact-textfield > .unity-text-field__input {
+    background-color: var(--jm-colors-window-dark-grey1);
+    border-color: var(--jm-colors-window-dark-grey6);
+    border-radius: var(--jm-metrics-window-pixels-4);
+    max-width: var(--jm-metrics-window-pixels-160);
+    min-width: var(--jm-metrics-window-pixels-35);
+    padding: var(--jm-metrics-window-pixels-8);
+}
+
 .jm-node__textfield__hidden > .unity-text-field__input {
     background-color: transparent;
     border-color: transparent;

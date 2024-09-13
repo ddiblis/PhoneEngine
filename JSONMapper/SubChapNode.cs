@@ -105,11 +105,9 @@ namespace JSONMapper {
         public void UpdateFields() {
             ContactTextField.value = Contact;
             UnlockInstaPostsAccountTextField.value = UnlockInstaPostsAccount;
-            // Random bug happens here that gets solved when you restart, I HAVENT THE SLIGHTEST IDEA WHY THE HELL
-            Debug.Log(UnlockPosts);
-            if (UnlockPosts.Count > 0) {
+            if (UnlockPosts != null && UnlockPosts.Count > 0) {
                 UnlockListTextField.value = string.Join( ",", UnlockPosts.ToArray());
-            } else {
+            } else {  
                 UnlockListTextField.value = "";
             }
         }

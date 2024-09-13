@@ -133,6 +133,12 @@
                     "TextContent": "unamused",
                     "SubChapNum": 3,
                     "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "angry",
+                    "SubChapNum": 3,
+                    "Type": 4
                 }
             ]
         },
@@ -145,6 +151,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "Now I know you're just messing with me",
+                    "SubChapNum": 4,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Nice try",
                     "SubChapNum": 4,
                     "Type": 0
                 }
@@ -176,6 +188,12 @@
                     "TextContent": "bf-laugh",
                     "SubChapNum": 5,
                     "Type": 4
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Who would volunteer to go shopping?",
+                    "SubChapNum": 5,
+                    "Type": 0
                 }
             ]
         },
@@ -409,6 +427,12 @@
                     "TextContent": "No...",
                     "SubChapNum": 11,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Nope",
+                    "SubChapNum": 11,
+                    "Type": 0
                 }
             ]
         },
@@ -423,6 +447,12 @@
                     "TextContent": "What kind of reward?",
                     "SubChapNum": 12,
                     "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "Explain...",
+                    "SubChapNum": 12,
+                    "Type": 0
                 }
             ]
         },
@@ -435,6 +465,12 @@
                 {
                     "RespTree": false,
                     "TextContent": "I only remember your number",
+                    "SubChapNum": 13,
+                    "Type": 0
+                },
+                {
+                    "RespTree": false,
+                    "TextContent": "I only have yours",
                     "SubChapNum": 13,
                     "Type": 0
                 }
@@ -2630,7 +2666,7 @@
                 {
                     "AltContact": "",
                     "Type": 1,
-                    "TextContent": "JJ's just being a mom though",
+                    "TextContent": "JJ's just blushing and being a mom as always",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 }
@@ -2680,7 +2716,7 @@
                 {
                     "AltContact": "",
                     "Type": 1,
-                    "TextContent": "JJ's just being a mom though",
+                    "TextContent": "JJ's just blushing and being a mom as always",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 }
@@ -3716,13 +3752,6 @@
                 },
                 {
                     "AltContact": "Althea",
-                    "Type": 1,
-                    "TextContent": "I might be a little drunk now",
-                    "Tendency": 0,
-                    "TextDelay": 2.0999999046325685
-                },
-                {
-                    "AltContact": "Althea",
                     "Type": 5,
                     "TextContent": "giggle",
                     "Tendency": 0,
@@ -3793,7 +3822,7 @@
                 },
                 {
                     "AltContact": "",
-                    "Type": 1,
+                    "Type": 5,
                     "TextContent": "tongue-out",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
@@ -3814,7 +3843,7 @@
                 },
                 {
                     "AltContact": "Althea",
-                    "Type": 1,
+                    "Type": 5,
                     "TextContent": "giggle",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
@@ -4659,7 +4688,7 @@
             "TextList": [
                 {
                     "AltContact": "",
-                    "Type": 1,
+                    "Type": 5,
                     "TextContent": "gf-laugh",
                     "Tendency": 0,
                     "TextDelay": 1.100000023841858
@@ -5393,7 +5422,7 @@
                     "RespTree": false,
                     "TextContent": "Althea-bar1",
                     "SubChapNum": 106,
-                    "Type": 0
+                    "Type": 2
                 }
             ]
         },
@@ -7625,13 +7654,6 @@
                     "AltContact": "",
                     "Type": 1,
                     "TextContent": "I'm going to head to bed now",
-                    "Tendency": 0,
-                    "TextDelay": 2.0999999046325685
-                },
-                {
-                    "AltContact": "",
-                    "Type": 1,
-                    "TextContent": "Frustrated as hell",
                     "Tendency": 0,
                     "TextDelay": 2.0999999046325685
                 },
