@@ -343,13 +343,6 @@ public class MessagingHandlers : MonoBehaviour {
                     case (int)Tendency.Neutral:
                         TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
                     break;
-                    case (int)Tendency.Dominant:
-                        TextPush(TypeOfText.recText, Prefabs.DomText, textMessage.TextContent);
-                    break;
-                    case (int)Tendency.Submissive:
-                        TextPush(TypeOfText.recText, Prefabs.SubText, textMessage.TextContent);
-                    break;
-                }
             break;
             case TypeOfText.sentEmoji:
                 ImagePush(TypeOfText.sentEmoji, textMessage.TextContent, Prefabs.sentEmoji);
