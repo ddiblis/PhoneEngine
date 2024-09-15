@@ -71,7 +71,7 @@ namespace JSONMapper {
             foreach(SubChapData subChap in chapter.SubChaps) {
                 var SubChapNode = new SubChapNode(graphView) {
                 Contact = subChap.Contact,
-                UnlockInstaPostsAccount = subChap.UnlockInstaPostsAccount,
+                UnlockIPAccount = subChap.UnlockInstaPostsAccount,
                 UnlockPosts = subChap.UnlockPosts,
                 SubChapIndex = index
                 };

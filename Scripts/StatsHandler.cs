@@ -34,8 +34,10 @@ public class StatsHandler : MonoBehaviour {
     public void OpenApp() {
         Transform TimerCardClone = Instantiate(TimerCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
         TimerCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{hours}H:{minutes}M";
-        Transform StatCardClone = Instantiate(StatCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
-        StatCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"You chose the {(Tendency) SF.saveFile.Stats.Tendency} Route";
+        if (SF.saveFile.Stats.Tendency != 0) {
+            Transform StatCardClone = Instantiate(StatCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+            StatCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"You chose the {(Tendency) SF.saveFile.Stats.Tendency} Route";
+        }
     }
 
     public void CloseApp() {

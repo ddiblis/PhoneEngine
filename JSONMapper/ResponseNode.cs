@@ -7,12 +7,12 @@ using UnityEngine.UIElements;
 
 namespace JSONMapper {
     public class ResponseNode : BaseNode {
-        readonly List<string> Emojis = new() {
-            "Emojis"
-        };
-        readonly List<string> Photos = new() {
-            "Photos"
-        };
+        // readonly List<string> Emojis = new() {
+        //     "Emojis"
+        // };
+        // readonly List<string> Photos = new() {
+        //     "Photos"
+        // };
         readonly List<string> TypeOptions = new() { "Type of Text", "Sent Text", "Sent Image", "Sent Emoji" };
         readonly List<int> TypeValues = new() {
             0, 0, 2, 4
@@ -40,14 +40,15 @@ namespace JSONMapper {
         public ResponseNode(GraphView graphView, int GivenType) : base(graphView) {
             Type = GivenType;
 
-            string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
-            foreach (string Emoji in EmojiList) {
-                Emojis.Add(Emoji[31..^4]);
-            }
-            string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
-            foreach (string Photo in PhotoList) {
-                Photos.Add(Photo[31..^4]);
-            }
+            // string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
+            // foreach (string Emoji in EmojiList) {
+            //     Emojis.Add(Emoji[31..^4]);
+            // }
+            // string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
+            // foreach (string Photo in PhotoList) {
+            //     Photos.Add(Photo[31..^4]);
+            // }
+            CustomLists Lists = new();
 
             title = "Response";
 
@@ -76,16 +77,16 @@ namespace JSONMapper {
             TextMessageField = new TextField("Response Text", 256, false, false, 'a') { value = TextContent };
             TextMessageField.RegisterValueChangedCallback(evt => TextContent = evt.newValue);
 
-            EmojiDropDown = new DropdownField("Emojis", Emojis, 0);
+            EmojiDropDown = new DropdownField("Emojis", Lists.Emojis, 0);
             EmojiDropDown.RegisterValueChangedCallback(evt => {
-                TextContent = Emojis[Emojis.FindIndex(x => x == evt.newValue)];
+                TextContent = Lists.Emojis[Lists.Emojis.FindIndex(x => x == evt.newValue)];
                 image = Resources.Load("Images/Emojis/" + evt.newValue, typeof(Sprite)) as Sprite;
                 ImageContainer.sprite = image;
             });
 
-            PhotoDropDown = new DropdownField("Photos", Photos, 0);
+            PhotoDropDown = new DropdownField("Photos", Lists.Photos, 0);
             PhotoDropDown.RegisterValueChangedCallback(evt => {
-                TextContent = Photos[Photos.FindIndex(x => x == evt.newValue)];
+                TextContent = Lists.Photos[Lists.Photos.FindIndex(x => x == evt.newValue)];
                 image = Resources.Load("Images/Photos/" + evt.newValue, typeof(Sprite)) as Sprite;
                 ImageContainer.sprite = image;
             });
@@ -199,16 +200,17 @@ namespace JSONMapper {
 
         public void UpdateFields() {
             int TypeIndex = TypeValues.FindIndex(x => x == Type);
+            CustomLists Lists = new();
             switch (Type) {
                 case (int)TypeOfText.sentImage:
-                    int PhotoIndex = Photos.FindIndex(x => x == TextContent);
-                    PhotoDropDown.value = Photos[PhotoIndex > 0 ? PhotoIndex : 0];
+                    int PhotoIndex = Lists.Photos.FindIndex(x => x == TextContent);
+                    PhotoDropDown.value = Lists.Photos[PhotoIndex > 0 ? PhotoIndex : 0];
                     image = Resources.Load("Images/Photos/" + TextContent, typeof(Sprite)) as Sprite;
                     ImageContainer.sprite = image;
                 break;
                 case (int)TypeOfText.sentEmoji:
-                    int EmojiIndex = Emojis.FindIndex(x => x == TextContent);
-                    EmojiDropDown.value = Emojis[EmojiIndex > 0 ? EmojiIndex : 0];
+                    int EmojiIndex = Lists.Emojis.FindIndex(x => x == TextContent);
+                    EmojiDropDown.value = Lists.Emojis[EmojiIndex > 0 ? EmojiIndex : 0];
                     image = Resources.Load("Images/Emojis/" + TextContent, typeof(Sprite)) as Sprite;
                     ImageContainer.sprite = image;
                 break;

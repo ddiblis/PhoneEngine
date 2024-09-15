@@ -8,6 +8,8 @@ public class SharedObjects : MonoBehaviour {
     // ======================= Home Screen ============================
 
     public GameObject Wallpaper;
+    public Transform InstaPostsIndicator;
+    public Transform MessagesIndicator;
 
     // ================================================================
 

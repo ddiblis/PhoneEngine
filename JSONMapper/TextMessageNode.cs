@@ -8,15 +8,15 @@ using UnityEngine.UIElements;
 namespace JSONMapper {
     public class TextMessageNode : BaseNode {
 
-        readonly List<string> Emojis = new() {
-            "Emojis"
-        };
-        readonly List<string> Photos = new() {
-            "Photos"
-        };
-        readonly List<string> Contacts = new() {
-            "Contacts"
-        };
+        // readonly List<string> Emojis = new() {
+        //     "Emojis"
+        // };
+        // readonly List<string> Photos = new() {
+        //     "Photos"
+        // };
+        // readonly List<string> Contacts = new() {
+        //     "Contacts"
+        // };
         readonly List<string> TypeOptions = new() {
             "Type of Text", "Recieved Text", "Recieved Image", "Recieved Emoji", "Chapter end", "Recieved Contact", "Indicate Time"
         };
@@ -30,7 +30,7 @@ namespace JSONMapper {
             0, 0.16f, 0.57f, 1.1f, 2.1f, 2.5f, 3.5f, 5.1f 
         };
         readonly List<string> TendencyOptions = new() {
-            "Tendency Options", "Neutral", "Submissive", "Dominant"
+            "Tendency Options", "Neutral"
         };
         readonly List<int> TendencyValues = new() {
             0, 0, 1, 2
@@ -49,7 +49,8 @@ namespace JSONMapper {
 
 
         private readonly TextField TextMessageField;
-        private readonly TextField AltContactField;
+        // private readonly TextField AltContactField;
+        private readonly DropdownField AltContactDropDown;
         private readonly DropdownField TypeDropDown;
         private readonly DropdownField DelayDropDown;
         private readonly DropdownField TendencyDropDown;
@@ -64,18 +65,19 @@ namespace JSONMapper {
         public TextMessageNode(GraphView graphView, int GivenType) : base(graphView) {
             Type = GivenType;
 
-            string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
-            foreach (string Emoji in EmojiList) {
-                Emojis.Add(Emoji[31..^4]);
-            }
-            string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
-            foreach (string Photo in PhotoList) {
-                Photos.Add(Photo[31..^4]);
-            }
-            string[] ContactList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
-            foreach (string Contact in ContactList) {
-                Contacts.Add(Contact[34..^4]);
-            }
+            // string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
+            // foreach (string Emoji in EmojiList) {
+            //     Emojis.Add(Emoji[31..^4]);
+            // }
+            // string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
+            // foreach (string Photo in PhotoList) {
+            //     Photos.Add(Photo[31..^4]);
+            // }
+            // string[] ContactList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
+            // foreach (string Contact in ContactList) {
+            //     Contacts.Add(Contact[34..^4]);
+            // }
+            CustomLists Lists = new();
 
             title = "Text Message";
 
@@ -98,8 +100,8 @@ namespace JSONMapper {
 
             var Foldout = new Foldout() { text = "Text Message Content" };
 
-            AltContactField = new TextField("Alt Contact") { value = TextContent };
-            AltContactField.RegisterValueChangedCallback(evt => AltContact = evt.newValue);
+            // AltContactField = new TextField("Alt Contact") { value = TextContent };
+            // AltContactField.RegisterValueChangedCallback(evt => AltContact = evt.newValue);
 
             TextMessageField = new TextField("Text message") { value = TextContent };
             TextMessageField.RegisterValueChangedCallback(evt => TextContent = evt.newValue);
@@ -111,25 +113,30 @@ namespace JSONMapper {
             DelayDropDown.RegisterValueChangedCallback(evt => TextDelay = DelayValues[DelayOptions.FindIndex(x => x == evt.newValue)]);
 
 
-            EmojiDropDown = new DropdownField("Emojis", Emojis, 0);
+            EmojiDropDown = new DropdownField("Emojis", Lists.Emojis, 0);
             EmojiDropDown.RegisterValueChangedCallback(evt => {
-                TextContent = Emojis[Emojis.FindIndex(x => x == evt.newValue)];
+                TextContent = Lists.Emojis[Lists.Emojis.FindIndex(x => x == evt.newValue)];
                 image = Resources.Load("Images/Emojis/" + evt.newValue, typeof(Sprite)) as Sprite;
                 ImageContainer.sprite = image;
             });
 
-            PhotoDropDown = new DropdownField("Photos", Photos, 0);
+            PhotoDropDown = new DropdownField("Photos", Lists.Photos, 0);
             PhotoDropDown.RegisterValueChangedCallback(evt => {
-                TextContent = Photos[Photos.FindIndex(x => x == evt.newValue)];
+                TextContent = Lists.Photos[Lists.Photos.FindIndex(x => x == evt.newValue)];
                 image = Resources.Load("Images/Photos/" + evt.newValue, typeof(Sprite)) as Sprite;
                 ImageContainer.sprite = image;
             });
 
-            ContactDropDown = new DropdownField("Contacts", Contacts, 0);
+            ContactDropDown = new DropdownField("Contacts", Lists.Contacts, 0);
             ContactDropDown.RegisterValueChangedCallback(evt => {
-                TextContent = Contacts[Contacts.FindIndex(x => x == evt.newValue)];
+                TextContent = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)];
                 image = Resources.Load("Images/Headshots/" + evt.newValue, typeof(Sprite)) as Sprite;
                 ImageContainer.sprite = image;
+            });
+
+            AltContactDropDown = new DropdownField("Alt Contact", Lists.Contacts, 0);
+            AltContactDropDown.RegisterValueChangedCallback(evt => {
+                AltContact = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)];
             });
 
             TypeDropDown = new DropdownField("Text Type", TypeOptions, 0);
@@ -192,10 +199,10 @@ namespace JSONMapper {
                 }
             });
 
-            AltContactField.AddClasses(
-                "jm-node__subchap-altContact-textfield",
-                "jm-node__subchap-quote-textfield"
-            );
+            // AltContactField.AddClasses(
+            //     "jm-node__subchap-altContact-textfield",
+            //     "jm-node__subchap-quote-textfield"
+            // );
             TextMessageField.AddClasses(
                 "jm-node__textfield",
                 "jm-node__quote-textfield"
@@ -229,7 +236,7 @@ namespace JSONMapper {
             
             switch(Type) {
                 case (int)TypeOfText.recImage:
-                    Foldout.Add(AltContactField);
+                    Foldout.Add(AltContactDropDown);
                     Foldout.Add(PhotoDropDown);
                     Foldout.Add(TypeDropDown);
                     Foldout.Add(TendencyDropDown);
@@ -239,7 +246,7 @@ namespace JSONMapper {
                     Foldout.Add(ImageContainer);
                 break;
                 case (int)TypeOfText.recEmoji:
-                    Foldout.Add(AltContactField);
+                    Foldout.Add(AltContactDropDown);
                     Foldout.Add(EmojiDropDown);
                     Foldout.Add(TypeDropDown);
                     Foldout.Add(TendencyDropDown);
@@ -249,7 +256,7 @@ namespace JSONMapper {
                     Foldout.Add(ImageContainer);
                 break;
                 case (int)TypeOfText.recContact:
-                    Foldout.Add(AltContactField);
+                    Foldout.Add(AltContactDropDown);
                     Foldout.Add(ContactDropDown);
                     Foldout.Add(TypeDropDown);
                     Foldout.Add(DelayDropDown);
@@ -258,7 +265,7 @@ namespace JSONMapper {
                     Foldout.Add(ImageContainer);
                 break;
                 default:
-                    Foldout.Add(AltContactField);
+                    Foldout.Add(AltContactDropDown);
                     Foldout.Add(TextMessageField);
                     Foldout.Add(TypeDropDown);
                     Foldout.Add(TendencyDropDown);
@@ -273,31 +280,33 @@ namespace JSONMapper {
         }
 
         public void UpdateFields() {
+            CustomLists Lists = new CustomLists();
             int TypeIndex = TypeValues.FindIndex(x => x == Type);
             switch (Type) {
                 case (int)TypeOfText.recImage:
-                    int PhotoIndex = Photos.FindIndex(x => x == TextContent);
-                    PhotoDropDown.value = Photos[PhotoIndex > 0 ? PhotoIndex : 0];
+                    int PhotoIndex = Lists.Photos.FindIndex(x => x == TextContent);
+                    PhotoDropDown.value = Lists.Photos[PhotoIndex > 0 ? PhotoIndex : 0];
                     image = Resources.Load("Images/Photos/" + TextContent, typeof(Sprite)) as Sprite;
                     ImageContainer.sprite = image;
                 break;
                 case (int)TypeOfText.recEmoji:
-                    int EmojiIndex = Emojis.FindIndex(x => x == TextContent);
-                    EmojiDropDown.value = Emojis[EmojiIndex > 0 ? EmojiIndex : 0];
+                    int EmojiIndex = Lists.Emojis.FindIndex(x => x == TextContent);
+                    EmojiDropDown.value = Lists.Emojis[EmojiIndex > 0 ? EmojiIndex : 0];
                     image = Resources.Load("Images/Emojis/" + TextContent, typeof(Sprite)) as Sprite;
                     ImageContainer.sprite = image;
                 break;
                 case (int)TypeOfText.recContact:
-                    int ContactIndex = Contacts.FindIndex(x => x == TextContent);
-                    ContactDropDown.value = Contacts[ContactIndex > 0 ? ContactIndex : 0];
+                    int ContactIndex = Lists.Contacts.FindIndex(x => x == TextContent);
+                    ContactDropDown.value = Lists.Contacts[ContactIndex > 0 ? ContactIndex : 0];
                     image = Resources.Load("Images/Headshots/" + TextContent, typeof(Sprite)) as Sprite;
                     ImageContainer.sprite = image;
                 break;
             }
             int DelayIndex = DelayValues.FindIndex(x => x == TextDelay);
             int TendencyIndex = TendencyValues.FindIndex(x => x == Tendency);
+            int AltContactIndex = Lists.Contacts.FindIndex(x => x == AltContact);
+            AltContactDropDown.value = Lists.Contacts[AltContactIndex > 0 ? AltContactIndex : 0];
             TextMessageField.value = TextContent;
-            AltContactField.value = AltContact;
             TendencyDropDown.value = TendencyOptions[TendencyIndex > 0 ? TendencyIndex : 1];
             TypeDropDown.value = TypeOptions[TypeIndex > 0 ? TypeIndex : 1];
             DelayDropDown.value = DelayOptions[DelayIndex > 0 ? DelayIndex : 1];
@@ -307,7 +316,7 @@ namespace JSONMapper {
             Rect rect = GetPosition();
             return new TextMessageData {
                 Type = Type,
-                AltContact = AltContact,
+                AltContact = AltContact != "Contacts" ? AltContact : "",
                 TextContent = TextContent,
                 TextDelay = TextDelay,
                 Tendency = Tendency,
@@ -323,7 +332,7 @@ namespace JSONMapper {
         public TextMessage ToTextMessageData() {
             return new TextMessage {
                 Type = Type,
-                AltContact = AltContact,
+                AltContact = AltContact != "Contacts" ? AltContact : "",
                 TextContent = TextContent,
                 TextDelay = TextDelay,
                 Tendency = Tendency

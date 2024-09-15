@@ -101,7 +101,8 @@ public class ResponseData
 public class Contact
 {
     public string NameOfContact;
-    public bool Unlocked;
+    // public bool Unlocked;
+    public bool NewTexts;
 }
 
 [System.Serializable]
@@ -193,7 +194,7 @@ public class SavedMessage
 public class Photo {
     public string Category;
     public string ImageName;
-    public bool Seen;
+    // public bool Seen;
 
 }
 
@@ -235,9 +236,10 @@ public enum TypeOfText {
     indicateTime = 8,
 }
 public enum Tendency {
-    Neutral = 0
+    Neutral = 0,
 }
 public enum StoryCheckpoint {
-
+    DuringTrip = 0,
+    // Come up with the rest here
 }
 /* ====================== End ============================ */

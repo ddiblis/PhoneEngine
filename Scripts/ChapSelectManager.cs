@@ -60,9 +60,10 @@ namespace PhoneEngine {
         }
 
         void FixSaveFileForChap(int indx) {
-            foreach(Contact c in SF.saveFile.ContactsList){
-                c.Unlocked = false;
-            }
+            // foreach(Contact c in SF.saveFile.ContactsList){
+            //     c.Unlocked = false;
+            // }
+            SF.saveFile.ContactsList = new();
             SF.saveFile.CurrStoryPoint.ChapIndex = indx;
             SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
             SF.saveFile.CurrStoryPoint.CurrTextIndex = 0;

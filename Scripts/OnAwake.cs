@@ -21,14 +21,18 @@ public class OnAwake : MonoBehaviour
     public DBHandler DB;
     public SaveFile SF;
     public SettingsManager Settings;
+    public DBUpdator DBUpdate;
 
     void Awake() {
         // These functions belong here, stop trying to move them
+        #if UNITY_EDITOR 
+            DBUpdate.UpdateDB();
+        #endif
         DB.LoadDB();
-        MH.BackButton();
-        DB.GenerateContactsList();
-        MH.GenerateMessageLists();
-        CH.GenerateContactCards();
+        // MH.BackButton();
+        // DB.GenerateContactsList();
+        // MH.GenerateMessageLists();
+        // CH.GenerateContactCards();
 
         if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
             SM.LoadSavesFile("/SaveInfo.json");
@@ -51,7 +55,7 @@ public class OnAwake : MonoBehaviour
             Screen.SetResolution(width, height, false);
         }
         
-        SM.CreateSaveCards();
+        // SM.CreateSaveCards();
         StartCoroutine(SM.AutoSave());
 
     }

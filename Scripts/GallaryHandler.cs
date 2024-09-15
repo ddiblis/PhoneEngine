@@ -59,18 +59,18 @@ public class GallaryHandler : MonoBehaviour
     }
 
     public void GenerateImage(int indx) {
-        if(SF.saveFile.Photos[indx].Seen){
-            Sprite photo = Resources.Load("Images/Photos/" + SF.saveFile.Photos[indx].ImageName, typeof(Sprite)) as Sprite;
-            GameObject PhotoContainerClone = Instantiate(PhotoContainer, new Vector3(0, 0, 0), Quaternion.identity, Shared.ImageList);
-            GameObject imageContent = PhotoContainerClone.transform.GetChild(0).gameObject;
-            imageContent.GetComponent<Image>().sprite = photo;
-            Button button = PhotoContainerClone.GetComponent<Button>();
+        // if(SF.saveFile.Photos[indx].Seen){
+        Sprite photo = Resources.Load("Images/Photos/" + SF.saveFile.Photos[indx].ImageName, typeof(Sprite)) as Sprite;
+        GameObject PhotoContainerClone = Instantiate(PhotoContainer, new Vector3(0, 0, 0), Quaternion.identity, Shared.ImageList);
+        GameObject imageContent = PhotoContainerClone.transform.GetChild(0).gameObject;
+        imageContent.GetComponent<Image>().sprite = photo;
+        Button button = PhotoContainerClone.GetComponent<Button>();
 
-            button.onClick.AddListener(() => {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                gen.ModalWindowOpen(photo, SF.saveFile.Photos[indx].ImageName);
-            });
-        }
+        button.onClick.AddListener(() => {
+            Shared.Wallpaper.GetComponent<AudioSource>().Play();
+            gen.ModalWindowOpen(photo, SF.saveFile.Photos[indx].ImageName);
+        });
+        // }
     }
 
     public void DisplayImages() {

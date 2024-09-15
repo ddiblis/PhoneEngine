@@ -225,6 +225,8 @@ public class InstaPostsManager : MonoBehaviour
     }
 
     public void DisplayAllPosts() {
+        gen.Hide(Shared.InstaPostsIndicator);
+        Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = "0";
         // Since posts in real life start from newest, this starts the iterator at the newest post and goes backwards to populate
         for (int i = SF.saveFile.Posts.Count-1; i > -1; i--) {
             if (SF.saveFile.Posts[i].Unlocked) {

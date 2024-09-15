@@ -37,9 +37,13 @@ public class DBHandler : MonoBehaviour {
         if (DataBase.ContactList.Count != SF.saveFile.ContactsList.Count) {
             for (int i = SF.saveFile.ContactsList.Count; i < DataBase.ContactList.Count; i++) {
                 SF.saveFile.ContactsList.Add(
+                    // new Contact{ 
+                    //     NameOfContact = DataBase.ContactList[i],
+                    //     Unlocked = false 
+                    // }
                     new Contact{ 
                         NameOfContact = DataBase.ContactList[i],
-                        Unlocked = false 
+                        NewTexts = false 
                     }
                 );
             }
@@ -49,13 +53,13 @@ public class DBHandler : MonoBehaviour {
     public void GeneratePhotoList() {
         if (DataBase.PhotoList.Count != SF.saveFile.Photos.Count) {
             for (int i = SF.saveFile.Photos.Count; i < DataBase.PhotoList.Count; i++) {
-                SF.saveFile.Photos.Add(
-                    new Photo{ 
-                        Category = DataBase.PhotoList[i].Split("-")[0],
-                        ImageName = DataBase.PhotoList[i],
-                        Seen = false 
-                    }
-                );
+                // SF.saveFile.Photos.Add(
+                //     new Photo{ 
+                //         Category = DataBase.PhotoList[i].Split("-")[0],
+                //         ImageName = DataBase.PhotoList[i],
+                //         Seen = false 
+                //     }
+                // );
                 if (!SF.saveFile.PhotoCategories.Any(x => x.Category == DataBase.PhotoList[i].Split("-")[0])) {
                     SF.saveFile.PhotoCategories.Add(
                         new PhotoCategory{

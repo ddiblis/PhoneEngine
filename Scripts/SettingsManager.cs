@@ -145,7 +145,7 @@ public class SettingsManager : MonoBehaviour {
             MuteSlider.Play("Turn-Off-Slider");
             SM.RefreshApps();
             ResetSaves();
-            DB.GenerateContactsList();
+            // DB.GenerateContactsList();
             DB.GeneratePhotoList();
             SM.RefreshSaveList();
             MH.NewGame();

@@ -57,7 +57,7 @@ public class SaveManager : MonoBehaviour
     public void CreateSaveCards() {
 
         for (int i = 0; i < SF.saveFile.NumberOfSaves; i++) {
-            string Tendency = null;
+            string tendency = null;
 
             GameObject SaveCardClone =
                 Instantiate(Prefabs.SaveCard, new Vector3(0, 0, 0), Quaternion.identity, SaveList);
@@ -71,17 +71,11 @@ public class SaveManager : MonoBehaviour
                         "End Of update" :
                         "Chapter " + SavesInfo.ChapterOfSaves[i];
                 switch(SavesInfo.TendencyOfSaves[i]) {
-                    case 0:
-                        Tendency = "Neutral";
-                    break;
-                    case 1:
-                        Tendency = "Submissive";
-                    break;
-                    case 2:
-                        Tendency = "Dominant";
+                    case (int)Tendency.Neutral:
+                        tendency = "Neutral";
                     break;
                 }
-                TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = Tendency;
+                TextContainer.GetChild(2).GetComponent<TextMeshProUGUI>().text = tendency;
                 TextContainer.GetChild(3).GetComponent<TextMeshProUGUI>().text = SavesInfo.DateTimeOfSave[i];
             }
 
@@ -102,6 +96,12 @@ public class SaveManager : MonoBehaviour
                     OpenLoadModal(saveFile, SaveInfo);
                 }
             });
+        }
+    }
+
+    public void CloseApp() {
+        for (int i = 3; i < SF.saveFile.NumberOfSaves + 3; i++) {
+            Destroy(SaveList.GetChild(i).gameObject);
         }
     }
 

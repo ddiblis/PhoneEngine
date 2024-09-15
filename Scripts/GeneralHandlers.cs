@@ -48,13 +48,21 @@ public class GeneralHandlers : MonoBehaviour {
         
         ImageModalWindowClone.GetComponent<Animator>().Play("Open-Image-Modal");
     }
-    public void UnlockImage(string ImageName){
-        int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
-        if (!SF.saveFile.Photos[indexOfPhoto].Seen == true) {
-            SF.saveFile.Photos[indexOfPhoto].Seen = true;
-            int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
+    public void UnlockImage(string ImageName) {
+        int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
+        if (SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName) < 0) {
+            SF.saveFile.Photos.Add( new Photo {
+                ImageName = ImageName,
+                Category = ImageName.Split("-")[0]
+            });
             SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
         }
+        // int indexOfPhoto = SF.saveFile.Photos.FindIndex(x => x.ImageName == ImageName);
+        // if (!SF.saveFile.Photos[indexOfPhoto].Seen) {
+        //     SF.saveFile.Photos[indexOfPhoto].Seen = true;
+        //     int IndexOfCategory = SF.saveFile.PhotoCategories.FindIndex(x => x.Category == ImageName.Split("-")[0]);
+        //     SF.saveFile.PhotoCategories[IndexOfCategory].NumberSeen += 1;
+        // }
     }
     public void OpenPatreonLink() {
         Application.OpenURL("https://patreon.com/DDIblis?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink");

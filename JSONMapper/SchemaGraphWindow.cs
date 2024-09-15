@@ -8,7 +8,6 @@ using UnityEditor.UIElements;
 using System.Linq;
 using Unity.VisualScripting;
 
-
 namespace JSONMapper {
 
     public class SchemaGraphWindow : EditorWindow {

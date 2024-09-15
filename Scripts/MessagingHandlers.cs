@@ -13,7 +13,7 @@ using System;
 
 public class MessagingHandlers : MonoBehaviour {
 
-    public GameObject backButton;
+    // public GameObject backButton;
     public ChapImport chap;
     public GeneralHandlers gen;
     public SharedObjects Shared;
@@ -21,6 +21,7 @@ public class MessagingHandlers : MonoBehaviour {
     public SaveManager SM;
     public SaveFile SF;
     public DBHandler DB;
+    public ContactsHandler CH;
     public InstaPostsManager IPM;
 
 
@@ -29,12 +30,13 @@ public class MessagingHandlers : MonoBehaviour {
     
     public void BackButton() {
         // Creates onclick handler for back button.
-        Button button = backButton.GetComponent<Button>();
-        button.onClick.AddListener(() => {
-            gen.Hide(Shared.textingApp);
-            gen.Hide(Shared.displayedList);
-            SF.saveFile.selectedIndex = int.MinValue;
-        });
+        // Button button = backButton.GetComponent<Button>();
+        // button.onClick.AddListener(() => {
+        gen.Hide(Shared.textingApp);
+        gen.Hide(Shared.displayedList);
+        SF.saveFile.selectedIndex = int.MinValue;
+        CH.GenerateContactCards();
+        // });
     }
 
     // creates as many messageLists as needed for the contacts and hides them.
@@ -46,11 +48,36 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     public void SetInitialGallary() {
-        SF.saveFile.Photos[0].Seen = true;
-        SF.saveFile.Photos[1].Seen = true;
-        SF.saveFile.Photos[2].Seen = true;
-        SF.saveFile.Photos[3].Seen = true;
-        SF.saveFile.PhotoCategories[0].NumberSeen += 4;
+        // SF.saveFile.Photos[0].Seen = true;
+        // SF.saveFile.Photos[1].Seen = true;
+        // SF.saveFile.Photos[2].Seen = true;
+        // SF.saveFile.Photos[3].Seen = true;
+        SF.saveFile.Photos.Add(
+            new Photo{ 
+                ImageName = "bg-snowmountain2",
+                Category = "bg"
+            }
+        );
+        SF.saveFile.Photos.Add(
+            new Photo{ 
+                ImageName = "bg-snowmountains",
+                Category = "bg"
+            }
+        );
+         SF.saveFile.Photos.Add(
+            new Photo{ 
+                ImageName = "bg-blackcat",
+                Category = "bg"
+            }
+        );
+         SF.saveFile.Photos.Add(
+            new Photo{
+                ImageName = "bg-starrynight",
+                Category = "bg"
+            }
+        );
+        // SF.saveFile.PhotoCategories.FindIndex(x => x.Category == "bg");
+        SF.saveFile.PhotoCategories[SF.saveFile.PhotoCategories.FindIndex(x => x.Category == "bg")].NumberSeen += 4;
         SF.saveFile.CurrWallPaper = "bg-snowmountains";
     }
 
@@ -151,10 +178,21 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // Unlocks contact if they're not already unlocked: displays their contact card    
-    public void UnlockContact(int indexOfContact) {
-        if (!SF.saveFile.ContactsList[indexOfContact].Unlocked) {
-            SF.saveFile.ContactsList[indexOfContact].Unlocked = true;
-        }   
+    // public void UnlockContact(int indexOfContact) {
+    public void UnlockContact(string ContactName) {
+        // Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
+        // gen.Hide(Shared.content.GetChild(i));
+        if (SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == ContactName) < 0) {
+            SF.saveFile.ContactsList.Add(new Contact {
+                NameOfContact = ContactName,
+                NewTexts = false
+            });
+            Transform MessagaeList = Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
+            gen.Hide(MessagaeList);
+        }
+        // if (!SF.saveFile.ContactsList[indexOfContact].Unlocked) {
+        //     SF.saveFile.ContactsList[indexOfContact].Unlocked = true;
+        // }
     }
 
     // Unlocks InstaPosts Profile of account
@@ -172,19 +210,24 @@ public class MessagingHandlers : MonoBehaviour {
                     SF.saveFile.InstaAccounts[SF.saveFile.InstaAccounts.FindIndex(x => x.AccountOwner == InstaAccount)].NumberOfPosts += 1;
                 }
                 SF.saveFile.Posts[subChap.UnlockPosts[i]].Unlocked = true;
+                // Handles showing the indicator and incrementing it for each new post recieved which you haven't viewed yet
+                int NumOfNewPosts = int.Parse(Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text) +1;
+                Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = NumOfNewPosts + "";
+                gen.Show(Shared.InstaPostsIndicator);
             }
         }
     }
 
     // handles deciphering and outputting the messages from the json subchapter then calling choice buttons
     public IEnumerator StartMessagesCoroutine(SubChap subChap, int startingText = 0) {
-        int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == subChap.Contact);
         string InstaAccount = subChap.UnlockInstaPostsAccount;
 
         // Chooses messageList parent for messages to be pushed to
-        SF.saveFile.contactPush = indexOfContact;
+        UnlockContact(subChap.Contact);
 
-        UnlockContact(indexOfContact);
+        int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == subChap.Contact);
+        SF.saveFile.contactPush = indexOfContact;
+        // UnlockContact(indexOfContact);
 
         UnlockInstaAccount(InstaAccount);
 
@@ -282,9 +325,6 @@ public class MessagingHandlers : MonoBehaviour {
     }
 
     // Handles message limits for all types of texts to the messageList
-    // TypeOfText: an enum object that denotes the type of text we're sending
-    // image: optional field in case we're sending an image
-    // messageContent: default to "" in case you're sending an image.
     #nullable enable
     public void MessageListLimit(TextMessage textMessage) {
         if (Shared.content.GetChild(SF.saveFile.contactPush).childCount >= 25){
@@ -302,6 +342,12 @@ public class MessagingHandlers : MonoBehaviour {
                 switch (textMessage.Tendency) {
                     case (int)Tendency.Neutral:
                         TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
+                    break;
+                    case (int)Tendency.Dominant:
+                        TextPush(TypeOfText.recText, Prefabs.DomText, textMessage.TextContent);
+                    break;
+                    case (int)Tendency.Submissive:
+                        TextPush(TypeOfText.recText, Prefabs.SubText, textMessage.TextContent);
                     break;
                 }
             break;
@@ -327,8 +373,8 @@ public class MessagingHandlers : MonoBehaviour {
             break;
             case TypeOfText.recContact:
                 ImagePush(TypeOfText.recContact, textMessage.TextContent, Prefabs.recContact);
-                int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == textMessage.TextContent);
-                UnlockContact(indexOfContact);
+                // int indexOfContact = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == textMessage.TextContent);
+                UnlockContact(textMessage.TextContent);
             break;
         }
     }
@@ -338,10 +384,18 @@ public class MessagingHandlers : MonoBehaviour {
         Destroy(Shared.notif);
         if (!viewingScreen) {
             Shared.notificationArea.GetComponent<AudioSource>().Play();
-            gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
+            SF.saveFile.ContactsList[SF.saveFile.contactPush].NewTexts = true;
+            if(Shared.cardsList.childCount > SF.saveFile.contactPush) {
+                gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
+            }
+            // gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
             Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
             Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
             Shared.notif.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
+            // Handles indicator for showing number of messages you haven't seen yet
+            int NumOfnewMessages = int.Parse(Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text) + 1;
+            Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = NumOfnewMessages + "";
+            gen.Show(Shared.MessagesIndicator);
         }
     }
 
