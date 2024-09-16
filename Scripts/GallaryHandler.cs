@@ -28,24 +28,26 @@ public class GallaryHandler : MonoBehaviour
         for (int i = 0; i < SF.saveFile.PhotoCategories.Count; i++) {
             AllPossible += SF.saveFile.PhotoCategories[i].NumberAvaliable;
             AllUnlocked += SF.saveFile.PhotoCategories[i].NumberSeen;
-            string Cat = SF.saveFile.PhotoCategories[i].Category;
-            int indx = i;
-            Sprite Image;
-            if(Cat != "bg") {
-                Image = Resources.Load("Images/Headshots/" + SF.saveFile.PhotoCategories[i].Category, typeof(Sprite)) as Sprite;
-            } else {
-                Image = Resources.Load("Images/Emojis/Photo" , typeof(Sprite)) as Sprite;
+            if (SF.saveFile.PhotoCategories[i].NumberSeen > 0) {
+                string Cat = SF.saveFile.PhotoCategories[i].Category;
+                int indx = i;
+                Sprite Image;
+                if(Cat != "bg") {
+                    Image = Resources.Load("Images/Headshots/" + SF.saveFile.PhotoCategories[i].Category, typeof(Sprite)) as Sprite;
+                } else {
+                    Image = Resources.Load("Images/Emojis/Photo" , typeof(Sprite)) as Sprite;
+                }
+                Transform ContactCard = Instantiate(SidePanelCard, new Vector3(0, 0, 0), Quaternion.identity, CategoryList.transform).transform;
+                ContactCard.GetComponent<Button>().onClick.AddListener(() => {
+                    Shared.Wallpaper.GetComponent<AudioSource>().Play();
+                    DestroyGallary();
+                    DisplayCategoryImages(Cat);
+                });
+                ContactCard.GetChild(0).GetComponent<Image>().sprite = Image;
+                ContactCard.GetChild(1).GetComponent<TextMeshProUGUI>().text = SF.saveFile.PhotoCategories[i].Category;
+                ContactCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = 
+                    SF.saveFile.PhotoCategories[i].NumberSeen + " / " + SF.saveFile.PhotoCategories[i].NumberAvaliable;
             }
-            Transform ContactCard = Instantiate(SidePanelCard, new Vector3(0, 0, 0), Quaternion.identity, CategoryList.transform).transform;
-            ContactCard.GetComponent<Button>().onClick.AddListener(() => {
-                Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                DestroyGallary();
-                DisplayCategoryImages(Cat);
-            });
-            ContactCard.GetChild(0).GetComponent<Image>().sprite = Image;
-            ContactCard.GetChild(1).GetComponent<TextMeshProUGUI>().text = SF.saveFile.PhotoCategories[i].Category;
-            ContactCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = 
-                SF.saveFile.PhotoCategories[i].NumberSeen + " / " + SF.saveFile.PhotoCategories[i].NumberAvaliable;
         }    
         AllPhotosCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = AllUnlocked + " / " + AllPossible;
     }

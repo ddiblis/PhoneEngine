@@ -7,16 +7,6 @@ using UnityEngine.UIElements;
 
 namespace JSONMapper {
     public class TextMessageNode : BaseNode {
-
-        // readonly List<string> Emojis = new() {
-        //     "Emojis"
-        // };
-        // readonly List<string> Photos = new() {
-        //     "Photos"
-        // };
-        // readonly List<string> Contacts = new() {
-        //     "Contacts"
-        // };
         readonly List<string> TypeOptions = new() {
             "Type of Text", "Recieved Text", "Recieved Image", "Recieved Emoji", "Chapter end", "Recieved Contact", "Indicate Time"
         };
@@ -33,7 +23,7 @@ namespace JSONMapper {
             "Tendency Options", "Neutral"
         };
         readonly List<int> TendencyValues = new() {
-            0, 0, 1, 2
+            0, 0
         };
 
         public string AltContact;        
@@ -49,7 +39,6 @@ namespace JSONMapper {
 
 
         private readonly TextField TextMessageField;
-        // private readonly TextField AltContactField;
         private readonly DropdownField AltContactDropDown;
         private readonly DropdownField TypeDropDown;
         private readonly DropdownField DelayDropDown;
@@ -65,18 +54,6 @@ namespace JSONMapper {
         public TextMessageNode(GraphView graphView, int GivenType) : base(graphView) {
             Type = GivenType;
 
-            // string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
-            // foreach (string Emoji in EmojiList) {
-            //     Emojis.Add(Emoji[31..^4]);
-            // }
-            // string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
-            // foreach (string Photo in PhotoList) {
-            //     Photos.Add(Photo[31..^4]);
-            // }
-            // string[] ContactList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
-            // foreach (string Contact in ContactList) {
-            //     Contacts.Add(Contact[34..^4]);
-            // }
             CustomLists Lists = new();
 
             title = "Text Message";
@@ -99,9 +76,6 @@ namespace JSONMapper {
             CustomDataContainer.AddToClassList("jm-node__custom-data-container");
 
             var Foldout = new Foldout() { text = "Text Message Content" };
-
-            // AltContactField = new TextField("Alt Contact") { value = TextContent };
-            // AltContactField.RegisterValueChangedCallback(evt => AltContact = evt.newValue);
 
             TextMessageField = new TextField("Text message") { value = TextContent };
             TextMessageField.RegisterValueChangedCallback(evt => TextContent = evt.newValue);
@@ -199,10 +173,6 @@ namespace JSONMapper {
                 }
             });
 
-            // AltContactField.AddClasses(
-            //     "jm-node__subchap-altContact-textfield",
-            //     "jm-node__subchap-quote-textfield"
-            // );
             TextMessageField.AddClasses(
                 "jm-node__textfield",
                 "jm-node__quote-textfield"

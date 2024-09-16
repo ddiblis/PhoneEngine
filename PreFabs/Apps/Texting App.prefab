@@ -884,7 +884,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8526233568680558605}
   m_HandleRect: {fileID: 3749182089153920291}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -921,9 +921,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2075416335502476578}
+  - {fileID: 1057545278110178844}
   - {fileID: 7096427211250050177}
   - {fileID: 70923692577105960}
-  - {fileID: 1057545278110178844}
   - {fileID: 1159420649507589079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -944,11 +944,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612828b00cfdc563d84ad1eb809a7e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backButton: {fileID: 7888579530402044016}
   chap: {fileID: 418524781474291117}
   gen: {fileID: 0}
   Shared: {fileID: 0}
   Prefabs: {fileID: 0}
+  SM: {fileID: 0}
+  SF: {fileID: 0}
+  DB: {fileID: 0}
+  CH: {fileID: 0}
+  IPM: {fileID: 0}
 --- !u!114 &418524781474291117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,7 +965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b095fc0304ef3b1619d3e42c3dd24753, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chapterJSON: {fileID: 4900000, guid: bc77e6a8fa8ce48609e756797dece56b, type: 3}
+  SF: {fileID: 0}
+  DB: {fileID: 0}
   myChapter:
-    ChapComplete: 0
+    AllowMidrolls: 0
+    StoryCheckpoint: 0
     SubChaps: []

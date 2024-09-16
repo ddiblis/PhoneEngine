@@ -54,12 +54,11 @@ namespace JSONMapper {
                 else if (this is TextMessageNode textNode && port.portName == "Next Text" && edge.input.node is TextMessageNode) {
                     textNode.NextTextNode = null;
                 }
-                else if (this is ChapterNode chapterNode && port.portName == "First SubChapter" && edge.input.node is SubChapNode subChap) {
+                else if (this is ChapterNode chapterNode && port.portName == "First SubChapter" && edge.input.node is SubChapNode) {
                     chapterNode.FirstSubChap = null;
                 }
                 else if (this is ResponseNode responseNode && port.portName == "Next SubChap" && edge.input.node is SubChapNode) {
                     responseNode.NextSubChap = null;
-
                 }
             }
         }

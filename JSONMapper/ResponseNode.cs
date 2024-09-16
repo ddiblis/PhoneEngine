@@ -7,12 +7,6 @@ using UnityEngine.UIElements;
 
 namespace JSONMapper {
     public class ResponseNode : BaseNode {
-        // readonly List<string> Emojis = new() {
-        //     "Emojis"
-        // };
-        // readonly List<string> Photos = new() {
-        //     "Photos"
-        // };
         readonly List<string> TypeOptions = new() { "Type of Text", "Sent Text", "Sent Image", "Sent Emoji" };
         readonly List<int> TypeValues = new() {
             0, 0, 2, 4
@@ -40,14 +34,6 @@ namespace JSONMapper {
         public ResponseNode(GraphView graphView, int GivenType) : base(graphView) {
             Type = GivenType;
 
-            // string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
-            // foreach (string Emoji in EmojiList) {
-            //     Emojis.Add(Emoji[31..^4]);
-            // }
-            // string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
-            // foreach (string Photo in PhotoList) {
-            //     Photos.Add(Photo[31..^4]);
-            // }
             CustomLists Lists = new();
 
             title = "Response";

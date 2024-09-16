@@ -18,12 +18,6 @@ namespace JSONMapper {
         public TextMessageNode FirstText;
         public List<ResponseNode> Responses = new();
 
-        // readonly List<string> Contacts = new() {
-        //     "Contacts"
-        // };
-
-        // private readonly TextField ContactTextField;
-        // private readonly TextField UnlockInstaPostsAccountTextField;
         private readonly TextField UnlockListTextField;
         private readonly DropdownField ContactDropDown;
         private readonly DropdownField UnlockIPAccountDropDown;
@@ -35,10 +29,6 @@ namespace JSONMapper {
 
         public SubChapNode(GraphView graphView) : base(graphView) {
         
-            // string[] ContactList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
-            // foreach (string Contact in ContactList) {
-            //     Contacts.Add(Contact[34..^4]);
-            // }
             CustomLists Lists = new();
 
             title = "SubChapter";
@@ -68,12 +58,6 @@ namespace JSONMapper {
 
             var Foldout = new Foldout() { text = "Sub Chapter Content" };
 
-            // ContactTextField = new TextField("Contact") { value = Contact };
-            // ContactTextField.RegisterValueChangedCallback(evt => Contact = evt.newValue);
-
-            // UnlockInstaPostsAccountTextField = new TextField("Unlock Insta Account") { value = UnlockInstaPostsAccount };
-            // UnlockInstaPostsAccountTextField.RegisterValueChangedCallback(evt => UnlockInstaPostsAccount = evt.newValue);
-
             UnlockListTextField = new TextField("Unlock Posts List");
             UnlockListTextField.RegisterValueChangedCallback(evt => {
                 var UnlockList = (from Match m in Regex.Matches(evt.newValue, @"\d+") select m.Value).ToList();
@@ -90,14 +74,6 @@ namespace JSONMapper {
                 UnlockIPAccount = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)];
             });
 
-            // ContactTextField.AddClasses(
-            //     "jm-node__subchap-textfield",
-            //     "jm-node__subchap-quote-textfield"
-            // );
-            // UnlockInstaPostsAccountTextField.AddClasses(
-            //     "jm-node__subchap-textfield",
-            //     "jm-node__subchap-quote-textfield"
-            // );
             UnlockListTextField.AddClasses(
                 "jm-node__subchap-textfield",
                 "jm-node__subchap-quote-textfield"
