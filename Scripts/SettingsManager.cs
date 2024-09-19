@@ -130,22 +130,10 @@ public class SettingsManager : MonoBehaviour {
 
         confirmButton.onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
-
-            for (int i = 0; i < SF.saveFile.NumberOfSaves; i++){
-                string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
-                if(File.Exists(saveFile)) {
-                    File.Delete(saveFile);
-                }
-            }
-            string SaveInfo = Application.persistentDataPath + "/SaveInfo.json";
-            if(File.Exists(SaveInfo)) {
-                File.Delete(SaveInfo);
-            }    
             FasterRepliesSlider.Play("Turn-Off-Slider");
             MuteSlider.Play("Turn-Off-Slider");
             SM.RefreshApps();
             ResetSaves();
-            // DB.GenerateContactsList();
             DB.GeneratePhotoList();
             SM.RefreshSaveList();
             MH.NewGame();
@@ -162,6 +150,7 @@ public class SettingsManager : MonoBehaviour {
 
     public void ResetSaves() {
         SF.saveFile = new SaveFileRoot();
+        // Since it's not a monobehaviour file this needs to be done manually
         Saves.MostRecentSaveIndex = 0;
         Saves.NameOfSaves = new List<string>();
         Saves.ChapterOfSaves = new List<int>();
@@ -171,6 +160,17 @@ public class SettingsManager : MonoBehaviour {
         Saves.AutoSaveChapter = 0;
         Saves.AutoSaveTendency = 0;
         Saves.AutoSaveDateTime = "";
+
+        for (int i = 0; i < SF.saveFile.NumberOfSaves; i++){
+            string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
+            if(File.Exists(saveFile)) {
+                File.Delete(saveFile);
+            }
+        }
+        string SaveInfo = Application.persistentDataPath + "/SaveInfo.json";
+        if(File.Exists(SaveInfo)) {
+            File.Delete(SaveInfo);
+        }    
     }
 
     public void DestroyAllList() {

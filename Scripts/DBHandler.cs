@@ -18,7 +18,7 @@ public class DBHandler : MonoBehaviour {
         TextAsset DBFile = Resources.Load<TextAsset>("DB");
         DataBase = JsonUtility.FromJson<DBRoot>(DBFile.text);
     }
-
+    
     public void GenerateMidrollsList() {
         if (DataBase.MidrollsList.Count != SF.saveFile.MidRolls.Count) {
             for (int i = SF.saveFile.MidRolls.Count; i < DataBase.MidrollsList.Count; i++) {
@@ -33,22 +33,22 @@ public class DBHandler : MonoBehaviour {
         }
     }
 
-    public void GenerateContactsList() {
-        if (DataBase.ContactList.Count != SF.saveFile.ContactsList.Count) {
-            for (int i = SF.saveFile.ContactsList.Count; i < DataBase.ContactList.Count; i++) {
-                SF.saveFile.ContactsList.Add(
+    // public void GenerateContactsList() {
+    //     if (DataBase.ContactList.Count != SF.saveFile.ContactsList.Count) {
+    //         for (int i = SF.saveFile.ContactsList.Count; i < DataBase.ContactList.Count; i++) {
+    //             SF.saveFile.ContactsList.Add(
                     // new Contact{ 
                     //     NameOfContact = DataBase.ContactList[i],
                     //     Unlocked = false 
                     // }
-                    new Contact{ 
-                        NameOfContact = DataBase.ContactList[i],
-                        NewTexts = false 
-                    }
-                );
-            }
-        }
-    }
+    //                 new Contact{ 
+    //                     NameOfContact = DataBase.ContactList[i],
+    //                     NewTexts = false 
+    //                 }
+    //             );
+    //         }
+    //     }
+    // }
 
     public void GeneratePhotoList() {
         if (DataBase.PhotoList.Count != SF.saveFile.Photos.Count) {
@@ -82,6 +82,13 @@ public class DBHandler : MonoBehaviour {
                 SF.saveFile.ChapterList.Add(
                     DataBase.ChapterList[i]
                 );
+            }
+        }
+    }
+    public void UnlockInstaPostsForChapter(int index) {
+        for (int i = 0; i < index; i++) {
+            for (int j = 0; j < DataBase.ChapterInstaPosts[i].InstaPostsList.Count; j++) {
+                SF.saveFile.Posts[DataBase.ChapterInstaPosts[i].InstaPostsList[j]].Unlocked = true;
             }
         }
     }

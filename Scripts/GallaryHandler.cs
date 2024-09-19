@@ -46,7 +46,7 @@ public class GallaryHandler : MonoBehaviour
                 ContactCard.GetChild(0).GetComponent<Image>().sprite = Image;
                 ContactCard.GetChild(1).GetComponent<TextMeshProUGUI>().text = SF.saveFile.PhotoCategories[i].Category;
                 ContactCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = 
-                    SF.saveFile.PhotoCategories[i].NumberSeen + " / " + SF.saveFile.PhotoCategories[i].NumberAvaliable;
+                SF.saveFile.PhotoCategories[i].NumberSeen + " / " + SF.saveFile.PhotoCategories[i].NumberAvaliable;
             }
         }    
         AllPhotosCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = AllUnlocked + " / " + AllPossible;

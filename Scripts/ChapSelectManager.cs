@@ -21,6 +21,8 @@ namespace PhoneEngine {
         public MessagingHandlers MH;
         public PreFabs preFabs;
         public SharedObjects Shared;
+        public GeneralHandlers gen;
+        public DBHandler DB;
 
 
         public void OpenApp() {
@@ -54,19 +56,21 @@ namespace PhoneEngine {
                 Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 SM.RefreshApps();
                 FixSaveFileForChap(indx);
-                MH.ChapterSelect("Chapters", SF.saveFile.ChapterList[indx]);
+                DB.UnlockInstaPostsForChapter(indx);
+                MH.ChapterSelect(ChapterType.Chapter, SF.saveFile.ChapterList[indx]);
                 Destroy(LoadModalWindowClone.gameObject);
             });
         }
 
         void FixSaveFileForChap(int indx) {
-            // foreach(Contact c in SF.saveFile.ContactsList){
-            //     c.Unlocked = false;
-            // }
             SF.saveFile.ContactsList = new();
             SF.saveFile.CurrStoryPoint.ChapIndex = indx;
             SF.saveFile.CurrStoryPoint.SubChapIndex = 0;
             SF.saveFile.CurrStoryPoint.CurrTextIndex = 0;
+            SF.saveFile.NumOfNewMessages = 0;
+            SF.saveFile.NumOfNewPosts = 0;
+            gen.Hide(Shared.InstaPostsIndicator);
+            gen.Hide(Shared.MessagesIndicator);
             foreach(SavedPost p in SF.saveFile.Posts){
                 p.Unlocked = false;
             }

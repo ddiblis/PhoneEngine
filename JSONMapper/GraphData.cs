@@ -20,6 +20,7 @@ namespace JSONMapper {
         public void PopulateGraphView(GraphView graphView) {
             ChapterData Chapter = Chapters[0];
             var ChapterNode = new ChapterNode(graphView) {
+                isChapter = Chapter.isChapter,
                 allowMidrolls = Chapter.AllowMidrolls,
                 Checkpoint = Chapter.StoryCheckpoint
             };
@@ -101,6 +102,7 @@ namespace JSONMapper {
                 TextMessageData text = textList[i];
                 var TextMessageNode = new TextMessageNode(graphView, text.Type) {
                     AltContact = text.AltContact,
+                    Stats = text.Stats,
                     TextContent = text.TextContent,
                     TextDelay = text.TextDelay,
                     Type = text.Type,

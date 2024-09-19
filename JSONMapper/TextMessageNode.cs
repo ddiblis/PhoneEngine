@@ -26,11 +26,12 @@ namespace JSONMapper {
             0, 0
         };
 
-        public string AltContact;        
+        public string AltContact;
         public int Type;
         public int Tendency;
         public string TextContent;
         public float TextDelay;
+        public TextStats Stats = new();
         Sprite image;
         readonly Image ImageContainer;
         readonly Sprite emptyImage;
@@ -109,9 +110,10 @@ namespace JSONMapper {
             });
 
             AltContactDropDown = new DropdownField("Alt Contact", Lists.Contacts, 0);
-            AltContactDropDown.RegisterValueChangedCallback(evt => {
-                AltContact = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)];
-            });
+            AltContactDropDown.RegisterValueChangedCallback(evt => AltContact = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)]);
+
+            // Stats toggles
+            var StatsFoldout = new Foldout() { text = "Stats" };
 
             TypeDropDown = new DropdownField("Text Type", TypeOptions, 0);
             TypeDropDown.RegisterValueChangedCallback(evt => {
@@ -203,7 +205,6 @@ namespace JSONMapper {
                 "jm-node__quote-textfield"
             );
 
-            
             switch(Type) {
                 case (int)TypeOfText.recImage:
                     Foldout.Add(AltContactDropDown);
@@ -242,6 +243,7 @@ namespace JSONMapper {
                     Foldout.Add(DelayDropDown);
                 break;
             }
+            CustomDataContainer.Add(StatsFoldout);
             CustomDataContainer.Add(Foldout);
             extensionContainer.Add(CustomDataContainer);
 
@@ -250,7 +252,7 @@ namespace JSONMapper {
         }
 
         public void UpdateFields() {
-            CustomLists Lists = new CustomLists();
+            CustomLists Lists = new();
             int TypeIndex = TypeValues.FindIndex(x => x == Type);
             switch (Type) {
                 case (int)TypeOfText.recImage:
@@ -280,12 +282,14 @@ namespace JSONMapper {
             TendencyDropDown.value = TendencyOptions[TendencyIndex > 0 ? TendencyIndex : 1];
             TypeDropDown.value = TypeOptions[TypeIndex > 0 ? TypeIndex : 1];
             DelayDropDown.value = DelayOptions[DelayIndex > 0 ? DelayIndex : 1];
+            // Stat toggles
         }
 
         public TextMessageData ToTextMessageNodeData() {
             Rect rect = GetPosition();
             return new TextMessageData {
                 Type = Type,
+                Stats = Stats,
                 AltContact = AltContact != "Contacts" ? AltContact : "",
                 TextContent = TextContent,
                 TextDelay = TextDelay,
@@ -300,8 +304,10 @@ namespace JSONMapper {
         }
 
         public TextMessage ToTextMessageData() {
+            // when saving create a list in the db if it's not already there and add to it the images seen within this chapter
             return new TextMessage {
                 Type = Type,
+                Stats = Stats,
                 AltContact = AltContact != "Contacts" ? AltContact : "",
                 TextContent = TextContent,
                 TextDelay = TextDelay,

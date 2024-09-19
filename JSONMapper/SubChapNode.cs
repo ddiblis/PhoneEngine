@@ -149,7 +149,7 @@ namespace JSONMapper {
             };
         }
 
-        public SubChap ToSubChapData() {
+        public SubChap ToSubChapData(DBRoot DB, bool isChapter, int chapNum) {
             List<TextMessageNode> TextList = new();
             if (FirstText != null) {
                 TextList.Add(FirstText);
@@ -159,6 +159,11 @@ namespace JSONMapper {
                     if (CurrNode.NextTextNode != null) {
                         CurrNode = CurrNode.NextTextNode;
                         TextList.Add(CurrNode);
+                        if (isChapter && CurrNode.Type == (int)TypeOfText.recImage) {
+                            if (!DB.ChapterImages[chapNum].ImagesList.Contains(CurrNode.TextContent)) {
+                                DB.ChapterImages[chapNum].ImagesList.Add(CurrNode.TextContent);
+                            }
+                        }
                     } else {
                         nextTextAvaliable = false;
                     }

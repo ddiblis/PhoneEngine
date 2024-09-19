@@ -14,11 +14,16 @@ using System.Diagnostics;
 
 public class StatsHandler : MonoBehaviour {
     public SaveFile SF;
+    public DBHandler DB;
     public Transform StatList;
     public Transform TimerCard;
+    public Transform ImagesUnlockedCard;
+    public Transform ChapterImagesUnlockedCard;
     public Transform StatCard;
     public int minutes;
     public int hours;
+    public InstaPostsManager IP;
+
     void Start() {
         StartCoroutine("PlayTimer");
     }
@@ -34,10 +39,43 @@ public class StatsHandler : MonoBehaviour {
     public void OpenApp() {
         Transform TimerCardClone = Instantiate(TimerCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
         TimerCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{hours}H:{minutes}M";
-        if (SF.saveFile.Stats.Tendency != 0) {
-            Transform StatCardClone = Instantiate(StatCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
-            StatCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"You chose the {(Tendency) SF.saveFile.Stats.Tendency} Route";
+
+        Transform ImagesUnlockedCardClone = Instantiate(ImagesUnlockedCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+        int TotalAvaliable = DB.DataBase.PhotoList.Count;
+        int TotalObtained = 0;
+        foreach(string photo in DB.DataBase.PhotoList) {
+            if (SF.saveFile.Photos.FindIndex(x => x.ImageName == photo) > -1) {
+                TotalObtained += 1;
+            }
         }
+        ImagesUnlockedCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Total Images: " + TotalObtained + "/" + TotalAvaliable;
+
+        int TotalFromAllChapters = 0;
+        int TotalObtainedFromChapters = 0;
+        for (int i = 0; i < DB.DataBase.ChapterImages.Count; i ++) {
+            int TotalAvaliableInChapter = DB.DataBase.ChapterImages[i].ImagesList.Count;
+            TotalFromAllChapters += TotalAvaliableInChapter;
+            int TotalObtainedInChapter = 0;
+            Transform ChapterImagesCard = Instantiate(ChapterImagesUnlockedCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+            foreach (string Image in DB.DataBase.ChapterImages[i].ImagesList) {
+                if (SF.saveFile.Photos.FindIndex(x => x.ImageName == Image) > -1) { 
+                    TotalObtainedInChapter += 1;
+                    TotalObtainedFromChapters += 1;
+                }
+            }
+            ChapterImagesCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Chapter {i+1} Images: {TotalObtainedInChapter} / {TotalAvaliableInChapter}";
+        }
+
+        Transform MidrollImagesCard = Instantiate(ChapterImagesUnlockedCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+        int TotalNumberOfMidRollImages = TotalAvaliable - TotalFromAllChapters - 4 - IP.postsList.Posts.Count;
+        int NumOfMidrollImagesObtained = SF.saveFile.Photos.Count - TotalObtainedFromChapters - 4;
+        MidrollImagesCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Midrolls Images: {NumOfMidrollImagesObtained} / {TotalNumberOfMidRollImages}";
+
+        if (SF.saveFile.CurrStoryPoint.ChapIndex > 0) {
+            Transform StatCardClone = Instantiate(StatCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+            StatCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"You chose the {(Tendency)SF.saveFile.Stats.Tendency} Route";
+        }
+
     }
 
     public void CloseApp() {

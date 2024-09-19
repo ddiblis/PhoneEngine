@@ -56,7 +56,7 @@ public class InstaPostsManager : MonoBehaviour
 
 
 
-    PostsList postsList = new();
+    public PostsList postsList = new();
     ProfilesList profilesList = new();
 
     public ProfilesList GetProfilesList() {
@@ -179,12 +179,14 @@ public class InstaPostsManager : MonoBehaviour
             ) as Sprite;
             gen.ModalWindowOpen(fullPhoto, fullPhotoName);
         });
+        // Profile picture
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Image>().sprite = pfp;
         InstaPostCard.GetChild(1).GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
             ClearPostsList();
             GenerateProfile(post.CharacterName);
         });
+        // Like button
         InstaPostCard.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>().text = post.UserName;
         InstaPostCard.GetChild(2).GetChild(0).GetComponent<TextMeshProUGUI>().text = post.Description;
         Transform NotLikedButton = InstaPostCard.GetChild(2).GetChild(2);
@@ -226,7 +228,8 @@ public class InstaPostsManager : MonoBehaviour
 
     public void DisplayAllPosts() {
         gen.Hide(Shared.InstaPostsIndicator);
-        Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = "0";
+        SF.saveFile.NumOfNewPosts = 0;
+        Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts + "";
         // Since posts in real life start from newest, this starts the iterator at the newest post and goes backwards to populate
         for (int i = SF.saveFile.Posts.Count-1; i > -1; i--) {
             if (SF.saveFile.Posts[i].Unlocked) {

@@ -50,7 +50,7 @@ public class SaveManager : MonoBehaviour
                 foreach (Transform message in MessageList) {
                     Destroy(message.gameObject);
                 }
-            }   
+            }
 		}
     }
 
@@ -219,6 +219,17 @@ public class SaveManager : MonoBehaviour
         JsonUtility.FromJsonOverwrite(fileContents, SavesInfo);
     }
 
+    public void GenerateMessagesFromSave() {
+        for (int i = 0; i < SF.saveFile.SavedMessages.Count; i++) {
+            // Set the person the messages are for
+            SF.saveFile.contactPush = SF.saveFile.SavedMessages[i].WhosIsItFor;
+            MH.MessageListLimit(new TextMessage {
+                Type = SF.saveFile.SavedMessages[i].TypeOfText,
+                TextContent = SF.saveFile.SavedMessages[i].TextContent
+            });
+        }
+    }
+
     public void LoadGame(string saveFile) {
 
         string SaveFileName = Application.persistentDataPath + saveFile;
@@ -227,27 +238,31 @@ public class SaveManager : MonoBehaviour
         JsonUtility.FromJsonOverwrite(fileContents, SF.saveFile);
 
         SF.saveFile.selectedIndex = int.MinValue;
+        MH.GenerateMessageLists();
         DB.GenerateChapterList();
         DB.GeneratePhotoList();
         DB.GenerateMidrollsList();
         IPM.GenPostsList();
+        GenerateMessagesFromSave();
 
-
-        // Populates the messageLists with the content from the loaded Json
-        for (int i = 0; i < SF.saveFile.SavedMessages.Count; i++) {
-            // Set the person the messages are for
-            SF.saveFile.contactPush = SF.saveFile.SavedMessages[i].WhosIsItFor;
-            MH.MessageListLimit(new TextMessage {
-            Type = SF.saveFile.SavedMessages[i].TypeOfText,
-            TextContent = SF.saveFile.SavedMessages[i].TextContent
-        });
+        if (SF.saveFile.NumOfNewMessages > 0) {
+            Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages + "";
+            gen.Show(Shared.MessagesIndicator);
+        } else {
+            gen.Hide(Shared.MessagesIndicator);
+        }
+        if (SF.saveFile.NumOfNewPosts > 0) {
+            Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts + "";
+            gen.Show(Shared.InstaPostsIndicator);
+        } else {
+            gen.Hide(Shared.InstaPostsIndicator);
         }
 
         SF.saveFile.SavedMessages = new List<SavedMessage>();
 
         if (SF.saveFile.PlayingMidRoll) {
             MH.ChapterSelect(
-                "Midrolls",
+                ChapterType.Midroll,
                 SF.saveFile.MidRolls[SF.saveFile.CurrMidRoll].MidrollName,
                 SF.saveFile.CurrStoryPoint.SubChapIndex,
                 SF.saveFile.CurrStoryPoint.CurrTextIndex
@@ -255,7 +270,7 @@ public class SaveManager : MonoBehaviour
         } else {
             if (SF.saveFile.CurrStoryPoint.ChapIndex < SF.saveFile.ChapterList.Count){
                 MH.ChapterSelect(
-                    "Chapters",
+                    ChapterType.Chapter,
                     SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex],
                     SF.saveFile.CurrStoryPoint.SubChapIndex,
                     SF.saveFile.CurrStoryPoint.CurrTextIndex

@@ -23,11 +23,17 @@ public class SubChap
 [System.Serializable]
 public class TextMessage
 {
+    public TextStats Stats;
     public string AltContact;
     public int Type;
     public string TextContent;
     public int Tendency;
     public float TextDelay;
+}
+
+[System.Serializable]
+public class TextStats {
+    
 }
 
 [System.Serializable]
@@ -54,6 +60,7 @@ public class Location {
 [System.Serializable]
 public class ChapterData
 {
+    public bool isChapter;
     public bool AllowMidrolls;
     public int StoryCheckpoint;
     public Location location;
@@ -75,7 +82,9 @@ public class SubChapData
 [System.Serializable]
 public class TextMessageData
 {
+    public TextStats Stats;
     public string AltContact;
+    public string Stat;
     public int Type;
     public string TextContent;
     public float TextDelay;
@@ -149,7 +158,9 @@ public class SaveFileRoot {
     public string CurrWallPaper;
     public bool ChoiceNeeded;
     public bool PlayingMidRoll;
-    public Stats Stats;
+    public int NumOfNewMessages;
+    public int NumOfNewPosts;
+    public Stats Stats = new();
     public Settings Settings = new();
     public List<Contact> ContactsList = new();
     public List<string> ChapterList = new();
@@ -165,6 +176,7 @@ public class SaveFileRoot {
 [System.Serializable]
 public class Stats {
     public int Tendency;
+    
 }
 
 [System.Serializable]
@@ -194,7 +206,6 @@ public class SavedMessage
 public class Photo {
     public string Category;
     public string ImageName;
-    // public bool Seen;
 
 }
 
@@ -210,10 +221,22 @@ public class PhotoCategory {
 /* ====================== DB ============================ */
 [System.Serializable]
 public class DBRoot {
-    public List<string> ContactList;
+    // public List<string> ContactList;
     public List<string> ChapterList;
     public List<string> PhotoList;
     public List<DBMidRoll> MidrollsList;
+    public List<ChapterInstaPostsList> ChapterInstaPosts;
+    public List<ChapterImagesList> ChapterImages;
+}
+
+[System.Serializable]
+public class ChapterInstaPostsList {
+    public List<int> InstaPostsList = new();
+}
+
+[System.Serializable]
+public class ChapterImagesList {
+    public List<string> ImagesList = new();
 }
 
 [System.Serializable]
@@ -241,5 +264,9 @@ public enum Tendency {
 public enum StoryCheckpoint {
     DuringTrip = 0,
     // Come up with the rest here
+}
+public enum ChapterType {
+    Midroll,
+    Chapter
 }
 /* ====================== End ============================ */

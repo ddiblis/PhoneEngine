@@ -4,5 +4,4 @@ using UnityEngine;
 
 public class SaveFile : MonoBehaviour {
     public SaveFileRoot saveFile = new();
-
 }
