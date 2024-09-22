@@ -1,16 +1,13 @@
 {
-    "ContactList": [
-        "contact"
-    ],
-    "ChapterList": [
-        "Chapter"
-    ],
+    "ChapterList": [],
     "PhotoList": [
+        "bg-Forest1",
+        "bg-blackcat",
         "bg-snowmountain2",
         "bg-snowmountains",
-        "bg-blackcat",
-        "bg-starrynight",
-
+        "bg-starrynight"
     ],
-    "MidrollsList": []
+    "MidrollsList": [],
+    "ChapterInstaPosts": [],
+    "ChapterImages": []
 }

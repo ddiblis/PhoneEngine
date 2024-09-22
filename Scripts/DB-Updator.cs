@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class DBUpdator : MonoBehaviour {
     public DBRoot LoadDB() {
-        TextAsset DBFile = Resources.Load<TextAsset>("DB");
-        return JsonUtility.FromJson<DBRoot>(DBFile.text);
+        try {
+            TextAsset DBFile = Resources.Load<TextAsset>("DB");
+            return JsonUtility.FromJson<DBRoot>(DBFile.text);
+        } catch {
+            return new DBRoot();
+        }
     }
         
     public void UpdateDB() {  

@@ -15,8 +15,12 @@ public class DBHandler : MonoBehaviour {
 
     public DBRoot DataBase = new(); 
     public void LoadDB() {
-        TextAsset DBFile = Resources.Load<TextAsset>("DB");
-        DataBase = JsonUtility.FromJson<DBRoot>(DBFile.text);
+        try {
+            TextAsset DBFile = Resources.Load<TextAsset>("DB");
+            DataBase = JsonUtility.FromJson<DBRoot>(DBFile.text);
+        } catch {
+            DataBase = new DBRoot();
+        }
     }
     
     public void GenerateMidrollsList() {
