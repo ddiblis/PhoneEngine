@@ -33,11 +33,11 @@ public class GallaryHandler : MonoBehaviour
                 int indx = i;
                 Sprite Image;
                 if(Cat != "bg") {
-                    Image = Resources.Load("Images/Headshots/" + SF.saveFile.PhotoCategories[i].Category, typeof(Sprite)) as Sprite;
+                    Image = Resources.Load<Sprite>($"Images/Headshots/{SF.saveFile.PhotoCategories[i].Category}");
                 } else {
-                    Image = Resources.Load("Images/Emojis/Photo" , typeof(Sprite)) as Sprite;
+                    Image = Resources.Load<Sprite>("Images/Emojis/Photo");
                 }
-                Transform ContactCard = Instantiate(SidePanelCard, new Vector3(0, 0, 0), Quaternion.identity, CategoryList.transform).transform;
+                Transform ContactCard = Instantiate(SidePanelCard, Vector3.zero, Quaternion.identity, CategoryList.transform).transform;
                 ContactCard.GetComponent<Button>().onClick.AddListener(() => {
                     Shared.Wallpaper.GetComponent<AudioSource>().Play();
                     DestroyGallary();
@@ -46,10 +46,10 @@ public class GallaryHandler : MonoBehaviour
                 ContactCard.GetChild(0).GetComponent<Image>().sprite = Image;
                 ContactCard.GetChild(1).GetComponent<TextMeshProUGUI>().text = SF.saveFile.PhotoCategories[i].Category;
                 ContactCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = 
-                SF.saveFile.PhotoCategories[i].NumberSeen + " / " + SF.saveFile.PhotoCategories[i].NumberAvaliable;
+                $"{SF.saveFile.PhotoCategories[i].NumberSeen} / {SF.saveFile.PhotoCategories[i].NumberAvaliable}";
             }
         }    
-        AllPhotosCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = AllUnlocked + " / " + AllPossible;
+        AllPhotosCard.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"{AllUnlocked} / {AllPossible}";
     }
 
      public void DisplayCategoryImages(string Category) {
@@ -62,8 +62,8 @@ public class GallaryHandler : MonoBehaviour
 
     public void GenerateImage(int indx) {
         // if(SF.saveFile.Photos[indx].Seen){
-        Sprite photo = Resources.Load("Images/Photos/" + SF.saveFile.Photos[indx].ImageName, typeof(Sprite)) as Sprite;
-        GameObject PhotoContainerClone = Instantiate(PhotoContainer, new Vector3(0, 0, 0), Quaternion.identity, Shared.ImageList);
+        Sprite photo = Resources.Load<Sprite>($"Images/Photos/{SF.saveFile.Photos[indx].ImageName}");
+        GameObject PhotoContainerClone = Instantiate(PhotoContainer, Vector3.zero, Quaternion.identity, Shared.ImageList);
         GameObject imageContent = PhotoContainerClone.transform.GetChild(0).gameObject;
         imageContent.GetComponent<Image>().sprite = photo;
         Button button = PhotoContainerClone.GetComponent<Button>();

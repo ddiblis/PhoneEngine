@@ -66,14 +66,14 @@ namespace JSONMapper {
             EmojiDropDown = new DropdownField("Emojis", Lists.Emojis, 0);
             EmojiDropDown.RegisterValueChangedCallback(evt => {
                 TextContent = Lists.Emojis[Lists.Emojis.FindIndex(x => x == evt.newValue)];
-                image = Resources.Load("Images/Emojis/" + evt.newValue, typeof(Sprite)) as Sprite;
+                image = Resources.Load<Sprite>($"Images/Emojis/{evt.newValue}");
                 ImageContainer.sprite = image;
             });
 
             PhotoDropDown = new DropdownField("Photos", Lists.Photos, 0);
             PhotoDropDown.RegisterValueChangedCallback(evt => {
                 TextContent = Lists.Photos[Lists.Photos.FindIndex(x => x == evt.newValue)];
-                image = Resources.Load("Images/Photos/" + evt.newValue, typeof(Sprite)) as Sprite;
+                image = Resources.Load<Sprite>($"Images/Photos/{evt.newValue}");
                 ImageContainer.sprite = image;
             });
             
@@ -191,13 +191,13 @@ namespace JSONMapper {
                 case (int)TypeOfText.sentImage:
                     int PhotoIndex = Lists.Photos.FindIndex(x => x == TextContent);
                     PhotoDropDown.value = Lists.Photos[PhotoIndex > 0 ? PhotoIndex : 0];
-                    image = Resources.Load("Images/Photos/" + TextContent, typeof(Sprite)) as Sprite;
+                    image = Resources.Load<Sprite>($"Images/Photos/{TextContent}");
                     ImageContainer.sprite = image;
                 break;
                 case (int)TypeOfText.sentEmoji:
                     int EmojiIndex = Lists.Emojis.FindIndex(x => x == TextContent);
                     EmojiDropDown.value = Lists.Emojis[EmojiIndex > 0 ? EmojiIndex : 0];
-                    image = Resources.Load("Images/Emojis/" + TextContent, typeof(Sprite)) as Sprite;
+                    image = Resources.Load<Sprite>($"Images/Emojis/{TextContent}");
                     ImageContainer.sprite = image;
                 break;
                 default:

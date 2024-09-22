@@ -33,7 +33,9 @@ public class TextMessage
 
 [System.Serializable]
 public class TextStats {
-    
+    // Add specific Stats you want the texts to have 
+    // E.G
+    // rebel
 }
 
 [System.Serializable]
@@ -163,7 +165,7 @@ public class SaveFileRoot {
     public Stats Stats = new();
     public Settings Settings = new();
     public List<Contact> ContactsList = new();
-    public List<string> ChapterList = new();
+    public List<AvaliableChapters> ChapterList = new();
     public CurrStoryPoint CurrStoryPoint = new();
     public List<SavedMessage> SavedMessages = new();
     public List<InstaAccount> InstaAccounts = new();
@@ -174,9 +176,14 @@ public class SaveFileRoot {
 }
 
 [System.Serializable]
+public class AvaliableChapters {
+    public string ChapterName;
+    public bool seen;
+}
+
+[System.Serializable]
 public class Stats {
     public int Tendency;
-    
 }
 
 [System.Serializable]
@@ -221,7 +228,6 @@ public class PhotoCategory {
 /* ====================== DB ============================ */
 [System.Serializable]
 public class DBRoot {
-    // public List<string> ContactList;
     public List<string> ChapterList;
     public List<string> PhotoList;
     public List<DBMidRoll> MidrollsList;
@@ -259,7 +265,7 @@ public enum TypeOfText {
     indicateTime = 8,
 }
 public enum Tendency {
-    Neutral = 0,
+    Neutral = 0
 }
 public enum StoryCheckpoint {
     DuringTrip = 0,

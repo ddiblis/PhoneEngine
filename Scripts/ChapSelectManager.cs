@@ -24,24 +24,34 @@ namespace PhoneEngine {
         public GeneralHandlers gen;
         public DBHandler DB;
 
+        public void GenerateChapterList(int i) {
+            Transform ChapterCardClone = Instantiate(preFabs.ChapterCard, Vector3.zero, Quaternion.identity, ChaptersList);
+            Sprite img = Resources.Load<Sprite>($"Images/ChapImages/{SF.saveFile.ChapterList[i].ChapterName}");
+            ChapterCardClone.GetChild(0).GetChild(0).GetComponent<Image>().sprite = img;
+            ChapterCardClone.GetChild(2).GetComponent<TextMeshProUGUI>().text = SF.saveFile.ChapterList[i].ChapterName;
+            int indx = i;
+            ChapterCardClone.GetComponent<Button>().onClick.AddListener(() => {
+                Shared.Wallpaper.GetComponent<AudioSource>().Play();
+                OpenChapModal(indx);
+            });
+        }
 
         public void OpenApp() {
             for (int i = 0; i < SF.saveFile.ChapterList.Count; i++) {
-                Transform ChapterCardClone = Instantiate(preFabs.ChapterCard, new Vector3(0, 0, 0), Quaternion.identity, ChaptersList);
-                Sprite img = Resources.Load("Images/ChapImages/" + SF.saveFile.ChapterList[i], typeof(Sprite)) as Sprite;
-                ChapterCardClone.GetChild(0).GetChild(0).GetComponent<Image>().sprite = img;
-                ChapterCardClone.GetChild(2).GetComponent<TextMeshProUGUI>().text = SF.saveFile.ChapterList[i];
-                int indx = i;
-                ChapterCardClone.GetComponent<Button>().onClick.AddListener(() => {
-                    Shared.Wallpaper.GetComponent<AudioSource>().Play();
-                    OpenChapModal(indx);
-                });
+                #if DEVELOPMENT_BUILD || UNITY_EDITOR
+                    GenerateChapterList(i);
+                #endif
+                #if !DEVELOPMENT_BUILD
+                if (SF.saveFile.ChapterList[i].seen) {
+                    GenerateChapterList(i);
+                }
+                #endif
             }
         }
 
             void OpenChapModal(int indx) {
             Transform LoadModalWindowClone = 
-                Instantiate(preFabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+                Instantiate(preFabs.LoadModalWindow, Vector3.zero, Quaternion.identity, Canvas);
 
             LoadModalWindowClone.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Loading chapter will not lose photos, but will reset choices";
             LoadModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
@@ -57,7 +67,7 @@ namespace PhoneEngine {
                 SM.RefreshApps();
                 FixSaveFileForChap(indx);
                 DB.UnlockInstaPostsForChapter(indx);
-                MH.ChapterSelect(ChapterType.Chapter, SF.saveFile.ChapterList[indx]);
+                MH.ChapterSelect(ChapterType.Chapter, SF.saveFile.ChapterList[indx].ChapterName);
                 Destroy(LoadModalWindowClone.gameObject);
             });
         }

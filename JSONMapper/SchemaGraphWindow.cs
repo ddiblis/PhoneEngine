@@ -54,7 +54,7 @@ namespace JSONMapper {
                 }
             }
 
-            string path = Application.dataPath + "/Chapters/AutoSave.asset";
+            string path = $"{Application.dataPath}/Chapters/AutoSave.asset";
             if (!string.IsNullOrEmpty(path)) {
                 var asset = CreateInstance<GraphData>();
                 asset.CopyFrom(graphData);
@@ -115,7 +115,7 @@ namespace JSONMapper {
                 }
             }
 
-            string path = EditorUtility.SaveFilePanel("Save Graph to Asset", Application.dataPath + "/Chapters", "GraphData.asset", "asset");
+            string path = EditorUtility.SaveFilePanel("Save Graph to Asset", $"{Application.dataPath}/Chapters", "GraphData.asset", "asset");
             if (!string.IsNullOrEmpty(path)) {
                 var asset = CreateInstance<GraphData>();
                 asset.CopyFrom(graphData);
@@ -126,7 +126,7 @@ namespace JSONMapper {
         }
 
         private void LoadGraphFromAsset() {
-            string path = EditorUtility.OpenFilePanel("Load Graph from Asset", Application.dataPath + "/Chapters", "asset");
+            string path = EditorUtility.OpenFilePanel("Load Graph from Asset", $"{Application.dataPath}/Chapters", "asset");
             if (!string.IsNullOrEmpty(path)) {
                 var asset = AssetDatabase.LoadAssetAtPath<GraphData>(FileUtil.GetProjectRelativePath(path));
                 if (asset != null) {
@@ -143,59 +143,74 @@ namespace JSONMapper {
         }
 
         public DBRoot LoadDB() {
-            TextAsset DBFile = Resources.Load<TextAsset>("DB");
-            return JsonUtility.FromJson<DBRoot>(DBFile.text);
+            try {
+                TextAsset DBFile = Resources.Load<TextAsset>("DB");
+                return JsonUtility.FromJson<DBRoot>(DBFile.text);
+            }
+            catch {
+                Debug.LogWarning("DB File not found, creating new one");
+                return new DBRoot();
+            }
+        }
+
+        void SaveChapterJson(Chapter Chapter, string path, DBRoot DB) {
+            string json = JsonUtility.ToJson(Chapter, true);
+            if (!string.IsNullOrEmpty(path)) {
+                File.WriteAllText(path, json);
+                string DBFileName = $"{Application.dataPath}/Resources/DB.json";
+                string DBJson = JsonUtility.ToJson(DB, true);
+                File.WriteAllText(DBFileName, DBJson);
+                Debug.Log("Graph saved to " + path);
+            }
         }
 
         private void SaveGraphToJson(ChapterType chapterType) {
             Chapter Chapter = new();
             DBRoot DB = LoadDB();
+            string DirectoryPath, DefaultFileName, ErrorMessage;
 
-            string path;
             if (chapterType == ChapterType.Chapter) {
-                path = EditorUtility.SaveFilePanel("Save Graph", Application.dataPath + "/Resources/Chapters", "Chapter.json", "json");
-                var match = Regex.Match(path, @"\d+");
-
-                if (match.Success) {
-                    int parsedNumber = int.Parse(match.Value);
-                    foreach (var node in graphView.nodes) {
-                        if (node is ChapterNode chapterNode) {
-                            Chapter = chapterNode.ToChapterData(DB, parsedNumber);
-                            break;
-                        }
-                    }
-                } else {
-                    Debug.LogWarning("Chapters must be numbered. EG. Chapter1");
-                }
+                DirectoryPath = $"{Application.dataPath}/Resources/Chapters";
+                DefaultFileName = "Chapter.json";
+                ErrorMessage = "Chapters must be numbered. EG. Chapter1, Chapter didn't save";
             } else {
-                path = EditorUtility.SaveFilePanel("Save Graph", Application.dataPath + "/Resources/Midrolls", "placeholder-0.json", "json");
-                var match = Regex.Match(path, @"\d+");
-                if (match.Success) {
-                    int parsedNumber = int.Parse(match.Value);
-                    foreach (var node in graphView.nodes) {
-                        if (node is ChapterNode chapterNode) {
-                            Chapter = chapterNode.ToChapterData(DB, parsedNumber);
-                            break;
-                        }
-                    }
-                    int indexOfMidrollNameStart = path.LastIndexOf("/") + 1;
-                    DB.MidrollsList.Add( new DBMidRoll {
-                        MidrollName = path[indexOfMidrollNameStart..^5],
-                        Checkpoint = parsedNumber
-                    });
-                } else {
-                    Debug.LogWarning("Midrolls must contain number of storypoint from checkpoint enum. EG. Goingout-1");
-                }
+                DirectoryPath = $"{Application.dataPath}/Resources/Midrolls";
+                DefaultFileName = "placeholder-0.json";
+                ErrorMessage = "Midrolls must contain number of storypoint from checkpoint enum. EG. Goingout-1, Midroll didn't save";
             }
 
+            if (!Directory.Exists(DirectoryPath)) {
+                Directory.CreateDirectory(DirectoryPath);
+                Debug.LogWarning($"{DirectoryPath} Directory not found, created one");
+            }
 
-            string json = JsonUtility.ToJson(Chapter, true);
-            if (!string.IsNullOrEmpty(path)) {
-                File.WriteAllText(path, json);
-                string DBFileName = Application.dataPath + "/Resources/DB.json";
-                string DBJson = JsonUtility.ToJson(DB, true);
-                File.WriteAllText(DBFileName, DBJson);
-                Debug.Log("Graph saved to " + path);
+            string path = EditorUtility.SaveFilePanel("Save Graph", DirectoryPath, DefaultFileName, "json");
+            int indexOfLastSlash = path.LastIndexOf("/") + 1;
+            string fileName = path[indexOfLastSlash..^5];
+
+            // Check for number in file name
+            var match = Regex.Match(fileName, @"\d+");
+            if (match.Success) {
+                // Save the chapter node
+                foreach (var node in graphView.nodes) {
+                    if (node is ChapterNode chapterNode) {
+                        Chapter = chapterNode.ToChapterData(DB, fileName);
+                        break;
+                    }
+                }
+
+                // Add to Midroll list if applicable
+                if (chapterType == ChapterType.Midroll) {
+                    int parsedNumber = int.Parse(match.Value);
+                    DB.MidrollsList.Add(new DBMidRoll {
+                        MidrollName = fileName,
+                        Checkpoint = parsedNumber
+                    });
+                }
+
+                SaveChapterJson(Chapter, path, DB);
+            } else {
+                Debug.LogError(ErrorMessage);
             }
         }
     }

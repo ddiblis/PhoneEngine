@@ -36,26 +36,40 @@ namespace JSONMapper {
         }
 
         private void ConnectSubChapToParentResponses(GraphView graphView) {
-            List<ResponseNode> ResponseParentNodes = new();
-            SubChapNode subChap = null;
+            var subChapNodes = graphView.nodes.OfType<SubChapNode>().ToList();
+            var responseNodes = graphView.nodes.OfType<ResponseNode>().ToList();
 
-            foreach(var node in graphView.nodes) {
-                if (node is ResponseNode responseNode) {
-                    foreach(var node1 in graphView.nodes) {
-                        if (node1 is SubChapNode subChapNode && subChapNode.SubChapIndex == responseNode.SubChapNum) {
-                            subChap = subChapNode;
-                            ResponseParentNodes.Add(responseNode);
-                            responseNode.NextSubChap = subChapNode;
-                        }
-                    }
-                    foreach (var respNode in ResponseParentNodes) {
-                        ConnectNodes(subChap.ParentResponsePort, respNode.NextSubChapterNodePort, graphView);
-                    }
+            foreach (var responseNode in responseNodes) {
+                var matchingSubChap = subChapNodes.FirstOrDefault(subChap => subChap.SubChapIndex == responseNode.SubChapNum);
+
+                if (matchingSubChap != null) {
+                    responseNode.NextSubChap = matchingSubChap;
+                    ConnectNodes(matchingSubChap.ParentResponsePort, responseNode.NextSubChapterNodePort, graphView);
                 }
-                ResponseParentNodes = new();
-                subChap = null;
             }
         }
+
+        // private void ConnectSubChapToParentResponses(GraphView graphView) {
+        //     List<ResponseNode> ResponseParentNodes = new();
+        //     SubChapNode subChap = null;
+
+        //     foreach(var node in graphView.nodes) {
+        //         if (node is ResponseNode responseNode) {
+        //             foreach(var node1 in graphView.nodes) {
+        //                 if (node1 is SubChapNode subChapNode && subChapNode.SubChapIndex == responseNode.SubChapNum) {
+        //                     subChap = subChapNode;
+        //                     ResponseParentNodes.Add(responseNode);
+        //                     responseNode.NextSubChap = subChapNode;
+        //                 }
+        //             }
+        //             foreach (var respNode in ResponseParentNodes) {
+        //                 ConnectNodes(subChap.ParentResponsePort, respNode.NextSubChapterNodePort, graphView);
+        //             }
+        //         }
+        //         ResponseParentNodes = new();
+        //         subChap = null;
+        //     }
+        // }
 
 
         private void ConnectNodes(Port InputPort, Port OutputPort, GraphView graphView) {
@@ -119,12 +133,11 @@ namespace JSONMapper {
                 if (i == 0) {
                     ConnectNodes(TextMessageNode.ParentSubChapPort, SubChapNode.FirstTextPort, graphView);
                     SubChapNode.FirstText = TextMessageNode;
-                    PrevTextNode = TextMessageNode;
                 } else {
                     ConnectNodes(TextMessageNode.PrevText, PrevTextNode.NextText, graphView);
                     PrevTextNode.NextTextNode = TextMessageNode;
-                    PrevTextNode = TextMessageNode;
                 }
+                PrevTextNode = TextMessageNode;
             }
         }
 

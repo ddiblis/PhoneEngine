@@ -23,13 +23,13 @@ public class GeneralHandlers : MonoBehaviour {
     }
 
     public void SetWallPaper(string imgName) {
-        Sprite LoadedWallpaper = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
+        Sprite LoadedWallpaper = Resources.Load<Sprite>($"Images/Photos/{imgName}");
         Shared.Wallpaper.GetComponent<Image>().sprite = LoadedWallpaper;
     }
 
     public void ModalWindowOpen(Sprite photo, string ImageName) {
         Transform ImageModalWindowClone =
-            Instantiate(preFabs.ImageModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+            Instantiate(preFabs.ImageModalWindow, Vector3.zero, Quaternion.identity, Canvas);
 
         ImageModalWindowClone.GetChild(0).GetComponent<Image>().sprite = photo;
         Button setWallpaperButton = ImageModalWindowClone.GetChild(1).GetComponent<Button>();

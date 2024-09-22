@@ -115,7 +115,7 @@ public class InstaPostsManager : MonoBehaviour
             typeof(Sprite)
         ) as Sprite;
 
-        Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, new Vector3(0, 0, 0), Quaternion.identity, HeadShotList);
+        Transform ProfileButtonClone = Instantiate(preFabs.ProfileButton, Vector3.zero, Quaternion.identity, HeadShotList);
         ProfileButtonClone.GetComponent<Image>().sprite = pfp;
         ProfileButtonClone.GetComponent<Button>().onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
@@ -147,7 +147,7 @@ public class InstaPostsManager : MonoBehaviour
         ) as Sprite;
 
         Transform ProfileHeaderClone =
-            Instantiate(preFabs.InstaPostProfileHeader, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
+            Instantiate(preFabs.InstaPostProfileHeader, Vector3.zero, Quaternion.identity, PostsDisplay);
         ProfileHeaderClone.GetChild(0).GetComponent<Image>().sprite = pfp;
         ProfileHeaderClone.GetChild(1).GetComponent<TextMeshProUGUI>().text = Profile.UserName;
         Transform InfoContainer = ProfileHeaderClone.GetChild(2).transform;
@@ -168,7 +168,7 @@ public class InstaPostsManager : MonoBehaviour
             typeof(Sprite)
         ) as Sprite;
 
-        Transform InstaPostCard = Instantiate(preFabs.InstaPostCard, new Vector3(0, 0, 0), Quaternion.identity, PostsDisplay);
+        Transform InstaPostCard = Instantiate(preFabs.InstaPostCard, Vector3.zero, Quaternion.identity, PostsDisplay);
         // Photo of the post
         InstaPostCard.GetChild(0).GetChild(0).GetComponent<Image>().sprite = Photo;
         InstaPostCard.GetChild(0).GetComponent<Button>().onClick.AddListener(() => {
@@ -229,7 +229,7 @@ public class InstaPostsManager : MonoBehaviour
     public void DisplayAllPosts() {
         gen.Hide(Shared.InstaPostsIndicator);
         SF.saveFile.NumOfNewPosts = 0;
-        Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts + "";
+        Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts.ToString();
         // Since posts in real life start from newest, this starts the iterator at the newest post and goes backwards to populate
         for (int i = SF.saveFile.Posts.Count-1; i > -1; i--) {
             if (SF.saveFile.Posts[i].Unlocked) {

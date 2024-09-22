@@ -29,12 +29,8 @@ public class OnAwake : MonoBehaviour
             DBUpdate.UpdateDB();
         #endif
         DB.LoadDB();
-        // MH.BackButton();
-        // DB.GenerateContactsList();
-        // MH.GenerateMessageLists();
-        // CH.GenerateContactCards();
 
-        if (File.Exists(Application.persistentDataPath + "/SaveInfo.json")) {
+        if (File.Exists($"{Application.persistentDataPath}/SaveInfo.json")) {
             SM.LoadSavesFile("/SaveInfo.json");
             SM.LoadMostRecent();
         } else {
@@ -55,7 +51,6 @@ public class OnAwake : MonoBehaviour
             Screen.SetResolution(width, height, false);
         }
         
-        // SM.CreateSaveCards();
         StartCoroutine(SM.AutoSave());
 
     }

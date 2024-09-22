@@ -60,7 +60,7 @@ public class SaveManager : MonoBehaviour
             string tendency = null;
 
             GameObject SaveCardClone =
-                Instantiate(Prefabs.SaveCard, new Vector3(0, 0, 0), Quaternion.identity, SaveList);
+                Instantiate(Prefabs.SaveCard, Vector3.zero, Quaternion.identity, SaveList);
 
             Transform TextContainer = SaveCardClone.transform.GetChild(3);
 
@@ -70,6 +70,7 @@ public class SaveManager : MonoBehaviour
                     SavesInfo.ChapterOfSaves[i] > SF.saveFile.ChapterList.Count ?
                         "End Of update" :
                         "Chapter " + SavesInfo.ChapterOfSaves[i];
+                // Add Tendencies that the safe file will display as a part of the save
                 switch(SavesInfo.TendencyOfSaves[i]) {
                     case (int)Tendency.Neutral:
                         tendency = "Neutral";
@@ -83,7 +84,7 @@ public class SaveManager : MonoBehaviour
             Button SaveButton = SaveCardClone.transform.GetChild(1).GetComponent<Button>(); 
             Button LoadButton = SaveCardClone.transform.GetChild(2).GetComponent<Button>(); 
 
-            string saveFile = "/" + i + "Save" + ".json";
+            string saveFile = $"/{i}Save.json";
             string SaveInfo = "/SaveInfo.json";
             int indx = i;
             SaveButton.onClick.AddListener(() => {
@@ -107,7 +108,7 @@ public class SaveManager : MonoBehaviour
 
     void OpenSaveModal(int indx, string SaveInfo, string saveFile) {
         Transform SaveModalWindowClone =
-            Instantiate(Prefabs.SaveModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+            Instantiate(Prefabs.SaveModalWindow, Vector3.zero, Quaternion.identity, Canvas);
 
         SaveModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
 
@@ -191,7 +192,7 @@ public class SaveManager : MonoBehaviour
 
     void OpenLoadModal(string saveFile, string SaveInfo) {
         Transform LoadModalWindowClone = 
-            Instantiate(Prefabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+            Instantiate(Prefabs.LoadModalWindow, Vector3.zero, Quaternion.identity, Canvas);
 
         LoadModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
         Button confirmButton = LoadModalWindowClone.GetChild(3).GetComponent<Button>();
@@ -246,13 +247,13 @@ public class SaveManager : MonoBehaviour
         GenerateMessagesFromSave();
 
         if (SF.saveFile.NumOfNewMessages > 0) {
-            Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages + "";
+            Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages.ToString();
             gen.Show(Shared.MessagesIndicator);
         } else {
             gen.Hide(Shared.MessagesIndicator);
         }
         if (SF.saveFile.NumOfNewPosts > 0) {
-            Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts + "";
+            Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts.ToString();
             gen.Show(Shared.InstaPostsIndicator);
         } else {
             gen.Hide(Shared.InstaPostsIndicator);
@@ -271,7 +272,7 @@ public class SaveManager : MonoBehaviour
             if (SF.saveFile.CurrStoryPoint.ChapIndex < SF.saveFile.ChapterList.Count){
                 MH.ChapterSelect(
                     ChapterType.Chapter,
-                    SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex],
+                    SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex].ChapterName,
                     SF.saveFile.CurrStoryPoint.SubChapIndex,
                     SF.saveFile.CurrStoryPoint.CurrTextIndex
                 );
@@ -339,7 +340,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadMostRecent() {
          if (!SavesInfo.AutoSaveMostRecent) {
-            LoadGame("/" + SavesInfo.MostRecentSaveIndex + "Save.json");
+            LoadGame($"/{SavesInfo.MostRecentSaveIndex}Save.json");
         } else {
             LoadGame("/AutoSave.json");
         }

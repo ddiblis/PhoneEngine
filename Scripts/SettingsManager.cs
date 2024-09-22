@@ -11,6 +11,7 @@ public class SettingsManager : MonoBehaviour {
     public SaveManager SM;
     public MessagingHandlers MH;
     public DBHandler DB;
+    public GeneralHandlers gen;
     public SavesFile Saves;
     public SharedObjects Shared;
     public PreFabs preFabs;
@@ -25,11 +26,11 @@ public class SettingsManager : MonoBehaviour {
 
     public void PopulateSettingsList() {
         // C# not passing by reference leads to trash like this
-        Transform MuteCardClone = Instantiate(MuteCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
-        Transform FastRepliesCardClone = Instantiate(FasterReplies, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
-        Transform FullScreenCardClone = Instantiate(FullScreenCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
-        Transform GameModeCardClone = Instantiate(GameModeCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
-        Transform ResetCardClone = Instantiate(ResetCard, new Vector3(0, 0, 0), Quaternion.identity, SettingsList);
+        Transform MuteCardClone = Instantiate(MuteCard, Vector3.zero, Quaternion.identity, SettingsList);
+        Transform FastRepliesCardClone = Instantiate(FasterReplies, Vector3.zero, Quaternion.identity, SettingsList);
+        Transform FullScreenCardClone = Instantiate(FullScreenCard, Vector3.zero, Quaternion.identity, SettingsList);
+        Transform GameModeCardClone = Instantiate(GameModeCard, Vector3.zero, Quaternion.identity, SettingsList);
+        Transform ResetCardClone = Instantiate(ResetCard, Vector3.zero, Quaternion.identity, SettingsList);
 
 
         GameObject MuteSlider = MuteCardClone.GetChild(2).gameObject;
@@ -42,7 +43,6 @@ public class SettingsManager : MonoBehaviour {
         }
         FasterRepliesSlider.GetComponent<Button>().onClick.AddListener(() => {
             SettingsList.GetComponent<AudioSource>().Play();
-
             if (!SF.saveFile.Settings.FasterReplies) {
                 SF.saveFile.Settings.FasterReplies = true;
                 FasterRepliesSlider.GetComponent<Animator>().Play("Turn-On-Slider");
@@ -51,6 +51,13 @@ public class SettingsManager : MonoBehaviour {
                 FasterRepliesSlider.GetComponent<Animator>().Play("Turn-Off-Slider");
             }
         });
+
+        // Disables Fast replies button if chapter has not been completed yet
+        #if !DEVELOPMENT_BUILD || UNITY_EDITOR
+        if (!SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex].seen) {
+            gen.Show(FastRepliesCardClone.GetChild(3));
+        }
+        #endif
 
         if (SF.saveFile.Settings.MuteGame){
             MuteSlider.GetComponent<Animator>().Play("Turn-On-Slider");
@@ -117,7 +124,7 @@ public class SettingsManager : MonoBehaviour {
 
     void OpenResetModal(Animator FasterRepliesSlider, Animator MuteSlider) {
         Transform LoadModalWindowClone = 
-            Instantiate(preFabs.LoadModalWindow, new Vector3(0, 0, 0), Quaternion.identity, Canvas);
+            Instantiate(preFabs.LoadModalWindow, Vector3.zero, Quaternion.identity, Canvas);
 
         LoadModalWindowClone.GetChild(1).GetComponent<TextMeshProUGUI>().text = "Delete all progress and saves?";
         LoadModalWindowClone.GetComponent<Animator>().Play("Open-Save-Modal");
@@ -162,12 +169,12 @@ public class SettingsManager : MonoBehaviour {
         Saves.AutoSaveDateTime = "";
 
         for (int i = 0; i < SF.saveFile.NumberOfSaves; i++){
-            string saveFile = Application.persistentDataPath + "/" + i + "Save" + ".json";
+            string saveFile = $"{Application.persistentDataPath}/{i}Save.json";
             if(File.Exists(saveFile)) {
                 File.Delete(saveFile);
             }
         }
-        string SaveInfo = Application.persistentDataPath + "/SaveInfo.json";
+        string SaveInfo = $"{Application.persistentDataPath}/SaveInfo.json";
         if(File.Exists(SaveInfo)) {
             File.Delete(SaveInfo);
         }    

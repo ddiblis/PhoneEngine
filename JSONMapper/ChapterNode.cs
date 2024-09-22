@@ -77,42 +77,43 @@ namespace JSONMapper {
 
         private void LevelOrder(SubChapNode rootNode, int chapNum = -1, DBRoot DB = null) {
             if (rootNode == null) return;
+
             Queue<SubChapNode> queue = new();
             queue.Enqueue(rootNode);
+
+            // Process nodes in level order
             while (queue.Count > 0) {
                 SubChapNode node = queue.Dequeue();
-                int indexOfSubChap = SubChaps.FindIndex(x => x == node);
-                if (indexOfSubChap < 0) {
+
+                if (!SubChaps.Contains(node)) {
                     SubChaps.Add(node);
+
+                    // Add unlock posts if chapter number is valid
                     if (chapNum > -1 && node.UnlockPosts.Count > 0) {
-                        DB.ChapterInstaPosts[chapNum].InstaPostsList.AddRange(node.UnlockPosts);
+                        DB?.ChapterInstaPosts[chapNum].InstaPostsList.AddRange(node.UnlockPosts);
                     }
-                } 
-                if (
-                    0 < node.Responses.Count 
-                    && node.Responses[0].NextSubChap != null
-                    && !queue.Contains(node.Responses[0].NextSubChap)
-                    ) queue.Enqueue(node.Responses[0].NextSubChap);
-                
-                if (
-                    1 < node.Responses.Count 
-                    && node.Responses[1].NextSubChap != null
-                    && !queue.Contains(node.Responses[1].NextSubChap)
-                    ) queue.Enqueue(node.Responses[1].NextSubChap);
-                
-            }
-            foreach(SubChapNode subChap in SubChaps) {
-                if (0 < subChap.Responses.Count) {
-                    int indexOfSubChap = SubChaps.FindIndex(x => x == subChap.Responses[0].NextSubChap);
-                    subChap.Responses[0].SubChapNum = indexOfSubChap;
                 }
-                if (1 < subChap.Responses.Count) {
-                    int indexOfSubChap = SubChaps.FindIndex(x => x == subChap.Responses[1].NextSubChap);
-                    subChap.Responses[1].SubChapNum = indexOfSubChap;
+
+                // Enqueue non-null responses
+                for (int i = 0; i < node.Responses.Count; i++) {
+                    SubChapNode nextSubChap = node.Responses[i].NextSubChap;
+                    if (nextSubChap != null && !queue.Contains(nextSubChap)) {
+                        queue.Enqueue(nextSubChap);
+                    }
+                }
+            }
+
+            // Update response indices
+            foreach (SubChapNode subChap in SubChaps) {
+                for (int i = 0; i < subChap.Responses.Count; i++) {
+                    SubChapNode nextSubChap = subChap.Responses[i].NextSubChap;
+                    if (nextSubChap != null) {
+                        subChap.Responses[i].SubChapNum = SubChaps.IndexOf(nextSubChap);
+                    }
                 }
             }
         }
-
+        
         public ChapterData ToChapterNodeData() {
             Rect rect = GetPosition();
             LevelOrder(FirstSubChap);
@@ -131,12 +132,20 @@ namespace JSONMapper {
             };
         }
         
-        public Chapter ToChapterData(DBRoot DB, int chapNum) {
-            if(isChapter && DB.ChapterList.FindIndex(x => x.Contains(chapNum + "") == true) < 0) {
-                DB.ChapterList.Add($"Chapter{chapNum}");
-                DB.ChapterInstaPosts.Add(new ChapterInstaPostsList());
-                DB.ChapterImages.Add(new ChapterImagesList());
-                LevelOrder(FirstSubChap, chapNum - 1, DB);
+        public Chapter ToChapterData(DBRoot DB, string ChapName = "") {
+            int indexOfChap = DB.ChapterList.FindIndex(x => x == ChapName);
+            if (isChapter) {
+                if(indexOfChap == -1) {
+                    indexOfChap = DB.ChapterList.Count;
+                    DB.ChapterList.Add(ChapName);
+                    DB.ChapterInstaPosts.Add(new ChapterInstaPostsList());
+                    DB.ChapterImages.Add(new ChapterImagesList());
+                } else {
+                    DB.ChapterList[indexOfChap] = ChapName;
+                    DB.ChapterInstaPosts[indexOfChap] = new();
+                    DB.ChapterImages[indexOfChap] = new();
+                }
+                LevelOrder(FirstSubChap, indexOfChap, DB);
             } else {
                 LevelOrder(FirstSubChap);
             }
@@ -144,7 +153,7 @@ namespace JSONMapper {
             return new Chapter {
                 AllowMidrolls = allowMidrolls,
                 StoryCheckpoint = Checkpoint,
-                SubChaps = SubChaps.ConvertAll(subChapNode => subChapNode.ToSubChapData(DB, isChapter, chapNum -1))
+                SubChaps = SubChaps.ConvertAll(subChapNode => subChapNode.ToSubChapData(DB, isChapter, indexOfChap))
             };
         }
 

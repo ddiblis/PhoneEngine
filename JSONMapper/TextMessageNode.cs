@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
@@ -91,21 +92,20 @@ namespace JSONMapper {
             EmojiDropDown = new DropdownField("Emojis", Lists.Emojis, 0);
             EmojiDropDown.RegisterValueChangedCallback(evt => {
                 TextContent = Lists.Emojis[Lists.Emojis.FindIndex(x => x == evt.newValue)];
-                image = Resources.Load("Images/Emojis/" + evt.newValue, typeof(Sprite)) as Sprite;
+                image = Resources.Load<Sprite>($"Images/Emojis/{evt.newValue}");
                 ImageContainer.sprite = image;
             });
 
             PhotoDropDown = new DropdownField("Photos", Lists.Photos, 0);
             PhotoDropDown.RegisterValueChangedCallback(evt => {
                 TextContent = Lists.Photos[Lists.Photos.FindIndex(x => x == evt.newValue)];
-                image = Resources.Load("Images/Photos/" + evt.newValue, typeof(Sprite)) as Sprite;
-                ImageContainer.sprite = image;
+                image = Resources.Load<Sprite>($"Images/Photos/{evt.newValue}");
             });
 
             ContactDropDown = new DropdownField("Contacts", Lists.Contacts, 0);
             ContactDropDown.RegisterValueChangedCallback(evt => {
                 TextContent = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)];
-                image = Resources.Load("Images/Headshots/" + evt.newValue, typeof(Sprite)) as Sprite;
+                image = Resources.Load<Sprite>($"Images/Headshots/{evt.newValue}");
                 ImageContainer.sprite = image;
             });
 
@@ -113,7 +113,13 @@ namespace JSONMapper {
             AltContactDropDown.RegisterValueChangedCallback(evt => AltContact = Lists.Contacts[Lists.Contacts.FindIndex(x => x == evt.newValue)]);
 
             // Stats toggles
+
             var StatsFoldout = new Foldout() { text = "Stats" };
+
+            // Add Stat Toggle here, if stat is active it'll check in game if the player chose to have that stat active to display that specific text
+            // E.G.
+            // SadToggle = new Toggle("Sad") { value = Stats.Sad };
+            // Sad.RegisterValueChangedCallback(evt => Stats.Sad = evt.newValue);
 
             TypeDropDown = new DropdownField("Text Type", TypeOptions, 0);
             TypeDropDown.RegisterValueChangedCallback(evt => {
@@ -205,6 +211,7 @@ namespace JSONMapper {
                 "jm-node__quote-textfield"
             );
 
+            // StatsFoldout.Add(HumilationToggle);
             switch(Type) {
                 case (int)TypeOfText.recImage:
                     Foldout.Add(AltContactDropDown);
@@ -254,37 +261,46 @@ namespace JSONMapper {
         public void UpdateFields() {
             CustomLists Lists = new();
             int TypeIndex = TypeValues.FindIndex(x => x == Type);
-            switch (Type) {
-                case (int)TypeOfText.recImage:
-                    int PhotoIndex = Lists.Photos.FindIndex(x => x == TextContent);
-                    PhotoDropDown.value = Lists.Photos[PhotoIndex > 0 ? PhotoIndex : 0];
-                    image = Resources.Load("Images/Photos/" + TextContent, typeof(Sprite)) as Sprite;
-                    ImageContainer.sprite = image;
-                break;
-                case (int)TypeOfText.recEmoji:
-                    int EmojiIndex = Lists.Emojis.FindIndex(x => x == TextContent);
-                    EmojiDropDown.value = Lists.Emojis[EmojiIndex > 0 ? EmojiIndex : 0];
-                    image = Resources.Load("Images/Emojis/" + TextContent, typeof(Sprite)) as Sprite;
-                    ImageContainer.sprite = image;
-                break;
-                case (int)TypeOfText.recContact:
-                    int ContactIndex = Lists.Contacts.FindIndex(x => x == TextContent);
-                    ContactDropDown.value = Lists.Contacts[ContactIndex > 0 ? ContactIndex : 0];
-                    image = Resources.Load("Images/Headshots/" + TextContent, typeof(Sprite)) as Sprite;
-                    ImageContainer.sprite = image;
-                break;
+
+            // Map TypeOfText to respective lists and folder paths
+            Dictionary<TypeOfText, (List<string> list, string path)> typeMap = new() {
+                { TypeOfText.recImage, (Lists.Photos, "Images/Photos/") },
+                { TypeOfText.recEmoji, (Lists.Emojis, "Images/Emojis/") },
+                { TypeOfText.recContact, (Lists.Contacts, "Images/Headshots/") }
+            };
+
+            // Update dropdowns and image if a matching type exists
+            if (typeMap.TryGetValue((TypeOfText)Type, out var entry)) {
+                int contentIndex = entry.list.FindIndex(x => x == TextContent);
+                var dropDown = Type switch {
+                    (int)TypeOfText.recImage => PhotoDropDown,
+                    (int)TypeOfText.recEmoji => EmojiDropDown,
+                    (int)TypeOfText.recContact => ContactDropDown,
+                    _ => null
+                };
+
+                if (dropDown != null) {
+                    dropDown.value = entry.list[contentIndex > 0 ? contentIndex : 0];
+                }
+
+                image = Resources.Load<Sprite>(entry.path + TextContent);
+                ImageContainer.sprite = image;
             }
+
+            // Update other dropdowns and fields
             int DelayIndex = DelayValues.FindIndex(x => x == TextDelay);
             int TendencyIndex = TendencyValues.FindIndex(x => x == Tendency);
             int AltContactIndex = Lists.Contacts.FindIndex(x => x == AltContact);
+
             AltContactDropDown.value = Lists.Contacts[AltContactIndex > 0 ? AltContactIndex : 0];
             TextMessageField.value = TextContent;
             TendencyDropDown.value = TendencyOptions[TendencyIndex > 0 ? TendencyIndex : 1];
             TypeDropDown.value = TypeOptions[TypeIndex > 0 ? TypeIndex : 1];
             DelayDropDown.value = DelayOptions[DelayIndex > 0 ? DelayIndex : 1];
-            // Stat toggles
-        }
 
+            // Stat toggles
+            // SadToggle.value = Stats.Sad;
+        }
         public TextMessageData ToTextMessageNodeData() {
             Rect rect = GetPosition();
             return new TextMessageData {

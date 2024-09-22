@@ -40,60 +40,89 @@ namespace JSONMapper {
 
         private bool IsCompatible(Port startPort, Port targetPort) {
             var startNode = startPort.node as BaseNode;
-            
-            // Ensure connections are between specific Ports only
-            switch (startNode) {
-                case ChapterNode:
-                    if (
-                        startPort.portName == "First SubChapter"
-                        && targetPort.portName == "Parent Chapter"
-                    ) return true;
-                break;
-                case SubChapNode:
-                    if (
-                        startPort.portName == "Parent Chapter"
-                        && targetPort.portName == "First SubChapter"
-                    ) return true;
-                    if (
-                        startPort.portName == "Start of Texts"
-                        && targetPort.portName == "Parent SubChap"
-                    ) return true;
-                    if (
-                        startPort.portName == "Responses"
-                        && targetPort.portName == "Parent SubChap"
-                    ) return true;
-                    if (
-                        startPort.portName == "Parent Response"
-                        && targetPort.portName == "Next SubChap"
-                    ) return true;
-                break;
-                case TextMessageNode:
-                    if (
-                        startPort.portName == "Parent SubChap"
-                        && targetPort.portName == "Start of Texts"
-                    ) return true;
-                    if (
-                        startPort.portName == "Next Text"
-                        && targetPort.portName == "Previous Text"
-                    ) return true;
-                    if (
-                        startPort.portName == "Previous Text"
-                        && targetPort.portName == "Next Text"
-                    ) return true;
-                break;
-                case ResponseNode:
-                    if (
-                        targetPort.portName == "Responses"
-                        && startPort.portName == "Parent SubChap"
-                    ) return true;
-                    if (
-                        targetPort.portName == "Parent Response"
-                        && startPort.portName == "Next SubChap"
-                    ) return true;
-                break;
-            }
-            return false;
+            string startPortName = startPort.portName;
+            string targetPortName = targetPort.portName;
+
+            return startNode switch {
+                ChapterNode => startPortName == "First SubChapter" && targetPortName == "Parent Chapter",
+                SubChapNode => (startPortName, targetPortName) switch {
+                    ("Parent Chapter", "First SubChapter") => true,
+                    ("Start of Texts", "Parent SubChap") => true,
+                    ("Responses", "Parent SubChap") => true,
+                    ("Parent Response", "Next SubChap") => true,
+                    _ => false
+                },
+                TextMessageNode => (startPortName, targetPortName) switch {
+                    ("Parent SubChap", "Start of Texts") => true,
+                    ("Next Text", "Previous Text") => true,
+                    ("Previous Text", "Next Text") => true,
+                    _ => false
+                },
+                ResponseNode => (startPortName, targetPortName) switch {
+                    ("Parent SubChap", "Responses") => true,
+                    ("Next SubChap", "Parent Response") => true,
+                    _ => false
+                },
+                _ => false
+            };
         }
+
+        // private bool IsCompatible(Port startPort, Port targetPort) {
+        //     var startNode = startPort.node as BaseNode;
+            
+        //     // Ensure connections are between specific Ports only
+        //     switch (startNode) {
+        //         case ChapterNode:
+        //             if (
+        //                 startPort.portName == "First SubChapter"
+        //                 && targetPort.portName == "Parent Chapter"
+        //             ) return true;
+        //         break;
+        //         case SubChapNode:
+        //             if (
+        //                 startPort.portName == "Parent Chapter"
+        //                 && targetPort.portName == "First SubChapter"
+        //             ) return true;
+        //             if (
+        //                 startPort.portName == "Start of Texts"
+        //                 && targetPort.portName == "Parent SubChap"
+        //             ) return true;
+        //             if (
+        //                 startPort.portName == "Responses"
+        //                 && targetPort.portName == "Parent SubChap"
+        //             ) return true;
+        //             if (
+        //                 startPort.portName == "Parent Response"
+        //                 && targetPort.portName == "Next SubChap"
+        //             ) return true;
+        //         break;
+        //         case TextMessageNode:
+        //             if (
+        //                 startPort.portName == "Parent SubChap"
+        //                 && targetPort.portName == "Start of Texts"
+        //             ) return true;
+        //             if (
+        //                 startPort.portName == "Next Text"
+        //                 && targetPort.portName == "Previous Text"
+        //             ) return true;
+        //             if (
+        //                 startPort.portName == "Previous Text"
+        //                 && targetPort.portName == "Next Text"
+        //             ) return true;
+        //         break;
+        //         case ResponseNode:
+        //             if (
+        //                 targetPort.portName == "Responses"
+        //                 && startPort.portName == "Parent SubChap"
+        //             ) return true;
+        //             if (
+        //                 targetPort.portName == "Parent Response"
+        //                 && startPort.portName == "Next SubChap"
+        //             ) return true;
+        //         break;
+        //     }
+        //     return false;
+        // }
 
         private void AddManipulators() {
             this.AddManipulator(new ContentDragger());

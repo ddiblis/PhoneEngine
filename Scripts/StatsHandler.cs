@@ -37,10 +37,10 @@ public class StatsHandler : MonoBehaviour {
     }
 
     public void OpenApp() {
-        Transform TimerCardClone = Instantiate(TimerCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+        Transform TimerCardClone = Instantiate(TimerCard, Vector3.zero, Quaternion.identity, StatList);
         TimerCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"{hours}H:{minutes}M";
 
-        Transform ImagesUnlockedCardClone = Instantiate(ImagesUnlockedCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+        Transform ImagesUnlockedCardClone = Instantiate(ImagesUnlockedCard, Vector3.zero, Quaternion.identity, StatList);
         int TotalAvaliable = DB.DataBase.PhotoList.Count;
         int TotalObtained = 0;
         foreach(string photo in DB.DataBase.PhotoList) {
@@ -48,7 +48,7 @@ public class StatsHandler : MonoBehaviour {
                 TotalObtained += 1;
             }
         }
-        ImagesUnlockedCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = "Total Images: " + TotalObtained + "/" + TotalAvaliable;
+        ImagesUnlockedCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Total Images: {TotalObtained}/{TotalAvaliable}";
 
         int TotalFromAllChapters = 0;
         int TotalObtainedFromChapters = 0;
@@ -56,7 +56,7 @@ public class StatsHandler : MonoBehaviour {
             int TotalAvaliableInChapter = DB.DataBase.ChapterImages[i].ImagesList.Count;
             TotalFromAllChapters += TotalAvaliableInChapter;
             int TotalObtainedInChapter = 0;
-            Transform ChapterImagesCard = Instantiate(ChapterImagesUnlockedCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+            Transform ChapterImagesCard = Instantiate(ChapterImagesUnlockedCard, Vector3.zero, Quaternion.identity, StatList);
             foreach (string Image in DB.DataBase.ChapterImages[i].ImagesList) {
                 if (SF.saveFile.Photos.FindIndex(x => x.ImageName == Image) > -1) { 
                     TotalObtainedInChapter += 1;
@@ -66,16 +66,15 @@ public class StatsHandler : MonoBehaviour {
             ChapterImagesCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Chapter {i+1} Images: {TotalObtainedInChapter} / {TotalAvaliableInChapter}";
         }
 
-        Transform MidrollImagesCard = Instantiate(ChapterImagesUnlockedCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+        Transform MidrollImagesCard = Instantiate(ChapterImagesUnlockedCard, Vector3.zero, Quaternion.identity, StatList);
         int TotalNumberOfMidRollImages = TotalAvaliable - TotalFromAllChapters - 4 - IP.postsList.Posts.Count;
         int NumOfMidrollImagesObtained = SF.saveFile.Photos.Count - TotalObtainedFromChapters - 4;
         MidrollImagesCard.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"Midrolls Images: {NumOfMidrollImagesObtained} / {TotalNumberOfMidRollImages}";
 
         if (SF.saveFile.CurrStoryPoint.ChapIndex > 0) {
-            Transform StatCardClone = Instantiate(StatCard, new Vector3(0, 0, 0), Quaternion.identity, StatList);
+            Transform StatCardClone = Instantiate(StatCard, Vector3.zero, Quaternion.identity, StatList);
             StatCardClone.GetChild(0).GetComponent<TextMeshProUGUI>().text = $"You chose the {(Tendency)SF.saveFile.Stats.Tendency} Route";
         }
-
     }
 
     public void CloseApp() {

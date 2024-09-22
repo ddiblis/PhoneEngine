@@ -20,12 +20,13 @@ public class DBHandler : MonoBehaviour {
     }
     
     public void GenerateMidrollsList() {
-        if (DataBase.MidrollsList.Count != SF.saveFile.MidRolls.Count) {
-            for (int i = SF.saveFile.MidRolls.Count; i < DataBase.MidrollsList.Count; i++) {
+        foreach(var midroll in DataBase.MidrollsList) {
+            int midrollIndex = SF.saveFile.MidRolls.FindIndex(x => x.MidrollName == midroll.MidrollName);
+            if (midrollIndex == -1) {
                 SF.saveFile.MidRolls.Add(
                     new MidRoll{ 
-                        MidrollName = DataBase.MidrollsList[i].MidrollName,
-                        Checkpoint = DataBase.MidrollsList[i]. Checkpoint,
+                        MidrollName = midroll.MidrollName,
+                        Checkpoint = midroll. Checkpoint,
                         Seen = false
                     }
                 );
@@ -33,33 +34,9 @@ public class DBHandler : MonoBehaviour {
         }
     }
 
-    // public void GenerateContactsList() {
-    //     if (DataBase.ContactList.Count != SF.saveFile.ContactsList.Count) {
-    //         for (int i = SF.saveFile.ContactsList.Count; i < DataBase.ContactList.Count; i++) {
-    //             SF.saveFile.ContactsList.Add(
-                    // new Contact{ 
-                    //     NameOfContact = DataBase.ContactList[i],
-                    //     Unlocked = false 
-                    // }
-    //                 new Contact{ 
-    //                     NameOfContact = DataBase.ContactList[i],
-    //                     NewTexts = false 
-    //                 }
-    //             );
-    //         }
-    //     }
-    // }
-
     public void GeneratePhotoList() {
         if (DataBase.PhotoList.Count != SF.saveFile.Photos.Count) {
             for (int i = SF.saveFile.Photos.Count; i < DataBase.PhotoList.Count; i++) {
-                // SF.saveFile.Photos.Add(
-                //     new Photo{ 
-                //         Category = DataBase.PhotoList[i].Split("-")[0],
-                //         ImageName = DataBase.PhotoList[i],
-                //         Seen = false 
-                //     }
-                // );
                 if (!SF.saveFile.PhotoCategories.Any(x => x.Category == DataBase.PhotoList[i].Split("-")[0])) {
                     SF.saveFile.PhotoCategories.Add(
                         new PhotoCategory{
@@ -77,10 +54,14 @@ public class DBHandler : MonoBehaviour {
     }
 
     public void GenerateChapterList() {
-        if (DataBase.ChapterList.Count != SF.saveFile.ChapterList.Count) {
-            for (int i = SF.saveFile.ChapterList.Count; i < DataBase.ChapterList.Count; i++) {
+        foreach(var chapter in DataBase.ChapterList) {
+            int ChapterIndex = SF.saveFile.ChapterList.FindIndex(x => x.ChapterName == chapter);
+            if (ChapterIndex == -1) {
                 SF.saveFile.ChapterList.Add(
-                    DataBase.ChapterList[i]
+                    new AvaliableChapters {
+                        ChapterName = chapter,
+                        seen = false
+                    }
                 );
             }
         }

@@ -15,13 +15,30 @@ namespace JSONMapper {
                 "Contacts"
             };
         public CustomLists() {
+            string EmojiDirectory = $"{Application.dataPath}/Resources/Images/Emojis";
+            if (!Directory.Exists(EmojiDirectory)) {
+                Directory.CreateDirectory(EmojiDirectory);
+                Debug.LogWarning("Emoji Directory not found, created one, insert emojis here");
+            }
             string[] EmojiList = Directory.GetFiles("Assets/Resources/Images/Emojis","*.png");
             foreach (string Emoji in EmojiList) {
                 Emojis.Add(Emoji[31..^4]);
             }
+
+            string PhotosDirectory = $"{Application.dataPath}/Resources/Images/Photos";
+            if(!Directory.Exists(PhotosDirectory)) {
+                Directory.CreateDirectory(PhotosDirectory);
+                Debug.LogWarning("Photos Directory not found, created one, insert photos here");
+            }
             string[] PhotoList = Directory.GetFiles("Assets/Resources/Images/Photos","*.png");
             foreach (string Photo in PhotoList) {
                 Photos.Add(Photo[31..^4]);
+            }
+
+            string ContactsDirectory = $"{Application.dataPath}/Resources/Images/Headshots";
+            if(!Directory.Exists(ContactsDirectory)) {
+                Directory.CreateDirectory(ContactsDirectory);
+                Debug.LogWarning("Contacts Directory not found, created one, Drop headshots of contacts here");
             }
             string[] ContactList = Directory.GetFiles("Assets/Resources/Images/Headshots","*.png");
             foreach (string Contact in ContactList) {

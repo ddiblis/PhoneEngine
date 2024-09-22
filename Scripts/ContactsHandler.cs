@@ -25,7 +25,7 @@ public class ContactsHandler : MonoBehaviour {
     }
 
     public void AddContactCard(Sprite pfp, Contact Contact, int indx) {
-        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, new Vector3(0, 0, 0), Quaternion.identity, Shared.cardsList);
+        GameObject ChoiceClone = Instantiate(Prefabs.contactButton, Vector3.zero, Quaternion.identity, Shared.cardsList);
         ChoiceClone.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
         ChoiceClone.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = Contact.NameOfContact;
         if(Contact.NewTexts) {
@@ -54,7 +54,7 @@ public class ContactsHandler : MonoBehaviour {
 
             // Hides the text Indicator and resets it to 0 when you've viewed the messages you'd missed
             SF.saveFile.NumOfNewMessages = 0;
-            Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages + "";
+            Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages.ToString();
             gen.Hide(Shared.MessagesIndicator);
 
             // It bugs me if the notif is still on after I open the contact, this removes it when you do if it's the right contact
@@ -71,7 +71,7 @@ public class ContactsHandler : MonoBehaviour {
     public void GenerateContactCards() {
         // Generates contact cards for each contact based on list.
         for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
-            Sprite img = Resources.Load("Images/Headshots/" + SF.saveFile.ContactsList[i].NameOfContact, typeof(Sprite)) as Sprite;            
+            Sprite img = Resources.Load<Sprite>($"Images/Headshots/{SF.saveFile.ContactsList[i].NameOfContact}");            
             AddContactCard(img, SF.saveFile.ContactsList[i], i);
         } 
     }

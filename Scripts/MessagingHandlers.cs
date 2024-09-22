@@ -39,7 +39,7 @@ public class MessagingHandlers : MonoBehaviour {
     public void GenerateMessageLists() {
         if (Shared.content.childCount < SF.saveFile.ContactsList.Count) {
             for (int i = 0; i < SF.saveFile.ContactsList.Count; i++) {
-                Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
+                Instantiate(Prefabs.messageList, Vector3.zero, Quaternion.identity, Shared.content);
                 gen.Hide(Shared.content.GetChild(i));
             } 
         }
@@ -88,11 +88,13 @@ public class MessagingHandlers : MonoBehaviour {
 
     public void ChapterSelect(ChapterType type, string Chapter, int subChapIndex = 0, int currentText = 0) {
         CurrChap = chap.GetChapter(type, Chapter);
-        if (type == ChapterType.Chapter) {
-            SF.saveFile.AllowMidrolls = CurrChap.AllowMidrolls;
-            SF.saveFile.CurrStoryPoint.StoryCheckpoint = CurrChap.StoryCheckpoint;
+        if (CurrChap != null) {
+            if (type == ChapterType.Chapter) {
+                SF.saveFile.AllowMidrolls = CurrChap.AllowMidrolls;
+                SF.saveFile.CurrStoryPoint.StoryCheckpoint = CurrChap.StoryCheckpoint;
+            }
+            StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
         }
-        StartCoroutine(StartMessagesCoroutine(CurrChap.SubChaps[subChapIndex], currentText));
     }
     
 
@@ -161,15 +163,16 @@ public class MessagingHandlers : MonoBehaviour {
                 // Make sure if the contact is not unlocked that someone sends you their contact so it unlocks first
                 int AltContactIndex = SF.saveFile.ContactsList.FindIndex(x => x.NameOfContact == textMessage.AltContact);
                 SF.saveFile.contactPush = AltContactIndex;
-                pfp = Resources.Load("Images/Headshots/" + textMessage.AltContact, typeof(Sprite)) as Sprite;
+                pfp = Resources.Load<Sprite>($"Images/Headshots/{textMessage.AltContact}");
             } else {
                 SF.saveFile.contactPush = indexOfContact;
-                pfp = Resources.Load("Images/Headshots/" + Contact, typeof(Sprite)) as Sprite;
+                pfp = Resources.Load<Sprite>($"Images/Headshots/{Contact}");
             }
             if (textMessage.Tendency == SF.saveFile.Stats.Tendency || textMessage.Tendency == (int)Tendency.Neutral) {
                 // Place here all the stats and tell the script if they're false to not send a message
-                // default this was is the message is sent
-                // if (textMessage.Stats.(StatHere) && !SF.saveFile.Stats.(SameStatHere)) {
+                // default is the message is sent
+                // E.G.
+                // if (textMessage.Stats.Sad && !SF.saveFile.Stats.Sad) {
                 //     yield break;
                 // }
                 yield return StartCoroutine(MessageDelay(textMessage, pfp));
@@ -184,7 +187,7 @@ public class MessagingHandlers : MonoBehaviour {
             NewTexts = false
         });
         if (Shared.content.childCount < SF.saveFile.ContactsList.Count) {
-            Transform MessagaeList = Instantiate(Prefabs.messageList, new Vector3(0, 0, 0), Quaternion.identity, Shared.content);
+            Transform MessagaeList = Instantiate(Prefabs.messageList, Vector3.zero, Quaternion.identity, Shared.content);
             gen.Hide(MessagaeList);
         }
     }
@@ -203,7 +206,7 @@ public class MessagingHandlers : MonoBehaviour {
             SF.saveFile.Posts[UnlockPosts[i]].Unlocked = true;
             // Handles showing the indicator and incrementing it for each new post recieved which you haven't viewed yet
             SF.saveFile.NumOfNewPosts += 1;
-            Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts + "";
+            Shared.InstaPostsIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewPosts.ToString();
             gen.Show(Shared.InstaPostsIndicator);
         }
     }
@@ -248,9 +251,10 @@ public class MessagingHandlers : MonoBehaviour {
 
     public void PlayNextChapter() {
         SF.saveFile.CurrStoryPoint.ChapIndex += 1;
-        if (SF.saveFile.CurrStoryPoint.ChapIndex <= SF.saveFile.ChapterList.Count -1) {
-            ChapterSelect(ChapterType.Chapter, SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex]);
-        }
+        // if (SF.saveFile.CurrStoryPoint.ChapIndex <= SF.saveFile.ChapterList.Count -1) {
+            // ChapterSelect(ChapterType.Chapter, SF.saveFile.ChapterList[SF.saveFile.CurrStoryPoint.ChapIndex]);
+            ChapterSelect(ChapterType.Chapter, $"Chapter{SF.saveFile.CurrStoryPoint.ChapIndex + 1}");
+        // }
         SF.saveFile.MidRollCount = 2;
         SF.saveFile.PlayingMidRoll = false;
     }
@@ -278,7 +282,7 @@ public class MessagingHandlers : MonoBehaviour {
     // messageContent: The text content of the message.
     public void TextPush(TypeOfText type, GameObject textMessage, string messageContent) {
         GameObject messageClone =
-            Instantiate(textMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
+            Instantiate(textMessage, Vector3.zero, Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
         textContent.GetComponent<TextMeshProUGUI>().text = messageContent;
@@ -291,30 +295,30 @@ public class MessagingHandlers : MonoBehaviour {
     public void ImagePush(TypeOfText type, string imgName, GameObject imageMessage) {
         Sprite image;
         GameObject messageClone =
-            Instantiate(imageMessage, new Vector3(0, 0, 0), Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
+            Instantiate(imageMessage, Vector3.zero, Quaternion.identity, Shared.content.GetChild(SF.saveFile.contactPush));
         GameObject textContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(0).gameObject;
         GameObject imageContent = messageClone.transform.GetChild(1).GetChild(0).GetChild(1).gameObject;
         GameObject typeOfText = messageClone.transform.GetChild(0).gameObject;
 
+        string resourcePath = type switch {
+            TypeOfText.recImage or TypeOfText.sentImage => "Images/Photos/",
+            TypeOfText.recContact => "Images/Headshots/",
+            _ => "Images/Emojis/"
+        };
+        image = Resources.Load<Sprite>($"{resourcePath}{imgName}");
+
         if(type == TypeOfText.recImage || type == TypeOfText.sentImage) {
             gen.UnlockImage(imgName);
-            image = Resources.Load("Images/Photos/" + imgName, typeof(Sprite)) as Sprite;
             Button button = messageClone.transform.GetChild(1).GetComponent<Button>();
             button.onClick.AddListener(() => {
                 Shared.Wallpaper.GetComponent<AudioSource>().Play();
                 gen.ModalWindowOpen(image, imgName);
             });
-        } 
-        else if (type == TypeOfText.recContact) {
-            image = Resources.Load("Images/Headshots/" + imgName, typeof(Sprite)) as Sprite;
-        }
-        else {
-            image = Resources.Load("Images/Emojis/" + imgName, typeof(Sprite)) as Sprite;
         }
 
         imageContent.GetComponent<Image>().sprite = image;
         textContent.GetComponent<TextMeshProUGUI>().text = imgName;
-        typeOfText.GetComponent<TextMeshProUGUI>().text = "" + (int)type;
+        typeOfText.GetComponent<TextMeshProUGUI>().text = ((int)type).ToString();
     }
 
     // Handles message limits for all types of texts to the messageList
@@ -332,6 +336,7 @@ public class MessagingHandlers : MonoBehaviour {
                     TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
                     break;
                 }
+                // Add tendencies here for different coloured texts based on tendency
                 switch (textMessage.Tendency) {
                     case (int)Tendency.Neutral:
                         TextPush(TypeOfText.recText, Prefabs.recText, textMessage.TextContent);
@@ -376,12 +381,12 @@ public class MessagingHandlers : MonoBehaviour {
         if(Shared.cardsList.childCount > SF.saveFile.contactPush) {
             gen.Show(Shared.cardsList.GetChild(SF.saveFile.contactPush).GetChild(2).transform);
         }
-        Shared.notif = Instantiate(Prefabs.Notification, new Vector3(0, 0, 0), Quaternion.identity, Shared.notificationArea);
-        Shared.notif.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
-        Shared.notif.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = pfp;
+        Shared.notif = Instantiate(Prefabs.Notification, Vector3.zero, Quaternion.identity, Shared.notificationArea);
+        Shared.notif.transform.GetChild(3).GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = textContent;
+        Shared.notif.transform.GetChild(2).gameObject.GetComponent<Image>().sprite = pfp;
         // Handles indicator for showing number of messages you haven't seen yet
         SF.saveFile.NumOfNewMessages += 1;
-        Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages + "";
+        Shared.MessagesIndicator.GetChild(0).GetComponent<TextMeshProUGUI>().text = SF.saveFile.NumOfNewMessages.ToString();
         gen.Show(Shared.MessagesIndicator);
     }
 
@@ -404,45 +409,45 @@ public class MessagingHandlers : MonoBehaviour {
                 SF.saveFile.Stats.Tendency = (int)Tendency.Neutral;
             }
         }
-        // if (TextContent.Contains("StatHere")) {
+        // if (TextContent.Contains("Sad")) {
         //     if(TextContent.Contains("true")) {
-        //         SF.saveFile.Stats.(StatHere) = true;
+        //         SF.saveFile.Stats.Sad = true;
         //     }
         // }
     }
 
     // handles the building and pushing of the text choice buttons into the choices list
     public void TextButton(Response resp) {
-        // Logic for parsing the response string and determining if there is a stat change then displaying based
-        // on game mode
+        // Determine if there's a stat change based on the presence of "<" in the response text
         bool statChange = resp.TextContent.Contains("<");
-        string response = "";
-        if (statChange) {
-            int indexofString = resp.TextContent.IndexOf("<");
-            if (!SF.saveFile.Settings.GameMode) {
-                response = resp.TextContent[0..indexofString];
-            } else {
-                response = resp.TextContent;
-            }
-        }
+        string response = statChange && !SF.saveFile.Settings.GameMode 
+            ? resp.TextContent[..resp.TextContent.IndexOf("<")] 
+            : resp.TextContent;
 
-        GameObject ChoiceClone =
-            Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
-        Destroy(ChoiceClone.transform.GetChild(1).gameObject);
-        GameObject textObject = ChoiceClone.transform.GetChild(0).gameObject;
-        textObject.GetComponent<TextMeshProUGUI>().text = !statChange ? resp.TextContent : response;
-        Button button = ChoiceClone.GetComponent<Button>();
+        // Instantiate the choice button
+        GameObject choiceClone = Instantiate(Prefabs.choice, Vector3.zero, Quaternion.identity, Shared.choices.transform);
+        Destroy(choiceClone.transform.GetChild(1).gameObject);
+        
+        // Set the text for the button
+        var textObject = choiceClone.transform.GetChild(0).gameObject;
+        textObject.GetComponent<TextMeshProUGUI>().text = response;
+
+        // Set up the button click listener
+        var button = choiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
             Shared.Wallpaper.GetComponent<AudioSource>().Play();
+
             if (statChange) {
                 HandleStatChange(resp.TextContent);
             }
+
             if (!resp.RespTree) {
-                MessageListLimit( new TextMessage {
+                MessageListLimit(new TextMessage {
                     Type = (int)TypeOfText.sentText,
-                    TextContent = !statChange ? resp.TextContent : response
+                    TextContent = response
                 });
             }
+
             ChoiceButtonClick(resp.SubChapNum);
         });
     }
@@ -451,17 +456,17 @@ public class MessagingHandlers : MonoBehaviour {
     public void ImageButton(Response resp) {
         Sprite? image;
         GameObject ChoiceClone =
-            Instantiate(Prefabs.choice, new Vector3(0, 0, 0), Quaternion.identity, Shared.choices.transform);
+            Instantiate(Prefabs.choice, Vector3.zero, Quaternion.identity, Shared.choices.transform);
         
         Destroy(ChoiceClone.transform.GetChild(0).gameObject);
         if (resp.Type == (int) TypeOfText.sentImage){
-            image = Resources.Load("Images/Photos/" + resp.TextContent, typeof(Sprite)) as Sprite;
+            image = Resources.Load<Sprite>($"Images/Photos/{resp.TextContent}");
         } else {
-            image = Resources.Load("Images/Emojis/" + resp.TextContent, typeof(Sprite)) as Sprite;
+            image = Resources.Load<Sprite>($"Images/Emojis/{resp.TextContent}");
         }
 
         GameObject imageObject = ChoiceClone.transform.GetChild(1).gameObject;
-        Sprite? frameEmoji = Resources.Load("Images/Emojis/photo", typeof(Sprite)) as Sprite;
+        Sprite? frameEmoji = Resources.Load<Sprite>("Images/Emojis/photo");
         imageObject.GetComponent<Image>().sprite = resp.Type == (int)TypeOfText.sentImage ? frameEmoji : image;
         Button button = ChoiceClone.GetComponent<Button>();
         button.onClick.AddListener(() => {
